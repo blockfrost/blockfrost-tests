@@ -1,0 +1,72 @@
+import { getPaginationFixtures } from '../../../utils.js';
+
+const paginationFixtures = getPaginationFixtures(
+  'epochs/211/blocks/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy',
+);
+
+export default [
+  ...paginationFixtures,
+  {
+    testName: 'epochs/:number/blocks/:poolgeneric?queryparams shelley epoch generic pool',
+    endpoints: [
+      'epochs/211/blocks/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy',
+      'epochs/211/blocks/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?order=asc',
+      'epochs/211/blocks/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?order=asc&count=22',
+    ],
+    response: [
+      'da5e26446948b8d1f91396218dcd0131a5e7b3adb200cbd8f124d738438ed5ec',
+      '1038b2c76a23ea7d89cbd84d7744c97560eb3412661beed6959d748e24ff8229',
+      'e4198b0e351c48aa52e6ac3fdff46887f7061866e75f89dd0310793fbeba2336',
+      '9ec30b9c941eb9ace623e94457ff103757c8a6b6c26530261be1ea0ff1a1df76',
+      'c842afafdbcec4627bee7b876dbbf773ec87da222315db8ae42f41acb3d0833e',
+      'cdecf4a12ca3f680c12c7f981c028381eb2db1fbfea5ab15ca66a21c5a2c4114',
+      '4a9fe53aba81cbcea8d3a59689449b214044d7593ddab69246952524f9a11972',
+      '8b4bf644ee6cc044b11238fac293618b74d919b2121e7adf5029ec67aee0d885',
+      '96d29664e7b8658e4009d2e251e11c945cde552ac2dbae49ddde443d11ece65c',
+      '5ca63cc1fa4ed351f207b4d3c9b42e1460e9af0146980b894735ee56ba07348a',
+      'c204b8c5f04c2d9a33e306770898535a67169f07a6b3f31698db80bb6cc4c14a',
+      '0e40f618e929d02bac741bddd31b6fa81d85a05688cbd2633e07b0d68d859ca6',
+      '7782acaa4fdefc906b655578881669fb8ad2e37f1d5151c988a553408f15c67e',
+      '250630dbf79844f9c67121ba7c075f15bfd9923334823d6eec87c8bf2571cb54',
+      'e260fbc7c9c9f218f2acedd922ea783d80e23259d05a88e44a7e8e1a581a0d46',
+      '9a54c2c0d2638b79f36a08daf4b47ffdee6cb2893cc970665f89f85f5857f0a9',
+      'dda7a70935c0b806f48fe54aa502cd585d354b1fbb02e33384f3ae0621e2acd3',
+      'a454340fbb6245531850a19824f538d8c72c86d3ffc0184cfd4eb8b9cbe54b52',
+      '3f685860bd817fc13bcaab43b9d9db0bae7ab9322ad75bf9814b053919bb5ab4',
+      '1d5f5cfa593f0f72c98b98bb9acee802dee8e79b6156fb4ff6b12e59ecc776fe',
+      '5bfdd5bff8f2dac4dfd8366c49dc22e34cff9cb6bf7155e770dd7a5f381146eb',
+      'd78e446b6540612e161ebdda32ee1715ef0f9fc68e890c7e3aae167b0354f998',
+    ],
+  },
+  {
+    testName: 'epochs/:number/blocks/:pool?queryparams generic shelley epoch generic pool',
+    endpoints: [
+      'epochs/211/blocks/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?order=desc',
+      'epochs/211/blocks/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?order=desc&count=22',
+    ],
+    response: [
+      'd78e446b6540612e161ebdda32ee1715ef0f9fc68e890c7e3aae167b0354f998',
+      '5bfdd5bff8f2dac4dfd8366c49dc22e34cff9cb6bf7155e770dd7a5f381146eb',
+      '1d5f5cfa593f0f72c98b98bb9acee802dee8e79b6156fb4ff6b12e59ecc776fe',
+      '3f685860bd817fc13bcaab43b9d9db0bae7ab9322ad75bf9814b053919bb5ab4',
+      'a454340fbb6245531850a19824f538d8c72c86d3ffc0184cfd4eb8b9cbe54b52',
+      'dda7a70935c0b806f48fe54aa502cd585d354b1fbb02e33384f3ae0621e2acd3',
+      '9a54c2c0d2638b79f36a08daf4b47ffdee6cb2893cc970665f89f85f5857f0a9',
+      'e260fbc7c9c9f218f2acedd922ea783d80e23259d05a88e44a7e8e1a581a0d46',
+      '250630dbf79844f9c67121ba7c075f15bfd9923334823d6eec87c8bf2571cb54',
+      '7782acaa4fdefc906b655578881669fb8ad2e37f1d5151c988a553408f15c67e',
+      '0e40f618e929d02bac741bddd31b6fa81d85a05688cbd2633e07b0d68d859ca6',
+      'c204b8c5f04c2d9a33e306770898535a67169f07a6b3f31698db80bb6cc4c14a',
+      '5ca63cc1fa4ed351f207b4d3c9b42e1460e9af0146980b894735ee56ba07348a',
+      '96d29664e7b8658e4009d2e251e11c945cde552ac2dbae49ddde443d11ece65c',
+      '8b4bf644ee6cc044b11238fac293618b74d919b2121e7adf5029ec67aee0d885',
+      '4a9fe53aba81cbcea8d3a59689449b214044d7593ddab69246952524f9a11972',
+      'cdecf4a12ca3f680c12c7f981c028381eb2db1fbfea5ab15ca66a21c5a2c4114',
+      'c842afafdbcec4627bee7b876dbbf773ec87da222315db8ae42f41acb3d0833e',
+      '9ec30b9c941eb9ace623e94457ff103757c8a6b6c26530261be1ea0ff1a1df76',
+      'e4198b0e351c48aa52e6ac3fdff46887f7061866e75f89dd0310793fbeba2336',
+      '1038b2c76a23ea7d89cbd84d7744c97560eb3412661beed6959d748e24ff8229',
+      'da5e26446948b8d1f91396218dcd0131a5e7b3adb200cbd8f124d738438ed5ec',
+    ],
+  },
+];
