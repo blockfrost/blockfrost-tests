@@ -1,5 +1,3 @@
-<a href="https://fivebinaries.com/"><img src="https://img.shields.io/badge/made%20by-Five%20Binaries-darkviolet.svg?style=flat-square" /></a>
-
 <img src="https://blockfrost.io/images/logo.svg" width="250" align="right" height="90">
 
 # Blockfrost Integration Tests
