@@ -23,6 +23,8 @@ PROJECT_ID=mainnetLZgT76GL3subckxt9Y1G8niouSCVwWtn \
 yarn test:mainnet
 ```
 
+#### Fixture example
+
 ```javascript
 import { expect } from 'vitest';
 
