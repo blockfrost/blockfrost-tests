@@ -1,3 +1,4 @@
+import { match } from "node-match-path";
 import { test, describe, expect, TestOptions } from "vitest";
 import { noCase } from "change-case";
 import got, { ExtendOptions, Options, Got } from "got";
@@ -19,7 +20,42 @@ export type Fixture = {
   customExpect?: (response: unknown | null) => Promise<void>;
 };
 
+const isUrlMatch = (urlParameter: string, pattern: string) => {
+  let url = urlParameter;
+
+  try {
+    if (url.includes("?")) {
+      url = url.split("?")[0];
+    }
+
+    const adjustedPattern = pattern.replaceAll("{", ":").replaceAll("}", "");
+
+    if (url === "/pools/retired" && adjustedPattern === "/pools/:pool_id") {
+      return false;
+    }
+
+    if (url === "/pools/retiring" && adjustedPattern === "/pools/:pool_id") {
+      return false;
+    }
+
+    const urlMatch = match(adjustedPattern, url);
+
+    return urlMatch.matches;
+  } catch {
+    return false;
+  }
+};
+
 const projectId = process.env.PROJECT_ID;
+const allowlistEnvironment = process.env.ENDPOINTS_ALLOWLIST;
+
+const endpointsAllowlist: string[] | undefined = allowlistEnvironment
+  ? allowlistEnvironment
+      .split(",")
+      .map(p => p.trim())
+      .filter(Boolean)
+  : undefined;
+
 const prefixUrl = process.env.SERVER_URL || "http://localhost:3000";
 const DEFAULT_HEADERS = projectId ? { project_id: projectId } : {};
 
@@ -38,12 +74,13 @@ export const getInstance = (clientOptions?: ExtendOptions): Got => {
 const skippedTests: { endpoint: string; reason: string }[] = [];
 
 export const shouldRunTest = (fixture: Fixture) => {
-  // TODO add some test filtering logic here
-  //
+  if (!endpointsAllowlist || endpointsAllowlist.length === 0) {
+    return true;
+  }
 
-  console.log("fixture", fixture);
-
-  return true;
+  return fixture.endpoints.some(endpoint =>
+    endpointsAllowlist.some(pattern => isUrlMatch(endpoint, pattern))
+  );
 };
 
 export const generateTestFromFixture = (fixture: Fixture, endpoint: string) => {
@@ -59,7 +96,7 @@ export const generateTestFromFixture = (fixture: Fixture, endpoint: string) => {
 };
 
 export const getClientForFixture = (
-  fixture: Pick<Fixture, "clientOptions" | "headers">,
+  fixture: Pick<Fixture, "clientOptions" | "headers">
 ) => {
   return getInstance({
     ...fixture.clientOptions,
@@ -69,7 +106,7 @@ export const getClientForFixture = (
 
 const makeRequest = async (
   fixture: Pick<Fixture, "postBody" | "clientOptions" | "headers">,
-  endpoint: string,
+  endpoint: string
 ): Promise<{
   data: unknown;
   headers: Record<string, string | string[] | undefined>;
@@ -247,12 +284,12 @@ export const generateTest = (fixture: Fixture, endpoint: string) => {
         expect(response).toStrictEqual(fixture.response);
       }
     },
-    { timeout, retry: fixture.retry },
+    { timeout, retry: fixture.retry }
   );
 };
 
 export const sleep = (delayMs: number) => {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     setTimeout(() => {
       resolve(true);
     }, delayMs);

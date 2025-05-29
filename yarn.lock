@@ -39,15 +39,15 @@
     rimraf "6.0.1"
     yaml "^2.3.4"
 
-"@blockfrost/openapi@0.1.71":
-  version "0.1.71"
-  resolved "https://registry.yarnpkg.com/@blockfrost/openapi/-/openapi-0.1.71.tgz#4318b52e067dfcb6d138e87d18f8ff7e964aa79f"
-  integrity sha512-u23txLTAAJjakGMq3Jw5fN9dW40XzjTb1dYIRNH9RlT+TkMZSxFqOLfwqFao8JQ0ueqL1iJHeDAHQcIgXYZVsA==
+"@blockfrost/openapi@0.1.78":
+  version "0.1.78"
+  resolved "https://registry.yarnpkg.com/@blockfrost/openapi/-/openapi-0.1.78.tgz#90eb66cf1a18e5725c0b261186aafd4407b2e637"
+  integrity sha512-FgusMwAksORQIJjE5bDRTGEf4AH2X7hiFmNVvZZTTJ8ljsJmajkQhuvfCuYkTqm1E2SsPd0wGYFAJ+HYj10AKA==
   dependencies:
-    ajv "^8.12.0"
-    cbor "^9.0.1"
+    ajv "^8.17.1"
+    cbor "^9.0.2"
     rimraf "6.0.1"
-    yaml "^2.3.4"
+    yaml "^2.6.1"
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -1049,7 +1049,7 @@ ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^8.0.1, ajv@^8.12.0:
+ajv@^8.0.1, ajv@^8.12.0, ajv@^8.17.1:
   version "8.17.1"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.17.1.tgz#37d9a5c776af6bc92d7f4f9510eba4c0a60d11a6"
   integrity sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==
@@ -1362,7 +1362,7 @@ canvas-renderer@~2.2.0:
   dependencies:
     "@types/node" "*"
 
-cbor@^9.0.1:
+cbor@^9.0.1, cbor@^9.0.2:
   version "9.0.2"
   resolved "https://registry.yarnpkg.com/cbor/-/cbor-9.0.2.tgz#536b4f2d544411e70ec2b19a2453f10f83cd9fdb"
   integrity sha512-JPypkxsB10s9QOWwa6zwPzqE1Md3vqpPc+cai4sAecuCsRyAtAl/pMyhPlMbT/xtPnm2dznJZYRLui57qiRhaQ==
@@ -2895,6 +2895,11 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
+
+node-match-path@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/node-match-path/-/node-match-path-0.6.3.tgz#55dd8443d547f066937a0752dce462ea7dc27551"
+  integrity sha512-fB1reOHKLRZCJMAka28hIxCwQLxGmd7WewOCBDYKpyA1KXi68A7vaGgdZAPhY2E6SXoYt3KqYCCvXLJ+O0Fu/Q==
 
 node-releases@^2.0.19:
   version "2.0.19"

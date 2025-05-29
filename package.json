@@ -26,6 +26,7 @@
     "form-data": "^4.0.1",
     "jdenticon": "^3.3.0",
     "jest-extended": "^4.0.2",
+    "node-match-path": "^0.6.3",
     "pg-promise": "^11.10.2"
   },
   "devDependencies": {
