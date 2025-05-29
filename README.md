@@ -10,8 +10,6 @@ You have three options how to run the tests.
 - **preview** network - `yarn test:preview`
 - **preprod** network - `yarn test:preprod`
 
-`-t` or `--testNamePattern` - run only tests with matching name
-
 You can use a different environment variables to tweak the tests behaviour.
 
 - `SERVER_URL` where to run the tests | default: _localhost:3000_
