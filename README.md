@@ -1,6 +1,6 @@
 <img src="https://blockfrost.io/images/logo.svg" width="250" align="right" height="90">
 
-# Blockfrost Integration Tests
+# Blockfrost Tests
 
 <br/>
 
@@ -18,7 +18,7 @@ You can use a different environment variables to tweak the tests behaviour.
 #### Command example
 
 ```
-SERVER_URL=https://cardano-mainnet.blockfrost.io/api/v0/ PROJECT_ID=mainnetLZgT76GL3subckxt9Y1G8niouSCVwWtn yarn test:mainnet -t addresses/:address/utxos;
+SERVER_URL=https://cardano-mainnet.blockfrost.io/api/v0/ PROJECT_ID=mainnetLZgT76GL3subckxt9Y1G8niouSCVwWtn yarn test:mainnet
 ```
 
 ```javascript
