@@ -13,7 +13,7 @@ export const composeTransaction = (
   params: {
     protocolParams: Responses['epoch_param_content'];
     currentSlot: number;
-  },
+  }
 ): {
   txHash: string;
   txBody: CardanoWasm.TransactionBody;
@@ -27,8 +27,8 @@ export const composeTransaction = (
       .fee_algo(
         CardanoWasm.LinearFee.new(
           CardanoWasm.BigNum.from_str(params.protocolParams.min_fee_a.toString()),
-          CardanoWasm.BigNum.from_str(params.protocolParams.min_fee_b.toString()),
-        ),
+          CardanoWasm.BigNum.from_str(params.protocolParams.min_fee_b.toString())
+        )
       )
       .pool_deposit(CardanoWasm.BigNum.from_str(params.protocolParams.pool_deposit))
       .key_deposit(CardanoWasm.BigNum.from_str(params.protocolParams.key_deposit))
@@ -36,7 +36,7 @@ export const composeTransaction = (
       .coins_per_utxo_byte(CardanoWasm.BigNum.from_str(params.protocolParams.coins_per_utxo_size!))
       .max_value_size(Number.parseInt(params.protocolParams.max_val_size!))
       .max_tx_size(params.protocolParams.max_tx_size)
-      .build(),
+      .build()
   );
 
   const outputAddr = CardanoWasm.Address.from_bech32(outputAddress);
@@ -50,10 +50,7 @@ export const composeTransaction = (
 
   // Add output to the tx
   txBuilder.add_output(
-    CardanoWasm.TransactionOutput.new(
-      outputAddr,
-      CardanoWasm.Value.new(CardanoWasm.BigNum.from_str(outputAmount)),
-    ),
+    CardanoWasm.TransactionOutput.new(outputAddr, CardanoWasm.Value.new(CardanoWasm.BigNum.from_str(outputAmount)))
   );
 
   // Filter out multi asset utxo to keep this simple
@@ -71,7 +68,7 @@ export const composeTransaction = (
 
     const input = CardanoWasm.TransactionInput.new(
       CardanoWasm.TransactionHash.from_bytes(Buffer.from(utxo.tx_hash, 'hex')),
-      utxo.output_index,
+      utxo.output_index
     );
     const output = CardanoWasm.TransactionOutput.new(changeAddr, inputValue);
 

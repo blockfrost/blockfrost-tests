@@ -1,22 +1,19 @@
-import { expect } from "vitest";
-import { Got } from "got";
-import { BlockfrostServerError, Responses } from "@blockfrost/blockfrost-js";
+import { expect } from 'vitest';
+import { Got } from 'got';
+import { BlockfrostServerError, Responses } from '@blockfrost/blockfrost-js';
 
 export default [
   {
-    testName:
-      "pools/extended output matches data returned from /pools/:pool_id and /pools/:pool_id/metadata",
+    testName: 'pools/extended output matches data returned from /pools/:pool_id and /pools/:pool_id/metadata',
     endpoints: [
-      "pools/extended?count=1&page=1",
-      "pools/extended?count=1&page=2",
-      "pools/extended?count=3&page=3",
-      "pools/extended?count=3&page=4",
+      'pools/extended?count=1&page=1',
+      'pools/extended?count=1&page=2',
+      'pools/extended?count=3&page=3',
+      'pools/extended?count=3&page=4',
     ],
     customTimeout: 120_000,
     customTest: async (endpoint: string, gotClient: Got) => {
-      const poolsExtendedResponse = await gotClient
-        .get(endpoint)
-        .json<Responses["pool_list_extended"]>();
+      const poolsExtendedResponse = await gotClient.get(endpoint).json<Responses['pool_list_extended']>();
 
       for (const poolExtendedData of poolsExtendedResponse) {
         const [poolResponse, poolMetadataResponse] = await Promise.all([
@@ -26,19 +23,16 @@ export default [
                 request: 30000,
               },
             })
-            .json<Responses["pool"]>(),
+            .json<Responses['pool']>(),
           gotClient
             .get(`pools/${poolExtendedData.pool_id}/metadata`, {
               timeout: {
                 request: 30000,
               },
             })
-            .json<Responses["pool_metadata"]>()
-            .catch((error) => {
-              if (
-                error instanceof BlockfrostServerError &&
-                error.status_code === 404
-              ) {
+            .json<Responses['pool_metadata']>()
+            .catch(error => {
+              if (error instanceof BlockfrostServerError && error.status_code === 404) {
                 return null;
               } else {
                 throw error;

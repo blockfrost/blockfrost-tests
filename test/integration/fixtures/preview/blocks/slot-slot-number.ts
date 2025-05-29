@@ -2,8 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
-    testName:
-      'blocks/slot/:slot_number and blocks/epoch/:epoch_number/slot/:slot_number - generic shelley',
+    testName: 'blocks/slot/:slot_number and blocks/epoch/:epoch_number/slot/:slot_number - generic shelley',
     endpoints: ['blocks/slot/44214148', 'blocks/epoch/511/slot/63748'],
     response: {
       time: 1_710_870_148,

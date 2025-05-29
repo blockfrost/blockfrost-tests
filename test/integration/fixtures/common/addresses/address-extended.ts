@@ -1,9 +1,9 @@
-import { error_invalid_path } from "../../errors/index.js";
+import { error_invalid_path } from '../../errors/index.js';
 
 export default [
   {
-    testName: "addresses extended [object%20Object]",
-    endpoints: ["addresses/[object%20Object]/extended"],
+    testName: 'addresses extended [object%20Object]',
+    endpoints: ['addresses/[object%20Object]/extended'],
     response: error_invalid_path,
   },
 ];

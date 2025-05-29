@@ -1,9 +1,7 @@
 export default [
   {
     testName: 'txs/:tx/pool_updates - generic shelley with pool certs',
-    endpoints: [
-      'txs/6091f714ccbb720fcb7db72fad984afe94095f7a5aa9a03879b60fbc35740a97/pool_updates',
-    ],
+    endpoints: ['txs/6091f714ccbb720fcb7db72fad984afe94095f7a5aa9a03879b60fbc35740a97/pool_updates'],
     response: [
       {
         cert_index: 0,
@@ -37,11 +35,8 @@ export default [
   },
   // select view, encode(tx.hash,'hex') from pool_update pu join tx on (pu.registered_tx_id = tx.id) join pool_hash ph on (pu.hash_id = ph.id) where reward_addr_id IN (select id from stake_address sa where not exists (select 1 from tx_out where stake_address_id = sa.id));
   {
-    testName:
-      'txs/:tx/pool_updates - shelley with pool update which does not have onchain reward address',
-    endpoints: [
-      'txs/e3ca57e8f323265742a8f4e79ff9af884c9ff8719bd4f7788adaea4c33ba07b6/pool_updates',
-    ],
+    testName: 'txs/:tx/pool_updates - shelley with pool update which does not have onchain reward address',
+    endpoints: ['txs/e3ca57e8f323265742a8f4e79ff9af884c9ff8719bd4f7788adaea4c33ba07b6/pool_updates'],
     response: [
       {
         cert_index: 1,
@@ -131,45 +126,47 @@ export default [
   },
   {
     testName: 'txs/:tx - generic shelley with MULTIPLE delegation, stake certs and pool updates',
-    endpoints: [
-      'txs/e3ca57e8f323265742a8f4e79ff9af884c9ff8719bd4f7788adaea4c33ba07b6/pool_updates',
+    endpoints: ['txs/e3ca57e8f323265742a8f4e79ff9af884c9ff8719bd4f7788adaea4c33ba07b6/pool_updates'],
+    response: [
+      {
+        cert_index: 1,
+        pool_id: 'pool16h8ugt8k0a4kxa5g6x062zjrgfjc7cehpw0ze8374axlul76932',
+        vrf_key: '4331f2905796fd9a028c17896ce5305dc1daf710ad448a3872df75722f2cc41d',
+        pledge: '100000000000000',
+        margin_cost: 1,
+        fixed_cost: '500000000',
+        reward_account: 'stake_test1uzuklnhnhy634a5rf0v9pcaf0pva002mw2wjf0ekg6h2encat3ykr',
+        owners: ['stake_test1uzapf83wydusjln97rqr7fen6vgrz5087yqdxm0akqdqkgstjz8g4'],
+        metadata: { url: null, hash: null, ticker: null, name: null, description: null, homepage: null },
+        relays: [{ ipv4: null, ipv6: null, dns: 'preview-node.world.dev.cardano.org', dns_srv: null, port: 30002 }],
+        active_epoch: 2,
+      },
+      {
+        cert_index: 4,
+        pool_id: 'pool18r62tz408lkgfu6pq5svwzkh2vslkeg6mf72qf3h8njgvzhx9ce',
+        vrf_key: 'a1b272e77f8d5cebc04ba482dacba825e8f7f59251d95746e8ff23864e0c89ee',
+        pledge: '100000000000000',
+        margin_cost: 1,
+        fixed_cost: '500000000',
+        reward_account: 'stake_test1uzuklnhnhy634a5rf0v9pcaf0pva002mw2wjf0ekg6h2encat3ykr',
+        owners: ['stake_test1upugeuz3jdy0a7hncusutadavzcetdzylgxcldz39hp9n0s0xy0n5'],
+        metadata: { url: null, hash: null, ticker: null, name: null, description: null, homepage: null },
+        relays: [{ ipv4: null, ipv6: null, dns: 'preview-node.world.dev.cardano.org', dns_srv: null, port: 30002 }],
+        active_epoch: 2,
+      },
+      {
+        cert_index: 7,
+        pool_id: 'pool1grvqd4eu354qervmr62uew0nsrjqedx5kglldeqr4c29vv59rku',
+        vrf_key: '5ad90f4be69faac1c7e216cd50631240db41842b5a43f2ce344670fa7219a6c6',
+        pledge: '100000000000000',
+        margin_cost: 1,
+        fixed_cost: '500000000',
+        reward_account: 'stake_test1uzuklnhnhy634a5rf0v9pcaf0pva002mw2wjf0ekg6h2encat3ykr',
+        owners: ['stake_test1urmrzdcvepug9067zj4hy56v4un9t59z559f4z3cyzak7js3z5t2t'],
+        metadata: { url: null, hash: null, ticker: null, name: null, description: null, homepage: null },
+        relays: [{ ipv4: null, ipv6: null, dns: 'preview-node.world.dev.cardano.org', dns_srv: null, port: 30002 }],
+        active_epoch: 2,
+      },
     ],
-    response: [{
-      cert_index: 1,
-      pool_id: 'pool16h8ugt8k0a4kxa5g6x062zjrgfjc7cehpw0ze8374axlul76932',
-      vrf_key: '4331f2905796fd9a028c17896ce5305dc1daf710ad448a3872df75722f2cc41d',
-      pledge: '100000000000000',
-      margin_cost: 1,
-      fixed_cost: '500000000',
-      reward_account: 'stake_test1uzuklnhnhy634a5rf0v9pcaf0pva002mw2wjf0ekg6h2encat3ykr',
-      owners: ['stake_test1uzapf83wydusjln97rqr7fen6vgrz5087yqdxm0akqdqkgstjz8g4'],
-      metadata: { url: null, hash: null, ticker: null, name: null, description: null, homepage: null },
-      relays: [{ ipv4: null, ipv6: null, dns: 'preview-node.world.dev.cardano.org', dns_srv: null, port: 30002 }],
-      active_epoch: 2,
-    }, {
-      cert_index: 4,
-      pool_id: 'pool18r62tz408lkgfu6pq5svwzkh2vslkeg6mf72qf3h8njgvzhx9ce',
-      vrf_key: 'a1b272e77f8d5cebc04ba482dacba825e8f7f59251d95746e8ff23864e0c89ee',
-      pledge: '100000000000000',
-      margin_cost: 1,
-      fixed_cost: '500000000',
-      reward_account: 'stake_test1uzuklnhnhy634a5rf0v9pcaf0pva002mw2wjf0ekg6h2encat3ykr',
-      owners: ['stake_test1upugeuz3jdy0a7hncusutadavzcetdzylgxcldz39hp9n0s0xy0n5'],
-      metadata: { url: null, hash: null, ticker: null, name: null, description: null, homepage: null },
-      relays: [{ ipv4: null, ipv6: null, dns: 'preview-node.world.dev.cardano.org', dns_srv: null, port: 30002 }],
-      active_epoch: 2,
-    }, {
-      cert_index: 7,
-      pool_id: 'pool1grvqd4eu354qervmr62uew0nsrjqedx5kglldeqr4c29vv59rku',
-      vrf_key: '5ad90f4be69faac1c7e216cd50631240db41842b5a43f2ce344670fa7219a6c6',
-      pledge: '100000000000000',
-      margin_cost: 1,
-      fixed_cost: '500000000',
-      reward_account: 'stake_test1uzuklnhnhy634a5rf0v9pcaf0pva002mw2wjf0ekg6h2encat3ykr',
-      owners: ['stake_test1urmrzdcvepug9067zj4hy56v4un9t59z559f4z3cyzak7js3z5t2t'],
-      metadata: { url: null, hash: null, ticker: null, name: null, description: null, homepage: null },
-      relays: [{ ipv4: null, ipv6: null, dns: 'preview-node.world.dev.cardano.org', dns_srv: null, port: 30002 }],
-      active_epoch: 2,
-    }],
   },
 ];

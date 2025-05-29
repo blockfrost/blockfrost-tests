@@ -1,7 +1,7 @@
 export default [
   {
-    testName: 'scripts/datum/:hash - random datum',
-    endpoints: ['scripts/datum/b326a02cc8ebe16c272122843ce445d713fb5efe28b678133926066a61058776'],
+    testName: "scripts/datum/:hash - random datum",
+    endpoints: ["scripts/datum/b326a02cc8ebe16c272122843ce445d713fb5efe28b678133926066a61058776"],
     response: {
       json_value: {
         fields: [
@@ -15,13 +15,13 @@ export default [
                   map: [
                     {
                       k: {
-                        bytes: '8251cd9730e62a751553e612a14f5902ea7ab057f5246c122ddbdbe6',
+                        bytes: "8251cd9730e62a751553e612a14f5902ea7ab057f5246c122ddbdbe6",
                       },
                       v: {
                         map: [
                           {
                             k: {
-                              bytes: '5348454e',
+                              bytes: "5348454e",
                             },
                             v: {
                               int: 16_905_000_000,
@@ -41,13 +41,13 @@ export default [
                   map: [
                     {
                       k: {
-                        bytes: '8c0e4fc7b0e37784d63b2a179baef389c7df757cdbd3dc49a118bf19',
+                        bytes: "8c0e4fc7b0e37784d63b2a179baef389c7df757cdbd3dc49a118bf19",
                       },
                       v: {
                         map: [
                           {
                             k: {
-                              bytes: '69425443',
+                              bytes: "69425443",
                             },
                             v: {
                               int: 132_630,
@@ -66,10 +66,10 @@ export default [
               {
                 fields: [
                   {
-                    bytes: '8251cd9730e62a751553e612a14f5902ea7ab057f5246c122ddbdbe6',
+                    bytes: "8251cd9730e62a751553e612a14f5902ea7ab057f5246c122ddbdbe6",
                   },
                   {
-                    bytes: '5348454e',
+                    bytes: "5348454e",
                   },
                 ],
                 constructor: 0,
@@ -77,10 +77,10 @@ export default [
               {
                 fields: [
                   {
-                    bytes: '8c0e4fc7b0e37784d63b2a179baef389c7df757cdbd3dc49a118bf19',
+                    bytes: "8c0e4fc7b0e37784d63b2a179baef389c7df757cdbd3dc49a118bf19",
                   },
                   {
-                    bytes: '69425443',
+                    bytes: "69425443",
                   },
                 ],
                 constructor: 0,
@@ -90,10 +90,10 @@ export default [
           {
             fields: [
               {
-                bytes: '30ebb43fb665dd2570b91a430ac73c25b3826614c9005092464c183c',
+                bytes: "30ebb43fb665dd2570b91a430ac73c25b3826614c9005092464c183c",
               },
               {
-                bytes: '41584f53',
+                bytes: "41584f53",
               },
             ],
             constructor: 0,
@@ -102,7 +102,7 @@ export default [
             map: [
               {
                 k: {
-                  bytes: '656e6444617465',
+                  bytes: "656e6444617465",
                 },
                 v: {
                   fields: [
@@ -115,7 +115,7 @@ export default [
               },
               {
                 k: {
-                  bytes: '6672657175656e6379',
+                  bytes: "6672657175656e6379",
                 },
                 v: {
                   fields: [
@@ -128,7 +128,7 @@ export default [
               },
               {
                 k: {
-                  bytes: '737461727444617465',
+                  bytes: "737461727444617465",
                 },
                 v: {
                   fields: [
@@ -141,7 +141,7 @@ export default [
               },
               {
                 k: {
-                  bytes: '7472616e636865',
+                  bytes: "7472616e636865",
                 },
                 v: {
                   fields: [
@@ -158,7 +158,7 @@ export default [
             map: [
               {
                 k: {
-                  bytes: '6c617374',
+                  bytes: "6c617374",
                 },
                 v: {
                   fields: [

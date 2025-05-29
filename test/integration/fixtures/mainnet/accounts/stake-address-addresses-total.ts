@@ -1,9 +1,7 @@
 export default [
   {
     testName: 'accounts/:stake_address/addresses/total nutcoin stake address',
-    endpoints: [
-      'accounts/stake1u9e45fvvd4ujpc0kka0pnx9zqdvh9wl96nsg6sje0f5hmfq45lrja/addresses/total',
-    ],
+    endpoints: ['accounts/stake1u9e45fvvd4ujpc0kka0pnx9zqdvh9wl96nsg6sje0f5hmfq45lrja/addresses/total'],
     response: {
       stake_address: 'stake1u9e45fvvd4ujpc0kka0pnx9zqdvh9wl96nsg6sje0f5hmfq45lrja',
       received_sum: [

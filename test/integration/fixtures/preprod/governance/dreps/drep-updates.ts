@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from "../../../../utils.js";
 
 const paginationFixtures = getPaginationFixtures(
-  "governance/dreps/drep1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhquq6gltn/updates",
+  "governance/dreps/drep1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhquq6gltn/updates"
 );
 
 export default [
@@ -9,9 +9,7 @@ export default [
   {
     testName: "governance drep keyHash updates",
 
-    endpoints: [
-      "governance/dreps/drep1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhquq6gltn/updates",
-    ],
+    endpoints: ["governance/dreps/drep1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhquq6gltn/updates"],
     response: [],
   },
   {
@@ -23,14 +21,12 @@ export default [
     ],
     response: [
       {
-        tx_hash:
-          "744fb092ab6d8a4d8ca8f66ea3c0abb6b9d49381205aa41c75c8597e91137948",
+        tx_hash: "744fb092ab6d8a4d8ca8f66ea3c0abb6b9d49381205aa41c75c8597e91137948",
         cert_index: 0,
         action: "registered",
       },
       {
-        tx_hash:
-          "ebab27b88379f662d5bdcd2db7c0be391fd94674a889255411d540b6684e5c13",
+        tx_hash: "ebab27b88379f662d5bdcd2db7c0be391fd94674a889255411d540b6684e5c13",
         cert_index: 0,
         action: "deregistered",
       },

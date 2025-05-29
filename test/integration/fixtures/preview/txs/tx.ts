@@ -10,16 +10,20 @@ export default [
       block_time: 1695027492,
       slot: 28371492,
       index: 1,
-      output_amount: [{
-        unit: 'lovelace',
-        quantity: '1103005479',
-      }, {
-        unit: '4b9ae3978af62cf98dcc3b9aecc3dbbd2f59fa06b55e1f443e3c7c81204c95cf200048fb859753f750126ec1270056f8a5543a10161b6c5fad269e73',
-        quantity: '5',
-      }, {
-        unit: '87aa0c11bb8f94d523a74fe7badded9c4908d1a65c8a6443e9f98db4204c95cf200048fb859753f750126ec1270056f8a5543a10161b6c5fad269e73',
-        quantity: '1',
-      }],
+      output_amount: [
+        {
+          unit: 'lovelace',
+          quantity: '1103005479',
+        },
+        {
+          unit: '4b9ae3978af62cf98dcc3b9aecc3dbbd2f59fa06b55e1f443e3c7c81204c95cf200048fb859753f750126ec1270056f8a5543a10161b6c5fad269e73',
+          quantity: '5',
+        },
+        {
+          unit: '87aa0c11bb8f94d523a74fe7badded9c4908d1a65c8a6443e9f98db4204c95cf200048fb859753f750126ec1270056f8a5543a10161b6c5fad269e73',
+          quantity: '1',
+        },
+      ],
       fees: '1042905',
       deposit: '0',
       size: 16_384,
@@ -159,10 +163,13 @@ export default [
       block_time: 1670299259,
       slot: 3643259,
       index: 8,
-      output_amount: [{
-        unit: 'lovelace',
-        quantity: '13056529011',
-      }, { unit: 'd9b13c38a94f384c387915721463c11357c7ad0bab4c677505e4c2ae504154', quantity: '1' }],
+      output_amount: [
+        {
+          unit: 'lovelace',
+          quantity: '13056529011',
+        },
+        { unit: 'd9b13c38a94f384c387915721463c11357c7ad0bab4c677505e4c2ae504154', quantity: '1' },
+      ],
       fees: '438718',
       deposit: '2000000',
       size: 4618,
@@ -246,13 +253,16 @@ export default [
       block_time: 1722382193,
       slot: 55726193,
       index: +0,
-      output_amount: [{
-        unit: 'lovelace',
-        quantity: '7057437341',
-      }, {
-        unit: 'edc3e672f72cd9971f75141bb54570f2f745033615eaa75a82434e71000de1404c616479204c79646961',
-        quantity: '1',
-      }],
+      output_amount: [
+        {
+          unit: 'lovelace',
+          quantity: '7057437341',
+        },
+        {
+          unit: 'edc3e672f72cd9971f75141bb54570f2f745033615eaa75a82434e71000de1404c616479204c79646961',
+          quantity: '1',
+        },
+      ],
       fees: '305025',
       deposit: '0',
       size: 3396,
@@ -271,8 +281,7 @@ export default [
     },
   },
   {
-    testName:
-      'txs/:tx - shelley tx with ridiculous hereafter out of range value',
+    testName: 'txs/:tx - shelley tx with ridiculous hereafter out of range value',
     endpoints: ['txs/46876a2250ec0e523eccc30b0fc6d6fa55c61dd200b83140acaab291edeb0b11'],
     response: {
       hash: '46876a2250ec0e523eccc30b0fc6d6fa55c61dd200b83140acaab291edeb0b11',
@@ -337,127 +346,168 @@ export default [
       block_time: 1747218926,
       slot: 80562926,
       index: +0,
-      output_amount: [{
-        unit: 'lovelace',
-        quantity: '265605366',
-      }, {
-        unit: '2fe3c3364b443194b10954771c95819b8d6ed464033c21f03f8facb569555344',
-        quantity: '10000',
-      }, {
-        unit: '5a76222655ba5ddd8197dbe3f35ca226e9ef7f08631132dbf5aadcde50726f746f636f6c20546f6b656e73',
-        quantity: '10000',
-      }, {
-        unit: '61bde24413ccfbb3331278a1407dc7ed797c2874e79899baa0eb70d65045542d507265766965772d313932',
-        quantity: '1',
-      }, {
-        unit: '68dabebfd9b41b53a0ce2bb9c702b5d197f2d5bfbd965fddd89741f30014df104b6f696f73',
-        quantity: '10000',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523031336666303238',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523032336534393362',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523032343933376337',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523033656330613761',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523131663132333036',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523138653435616136',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523237356539366462',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523237616464353163',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523261333763326262',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523631663139616363',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523634313832343864',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523636376261373763',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523639323331363637',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523736353762633732',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523833623537343861',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523866396135373164',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523935656235333963',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523966656538393836',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526131336165633435',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526162313562393966',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526164343063373535',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526334636138303635',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526361303039343832',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526436636630643731',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526531383638333838',
-        quantity: '1',
-      }, {
-        unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526638653064623065',
-        quantity: '1',
-      }, {
-        unit: '9831e0e712e8509d607eca80a81c12f461a1db20232d04ea0fc833a74b61726d61',
-        quantity: '10880674251',
-      }, {
-        unit: '99b071ce8580d6a3a11b4902145adb8bfd0d2a03935af8cf66403e15524245525259',
-        quantity: '10000',
-      }, {
-        unit: 'b8794febdb27730a6f0476efe6736fb04fb24cd4f9bf02db150701df4d796e746820546f6b656e',
-        quantity: '10000',
-      }, {
-        unit: 'c450b3e21b1e98bb559bfbaf3b9fd9df60d7df9e0ce62cedd56912ea000643b0404d5248455252494e47',
-        quantity: '1',
-      }, {
-        unit: 'c450b3e21b1e98bb559bfbaf3b9fd9df60d7df9e0ce62cedd56912ea000de140404d5248455252494e47',
-        quantity: '1',
-      }, {
-        unit: 'd53989cc7e67573fb917b0d42f1b2053dbf93886c0817d7f8a43452dc382544d41',
-        quantity: '65767136610',
-      }, {
-        unit: 'e562f15689155b3db54759f64fceb25ca89165f66ee2d7ecff43a43b544553542d504554',
-        quantity: '1000000',
-      }, {
-        unit: 'fa3eff2047fdf9293c5feef4dc85ce58097ea1c6da4845a35153518374494e4459',
-        quantity: '10000',
-      }, {
-        unit: 'ffbea8425064c5d7874498f07b7b117e503eb4d2891267a3c00ae6d5446966667573696f6e',
-        quantity: '1249029660570',
-      }],
+      output_amount: [
+        {
+          unit: 'lovelace',
+          quantity: '265605366',
+        },
+        {
+          unit: '2fe3c3364b443194b10954771c95819b8d6ed464033c21f03f8facb569555344',
+          quantity: '10000',
+        },
+        {
+          unit: '5a76222655ba5ddd8197dbe3f35ca226e9ef7f08631132dbf5aadcde50726f746f636f6c20546f6b656e73',
+          quantity: '10000',
+        },
+        {
+          unit: '61bde24413ccfbb3331278a1407dc7ed797c2874e79899baa0eb70d65045542d507265766965772d313932',
+          quantity: '1',
+        },
+        {
+          unit: '68dabebfd9b41b53a0ce2bb9c702b5d197f2d5bfbd965fddd89741f30014df104b6f696f73',
+          quantity: '10000',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523031336666303238',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523032336534393362',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523032343933376337',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523033656330613761',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523131663132333036',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523138653435616136',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523237356539366462',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523237616464353163',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523261333763326262',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523631663139616363',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523634313832343864',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523636376261373763',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523639323331363637',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523736353762633732',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523833623537343861',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523866396135373164',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523935656235333963',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545523966656538393836',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526131336165633435',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526162313562393966',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526164343063373535',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526334636138303635',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526361303039343832',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526436636630643731',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526531383638333838',
+          quantity: '1',
+        },
+        {
+          unit: '7e45118272daec25d07395db991611d723bece256191d1926bb612f550494f4e4545526638653064623065',
+          quantity: '1',
+        },
+        {
+          unit: '9831e0e712e8509d607eca80a81c12f461a1db20232d04ea0fc833a74b61726d61',
+          quantity: '10880674251',
+        },
+        {
+          unit: '99b071ce8580d6a3a11b4902145adb8bfd0d2a03935af8cf66403e15524245525259',
+          quantity: '10000',
+        },
+        {
+          unit: 'b8794febdb27730a6f0476efe6736fb04fb24cd4f9bf02db150701df4d796e746820546f6b656e',
+          quantity: '10000',
+        },
+        {
+          unit: 'c450b3e21b1e98bb559bfbaf3b9fd9df60d7df9e0ce62cedd56912ea000643b0404d5248455252494e47',
+          quantity: '1',
+        },
+        {
+          unit: 'c450b3e21b1e98bb559bfbaf3b9fd9df60d7df9e0ce62cedd56912ea000de140404d5248455252494e47',
+          quantity: '1',
+        },
+        {
+          unit: 'd53989cc7e67573fb917b0d42f1b2053dbf93886c0817d7f8a43452dc382544d41',
+          quantity: '65767136610',
+        },
+        {
+          unit: 'e562f15689155b3db54759f64fceb25ca89165f66ee2d7ecff43a43b544553542d504554',
+          quantity: '1000000',
+        },
+        {
+          unit: 'fa3eff2047fdf9293c5feef4dc85ce58097ea1c6da4845a35153518374494e4459',
+          quantity: '10000',
+        },
+        {
+          unit: 'ffbea8425064c5d7874498f07b7b117e503eb4d2891267a3c00ae6d5446966667573696f6e',
+          quantity: '1249029660570',
+        },
+      ],
       fees: '449931',
       deposit: '0',
       size: 2083,

@@ -1,27 +1,24 @@
-import { expect } from "vitest";
-import { getPaginationFixtures } from "../../../utils.js";
+import { expect } from 'vitest';
+import { getPaginationFixtures } from '../../../utils.js';
 
-const paginationFixtures = getPaginationFixtures("pools/extended", {});
+const paginationFixtures = getPaginationFixtures('pools/extended');
 
 export default [
   ...paginationFixtures,
   {
-    testName: "pools/extended?queryparams",
-    endpoints: [
-      "pools/extended?count=5&page=3",
-      "pools/extended?count=5&page=3&order=asc",
-    ],
+    testName: 'pools/extended?queryparams',
+    endpoints: ['pools/extended?count=5&page=3', 'pools/extended?count=5&page=3&order=asc'],
     response: [
       {
-        pool_id: "pool1l8ywwf6nfrfmrg6edj2qjh6rxpuepnzlsq9mhvjk9xr9swkht93",
-        hex: "f9c8e7275348d3b1a3596c94095f43307990cc5f800bbbb256298658",
+        pool_id: 'pool1l8ywwf6nfrfmrg6edj2qjh6rxpuepnzlsq9mhvjk9xr9swkht93',
+        hex: 'f9c8e7275348d3b1a3596c94095f43307990cc5f800bbbb256298658',
         active_stake: expect.toBeAdaQuantity(),
         live_stake: expect.toBeAdaQuantity(),
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(1079),
         margin_cost: 0.1,
-        fixed_cost: "170000000",
-        declared_pledge: "1000000000",
+        fixed_cost: '170000000',
+        declared_pledge: '1000000000',
         metadata: {
           hash: expect.any(String),
           ticker: expect.any(String),
@@ -32,15 +29,15 @@ export default [
         },
       },
       {
-        pool_id: "pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r",
-        hex: "8aa469088eaf5c38c3d4faf0d3516ca670cd6df5545fafea2f70258b",
+        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
+        hex: '8aa469088eaf5c38c3d4faf0d3516ca670cd6df5545fafea2f70258b',
         active_stake: expect.toBeAdaQuantity(),
         live_stake: expect.toBeAdaQuantity(),
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(1079),
         margin_cost: 0.0,
-        fixed_cost: "340000000",
-        declared_pledge: "1000000000000",
+        fixed_cost: '340000000',
+        declared_pledge: '1000000000000',
         metadata: {
           hash: expect.any(String),
           ticker: expect.any(String),
@@ -51,15 +48,15 @@ export default [
         },
       },
       {
-        pool_id: "pool1hghdaa7chn4hykkf9h0g0yqpz6j93gexvllz0w6p93y72saukmp",
-        hex: "ba2edef7d8bceb725ac92dde87900116a458a32667fe27bb412c49e5",
+        pool_id: 'pool1hghdaa7chn4hykkf9h0g0yqpz6j93gexvllz0w6p93y72saukmp',
+        hex: 'ba2edef7d8bceb725ac92dde87900116a458a32667fe27bb412c49e5',
         active_stake: expect.toBeAdaQuantity(),
         live_stake: expect.toBeAdaQuantity(),
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(1079),
         margin_cost: 0.2,
-        fixed_cost: "340000000",
-        declared_pledge: "10000000",
+        fixed_cost: '340000000',
+        declared_pledge: '10000000',
         metadata: {
           hash: expect.any(String),
           ticker: expect.any(String),
@@ -70,15 +67,15 @@ export default [
         },
       },
       {
-        pool_id: "pool1uhkxzvt9rj5s9emzr3uklwg2wdt7uky3aatgv9amhn2yz59laey",
-        hex: "e5ec6131651ca902e7621c796fb90a7357ee5891ef568617bbbcd441",
-        active_stake: "16171042958",
-        live_stake: "16171042958",
+        pool_id: 'pool1uhkxzvt9rj5s9emzr3uklwg2wdt7uky3aatgv9amhn2yz59laey',
+        hex: 'e5ec6131651ca902e7621c796fb90a7357ee5891ef568617bbbcd441',
+        active_stake: '16171042958',
+        live_stake: '16171042958',
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(820),
         margin_cost: 0.15,
-        fixed_cost: "340000000",
-        declared_pledge: "9000000000",
+        fixed_cost: '340000000',
+        declared_pledge: '9000000000',
         metadata: {
           hash: expect.any(String),
           ticker: expect.any(String),
@@ -89,15 +86,15 @@ export default [
         },
       },
       {
-        pool_id: "pool144pedg8hc3lr660w30te9jqv5zllaesegh8vt3ptft5s7qu45re",
-        hex: "ad4396a0f7c47e3d69ee8bd792c80ca0bffee61945cec5c42b4ae90f",
+        pool_id: 'pool144pedg8hc3lr660w30te9jqv5zllaesegh8vt3ptft5s7qu45re',
+        hex: 'ad4396a0f7c47e3d69ee8bd792c80ca0bffee61945cec5c42b4ae90f',
         active_stake: expect.toBeAdaQuantity(),
         live_stake: expect.toBeAdaQuantity(),
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(1079),
         margin_cost: 0.0,
-        fixed_cost: "340000000",
-        declared_pledge: "100000000000",
+        fixed_cost: '340000000',
+        declared_pledge: '100000000000',
         metadata: {
           hash: expect.any(String),
           ticker: expect.any(String),
@@ -110,8 +107,8 @@ export default [
     ],
   },
   {
-    testName: "pools/extended?queryparams - we are not there yet",
-    endpoints: ["pools/extended?page=694269"],
+    testName: 'pools/extended?queryparams - we are not there yet',
+    endpoints: ['pools/extended?page=694269'],
     response: [],
   },
 ];

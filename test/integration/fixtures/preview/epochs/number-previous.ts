@@ -1,9 +1,7 @@
 import { error_400_epochs } from '../../errors/index.js';
 import { getPaginationFixtures } from '../../../utils.js';
 
-const paginationFixtures = getPaginationFixtures('epochs/121/previous').filter(
-  ({ type }) => type !== 'order',
-);
+const paginationFixtures = getPaginationFixtures('epochs/121/previous').filter(({ type }) => type !== 'order');
 
 export default [
   ...paginationFixtures,

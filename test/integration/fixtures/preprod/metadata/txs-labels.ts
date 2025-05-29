@@ -1,7 +1,7 @@
 import { expect } from "vitest";
 import { getPaginationFixtures } from "../../../utils.js";
 
-const paginationFixtures = getPaginationFixtures("metadata/txs/labels", {});
+const paginationFixtures = getPaginationFixtures("metadata/txs/labels");
 
 export default [
   ...paginationFixtures,

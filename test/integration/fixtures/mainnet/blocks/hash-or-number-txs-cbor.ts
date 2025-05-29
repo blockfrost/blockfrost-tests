@@ -19,9 +19,7 @@ export default [
   },
   {
     testName: 'blocks/:hash_or_number/txs/cbor - generic block pagination',
-    endpoints: [
-      'blocks/86d2f15766e4a4fc62781b88e354201e70e870979b99c28a517450110e7a90d5/txs/cbor?count=1&page=2',
-    ],
+    endpoints: ['blocks/86d2f15766e4a4fc62781b88e354201e70e870979b99c28a517450110e7a90d5/txs/cbor?count=1&page=2'],
     response: [
       {
         tx_hash: '315b8c93cb3d9547ba05f901fa65621aace6b725e9dd19685db1eef1df09b143',
@@ -31,9 +29,7 @@ export default [
   },
   {
     testName: 'blocks/:hash_or_number/txs/cbor - generic block DESC',
-    endpoints: [
-      'blocks/86d2f15766e4a4fc62781b88e354201e70e870979b99c28a517450110e7a90d5/txs/cbor?order=desc',
-    ],
+    endpoints: ['blocks/86d2f15766e4a4fc62781b88e354201e70e870979b99c28a517450110e7a90d5/txs/cbor?order=desc'],
     response: [
       {
         tx_hash: '1a43e381a07227119d2371da49d9995c147fa0c9a0071cfb07dbee7d8d0c10aa',

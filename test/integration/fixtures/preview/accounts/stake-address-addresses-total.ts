@@ -1,9 +1,7 @@
 export default [
   {
     testName: 'accounts/:stake_address/addresses/total big stake address',
-    endpoints: [
-      'accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/addresses/total',
-    ],
+    endpoints: ['accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/addresses/total'],
     response: {
       stake_address: 'stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u',
       received_sum: [

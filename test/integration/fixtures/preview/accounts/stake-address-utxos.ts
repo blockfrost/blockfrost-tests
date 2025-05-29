@@ -5,8 +5,7 @@ export default [
     response: [],
   },
   {
-    testName:
-      'accounts/:stake_address/utxos bf account (2 pages uf utxos across multiple addresses)',
+    testName: 'accounts/:stake_address/utxos bf account (2 pages uf utxos across multiple addresses)',
     endpoints: ['accounts/stake_test1uq70zpxr7jdqxdlj895x9lvnwn9lrcknwpx8cswlld7x76gtzvrjp/utxos'],
     response: [
       {

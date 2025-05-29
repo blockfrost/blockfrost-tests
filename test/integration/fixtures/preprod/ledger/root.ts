@@ -1,11 +1,11 @@
 export default [
   {
-    testName: 'genesis',
-    endpoints: ['genesis'],
+    testName: "genesis",
+    endpoints: ["genesis"],
     response: {
       active_slots_coefficient: 0.05,
       update_quorum: 5,
-      max_lovelace_supply: '45000000000000000',
+      max_lovelace_supply: "45000000000000000",
       network_magic: 1,
       epoch_length: 432_000,
       system_start: 1_654_041_600,

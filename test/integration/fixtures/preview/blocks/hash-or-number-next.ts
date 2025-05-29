@@ -2,17 +2,14 @@ import { expect } from 'vitest';
 import { getPaginationFixtures } from '../../../utils.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'blocks/c7e2d79af857f6ae49d9c7e7ecd985263fe3719115c9bbddce1a861d01686650/next',
+  'blocks/c7e2d79af857f6ae49d9c7e7ecd985263fe3719115c9bbddce1a861d01686650/next'
 ).filter(({ type }) => type !== 'order');
 
 export default [
   ...paginationFixtures,
   {
     testName: 'blocks/:hash_or_number/next?queryparams - generic boundary',
-    endpoints: [
-      'blocks/90aeac71d8c48bfb8c1f0c540b2ec081fa429c5f106e669f56a2748246b8dd07/next',
-      'blocks/19234/next',
-    ],
+    endpoints: ['blocks/90aeac71d8c48bfb8c1f0c540b2ec081fa429c5f106e669f56a2748246b8dd07/next', 'blocks/19234/next'],
     response: [
       {
         time: 1_667_040_236,

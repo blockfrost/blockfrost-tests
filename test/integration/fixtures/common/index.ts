@@ -1,11 +1,6 @@
 import healthRoot from './health/root.js';
 import healthClock from './health/clock.js';
 import root from './root/root.js';
-import mempoolRoot from './mempool/root.js';
-import metricsRoot from './metrics/root.js';
-import metricsEndpoints from './metrics/endpoints.js';
-import mempoolHash from './mempool/hash.js';
-import mempoolAddressesAddress from './mempool/addresses/address.js';
 import blocksLatest from './blocks/latest/root.js';
 import blocksLatestTxs from './blocks/latest/txs/index.js';
 import blocksLatestTxsCbor from './blocks/latest/txs/cbor.js';
@@ -33,8 +28,6 @@ export const commonFixtures = {
   ],
   health: [...healthRoot, ...healthClock],
   root: [...root],
-  metrics: [...metricsRoot, ...metricsEndpoints],
-  mempool: [...mempoolRoot, ...mempoolHash, ...mempoolAddressesAddress],
   blocks: [...blocksLatest, ...blocksLatestTxs, ...blocksLatestTxsCbor],
   epochs: [...epochsLatest],
   pools: [...poolsExtended],

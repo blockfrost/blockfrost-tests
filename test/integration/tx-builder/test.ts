@@ -1,12 +1,12 @@
-import { expect } from "vitest";
-import { BlockFrostAPI } from "@blockfrost/blockfrost-js";
-import { buildTx, Network, waitForTx } from "./index.js";
-import { sleep } from "../utils.js";
+import { expect } from 'vitest';
+import { BlockFrostAPI } from '@blockfrost/blockfrost-js';
+import { buildTx, Network, waitForTx } from './index.js';
+import { sleep } from '../utils.js';
 
 const projectIds = {
-  mainnet: "mainnetLZgT76GL3subckxt9Y1G8niouSCVwWtn",
-  preview: "previewdQyKqTIPRwfPtkHG5dtAyp1A2V63uVNI",
-  preprod: "preprod7ol36sf1Bo00j2du1SPUQIyfs1qrMGRh",
+  mainnet: 'mainnetLZgT76GL3subckxt9Y1G8niouSCVwWtn',
+  preview: 'previewdQyKqTIPRwfPtkHG5dtAyp1A2V63uVNI',
+  preprod: 'preprod7ol36sf1Bo00j2du1SPUQIyfs1qrMGRh',
 };
 
 export const submitAndMempoolTest = async (network: Network) => {
@@ -16,7 +16,7 @@ export const submitAndMempoolTest = async (network: Network) => {
     // Non local backend (production, staging, etc.)
     blockfrostClient = new BlockFrostAPI({
       projectId: process.env.PROJECT_ID,
-      customBackend: process.env.SERVER_URL || "http://localhost:3000",
+      customBackend: process.env.SERVER_URL || 'http://localhost:3000',
     });
   } else {
     // Local development backend
@@ -45,9 +45,7 @@ export const submitAndMempoolTest = async (network: Network) => {
 
   await sleep(100); // seems that fetching the tx from mempool right after submitting it is not reliable enough
 
-  console.log(
-    `Submitted tx ${txHash}.\nWaiting for the tx to be included in a block...`,
-  );
+  console.log(`Submitted tx ${txHash}.\nWaiting for the tx to be included in a block...`);
 
   const tx = await waitForTx(blockfrostClient, txHash);
 
@@ -58,16 +56,13 @@ export const submitAndMempoolTest = async (network: Network) => {
     block_time: expect.toBeCurrentTimestamp(),
     slot: expect.any(Number),
     index: expect.toBeInRange(0, 300),
-    output_amount: expect.arrayContaining([
-      { quantity: expect.toBeAdaQuantity(), unit: expect.any(String) },
-    ]),
+    output_amount: expect.arrayContaining([{ quantity: expect.toBeAdaQuantity(), unit: expect.any(String) }]),
     fees: signedTxJson.body.fee,
-    deposit: "0",
+    deposit: '0',
     size: expect.any(Number),
     invalid_before: null,
     invalid_hereafter: signedTxJson.body.ttl,
-    utxo_count:
-      signedTxJson.body.outputs.length + signedTxJson.body.inputs.length,
+    utxo_count: signedTxJson.body.outputs.length + signedTxJson.body.inputs.length,
     withdrawal_count: 0,
     mir_cert_count: 0,
     delegation_count: 0,

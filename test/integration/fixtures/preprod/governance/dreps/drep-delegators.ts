@@ -24,33 +24,27 @@ export default [
     ],
     response: [
       {
-        address:
-          "stake_test1upqt8jvd8d045a6gs2wkzt57rnx47s5ewz4un2l746r847g7hgw24",
+        address: "stake_test1upqt8jvd8d045a6gs2wkzt57rnx47s5ewz4un2l746r847g7hgw24",
         amount: expect.toBeAdaQuantity(),
       },
       {
-        address:
-          "stake_test1uzl65wzu364hh0wxex94qsf5xkeaq2mnmc7xgnsnsjuqr4qruvxwu",
+        address: "stake_test1uzl65wzu364hh0wxex94qsf5xkeaq2mnmc7xgnsnsjuqr4qruvxwu",
         amount: expect.toBeAdaQuantity(),
       },
       {
-        address:
-          "stake_test1uzrvw62pn24xw0yk8ksyuj6m4ezg6jgw9n4vjqktstjd5aspv59nv",
+        address: "stake_test1uzrvw62pn24xw0yk8ksyuj6m4ezg6jgw9n4vjqktstjd5aspv59nv",
         amount: expect.toBeAdaQuantity(),
       },
       {
-        address:
-          "stake_test1ur7sufjy8lfactkprnwl5x7mjn0ugajqg920n6uv4g7l68cra6p74",
+        address: "stake_test1ur7sufjy8lfactkprnwl5x7mjn0ugajqg920n6uv4g7l68cra6p74",
         amount: expect.toBeAdaQuantity(),
       },
       {
-        address:
-          "stake_test1uz6u2c4aahak62p67yantf342mqdftx9agqsd8uku7t456cgzz565",
+        address: "stake_test1uz6u2c4aahak62p67yantf342mqdftx9agqsd8uku7t456cgzz565",
         amount: expect.toBeAdaQuantity(),
       },
       {
-        address:
-          "stake_test1uzyp0n0lqk65g9wae0uhn3fdzevww4u7w665w46wsdmeaysjvtvpu",
+        address: "stake_test1uzyp0n0lqk65g9wae0uhn3fdzevww4u7w665w46wsdmeaysjvtvpu",
         amount: expect.toBeAdaQuantity(),
       },
     ],

@@ -27,9 +27,7 @@ export default [
   },
   {
     testName: 'assets/:asset - space bud with metadata update which is not the latest tx_mint',
-    endpoints: [
-      'assets/d5e6bf0500378d4f0da4e8dde6becec7621cd8cbf5cbb9b87013d4cc537061636542756433343132',
-    ],
+    endpoints: ['assets/d5e6bf0500378d4f0da4e8dde6becec7621cd8cbf5cbb9b87013d4cc537061636542756433343132'],
     response: {
       asset: 'd5e6bf0500378d4f0da4e8dde6becec7621cd8cbf5cbb9b87013d4cc537061636542756433343132',
       policy_id: 'd5e6bf0500378d4f0da4e8dde6becec7621cd8cbf5cbb9b87013d4cc',
@@ -69,9 +67,7 @@ export default [
   },
   {
     testName: 'assets/:asset - non-valid according to https://cips.cardano.org/cips/cip25/',
-    endpoints: [
-      'assets/0e14267a8020229adc0184dd25fa3174c3f7d6caadcb4425c70e7c04756e7369673033323839',
-    ],
+    endpoints: ['assets/0e14267a8020229adc0184dd25fa3174c3f7d6caadcb4425c70e7c04756e7369673033323839'],
     response: {
       asset: '0e14267a8020229adc0184dd25fa3174c3f7d6caadcb4425c70e7c04756e7369673033323839',
       policy_id: '0e14267a8020229adc0184dd25fa3174c3f7d6caadcb4425c70e7c04',
@@ -100,13 +96,7 @@ export default [
             distributions: ['Normal', 'CDF', 'CDF', 'CDF'],
           },
         },
-        source_key: [
-          '721',
-          '0e14267a8020229adc0184dd25fa3174c3f7d6caadcb4425c70e7c04',
-          'unsig00000',
-          'files',
-          'code',
-        ],
+        source_key: ['721', '0e14267a8020229adc0184dd25fa3174c3f7d6caadcb4425c70e7c04', 'unsig00000', 'files', 'code'],
         source_tx_id: 'e4a90da18935e73f7fd6ffaa688b35b011a1a8a710b47bdb5d7103a05afc0197',
       },
       onchain_metadata_standard: null,
@@ -133,9 +123,7 @@ export default [
   },
   {
     testName: 'assets/:asset - metadata coin example with onchain metadata',
-    endpoints: [
-      'assets/b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f426572727953616e64',
-    ],
+    endpoints: ['assets/b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f426572727953616e64'],
     response: {
       asset: 'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f426572727953616e64',
       policy_id: 'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f',
@@ -184,9 +172,7 @@ export default [
   },
   {
     testName: 'assets/:asset - Blockfrost NFT asset with CIP68 metadata',
-    endpoints: [
-      'assets/fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd000de140426c6f636b66726f7374',
-    ],
+    endpoints: ['assets/fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd000de140426c6f636b66726f7374'],
     response: {
       asset: 'fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd000de140426c6f636b66726f7374',
       policy_id: 'fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd',
@@ -208,12 +194,9 @@ export default [
   },
   {
     testName: 'assets/:asset - Blockfrost FT asset with CIP68 metadata',
-    endpoints: [
-      'assets/b038f29b249f42d870f8e5dd698c6020cf6fcbcbe620819771a4926f0014df10426c6f636b66726f73744654',
-    ],
+    endpoints: ['assets/b038f29b249f42d870f8e5dd698c6020cf6fcbcbe620819771a4926f0014df10426c6f636b66726f73744654'],
     response: {
-      asset:
-        'b038f29b249f42d870f8e5dd698c6020cf6fcbcbe620819771a4926f0014df10426c6f636b66726f73744654',
+      asset: 'b038f29b249f42d870f8e5dd698c6020cf6fcbcbe620819771a4926f0014df10426c6f636b66726f73744654',
       policy_id: 'b038f29b249f42d870f8e5dd698c6020cf6fcbcbe620819771a4926f',
       asset_name: '0014df10426c6f636b66726f73744654',
       fingerprint: 'asset1na8yrk6eht9n33yutfr7ff7m6jh2g2zr7lnx9j',
@@ -233,12 +216,9 @@ export default [
   },
   {
     testName: 'assets/:asset - Blockfrost CIP68v1 RFT asset with extra data',
-    endpoints: [
-      'assets/ef29efa6742926e4e9810b3544c2b21c6d8b3f92cd85afb8618ff06a001bc280426c6f636b66726f737423303037',
-    ],
+    endpoints: ['assets/ef29efa6742926e4e9810b3544c2b21c6d8b3f92cd85afb8618ff06a001bc280426c6f636b66726f737423303037'],
     response: {
-      asset:
-        'ef29efa6742926e4e9810b3544c2b21c6d8b3f92cd85afb8618ff06a001bc280426c6f636b66726f737423303037',
+      asset: 'ef29efa6742926e4e9810b3544c2b21c6d8b3f92cd85afb8618ff06a001bc280426c6f636b66726f737423303037',
       policy_id: 'ef29efa6742926e4e9810b3544c2b21c6d8b3f92cd85afb8618ff06a',
       asset_name: '001bc280426c6f636b66726f737423303037',
       fingerprint: 'asset1hevgevdj2huxvsm4a2clmc5u7uagrtqzn6j0q2',
@@ -259,12 +239,9 @@ export default [
   },
   {
     testName: 'assets/:asset - Blockfrost CIP68v2 RFT asset with extra data',
-    endpoints: [
-      'assets/a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee001bc280426c6f636b66726f737423303130',
-    ],
+    endpoints: ['assets/a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee001bc280426c6f636b66726f737423303130'],
     response: {
-      asset:
-        'a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee001bc280426c6f636b66726f737423303130',
+      asset: 'a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee001bc280426c6f636b66726f737423303130',
       policy_id: 'a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee',
       asset_name: '001bc280426c6f636b66726f737423303130',
       fingerprint: 'asset1njceutc6km9697kaq4yyscerffuq6h7000ynj7',
@@ -285,12 +262,9 @@ export default [
   },
   {
     testName: 'assets/:asset - Blockfrost CIP68v2 NFT asset with extra data',
-    endpoints: [
-      'assets/a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee000de140426c6f636b66726f737423303131',
-    ],
+    endpoints: ['assets/a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee000de140426c6f636b66726f737423303131'],
     response: {
-      asset:
-        'a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee000de140426c6f636b66726f737423303131',
+      asset: 'a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee000de140426c6f636b66726f737423303131',
       policy_id: 'a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee',
       asset_name: '000de140426c6f636b66726f737423303131',
       fingerprint: 'asset1jn3l99jqca0prer02sykwf53ppaxayktpw8x5a',
@@ -333,12 +307,9 @@ export default [
   {
     testName:
       'assets/:asset - Asset with CIP68v1 metadata with string encoded as array(*) 9F tag (introduced in CIP68v3, but we tolerate it in previous version of the standard)',
-    endpoints: [
-      'assets/fca746f58adf9f3da13b7227e5e2c6052f376447473f4d49f8004195000de140436974697a656e202330313333',
-    ],
+    endpoints: ['assets/fca746f58adf9f3da13b7227e5e2c6052f376447473f4d49f8004195000de140436974697a656e202330313333'],
     response: {
-      asset:
-        'fca746f58adf9f3da13b7227e5e2c6052f376447473f4d49f8004195000de140436974697a656e202330313333',
+      asset: 'fca746f58adf9f3da13b7227e5e2c6052f376447473f4d49f8004195000de140436974697a656e202330313333',
       policy_id: 'fca746f58adf9f3da13b7227e5e2c6052f376447473f4d49f8004195',
       asset_name: '000de140436974697a656e202330313333',
       fingerprint: 'asset150t28zsqcwkhfvyvtdyf8xzleevw0wsjmfccqz',

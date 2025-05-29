@@ -1,11 +1,11 @@
 import accountsStakeAddress from './accounts/stake-address.js';
-import accountStakeAddressAddresses from './accounts/stake-address-addresses.js'
+import accountStakeAddressAddresses from './accounts/stake-address-addresses.js';
 import accountsStakeAddressAddressesAssets from './accounts/stake-address-addresses-assets.js';
 import accountsStakeAddressAddressesTotal from './accounts/stake-address-addresses-total.js';
 import accountsStakeAddressDelegations from './accounts/stake-address-delegations.js';
 import accountsStakeAddressHistory from './accounts/stake-address-history.js';
 import accountsStakeAddressRegistrations from './accounts/stake-address-registrations.js';
-import accountStakeAddressRewards from './accounts/stake-address-rewards.js'
+import accountStakeAddressRewards from './accounts/stake-address-rewards.js';
 import accountsStakeAddressUtxos from './accounts/stake-address-utxos.js';
 import accountsStakeAddressWithdrawals from './accounts/stake-address-withdrawals.js';
 
@@ -110,7 +110,7 @@ export const previewFixtures = {
     ...accountsStakeAddressRegistrations,
     ...accountStakeAddressRewards,
     ...accountsStakeAddressUtxos,
-    ...accountsStakeAddressWithdrawals
+    ...accountsStakeAddressWithdrawals,
   ],
   addresses: [
     ...address,
@@ -121,14 +121,7 @@ export const previewFixtures = {
     ...addressUtxosAsset,
     ...addressUtxos,
   ],
-  assets: [
-    ...asset,
-    ...assetsAsset,
-    ...assetHistory,
-    ...assetPolicyPolicyId,
-    ...assetTransactions,
-    ...assetTxs,
-  ],
+  assets: [...asset, ...assetsAsset, ...assetHistory, ...assetPolicyPolicyId, ...assetTransactions, ...assetTxs],
   blocks: [
     ...blocksOthers,
     ...blocksHashOrNumber,

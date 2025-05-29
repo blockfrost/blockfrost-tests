@@ -28,8 +28,7 @@ function createMatcher(description: string, compare: (...values: (bigint | numbe
       if (receivedType !== expectedType) {
         return {
           pass: false,
-          message: () =>
-            `expected all values to be ${expectedType} but got ${receivedType} (${arguments_[0]})`,
+          message: () => `expected all values to be ${expectedType} but got ${receivedType} (${arguments_[0]})`,
         };
       }
 
@@ -38,8 +37,7 @@ function createMatcher(description: string, compare: (...values: (bigint | numbe
       if (bigIntArguments.includes(null)) {
         return {
           pass: false,
-          message: () =>
-            `expected all values to be convertible to bigint but got (${arguments_.join(', ')})`,
+          message: () => `expected all values to be convertible to bigint but got (${arguments_.join(', ')})`,
         };
       }
       const pass = compare(...(bigIntArguments as bigint[]));
@@ -58,48 +56,34 @@ function createMatcher(description: string, compare: (...values: (bigint | numbe
         if (expectedType !== receivedType) {
           return {
             pass: false,
-            message: () =>
-              `expected value to be ${expectedType} but got ${receivedType} (${received})`,
+            message: () => `expected value to be ${expectedType} but got ${receivedType} (${received})`,
           };
         }
 
         const receivedBigInt = toBigIntSafe(received);
         const expectedBigInt = toBigIntSafe(expected);
 
-        return (
-          receivedBigInt !== null &&
-          expectedBigInt !== null &&
-          compare(receivedBigInt, expectedBigInt)
-        );
+        return receivedBigInt !== null && expectedBigInt !== null && compare(receivedBigInt, expectedBigInt);
       },
       toString: () => `${description} ${expected}`,
     }),
   };
 }
 
-export const toBeGreaterThan = createMatcher(
-  'to be greater than',
-  (received, expected) => received > expected,
-);
+export const toBeGreaterThan = createMatcher('to be greater than', (received, expected) => received > expected);
 
-export const toBeLessThan = createMatcher(
-  'to be less than',
-  (received, expected) => received < expected,
-);
+export const toBeLessThan = createMatcher('to be less than', (received, expected) => received < expected);
 
-export const toBeInRange = createMatcher(
-  'to be in range',
-  (received, min, max) => received >= min && received <= max,
-);
+export const toBeInRange = createMatcher('to be in range', (received, min, max) => received >= min && received <= max);
 
 export const toBeGreaterThanOrEqual = createMatcher(
   'to be greater than or equal to',
-  (received, expected) => received >= expected,
+  (received, expected) => received >= expected
 );
 
 export const toBeLessThanOrEqual = createMatcher(
   'to be less than or equal to',
-  (received, expected) => received <= expected,
+  (received, expected) => received <= expected
 );
 
 export function toBeBlake2b256Hash(received: string) {
@@ -139,22 +123,16 @@ export function toBeUnixTimestamp(received: number) {
   };
 }
 
-export function toBeCurrentTimestamp(
-  received: number,
-  options?: { tolerance?: number; ms?: boolean },
-) {
+export function toBeCurrentTimestamp(received: number, options?: { tolerance?: number; ms?: boolean }) {
   const currentUnixTimestamp = getUnixTime(new Date());
   const DEFAULT_TOLERANCE_SECONDS = 10 * 60; // 10 mins
   const tolerance = options?.tolerance ?? DEFAULT_TOLERANCE_SECONDS;
   const multiplier = options?.ms ? 1000 : 1;
-  const pass =
-    typeof received === 'number' &&
-    Math.abs(currentUnixTimestamp - received / multiplier) < tolerance;
+  const pass = typeof received === 'number' && Math.abs(currentUnixTimestamp - received / multiplier) < tolerance;
 
   return {
     pass,
-    message: () =>
-      `Expected value ${received} to current timestamp within tolerance (${tolerance} seconds)`,
+    message: () => `Expected value ${received} to current timestamp within tolerance (${tolerance} seconds)`,
   };
 }
 
@@ -162,10 +140,7 @@ export function toBeAssetQuantity(received: string) {
   const receivedBigInt = toBigIntSafe(received);
   const maxQuantity = BigInt('340282366920938463463374607431768211460'); // arbitrary 2^128
   const pass =
-    typeof received === 'string' &&
-    receivedBigInt !== null &&
-    receivedBigInt >= 0n &&
-    receivedBigInt <= maxQuantity;
+    typeof received === 'string' && receivedBigInt !== null && receivedBigInt >= 0n && receivedBigInt <= maxQuantity;
 
   return {
     pass,
@@ -177,15 +152,11 @@ export function toBeAdaQuantity(received: string) {
   const receivedBigInt = toBigIntSafe(received);
   const maxQuantity = BigInt('18446744073709551615'); // 2^64-1
   const pass =
-    typeof received === 'string' &&
-    receivedBigInt !== null &&
-    receivedBigInt >= 0n &&
-    receivedBigInt <= maxQuantity;
+    typeof received === 'string' && receivedBigInt !== null && receivedBigInt >= 0n && receivedBigInt <= maxQuantity;
 
   return {
     pass,
-    message: () =>
-      `Expected value ${received} to be within range for an asset quantity <0, 2^64-1>`,
+    message: () => `Expected value ${received} to be within range for an asset quantity <0, 2^64-1>`,
   };
 }
 
@@ -241,19 +212,12 @@ export const toBeStakeAddress = (received: string) => {
   };
 };
 
-export function confirmations(
-  received: number,
-  options: { height: number; toleranceInBlocks?: number },
-) {
+export function confirmations(received: number, options: { height: number; toleranceInBlocks?: number }) {
   const toleranceInBlocks = options.toleranceInBlocks ?? 2;
 
-  const shouldHaveConfirmations = globalThis.latest.block.height
-    ? globalThis.latest.block.height - options.height
-    : 0;
+  const shouldHaveConfirmations = globalThis.latest.block.height ? globalThis.latest.block.height - options.height : 0;
 
-  const pass =
-    typeof received === 'number' &&
-    Math.abs(received - shouldHaveConfirmations) <= toleranceInBlocks;
+  const pass = typeof received === 'number' && Math.abs(received - shouldHaveConfirmations) <= toleranceInBlocks;
 
   const messageContent = `Received ${received}. Expected ${shouldHaveConfirmations} confirmations (based on fixture height ${options.height}, blockchain height ${globalThis.latest.block.height} and tolerance ${toleranceInBlocks} blocks)`;
 

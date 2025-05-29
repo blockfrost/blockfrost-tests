@@ -26,10 +26,7 @@ export default [
   },
   {
     testName: 'blocks/:hash_or_number - hash - generic byron (no txs)',
-    endpoints: [
-      'blocks/31db1dd17442bd2109d50c8f997edaba3047b2bd57c6e7685d835e4ca0768780',
-      'blocks/3058570',
-    ],
+    endpoints: ['blocks/31db1dd17442bd2109d50c8f997edaba3047b2bd57c6e7685d835e4ca0768780', 'blocks/3058570'],
     response: {
       time: 1_567_405_171,
       height: 3_058_570,
@@ -52,10 +49,7 @@ export default [
   },
   {
     testName: 'blocks/:hash_or_number - hash - generic shelley',
-    endpoints: [
-      'blocks/7474d633ece405cec979714186a72b5a1221cebf356831dbe568aaa1f6c3b077',
-      'blocks/5358023',
-    ],
+    endpoints: ['blocks/7474d633ece405cec979714186a72b5a1221cebf356831dbe568aaa1f6c3b077', 'blocks/5358023'],
     response: {
       time: 1_613_643_972,
       op_cert: '2c48f00023593bc9eee263f9fddd041ab97fbb8d5d03599bd7244c0311c896bb',
@@ -78,10 +72,7 @@ export default [
   },
   {
     testName: 'blocks/:hash_or_number - generic shelley (no txs)',
-    endpoints: [
-      'blocks/21af53d104f1f75581dbd146bd61c5a94b1c10664093c6e15c2e207aa465da28',
-      'blocks/5368625',
-    ],
+    endpoints: ['blocks/21af53d104f1f75581dbd146bd61c5a94b1c10664093c6e15c2e207aa465da28', 'blocks/5368625'],
     response: {
       time: 1_613_857_449,
       height: 5_368_625,

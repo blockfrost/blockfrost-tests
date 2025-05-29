@@ -1,7 +1,7 @@
 export default [
   {
-    testName: "health",
-    endpoints: ["health"],
+    testName: 'health',
+    endpoints: ['health'],
     response: {
       is_healthy: true,
     },

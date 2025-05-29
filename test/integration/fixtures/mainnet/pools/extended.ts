@@ -1,27 +1,24 @@
-import { expect } from "vitest";
-import { getPaginationFixtures } from "../../../utils.js";
+import { expect } from 'vitest';
+import { getPaginationFixtures } from '../../../utils.js';
 
-const paginationFixtures = getPaginationFixtures("pools/extended", {});
+const paginationFixtures = getPaginationFixtures('pools/extended');
 
 export default [
   ...paginationFixtures,
   {
-    testName: "pools/extended?queryparams",
-    endpoints: [
-      "pools/extended?count=5&page=3",
-      "pools/extended?count=5&page=3&order=asc",
-    ],
+    testName: 'pools/extended?queryparams',
+    endpoints: ['pools/extended?count=5&page=3', 'pools/extended?count=5&page=3&order=asc'],
     response: [
       {
-        pool_id: "pool18xykgvvvxej2e5ap04ks72d8fdke4qsqeh30satznyrtj88634d",
-        hex: "398964318c3664acd3a17d6d0f29a74b6d9a8200cde2f875629906b9",
-        active_stake: expect.toBeGreaterThan("0"),
-        live_stake: expect.toBeGreaterThan("0"),
+        pool_id: 'pool18xykgvvvxej2e5ap04ks72d8fdke4qsqeh30satznyrtj88634d',
+        hex: '398964318c3664acd3a17d6d0f29a74b6d9a8200cde2f875629906b9',
+        active_stake: expect.toBeGreaterThan('0'),
+        live_stake: expect.toBeGreaterThan('0'),
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(1079),
         margin_cost: 0.0,
-        fixed_cost: "340000000",
-        declared_pledge: "1015000000000",
+        fixed_cost: '340000000',
+        declared_pledge: '1015000000000',
         metadata: {
           hash: expect.any(String),
           ticker: expect.any(String),
@@ -32,15 +29,15 @@ export default [
         },
       },
       {
-        pool_id: "pool1qqq6qqa0hpzvumv5p87ynczfmdj557xuwlc3289ke42g72z7f74",
-        hex: "0001a003afb844ce6d9409fc49e049db654a78dc77f1151cb6cd548f",
-        active_stake: expect.toBeGreaterThan("0"),
-        live_stake: expect.toBeGreaterThan("0"),
+        pool_id: 'pool1qqq6qqa0hpzvumv5p87ynczfmdj557xuwlc3289ke42g72z7f74',
+        hex: '0001a003afb844ce6d9409fc49e049db654a78dc77f1151cb6cd548f',
+        active_stake: expect.toBeGreaterThan('0'),
+        live_stake: expect.toBeGreaterThan('0'),
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(11269),
         margin_cost: 0.028,
-        fixed_cost: "170000000",
-        declared_pledge: "400000000000",
+        fixed_cost: '170000000',
+        declared_pledge: '400000000000',
         metadata: {
           hash: expect.any(String),
           ticker: expect.any(String),
@@ -51,15 +48,15 @@ export default [
         },
       },
       {
-        pool_id: "pool1e556526sqwugxwnmeumt9lhj5jukklg8vv3ynk75xt9vs7adr5y",
-        hex: "cd29aa2b5003b8833a7bcf36b2fef2a4b96b7d07632249dbd432cac8",
-        active_stake: expect.toBeGreaterThan("0"),
-        live_stake: expect.toBeGreaterThan("0"),
+        pool_id: 'pool1e556526sqwugxwnmeumt9lhj5jukklg8vv3ynk75xt9vs7adr5y',
+        hex: 'cd29aa2b5003b8833a7bcf36b2fef2a4b96b7d07632249dbd432cac8',
+        active_stake: expect.toBeGreaterThan('0'),
+        live_stake: expect.toBeGreaterThan('0'),
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(5580),
         margin_cost: 0.009,
-        fixed_cost: "500000000",
-        declared_pledge: "500000000000",
+        fixed_cost: '500000000',
+        declared_pledge: '500000000000',
         metadata: {
           hash: expect.any(String),
           ticker: expect.any(String),
@@ -70,15 +67,15 @@ export default [
         },
       },
       {
-        pool_id: "pool124lm97s6f4satl7xz0ulzgg6tv30tskry3zcntwrz68n60v5yne",
-        hex: "557fb2fa1a4d61d5ffc613f9f1211a5b22f5c2c3244589adc3168f3d",
-        active_stake: expect.toBeGreaterThan("0"),
-        live_stake: expect.toBeGreaterThan("0"),
+        pool_id: 'pool124lm97s6f4satl7xz0ulzgg6tv30tskry3zcntwrz68n60v5yne',
+        hex: '557fb2fa1a4d61d5ffc613f9f1211a5b22f5c2c3244589adc3168f3d',
+        active_stake: expect.toBeGreaterThan('0'),
+        live_stake: expect.toBeGreaterThan('0'),
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(3450),
         margin_cost: 0.035,
-        fixed_cost: "340000000",
-        declared_pledge: "100000000000",
+        fixed_cost: '340000000',
+        declared_pledge: '100000000000',
         metadata: {
           hash: expect.any(String),
           ticker: expect.any(String),
@@ -89,15 +86,15 @@ export default [
         },
       },
       {
-        pool_id: "pool1vx9tzlkgafernd9vpjpxkenutx2gncj4yn88fpq69823qlwcqrt",
-        hex: "618ab17ec8ea7239b4ac0c826b667c599489e25524ce74841a29d510",
-        active_stake: expect.toBeGreaterThan("0"),
-        live_stake: expect.toBeGreaterThan("0"),
+        pool_id: 'pool1vx9tzlkgafernd9vpjpxkenutx2gncj4yn88fpq69823qlwcqrt',
+        hex: '618ab17ec8ea7239b4ac0c826b667c599489e25524ce74841a29d510',
+        active_stake: expect.toBeGreaterThan('0'),
+        live_stake: expect.toBeGreaterThan('0'),
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(20119),
         margin_cost: 0.02,
-        fixed_cost: "340000000",
-        declared_pledge: "200000000000",
+        fixed_cost: '340000000',
+        declared_pledge: '200000000000',
         metadata: {
           hash: expect.any(String),
           ticker: expect.any(String),
@@ -110,8 +107,8 @@ export default [
     ],
   },
   {
-    testName: "pools/extended?queryparams - we are not there yet",
-    endpoints: ["pools/extended?page=694269"],
+    testName: 'pools/extended?queryparams - we are not there yet',
+    endpoints: ['pools/extended?page=694269'],
     response: [],
   },
 ];

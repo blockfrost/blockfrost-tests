@@ -1,11 +1,11 @@
-import { expect } from "vitest";
+import { expect } from 'vitest';
 
 export default [
   {
-    testName: "root endpoint",
-    endpoints: [""],
+    testName: 'root endpoint',
+    endpoints: [''],
     response: {
-      url: "https://blockfrost.io/",
+      url: 'https://blockfrost.io/',
       version: expect.any(String),
     },
   },

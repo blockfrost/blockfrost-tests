@@ -13,8 +13,7 @@ export default [
     ],
   },
   {
-    testName:
-      'txs/:tx/delegations - generic shelley with MULTIPLE delegation, stake certs and pool updates',
+    testName: 'txs/:tx/delegations - generic shelley with MULTIPLE delegation, stake certs and pool updates',
     endpoints: ['txs/e3ca57e8f323265742a8f4e79ff9af884c9ff8719bd4f7788adaea4c33ba07b6/delegations'],
     response: [
       {
@@ -43,12 +42,14 @@ export default [
   {
     testName: 'txs/:tx - generic shelley with delegations and stake certs',
     endpoints: ['txs/869e0eaeb990d2e4d5b9472f51c46ae114867c72c3526f655a7695a0580b2c12/delegations'],
-    response: [{
-      index: 1,
-      cert_index: 1,
-      address: 'stake_test17q5derx9asrr5u4j7x27tfdt7w8dcupnuh2rl8ewklrqjggtss9z5',
-      pool_id: 'pool1rk2y9gx6vll8lawzdqlky5p2a3ypzsxg07arg8gmhkjj2905035',
-      active_epoch: 44,
-    }],
+    response: [
+      {
+        index: 1,
+        cert_index: 1,
+        address: 'stake_test17q5derx9asrr5u4j7x27tfdt7w8dcupnuh2rl8ewklrqjggtss9z5',
+        pool_id: 'pool1rk2y9gx6vll8lawzdqlky5p2a3ypzsxg07arg8gmhkjj2905035',
+        active_epoch: 44,
+      },
+    ],
   },
 ];

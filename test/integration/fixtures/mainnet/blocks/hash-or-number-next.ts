@@ -2,16 +2,14 @@ import { expect } from 'vitest';
 import { getPaginationFixtures } from '../../../utils.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'blocks/471ee59bee5cadc22ec85c4519acd4ee6f843eb30b34793db6ba1a9eb0426afb/next',
+  'blocks/471ee59bee5cadc22ec85c4519acd4ee6f843eb30b34793db6ba1a9eb0426afb/next'
 ).filter(({ type }) => type !== 'order');
 
 export default [
   ...paginationFixtures,
   {
     testName: 'blocks/:hash_or_number/next?queryparams - generic boundary',
-    endpoints: [
-      'blocks/471ee59bee5cadc22ec85c4519acd4ee6f843eb30b34793db6ba1a9eb0426afb/next?count=2',
-    ],
+    endpoints: ['blocks/471ee59bee5cadc22ec85c4519acd4ee6f843eb30b34793db6ba1a9eb0426afb/next?count=2'],
     response: [
       {
         time: 1_516_571_091,
@@ -55,10 +53,7 @@ export default [
   },
   {
     testName: 'blocks/:hash_or_number/next - generic shelley',
-    endpoints: [
-      'blocks/8d9309b0aa8faf0f4df797efb4e3af9b88072bef3f8177bd159befc186944649/next',
-      'blocks/5058570/next',
-    ],
+    endpoints: ['blocks/8d9309b0aa8faf0f4df797efb4e3af9b88072bef3f8177bd159befc186944649/next', 'blocks/5058570/next'],
     response: [
       {
         time: 1_607_585_341,

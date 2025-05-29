@@ -48,7 +48,8 @@ export default [
       hash: '64c1813d814e5c2abb5f65864ec26f0b060d49f3d206a31f34aa6428d7b682e3',
       ticker: 'CLOUD',
       name: 'Coinbase Cloud',
-      description: 'Coinbase Cloud provides secure and reliable blockchain infrastructure and APIs. Stake your crypto to our enterprise-grade validators.',
+      description:
+        'Coinbase Cloud provides secure and reliable blockchain infrastructure and APIs. Stake your crypto to our enterprise-grade validators.',
       homepage: 'https://coinbase.com/cloud',
     },
   },

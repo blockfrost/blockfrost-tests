@@ -4,7 +4,7 @@ if (!["mainnet", "preprod", "preview"].includes(process.env.NETWORK || "")) {
   throw "Error NETWORK env variable can be only `mainnet, preview, preprod, ipfs, milkomeda-mainnet, milkomeda-testnet`";
 }
 
-let testFolders = [
+const testFolders = [
   `./test/integration/tests/${process.env.NETWORK}/**/*.ts`,
   `./test/integration/tests/common/**/*.ts`,
 ];

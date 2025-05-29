@@ -8,7 +8,7 @@ const harden = (number_: number): number => {
 export const deriveAddressPrvKey = (
   bipPrvKey: CardanoWasm.Bip32PrivateKey,
   network: 'mainnet' | 'testnet',
-  addressIndex: number,
+  addressIndex: number
 ): {
   signKey: CardanoWasm.PrivateKey;
   address: string;
@@ -33,7 +33,7 @@ export const deriveAddressPrvKey = (
   const baseAddress = CardanoWasm.BaseAddress.new(
     networkId,
     CardanoWasm.Credential.from_keyhash(utxoKey.to_public().to_raw_key().hash()),
-    CardanoWasm.Credential.from_keyhash(stakeKey.to_raw_key().hash()),
+    CardanoWasm.Credential.from_keyhash(stakeKey.to_raw_key().hash())
   );
 
   const address = baseAddress.to_address().to_bech32();
@@ -44,10 +44,7 @@ export const deriveAddressPrvKey = (
 export const mnemonicToPrivateKey = (mnemonic: string): CardanoWasm.Bip32PrivateKey => {
   const entropy = mnemonicToEntropy(mnemonic);
 
-  const rootKey = CardanoWasm.Bip32PrivateKey.from_bip39_entropy(
-    Buffer.from(entropy, 'hex'),
-    Buffer.from(''),
-  );
+  const rootKey = CardanoWasm.Bip32PrivateKey.from_bip39_entropy(Buffer.from(entropy, 'hex'), Buffer.from(''));
 
   return rootKey;
 };
