@@ -2,7 +2,7 @@
 
 <img src="https://blockfrost.io/images/logo.svg" width="250" align="right" height="90">
 
-# Blockfrost Internal Integration Tests
+# Blockfrost Integration Tests
 
 <br/>
 
