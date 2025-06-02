@@ -1,9 +1,35 @@
 import { match } from 'node-match-path';
 import { test, describe, expect, TestOptions } from 'vitest';
 import { noCase } from 'change-case';
+import fs from 'fs';
+import path from 'path';
 import got, { ExtendOptions, Options, Got } from 'got';
 
 export const DEFAULT_TEST_TIMEOUT = 15_000;
+const projectId = process.env.PROJECT_ID;
+let endpointsAllowlist: string[] | undefined;
+
+try {
+  const filePath = path.resolve(process.cwd(), 'endpoints-allowlist.json');
+  const rawData = fs.readFileSync(filePath, 'utf8');
+  let parsed: string[];
+
+  try {
+    parsed = JSON.parse(rawData);
+  } catch (parseError: unknown) {
+    const message = parseError instanceof Error ? parseError.message : String(parseError);
+
+    throw new Error(`endpoints-allowlist.json is not a valid json: ${message}`);
+  }
+
+  endpointsAllowlist = parsed.map(endpoint => {
+    return endpoint.startsWith('/') ? endpoint.slice(1) : endpoint;
+  });
+} catch (error) {
+  const message = error instanceof Error ? error.message : String(error);
+
+  throw new Error(`Error loading endpoints-allowlist.json: ${message}`);
+}
 
 export type Fixture = {
   testName: string;
@@ -45,16 +71,6 @@ const isUrlMatch = (urlParameter: string, pattern: string) => {
     return false;
   }
 };
-
-const projectId = process.env.PROJECT_ID;
-const allowlistEnvironment = process.env.ENDPOINTS_ALLOWLIST;
-
-const endpointsAllowlist: string[] | undefined = allowlistEnvironment
-  ? allowlistEnvironment
-      .split(',')
-      .map(p => p.trim())
-      .filter(Boolean)
-  : undefined;
 
 const prefixUrl = process.env.SERVER_URL || 'http://localhost:3000';
 const DEFAULT_HEADERS = projectId ? { project_id: projectId } : {};
