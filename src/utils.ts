@@ -3,14 +3,17 @@ import { test, describe, expect, TestOptions } from 'vitest';
 import { noCase } from 'change-case';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import got, { ExtendOptions, Options, Got } from 'got';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const filePath = path.resolve(__dirname, '../endpoints-allowlist.json');
 
 export const DEFAULT_TEST_TIMEOUT = 15_000;
 const projectId = process.env.PROJECT_ID;
 let endpointsAllowlist: string[] | undefined;
 
 try {
-  const filePath = path.resolve(process.cwd(), 'endpoints-allowlist.json');
   const rawData = fs.readFileSync(filePath, 'utf8');
   let parsed: string[];
 
