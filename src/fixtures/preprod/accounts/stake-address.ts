@@ -143,4 +143,57 @@ export default [
       pool_id: null,
     },
   },
+  {
+    testName:
+      'accounts/:stake_address when DRep is retired all delegators to that DRep should have their drep_id cleared.',
+    endpoints: ['accounts/stake_test1upjghly04re6yrr3nh3ntp9en3p5flnxh2yf6camc3vfhwg6dhc5w'],
+    response: {
+      stake_address: 'stake_test1upjghly04re6yrr3nh3ntp9en3p5flnxh2yf6camc3vfhwg6dhc5w',
+      active: false,
+      active_epoch: 169,
+      controlled_amount: expect.toBeAdaQuantity(),
+      rewards_sum: expect.toBeAdaQuantity(),
+      withdrawals_sum: expect.toBeAdaQuantity(),
+      reserves_sum: '0',
+      treasury_sum: '0',
+      drep_id: null,
+      withdrawable_amount: expect.toBeAdaQuantity(),
+      pool_id: null,
+    },
+  },
+  {
+    testName:
+      'accounts/:stake_address deregister a stake key should clear any existing vote delegation. should have their drep_id cleared.',
+    endpoints: ['accounts/stake_test1upq4d854xjc30jqkulsevam0jwt5wl2j9783twgzqpwtfvs705r7c'],
+    response: {
+      stake_address: 'stake_test1upq4d854xjc30jqkulsevam0jwt5wl2j9783twgzqpwtfvs705r7c',
+      active: false,
+      active_epoch: 218,
+      controlled_amount: expect.toBeAdaQuantity(),
+      rewards_sum: expect.toBeAdaQuantity(),
+      withdrawals_sum: expect.toBeAdaQuantity(),
+      reserves_sum: '0',
+      treasury_sum: '0',
+      drep_id: null,
+      withdrawable_amount: expect.toBeAdaQuantity(),
+      pool_id: null,
+    },
+  },
+  {
+    testName: 'accounts/:stake_address retire and register drep after voting. should have their drep_id cleared.',
+    endpoints: ['accounts/stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq'],
+    response: {
+      stake_address: 'stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq',
+      active: true,
+      active_epoch: 219,
+      controlled_amount: expect.toBeAdaQuantity(),
+      rewards_sum: expect.toBeAdaQuantity(),
+      withdrawals_sum: expect.toBeAdaQuantity(),
+      reserves_sum: '0',
+      treasury_sum: '0',
+      drep_id: null,
+      withdrawable_amount: expect.toBeAdaQuantity(),
+      pool_id: 'pool18q5sayzqekqvqyenlkgaarlza5jxzhkyq9akc9qr5ytgczkjh23',
+    },
+  }
 ];

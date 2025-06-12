@@ -12,7 +12,7 @@ export default [
     response: {
       error: "Bad Request",
       message: expect.stringContaining(
-        '{"contents":{"contents":{"contents":{"era":"ShelleyBasedEraConway","error":["ConwayUtxowFailure (UtxoFailure (WrongNetwork Mainnet (fromList [Addr Testnet (KeyHashObj (KeyHash {unKeyHash = \\"25132f296d9a73876fbdf1452b1253077bf8eb9b95b1eb932895b539\\"})) (StakeRefBase (KeyHashObj (KeyHash {unKeyHash = \\"8e38024e1bcbdd6341cb96a3403d5a64ada057798094d2383172b1d4\\"})))])))","ConwayUtxowFailure (UtxoFailure (ValueNotConservedUTxO (MaryValue (Coin 0) (MultiAsset (fromList []))) (MaryValue (Coin 10000000) (MultiAsset (fromList [])))))","ConwayUtxowFailure (UtxoFailure (BadInputsUTxO (fromList [TxIn (TxId {unTxId = SafeHash \\"daa9d5703beb00d51d9baeb04a611e15178c522cad6061fc4cfa4d4aa6d30d85\\"}) (TxIx {unTxIx = 0})])))","ConwayUtxowFailure (UtxoFailure (OutsideValidityIntervalUTxO (ValidityInterval {invalidBefore = SNothing, invalidHereafter = SJust (SlotNo 39433888)}) (SlotNo',
+        '{"contents":{"contents":{"contents":{"era":"ShelleyBasedEraConway","error":["ConwayUtxowFailure (UtxoFailure (OutsideValidityIntervalUTxO (ValidityInterval {invalidBefore = SNothing, invalidHereafter = SJust (SlotNo 39433888)}) (SlotNo ',
       ),
       status_code: 400,
     },

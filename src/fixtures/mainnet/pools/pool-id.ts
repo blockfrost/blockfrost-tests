@@ -460,6 +460,7 @@ export default [
         "9e47f9f4075829985bc25c329a40afdfd390fe52554938b17aa282594f52ae0c",
         "055058f15d72c75d4baf3245c56210f75c7431e0caf9aca559e6784cbb740763",
         "9f3947f3b7ad863c1cde8068a249f0db56c2ae7f69f30f5b77329ef37674af55",
+        "16f8b7fd58781c6fa37960ed37f2a246ad2675884d708d187dec5b4f3c30f4ce"
       ],
       retirement: [],
       calidus_key: {

@@ -51,4 +51,23 @@ export default [
       },
     ]),
   },
+  {
+    testName: 'governance delegators cleared up after retiring and registering drep',
+    endpoints: [
+      'governance/dreps/drep1ytvd8c8wj7p8vypgazgevngkvxj97rh4hg8wpjf0mhvxwngmswgym/delegators',
+    ],
+    response: [],
+  },
+  {
+    testName: 'governance delegators vote delegation in the same tx as DRep registration',
+    endpoints: [
+      'governance/dreps/drep1ytzgfes7tltejwwsamezxntx74c48rvys69y6y9sjpssrqsnf0vk0/delegators',
+    ],
+    response: [
+      {
+        amount: expect.toBeAssetQuantity(),
+        address: 'stake_test1upktggljr9mdvslp9lkzm5689vggykptqlcmv6euw3l9rzs8l3m4m',
+      },
+    ],
+  },
 ];

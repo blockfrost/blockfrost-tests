@@ -208,4 +208,21 @@ export default [
       pool_id: expect.any(String),
     },
   },
+  {
+    testName: 'accounts/:stake_address when DRep is retired all delegators to that DRep should have their drep_id cleared.',
+    endpoints: ['accounts/stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4'],
+    response: {
+      stake_address: 'stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4',
+      active: false,
+      active_epoch: 508,
+      controlled_amount: expect.toBeAdaQuantity(),
+      rewards_sum: expect.toBeAdaQuantity(),
+      withdrawals_sum: expect.toBeAdaQuantity(),
+      reserves_sum: '0',
+      treasury_sum: '0',
+      drep_id: null,
+      withdrawable_amount: expect.toBeAdaQuantity(),
+      pool_id: null,
+    },
+  },
 ];

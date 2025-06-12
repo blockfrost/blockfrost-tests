@@ -22,7 +22,7 @@ export default [
       {
         tx_hash: '14604a80079437682922134e365e8d433d73802c5250466d6b39bcc5457dc7e0',
         cert_index: 0,
-        action: 'deregistered',
+        action: 'updated',
       },
       {
         tx_hash: '1bff19f281d7776f35d35ad0f650e98b33392c37a45cef042ce50e4c248fadc9',

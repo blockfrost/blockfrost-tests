@@ -71,4 +71,18 @@ export default [
       },
     ]),
   },
+  {
+    testName: 'governance delegator cleared out after retiring and registering again',
+    endpoints: [
+      'governance/dreps/drep1ytvd8c8wj7p8vypgazgevngkvxj97rh4hg8wpjf0mhvxwngmswgym/delegators',
+    ],
+    response: [
+      {
+        // stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq was cleared out
+        // stake_test1ur880e7p4ew25hyt2fwc63t72c6msjtf6jrctvg89ggtjyq2szg8x delegated after last drep registration
+        address: 'stake_test1ur880e7p4ew25hyt2fwc63t72c6msjtf6jrctvg89ggtjyq2szg8x',
+        amount: expect.toBeAssetQuantity(),
+      },
+    ],
+  },
 ];

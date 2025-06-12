@@ -82,10 +82,10 @@ export default [
         metadata: {
           url: 'https://planetstake.s3.eu-west-2.amazonaws.com/STAKE1-004.json',
           hash: 'fa95abfe646b85e194e86a202d099a1c6bb93f8ac6c30e70c59c03c055d4433e',
-          ticker: 'STAKE',
-          name: '🌍 PLANETSTAKE 1',
-          description: '⭐⭐⭐⭐⭐ Please Delegate to PlanetStake 3',
-          homepage: 'https://planetstake.com',
+          ticker: null,
+          name: null,
+          description: null,
+          homepage: null,
         },
         relays: [
           {
