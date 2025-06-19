@@ -2,7 +2,7 @@ import { expect } from 'vitest';
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'accounts/stake1u9fzg77vrgfqlplkjqe9hntdcvsurpvxd60yp2fhn73002qsv9pdk/rewards'
+  'accounts/stake1u9fzg77vrgfqlplkjqe9hntdcvsurpvxd60yp2fhn73002qsv9pdk/rewards',
 );
 
 export default [
@@ -127,7 +127,8 @@ export default [
     },
   },
   {
-    testName: 'accounts/:stake_address reward account for 3 pools, 2 of them retired in the same epoch',
+    testName:
+      'accounts/:stake_address reward account for 3 pools, 2 of them retired in the same epoch',
 
     endpoints: ['accounts/stake1u80x0vdf8kwvptk7nar24d805p7wnlj4vm22cl0q8jngs9q5k2suq'],
 

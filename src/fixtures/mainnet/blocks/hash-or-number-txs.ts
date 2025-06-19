@@ -25,7 +25,10 @@ export default [
   },
   {
     testName: 'blocks/:hash_or_number/txs - generic shelley',
-    endpoints: ['blocks/c6e3901b2cd95598b0bf5dc55cb62d682ea369298be9825b4b58d891b844b320/txs', 'blocks/5360435/txs'],
+    endpoints: [
+      'blocks/c6e3901b2cd95598b0bf5dc55cb62d682ea369298be9825b4b58d891b844b320/txs',
+      'blocks/5360435/txs',
+    ],
     response: [
       '055f9d4c86733997a9b8b12e3422feee8ef95d79ccbde20abdb6ff9222bb79c6',
       'e66077bac8d32cf16aa991d793a3e5840d3eee1ad3dfd04f1ee609d46a936dff',

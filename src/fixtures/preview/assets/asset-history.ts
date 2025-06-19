@@ -1,14 +1,16 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4c50/history'
+  'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4c50/history',
 );
 
 export default [
   ...paginationFixtures,
   {
     testName: 'assets/:asset/history - ADA_USDC_LP',
-    endpoints: ['assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4c50/history'],
+    endpoints: [
+      'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4c50/history',
+    ],
     response: [
       {
         tx_hash: '0afe98cc104c3a70d23489ecd91be9574864f85e7cb0b8b84cd48fe887256227',

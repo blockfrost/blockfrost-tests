@@ -21,7 +21,9 @@ export default [
     response: {
       address:
         'addr1q9s5ws6xufe74h5vqyhxsd0n2hr4fdg895k9ztut2fjqz93z3znzpvegug3chp4dx556lp38h8ptu3smtj20q83rmdtqcjup2u',
-      amount: expect.arrayContaining([{ quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() }]),
+      amount: expect.arrayContaining([
+        { quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() },
+      ]),
       stake_address: 'stake1uy3g3f3qkv5wyguts6kn22d0scnmns47gcd4e98src3ak4skkxyvj',
       type: 'shelley',
       script: false,
@@ -35,7 +37,9 @@ export default [
     response: {
       address:
         'addr1q8fwxda8mq09rzjcluxrep9wyrnfe4e8kuzqzkvcdn53vskmspx9w7e55ly30vqnw4a0eza3hj2hxnhhq6hqqh58gyvstww5ww',
-      amount: expect.arrayContaining([{ quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() }]),
+      amount: expect.arrayContaining([
+        { quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() },
+      ]),
       stake_address: 'stake1u8dcqnzh0v620jghkqfh27hu3wcme9tnfmmsdtsqt6r5zxghn2nm9',
       type: 'shelley',
       script: false,
@@ -46,7 +50,9 @@ export default [
     endpoints: ['addresses/addr1w9vgcswrfxcujpqxt39wefrnd75ww35u3k3gauq4pf60mdc2rlkz7'],
     response: {
       address: 'addr1w9vgcswrfxcujpqxt39wefrnd75ww35u3k3gauq4pf60mdc2rlkz7',
-      amount: expect.arrayContaining([{ quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() }]),
+      amount: expect.arrayContaining([
+        { quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() },
+      ]),
       stake_address: null,
       type: 'shelley',
       script: true,
@@ -60,7 +66,9 @@ export default [
     response: {
       address:
         'addr1zxj47sy4qxlktqzmkrw8dahe46gtv8seakrshsqz26qnvzypw288a4x0xf8pxgcntelxmyclq83s0ykeehchz2wtspksr3q9nx',
-      amount: expect.arrayContaining([{ quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() }]),
+      amount: expect.arrayContaining([
+        { quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() },
+      ]),
       stake_address: 'stake1uxqh9rn76n8nynsnyvf4ulndjv0srcc8jtvumut3989cqmgjt49h6',
       type: 'shelley',
       script: true,
@@ -71,7 +79,9 @@ export default [
     endpoints: ['addresses/addr_vkh1lu3rzd3pwjp54twx32ye9g4gqkr34x7cyp4urt8luq22jvjx5ul'],
     response: {
       address: 'addr_vkh1lu3rzd3pwjp54twx32ye9g4gqkr34x7cyp4urt8luq22jvjx5ul',
-      amount: expect.arrayContaining([{ quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() }]),
+      amount: expect.arrayContaining([
+        { quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() },
+      ]),
       stake_address: null,
       type: 'shelley',
       script: false,
@@ -82,7 +92,9 @@ export default [
     endpoints: ['addresses/addr1w999n67e86jn6xal07pzxtrmqynspgx0fwmcmpua4wc6yzsxpljz3'],
     response: {
       address: 'addr1w999n67e86jn6xal07pzxtrmqynspgx0fwmcmpua4wc6yzsxpljz3',
-      amount: expect.arrayContaining([{ quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() }]),
+      amount: expect.arrayContaining([
+        { quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() },
+      ]),
       stake_address: expect.toBeOneOf([expect.toBeStakeAddress(), null]),
       type: 'shelley',
       script: true,
@@ -112,7 +124,9 @@ export default [
     response: {
       address:
         'addr1q8zu4smzyf2r2mfqjd6tc6vxf2p8rccdfk82ye3eut2udkw9etpkygj5x4kjpym5h35cvj5zw83s6nvw5fnrnck4cmvshkfm4y',
-      amount: expect.arrayContaining([{ quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() }]),
+      amount: expect.arrayContaining([
+        { quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() },
+      ]),
       stake_address: expect.toBeOneOf([expect.toBeStakeAddress(), null]),
       type: 'shelley',
       script: false,
@@ -124,7 +138,9 @@ export default [
 
     response: {
       address: 'addr_vkh1ch9vxc3z2s6k6gynwj7xnpj2sfc7xr2d363xvw0z6hrdjxyfmju',
-      amount: expect.arrayContaining([{ quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() }]),
+      amount: expect.arrayContaining([
+        { quantity: expect.toBeAssetQuantity(), unit: expect.toBeAssetUnit() },
+      ]),
       stake_address: expect.toBeOneOf([expect.toBeStakeAddress(), null]),
       type: 'shelley',
       script: false,

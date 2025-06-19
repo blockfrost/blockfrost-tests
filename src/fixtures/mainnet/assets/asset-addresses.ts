@@ -2,14 +2,16 @@ import { error_400_assets, error_404 } from '../../errors/index.js';
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'assets/e74066b78958ebe744dfdd9157141f515453fd213d94ce2d66c073c5707261736961746b6f/addresses'
+  'assets/e74066b78958ebe744dfdd9157141f515453fd213d94ce2d66c073c5707261736961746b6f/addresses',
 );
 
 export default [
   ...paginationFixtures,
   {
     testName: 'assets addresses',
-    endpoints: ['assets/e74066b78958ebe744dfdd9157141f515453fd213d94ce2d66c073c5707261736961746b6f/addresses'],
+    endpoints: [
+      'assets/e74066b78958ebe744dfdd9157141f515453fd213d94ce2d66c073c5707261736961746b6f/addresses',
+    ],
     response: [
       {
         address:
@@ -20,7 +22,9 @@ export default [
   },
   {
     testName: 'assets addresses - gimbal',
-    endpoints: ['assets/d3501d9531fcc25e3ca4b6429318c2cc374dbdbcf5e99c1c1e5da1ff444f4e545350414d/addresses'],
+    endpoints: [
+      'assets/d3501d9531fcc25e3ca4b6429318c2cc374dbdbcf5e99c1c1e5da1ff444f4e545350414d/addresses',
+    ],
     response: [
       {
         address:
@@ -37,7 +41,9 @@ export default [
   {
     testName: 'assets/:asset/addresses - all hail nutcoin!',
 
-    endpoints: ['assets/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e/addresses'],
+    endpoints: [
+      'assets/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e/addresses',
+    ],
     response: [
       {
         address:
@@ -54,7 +60,9 @@ export default [
   },
   {
     testName: 'assets addresses - valid not on-chain asset',
-    endpoints: ['assets/ddd01d9531fcc25e3ca4b6429318c2cc374dbdbcf5e99c1c1e5da1ff444f4e545350414d/addresses'],
+    endpoints: [
+      'assets/ddd01d9531fcc25e3ca4b6429318c2cc374dbdbcf5e99c1c1e5da1ff444f4e545350414d/addresses',
+    ],
     response: error_404,
   },
 ];

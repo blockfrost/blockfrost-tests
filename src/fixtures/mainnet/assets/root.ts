@@ -49,7 +49,8 @@ export default [
         quantity: '1',
       },
       {
-        asset: 'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f4265727279417175616d6172696e65',
+        asset:
+          'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f4265727279417175616d6172696e65',
         quantity: '1',
       },
       {
@@ -105,7 +106,8 @@ export default [
         quantity: '1',
       },
       {
-        asset: 'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f426572727942797a616e74696e65',
+        asset:
+          'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f426572727942797a616e74696e65',
         quantity: '1',
       },
       {
@@ -129,7 +131,8 @@ export default [
         quantity: '1',
       },
       {
-        asset: 'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f426572727943686172747265757365',
+        asset:
+          'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f426572727943686172747265757365',
         quantity: '1',
       },
       {
@@ -141,7 +144,8 @@ export default [
         quantity: '1',
       },
       {
-        asset: 'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f4265727279436c656d656e74696e65',
+        asset:
+          'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f4265727279436c656d656e74696e65',
         quantity: '1',
       },
       {
@@ -337,7 +341,8 @@ export default [
         quantity: '1',
       },
       {
-        asset: 'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f426572727950697374616368696f',
+        asset:
+          'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f426572727950697374616368696f',
         quantity: '1',
       },
       {
@@ -353,7 +358,8 @@ export default [
         quantity: '1',
       },
       {
-        asset: 'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f4265727279526173706265727279',
+        asset:
+          'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f4265727279526173706265727279',
         quantity: '1',
       },
       {

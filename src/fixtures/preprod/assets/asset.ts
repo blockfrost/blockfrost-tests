@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/text-encoding-identifier-case */
 import { expect } from 'vitest';
 
 export default [

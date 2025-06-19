@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from '../../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'governance/dreps/drep1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhquq6gltn/updates'
+  'governance/dreps/drep1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhquq6gltn/updates',
 );
 
 export default [
@@ -9,7 +9,9 @@ export default [
   {
     testName: 'governance drep keyHash updates',
 
-    endpoints: ['governance/dreps/drep1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhquq6gltn/updates'],
+    endpoints: [
+      'governance/dreps/drep1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhquq6gltn/updates',
+    ],
     response: [],
   },
   {

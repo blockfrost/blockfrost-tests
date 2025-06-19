@@ -6,7 +6,10 @@ export default [
     endpoints: ['blocks/latest'],
     response: {
       time: expect.toBeCurrentTimestamp(),
-      height: expect.toBeInRange(globalThis.latest.block.height, (globalThis.latest.block.height ?? 0) + 2),
+      height: expect.toBeInRange(
+        globalThis.latest.block.height,
+        (globalThis.latest.block.height ?? 0) + 2,
+      ),
       hash: expect.toBeBlake2b256Hash(),
       slot: expect.toBeSlotNumber(),
       epoch: expect.toBeEpochNumber(),

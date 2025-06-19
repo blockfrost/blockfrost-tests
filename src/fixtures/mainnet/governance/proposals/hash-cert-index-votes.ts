@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from '../../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'governance/proposals/15f82a365bdee483a4b03873a40d3829cc88c048ff3703e11bd01dd9e035c916/0/votes'
+  'governance/proposals/15f82a365bdee483a4b03873a40d3829cc88c048ff3703e11bd01dd9e035c916/0/votes',
 );
 
 export default [
@@ -9,7 +9,9 @@ export default [
   {
     testName: 'governance proposal votes',
 
-    endpoints: ['governance/proposals/15f82a365bdee483a4b03873a40d3829cc88c048ff3703e11bd01dd9e035c916/0/votes'],
+    endpoints: [
+      'governance/proposals/15f82a365bdee483a4b03873a40d3829cc88c048ff3703e11bd01dd9e035c916/0/votes',
+    ],
     response: [
       {
         tx_hash: '7925c2e6848235f18440249b3b4ab0111dd6c56fdcc518ba6fd8f02e37e39d24',

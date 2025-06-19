@@ -3,7 +3,7 @@ import { BlockFrostAPI } from '@blockfrost/blockfrost-js';
 import { buildTx, Network, waitForTx } from './index.js';
 import { sleep } from '../index.js';
 
-export const submitAndMempoolTest = async (network: Network) => {
+export const submitTest = async (network: Network) => {
   let blockfrostClient: BlockFrostAPI;
 
   if (process.env.PROJECT_ID) {
@@ -14,6 +14,13 @@ export const submitAndMempoolTest = async (network: Network) => {
   } else {
     throw new Error('PROJECT_ID environment variable is not set');
   }
+
+  // disable SSL on SDK's Got otherwise tests run directly on backend fail with  unable to verify the first certificate
+  blockfrostClient.instance = blockfrostClient.instance.extend({
+    https: {
+      rejectUnauthorized: false,
+    },
+  });
 
   const signedTx = await buildTx(blockfrostClient, network);
   const signedTxJson = signedTx.to_js_value();

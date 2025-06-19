@@ -13,7 +13,8 @@ export default [
     ],
   },
   {
-    testName: 'txs/:tx/delegations - generic shelley with MULTIPLE delegation, stake certs and pool updates',
+    testName:
+      'txs/:tx/delegations - generic shelley with MULTIPLE delegation, stake certs and pool updates',
     endpoints: ['txs/e3ca57e8f323265742a8f4e79ff9af884c9ff8719bd4f7788adaea4c33ba07b6/delegations'],
     response: [
       {

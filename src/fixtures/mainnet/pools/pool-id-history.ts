@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'pools/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy/history'
+  'pools/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy/history',
 );
 
 export default [
@@ -124,7 +124,8 @@ export default [
     ],
   },
   {
-    testName: 'pools/:pool_id/history - problematic pool history - dbsync issue missing some epochs',
+    testName:
+      'pools/:pool_id/history - problematic pool history - dbsync issue missing some epochs',
     endpoints: ['pools/pool1r8lmsrdure385hz647kl2qjhyyxkdle4au5krjcsqed4x8227k3/history?page=2'],
     response: [
       {

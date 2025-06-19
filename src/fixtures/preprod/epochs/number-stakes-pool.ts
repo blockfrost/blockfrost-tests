@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'epochs/242/stakes/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy'
+  'epochs/242/stakes/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy',
 ).filter(({ type }) => type !== 'order');
 
 export default [
@@ -418,7 +418,9 @@ export default [
   },
   {
     testName: 'epochs/:number/stakes/pool?queryparams page 1 best pool ever',
-    endpoints: ['epochs/71/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v?page=1&count=2'],
+    endpoints: [
+      'epochs/71/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v?page=1&count=2',
+    ],
     response: [
       {
         stake_address: 'stake_test1uqvqu9jrzywh8qyz0ey4dq39vdfg6wvrg5vt5mru88s62lgjj5jv5',
@@ -432,7 +434,9 @@ export default [
   },
   {
     testName: 'epochs/:number/stakes/pool?queryparams page 2 best pool ever',
-    endpoints: ['epochs/71/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v?page=2&count=2'],
+    endpoints: [
+      'epochs/71/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v?page=2&count=2',
+    ],
     response: [
       {
         stake_address: 'stake_test1uz8qeh9f3dgdssyzdzjp6padp4pret7hvxcphf3z866r2kgxghumg',

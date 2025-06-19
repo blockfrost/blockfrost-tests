@@ -169,7 +169,8 @@ export default [
     },
   },
   {
-    testName: 'accounts/:stake_address retire and register drep after voting. should have their drep_id cleared.',
+    testName:
+      'accounts/:stake_address retire and register drep after voting. should have their drep_id cleared.',
     endpoints: ['accounts/stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq'],
     response: {
       stake_address: 'stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq',

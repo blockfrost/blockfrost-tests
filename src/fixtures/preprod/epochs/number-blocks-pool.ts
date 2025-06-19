@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'epochs/123/blocks/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v'
+  'epochs/123/blocks/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v',
 );
 
 export default [

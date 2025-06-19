@@ -421,7 +421,9 @@ export default [
   },
   {
     testName: 'accounts/:stake_address/addresses/assets - generic stake address without tokens',
-    endpoints: ['accounts/stake_test1ur2pejlgfqa5e4stqg529tqj06k6gamweaawgphvewkdgtqqkuwlr/addresses/assets'],
+    endpoints: [
+      'accounts/stake_test1ur2pejlgfqa5e4stqg529tqj06k6gamweaawgphvewkdgtqqkuwlr/addresses/assets',
+    ],
     response: [],
   },
   {
@@ -432,11 +434,15 @@ export default [
   {
     testName: 'accounts/:stake_address - valid not on-chain account',
     response: error_404,
-    endpoints: ['accounts/stake_test1upzvx3z7hlhjrvzzsu4gxknwjdjmhz08x3x7ddmhfw445dc7u96sn/addresses/assets'],
+    endpoints: [
+      'accounts/stake_test1upzvx3z7hlhjrvzzsu4gxknwjdjmhz08x3x7ddmhfw445dc7u96sn/addresses/assets',
+    ],
   },
   {
     testName: 'accounts/:stake_address/addresses/assets - valid not on-chain account',
     response: error_404,
-    endpoints: ['accounts/stake_test1upzvx3z7hlhjrvzzsu4gxknwjdjmhz08x3x7ddmhfw445dc7u96sn/addresses/assets'],
+    endpoints: [
+      'accounts/stake_test1upzvx3z7hlhjrvzzsu4gxknwjdjmhz08x3x7ddmhfw445dc7u96sn/addresses/assets',
+    ],
   },
 ];

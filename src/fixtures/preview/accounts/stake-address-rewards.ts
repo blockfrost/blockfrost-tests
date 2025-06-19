@@ -1,21 +1,25 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/rewards'
+  'accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/rewards',
 );
 
 export default [
   ...paginationFixtures,
   {
     testName: 'accounts/:stake_address generic empty list',
-    endpoints: ['accounts/stake_test1uplm3vtt2637738tx4wy9l4sjlhtdld2nvtlv8pj9ng9feg6d3pr7/rewards'],
+    endpoints: [
+      'accounts/stake_test1uplm3vtt2637738tx4wy9l4sjlhtdld2nvtlv8pj9ng9feg6d3pr7/rewards',
+    ],
 
     response: [],
   },
   {
     testName: 'accounts/:stake_address/rewards',
 
-    endpoints: ['accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/rewards'],
+    endpoints: [
+      'accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/rewards',
+    ],
     response: [
       {
         epoch: 39,
@@ -648,7 +652,8 @@ export default [
     ],
   },
   {
-    testName: 'accounts/:stake_address?queryparams generic stake address rewards with multiple types',
+    testName:
+      'accounts/:stake_address?queryparams generic stake address rewards with multiple types',
     endpoints: [
       'accounts/stake_test1upcw6n4rw9afjud3l7xh2py8jukmdssn00rr6mu5p0krj9sq2jn8p/rewards?count=5&page=1',
       'accounts/stake_test1upcw6n4rw9afjud3l7xh2py8jukmdssn00rr6mu5p0krj9sq2jn8p/rewards?count=5&page=1&order=asc',
@@ -688,7 +693,8 @@ export default [
     ],
   },
   {
-    testName: 'accounts/:stake_address?queryparams generic stake address rewards with multiple types',
+    testName:
+      'accounts/:stake_address?queryparams generic stake address rewards with multiple types',
     endpoints: [
       'accounts/stake_test1upcw6n4rw9afjud3l7xh2py8jukmdssn00rr6mu5p0krj9sq2jn8p/rewards?count=2&page=13',
       'accounts/stake_test1upcw6n4rw9afjud3l7xh2py8jukmdssn00rr6mu5p0krj9sq2jn8p/rewards?count=2&page=13&order=asc',

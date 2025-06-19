@@ -1,9 +1,9 @@
-import { expect } from "vitest";
+import { expect } from 'vitest';
 
 export default [
   {
-    testName: "network eras",
-    endpoints: ["network/eras"],
+    testName: 'network eras',
+    endpoints: ['network/eras'],
     response: [
       {
         start: { time: 0, slot: 0, epoch: 0 },

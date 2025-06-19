@@ -2,7 +2,7 @@ import { expect } from 'vitest';
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'accounts/stake_test1urmus498k7r299azjvhh50c9044zwqxgqfuqqrj3m46y8ucef0hex/rewards'
+  'accounts/stake_test1urmus498k7r299azjvhh50c9044zwqxgqfuqqrj3m46y8ucef0hex/rewards',
 );
 
 export default [
@@ -160,7 +160,8 @@ export default [
     },
   },
   {
-    testName: 'accounts/:stake_address retire and register drep after voting. should have their drep_id cleared.',
+    testName:
+      'accounts/:stake_address retire and register drep after voting. should have their drep_id cleared.',
     endpoints: ['accounts/stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq'],
     response: {
       stake_address: 'stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq',

@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'pools/pool1n935yzlmu7528fx4qjf2gak0cdv2nune9cku730zg7vh707rnnd/history'
+  'pools/pool1n935yzlmu7528fx4qjf2gak0cdv2nune9cku730zg7vh707rnnd/history',
 );
 
 export default [

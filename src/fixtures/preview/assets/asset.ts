@@ -3,8 +3,10 @@ import { expect } from 'vitest';
 export default [
   {
     testName: 'assets/:asset - general asset',
-    endpoints: ['assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4c50'],
-    response:   {
+    endpoints: [
+      'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4c50',
+    ],
+    response: {
       asset: '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4c50',
       policy_id: '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d',
       asset_name: '4144415f555344435f4c50',
@@ -16,7 +18,7 @@ export default [
       onchain_metadata_standard: null,
       onchain_metadata_extra: null,
       metadata: expect.any(Object),
-    }
+    },
   },
   {
     testName: 'assets/:asset - asset without metadata',
@@ -79,7 +81,6 @@ export default [
           prefix: '$',
           version: 0,
           termsofuse: 'https://adahandle.com/tou',
-          // eslint-disable-next-line unicorn/text-encoding-identifier-case
           handleEncoding: 'utf-8',
         },
         name: '$james',

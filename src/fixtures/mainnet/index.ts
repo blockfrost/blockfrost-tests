@@ -1,12 +1,12 @@
 import accountsStakeAddress from './accounts/stake-address.js';
-import accountStakeAddressAddresses from './accounts/stake-address-addresses.js'
+import accountStakeAddressAddresses from './accounts/stake-address-addresses.js';
 import accountsStakeAddressAddressesAssets from './accounts/stake-address-addresses-assets.js';
 import accountsStakeAddressAddressesTotal from './accounts/stake-address-addresses-total.js';
 import accountsStakeAddressDelegations from './accounts/stake-address-delegations.js';
 import accountsStakeAddressHistory from './accounts/stake-address-history.js';
-import accountsStakeAddressMirs from './accounts/stake-address-mirs.js'
+import accountsStakeAddressMirs from './accounts/stake-address-mirs.js';
 import accountsStakeAddressRegistrations from './accounts/stake-address-registrations.js';
-import accountStakeAddressRewards from './accounts/stake-address-rewards.js'
+import accountStakeAddressRewards from './accounts/stake-address-rewards.js';
 import accountsStakeAddressUtxos from './accounts/stake-address-utxos.js';
 import accountsStakeAddressWithdrawals from './accounts/stake-address-withdrawals.js';
 
@@ -97,19 +97,19 @@ import governanceProposalsHashIndex from './governance/proposals/hash-cert-index
 import governanceProposalsHashIndexVotes from './governance/proposals/hash-cert-index-votes.js';
 
 export const mainnetFixtures = {
-    accounts: [
-      ...accountsStakeAddress,
-      ...accountStakeAddressAddresses,
-      ...accountsStakeAddressAddressesAssets,
-      ...accountsStakeAddressAddressesTotal,
-      ...accountsStakeAddressDelegations,
-      ...accountsStakeAddressHistory,
-      ...accountsStakeAddressMirs,
-      ...accountsStakeAddressRegistrations,
-      ...accountStakeAddressRewards,
-      ...accountsStakeAddressUtxos,
-      ...accountsStakeAddressWithdrawals
-    ],
+  accounts: [
+    ...accountsStakeAddress,
+    ...accountStakeAddressAddresses,
+    ...accountsStakeAddressAddressesAssets,
+    ...accountsStakeAddressAddressesTotal,
+    ...accountsStakeAddressDelegations,
+    ...accountsStakeAddressHistory,
+    ...accountsStakeAddressMirs,
+    ...accountsStakeAddressRegistrations,
+    ...accountStakeAddressRewards,
+    ...accountsStakeAddressUtxos,
+    ...accountsStakeAddressWithdrawals,
+  ],
   blocks: [
     ...blocksOthers,
     ...blocksHashOrNumber,

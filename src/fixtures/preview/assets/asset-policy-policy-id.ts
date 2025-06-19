@@ -28,7 +28,8 @@ export default [
         quantity: '55340232221128654842',
       },
       {
-        asset: '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4944454e54495459',
+        asset:
+          '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4944454e54495459',
         quantity: '4',
       },
       {
@@ -40,7 +41,8 @@ export default [
         quantity: '18446744073709551614',
       },
       {
-        asset: '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595f4944454e54495459',
+        asset:
+          '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595f4944454e54495459',
         quantity: '2',
       },
       {
@@ -52,7 +54,8 @@ export default [
         quantity: '9223372036854775807',
       },
       {
-        asset: '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f695553445f4944454e54495459',
+        asset:
+          '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f695553445f4944454e54495459',
         quantity: '1',
       },
       {
@@ -60,11 +63,13 @@ export default [
         quantity: '1000000000000000',
       },
       {
-        asset: '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50',
+        asset:
+          '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50',
         quantity: '9223372036854775807',
       },
       {
-        asset: '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4944454e54495459',
+        asset:
+          '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4944454e54495459',
         quantity: '1',
       },
       {
@@ -76,7 +81,8 @@ export default [
         quantity: '9223372036854775807',
       },
       {
-        asset: '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f444a45445f4944454e54495459',
+        asset:
+          '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f444a45445f4944454e54495459',
         quantity: '1',
       },
       {

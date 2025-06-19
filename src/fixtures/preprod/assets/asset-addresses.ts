@@ -2,7 +2,7 @@ import { error_400_assets, error_404 } from '../../errors/index.js';
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'assets/b43d4ad8386fc831db53cfa5c31bf37d42647eea60ce4b1cafddb247/addresses'
+  'assets/b43d4ad8386fc831db53cfa5c31bf37d42647eea60ce4b1cafddb247/addresses',
 );
 
 export default [
@@ -29,7 +29,9 @@ export default [
   {
     testName: 'assets addresses - valid not on-chain asset',
 
-    endpoints: ['assets/ddd01d9531fcc25e3ca4b6429318c2cc374dbdbcf5e99c1c1e5da1ff444f4e545350414d/addresses'],
+    endpoints: [
+      'assets/ddd01d9531fcc25e3ca4b6429318c2cc374dbdbcf5e99c1c1e5da1ff444f4e545350414d/addresses',
+    ],
     response: error_404,
   },
 ];

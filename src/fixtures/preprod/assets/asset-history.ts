@@ -1,14 +1,16 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'assets/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e/history'
+  'assets/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e/history',
 );
 
 export default [
   ...paginationFixtures,
   {
     testName: 'assets/:asset/history - BF CIP68 NFT',
-    endpoints: ['assets/fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd000de140426c6f636b66726f7374/history'],
+    endpoints: [
+      'assets/fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd000de140426c6f636b66726f7374/history',
+    ],
     response: [
       {
         tx_hash: 'd714b17463879b3c861529d3d2f70a1b04158c36f7c60a6bcf7be5e173861313',

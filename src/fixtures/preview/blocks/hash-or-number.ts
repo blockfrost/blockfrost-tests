@@ -26,7 +26,10 @@ export default [
   },
   {
     testName: 'blocks/:hash_or_number - hash - generic byron (no txs)',
-    endpoints: ['blocks/cd619529ca62b4c37f7f728cd6d3472682115f001e1d1278bf1b7dce528db44e', 'blocks/1'],
+    endpoints: [
+      'blocks/cd619529ca62b4c37f7f728cd6d3472682115f001e1d1278bf1b7dce528db44e',
+      'blocks/1',
+    ],
     response: {
       time: 1_666_656_020,
       height: 1,
@@ -49,7 +52,10 @@ export default [
   },
   {
     testName: 'blocks/:hash_or_number - hash - generic shelley',
-    endpoints: ['blocks/d00573be29d6df1245f4ae62cec4b58b0de14be8dd26f32f948d89bde1ba19bc', 'blocks/123323'],
+    endpoints: [
+      'blocks/d00573be29d6df1245f4ae62cec4b58b0de14be8dd26f32f948d89bde1ba19bc',
+      'blocks/123323',
+    ],
     response: {
       time: 1_669_260_641,
       height: 123_323,

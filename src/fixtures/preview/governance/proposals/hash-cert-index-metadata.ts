@@ -4,13 +4,17 @@ export default [
   {
     testName: 'governance treasury_withdrawals metadata (404)',
 
-    endpoints: ['governance/proposals/cbdfd1717b4e7ea2d4b3c141387b24f2f31fac8be8fec64c3b70870bad425643/0/metadata'],
+    endpoints: [
+      'governance/proposals/cbdfd1717b4e7ea2d4b3c141387b24f2f31fac8be8fec64c3b70870bad425643/0/metadata',
+    ],
     response: error_404,
   },
   {
     testName: 'governance proposal parameter_change metadata',
 
-    endpoints: ['governance/proposals/3f8139c5a67d3ef290ebbf9cad60009713fbb994bd41d4c885fbeefa706382f8/0/metadata'],
+    endpoints: [
+      'governance/proposals/3f8139c5a67d3ef290ebbf9cad60009713fbb994bd41d4c885fbeefa706382f8/0/metadata',
+    ],
     response: {
       tx_hash: '3f8139c5a67d3ef290ebbf9cad60009713fbb994bd41d4c885fbeefa706382f8',
       cert_index: +0,
@@ -94,7 +98,9 @@ export default [
   {
     testName: 'governance info_action metadata',
 
-    endpoints: ['governance/proposals/0054e423ed356828388d5c596ef361afedd96d58cf997f13a786d60ff8f23aa1/0/metadata'],
+    endpoints: [
+      'governance/proposals/0054e423ed356828388d5c596ef361afedd96d58cf997f13a786d60ff8f23aa1/0/metadata',
+    ],
     response: {
       tx_hash: '0054e423ed356828388d5c596ef361afedd96d58cf997f13a786d60ff8f23aa1',
       cert_index: 0,
@@ -164,13 +170,17 @@ export default [
   {
     testName: 'governance proposal hard_fork_initiation metadata (hash mismatch)',
 
-    endpoints: ['governance/proposals/ccb27f6b0d58c25ae33fd821b62c387f5230dae930afd07489fa3df56ae56522/0/metadata'],
+    endpoints: [
+      'governance/proposals/ccb27f6b0d58c25ae33fd821b62c387f5230dae930afd07489fa3df56ae56522/0/metadata',
+    ],
     response: error_404,
   },
   {
     testName: 'governance proposal treasury_withdrawals metadata',
 
-    endpoints: ['governance/proposals/dc25bff2f1bbe6040d73f42501b8613e08cbc5a5bac9ac736c6632ca66430ba5/0/metadata'],
+    endpoints: [
+      'governance/proposals/dc25bff2f1bbe6040d73f42501b8613e08cbc5a5bac9ac736c6632ca66430ba5/0/metadata',
+    ],
     response: {
       tx_hash: 'dc25bff2f1bbe6040d73f42501b8613e08cbc5a5bac9ac736c6632ca66430ba5',
       cert_index: +0,

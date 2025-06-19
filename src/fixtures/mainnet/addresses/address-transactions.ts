@@ -2,7 +2,7 @@ import { getPaginationFixtures } from '../../../index.js';
 import { error_400_from_to } from '../../errors/index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'addresses/addr1q904hvj3tcr9cendlrm6y4fhcy34tgezlqn92z7z4lwkzczvqdpz4hpzh09mr3360akg0y9wss24hhvfhtkp2fjh65cs7q4z89/transactions'
+  'addresses/addr1q904hvj3tcr9cendlrm6y4fhcy34tgezlqn92z7z4lwkzczvqdpz4hpzh09mr3360akg0y9wss24hhvfhtkp2fjh65cs7q4z89/transactions',
 );
 
 export default [
@@ -122,7 +122,8 @@ export default [
     ],
   },
   {
-    testName: 'addresses/:address/transactions generic dormant exchange byron address desc empty (reverse from to)',
+    testName:
+      'addresses/:address/transactions generic dormant exchange byron address desc empty (reverse from to)',
     endpoints: [
       'addresses/DdzFFzCqrhstmqBkaU98vdHu6PdqjqotmgudToWYEeRmQKDrn4cAgGv9EZKtu1DevLrMA1pdVazufUCK4zhFkUcQZ5Gm88mVHnrwmXvT/transactions?order=desc&count=5&page=1&from=4377130:10&to=4376980:1',
       'addresses/DdzFFzCqrhstmqBkaU98vdHu6PdqjqotmgudToWYEeRmQKDrn4cAgGv9EZKtu1DevLrMA1pdVazufUCK4zhFkUcQZ5Gm88mVHnrwmXvT/transactions?order=desc&count=5&page=1&from=4377130:10&to=0:1',
@@ -762,7 +763,8 @@ export default [
     ],
   },
   {
-    testName: 'addresses/addr1w999n67e86jn6xal07pzxtrmqynspgx0fwmcmpua4wc6yzsxpljz3/transactions precached response',
+    testName:
+      'addresses/addr1w999n67e86jn6xal07pzxtrmqynspgx0fwmcmpua4wc6yzsxpljz3/transactions precached response',
     // TODO: REMOVE AFTER NEW CACHE
     customTimeout: 60_000,
     endpoints: [
@@ -2051,7 +2053,8 @@ export default [
     ],
   },
   {
-    testName: 'addresses/:address/transactions generic address - last tx has multiple txs in the same block',
+    testName:
+      'addresses/:address/transactions generic address - last tx has multiple txs in the same block',
     endpoints: [
       'addresses/addr1q8tsjk4z4amyzz0242v688pqfyrq3pp3hggup5rwnjpaa2ejar0avrwdwmn59vvg36uc4l7k83atm42tx2rl49c295cqak3qx2/transactions?count=5&to=8866201',
     ],

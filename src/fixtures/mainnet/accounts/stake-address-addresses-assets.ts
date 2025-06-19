@@ -2,7 +2,7 @@ import { error_400_accounts, error_404 } from '../../errors/index.js';
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'accounts/stake1u9uz4j024qfud557ucrqw3kqfdndjgaxj7m44x7tamkvmyqzdwe7v/addresses/assets'
+  'accounts/stake1u9uz4j024qfud557ucrqw3kqfdndjgaxj7m44x7tamkvmyqzdwe7v/addresses/assets',
 );
 
 export default [
@@ -59,7 +59,9 @@ export default [
   {
     testName: 'accounts/:stake_address/addresses/assets - generic stake address without tokens',
 
-    endpoints: ['accounts/stake1uyfckx3mk6rqy6epdfqswhw3p6kpfad83mgcmyez2vacuws8yppkw/addresses/assets'],
+    endpoints: [
+      'accounts/stake1uyfckx3mk6rqy6epdfqswhw3p6kpfad83mgcmyez2vacuws8yppkw/addresses/assets',
+    ],
     response: [],
   },
   {
@@ -72,13 +74,17 @@ export default [
     testName: 'accounts/:stake_address - valid not on-chain account',
 
     response: error_404,
-    endpoints: ['accounts/stake1u9mnvzarrk73dz8gcmrx8lqqqnzfa8zu4zxuymstr6vtvmsutca3h/addresses/assets'],
+    endpoints: [
+      'accounts/stake1u9mnvzarrk73dz8gcmrx8lqqqnzfa8zu4zxuymstr6vtvmsutca3h/addresses/assets',
+    ],
   },
   {
     testName: 'accounts/:stake_address/addresses/assets - valid not on-chain account',
 
     response: error_404,
-    endpoints: ['accounts/stake1u9mnvzarrk73dz8gcmrx8lqqqnzfa8zu4zxuymstr6vtvmsutca3h/addresses/assets'],
+    endpoints: [
+      'accounts/stake1u9mnvzarrk73dz8gcmrx8lqqqnzfa8zu4zxuymstr6vtvmsutca3h/addresses/assets',
+    ],
   },
   {
     testName: 'accounts/:stake_address/addresses/assets nutcoin stake address',
@@ -128,7 +134,9 @@ export default [
   {
     testName: 'accounts/:stake_address/addresses/assets generic stake address without tokens',
 
-    endpoints: ['accounts/stake1uyfckx3mk6rqy6epdfqswhw3p6kpfad83mgcmyez2vacuws8yppkw/addresses/assets'],
+    endpoints: [
+      'accounts/stake1uyfckx3mk6rqy6epdfqswhw3p6kpfad83mgcmyez2vacuws8yppkw/addresses/assets',
+    ],
 
     response: [],
   },

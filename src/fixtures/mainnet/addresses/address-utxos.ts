@@ -2,7 +2,7 @@ import { error_404 } from '../../errors/index.js';
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginanationFixtures = getPaginationFixtures(
-  'addresses/addr1qxlem7879m2ly03ljqldhz9jxtlkurc465hqysxr33z2a4ee3t4rc98rhcg4n0a3g60nd9f865gpy4unflgak3we53psrrk85u/utxos'
+  'addresses/addr1qxlem7879m2ly03ljqldhz9jxtlkurc465hqysxr33z2a4ee3t4rc98rhcg4n0a3g60nd9f865gpy4unflgak3we53psrrk85u/utxos',
 );
 
 export default [

@@ -1,16 +1,18 @@
 import 'dotenv/config';
 import { match } from 'node-match-path';
-import { test, describe, expect, TestOptions } from 'vitest';
+import { test, describe, expect } from 'vitest';
 import { noCase } from 'change-case';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import got, { ExtendOptions, Options, Got } from 'got';
+import got, { ExtendOptions, Got } from 'got';
+import { Fixture } from './types/index.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const filePath = path.resolve(__dirname, '../endpoints-allowlist.json');
 
 export const DEFAULT_TEST_TIMEOUT = 15_000;
+
 const projectId = process.env.PROJECT_ID;
 let endpointsAllowlist: string[] | undefined;
 
@@ -35,28 +37,19 @@ try {
   throw new Error(`Error loading endpoints-allowlist.json: ${message}`);
 }
 
-export type Fixture = {
-  testName: string;
-  customTimeout?: TestOptions['timeout'];
-  // Times to retry the test if fails. Useful for making flaky tests more stable.
-  retry?: TestOptions['retry'];
-  endpoints: string[];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  response: any;
-  postBody?: Options['body'];
-  headers?: Options['headers'];
-  clientOptions?: Options;
-  customTest?: (endpoint: string, client: Got) => Promise<void>;
-  customExpect?: (response: unknown | null) => Promise<void>;
-};
-
-const isUrlMatch = (urlParameter: string, pattern: string) => {
+export const isUrlMatch = (urlParameter: string, _pattern: string) => {
   let url = urlParameter;
 
   try {
     if (url.includes('?')) {
       url = url.split('?')[0];
     }
+
+    if (!url.startsWith('/')) url = '/' + url;
+
+    let pattern = _pattern.split('?')[0];
+
+    if (!pattern.startsWith('/')) pattern = '/' + pattern;
 
     const adjustedPattern = pattern.replaceAll('{', ':').replaceAll('}', '');
 
@@ -98,7 +91,9 @@ export const shouldRunTest = (fixture: Fixture) => {
     return true;
   }
 
-  return fixture.endpoints.some(endpoint => endpointsAllowlist.some(pattern => isUrlMatch(endpoint, pattern)));
+  return fixture.endpoints.some(endpoint =>
+    endpointsAllowlist.some(pattern => isUrlMatch(endpoint, pattern)),
+  );
 };
 
 export const generateTestFromFixture = (fixture: Fixture, endpoint: string) => {
@@ -122,7 +117,7 @@ export const getClientForFixture = (fixture: Pick<Fixture, 'clientOptions' | 'he
 
 const makeRequest = async (
   fixture: Pick<Fixture, 'postBody' | 'clientOptions' | 'headers'>,
-  endpoint: string
+  endpoint: string,
 ): Promise<{
   data: unknown;
   headers: Record<string, string | string[] | undefined>;
@@ -130,7 +125,9 @@ const makeRequest = async (
 }> => {
   const start = performance.now();
   const client = getClientForFixture(fixture);
-  const request = fixture.postBody ? client.post(endpoint, { body: fixture.postBody }) : client.get(endpoint);
+  const request = fixture.postBody
+    ? client.post(endpoint, { body: fixture.postBody })
+    : client.get(endpoint);
 
   const [data, response] = await Promise.all([request.json(), request]);
   const end = performance.now();
@@ -149,14 +146,13 @@ export const generateTestSuite = (fixtures: any) => {
 
     describe(`${noCase(fixtureName)} endpoints`, () => {
       if (!f || f.length === 0) {
-        // dummy test if real tests are missing
+        // dummy test if tests are ignored
         test('should have at least one endpoint', () => {
           expect(1).toBe(1);
         });
       }
 
       for (const fixture of f) {
-        // all tests
         for (const endpoint of fixture.endpoints) {
           generateTestFromFixture(fixture, endpoint);
         }
@@ -298,7 +294,7 @@ export const generateTest = (fixture: Fixture, endpoint: string) => {
         expect(response).toStrictEqual(fixture.response);
       }
     },
-    { timeout, retry: fixture.retry }
+    { timeout, retry: fixture.retry },
   );
 };
 

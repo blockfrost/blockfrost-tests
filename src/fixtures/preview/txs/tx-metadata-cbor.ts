@@ -1,7 +1,9 @@
 export default [
   {
     testName: 'txs/:tx/metadata/cbor - generic shelley with metadata cbor',
-    endpoints: ['txs/27076b807853e8678c35bc668661021fed758a96899e715b6af746e0be849e92/metadata/cbor'],
+    endpoints: [
+      'txs/27076b807853e8678c35bc668661021fed758a96899e715b6af746e0be849e92/metadata/cbor',
+    ],
     response: [
       {
         label: '1',

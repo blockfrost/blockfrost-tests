@@ -27,7 +27,8 @@ export default [
     ],
   },
   {
-    testName: 'accounts/:stake_address?queryparams generic stake address rewards with multiple types',
+    testName:
+      'accounts/:stake_address?queryparams generic stake address rewards with multiple types',
     endpoints: [
       'accounts/stake1uxa6lm0x9ezhywczl8rs048mmvn396qtk0w4z2tzu2cytuqs0e38d/rewards?count=4&page=38',
       'accounts/stake1uxa6lm0x9ezhywczl8rs048mmvn396qtk0w4z2tzu2cytuqs0e38d/rewards?count=4&page=38&order=asc',
@@ -61,7 +62,8 @@ export default [
     ],
   },
   {
-    testName: 'accounts/:stake_address?queryparams generic stake address rewards with multiple types',
+    testName:
+      'accounts/:stake_address?queryparams generic stake address rewards with multiple types',
     endpoints: [
       'accounts/stake1uyr7kdys3kmruysratwqzjpx0ya8rjsh8t68d2573yp3g0cr05y2r/rewards?count=1&page=11',
       'accounts/stake1uyr7kdys3kmruysratwqzjpx0ya8rjsh8t68d2573yp3g0cr05y2r/rewards?count=1&page=11&order=asc',

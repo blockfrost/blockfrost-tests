@@ -2,7 +2,7 @@ import { error_404 } from '../../errors/index.js';
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginanationFixtures = getPaginationFixtures(
-  'addresses/addr_test1qpxghn6cjkmawmxnufpvvc5kempxumyt9xv2tvzyswarmhenpjux68s5nrdttupgzq6wwg8m84kre34tlq8t2n2nxwqsxgf4vp/utxos'
+  'addresses/addr_test1qpxghn6cjkmawmxnufpvvc5kempxumyt9xv2tvzyswarmhenpjux68s5nrdttupgzq6wwg8m84kre34tlq8t2n2nxwqsxgf4vp/utxos',
 );
 
 export default [
@@ -1246,7 +1246,8 @@ export default [
     ],
   },
   {
-    testName: 'addresses/:address/utxos BF address with inline_datum, datums and normal utxo mixed ASC',
+    testName:
+      'addresses/:address/utxos BF address with inline_datum, datums and normal utxo mixed ASC',
 
     endpoints: [
       'addresses/addr_test1qqexua2072vnxz07aft0cf5hxuru3s7srx5g69yhm83dv0pzaq4g8va3k7k5agx9zq7uu9wg7fv4g892f4khquq4maxq8299q2/utxos',
@@ -1337,7 +1338,8 @@ export default [
     ],
   },
   {
-    testName: 'addresses/:address/utxos BF address with inline_datum, datums and normal utxo mixed DESC',
+    testName:
+      'addresses/:address/utxos BF address with inline_datum, datums and normal utxo mixed DESC',
 
     endpoints: [
       'addresses/addr_test1qqexua2072vnxz07aft0cf5hxuru3s7srx5g69yhm83dv0pzaq4g8va3k7k5agx9zq7uu9wg7fv4g892f4khquq4maxq8299q2/utxos?order=desc',

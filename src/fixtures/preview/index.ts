@@ -121,7 +121,14 @@ export const previewFixtures = {
     ...addressUtxosAsset,
     ...addressUtxos,
   ],
-  assets: [...asset, ...assetsAsset, ...assetHistory, ...assetPolicyPolicyId, ...assetTransactions, ...assetTxs],
+  assets: [
+    ...asset,
+    ...assetsAsset,
+    ...assetHistory,
+    ...assetPolicyPolicyId,
+    ...assetTransactions,
+    ...assetTxs,
+  ],
   blocks: [
     ...blocksOthers,
     ...blocksHashOrNumber,

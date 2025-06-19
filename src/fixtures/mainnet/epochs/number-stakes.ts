@@ -1,6 +1,8 @@
 import { getPaginationFixtures } from '../../../index.js';
 
-const paginationFixtures = getPaginationFixtures('epochs/242/stakes').filter(({ type }) => type !== 'order');
+const paginationFixtures = getPaginationFixtures('epochs/242/stakes').filter(
+  ({ type }) => type !== 'order',
+);
 
 export default [
   ...paginationFixtures,

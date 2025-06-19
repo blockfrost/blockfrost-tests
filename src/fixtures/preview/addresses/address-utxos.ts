@@ -2,7 +2,7 @@ import { getPaginationFixtures } from '../../../index.js';
 import { error_404 } from '../../errors/index.js';
 
 const paginanationFixtures = getPaginationFixtures(
-  'addresses/addr_test1qzwuqsd70k70wcm8smxs6jw34r59r83ywm867t5nu3nutceksz8m2cq3qzq36wt37xengqnuweh8pmr4wrxqcavz996sj2cqw8/utxos'
+  'addresses/addr_test1qzwuqsd70k70wcm8smxs6jw34r59r83ywm867t5nu3nutceksz8m2cq3qzq36wt37xengqnuweh8pmr4wrxqcavz996sj2cqw8/utxos',
 );
 
 export default [
@@ -1577,7 +1577,8 @@ export default [
     response: [],
   },
   {
-    testName: 'addresses/:address/utxos BF address with some token empty / No ADA - lovelace filter',
+    testName:
+      'addresses/:address/utxos BF address with some token empty / No ADA - lovelace filter',
     endpoints: [
       'addresses/addr_test1qqg6a630r8lugmtha5ygvnngsatxpa4t7g8wqma9vc767lwerv4zq00vx9tyeee3wc73729qj7mmwm9dxm7r0v025qkskvnajp/utxos/lovelace',
       'addresses/addr_vkh1zxhw5tcellzx6aldpzryu6y82es0d2ljpmsxlftx8khh6h0fv3c/utxos/lovelace',

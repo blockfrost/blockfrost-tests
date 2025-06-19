@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/transactions'
+  'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/transactions',
 );
 
 export default [
@@ -1340,7 +1340,9 @@ export default [
   {
     testName: 'assets/:asset/transactions?queryparams -  tTEURO - many txs',
 
-    endpoints: ['assets/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f/txs?count=3&page=1000'],
+    endpoints: [
+      'assets/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f/txs?count=3&page=1000',
+    ],
     response: [
       'a7b05ac0e5812bb92cb3b7ed874c103d7936c493506323a9a27d559a5f95c600',
       'cc623d0a18562e5e15b2be4aefa8d364469de1e9260e2826b57eeda0f64e4d6e',
@@ -2601,7 +2603,9 @@ export default [
     testName:
       'assets/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f/transactions precached response',
 
-    endpoints: ['assets/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f/transactions?page=11'],
+    endpoints: [
+      'assets/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f/transactions?page=11',
+    ],
     response: [
       {
         tx_hash: '7c56b81fbe81dfcf6586f83e1ddc32a9fd9a6c1483bcb8915eb151b3ca97aff0',
@@ -3819,7 +3823,9 @@ export default [
     testName:
       'assets/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f/transactions precached response',
 
-    endpoints: ['assets/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f/transactions?page=3'],
+    endpoints: [
+      'assets/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f/transactions?page=3',
+    ],
     response: [
       {
         tx_hash: 'b38a23024f7aecfac000e7c683dc5f2a6d02ed6c85126301e253f9feff446067',

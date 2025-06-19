@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/txs'
+  'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/txs',
 );
 
 export default [
@@ -43,7 +43,9 @@ export default [
   },
   {
     testName: 'addresses/:address/txs generic payment_cred 1',
-    endpoints: ['addresses/addr_vkh1pjggm5nyjkll8amnrsh4hvjz6zsdvr9knmnlsgtgczls7x9qy3y/txs?order=asc&page=420'],
+    endpoints: [
+      'addresses/addr_vkh1pjggm5nyjkll8amnrsh4hvjz6zsdvr9knmnlsgtgczls7x9qy3y/txs?order=asc&page=420',
+    ],
 
     response: [
       '41de5228692409f2801f1ed84a4fb237fc120b0461b80cb915115f95de4468eb',

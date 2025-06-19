@@ -4,7 +4,8 @@ import { BlockfrostServerError, Responses } from '@blockfrost/blockfrost-js';
 
 export default [
   {
-    testName: 'pools/extended output matches data returned from /pools/:pool_id and /pools/:pool_id/metadata',
+    testName:
+      'pools/extended output matches data returned from /pools/:pool_id and /pools/:pool_id/metadata',
     endpoints: [
       'pools/extended?count=1&page=1',
       'pools/extended?count=1&page=2',
@@ -13,7 +14,9 @@ export default [
     ],
     customTimeout: 120_000,
     customTest: async (endpoint: string, gotClient: Got) => {
-      const poolsExtendedResponse = await gotClient.get(endpoint).json<Responses['pool_list_extended']>();
+      const poolsExtendedResponse = await gotClient
+        .get(endpoint)
+        .json<Responses['pool_list_extended']>();
 
       for (const poolExtendedData of poolsExtendedResponse) {
         const [poolResponse, poolMetadataResponse] = await Promise.all([

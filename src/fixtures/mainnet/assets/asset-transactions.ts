@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'assets/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e/transactions'
+  'assets/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e/transactions',
 );
 
 export default [
@@ -1422,7 +1422,9 @@ export default [
   {
     testName:
       'assets/8654e8b350e298c80d2451beb5ed80fc9eee9f38ce6b039fb8706bc34c4f4253544552/transactions precached response',
-    endpoints: ['assets/8654e8b350e298c80d2451beb5ed80fc9eee9f38ce6b039fb8706bc34c4f4253544552/transactions?page=324'],
+    endpoints: [
+      'assets/8654e8b350e298c80d2451beb5ed80fc9eee9f38ce6b039fb8706bc34c4f4253544552/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: '2ac87e49510911f10b1e5df1430a1517668fef2e322ead36ce818b8f121172ce',
@@ -2029,7 +2031,9 @@ export default [
   {
     testName:
       'assets/4247d5091db82330100904963ab8d0850976c80d3f1b927e052e07bd546f6b68756e/transactions precached response',
-    endpoints: ['assets/4247d5091db82330100904963ab8d0850976c80d3f1b927e052e07bd546f6b68756e/transactions?page=324'],
+    endpoints: [
+      'assets/4247d5091db82330100904963ab8d0850976c80d3f1b927e052e07bd546f6b68756e/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: '4624e05cc131daa686bf4f4915a649faab43f9f5b717ee42178ca04a87ca8c51',
@@ -2636,7 +2640,9 @@ export default [
   {
     testName:
       'assets/5ad8deb64bfec21ad2d96e1270b5873d0c4d0f231b928b4c39eb243561646f736961/transactions precached response',
-    endpoints: ['assets/5ad8deb64bfec21ad2d96e1270b5873d0c4d0f231b928b4c39eb243561646f736961/transactions?page=324'],
+    endpoints: [
+      'assets/5ad8deb64bfec21ad2d96e1270b5873d0c4d0f231b928b4c39eb243561646f736961/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: '6ee5a8e49eddc77ad8bcefe0fd7a10c83d03a50437a0a9e38fad61ac7f888fa5',
@@ -3243,7 +3249,9 @@ export default [
   {
     testName:
       'assets/9a9693a9a37912a5097918f97918d15240c92ab729a0b7c4aa144d7753554e444145/transactions precached response',
-    endpoints: ['assets/9a9693a9a37912a5097918f97918d15240c92ab729a0b7c4aa144d7753554e444145/transactions?page=324'],
+    endpoints: [
+      'assets/9a9693a9a37912a5097918f97918d15240c92ab729a0b7c4aa144d7753554e444145/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: '73ab03088ecf12e21d94fa4b2cae44531bf3937eb7ce503e8eeaacc2cc60f65e',
@@ -3848,8 +3856,11 @@ export default [
     ],
   },
   {
-    testName: 'assets/29d222ce763455e3d7a09a665ce554f00ac89d2e99a1a83d267170c64d494e/transactions precached response',
-    endpoints: ['assets/29d222ce763455e3d7a09a665ce554f00ac89d2e99a1a83d267170c64d494e/transactions?page=324'],
+    testName:
+      'assets/29d222ce763455e3d7a09a665ce554f00ac89d2e99a1a83d267170c64d494e/transactions precached response',
+    endpoints: [
+      'assets/29d222ce763455e3d7a09a665ce554f00ac89d2e99a1a83d267170c64d494e/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: '1cd12d23f3664ac8a3f5bdd92a9d6e145894338408ae6fa34fef38e32c5319f9',
@@ -4456,7 +4467,9 @@ export default [
   {
     testName:
       'assets/afc910d7a306d20c12903979d4935ae4307241d03245743548e767834153484942/transactions precached response',
-    endpoints: ['assets/afc910d7a306d20c12903979d4935ae4307241d03245743548e767834153484942/transactions?page=324'],
+    endpoints: [
+      'assets/afc910d7a306d20c12903979d4935ae4307241d03245743548e767834153484942/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: 'ac69f120bbb4eec437e7e52e9a3b871d4c607309204851269100b6109eaebbac',
@@ -6281,7 +6294,9 @@ export default [
   {
     testName:
       'assets/6954264b15bc92d6d592febeac84f14645e1ed46ca5ebb9acdb5c15f5354524950/transactions precached response',
-    endpoints: ['assets/6954264b15bc92d6d592febeac84f14645e1ed46ca5ebb9acdb5c15f5354524950/transactions?page=324'],
+    endpoints: [
+      'assets/6954264b15bc92d6d592febeac84f14645e1ed46ca5ebb9acdb5c15f5354524950/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: 'd6dda5ed948a0f7a02b328785609628fe35787c30f24ddade584108e4e0f9e44',
@@ -7495,8 +7510,11 @@ export default [
     ],
   },
   {
-    testName: 'assets/a4da8764a57e66a0085b5bfcde96c89b798d92ee83a75f59237e375b46495245/transactions precached response',
-    endpoints: ['assets/a4da8764a57e66a0085b5bfcde96c89b798d92ee83a75f59237e375b46495245/transactions?page=324'],
+    testName:
+      'assets/a4da8764a57e66a0085b5bfcde96c89b798d92ee83a75f59237e375b46495245/transactions precached response',
+    endpoints: [
+      'assets/a4da8764a57e66a0085b5bfcde96c89b798d92ee83a75f59237e375b46495245/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: '8b2901333c3fe9282f02ddc5bbdbbb7d829637a4e5e11f93ea1d3430e9d97b20',
@@ -8103,7 +8121,9 @@ export default [
   {
     testName:
       'assets/2afb448ef716bfbed1dcb676102194c3009bee5399e93b90def9db6a4249534f4e/transactions precached response',
-    endpoints: ['assets/2afb448ef716bfbed1dcb676102194c3009bee5399e93b90def9db6a4249534f4e/transactions?page=324'],
+    endpoints: [
+      'assets/2afb448ef716bfbed1dcb676102194c3009bee5399e93b90def9db6a4249534f4e/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: 'af7e53ee290ad1e010358b344bc0260b107b18d7e15c5e1c8a2739d10711c7e8',
@@ -8708,9 +8728,12 @@ export default [
     ],
   },
   {
-    testName: 'assets/1a71dc14baa0b4fcfb34464adc6656d0e562571e2ac1bc990c9ce5f6574f4c46/transactions precached response',
+    testName:
+      'assets/1a71dc14baa0b4fcfb34464adc6656d0e562571e2ac1bc990c9ce5f6574f4c46/transactions precached response',
 
-    endpoints: ['assets/1a71dc14baa0b4fcfb34464adc6656d0e562571e2ac1bc990c9ce5f6574f4c46/transactions?page=324'],
+    endpoints: [
+      'assets/1a71dc14baa0b4fcfb34464adc6656d0e562571e2ac1bc990c9ce5f6574f4c46/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: 'b508dbbe943580651bb35a48f745694b77350222f14255fc5ccbc157f6f7a4ff',
@@ -9318,7 +9341,9 @@ export default [
     testName:
       'assets/2d7444cf9e317a12e3eb72bf424fd2a0c8fbafedf10e20bfdb4ad8ab434845444441/transactions precached response',
 
-    endpoints: ['assets/2d7444cf9e317a12e3eb72bf424fd2a0c8fbafedf10e20bfdb4ad8ab434845444441/transactions?page=324'],
+    endpoints: [
+      'assets/2d7444cf9e317a12e3eb72bf424fd2a0c8fbafedf10e20bfdb4ad8ab434845444441/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: 'dfa65d4a64e00493b0ed065156f667ca9e9e1a934479bb4ec1b0eff5e2c0cf95',
@@ -9923,9 +9948,12 @@ export default [
     ],
   },
   {
-    testName: 'assets/544571c086d0e5c5022aca9717dd0f438e21190abb48f37b3ae129f047524f57/transactions precached response',
+    testName:
+      'assets/544571c086d0e5c5022aca9717dd0f438e21190abb48f37b3ae129f047524f57/transactions precached response',
 
-    endpoints: ['assets/544571c086d0e5c5022aca9717dd0f438e21190abb48f37b3ae129f047524f57/transactions?page=324'],
+    endpoints: [
+      'assets/544571c086d0e5c5022aca9717dd0f438e21190abb48f37b3ae129f047524f57/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: '058dd67180b4f991292fe6b9eddbf2d752289c7e9d46eca65ac5708296b262e4',
@@ -11753,7 +11781,9 @@ export default [
     testName:
       'assets/884892bcdc360bcef87d6b3f806e7f9cd5ac30d999d49970e7a903ae5041564941/transactions precached response',
 
-    endpoints: ['assets/884892bcdc360bcef87d6b3f806e7f9cd5ac30d999d49970e7a903ae5041564941/transactions?page=324'],
+    endpoints: [
+      'assets/884892bcdc360bcef87d6b3f806e7f9cd5ac30d999d49970e7a903ae5041564941/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: 'c44dd9070e0377819e04b9bfb640963511595b426d820c0bc0ed348231b6de1c',
@@ -12358,9 +12388,12 @@ export default [
     ],
   },
   {
-    testName: 'assets/b7c783f6304eddbdf8f0dece4715d63cb9f453be89d97c8fba155d5752455349/transactions precached response',
+    testName:
+      'assets/b7c783f6304eddbdf8f0dece4715d63cb9f453be89d97c8fba155d5752455349/transactions precached response',
 
-    endpoints: ['assets/b7c783f6304eddbdf8f0dece4715d63cb9f453be89d97c8fba155d5752455349/transactions?page=324'],
+    endpoints: [
+      'assets/b7c783f6304eddbdf8f0dece4715d63cb9f453be89d97c8fba155d5752455349/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: '8a9e41305a69ef96b238cc53201abb1483dfea69ab381e2d27b238d9993c2fd0',
@@ -12965,9 +12998,12 @@ export default [
     ],
   },
   {
-    testName: 'assets/f28f457472e539dc75e1598a2beddf49ce5a717998c708f05f5de61044454653/transactions precached response',
+    testName:
+      'assets/f28f457472e539dc75e1598a2beddf49ce5a717998c708f05f5de61044454653/transactions precached response',
 
-    endpoints: ['assets/f28f457472e539dc75e1598a2beddf49ce5a717998c708f05f5de61044454653/transactions?page=324'],
+    endpoints: [
+      'assets/f28f457472e539dc75e1598a2beddf49ce5a717998c708f05f5de61044454653/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: 'cb3f78c81774e5fb16c2f2ae31c2175595dd361babddd10908af2269eec47357',
@@ -13572,9 +13608,12 @@ export default [
     ],
   },
   {
-    testName: 'assets/6ac8ef33b510ec004fe11585f7c5a9f0c07f0c23428ab4f29c1d7d104d454c44/transactions precached response',
+    testName:
+      'assets/6ac8ef33b510ec004fe11585f7c5a9f0c07f0c23428ab4f29c1d7d104d454c44/transactions precached response',
 
-    endpoints: ['assets/6ac8ef33b510ec004fe11585f7c5a9f0c07f0c23428ab4f29c1d7d104d454c44/transactions?page=324'],
+    endpoints: [
+      'assets/6ac8ef33b510ec004fe11585f7c5a9f0c07f0c23428ab4f29c1d7d104d454c44/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: 'b401f203805e99c018293b226e406a9712cee105c6fb3fd50ec7ec7668e0f593',
@@ -14179,9 +14218,12 @@ export default [
     ],
   },
   {
-    testName: 'assets/ff97c85de383ebf0b047667ef23c697967719def58d380caf7f04b64534f554c/transactions precached response',
+    testName:
+      'assets/ff97c85de383ebf0b047667ef23c697967719def58d380caf7f04b64534f554c/transactions precached response',
 
-    endpoints: ['assets/ff97c85de383ebf0b047667ef23c697967719def58d380caf7f04b64534f554c/transactions?page=324'],
+    endpoints: [
+      'assets/ff97c85de383ebf0b047667ef23c697967719def58d380caf7f04b64534f554c/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: '7cf4b45c56ea484c82fdd3e7377d69514a63c561bd824da48a5941246c4ec2f0',
@@ -14789,7 +14831,9 @@ export default [
     testName:
       'assets/4fd0d998dc0700ca6ef89fafff05fbf523a3a25c1fc8314bf7e4d1c247726f777468/transactions precached response',
 
-    endpoints: ['assets/4fd0d998dc0700ca6ef89fafff05fbf523a3a25c1fc8314bf7e4d1c247726f777468/transactions?page=324'],
+    endpoints: [
+      'assets/4fd0d998dc0700ca6ef89fafff05fbf523a3a25c1fc8314bf7e4d1c247726f777468/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: 'f7af4e89112d1cf57f5a94dbdc6b99b2a63c2156aa5d3c2c780750c4e13b0d9a',
@@ -15397,7 +15441,9 @@ export default [
     testName:
       'assets/641f0571d02b45b868ac1c479fc8118c5be6744ec3d2c5e13bd888b65a4f4d424945/transactions precached response',
 
-    endpoints: ['assets/641f0571d02b45b868ac1c479fc8118c5be6744ec3d2c5e13bd888b65a4f4d424945/transactions?page=324'],
+    endpoints: [
+      'assets/641f0571d02b45b868ac1c479fc8118c5be6744ec3d2c5e13bd888b65a4f4d424945/transactions?page=324',
+    ],
     response: [
       {
         tx_hash: '76de7451ab7d269da9b549de0ae9e913524048cbdac212aa4d10ffbe798d19d0',

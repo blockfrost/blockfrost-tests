@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595f4c50/txs'
+  'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595f4c50/txs',
 );
 
 export default [

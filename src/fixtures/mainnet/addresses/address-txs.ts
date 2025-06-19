@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'addresses/addr1q904hvj3tcr9cendlrm6y4fhcy34tgezlqn92z7z4lwkzczvqdpz4hpzh09mr3360akg0y9wss24hhvfhtkp2fjh65cs7q4z89/txs'
+  'addresses/addr1q904hvj3tcr9cendlrm6y4fhcy34tgezlqn92z7z4lwkzczvqdpz4hpzh09mr3360akg0y9wss24hhvfhtkp2fjh65cs7q4z89/txs',
 );
 
 export default [
@@ -39,7 +39,9 @@ export default [
   {
     testName: 'addresses/:address/txs generic payment_cred 1',
 
-    endpoints: ['addresses/addr_vkh15ew2tzjwn364l2pszu7j5h9w63v2crrnl97m074w9elrk6zy2tc/txs?order=asc&page=42000'],
+    endpoints: [
+      'addresses/addr_vkh15ew2tzjwn364l2pszu7j5h9w63v2crrnl97m074w9elrk6zy2tc/txs?order=asc&page=42000',
+    ],
     response: [
       '815e383c4c44458433940ec93b7d0d0b6db9f796d327bba2c9f98e02effae048',
       '83ee67e9ef6ef8529beb5d6471677c98ece3ad250d45f078dffc4520d5f81383',

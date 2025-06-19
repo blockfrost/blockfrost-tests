@@ -1,7 +1,7 @@
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'addresses/addr_test1wr623ag5vs3sz0gxlwnskemuqujssxvpstk7ayt48729ltsa47uze/txs'
+  'addresses/addr_test1wr623ag5vs3sz0gxlwnskemuqujssxvpstk7ayt48729ltsa47uze/txs',
 );
 
 export default [

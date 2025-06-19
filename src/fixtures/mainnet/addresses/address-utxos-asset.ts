@@ -1,8 +1,13 @@
-import { error_404, error_400_assets, error_400_addresses, error_invalid_path } from '../../errors/index.js';
+import {
+  error_404,
+  error_400_assets,
+  error_400_addresses,
+  error_invalid_path,
+} from '../../errors/index.js';
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
-  'addresses/addr1qxcdc0jacmjcvz8rzc26ppntl03mdqtav6qa749d6wczckmswj8ngt9puck7f0cqxzsfe62un6ln88yy8c8tguz8twmq64snl8/utxos/asset1stonks'
+  'addresses/addr1qxcdc0jacmjcvz8rzc26ppntl03mdqtav6qa749d6wczckmswj8ngt9puck7f0cqxzsfe62un6ln88yy8c8tguz8twmq64snl8/utxos/asset1stonks',
 );
 
 export default [
@@ -23,7 +28,8 @@ export default [
     response: error_400_addresses,
   },
   {
-    testName: 'addresses/:address/utxos/:asset - valid not on-chain address with valid not on-chain asset ',
+    testName:
+      'addresses/:address/utxos/:asset - valid not on-chain address with valid not on-chain asset ',
 
     response: error_404,
     endpoints: [
@@ -67,7 +73,8 @@ export default [
     response: [],
   },
   {
-    testName: 'addresses/:address/utxos/:asset - valid on-chain address with valid not on-chain asset',
+    testName:
+      'addresses/:address/utxos/:asset - valid on-chain address with valid not on-chain asset',
 
     endpoints: [
       'addresses/addr1qx59tsna9g8gmlr57y342900ffxuc66asrugca9detrzg7medw45r6kf23ktzztc6n8jud9j0nm3qq5sjpmmgalu7jssjmpj2d/utxos/f4988f549728dc76b58d7677849943cafee5385dc67e6c25f6aa901e506978656c54696c653235',

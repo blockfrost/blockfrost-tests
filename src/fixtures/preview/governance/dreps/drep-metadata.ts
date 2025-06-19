@@ -2,7 +2,9 @@ export default [
   {
     testName: 'governance drep metadata',
 
-    endpoints: ['governance/dreps/drep1yfzcnn53dd4t4xd225cnvj4zvg7huz578s6llln8qzasapsx5pvjs/metadata'],
+    endpoints: [
+      'governance/dreps/drep1yfzcnn53dd4t4xd225cnvj4zvg7huz578s6llln8qzasapsx5pvjs/metadata',
+    ],
     response: {
       drep_id: 'drep1yfzcnn53dd4t4xd225cnvj4zvg7huz578s6llln8qzasapsx5pvjs',
       hex: '224589ce916b6aba99aa5531364aa2623d7e0a9e3c35fffe6700bb0e86',
