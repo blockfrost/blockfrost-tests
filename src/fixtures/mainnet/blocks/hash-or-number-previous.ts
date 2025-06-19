@@ -1,5 +1,5 @@
 import { expect } from 'vitest';
-import { getPaginationFixtures } from '../../../utils.js';
+import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
   'blocks/f74fe59538d1c3a68842d0072e3aa68818e681d0ba45fd993a8bc9051fc4af3a/previous'

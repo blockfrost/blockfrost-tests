@@ -1,4 +1,4 @@
-import { getPaginationFixtures } from '../../../../utils.js';
+import { getPaginationFixtures } from '../../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
   'governance/proposals/e61f151fcef9e99dff5c705f8d5de18891f8d1d92d69fef5ff608d2c29a7c133/0/votes'

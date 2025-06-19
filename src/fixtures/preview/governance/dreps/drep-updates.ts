@@ -1,4 +1,4 @@
-import { getPaginationFixtures } from '../../../../utils.js';
+import { getPaginationFixtures } from '../../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
   'governance/dreps/drep1rphr974gpgngzqujlknd2kw8a4rjrfjuu8yafme7rjrmg443jff/updates'

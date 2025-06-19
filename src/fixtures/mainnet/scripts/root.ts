@@ -1,4 +1,4 @@
-import { getPaginationFixtures } from '../../../utils.js';
+import { getPaginationFixtures } from '../../../index.js';
 import { expect } from 'vitest';
 
 const paginationFixtures = getPaginationFixtures('scripts');

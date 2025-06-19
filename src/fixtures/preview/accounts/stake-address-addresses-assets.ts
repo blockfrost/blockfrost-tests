@@ -1,5 +1,5 @@
 import { error_400_accounts, error_404 } from '../../errors/index.js';
-import { getPaginationFixtures } from '../../../utils.js';
+import { getPaginationFixtures } from '../../../index.js';
 
 const bf_stake_address = 'stake_test1uq70zpxr7jdqxdlj895x9lvnwn9lrcknwpx8cswlld7x76gtzvrjp';
 

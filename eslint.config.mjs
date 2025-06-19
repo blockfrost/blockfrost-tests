@@ -1,3 +1,5 @@
+// @ts-check
+
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import prettierConfig from 'eslint-config-prettier';
@@ -9,8 +11,8 @@ export default tseslint.config(
   unicorn.configs['flat/recommended'],
   prettierConfig,
   {
-    ignores: ['lib', 'node_modules', '.eslintrc.js', '.yarn/**', '.yarn'],
-    files: ['src/**/*.ts'],
+    ignores: ['lib', 'node_modules', '.eslintrc.js', 'openapi.ts', '.yarn/**', '.yarn'],
+
     rules: {
       'no-console': 'off',
       'no-extra-boolean-cast': 'off',
@@ -20,12 +22,12 @@ export default tseslint.config(
       'unicorn/prefer-module': 0,
       'unicorn/prefer-string-raw': 0,
       'unicorn/no-zero-fractions': 0,
-      'unicorn/no-null': 0,
       'unicorn/numeric-separators-style': 0,
       'unicorn/prefer-node-protocol': 0,
       'unicorn/prefer-json-parse-buffer': 0,
       'unicorn/no-process-exit': 0,
       'unicorn/prefer-ternary': 0,
+      'unicorn/no-null': 'off',
       'unicorn/prevent-abbreviations': [
         'error',
         {
@@ -38,5 +40,5 @@ export default tseslint.config(
         },
       ],
     },
-  }
+  },
 );

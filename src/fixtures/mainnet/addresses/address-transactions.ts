@@ -1,4 +1,4 @@
-import { getPaginationFixtures } from '../../../utils.js';
+import { getPaginationFixtures } from '../../../index.js';
 import { error_400_from_to } from '../../errors/index.js';
 
 const paginationFixtures = getPaginationFixtures(

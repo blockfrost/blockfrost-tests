@@ -1,4 +1,4 @@
-import { getPaginationFixtures } from '../../../utils.js';
+import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
   'scripts/c22560ac64be051102d6d1cfe5b9b82eb6af4f00dd3806e5cd82e837/redeemers'

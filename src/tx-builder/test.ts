@@ -1,7 +1,7 @@
 import { expect } from 'vitest';
 import { BlockFrostAPI } from '@blockfrost/blockfrost-js';
 import { buildTx, Network, waitForTx } from './index.js';
-import { sleep } from '../utils.js';
+import { sleep } from '../index.js';
 
 export const submitAndMempoolTest = async (network: Network) => {
   let blockfrostClient: BlockFrostAPI;
@@ -38,7 +38,9 @@ export const submitAndMempoolTest = async (network: Network) => {
     block_time: expect.toBeCurrentTimestamp(),
     slot: expect.any(Number),
     index: expect.toBeInRange(0, 300),
-    output_amount: expect.arrayContaining([{ quantity: expect.toBeAdaQuantity(), unit: expect.any(String) }]),
+    output_amount: expect.arrayContaining([
+      { quantity: expect.toBeAdaQuantity(), unit: expect.any(String) },
+    ]),
     fees: signedTxJson.body.fee,
     deposit: '0',
     size: expect.any(Number),

@@ -8,7 +8,7 @@
   "scripts": {
     "build": "yarn clean && tsc",
     "clean": "rimraf lib",
-    "lint": "eslint -c eslint.config.mjs",
+    "lint": "eslint",
     "test:mainnet": "NETWORK=mainnet vitest run -c ./vitest.config.integration.ts",
     "test:preprod": "NETWORK=preprod vitest run -c ./vitest.config.integration.ts",
     "test:preview": "NETWORK=preview vitest run -c ./vitest.config.integration.ts",
@@ -58,5 +58,6 @@
   },
   "engines": {
     "node": ">=20"
-  }
+  },
+  "packageManager": "yarn@4.9.2"
 }

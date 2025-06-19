@@ -1,5 +1,5 @@
 import { error_400_epochs } from '../../errors/index.js';
-import { getPaginationFixtures } from '../../../utils.js';
+import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures('epochs/224/previous').filter(({ type }) => type !== 'order');
 

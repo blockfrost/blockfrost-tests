@@ -1,5 +1,5 @@
 import { error_400_assets, error_404 } from '../../errors/index.js';
-import { getPaginationFixtures } from '../../../utils.js';
+import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
   'assets/e74066b78958ebe744dfdd9157141f515453fd213d94ce2d66c073c5707261736961746b6f/addresses'

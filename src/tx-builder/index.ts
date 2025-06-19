@@ -7,7 +7,7 @@ import { composeTransaction } from './helpers/compose-transaction.js';
 import { signTransaction } from './helpers/sign-transaction.js';
 import { deriveAddressPrvKey, mnemonicToPrivateKey } from './helpers/key.js';
 import { UTXO } from './types/index.js';
-import { sleep } from '../utils.js';
+import { sleep } from '../index.js';
 
 // BIP39 mnemonic (seed) from which we will generate address to retrieve utxo from and private key used for signing the transaction
 const MNEMONIC: string = process.env.SUBMIT_MNEMONIC || '';
@@ -31,7 +31,7 @@ export const buildTx = async (blockfrostClient: BlockFrostAPI, _network: Network
     bip32PrvKey,
     network,
     // prod/dev envs use different address to isolate utxo sets
-    environment === 'prod' ? 0 : 1
+    environment === 'prod' ? 0 : 1,
   );
 
   // Retrieve protocol parameters
@@ -53,7 +53,8 @@ export const buildTx = async (blockfrostClient: BlockFrostAPI, _network: Network
   }
 
   const hasLowBalance =
-    utxo.length === 1 && BigInt(utxo.at(0)?.amount.find(a => a.unit === 'lovelace')?.quantity ?? '0') < 2000000;
+    utxo.length === 1 &&
+    BigInt(utxo.at(0)?.amount.find(a => a.unit === 'lovelace')?.quantity ?? '0') < 2000000;
 
   if (utxo.length === 0 || hasLowBalance) {
     throw new Error(`You should send ADA to ${address} to have enough funds to sent a transaction`);

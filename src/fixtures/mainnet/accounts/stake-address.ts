@@ -1,5 +1,5 @@
 import { expect } from 'vitest';
-import { getPaginationFixtures } from '../../../utils.js';
+import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
   'accounts/stake1u9fzg77vrgfqlplkjqe9hntdcvsurpvxd60yp2fhn73002qsv9pdk/rewards'
@@ -209,7 +209,8 @@ export default [
     },
   },
   {
-    testName: 'accounts/:stake_address when DRep is retired all delegators to that DRep should have their drep_id cleared.',
+    testName:
+      'accounts/:stake_address when DRep is retired all delegators to that DRep should have their drep_id cleared.',
     endpoints: ['accounts/stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4'],
     response: {
       stake_address: 'stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4',
