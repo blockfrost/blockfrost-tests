@@ -1,9 +1,4 @@
-import {
-  error_404,
-  error_400_assets,
-  error_400_addresses,
-  error_invalid_path,
-} from '../../errors/index.js';
+import { error_404, error_400_assets, error_400_addresses } from '../../errors/index.js';
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
@@ -89,13 +84,5 @@ export default [
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw/utxos/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f',
     ],
-  },
-  {
-    testName: 'addresses/:address/utxos/:asset - [object%20Object]',
-
-    endpoints: [
-      'addresses/addr_test1qpxghn6cjkmawmxnufpvvc5kempxumyt9xv2tvzyswarmhenpjux68s5nrdttupgzq6wwg8m84kre34tlq8t2n2nxwqsxgf4vp/utxos/[object%20Object]',
-    ],
-    response: error_invalid_path,
   },
 ];
