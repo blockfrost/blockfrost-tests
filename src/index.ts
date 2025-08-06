@@ -295,8 +295,8 @@ export const generateTest = (fixture: Fixture, endpoint: string) => {
       } catch (error: any) {
         if (!error.response) {
           // non backend error
-          // console.log('Thrown unexpected error', error);
-          // throw error;
+          console.log('Thrown unexpected error', error);
+          throw error;
         }
 
         if (fixture.customExpect) {
