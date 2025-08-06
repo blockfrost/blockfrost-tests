@@ -1,6 +1,6 @@
 import { expect } from 'vitest';
 import * as jestExtendedMatchers from 'jest-extended';
-import { getInstance } from './index.js';
+import { getInitInstance } from './index.js';
 import {
   toBeBlake2b256Hash,
   toBePoolBech32,
@@ -29,7 +29,7 @@ const setCurrentBlockchainState = async () => {
     return;
   }
 
-  const client = getInstance();
+  const client = getInitInstance();
 
   try {
     const block = await client.get('blocks/latest').json();
