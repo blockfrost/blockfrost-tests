@@ -84,6 +84,33 @@ export const getInstance = (clientOptions?: ExtendOptions): Got => {
   });
 };
 
+export const getBlockfrostProductionInstance = (): Got => {
+  let initPrefixUrl;
+
+  if (!projectId) {
+    throw new Error('projectId is required');
+  }
+
+  if (projectId.startsWith('preview')) {
+    initPrefixUrl = 'https://cardano-preview.blockfrost.io/api/v0';
+  } else if (projectId.startsWith('preprod')) {
+    initPrefixUrl = 'https://cardano-preprod.blockfrost.io/api/v0';
+  } else if (projectId.startsWith('mainnet')) {
+    initPrefixUrl = 'https://cardano-mainnet.blockfrost.io/api/v0';
+  } else {
+    throw new Error(`Unsupported projectId prefix: ${projectId}`);
+  }
+
+  return got.extend({
+    responseType: 'json',
+    prefixUrl: initPrefixUrl,
+    https: {
+      rejectUnauthorized: false,
+    },
+    headers: { project_id: projectId },
+  });
+};
+
 const skippedTests: { endpoint: string; reason: string }[] = [];
 
 export const shouldRunTest = (fixture: Fixture) => {

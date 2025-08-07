@@ -1,6 +1,6 @@
 import { expect } from 'vitest';
 import * as jestExtendedMatchers from 'jest-extended';
-import { getInstance } from './index.js';
+import { getBlockfrostProductionInstance, getInstance } from './index.js';
 import {
   toBeBlake2b256Hash,
   toBePoolBech32,
@@ -21,6 +21,14 @@ import {
   toBeInRange,
   toBeStakeAddress,
 } from './matchers.js';
+import { Got } from 'got';
+
+const fetchBlockchainState = async (clientInstance: Got) => {
+  const block = await clientInstance.get('blocks/latest').json();
+  const epoch = await clientInstance.get('epochs/latest').json();
+
+  return { block, epoch };
+};
 
 const setCurrentBlockchainState = async () => {
   const CARDANO_NETWORKS = ['mainnet', 'preprod', 'preview'];
@@ -30,21 +38,39 @@ const setCurrentBlockchainState = async () => {
   }
 
   const client = getInstance();
+  const fallbackClient = getBlockfrostProductionInstance();
 
   try {
-    const block = await client.get('blocks/latest').json();
-    const epoch = await client.get('epochs/latest').json();
+    // primary client
+    const { block, epoch } = await fetchBlockchainState(client);
 
-    // console.log(`[SETUP] Setting blockchain state to`, block, epoch);
+    console.log(`[SETUP] Setting blockchain state to`, block, epoch);
+
     globalThis.latest = {
       // @ts-expect-error untyped response
       block,
       // @ts-expect-error untyped response
       epoch,
     };
-  } catch (error) {
-    console.error(`[SETUP] Error while retrieving initial blockchain state.`);
-    throw error;
+  } catch (err) {
+    console.error(`[SETUP] Primary client failed: ${err}. Attempting fallback client...`);
+
+    try {
+      // fallback client
+      const { block, epoch } = await fetchBlockchainState(fallbackClient);
+
+      console.log(`[SETUP] Fallback succeeded. Setting blockchain state to`, block, epoch);
+
+      globalThis.latest = {
+        // @ts-expect-error untyped response
+        block,
+        // @ts-expect-error untyped response
+        epoch,
+      };
+    } catch (err) {
+      console.error(`[SETUP] Fallback client also failed: ${err}`);
+      throw new Error('Both primary and fallback clients failed to retrieve blockchain state.');
+    }
   }
 };
 
