@@ -84,7 +84,7 @@ export const getInstance = (clientOptions?: ExtendOptions): Got => {
   });
 };
 
-export const getInitInstance = (): Got => {
+export const getBlockfrostProductionInstance = (): Got => {
   let initPrefixUrl;
 
   if (!projectId) {
