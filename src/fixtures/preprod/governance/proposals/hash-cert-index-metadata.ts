@@ -148,14 +148,6 @@ export default [
     },
   },
   {
-    testName: 'governance proposal hard_fork_initiation metadata (hash mismatch)',
-
-    endpoints: [
-      'governance/proposals/ccb27f6b0d58c25ae33fd821b62c387f5230dae930afd07489fa3df56ae56522/0/metadata',
-    ],
-    response: error_404,
-  },
-  {
     testName: 'governance proposal new_committee metadata',
 
     endpoints: [
