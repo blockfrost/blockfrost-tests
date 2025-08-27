@@ -7,7 +7,9 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'assets-asset-txs-djed-many-txs_666025dde76b',
     testName: 'assets/:asset/txs - DJED many txs',
+
     endpoints: [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/txs',
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/txs?order=asc',
@@ -41,7 +43,9 @@ export default [
     ],
   },
   {
+    id: 'assets-asset-txs-djed-many-txs-desc_9ea843e5fd14',
     testName: 'assets/:asset/txs - DJED many txs DESC',
+
     endpoints: [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/txs?count=23&page=1&order=desc',
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/txs?order=desc',

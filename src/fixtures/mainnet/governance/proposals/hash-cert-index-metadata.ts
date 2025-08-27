@@ -2,29 +2,36 @@ import { error_404 } from '../../../errors/index.js';
 
 export default [
   {
+    id: 'governance-proposal-info-action-hard-fork-initiation-metadata_4a3bed1f5afd',
     testName: 'governance proposal info_action, hard_fork_initiation metadata',
 
     endpoints: [
       'governance/proposals/15f82a365bdee483a4b03873a40d3829cc88c048ff3703e11bd01dd9e035c916/0/metadata',
       'governance/proposals/0b19476e40bbbb5e1e8ce153523762e2b6859e7ecacbaf06eae0ee6a447e79b9/0/metadata',
     ],
+
     response: error_404,
   },
   {
+    id: 'governance-proposal-hard-fork-initiation-metadata-hash-mismatch-dbsync-bug_dd74ac9360de',
+
     // dbsync cant fetch the metadata for this proposal due to  https://github.com/IntersectMBO/cardano-db-sync/issues/1928
     testName: 'governance proposal hard_fork_initiation metadata (hash mismatch, dbsync bug)',
 
     endpoints: [
       'governance/proposals/0b19476e40bbbb5e1e8ce153523762e2b6859e7ecacbaf06eae0ee6a447e79b9/0/metadata',
     ],
+
     response: error_404,
   },
   {
+    id: 'governance-proposal-parameter-change-metadata_4bc0199a3f0e',
     testName: 'governance proposal parameter_change metadata',
 
     endpoints: [
       'governance/proposals/b2a591ac219ce6dcca5847e0248015209c7cb0436aa6bd6863d0c1f152a60bc5/0/metadata',
     ],
+
     response: {
       tx_hash: 'b2a591ac219ce6dcca5847e0248015209c7cb0436aa6bd6863d0c1f152a60bc5',
       cert_index: 0,

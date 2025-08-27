@@ -7,8 +7,10 @@ const paginationFixtures = getPaginationFixtures('epochs/242/stakes').filter(
 export default [
   ...paginationFixtures,
   {
+    id: 'epochs-number-stakes-generic-shelley-epoch_c1b766ad325c',
     testName: 'epochs/:number/stakes generic shelley epoch',
     endpoints: ['epochs/242/stakes'],
+
     response: [
       {
         stake_address: 'stake1uyqqqj9kvqnnc4t6qt39nj5sdr5tpae906cejuyjvrhpuvssqn32g',
@@ -513,13 +515,16 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-stakes-queryparams-epochs-w-out-stakes_9f26f0b9454d',
     testName: 'epochs/:number/stakes?queryparams epochs w/out stakes',
     endpoints: ['epochs/207/stakes', 'epochs/208/stakes', 'epochs/209/stakes'],
     response: [],
   },
   {
+    id: 'epochs-number-stakes-queryparams-first-epoch-with-stakes-middle-page_a6f353b554fc',
     testName: 'epochs/:number/stakes?queryparams first epoch with stakes, middle page',
     endpoints: ['epochs/210/stakes?page=100&count=2'],
+
     response: [
       {
         stake_address: 'stake1uyps8fguv8mecqnsgzghtxfvu9f4q2t6q4cwe3uu89rwvhshsmvy3',
@@ -535,8 +540,10 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-stakes-queryparams-first-epoch-with-stakes-last-page_588e7033234f',
     testName: 'epochs/:number/stakes?queryparams first epoch with stakes, last page',
     endpoints: ['epochs/210/stakes?page=174'],
+
     response: [
       {
         stake_address: 'stake1u8l7g4jjew20g0sycd49pd742xat53f2my36xxtsn5jav6cjtm80d',

@@ -8,6 +8,7 @@ const paginanationFixtures = getPaginationFixtures(
 export default [
   ...paginanationFixtures,
   {
+    id: 'addresses-address-utxos-bf-address-without-tokens_4b9a888b247a',
     testName: 'addresses/:address/utxos BF address without tokens',
 
     endpoints: [
@@ -35,6 +36,7 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-utxos-bf-address-with-3-pages-of-utxos-page-1_276c25170af9',
     testName: 'addresses/:address/utxos BF address with 3 pages of utxos, page=1',
 
     endpoints: [
@@ -1246,6 +1248,8 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-utxos-bf-address-with-inline-datum-datums-and-normal-utxo-mixed-asc_00e3b810e763',
+
     testName:
       'addresses/:address/utxos BF address with inline_datum, datums and normal utxo mixed ASC',
 
@@ -1338,6 +1342,8 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-utxos-bf-address-with-inline-datum-datums-and-normal-utxo-mixed-desc_920bb6621c0d',
+
     testName:
       'addresses/:address/utxos BF address with inline_datum, datums and normal utxo mixed DESC',
 
@@ -1430,6 +1436,7 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-utxos-bf-address-with-3-pages-of-utxos-page-3_3b0ac462947b',
     testName: 'addresses/:address/utxos BF address with 3 pages of utxos, page=3',
 
     endpoints: [
@@ -1453,6 +1460,7 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-utxos-bf-address-without-tokens-lovelace-filter_710feb78db8f',
     testName: 'addresses/:address/utxos BF address without tokens (lovelace filter)',
 
     endpoints: [
@@ -1480,12 +1488,14 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-utxos-bf-address-without-tokens-addr-vkh_ca9c524a1ba7',
     testName: 'addresses/:address/utxos BF address without tokens (addr_vkh)',
 
     endpoints: [
       'addresses/addr_test1qpxghn6cjkmawmxnufpvvc5kempxumyt9xv2tvzyswarmhenpjux68s5nrdttupgzq6wwg8m84kre34tlq8t2n2nxwqsxgf4vp/utxos/lovelace',
       'addresses/addr_vkh1fj9u7ky4kltke5lzgtrx99kwcfhxezefnzjmq3yrhg7a7u20s6n/utxos/lovelace',
     ],
+
     response: [
       {
         address:
@@ -1507,6 +1517,7 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-utxos-bf-address-without-tokens_b608ea220acc',
     testName: 'addresses/:address/utxos BF address without tokens',
 
     endpoints: [
@@ -1516,6 +1527,7 @@ export default [
     response: [],
   },
   {
+    id: 'addresses-address-utxos-bf-address-with-some-token-empty_aef1d6caccb0',
     testName: 'addresses/:address/utxos BF address with some token empty',
 
     endpoints: [
@@ -1525,6 +1537,7 @@ export default [
     response: [],
   },
   {
+    id: 'addresses-address-utxos-bf-address-with-some-token-empty_3348fba38678',
     testName: 'addresses/:address/utxos BF address with some token empty ',
 
     endpoints: [
@@ -1534,6 +1547,7 @@ export default [
     response: [],
   },
   {
+    id: 'addresses-address-utxos-bf-address-with-some-token-empty_d5fed93f2466',
     testName: 'addresses/:address/utxos BF address with some token empty',
 
     endpoints: [
@@ -1543,6 +1557,7 @@ export default [
     response: [],
   },
   {
+    id: 'addresses-address-utxos-bf-address-used_2ccb186c8701',
     testName: 'addresses/:address/utxos BF address - used',
 
     endpoints: [
@@ -1591,6 +1606,7 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-utxos-valid-on-chain-address-with-some-txs-0-utxos_aef1d6caccb0',
     testName: 'addresses/:address/utxos  - valid on-chain address with some txs, 0 utxos',
 
     endpoints: [
@@ -1600,20 +1616,22 @@ export default [
     response: [],
   },
   {
+    id: 'addresses-address-utxos-valid-on-chain-payment-cred-with-so3me-txs-0-utxos_271f6d03d1e8',
     testName: 'addresses/:address/utxos  - valid on-chain paymentCred with so3me txs, 0 utxos',
     endpoints: ['addresses/addr_vkh1ly5ld7u763gm5ne40plak5l4fcscr473zp2rke3tttqcwlapwdq/utxos'],
-
     response: [],
   },
   {
+    id: 'addresses-address-utxos-valid-not-on-chain-address_4172c95a0988',
     testName: 'addresses/:address/utxos - valid not on-chain address ',
-
     response: error_404,
+
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw/utxos',
     ],
   },
   {
+    id: 'addresses-address-utxos-bf-address-used-but-now-empty_d95a42a50d66',
     testName: 'addresses/:address/utxos BF address - used but now empty',
 
     endpoints: [
@@ -1628,6 +1646,7 @@ export default [
     response: [],
   },
   {
+    id: 'addresses-address-utxos-bf-address-with-some-token_7f411d1e3542',
     testName: 'addresses/:address/utxos BF address - with some token',
 
     endpoints: [

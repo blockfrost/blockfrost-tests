@@ -1,7 +1,9 @@
 export default [
   {
+    id: 'txs-tx-delegations-shelley-delegations_25bb811a6871',
     testName: 'txs/:tx/delegations - shelley delegations',
     endpoints: ['txs/6091f714ccbb720fcb7db72fad984afe94095f7a5aa9a03879b60fbc35740a97/delegations'],
+
     response: [
       {
         index: 1,
@@ -13,9 +15,13 @@ export default [
     ],
   },
   {
+    id: 'txs-tx-delegations-generic-shelley-with-multiple-delegation-stake-certs-and-pool-updates_5a1bbbcfa271',
+
     testName:
       'txs/:tx/delegations - generic shelley with MULTIPLE delegation, stake certs and pool updates',
+
     endpoints: ['txs/e3ca57e8f323265742a8f4e79ff9af884c9ff8719bd4f7788adaea4c33ba07b6/delegations'],
+
     response: [
       {
         index: 2,
@@ -41,8 +47,10 @@ export default [
     ],
   },
   {
+    id: 'txs-tx-generic-shelley-with-delegations-and-stake-certs_5e4617aa4a90',
     testName: 'txs/:tx - generic shelley with delegations and stake certs',
     endpoints: ['txs/869e0eaeb990d2e4d5b9472f51c46ae114867c72c3526f655a7695a0580b2c12/delegations'],
+
     response: [
       {
         index: 1,

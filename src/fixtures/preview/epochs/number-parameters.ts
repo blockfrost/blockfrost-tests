@@ -2,8 +2,10 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'epochs-number-parameters-epoch-cost-models-plutus-v1_e61ed742ccaa',
     testName: 'epochs/:number/parameters epoch - costModels.PlutusV1',
     endpoints: ['epochs/4/parameters'],
+
     response: {
       epoch: 4,
       min_fee_a: 44,
@@ -247,8 +249,10 @@ export default [
     },
   },
   {
+    id: 'epochs-number-parameters-cost-models-plutus-v2_054b99ebe462',
     testName: 'epochs/:number/parameters - costModels.PlutusV2',
     endpoints: ['epochs/13/parameters'],
+
     response: {
       epoch: 13,
       min_fee_a: 44,
@@ -681,8 +685,10 @@ export default [
     },
   },
   {
+    id: 'epochs-latest-parameters-latest-epoch_a73a0c95ff80',
     testName: 'epochs/latest/parameters - latest epoch',
     endpoints: ['epochs/latest/parameters'],
+
     response: {
       epoch: globalThis.latest.epoch.epoch,
       min_fee_a: 44,

@@ -7,7 +7,9 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'addresses-address-txs-generic-dormant-shelley-address_c9a9236e94d8',
     testName: 'addresses/:address/txs generic dormant shelley address',
+
     endpoints: [
       'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/txs?page=1011&count=6',
       'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/txs?page=1011&count=6&order=asc',
@@ -25,7 +27,9 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-txs-generic-dormant-shelley-address-desc_9af6dc662686',
     testName: 'addresses/:address/txs generic dormant shelley address desc',
+
     endpoints: [
       'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/txs?page=1011&count=99&order=desc',
       'addresses/addr_vkh1c6xg0hkmmplr98yl08lrjpqlswmg636hnjpxvvp48th3zsq296f/txs?page=1011&count=99&order=desc',
@@ -42,7 +46,9 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-txs-generic-payment-cred-1_957944637cb5',
     testName: 'addresses/:address/txs generic payment_cred 1',
+
     endpoints: [
       'addresses/addr_vkh1pjggm5nyjkll8amnrsh4hvjz6zsdvr9knmnlsgtgczls7x9qy3y/txs?order=asc&page=420',
     ],
@@ -151,7 +157,9 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-txs-generic-payment-cred-2_209c6157eb4b',
     testName: 'addresses/:address/txs generic payment_cred 2',
+
     endpoints: [
       'addresses/addr_vkh1pjggm5nyjkll8amnrsh4hvjz6zsdvr9knmnlsgtgczls7x9qy3y/txs?order=asc&page=42000&count=1',
     ],

@@ -1,7 +1,9 @@
 export default [
   {
+    id: 'txs-tx-utxos-alonzo-tx-with-a-script_3fa8648fef52',
     testName: 'txs/:tx/utxos - alonzo tx with a script',
     endpoints: ['txs/7ec5dd9f2fdd33b73786106b95be7737f6de5d53bb5e7b0610d1b9e947474d3c/utxos'],
+
     response: {
       hash: '7ec5dd9f2fdd33b73786106b95be7737f6de5d53bb5e7b0610d1b9e947474d3c',
       inputs: [
@@ -76,8 +78,10 @@ export default [
     },
   },
   {
+    id: 'txs-tx-utxos-generic-shelley-tx-with-huge-size_217455238dcd',
     testName: 'txs/:tx/utxos - generic shelley tx with huge size',
     endpoints: ['txs/28172ea876c3d1e691284e5179fae2feb3e69d7d41e43f8023dc380115741026/utxos'],
+
     response: {
       hash: '28172ea876c3d1e691284e5179fae2feb3e69d7d41e43f8023dc380115741026',
       inputs: [
@@ -1445,8 +1449,10 @@ export default [
     },
   },
   {
+    id: 'txs-tx-utxos-byron-dust-tx-with-hacky-address-and-huge-size_7bbc075d4f67',
     testName: 'txs/:tx/utxos - byron dust tx with hacky address and huge size',
     endpoints: ['txs/313223c9f0d09ee287148874f938ecf37fea7bf3c10a5d649522d0f40db1cf71/utxos'],
+
     response: {
       hash: '313223c9f0d09ee287148874f938ecf37fea7bf3c10a5d649522d0f40db1cf71',
       inputs: [
@@ -1490,8 +1496,10 @@ export default [
     },
   },
   {
+    id: 'txs-tx-utxos-byron-block-1-tx-without-inputs_546b00aeeb7f',
     testName: 'txs/:tx/utxos - byron block 1 tx without inputs',
     endpoints: ['txs/927edb96f3386ab91b5f5d85d84cb4253c65b1c2f65fa7df25f81fab1d62987a/utxos'],
+
     response: {
       hash: '927edb96f3386ab91b5f5d85d84cb4253c65b1c2f65fa7df25f81fab1d62987a',
       inputs: [],

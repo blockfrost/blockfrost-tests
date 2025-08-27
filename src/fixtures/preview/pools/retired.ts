@@ -5,8 +5,10 @@ const paginationFixtures = getPaginationFixtures('pools/retired');
 export default [
   ...paginationFixtures,
   {
+    id: 'pools-retired_4e7d74cc2c10',
     testName: 'pools/retired',
     endpoints: ['pools/retired?count=69'],
+
     response: [
       {
         pool_id: 'pool1rwgs2228yeq0rqh8m8r8980vluhksdvtg0tqglfj2vwec2q89kj',
@@ -287,8 +289,10 @@ export default [
     ],
   },
   {
+    id: 'pools-retired-queryparams_bf04317a3c1e',
     testName: 'pools/retired?queryparams',
     endpoints: ['pools/retired?count=2&page=5'],
+
     response: [
       {
         pool_id: 'pool1nptyy2z57uku8w4js6305qtrwvgg7lpz556nhpwwnf62klxxltc',
@@ -301,8 +305,10 @@ export default [
     ],
   },
   {
+    id: 'pools-retired-queryparams_8d86fc0f3450',
     testName: 'pools/retired?queryparams',
     endpoints: ['pools/retired?count=2&page=10'],
+
     response: [
       {
         pool_id: 'pool1uqthfy3jsrd82q067vu8ml8g0w3xr20qp8kv7z0yzrdhqrawkm2',
@@ -316,8 +322,10 @@ export default [
   },
 
   {
+    id: 'pools-retired-queryparams_b9fff6ca8089',
     testName: 'pools/retired?queryparams',
     endpoints: ['pools/retired?page=3&count=3'],
+
     response: [
       {
         pool_id: 'pool1cnd4v7sfev4fj0q0uzs0fr0g4gz8wspqek3zwyusd5cwupe26sp',

@@ -1,10 +1,10 @@
 export default [
   {
+    id: 'accounts-stake-address-generic-dormant-stake-address-with-one-address_5bcbaaea9e59',
     testName: 'accounts/:stake_address generic dormant stake address with one address',
     endpoints: [
       'accounts/stake_test1uprndrzzjwcacy4kzt9u9y2uh8zusqkak6glcphxay472fszzgeyu/addresses',
     ],
-
     response: [
       {
         address:
@@ -13,6 +13,7 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-generic-stake-address-with-zero-addresses_4261465085d4',
     testName: 'accounts/:stake_address generic stake address with zero addresses',
     endpoints: [
       'accounts/stake_test1uzkdwx64sjkt6xxtzye00y3k2m9wn5zultsguadaf4ggmssadyunp/addresses',

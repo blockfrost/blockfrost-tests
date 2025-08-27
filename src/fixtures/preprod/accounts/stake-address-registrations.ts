@@ -1,6 +1,8 @@
 export default [
   {
+    id: 'accounts-stake-address-queryparams-generic-stake-address-registrations_40bbd32ffbe9',
     testName: 'accounts/:stake_address?queryparams generic stake address registrations',
+
     endpoints: [
       'accounts/stake_test1urvp7670m5ec50fz5dekdu5e8pycx62ys2fkuu80m5v823q59qmel/registrations?count=2&page=1',
       'accounts/stake_test1urvp7670m5ec50fz5dekdu5e8pycx62ys2fkuu80m5v823q59qmel/registrations?count=2&page=1&order=asc',

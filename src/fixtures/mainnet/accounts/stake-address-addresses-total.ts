@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'accounts-stake-address-addresses-total-nutcoin-stake-address_94a3d56cc4d5',
     testName: 'accounts/:stake_address/addresses/total nutcoin stake address',
     endpoints: [
       'accounts/stake1u9e45fvvd4ujpc0kka0pnx9zqdvh9wl96nsg6sje0f5hmfq45lrja/addresses/total',

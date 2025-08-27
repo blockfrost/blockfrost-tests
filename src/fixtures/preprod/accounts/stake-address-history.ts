@@ -1,6 +1,8 @@
 export default [
   {
+    id: 'accounts-stake-address-queryparams-generic-stake-address-history_25d0cd7ad069',
     testName: 'accounts/:stake_address?queryparams generic stake address history',
+
     endpoints: [
       'accounts/stake_test1uz55sf04mkd29tehvf4pu95vjhd6e72a50tcycje88jgcysxnh7d8/history?count=3&page=2',
       'accounts/stake_test1uz55sf04mkd29tehvf4pu95vjhd6e72a50tcycje88jgcysxnh7d8/history?count=3&page=2&order=asc',

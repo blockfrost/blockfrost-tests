@@ -7,7 +7,9 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'addresses-address-transactions-generic-dormant-shelley-script-address_f79e61a5d6c1',
     testName: 'addresses/:address/transactions generic dormant shelley script address',
+
     endpoints: [
       'addresses/addr_test1xznnmfk43w5cag3m7e9nnfe0wcsg5lx8afv4u9utjk3zxv9zj64kndceuuncuu2gqklnhjrcadgqjy9gsedww6ktq0hsgr6uxf/transactions?page=40&count=4',
       'addresses/addr_test1xznnmfk43w5cag3m7e9nnfe0wcsg5lx8afv4u9utjk3zxv9zj64kndceuuncuu2gqklnhjrcadgqjy9gsedww6ktq0hsgr6uxf/transactions?page=40&count=4&order=asc',
@@ -43,7 +45,9 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-transactions-generic-dormant-shelley-address_a99f171ad600',
     testName: 'addresses/:address/transactions generic dormant shelley address',
+
     endpoints: [
       'addresses/addr_test1qqge9dt82fkvch0tqr44zf9msc4x70ualsdqmr7s7fhflzmqh5jv6xejejee287zpkfpaqt7yk6fk46xsfppgnece2nqtfhkjt/transactions?page=30&count=5',
       'addresses/addr_test1qqge9dt82fkvch0tqr44zf9msc4x70ualsdqmr7s7fhflzmqh5jv6xejejee287zpkfpaqt7yk6fk46xsfppgnece2nqtfhkjt/transactions?page=30&count=5&order=asc',
@@ -89,11 +93,14 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-transactions-generic-dormant-shelley-address-desc_d8b232d360c4',
     testName: 'addresses/:address/transactions generic dormant shelley address desc',
+
     endpoints: [
       'addresses/addr_test1qqge9dt82fkvch0tqr44zf9msc4x70ualsdqmr7s7fhflzmqh5jv6xejejee287zpkfpaqt7yk6fk46xsfppgnece2nqtfhkjt/transactions?page=30&count=10&order=desc',
       'addresses/addr_vkh1zxft2e6jdnx9m6cqadgjfwux9fhnl80urgxcl58jd60ckt4g3w6/transactions?page=30&count=10&order=desc',
     ],
+
     response: [
       {
         tx_hash: '34b39075581e4c53d3e63ced9996b6c60de564e1b0c3a7898cd71776da42d974',
@@ -158,10 +165,13 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-transactions-generic-payment-cred-1_9ea0048125af',
     testName: 'addresses/:address/transactions generic payment_cred 1',
+
     endpoints: [
       'addresses/addr_vkh1zxft2e6jdnx9m6cqadgjfwux9fhnl80urgxcl58jd60ckt4g3w6/transactions?order=asc&page=5',
     ],
+
     response: [
       {
         tx_hash: 'dc97d7535c077ecf5258a78e8f7060b2dbcd61de987bc4afac3214953a05de74',
@@ -244,10 +254,13 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-transactions-generic-payment-cred-2_3ab7686e48df',
     testName: 'addresses/:address/transactions generic payment_cred 2',
+
     endpoints: [
       'addresses/addr_vkh1zxft2e6jdnx9m6cqadgjfwux9fhnl80urgxcl58jd60ckt4g3w6/transactions?order=asc&page=25&count=1',
     ],
+
     response: [
       {
         tx_hash: 'd82701603c6434c5fee368f50bc79cff07721dba74dd0e3082170e46672e428d',

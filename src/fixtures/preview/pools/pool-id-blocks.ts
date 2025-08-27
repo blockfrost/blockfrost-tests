@@ -7,11 +7,14 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'pools-pool-id-blocks-best-pool_a99202822a8b',
     testName: 'pools/pool_id/blocks - best pool',
+
     endpoints: [
       'pools/pool16h8ugt8k0a4kxa5g6x062zjrgfjc7cehpw0ze8374axlul76932/blocks',
       'pools/d5cfc42cf67f6b637688d19fa50a4342658f63370b9e2c9e3eaf4dfe/blocks',
     ],
+
     response: [
       'c7f8c0289b4298d22d005d78eb1795d45c1217248626a5152758f01668e746b1',
       'a7bb606e3d9db84b34769b8167b0e639f82a92bd0530141b0cb6d2302777d591',
@@ -116,11 +119,14 @@ export default [
     ],
   },
   {
+    id: 'pools-pool-id-blocks-querystring-best-pool_b521c4370a68',
     testName: 'pools/:pool_id/blocks?querystring - best pool',
+
     endpoints: [
       'pools/pool16h8ugt8k0a4kxa5g6x062zjrgfjc7cehpw0ze8374axlul76932/blocks?count=2&page=2',
       'pools/d5cfc42cf67f6b637688d19fa50a4342658f63370b9e2c9e3eaf4dfe/blocks?count=2&page=2',
     ],
+
     response: [
       '00dd00d54a6c3369a7e6dfbd955aa9db047fc5b27a75fb92aaf863171ac5ad42',
       '028de900b48a7144f988c6df0f4eb3021ff54cf549b27df8ee5a9c6d5b810f6c',

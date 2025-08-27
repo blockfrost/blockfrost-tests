@@ -5,9 +5,10 @@ const paginationFixtures = getPaginationFixtures('governance/dreps');
 export default [
   ...paginationFixtures,
   {
+    id: 'governance-proposals_2284f5750494',
     testName: 'governance proposals',
-
     endpoints: ['governance/proposals?count=4'],
+
     response: [
       {
         tx_hash: '15f82a365bdee483a4b03873a40d3829cc88c048ff3703e11bd01dd9e035c916',

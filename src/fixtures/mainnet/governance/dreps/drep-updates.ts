@@ -7,12 +7,14 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'governance-drep-updates_1ea45021225f',
     testName: 'governance drep updates',
 
     endpoints: [
       'governance/dreps/drep14pjm8ytt682wkp4jcegdj2yerkcy9a20xevvp7udlcd0ggjxdud/updates',
       'governance/dreps/drep1y25xtvu3d0gaf6cxktr9pkfgnywmqsh4fum93s8m3hlp4aqj3uqdp/updates', // CIP129 id
     ],
+
     response: [
       {
         tx_hash: '8695cfc5cd1c22cef8eca9673c43894a699946facf48eae4b3cde0b5941bd7f5',
@@ -67,14 +69,14 @@ export default [
     ],
   },
   {
+    id: 'governance-drep-always-abstain-updates_2500cf48ae74',
     testName: 'governance drep_always_abstain updates',
-
     endpoints: ['governance/dreps/drep_always_abstain/updates'],
     response: [],
   },
   {
+    id: 'governance-drep-always-no-confidence-updates_79668a77e7b5',
     testName: 'governance drep_always_no_confidence updates',
-
     endpoints: ['governance/dreps/drep_always_no_confidence/updates'],
     response: [],
   },

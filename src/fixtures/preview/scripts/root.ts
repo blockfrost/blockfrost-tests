@@ -5,9 +5,10 @@ const paginationFixtures = getPaginationFixtures('scripts');
 export default [
   ...paginationFixtures,
   {
+    id: 'scripts-root_ac4202b4ef20',
     testName: 'scripts root',
-
     endpoints: ['scripts'],
+
     response: [
       {
         script_hash: '6c969320597b755454ff3653ad09725d590c570827a129aeb4385526',

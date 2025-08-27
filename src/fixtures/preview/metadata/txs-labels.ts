@@ -6,9 +6,10 @@ const paginationFixtures = getPaginationFixtures('metadata/txs/labels');
 export default [
   ...paginationFixtures,
   {
+    id: 'metadata-list-of-all-labels-with-queryparams_d8757b303f18',
     testName: 'metadata list of all labels with queryparams',
-
     endpoints: ['metadata/txs/labels?page=44&count=2'],
+
     response: [
       {
         label: '101',
@@ -23,6 +24,7 @@ export default [
     ],
   },
   {
+    id: 'metadata-txs-labels_f1096e876143',
     testName: 'metadata/txs/labels',
     endpoints: ['metadata/txs/labels'],
 
@@ -138,8 +140,8 @@ export default [
     ],
   },
   {
+    id: 'metadata-txs-labels_d46b0e99581a',
     testName: 'metadata/txs/labels',
-
     endpoints: ['metadata/txs/labels?page=694269'],
     response: [],
   },

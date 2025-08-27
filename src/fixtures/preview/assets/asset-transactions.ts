@@ -7,7 +7,9 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'assets-asset-transactions-djed_b4967ac4c1f5',
     testName: 'assets/:asset/transactions - DJED',
+
     endpoints: [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/transactions',
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/transactions?order=asc',
@@ -156,7 +158,9 @@ export default [
     ],
   },
   {
+    id: 'assets-asset-transactions-djed-desc_716b44e3e2ad',
     testName: 'assets/:asset/transactions - DJED desc',
+
     endpoints: [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/transactions?order=desc',
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/transactions?count=100&page=1&order=desc',
@@ -304,7 +308,9 @@ export default [
     ],
   },
   {
+    id: 'assets-asset-transactions-djed-pagination_485d357e2765',
     testName: 'assets/:asset/transactions - DJED pagination',
+
     endpoints: [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/transactions?count=3&page=1',
     ],

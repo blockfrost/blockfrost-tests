@@ -8,9 +8,10 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'assets-addresses_f82d27175878',
     testName: 'assets addresses',
-
     endpoints: ['assets/b43d4ad8386fc831db53cfa5c31bf37d42647eea60ce4b1cafddb247/addresses'],
+
     response: [
       {
         address:
@@ -20,13 +21,13 @@ export default [
     ],
   },
   {
+    id: 'assets-addresses-invalid-asset_69058bf7c16e',
     testName: 'assets addresses - invalid asset',
-
     endpoints: ['assets/stonksasset/addresses'],
-
     response: error_400_assets,
   },
   {
+    id: 'assets-addresses-valid-not-on-chain-asset_3ad55423382f',
     testName: 'assets addresses - valid not on-chain asset',
 
     endpoints: [

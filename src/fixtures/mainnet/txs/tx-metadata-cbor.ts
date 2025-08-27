@@ -1,9 +1,12 @@
 export default [
   {
+    id: 'txs-tx-metadata-cbor-generic-shelley-with-metadata-cbor_b961f749d642',
     testName: 'txs/:tx/metadata/cbor - generic shelley with metadata cbor',
+
     endpoints: [
       'txs/e641005803337a553a03cf3c11a1819491a629bd7d0a3c39e4866a01b5dac36d/metadata/cbor',
     ],
+
     response: [
       {
         label: '1968',
@@ -15,7 +18,9 @@ export default [
     ],
   },
   {
+    id: 'txs-tx-all-generic-shelley-with-no-data-blanks_109ace0a9749',
     testName: 'txs/:tx/all - generic shelley with no data - blanks',
+
     endpoints: [
       'txs/4e686b3c16670497f10f8dfd74ff4f1426221deda7b34816f426d4964589e1de/withdrawals',
       'txs/4e686b3c16670497f10f8dfd74ff4f1426221deda7b34816f426d4964589e1de/mirs',
@@ -24,6 +29,7 @@ export default [
       'txs/4e686b3c16670497f10f8dfd74ff4f1426221deda7b34816f426d4964589e1de/pool_retires',
       'txs/4e686b3c16670497f10f8dfd74ff4f1426221deda7b34816f426d4964589e1de/pool_updates',
     ],
+
     response: [],
   },
 ];

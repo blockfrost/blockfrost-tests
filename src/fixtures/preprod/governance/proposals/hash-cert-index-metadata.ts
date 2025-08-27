@@ -2,19 +2,23 @@ import { error_404 } from '../../../errors/index.js';
 
 export default [
   {
+    id: 'governance-proposal-info-action-metadata_08727d04316d',
     testName: 'governance proposal info_action metadata',
 
     endpoints: [
       'governance/proposals/aff2909f8175ee02a8c1bf96ff516685d25bf0c6b95aac91f4dfd53a5c0867cc/0/metadata',
     ],
+
     response: error_404,
   },
   {
+    id: 'governance-proposal-parameter-change-metadata_78c4503ea92a',
     testName: 'governance proposal parameter_change metadata',
 
     endpoints: [
       'governance/proposals/b52f02288e3ce8c7e57455522f4edd09c12797749e2db32098ecbe980b645d45/0/metadata',
     ],
+
     response: {
       tx_hash: 'b52f02288e3ce8c7e57455522f4edd09c12797749e2db32098ecbe980b645d45',
       cert_index: 0,
@@ -148,11 +152,13 @@ export default [
     },
   },
   {
+    id: 'governance-proposal-new-committee-metadata_99931b08228a',
     testName: 'governance proposal new_committee metadata',
 
     endpoints: [
       'governance/proposals/be1640dd2b3485e94703be5683c804d5051d96c12e1eaacc17c30e74de580ce5/0/metadata',
     ],
+
     response: {
       tx_hash: 'be1640dd2b3485e94703be5683c804d5051d96c12e1eaacc17c30e74de580ce5',
       cert_index: 0,
@@ -228,11 +234,13 @@ export default [
     },
   },
   {
+    id: 'governance-proposal-treasury-withdrawals-metadata_9c2c9006498b',
     testName: 'governance proposal treasury_withdrawals metadata',
 
     endpoints: [
       'governance/proposals/372d688faa77e146798b581b322c0f2981a9023764736ade5d12e0e4e796af8c/0/metadata',
     ],
+
     response: {
       tx_hash: '372d688faa77e146798b581b322c0f2981a9023764736ade5d12e0e4e796af8c',
       cert_index: 0,

@@ -1,9 +1,12 @@
 export default [
   {
+    id: 'accounts-stake-address-addresses-total-big-stake-address_03f53746eab6',
     testName: 'accounts/:stake_address/addresses/total big stake address',
+
     endpoints: [
       'accounts/stake_test1urmus498k7r299azjvhh50c9044zwqxgqfuqqrj3m46y8ucef0hex/addresses/total',
     ],
+
     response: {
       stake_address: 'stake_test1urmus498k7r299azjvhh50c9044zwqxgqfuqqrj3m46y8ucef0hex',
       received_sum: [

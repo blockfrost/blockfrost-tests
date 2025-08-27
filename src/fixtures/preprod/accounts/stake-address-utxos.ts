@@ -1,12 +1,15 @@
 export default [
   {
+    id: 'accounts-stake-address-utxos-empty-account_04cd33cda3fa',
     testName: 'accounts/:stake_address/utxos empty account',
     endpoints: ['accounts/stake_test1uzl969fay6sf66gjvluwe5vgq3ge20j8x0le0t7p0c6cp5qz4hevm/utxos'],
     response: [],
   },
   {
+    id: 'accounts-stake-address-utxos-bf-account_167b2f33d85e',
     testName: 'accounts/:stake_address/utxos bf account',
     endpoints: ['accounts/stake_test1urmus498k7r299azjvhh50c9044zwqxgqfuqqrj3m46y8ucef0hex/utxos'],
+
     response: [
       {
         address:
@@ -133,10 +136,13 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-utxos-bf-account-2-3-pages-of-utxos-on-single-address_75d7b42e7a3a',
     testName: 'accounts/:stake_address/utxos bf account #2 - 3 pages of utxos (on single address)',
+
     endpoints: [
       'accounts/stake_test1uqmgpra4vqgspqga89clrve5qf78vmnsa36hpnqvwkpzjagkstuad/utxos?page=2',
     ],
+
     response: [
       {
         address:

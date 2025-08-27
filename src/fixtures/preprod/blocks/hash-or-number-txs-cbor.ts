@@ -1,7 +1,9 @@
 export default [
   {
+    id: 'blocks-hash-or-number-txs-cbor-generic-block_2b8112091f6c',
     testName: 'blocks/:hash_or_number/txs/cbor - generic block',
     endpoints: ['blocks/685e56d47dbfbe77791784122a518c93703b39e574916c1ed0fd3cf932961daf/txs/cbor'],
+
     response: [
       {
         tx_hash: '950eeabfd38363e21e301a92c718989fd6b195f294a1bc998fc308e9f36fa9ef',
@@ -18,10 +20,13 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-txs-cbor-generic-block-pagination_aa319e32d6ae',
     testName: 'blocks/:hash_or_number/txs/cbor - generic block pagination',
+
     endpoints: [
       'blocks/685e56d47dbfbe77791784122a518c93703b39e574916c1ed0fd3cf932961daf/txs/cbor?count=1&page=2',
     ],
+
     response: [
       {
         tx_hash: 'cf747addf31358cd48bef153dedb30161251d7ac287b4dc4b532c863aecf69d0',
@@ -30,10 +35,13 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-txs-cbor-generic-block-desc_4a56a73b5f46',
     testName: 'blocks/:hash_or_number/txs/cbor - generic block DESC',
+
     endpoints: [
       'blocks/685e56d47dbfbe77791784122a518c93703b39e574916c1ed0fd3cf932961daf/txs/cbor?order=desc',
     ],
+
     response: [
       {
         tx_hash: '09aac7a013984f18b47f7f5a6eec2d2e8196200f045b83234662d954f71f0c6f',

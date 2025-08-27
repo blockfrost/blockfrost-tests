@@ -1,13 +1,18 @@
 export default [
   {
+    id: 'accounts-stake-address-utxos-empty-account_b09e8f158b80',
     testName: 'accounts/:stake_address/utxos empty account',
     endpoints: ['accounts/stake_test1uzdvvzlg0pk0smpzmsz3s2tcgwkyahdhyvvz2eq4jd7x9mqv3xn50/utxos'],
     response: [],
   },
   {
+    id: 'accounts-stake-address-utxos-bf-account-2-pages-uf-utxos-across-multiple-addresses_816c28fc0a58',
+
     testName:
       'accounts/:stake_address/utxos bf account (2 pages uf utxos across multiple addresses)',
+
     endpoints: ['accounts/stake_test1uq70zpxr7jdqxdlj895x9lvnwn9lrcknwpx8cswlld7x76gtzvrjp/utxos'],
+
     response: [
       {
         address:

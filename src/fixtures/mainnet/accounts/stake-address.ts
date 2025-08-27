@@ -8,6 +8,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'accounts-stake-address-bf-account_03f2a20a12c5',
     testName: 'accounts/:stake_address - BF account',
     endpoints: ['accounts/stake1u9uz4j024qfud557ucrqw3kqfdndjgaxj7m44x7tamkvmyqzdwe7v'],
     response: {
@@ -25,10 +26,9 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-generic-stake-address-1-case_37b4c7d97926',
     testName: 'accounts/:stake_address generic stake address 1. case',
-
     endpoints: ['accounts/stake1u9fzg77vrgfqlplkjqe9hntdcvsurpvxd60yp2fhn73002qsv9pdk'],
-
     response: {
       stake_address: 'stake1u9fzg77vrgfqlplkjqe9hntdcvsurpvxd60yp2fhn73002qsv9pdk',
       active: expect.any(Boolean),
@@ -44,10 +44,9 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-generic-stake-address-2-case_70dc64cab75f',
     testName: 'accounts/:stake_address generic stake address 2. case',
-
     endpoints: ['accounts/stake1u8zu4smzyf2r2mfqjd6tc6vxf2p8rccdfk82ye3eut2udkgs46q0w'],
-
     response: {
       stake_address: 'stake1u8zu4smzyf2r2mfqjd6tc6vxf2p8rccdfk82ye3eut2udkgs46q0w',
       active: expect.any(Boolean),
@@ -70,10 +69,9 @@ export default [
   stake1u80x0vdf8kwvptk7nar24d805p7wnlj4vm22cl0q8jngs9q5k2suq // 3 pools, two of them retired in the same epoch pool10ehxcuxmryvg5ae6g8krdvhaj3m07a6rzdtv8a0grtxpv7fnrpu, pool1qu4gywwxgdgep3t3pdgd92nclz9khr645dhn6fzyrmkuu4jk6th, pool1x6pcty09rx70ujg5lkxl7tdenamzh002y3uppkk0qczzcxyguyd
   */
   {
+    id: 'accounts-stake-address-reward-account-for-deregistered-pool_cc669d56e243',
     testName: 'accounts/:stake_address reward account for deregistered pool ',
-
     endpoints: ['accounts/stake1uyluup0rh6r2cc7kcw8nudqz990ezf5ltagxmw3u8deukvqwq7etq'],
-
     response: {
       stake_address: 'stake1uyluup0rh6r2cc7kcw8nudqz990ezf5ltagxmw3u8deukvqwq7etq',
       active: true,
@@ -89,10 +87,9 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-reward-account-for-2-pools-deregistered-pools_d70e88bd6001',
     testName: 'accounts/:stake_address reward account for 2 pools deregistered pools',
-
     endpoints: ['accounts/stake1u8fne2lfh3a8v33y8splqc5gr5r8gjea2wvrsgch39emnvqny8wlm'],
-
     response: {
       stake_address: 'stake1u8fne2lfh3a8v33y8splqc5gr5r8gjea2wvrsgch39emnvqny8wlm',
       active: true,
@@ -108,10 +105,9 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-reward-account-for-pool-deregistered-2-times_1f50bfd39b83',
     testName: 'accounts/:stake_address reward account for pool deregistered 2 times',
-
     endpoints: ['accounts/stake1uxzjdz34g596yt9dyprjse0yr775xszuyal3ltyqsx2k9wcjhvvke'],
-
     response: {
       stake_address: 'stake1uxzjdz34g596yt9dyprjse0yr775xszuyal3ltyqsx2k9wcjhvvke',
       active: true,
@@ -127,6 +123,8 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-reward-account-for-3-pools-2-of-them-retired-in-the-same-epoch_e8c34d1795f0',
+
     testName:
       'accounts/:stake_address reward account for 3 pools, 2 of them retired in the same epoch',
 
@@ -148,10 +146,9 @@ export default [
   },
   // registered drep
   {
+    id: 'accounts-stake-address-registered-drep_215421638ada',
     testName: 'accounts/:stake_address registered drep',
-
     endpoints: ['accounts/stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4'],
-
     response: {
       stake_address: 'stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4',
       active: false,
@@ -167,11 +164,10 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-huge-account_c72e1fc5be25',
     // This was a bug affecting lace, we've returned drep_id: null for all accounts
     testName: 'accounts/:stake_address huge account',
-
     endpoints: ['accounts/stake1uygt23qnfwel5y6vl65mlzwzjf6wvjflnp3k23fj6l4qwngdjy4yn'],
-
     response: {
       stake_address: 'stake1uygt23qnfwel5y6vl65mlzwzjf6wvjflnp3k23fj6l4qwngdjy4yn',
       active: true,
@@ -187,10 +183,9 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-registered-drep-legacy-drep-script_fbcfb1c63326',
     testName: 'accounts/:stake_address registered drep (legacy drep_script)',
-
     endpoints: ['accounts/stake1u9ng9m2wvcldpryt860hr29gflr3y9nh72k4k6h3dzu36pqprkt36'],
-
     response: {
       stake_address: 'stake1u9ng9m2wvcldpryt860hr29gflr3y9nh72k4k6h3dzu36pqprkt36',
       active: expect.any(Boolean),
@@ -210,9 +205,13 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-when-d-rep-is-retired-all-delegators-to-that-d-rep-should-have-their-drep-id-cleared_215421638ada',
+
     testName:
       'accounts/:stake_address when DRep is retired all delegators to that DRep should have their drep_id cleared.',
+
     endpoints: ['accounts/stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4'],
+
     response: {
       stake_address: 'stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4',
       active: false,

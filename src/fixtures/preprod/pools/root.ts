@@ -5,15 +5,16 @@ const paginationFixtures = getPaginationFixtures('pools');
 export default [
   ...paginationFixtures,
   {
+    id: 'pools-queryparams-we-are-not-there-yet_5da7ab665f2b',
     testName: 'pools?queryparams - we are not there yet',
-
     endpoints: ['pools?page=694269'],
     response: [],
   },
   {
+    id: 'pools-queryparams_cf8cccbd48e4',
     testName: 'pools?queryparams',
-
     endpoints: ['pools?count=5&page=3', 'pools?count=5&page=3&order=asc'],
+
     response: [
       'pool1l8ywwf6nfrfmrg6edj2qjh6rxpuepnzlsq9mhvjk9xr9swkht93',
       'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',

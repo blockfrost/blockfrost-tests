@@ -5,8 +5,10 @@ const paginationFixtures = getPaginationFixtures('metadata/txs/labels/1967/cbor'
 export default [
   ...paginationFixtures,
   {
+    id: 'metadata-txs-labels-label-cbor-query-params_339773e360a1',
     testName: 'metadata/txs/labels/label/cbor?queryParams',
     endpoints: ['metadata/txs/labels/2/cbor?count=2&page=2'],
+
     response: [
       {
         tx_hash: 'eb1b95cf9d8a4a20f7b941b0e530d58e10c4ed5897e5305f5bdd72aac973679e',
@@ -22,8 +24,10 @@ export default [
     ],
   },
   {
+    id: 'metadata-txs-labels-label-cbor_e8a6ce6ed2af',
     testName: 'metadata/txs/labels/label/cbor',
     endpoints: ['metadata/txs/labels/2/cbor'],
+
     response: [
       {
         tx_hash: '5cb4f3f2b94cb04cb1ef96de7860ec4b7c4966d2748de6d9445c6480d72f0455',

@@ -7,11 +7,13 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'governance-proposal-votes_72bc11f9de07',
     testName: 'governance proposal votes',
 
     endpoints: [
       'governance/proposals/e61f151fcef9e99dff5c705f8d5de18891f8d1d92d69fef5ff608d2c29a7c133/0/votes',
     ],
+
     response: [
       {
         tx_hash: 'dd44abf1ccbc1325af599fb32c302be9b345140ea5e20ca517e257e8cb9dd1e1',

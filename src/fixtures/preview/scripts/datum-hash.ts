@@ -1,7 +1,9 @@
 export default [
   {
+    id: 'scripts-datum-hash_d54d69898ce1',
     testName: 'scripts/datum/:hash',
     endpoints: ['scripts/datum/0041bf96b13f74bcf6fa9c12aa53a5a4be5ce82d755b578d8cb8131331f5de9a'],
+
     response: {
       json_value: {
         fields: [
@@ -82,8 +84,10 @@ export default [
     },
   },
   {
+    id: 'scripts-datum-hash-random-datum_b56f49b64261',
     testName: 'scripts/datum/:hash - random datum',
     endpoints: ['scripts/datum/40ee7fb2e3eee29a0a83551a9925fd10cfed6b6fc8a5c5226b872e9ab65e5481'],
+
     response: {
       json_value: {
         list: [

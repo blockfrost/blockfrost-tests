@@ -7,12 +7,15 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'epochs-number-blocks-poolgeneric-queryparams-shelley-epoch-generic-pool_1c44b181b10e',
     testName: 'epochs/:number/blocks/:poolgeneric?queryparams shelley epoch generic pool',
+
     endpoints: [
       'epochs/211/blocks/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy',
       'epochs/211/blocks/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?order=asc',
       'epochs/211/blocks/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?order=asc&count=22',
     ],
+
     response: [
       'da5e26446948b8d1f91396218dcd0131a5e7b3adb200cbd8f124d738438ed5ec',
       '1038b2c76a23ea7d89cbd84d7744c97560eb3412661beed6959d748e24ff8229',
@@ -39,11 +42,14 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-blocks-pool-queryparams-generic-shelley-epoch-generic-pool_7f22af028ac2',
     testName: 'epochs/:number/blocks/:pool?queryparams generic shelley epoch generic pool',
+
     endpoints: [
       'epochs/211/blocks/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?order=desc',
       'epochs/211/blocks/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?order=desc&count=22',
     ],
+
     response: [
       'd78e446b6540612e161ebdda32ee1715ef0f9fc68e890c7e3aae167b0354f998',
       '5bfdd5bff8f2dac4dfd8366c49dc22e34cff9cb6bf7155e770dd7a5f381146eb',

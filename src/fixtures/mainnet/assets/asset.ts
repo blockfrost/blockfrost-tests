@@ -2,8 +2,10 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'assets-asset-all-hail-nutcoin_1c5668e61d73',
     testName: 'assets/:asset - all hail nutcoin!',
     endpoints: ['assets/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e'],
+
     response: {
       asset: '00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e',
       policy_id: '00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae',
@@ -26,10 +28,13 @@ export default [
     },
   },
   {
+    id: 'assets-asset-space-bud-with-metadata-update-which-is-not-the-latest-tx-mint_52711157f084',
     testName: 'assets/:asset - space bud with metadata update which is not the latest tx_mint',
+
     endpoints: [
       'assets/d5e6bf0500378d4f0da4e8dde6becec7621cd8cbf5cbb9b87013d4cc537061636542756433343132',
     ],
+
     response: {
       asset: 'd5e6bf0500378d4f0da4e8dde6becec7621cd8cbf5cbb9b87013d4cc537061636542756433343132',
       policy_id: 'd5e6bf0500378d4f0da4e8dde6becec7621cd8cbf5cbb9b87013d4cc',
@@ -51,8 +56,10 @@ export default [
     },
   },
   {
+    id: 'assets-asset-asset-with-hex-name_ca4fa85f5b55',
     testName: 'assets/:asset - asset with hex name',
     endpoints: ['assets/e2bdb31c13a57d94934d01a4ca17cf3b2cac61d055637261b089c8f6dada'],
+
     response: {
       asset: 'e2bdb31c13a57d94934d01a4ca17cf3b2cac61d055637261b089c8f6dada',
       policy_id: 'e2bdb31c13a57d94934d01a4ca17cf3b2cac61d055637261b089c8f6',
@@ -68,10 +75,13 @@ export default [
     },
   },
   {
+    id: 'assets-asset-non-valid-according-to-https-cips-cardano-org-cips-cip25_8feaf88f509b',
     testName: 'assets/:asset - non-valid according to https://cips.cardano.org/cips/cip25/',
+
     endpoints: [
       'assets/0e14267a8020229adc0184dd25fa3174c3f7d6caadcb4425c70e7c04756e7369673033323839',
     ],
+
     response: {
       asset: '0e14267a8020229adc0184dd25fa3174c3f7d6caadcb4425c70e7c04756e7369673033323839',
       policy_id: '0e14267a8020229adc0184dd25fa3174c3f7d6caadcb4425c70e7c04',
@@ -115,8 +125,10 @@ export default [
     },
   },
   {
+    id: 'assets-asset-general-asset_f84d977569fd',
     testName: 'assets/:asset - general asset',
     endpoints: ['assets/12e65fa3585d80cba39dcf4f59363bb68b77f9d3c0784734427b1517414441'],
+
     response: {
       asset: '12e65fa3585d80cba39dcf4f59363bb68b77f9d3c0784734427b1517414441',
       policy_id: '12e65fa3585d80cba39dcf4f59363bb68b77f9d3c0784734427b1517',
@@ -132,10 +144,13 @@ export default [
     },
   },
   {
+    id: 'assets-asset-metadata-coin-example-with-onchain-metadata_a23b14e93d03',
     testName: 'assets/:asset - metadata coin example with onchain metadata',
+
     endpoints: [
       'assets/b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f426572727953616e64',
     ],
+
     response: {
       asset: 'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f426572727953616e64',
       policy_id: 'b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f',
@@ -155,10 +170,13 @@ export default [
     },
   },
   {
+    id: 'assets-asset-asset-with-metadata_4030460ba8e6',
     testName: 'assets/:asset - asset with metadata',
+
     endpoints: [
       'assets/026a18d04a0c642759bb3d83b12e3344894e5c1c7b2aeb1a2113a570390dbfc3f92cdaebc581ec7c28e35da8b92c87cabf981511698df52d7ea61c70',
     ],
+
     response: {
       asset:
         '026a18d04a0c642759bb3d83b12e3344894e5c1c7b2aeb1a2113a570390dbfc3f92cdaebc581ec7c28e35da8b92c87cabf981511698df52d7ea61c70',
@@ -183,10 +201,13 @@ export default [
     },
   },
   {
+    id: 'assets-asset-blockfrost-nft-asset-with-cip-68-metadata_4fd6c7c79a3b',
     testName: 'assets/:asset - Blockfrost NFT asset with CIP68 metadata',
+
     endpoints: [
       'assets/fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd000de140426c6f636b66726f7374',
     ],
+
     response: {
       asset: 'fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd000de140426c6f636b66726f7374',
       policy_id: 'fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd',
@@ -207,10 +228,13 @@ export default [
     },
   },
   {
+    id: 'assets-asset-blockfrost-ft-asset-with-cip-68-metadata_a57b57dd91c6',
     testName: 'assets/:asset - Blockfrost FT asset with CIP68 metadata',
+
     endpoints: [
       'assets/b038f29b249f42d870f8e5dd698c6020cf6fcbcbe620819771a4926f0014df10426c6f636b66726f73744654',
     ],
+
     response: {
       asset:
         'b038f29b249f42d870f8e5dd698c6020cf6fcbcbe620819771a4926f0014df10426c6f636b66726f73744654',
@@ -232,10 +256,13 @@ export default [
     },
   },
   {
+    id: 'assets-asset-blockfrost-cip-68v1-rft-asset-with-extra-data_1aed5dda47e8',
     testName: 'assets/:asset - Blockfrost CIP68v1 RFT asset with extra data',
+
     endpoints: [
       'assets/ef29efa6742926e4e9810b3544c2b21c6d8b3f92cd85afb8618ff06a001bc280426c6f636b66726f737423303037',
     ],
+
     response: {
       asset:
         'ef29efa6742926e4e9810b3544c2b21c6d8b3f92cd85afb8618ff06a001bc280426c6f636b66726f737423303037',
@@ -258,10 +285,13 @@ export default [
     },
   },
   {
+    id: 'assets-asset-blockfrost-cip-68v2-rft-asset-with-extra-data_92370feaf511',
     testName: 'assets/:asset - Blockfrost CIP68v2 RFT asset with extra data',
+
     endpoints: [
       'assets/a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee001bc280426c6f636b66726f737423303130',
     ],
+
     response: {
       asset:
         'a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee001bc280426c6f636b66726f737423303130',
@@ -284,10 +314,13 @@ export default [
     },
   },
   {
+    id: 'assets-asset-blockfrost-cip-68v2-nft-asset-with-extra-data_e04379e78921',
     testName: 'assets/:asset - Blockfrost CIP68v2 NFT asset with extra data',
+
     endpoints: [
       'assets/a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee000de140426c6f636b66726f737423303131',
     ],
+
     response: {
       asset:
         'a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee000de140426c6f636b66726f737423303131',
@@ -309,8 +342,10 @@ export default [
     },
   },
   {
+    id: 'assets-asset-nft-asset-with-on-chain-cip-25v1-with-non-utf8-asset-name_2e4e9a7cac0c',
     testName: 'assets/:asset - NFT asset with on-chain CIP25v1 with non-utf8 asset name',
     endpoints: ['assets/62a866f7cd0b77220f4f32538a5123a9dc10c130f1681a191d324c409a56'],
+
     response: {
       asset: '62a866f7cd0b77220f4f32538a5123a9dc10c130f1681a191d324c409a56',
       policy_id: '62a866f7cd0b77220f4f32538a5123a9dc10c130f1681a191d324c40',
@@ -331,11 +366,15 @@ export default [
     },
   },
   {
+    id: 'assets-asset-asset-with-cip-68v1-metadata-with-string-encoded-as-array-9-f-tag-introduced-in-cip-68v3-but-we-tolerate-it-in-previous-version-of-the-standard_380be9821236',
+
     testName:
       'assets/:asset - Asset with CIP68v1 metadata with string encoded as array(*) 9F tag (introduced in CIP68v3, but we tolerate it in previous version of the standard)',
+
     endpoints: [
       'assets/fca746f58adf9f3da13b7227e5e2c6052f376447473f4d49f8004195000de140436974697a656e202330313333',
     ],
+
     response: {
       asset:
         'fca746f58adf9f3da13b7227e5e2c6052f376447473f4d49f8004195000de140436974697a656e202330313333',

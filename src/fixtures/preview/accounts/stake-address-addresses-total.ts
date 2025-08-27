@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'accounts-stake-address-addresses-total-big-stake-address_618411bfe588',
     testName: 'accounts/:stake_address/addresses/total big stake address',
     endpoints: [
       'accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/addresses/total',

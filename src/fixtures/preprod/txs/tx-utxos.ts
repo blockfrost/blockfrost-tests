@@ -1,7 +1,9 @@
 export default [
   {
+    id: 'txs-tx-utxos-alonzo-tx-with-a-script_f46a1e755a04',
     testName: 'txs/:tx/utxos - alonzo tx with a script',
     endpoints: ['txs/ad600e004a5bd86b97d041836659584dceda0bccf8cf5607a67009b5b1e6abfc/utxos'],
+
     response: {
       hash: 'ad600e004a5bd86b97d041836659584dceda0bccf8cf5607a67009b5b1e6abfc',
       inputs: [
@@ -175,8 +177,10 @@ export default [
     },
   },
   {
+    id: 'txs-tx-utxos-generic-shelley-tx-with-huge-size_7bd34d81a017',
     testName: 'txs/:tx/utxos - generic shelley tx with huge size',
     endpoints: ['txs/40d294584fa9ff1640bc2246009836f825a5ca561b6c6e3200d368ed364c17cd/utxos'],
+
     response: {
       hash: '40d294584fa9ff1640bc2246009836f825a5ca561b6c6e3200d368ed364c17cd',
       inputs: [

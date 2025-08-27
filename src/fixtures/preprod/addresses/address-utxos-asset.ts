@@ -8,6 +8,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'addresses-address-utxos-asset-valid-on-chain-address-invalid-asset_fa49a9183e03',
     testName: 'addresses/:address/utxos/:asset - valid on-chain address, invalid asset',
 
     endpoints: [
@@ -17,22 +18,26 @@ export default [
     response: error_400_assets,
   },
   {
+    id: 'addresses-address-utxos-asset-invalid-address-invalid-asset_ac65c8f456e8',
     testName: 'addresses/:address/utxos/:asset - invalid address, invalid asset',
-
     endpoints: ['addresses/add_testr1stonks/utxos/asset1stonks'],
-
     response: error_400_addresses,
   },
   {
+    id: 'addresses-address-utxos-asset-valid-not-on-chain-address-with-valid-not-on-chain-asset_3b685d7246f0',
+
     testName:
       'addresses/:address/utxos/:asset - valid not on-chain address with valid not on-chain asset ',
 
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw/utxos/f4988f549728dcc6b58d7677849443caf6e5385dc67e6c25f6aa901e506978656c54696c653234',
     ],
+
     response: error_404,
   },
   {
+    id: 'addresses-address-utxos-asset-valid-on-chain-address-with-some-txs-0-utxos-and-therefore-also-0-for-specified-asset_14b608682d77',
+
     testName:
       'addresses/:address/utxos/:asset  - valid on-chain address with some txs, 0 utxos (and therefore also 0 for specified asset)',
 
@@ -43,6 +48,8 @@ export default [
     response: [],
   },
   {
+    id: 'addresses-address-utxos-asset-valid-on-chain-address-with-some-txs-some-utxos-without-tokens-therefore-also-0-for-specified-asset_b608ea220acc',
+
     testName:
       'addresses/:address/utxos/:asset  - valid on-chain address with some txs, some utxos without tokens (therefore also 0 for specified asset)',
 
@@ -53,6 +60,8 @@ export default [
     response: [],
   },
   {
+    id: 'addresses-address-utxos-asset-valid-on-chain-address-with-some-txs-some-utxos-with-tokens-but-0-for-specified-asset_cf165a66b450',
+
     testName:
       'addresses/:address/utxos/:asset - valid on-chain address with some txs, some utxos with tokens, but 0 for specified asset',
 
@@ -63,6 +72,8 @@ export default [
     response: [],
   },
   {
+    id: 'addresses-address-utxos-asset-valid-on-chain-payment-cred-with-some-txs-0-utxos-and-therefore-also-0-for-specified-asset_e5b6ff14f0a6',
+
     testName:
       'addresses/:address/utxos/:asset  - valid on-chain paymentCred with some txs,  0 utxos (and therefore also 0 for specified asset)',
 
@@ -73,6 +84,8 @@ export default [
     response: [],
   },
   {
+    id: 'addresses-address-utxos-asset-valid-on-chain-address-with-valid-not-on-chain-asset_bf6baf99d4a1',
+
     testName:
       'addresses/:address/utxos/:asset - valid on-chain address with valid not on-chain asset',
 
@@ -83,9 +96,10 @@ export default [
     response: error_404,
   },
   {
+    id: 'addresses-address-utxos-asset-valid-not-on-chain-address_58262ec3c5af',
     testName: 'addresses/:address/utxos/:asset - valid not on-chain address ',
-
     response: error_404,
+
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw/utxos/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f',
     ],

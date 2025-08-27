@@ -1,14 +1,18 @@
 export default [
   {
+    id: 'scripts-hash-json-always-succeeds-json-should-be-null_fbd98877804d',
     testName: 'scripts/:hash/json - AlwaysSucceeds json should be null',
     endpoints: ['scripts/67f33146617a5e61936081db3b2117cbf59bd2123748f58ac9678656/json'],
+
     response: {
       json: null,
     },
   },
   {
+    id: 'scripts-hash-json-timelock_b3a4e8881617',
     testName: 'scripts/:hash/json - timelock',
     endpoints: ['scripts/65c197d565e88a20885e535f93755682444d3c02fd44dd70883fe89e/json'],
+
     response: {
       json: {
         type: 'all',

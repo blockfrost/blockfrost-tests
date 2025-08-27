@@ -1,10 +1,12 @@
 export default [
   {
+    id: 'governance-drep-metadata_cbc2a3b2507a',
     testName: 'governance drep metadata',
 
     endpoints: [
       'governance/dreps/drep14pjm8ytt682wkp4jcegdj2yerkcy9a20xevvp7udlcd0ggjxdud/metadata',
     ],
+
     response: {
       drep_id: 'drep14pjm8ytt682wkp4jcegdj2yerkcy9a20xevvp7udlcd0ggjxdud',
       hex: 'a865b3916bd1d4eb06b2c650d928991db042f54f3658c0fb8dfe1af4',
@@ -107,12 +109,15 @@ export default [
     },
   },
   {
+    id: 'governance-cip129-drep-metadata-same-as-legacy-drep1y25xtvu3d0gaf6cxktr9pkfgnywmqsh4fum93s8m3hlp4aqj3uqdp_4d94b31e958a',
+
     testName:
       'governance cip129 drep metadata (same as legacy drep1y25xtvu3d0gaf6cxktr9pkfgnywmqsh4fum93s8m3hlp4aqj3uqdp)',
 
     endpoints: [
       'governance/dreps/drep1y25xtvu3d0gaf6cxktr9pkfgnywmqsh4fum93s8m3hlp4aqj3uqdp/metadata',
     ],
+
     response: {
       drep_id: 'drep1y25xtvu3d0gaf6cxktr9pkfgnywmqsh4fum93s8m3hlp4aqj3uqdp',
       hex: '22a865b3916bd1d4eb06b2c650d928991db042f54f3658c0fb8dfe1af4',

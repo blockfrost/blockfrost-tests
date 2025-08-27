@@ -1,10 +1,12 @@
 export default [
   {
+    id: 'addresses-address-extended-bf-address-without-tokens_4a6bee23b980',
     testName: 'addresses/:address/extended BF address without tokens',
 
     endpoints: [
       'addresses/addr1qxlem7879m2ly03ljqldhz9jxtlkurc465hqysxr33z2a4ee3t4rc98rhcg4n0a3g60nd9f865gpy4unflgak3we53psrrk85u/extended',
     ],
+
     response: {
       address:
         'addr1qxlem7879m2ly03ljqldhz9jxtlkurc465hqysxr33z2a4ee3t4rc98rhcg4n0a3g60nd9f865gpy4unflgak3we53psrrk85u',
@@ -22,7 +24,9 @@ export default [
     },
   },
   {
+    id: 'addresses-address-extended-address-with-nutcoin_2a2d82cf0f7b',
     testName: 'addresses/:address/extended address with nutcoin',
+
     endpoints: [
       'addresses/addr1qxxfwz7n3lnduxxgff6smhwlxkcw3gcax3q39363cpq4axnntgjccmteyrsldd67rxv2yq6ew2a7t48q34p9j7nf0kjq4rdx3w/extended',
     ],
@@ -80,6 +84,7 @@ export default [
     },
   },
   {
+    id: 'addresses-address-extended-address-with-nutcoin-payment-cred_5dbf85b29fac',
     testName: 'addresses/:address/extended address with nutcoin (payment cred)',
     endpoints: ['addresses/addr_vkh13jtsh5u0um0p3jz2w5xamhe4kr52x8f5gyfvw5wqg90f57gkgmc/extended'],
 
@@ -135,7 +140,9 @@ export default [
     },
   },
   {
+    id: 'addresses-address-extended-blockfrost-nft-asset-with-cip-68-metadata_40285289ec52',
     testName: 'addresses/:address/extended Blockfrost NFT asset with CIP68 metadata',
+
     endpoints: [
       'addresses/addr1qxttn9qfcwzd0c7whqv3p2ryynkktj9c45cgnjkq9n6tc9v6y6m63pymrzuxl6k0tq4tce9avm04wxvj6ayzs6nvx0ms5q8rwn/extended',
     ],
@@ -163,7 +170,9 @@ export default [
     },
   },
   {
+    id: 'addresses-address-extended-blockfrost-ft-asset-with-cip-68-metadata_9ec1da485a7c',
     testName: 'addresses/:address/extended Blockfrost FT asset with CIP68 metadata',
+
     endpoints: [
       'addresses/addr1qx9z8azrqnzyu085vwz7lxr3vslplrfv3uwetp9zvfcws3zdfd60xmfdzz6sq83fvjd9fhvktzlruzwvfaqzrmwgg7msgqwkum/extended',
     ],
@@ -191,7 +200,9 @@ export default [
     },
   },
   {
+    id: 'addresses-address-extended-blockfrost-rft-asset-with-cip-68v2-metadata-decimals_6b3ed7c6c55a',
     testName: 'addresses/:address/extended Blockfrost RFT asset with CIP68v2 metadata (decimals)',
+
     endpoints: [
       'addresses/addr1qyy86uaj7pv57c6jdg6d9m3rvu7r5pzay8dguayveaacmntxnerm95lm9pazslgsw04q73akal6pscheqhrxmsjcn4eq58xze0/extended',
     ],

@@ -2,7 +2,9 @@ import { error_400_blocks, error_400, error_400_blocks_out_of_range } from '../.
 
 export default [
   {
+    id: 'missing-or-malformed-block-hash_a1111dbe73e5',
     testName: 'Missing or malformed block hash.',
+
     endpoints: [
       'blocks//next',
       'blocks//previous',
@@ -29,15 +31,19 @@ export default [
       'blocks/69nice/addresses',
       'blocks/stonks/addresses',
     ],
+
     response: error_400_blocks,
   },
   {
+    id: 'invalid-path_cebd2cd0b59b',
     testName: 'Invalid path',
     endpoints: ['blocks/'],
     response: error_400,
   },
   {
+    id: 'blocks-missing-out-of-range-or-malformed-block-number_777d029a5853',
     testName: 'blocks - Missing, out of range or malformed block number.',
+
     endpoints: [
       'blocks/53604351654465',
       'blocks/-5',
@@ -50,6 +56,7 @@ export default [
       'blocks/53604351654465/addresses',
       'blocks/-5/addresses',
     ],
+
     response: error_400_blocks_out_of_range,
   },
 ];

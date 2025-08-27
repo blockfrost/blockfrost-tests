@@ -1,7 +1,9 @@
 export default [
   {
+    id: 'txs-tx-generic-shelley-with-metadata_99e620330752',
     testName: 'txs/:tx - generic shelley with metadata',
     endpoints: ['txs/0acadcce0e878b088bb7b856db7da4ef1fcd4505a5008becc13208440b3a601f/metadata'],
+
     response: [
       {
         label: '6862',

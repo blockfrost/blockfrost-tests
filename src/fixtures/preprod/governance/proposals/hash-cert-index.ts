@@ -1,10 +1,12 @@
 export default [
   {
+    id: 'governance-proposal-info-action-detail_b8a98f685892',
     testName: 'governance proposal info_action detail',
 
     endpoints: [
       'governance/proposals/aff2909f8175ee02a8c1bf96ff516685d25bf0c6b95aac91f4dfd53a5c0867cc/0',
     ],
+
     response: {
       tx_hash: 'aff2909f8175ee02a8c1bf96ff516685d25bf0c6b95aac91f4dfd53a5c0867cc',
       cert_index: 0,
@@ -22,11 +24,13 @@ export default [
     },
   },
   {
+    id: 'governance-proposal-parameter-change-detail_e908709abef5',
     testName: 'governance proposal parameter_change detail',
 
     endpoints: [
       'governance/proposals/b52f02288e3ce8c7e57455522f4edd09c12797749e2db32098ecbe980b645d45/0',
     ],
+
     response: {
       tx_hash: 'b52f02288e3ce8c7e57455522f4edd09c12797749e2db32098ecbe980b645d45',
       cert_index: 0,
@@ -74,11 +78,13 @@ export default [
     },
   },
   {
+    id: 'governance-proposal-parameter-change-ryan_8941d45defe7',
     testName: 'governance proposal parameter_change Ryan',
 
     endpoints: [
       'governance/proposals/0ecc74fe26532cec1ab9a299f082afc436afc888ca2dc0fc6acda431c52dc60d/0',
     ],
+
     response: {
       tx_hash: '0ecc74fe26532cec1ab9a299f082afc436afc888ca2dc0fc6acda431c52dc60d',
       cert_index: 0,
@@ -103,11 +109,13 @@ export default [
     },
   },
   {
+    id: 'governance-proposal-hard-fork-initiation-detail_9bd72ec997fa',
     testName: 'governance proposal hard_fork_initiation detail',
 
     endpoints: [
       'governance/proposals/ccb27f6b0d58c25ae33fd821b62c387f5230dae930afd07489fa3df56ae56522/0',
     ],
+
     response: {
       tx_hash: 'ccb27f6b0d58c25ae33fd821b62c387f5230dae930afd07489fa3df56ae56522',
       cert_index: 0,
@@ -132,11 +140,13 @@ export default [
     },
   },
   {
+    id: 'governance-proposal-new-committee-detail_1ef5ff0fc3b2',
     testName: 'governance proposal new_committee detail',
 
     endpoints: [
       'governance/proposals/be1640dd2b3485e94703be5683c804d5051d96c12e1eaacc17c30e74de580ce5/0',
     ],
+
     response: {
       tx_hash: 'be1640dd2b3485e94703be5683c804d5051d96c12e1eaacc17c30e74de580ce5',
       cert_index: 0,
@@ -162,11 +172,13 @@ export default [
     },
   },
   {
+    id: 'governance-proposal-treasury-withdrawals-detail_a95cc45efe41',
     testName: 'governance proposal treasury_withdrawals detail',
 
     endpoints: [
       'governance/proposals/372d688faa77e146798b581b322c0f2981a9023764736ade5d12e0e4e796af8c/0',
     ],
+
     response: {
       tx_hash: '372d688faa77e146798b581b322c0f2981a9023764736ade5d12e0e4e796af8c',
       cert_index: 0,

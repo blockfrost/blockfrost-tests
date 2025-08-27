@@ -8,11 +8,14 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'nutlink-address-tickers-nut-link-oracle-address_0d077cc451b6',
     testName: 'nutlink/:address/tickers nut.link oracle address',
+
     endpoints: [
       'nutlink/addr1q85yx2w7ragn5sx6umgmtjpc3865s9sg59sz4rrh6f90kgwfwlzu3w8ttacqg89mkdgwshwnplj5c5n9f8dhp0h55q2q7qm63t/tickers?count=3',
       'nutlink/addr1q85yx2w7ragn5sx6umgmtjpc3865s9sg59sz4rrh6f90kgwfwlzu3w8ttacqg89mkdgwshwnplj5c5n9f8dhp0h55q2q7qm63t/tickers?count=3&page=1&order=asc',
     ],
+
     response: [
       {
         name: 'ADABTC',
