@@ -5,6 +5,7 @@ const paginationFixtures = getPaginationFixtures('assets');
 export default [
   ...paginationFixtures,
   {
+    id: 'assets-list-of-all-assets_ce309855f9d6',
     testName: 'assets list of all assets',
     endpoints: ['assets'],
     response: [
@@ -260,10 +261,7 @@ export default [
         asset: '12e65fa3585d80cba39dcf4f59363bb68b77f9d3c0784734427b15174150504c45',
         quantity: '9648589196',
       },
-      {
-        asset: 'd63b50fe629b69f1da4897aee9f381fe197c30c06bf35be4355360bd6d617279',
-        quantity: '1',
-      },
+      { asset: 'd63b50fe629b69f1da4897aee9f381fe197c30c06bf35be4355360bd6d617279', quantity: '1' },
       {
         asset: '12e65fa3585d80cba39dcf4f59363bb68b77f9d3c0784734427b15175445534c41',
         quantity: '425839369',
@@ -417,6 +415,7 @@ export default [
     ],
   },
   {
+    id: 'assets-queryparams-list-of-all-assets_889b407a54a7',
     testName: 'assets?queryparams list of all assets',
     endpoints: ['assets?page=2&count=2'],
     response: [

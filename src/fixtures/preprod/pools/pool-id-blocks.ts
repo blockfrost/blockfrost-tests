@@ -7,6 +7,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'pools-pool-id-blocks-best-pool_a95369116477',
     testName: 'pools/pool_id/blocks - best pool',
     endpoints: [
       'pools/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v/blocks',
@@ -116,6 +117,7 @@ export default [
     ],
   },
   {
+    id: 'pools-pool-id-blocks-querystring-best-pool_f67e1385c756',
     testName: 'pools/:pool_id/blocks?querystring - best pool',
     endpoints: [
       'pools/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v/blocks?count=2&page=2',

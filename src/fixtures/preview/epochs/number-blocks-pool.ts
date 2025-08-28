@@ -7,6 +7,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'epochs-number-blocks-poolgeneric-queryparams-shelley-epoch-generic-pool_3050c975f7b6',
     testName: 'epochs/:number/blocks/:poolgeneric?queryparams shelley epoch generic pool',
     endpoints: [
       'epochs/469/blocks/pool1p9xu88dzmpp5l8wmjd6f5xfs9z89mky6up86ty2wz4aavmm8f3m',
@@ -104,6 +105,7 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-blocks-pool-queryparams-generic-shelley-epoch-generic-pool_87cefe11223d',
     testName: 'epochs/:number/blocks/:pool?queryparams generic shelley epoch generic pool',
     endpoints: [
       'epochs/469/blocks/pool1p9xu88dzmpp5l8wmjd6f5xfs9z89mky6up86ty2wz4aavmm8f3m?order=desc',

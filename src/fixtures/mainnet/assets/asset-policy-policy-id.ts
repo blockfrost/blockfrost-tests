@@ -7,6 +7,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'assets-policy-policy-id-queryparams-general-asset_ccc8313d80a8',
     testName: 'assets/policy/:policy_id?queryparams - general asset',
     endpoints: [
       'assets/policy/b863bc7369f46136ac1048adb2fa7dae3af944c3bbb2be2f216a8d4f',

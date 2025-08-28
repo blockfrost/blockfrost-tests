@@ -7,6 +7,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'addresses-address-txs-generic-shelley-address_78a7760f794b',
     testName: 'addresses/:address/txs generic shelley address',
     endpoints: [
       'addresses/addr1q904hvj3tcr9cendlrm6y4fhcy34tgezlqn92z7z4lwkzczvqdpz4hpzh09mr3360akg0y9wss24hhvfhtkp2fjh65cs7q4z89/txs?count=5&page=2',
@@ -23,6 +24,7 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-txs-generic-dormant-exchange-byron-address_7d61e79dfdde',
     testName: 'addresses/:address/txs generic dormant exchange byron address',
     endpoints: [
       'addresses/DdzFFzCqrhstmqBkaU98vdHu6PdqjqotmgudToWYEeRmQKDrn4cAgGv9EZKtu1DevLrMA1pdVazufUCK4zhFkUcQZ5Gm88mVHnrwmXvT/txs?count=5&page=2',
@@ -37,8 +39,8 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-txs-generic-payment-cred-1_ada2582fd6c1',
     testName: 'addresses/:address/txs generic payment_cred 1',
-
     endpoints: [
       'addresses/addr_vkh15ew2tzjwn364l2pszu7j5h9w63v2crrnl97m074w9elrk6zy2tc/txs?order=asc&page=42000',
     ],
@@ -146,6 +148,7 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-txs-generic-payment-cred-2_32870c25a11c',
     testName: 'addresses/:address/txs generic payment_cred 2',
     endpoints: [
       'addresses/addr_vkh15ew2tzjwn364l2pszu7j5h9w63v2crrnl97m074w9elrk6zy2tc/txs?order=asc&page=69000&count=1',
@@ -153,6 +156,8 @@ export default [
     response: ['3d64b692ed46a423ad8fcadc8c8c288e179da3a405cefe322b310745ce4d2a81'],
   },
   {
+    id: 'addresses-address-txs-generic-payment-cred-3-page-with-self-tx-in-the-same-block-and-index-same-pc-different-addresses_0d3b9c63b44e',
+
     testName:
       'addresses/:address/txs generic payment_cred 3 - page with self tx in the same block and index (same pc, different addresses)',
     endpoints: [

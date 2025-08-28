@@ -2,6 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'epochs-number-parameters-generic-shelley-epoch_388f17f3556a',
     testName: 'epochs/:number/parameters generic shelley epoch',
     endpoints: ['epochs/211/parameters'],
     response: {
@@ -63,6 +64,7 @@ export default [
     },
   },
   {
+    id: 'epochs-number-parameters-epoch-shelley-1-hf_537e043b6789',
     testName: 'epochs/:number/parameters epoch - shelley - 1.HF',
     endpoints: ['epochs/208/parameters'],
     response: {
@@ -124,6 +126,7 @@ export default [
     },
   },
   {
+    id: 'epochs-number-parameters-allegra-2-hf_1fb06c2bd1a8',
     testName: 'epochs/:number/parameters - allegra - 2.HF',
     endpoints: ['epochs/236/parameters'],
     response: {
@@ -185,6 +188,7 @@ export default [
     },
   },
   {
+    id: 'epochs-number-parameters-mary-3-hf_00a3ec799343',
     testName: 'epochs/:number/parameters - mary - 3.HF',
     endpoints: ['epochs/251/parameters'],
     response: {
@@ -246,6 +250,7 @@ export default [
     },
   },
   {
+    id: 'epochs-number-parameters-alonzo-4-hf_b39ad98fb8b8',
     testName: 'epochs/:number/parameters - alonzo - 4.HF',
     endpoints: ['epochs/290/parameters'],
     response: {
@@ -491,6 +496,7 @@ export default [
     },
   },
   {
+    id: 'epochs-number-parameters-vasil-5-hf_629fd29e2cd5',
     testName: 'epochs/:number/parameters - vasil - 5.HF',
     endpoints: ['epochs/298/parameters'],
     response: {
@@ -736,6 +742,7 @@ export default [
     },
   },
   {
+    id: 'epochs-number-parameters-vasil-5-hf-1-protocol-update_e4c8e3d78f02',
     testName: 'epochs/:number/parameters - vasil - 5.HF + 1. protocol update',
     endpoints: ['epochs/306/parameters'],
     response: {
@@ -981,6 +988,7 @@ export default [
     },
   },
   {
+    id: 'epochs-number-parameters-vasil-6-hf_b414e0e69f65',
     testName: 'epochs/:number/parameters - vasil - 6.HF',
     endpoints: ['epochs/365/parameters'],
     response: {
@@ -1226,6 +1234,7 @@ export default [
     },
   },
   {
+    id: 'epochs-number-parameters-valentine-secp-7-hf_2a067d4e6813',
     testName: 'epochs/:number/parameters - valentine (SECP) - 7.HF',
     endpoints: ['epochs/394/parameters'],
     response: {
@@ -1661,6 +1670,7 @@ export default [
     },
   },
   {
+    id: 'epochs-444-parameters_ce95221c1efe',
     testName: 'epochs/444/parameters',
     endpoints: ['epochs/444/parameters'],
     response: {
@@ -2096,6 +2106,7 @@ export default [
     },
   },
   {
+    id: 'epochs-latest-parameters_a73a0c95ff80',
     testName: 'epochs/latest/parameters',
     endpoints: ['epochs/latest/parameters'],
     response: {

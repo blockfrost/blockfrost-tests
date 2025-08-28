@@ -1,8 +1,8 @@
 export default [
   {
+    id: 'assets-list-of-all-assets_ce309855f9d6',
     testName: 'assets list of all assets',
     endpoints: ['assets'],
-
     response: [
       {
         asset:
@@ -227,22 +227,10 @@ export default [
           'e2bab64ca481afc5a695b7db22fd0a7df4bf930158dfa652fb33799953554d4d49544157415244534f74686572',
         quantity: '1',
       },
-      {
-        asset: '1cf569e1ec3e0fee92f1f5002bfd4213b796c151c708db46e6e2d3a4',
-        quantity: '1',
-      },
-      {
-        asset: '8b14b900bbf9f43d911da209a28e7bd2cce500d8e4bc928c9ca714fb',
-        quantity: '1',
-      },
-      {
-        asset: 'b413bc466dadcb6bcf93e840a9eedabe04e83aa9d55f9deeb94d9743',
-        quantity: '1',
-      },
-      {
-        asset: '99027c7af372116f0716ee02008739ec51224bcfdd54398ec16217ef',
-        quantity: '0',
-      },
+      { asset: '1cf569e1ec3e0fee92f1f5002bfd4213b796c151c708db46e6e2d3a4', quantity: '1' },
+      { asset: '8b14b900bbf9f43d911da209a28e7bd2cce500d8e4bc928c9ca714fb', quantity: '1' },
+      { asset: 'b413bc466dadcb6bcf93e840a9eedabe04e83aa9d55f9deeb94d9743', quantity: '1' },
+      { asset: '99027c7af372116f0716ee02008739ec51224bcfdd54398ec16217ef', quantity: '0' },
       {
         asset:
           'b27160f0c50a9cf168bf945dcbfcabbfbee5c7a801e7b467093b41534d6574616c4d6f6e7374657230303036',
@@ -256,14 +244,8 @@ export default [
         asset: '99027c7af372116f0716ee02008739ec51224bcfdd54398ec16217ef4d6565726b61743332',
         quantity: '1',
       },
-      {
-        asset: '5c69ffe7536014bfe0dba38679f9fa8015508f50335e863c5128eaba6f6e65',
-        quantity: '2',
-      },
-      {
-        asset: '5c69ffe7536014bfe0dba38679f9fa8015508f50335e863c5128eaba74776f',
-        quantity: '2',
-      },
+      { asset: '5c69ffe7536014bfe0dba38679f9fa8015508f50335e863c5128eaba6f6e65', quantity: '2' },
+      { asset: '5c69ffe7536014bfe0dba38679f9fa8015508f50335e863c5128eaba74776f', quantity: '2' },
       {
         asset: '99027c7af372116f0716ee02008739ec51224bcfdd54398ec16217ef4d6565726b61743138',
         quantity: '1',
@@ -356,10 +338,7 @@ export default [
         asset: '556ce33406b0f92708acdfb3a5a8ae8e817004a1d3e0ebde92496b7e527562793030303132',
         quantity: '1',
       },
-      {
-        asset: 'fc1500a73b69cb1914995c65cc4d23b2317fd738c4b58d85da6389c74e465431',
-        quantity: '1',
-      },
+      { asset: 'fc1500a73b69cb1914995c65cc4d23b2317fd738c4b58d85da6389c74e465431', quantity: '1' },
       {
         asset: 'bb1666f0a1ae445ad73f182fdb08fb8aaa220111b47432a28ee75e294e4654313134',
         quantity: '1',
@@ -411,9 +390,9 @@ export default [
     ],
   },
   {
+    id: 'assets-queryparams-list-of-all-assets_889b407a54a7',
     testName: 'assets?queryparams list of all assets',
     endpoints: ['assets?page=2&count=2'],
-
     response: [
       {
         asset: 'e2bab64ca481afc5a695b7db22fd0a7df4bf930158dfa652fb337999436f696e42',

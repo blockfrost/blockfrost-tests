@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'pools-pool-id-updates-generic-pool-updates_a431cf52a511',
     testName: 'pools/:pool_id/updates - generic pool updates',
     endpoints: [
       'pools/pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj/updates?count=10',
@@ -59,6 +60,7 @@ export default [
     ],
   },
   {
+    id: 'pools-pool-id-updates-best-pool_f9339a4c9f32',
     testName: 'pools/:pool_id/updates - best pool',
     endpoints: [
       'pools/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy/updates?count=1&page=1',

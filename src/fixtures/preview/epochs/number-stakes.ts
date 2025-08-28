@@ -7,6 +7,7 @@ const paginationFixtures = getPaginationFixtures('epochs/121/stakes').filter(
 export default [
   ...paginationFixtures,
   {
+    id: 'epochs-number-stakes-generic-shelley-epoch_705e2cf91d90',
     testName: 'epochs/:number/stakes generic shelley epoch',
     endpoints: ['epochs/121/stakes'],
     response: [
@@ -513,11 +514,13 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-stakes-queryparams-epochs-w-out-stakes_9cd57f6507b5',
     testName: 'epochs/:number/stakes?queryparams epochs w/out stakes',
     endpoints: ['epochs/0/stakes', 'epochs/1/stakes'],
     response: [],
   },
   {
+    id: 'epochs-number-stakes-queryparams-first-epoch-with-stakes_d1a4ffd14bfe',
     testName: 'epochs/:number/stakes?queryparams first epoch with stakes',
     endpoints: ['epochs/2/stakes'],
     response: [
@@ -539,6 +542,7 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-stakes-queryparams-generic-epoch-with-stakes-middle-page_b0c9edb4b95c',
     testName: 'epochs/:number/stakes?queryparams generic epoch with stakes, middle page',
     endpoints: ['epochs/121/stakes?page=100&count=2'],
     response: [
@@ -555,6 +559,7 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-stakes-queryparams-generic-epoch-with-stakes-last-page_5d5e44eb6900',
     testName: 'epochs/:number/stakes?queryparams generic epoch with stakes, last page',
     endpoints: ['epochs/118/stakes?page=5'],
     response: [

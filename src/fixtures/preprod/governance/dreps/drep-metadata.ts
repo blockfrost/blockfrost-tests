@@ -1,7 +1,7 @@
 export default [
   {
+    id: 'governance-drep-metadata_768fb8371a01',
     testName: 'governance drep metadata',
-
     endpoints: [
       'governance/dreps/drep_script1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhqu0c4hhj/metadata',
     ],
@@ -51,9 +51,7 @@ export default [
             '@context': {
               image: {
                 '@id': 'CIP119:image',
-                '@context': {
-                  ImageObject: 'https://schema.org/ImageObject',
-                },
+                '@context': { ImageObject: 'https://schema.org/ImageObject' },
               },
               title: 'CIP108:title',
               comment: 'CIP100:comment',
@@ -83,10 +81,7 @@ export default [
               qualifications: 'CIP119:qualifications',
               externalUpdates: {
                 '@id': 'CIP100:externalUpdates',
-                '@context': {
-                  uri: 'CIP100:update-uri',
-                  title: 'CIP100:update-title',
-                },
+                '@context': { uri: 'CIP100:update-uri', title: 'CIP100:update-title' },
               },
             },
           },
@@ -117,9 +112,10 @@ export default [
     },
   },
   {
+    id: 'governance-cip129-drep-metadata-same-as-legacy-drep-script1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhqu0c4hhj_ef5980d11e62',
+
     testName:
       'governance cip129 drep metadata (same as legacy drep_script1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhqu0c4hhj)',
-
     endpoints: [
       'governance/dreps/drep1ydmraa6kv8cvmry059v608tehl50nfmg0z764lmsqkvwurs40sw2z/metadata',
     ],
@@ -169,9 +165,7 @@ export default [
             '@context': {
               image: {
                 '@id': 'CIP119:image',
-                '@context': {
-                  ImageObject: 'https://schema.org/ImageObject',
-                },
+                '@context': { ImageObject: 'https://schema.org/ImageObject' },
               },
               title: 'CIP108:title',
               comment: 'CIP100:comment',
@@ -201,10 +195,7 @@ export default [
               qualifications: 'CIP119:qualifications',
               externalUpdates: {
                 '@id': 'CIP100:externalUpdates',
-                '@context': {
-                  uri: 'CIP100:update-uri',
-                  title: 'CIP100:update-title',
-                },
+                '@context': { uri: 'CIP100:update-uri', title: 'CIP100:update-title' },
               },
             },
           },

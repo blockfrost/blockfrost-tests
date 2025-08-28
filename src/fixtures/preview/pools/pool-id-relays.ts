@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'pools-pool-id-relays-best-pool_595e76d1d796',
     testName: 'pools/pool_id/relays - best pool',
     endpoints: [
       'pools/pool16h8ugt8k0a4kxa5g6x062zjrgfjc7cehpw0ze8374axlul76932/relays',

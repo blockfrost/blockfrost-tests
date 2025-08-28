@@ -2,6 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'network-eras_161d67e8a062',
     testName: 'network eras',
     endpoints: ['network/eras'],
     response: [
@@ -31,21 +32,9 @@ export default [
         parameters: { epoch_length: 432_000, slot_length: 1, safe_zone: 129_600 },
       },
       {
-        start: {
-          time: 5184000,
-          slot: 3542400,
-          epoch: 12,
-        },
-        end: {
-          time: 70416000,
-          slot: 68774400,
-          epoch: 163,
-        },
-        parameters: {
-          epoch_length: 432000,
-          slot_length: 1,
-          safe_zone: 129600,
-        },
+        start: { time: 5184000, slot: 3542400, epoch: 12 },
+        end: { time: 70416000, slot: 68774400, epoch: 163 },
+        parameters: { epoch_length: 432000, slot_length: 1, safe_zone: 129600 },
       },
       {
         start: { time: 70416000, slot: 68774400, epoch: 163 },

@@ -7,6 +7,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'pools-pool-id-history-best-pool-history_744a83eb1855',
     testName: 'pools/:pool_id/history - best pool history',
     endpoints: [
       'pools/pool1n935yzlmu7528fx4qjf2gak0cdv2nune9cku730zg7vh707rnnd/history?count=10',
@@ -106,6 +107,7 @@ export default [
     ],
   },
   {
+    id: 'pools-pool-id-history-pool-history-with-more-margin-cost-updates_68184a2bed98',
     testName: 'pools/:pool_id/history - pool history with more margin/cost updates',
     endpoints: [
       'pools/pool15jqsjphnxg7hcx2rvd0ryhg5xwshg7xktthj3zf70nmxx9ffjet/history?page=4&count=1',

@@ -5,8 +5,8 @@ const paginationFixtures = getPaginationFixtures('governance/proposals');
 export default [
   ...paginationFixtures,
   {
+    id: 'governance-proposals_e6264a6c6f3c',
     testName: 'governance proposals',
-
     endpoints: ['governance/proposals?count=3'],
     response: [
       {

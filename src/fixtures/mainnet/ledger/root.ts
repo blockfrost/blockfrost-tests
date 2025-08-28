@@ -1,8 +1,8 @@
 export default [
   {
+    id: 'genesis_769e8bcdde9a',
     testName: 'genesis',
     endpoints: ['genesis'],
-
     response: {
       active_slots_coefficient: 0.05,
       update_quorum: 5,

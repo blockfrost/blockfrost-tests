@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'accounts-stake-address-queryparams-generic-stake-address-mirs_d58c64399ad6',
     testName: 'accounts/:stake_address?queryparams generic stake address mirs',
     endpoints: [
       'accounts/stake1uyq7039vutuw8v7femqtktdu9zlhnqh3mkvvhdazft9ga2q8zdfkp/mirs?count=1&page=1',

@@ -2,6 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'health-clock_d3f971c98f94',
     testName: 'health/clock',
     endpoints: ['health/clock'],
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

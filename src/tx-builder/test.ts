@@ -17,9 +17,7 @@ export const submitTest = async (network: Network) => {
 
   // disable SSL on SDK's Got otherwise tests run directly on backend fail with  unable to verify the first certificate
   blockfrostClient.instance = blockfrostClient.instance.extend({
-    https: {
-      rejectUnauthorized: false,
-    },
+    https: { rejectUnauthorized: false },
   });
 
   const signedTx = await buildTx(blockfrostClient, network);

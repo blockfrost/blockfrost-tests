@@ -7,6 +7,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'epochs-number-stakes-pool-queryparams-generic-pool_696869b293ec',
     testName: 'epochs/:number/stakes/pool?queryparams generic pool',
     endpoints: [
       'epochs/520/stakes/bfb0a90221db27149e575d79fba2fd8df4fb6a04e446ed077648ee08',
@@ -417,6 +418,7 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-stakes-pool-queryparams-page-1-best-pool-ever_96402ffaf0f0',
     testName: 'epochs/:number/stakes/pool?queryparams page 1 best pool ever',
     endpoints: [
       'epochs/520/stakes/cbb2d3a93e5b7fc422d250203ec892ed840cba51cc7c15530d6f06b7?page=1',
@@ -461,6 +463,7 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-stakes-pool-queryparams-page-2-best-pool-ever_c6eb1468b29c',
     testName: 'epochs/:number/stakes/pool?queryparams page 2 best pool ever',
     endpoints: [
       'epochs/510/stakes/4bbc44d779ba790105a9521fcf291c3b4b5383bb77174c6a5b8b63fb?page=2&count=2',
@@ -477,6 +480,8 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-stakes-pool-queryparams-generic-new-old-and-expired-pools-without-active-delegators-for-that-epoch_763d761eda2b',
+
     testName:
       'epochs/:number/stakes/pool?queryparams generic new, old and expired pools without active delegators for that epoch',
     endpoints: [

@@ -8,6 +8,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'blocks-hash-or-number-next-queryparams-generic-boundary_fabd41473456',
     testName: 'blocks/:hash_or_number/next?queryparams - generic boundary',
     endpoints: [
       'blocks/471ee59bee5cadc22ec85c4519acd4ee6f843eb30b34793db6ba1a9eb0426afb/next?count=2',
@@ -54,6 +55,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-next-generic-shelley_d86ea98ffe27',
     testName: 'blocks/:hash_or_number/next - generic shelley',
     endpoints: [
       'blocks/8d9309b0aa8faf0f4df797efb4e3af9b88072bef3f8177bd159befc186944649/next',
@@ -1963,6 +1965,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-next-queryparams-generic-boundary-inside_d5b486cff921',
     testName: 'blocks/:hash_or_number/next?queryparams - generic boundary inside',
     endpoints: [
       'blocks/21579/next?count=10',
@@ -2162,6 +2165,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-next-queryparams-generic-boundary_d5ece006f541',
     testName: 'blocks/:hash_or_number/next?queryparams - generic boundary',
     endpoints: ['blocks/3/next?page=15&count=5'],
     response: [
@@ -2263,6 +2267,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-next-queryparams-generic-boundary-edge_479abffd64a9',
     testName: 'blocks/:hash_or_number/next?queryparams - generic boundary edge',
     endpoints: [
       'blocks/21586/next?count=5',

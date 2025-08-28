@@ -76,9 +76,7 @@ export const getInstance = (clientOptions?: ExtendOptions): Got => {
   return got.extend({
     responseType: 'json',
     prefixUrl,
-    https: {
-      rejectUnauthorized: false,
-    },
+    https: { rejectUnauthorized: false },
     ...clientOptions,
     headers: { ...DEFAULT_HEADERS, ...clientOptions?.headers },
   });
@@ -104,9 +102,7 @@ export const getBlockfrostProductionInstance = (): Got => {
   return got.extend({
     responseType: 'json',
     prefixUrl: initPrefixUrl,
-    https: {
-      rejectUnauthorized: false,
-    },
+    https: { rejectUnauthorized: false },
     headers: { project_id: projectId },
   });
 };
@@ -128,10 +124,7 @@ export const generateTestFromFixture = (fixture: Fixture, endpoint: string) => {
     generateTest(fixture, endpoint);
   } else {
     console.log(`Skipped [${fixture.testName}] - ${endpoint}.`);
-    skippedTests.push({
-      endpoint,
-      reason: `Test is not defined for ${endpoint}`,
-    });
+    skippedTests.push({ endpoint, reason: `Test is not defined for ${endpoint}` });
   }
 };
 
@@ -159,11 +152,7 @@ const makeRequest = async (
   const [data, response] = await Promise.all([request.json(), request]);
   const end = performance.now();
 
-  return {
-    data,
-    headers: response.headers,
-    time_elapsed: end - start,
-  };
+  return { data, headers: response.headers, time_elapsed: end - start };
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

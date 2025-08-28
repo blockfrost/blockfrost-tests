@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'txs-tx-generic-shelley-with-multiple-delegation-stake-certs-and-pool-updates_ac615a0b1f6e',
     testName: 'txs/:tx - generic shelley with MULTIPLE delegation, stake certs and pool updates',
     endpoints: ['txs/f1aee024a482d5d21ed552d15eefbb664e98095cdabde75a9ff9c78c0812e6fb/stakes'],
     response: [
@@ -206,6 +207,7 @@ export default [
     ],
   },
   {
+    id: 'txs-tx-stakes-generic-shelley-with-delegations-and-stake-certs_79a48ef6dcda',
     testName: 'txs/:tx/stakes - generic shelley with delegations and stake certs',
     endpoints: ['txs/c2120581050a1116ab38a5ac8a62d64df4cf12cf3370d22337201d36eb65fcc4/stakes'],
     response: [

@@ -7,6 +7,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'scripts-hash-redeemers_8b74444e2ed4',
     testName: 'scripts/:hash/redeemers',
     endpoints: ['scripts/c22560ac64be051102d6d1cfe5b9b82eb6af4f00dd3806e5cd82e837/redeemers'],
     response: [

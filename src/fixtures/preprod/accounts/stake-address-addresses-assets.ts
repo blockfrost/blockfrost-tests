@@ -8,6 +8,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'accounts-stake-address-addresses-assets-bf-account_41b826b1a806',
     testName: 'accounts/:stake_address/addresses/assets - BF account',
     endpoints: [
       'accounts/stake_test1urmus498k7r299azjvhh50c9044zwqxgqfuqqrj3m46y8ucef0hex/addresses/assets',
@@ -20,10 +21,7 @@ export default [
         unit: '1a7b9a6264eba2e1f053624ae3740ab29fcf89d6b297e9c60aa6f8d333',
         quantity: '1000000000',
       },
-      {
-        unit: '1a7b9a6264eba2e1f053624ae3740ab29fcf89d6b297e9c60aa6f8d3465432',
-        quantity: '100',
-      },
+      { unit: '1a7b9a6264eba2e1f053624ae3740ab29fcf89d6b297e9c60aa6f8d3465432', quantity: '100' },
       {
         unit: '1a7b9a6264eba2e1f053624ae3740ab29fcf89d6b297e9c60aa6f8d348656c6c6f4e4654',
         quantity: '1',
@@ -39,30 +37,30 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-addresses-assets-generic-stake-address-without-tokens_e687ac914a9e',
     testName: 'accounts/:stake_address/addresses/assets - generic stake address without tokens',
-
     endpoints: [
       'accounts/stake_test1uprndrzzjwcacy4kzt9u9y2uh8zusqkak6glcphxay472fszzgeyu/addresses/assets',
     ],
     response: [],
   },
   {
+    id: 'accounts-stake-address-non-valid-account_ea7670c3d362',
     testName: 'accounts/:stake_address - non-valid account',
-
     response: error_400_accounts,
     endpoints: ['accounts/stake1kek/addresses/assets'],
   },
   {
+    id: 'accounts-stake-address-valid-not-on-chain-account_39b0054d65f0',
     testName: 'accounts/:stake_address - valid not on-chain account',
-
     response: error_404,
     endpoints: [
       'accounts/stake_test1upzvx3z7hlhjrvzzsu4gxknwjdjmhz08x3x7ddmhfw445dc7u96sn/addresses/assets',
     ],
   },
   {
+    id: 'accounts-stake-address-addresses-assets-valid-not-on-chain-account_39b0054d65f0',
     testName: 'accounts/:stake_address/addresses/assets - valid not on-chain account',
-
     response: error_404,
     endpoints: [
       'accounts/stake_test1upzvx3z7hlhjrvzzsu4gxknwjdjmhz08x3x7ddmhfw445dc7u96sn/addresses/assets',

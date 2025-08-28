@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'txs-tx-pool-retires-generic-shelley-with-pool-retirements_69657a4420ee',
     testName: 'txs/:tx/pool_retires - generic shelley with pool retirements',
     endpoints: [
       'txs/33770d42c7bc8a9a0bc9830ffb97941574dc61dc534796dd8614b99b6aadace4/pool_retires',
@@ -13,6 +14,7 @@ export default [
     ],
   },
   {
+    id: 'txs-tx-pool-retires-shelley-most-pool-retirements_cfd890bc9862',
     testName: 'txs/:tx/pool_retires - shelley MOST pool retirements',
     endpoints: [
       'txs/8c8376b28e8d729115ea6e88540747160fab22d754ad6a11c55ab159024d8005/pool_retires',

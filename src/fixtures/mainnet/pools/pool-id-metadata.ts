@@ -2,6 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'pools-pool-id-metadata-pool-with-multiple-metadata-updates-in-one-update_f1a8a7164c97',
     testName: 'pools/:pool_id/metadata - pool with multiple metadata updates in one update',
     endpoints: [
       'pools/pool1zmfpd5r5vfwjmwm4cgy53exe58h7plnecny3t4948yw7zumzp4c/metadata',
@@ -19,6 +20,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-metadata-pool-with-multiple-metadata-updates-in-one-update_edbde8d94192',
     testName: 'pools/:pool_id/metadata - pool with multiple metadata updates in one update',
     endpoints: [
       'pools/pool1yhd6a8vvp0r0ads36j4zjwx7juztf6cgpa2fqm9dm0st790ptf2/metadata',
@@ -36,6 +38,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-metadata-best-pool_30f92c6687d2',
     testName: 'pools/pool_id/metadata - best pool',
     endpoints: [
       'pools/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy/metadata',

@@ -1,7 +1,7 @@
 export default [
   {
+    id: 'governance-proposal-info-action-detail_31db3fa2663c',
     testName: 'governance proposal info_action detail',
-
     endpoints: [
       'governance/proposals/15f82a365bdee483a4b03873a40d3829cc88c048ff3703e11bd01dd9e035c916/0',
     ],
@@ -9,9 +9,7 @@ export default [
       tx_hash: '15f82a365bdee483a4b03873a40d3829cc88c048ff3703e11bd01dd9e035c916',
       cert_index: 0,
       governance_type: 'info_action',
-      governance_description: {
-        tag: 'InfoAction',
-      },
+      governance_description: { tag: 'InfoAction' },
       deposit: '100000000000',
       return_address: 'stake1u9zaaehwt4lkxxmzym2972w6gywy97n7s9kup9ydx8sdhfcjxtusp',
       ratified_epoch: null,
@@ -22,8 +20,8 @@ export default [
     },
   },
   {
+    id: 'governance-proposal-parameter-change-detail_a431cbbb1869',
     testName: 'governance proposal parameter_change detail',
-
     endpoints: [
       'governance/proposals/b2a591ac219ce6dcca5847e0248015209c7cb0436aa6bd6863d0c1f152a60bc5/0',
     ],
@@ -74,8 +72,8 @@ export default [
     },
   },
   {
+    id: 'governance-proposal-hard-fork-initiation-detail_6e537dae0d41',
     testName: 'governance proposal hard_fork_initiation detail',
-
     endpoints: [
       'governance/proposals/0b19476e40bbbb5e1e8ce153523762e2b6859e7ecacbaf06eae0ee6a447e79b9/0',
     ],
@@ -85,13 +83,7 @@ export default [
       governance_type: 'hard_fork_initiation',
       governance_description: {
         tag: 'HardForkInitiation',
-        contents: [
-          null,
-          {
-            major: 10,
-            minor: 0,
-          },
-        ],
+        contents: [null, { major: 10, minor: 0 }],
       },
       deposit: '100000000000',
       return_address: 'stake1uyguuqwdpexmhgjd07vax5t2ay3f7qvea49ex907g6fmvjclq6l03',

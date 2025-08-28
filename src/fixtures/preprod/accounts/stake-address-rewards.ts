@@ -1,11 +1,11 @@
 export default [
   {
+    id: 'accounts-stake-address-queryparams-generic-stake-address-rewards_656eac387ab9',
     testName: 'accounts/:stake_address?queryparams generic stake address rewards',
     endpoints: [
       'accounts/stake_test1uqhgtcy3p6fq4r3erflllxmmvw907vujg9gkzppcn3ja90c3zu3yy/rewards?count=3&page=2',
       'accounts/stake_test1uqhgtcy3p6fq4r3erflllxmmvw907vujg9gkzppcn3ja90c3zu3yy/rewards?count=3&page=2&order=asc',
     ],
-
     response: [
       {
         epoch: 34,
@@ -28,13 +28,14 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-queryparams-generic-stake-address-rewards-with-multiple-types_13a8d32b168d',
+
     testName:
       'accounts/:stake_address?queryparams generic stake address rewards with multiple types',
     endpoints: [
       'accounts/stake_test1uz55sf04mkd29tehvf4pu95vjhd6e72a50tcycje88jgcysxnh7d8/rewards?count=5&page=1',
       'accounts/stake_test1uz55sf04mkd29tehvf4pu95vjhd6e72a50tcycje88jgcysxnh7d8/rewards?count=5&page=1&order=asc',
     ],
-
     response: [
       {
         epoch: 39,
@@ -69,11 +70,11 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-generic-empty-list_58380b5c192d',
     testName: 'accounts/:stake_address generic empty list',
     endpoints: [
       'accounts/stake_test1uprndrzzjwcacy4kzt9u9y2uh8zusqkak6glcphxay472fszzgeyu/rewards',
     ],
-
     response: [],
   },
 ];

@@ -7,8 +7,8 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'governance-drep-updates_9ffe121de192',
     testName: 'governance drep updates',
-
     endpoints: [
       'governance/dreps/drep_script1rphr974gpgngzqujlknd2kw8a4rjrfjuu8yafme7rjrmg6hv64g/updates',
       'governance/dreps/drep1yvvxuvh64q9zdqgrjt76d42eclk5wgdxtnsun4808cwg0dquhj65s/updates', // CIP129 id
@@ -37,8 +37,8 @@ export default [
     ],
   },
   {
+    id: 'governance-drep-script-updates_2c5f5a21695c',
     testName: 'governance drep script updates',
-
     endpoints: [
       'governance/dreps/drep_script13gh7zuw0nzuh6dhm96narlcl36a9x8tzvhdu4uaaryw05yltmjy/updates',
       'governance/dreps/drep1yw9zlct3e7vtjlfklvh2050lr78t55cavfjahjhnh5v3e7s2h3c8k/updates',
@@ -52,14 +52,14 @@ export default [
     ],
   },
   {
+    id: 'governance-drep-always-abstain-updates_2500cf48ae74',
     testName: 'governance drep_always_abstain updates',
-
     endpoints: ['governance/dreps/drep_always_abstain/updates'],
     response: [],
   },
   {
+    id: 'governance-drep-always-no-confidence-updates_79668a77e7b5',
     testName: 'governance drep_always_no_confidence updates',
-
     endpoints: ['governance/dreps/drep_always_no_confidence/updates'],
     response: [],
   },

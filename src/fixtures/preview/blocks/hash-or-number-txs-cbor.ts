@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'blocks-hash-or-number-txs-cbor-generic-block_33b353ebb4fd',
     testName: 'blocks/:hash_or_number/txs/cbor - generic block',
     endpoints: ['blocks/aabada535fb08b438137a456820b5a15440336b6a109c0ea7106ca3f20680343/txs/cbor'],
     response: [
@@ -18,6 +19,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-txs-cbor-generic-block-pagination_56792ff4e4bb',
     testName: 'blocks/:hash_or_number/txs/cbor - generic block pagination',
     endpoints: [
       'blocks/aabada535fb08b438137a456820b5a15440336b6a109c0ea7106ca3f20680343/txs/cbor?count=1&page=2',
@@ -30,6 +32,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-txs-cbor-generic-block-desc_85b6e8ca8259',
     testName: 'blocks/:hash_or_number/txs/cbor - generic block DESC',
     endpoints: [
       'blocks/aabada535fb08b438137a456820b5a15440336b6a109c0ea7106ca3f20680343/txs/cbor?order=desc',

@@ -15,9 +15,7 @@ const globalIgnores = {
 };
 
 const srcRules = tseslint.config(
-  {
-    files: ['src/**/*.{js,ts,tsx}'],
-  },
+  { files: ['src/**/*.{js,ts,tsx}'] },
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   eslintPluginPrettierRecommended,

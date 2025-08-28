@@ -4,8 +4,8 @@ import { error_400_pools, error_404 } from '../../errors/index.js';
 
 export default [
   {
+    id: 'pools-pool-id-topo-pool_d6e4715892f3',
     testName: 'pools/pool_id - TOPO pool',
-
     endpoints: [
       'pools/399e35b1ec14c9bf630287260c2614eac6ccd5a9c7589d873e759074',
       'pools/pool18x0rtv0vznym7cczsunqcfs5atrve4dfcavfmpe7wkg8ga4urve',
@@ -34,8 +34,8 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-pool-with-more-owners_3f6997e3c636',
     testName: 'pools/pool_id - pool with more owners',
-
     endpoints: [
       'pools/25f66fb1ecdff14df811542de1355650cd9e7e96dd281874521213d7',
       'pools/pool1yhmxlv0vmlc5m7q32sk7zd2k2rxeul5km55psazjzgfawzycpf4',
@@ -68,8 +68,8 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-pool-with-invalid-reward-stake-address_874b1735d84c',
     testName: 'pools/pool_id - pool with invalid reward stake address',
-
     endpoints: [
       'pools/pool1grvqd4eu354qervmr62uew0nsrjqedx5kglldeqr4c29vv59rku',
       // 'pools/40d806d73c8d2a0c8d9b1e95ccb9f380e40cb4d4b23ff6e403ae1456',
@@ -98,8 +98,8 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-multiple-times-deregistered-pool_bf237a8f6b25',
     testName: 'pools/pool_id - multiple times deregistered pool',
-
     endpoints: [
       'pools/pool1p73yrd7vzwkkjd2rff4g683smhlm3jkg45f2hwm79cke6uxxwq9',
       'pools/0fa241b7cc13ad6935434a6a8d1e30ddffb8cac8ad12abbb7e2e2d9d',
@@ -139,8 +139,8 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-expired-pool_3f6997e3c636',
     testName: 'pools/:pool_id - expired pool',
-
     endpoints: [
       'pools/25f66fb1ecdff14df811542de1355650cd9e7e96dd281874521213d7',
       'pools/pool1yhmxlv0vmlc5m7q32sk7zd2k2rxeul5km55psazjzgfawzycpf4',
@@ -173,8 +173,8 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-expired-pool-no-1-same-rewards-account_81b12b839c3e',
     testName: 'pools/:pool_id - expired pool no 1 - same rewards account',
-
     endpoints: [
       'pools/pool1nrh57s3qnflewm8vqs2gt3kdhr79kwgxfk6j0tfhrdspvkmhvce',
       'pools/98ef4f42209a7f976cec041485c6cdb8fc5b39064db527ad371b6016',
@@ -207,8 +207,8 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-expired-pool-no-2-same-rewards-account_36b5917f9a90',
     testName: 'pools/:pool_id - expired pool no 2 - same rewards account',
-
     endpoints: [
       'pools/cc8f785dff1b122ef32ff11fad61526a5397b4e0f08986f74b0a45f5',
       'pools/pool1ej8hsh0lrvfzaue07y066c2jdffe0d8q7zycda6tpfzl262drtv',
@@ -237,8 +237,8 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-revoked-calidus-key_615d18d7d7a7',
     testName: 'pools/:pool_id - revoked calidus key',
-
     endpoints: ['pools/pool1w83ux7vrwafrsuz044knxl9xxtr38q5jj2l3p28fl3g26faqqwg'],
     response: {
       pool_id: 'pool1w83ux7vrwafrsuz044knxl9xxtr38q5jj2l3p28fl3g26faqqwg',
@@ -269,8 +269,8 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-calidus-key-registered_ec20101fd64a',
     testName: 'pools/:pool_id - calidus key registered ',
-
     endpoints: ['pools/pool14fdr8cpz0qpgzkrucu2q7hst2pa3u5ssfej7kuepdq4v7lkyxg3'],
     response: {
       pool_id: 'pool14fdr8cpz0qpgzkrucu2q7hst2pa3u5ssfej7kuepdq4v7lkyxg3',
@@ -314,8 +314,8 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-multiple-calidus-keys-registered-return-last-one_3292cf38a98d',
     testName: 'pools/:pool_id - multiple calidus keys registered (return last one)',
-
     endpoints: ['pools/pool1k4rdvvuhy7h927psyew9syupwddy77t4j8lc74hpgzpvv7yklwg'],
     response: {
       pool_id: 'pool1k4rdvvuhy7h927psyew9syupwddy77t4j8lc74hpgzpvv7yklwg',
@@ -352,14 +352,14 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-invalid-pool_d9a0ef561623',
     testName: 'pools/:pool_id - invalid pool',
-
     response: error_400_pools,
     endpoints: ['pools/pool1kek'],
   },
   {
+    id: 'pools-pool-id-valid-non-existing-pool-for-this-network_bc28201fd319',
     testName: 'pools/:pool_id - valid non-existing pool (for this network)',
-
     response: error_404,
     endpoints: ['pools/pool1y6chk7x7fup4ms9leesdr57r4qy9cwxuee0msan72x976a6u0nc'],
   },

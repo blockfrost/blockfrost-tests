@@ -4,7 +4,7 @@
 
 ## Environment Variables
 
-~~~bash
+```bash
 # Blockfrost Project ID – get your API key at https://blockfrost.io/dashboard
 PROJECT_ID=""
 
@@ -16,38 +16,35 @@ SERVER_URL=""
 
 # Target network: "mainnet", "preview", or "preprod"
 NETWORK=""
-~~~
+```
 
 > If present, the `.env` file will be automatically loaded (e.g. via `dotenv`).
 
 ## Running the tests
 
-* **mainnet** – `yarn test:mainnet`
-* **preview** – `yarn test:preview`
-* **preprod** – `yarn test:preprod`
+- **mainnet** – `yarn test:mainnet`
+- **preview** – `yarn test:preview`
+- **preprod** – `yarn test:preprod`
 
 ### Full command example
 
-~~~bash
+```bash
 SERVER_URL=https://cardano-mainnet.blockfrost.io/api/v0 \
 PROJECT_ID=mainnetLZgT76GL3subckxt9Y1G8nsouSCVwWtn \
 SUBMIT_MNEMONIC="canyon february excess nominee tube alcohol client coach cruise antenna cabbage unusual" \
 yarn test:preview
-~~~
+```
 
 ## Fixture example
 
-~~~javascript
+```javascript
 import { expect } from 'vitest';
 
 export default [
   {
     testName:
       'blocks/slot/:slot_number and blocks/epoch/:epoch_number/slot/:slot_number – generic Shelley',
-    endpoints: [
-      'blocks/slot/16019999',
-      'blocks/epoch/234/slot/295199'
-    ],
+    endpoints: ['blocks/slot/16019999', 'blocks/epoch/234/slot/295199'],
     response: {
       time: 1607586290,
       height: 5058628,
@@ -67,7 +64,7 @@ export default [
     },
   },
 ];
-~~~
+```
 
 ---
 
@@ -76,7 +73,7 @@ export default [
 There is `endpoints-allowlist.json` file in the project root.
 If this file is **empty**, **all** endpoints will be allowed by default.
 
-~~~json
+```json
 [
   "/accounts/{stake_address}",
   "/accounts/{stake_address}/rewards",
@@ -177,4 +174,4 @@ If this file is **empty**, **all** endpoints will be allowed by default.
   "/utils/tx/evaluate/utxos",
   "/metrics"
 ]
-~~~
+```

@@ -6,14 +6,11 @@ const paginationFixtures = getPaginationFixtures('metadata/txs/labels');
 export default [
   ...paginationFixtures,
   {
+    id: 'metadata-list-of-all-labels-with-queryparams_d8757b303f18',
     testName: 'metadata list of all labels with queryparams',
     endpoints: ['metadata/txs/labels?page=44&count=2'],
     response: [
-      {
-        label: '86',
-        cip10: null,
-        count: expect.toBePositive(),
-      },
+      { label: '86', cip10: null, count: expect.toBePositive() },
       {
         label: '87',
         cip10: 'milkomeda.com - The protocol magic for the milkomeda protocol',
@@ -22,9 +19,9 @@ export default [
     ],
   },
   {
+    id: 'metadata-txs-labels_f1096e876143',
     testName: 'metadata/txs/labels',
     endpoints: ['metadata/txs/labels'],
-
     response: [
       { label: '0', cip10: null, count: expect.toBePositive() },
       { label: '1', cip10: null, count: expect.toBePositive() },
@@ -137,9 +134,9 @@ export default [
     ],
   },
   {
+    id: 'metadata-txs-labels_d46b0e99581a',
     testName: 'metadata/txs/labels',
     endpoints: ['metadata/txs/labels?page=694269'],
-
     response: [],
   },
 ];

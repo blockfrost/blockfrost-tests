@@ -8,6 +8,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'blocks-hash-or-number-previous-generic-shelley_2a047bae4a1a',
     testName: 'blocks/:hash_or_number/previous - generic shelley',
     endpoints: [
       'blocks/cfcefdbe2f849a86d36792a33fd077035eb851b91f09bc3a90e61100709234d9/previous',
@@ -1917,6 +1918,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-next-previous-queryparams-generic-shelley_626952c875b5',
     testName: 'blocks/:hash_or_number/next-previous?queryparams - generic shelley',
     endpoints: [
       'blocks/cfcefdbe2f849a86d36792a33fd077035eb851b91f09bc3a90e61100709234d9/next?count=2&page=2',
@@ -1966,6 +1968,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-previous-queryparams-generic-boundary_1eedfed62ff3',
     testName: 'blocks/:hash_or_number/previous?queryparams - generic boundary',
     endpoints: [
       'blocks/1d031daf47281f69cd95ab929c269fd26b1434a56a5bbbd65b7afe85ef96b233/previous?count=3',

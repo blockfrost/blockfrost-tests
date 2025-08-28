@@ -7,8 +7,8 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'governance-drep-votes_e3ea2ce00518',
     testName: 'governance drep votes',
-
     endpoints: [
       'governance/dreps/drep_script1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhqu0c4hhj/votes',
       'governance/dreps/drep1ydmraa6kv8cvmry059v608tehl50nfmg0z764lmsqkvwurs40sw2z/votes', //CIP129 id
@@ -22,14 +22,14 @@ export default [
     ],
   },
   {
+    id: 'governance-drep-always-no-confidence-votes_8448e67e592c',
     testName: 'governance drep_always_no_confidence votes',
-
     endpoints: ['governance/dreps/drep_always_no_confidence/votes'],
     response: [],
   },
   {
+    id: 'governance-drep-always-abstain-votes_a2b741ae9ba6',
     testName: 'governance drep_always_abstain votes',
-
     endpoints: ['governance/dreps/drep_always_abstain/votes'],
     response: [],
   },

@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'scripts-hash-cbor_0540e364869a',
     testName: 'scripts/:hash/cbor',
     endpoints: ['scripts/4f590a3d80ae0312bad0b64d540c3ff5080e77250e9dbf5011630016/cbor'],
     response: {
@@ -7,6 +8,8 @@ export default [
     },
   },
   {
+    id: 'scripts-hash-cbor-1-double-encoded-in-dbsync-13-0-5-https-github-com-input-output-hk-cardano-db-sync-issues-1214_8e773b8ab83f',
+
     testName:
       'scripts/:hash/cbor - 1. double encoded in dbsync < 13.0.5 https://github.com/input-output-hk/cardano-db-sync/issues/1214',
     endpoints: ['scripts/a55b9f78156c141b53e19f9f380988b722c36a2ce2b5bc06bae95503/cbor'],
@@ -15,11 +18,11 @@ export default [
     },
   },
   {
+    id: 'scripts-hash-cbor-2-double-encoded-in-dbsync-13-0-5-4e4d01000033222220051200120011-always-succeeds_ed3f1416baf2',
+
     testName:
       'scripts/:hash/cbor - 2. double encoded in dbsync < 13.0.5 (4e4d01000033222220051200120011), AlwaysSucceeds',
     endpoints: ['scripts/67f33146617a5e61936081db3b2117cbf59bd2123748f58ac9678656/cbor'],
-    response: {
-      cbor: '4d01000033222220051200120011',
-    },
+    response: { cbor: '4d01000033222220051200120011' },
   },
 ];

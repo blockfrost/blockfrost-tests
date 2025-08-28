@@ -2,8 +2,8 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'governance-script-hash-drep_37653fa3de01',
     testName: 'governance scriptHash drep',
-
     endpoints: ['governance/dreps/drep1yvvxuvh64q9zdqgrjt76d42eclk5wgdxtnsun4808cwg0dquhj65s'],
     response: {
       drep_id: 'drep1yvvxuvh64q9zdqgrjt76d42eclk5wgdxtnsun4808cwg0dquhj65s',
@@ -18,8 +18,8 @@ export default [
     },
   },
   {
+    id: 'governance-drep-legacy-drep-id_4f14a4490542',
     testName: 'governance drep legacy drep id',
-
     endpoints: ['governance/dreps/drep1ss00kf225285yl96gyy850zwv9uq9m2agqz084gff9djgsf7rdy'],
     response: {
       drep_id: 'drep1ss00kf225285yl96gyy850zwv9uq9m2agqz084gff9djgsf7rdy',
@@ -34,8 +34,8 @@ export default [
     },
   },
   {
+    id: 'governance-drep-cip129-drep-id_726f6660f7ab',
     testName: 'governance drep cip129 drep id',
-
     endpoints: ['governance/dreps/drep1y2zpa7e9f23g7snuhfqss73ufeshsqhdt4qqfu74p9y4kfqcpsxym'],
     response: {
       drep_id: 'drep1y2zpa7e9f23g7snuhfqss73ufeshsqhdt4qqfu74p9y4kfqcpsxym',
@@ -50,8 +50,8 @@ export default [
     },
   },
   {
+    id: 'governance-drep-some-other-random-drep-id_6a9980c69241',
     testName: 'governance drep some other random drep id',
-
     endpoints: ['governance/dreps/drep1lk47t6ngg76h2w3jknz8kkauzn8vh69vwqev4etgy22sylf2f6e'],
     response: {
       drep_id: 'drep1lk47t6ngg76h2w3jknz8kkauzn8vh69vwqev4etgy22sylf2f6e',
@@ -66,8 +66,8 @@ export default [
     },
   },
   {
+    id: 'drep-drep-always-abstain_0ecd19881df8',
     testName: 'drep drep_always_abstain',
-
     endpoints: ['governance/dreps/drep_always_abstain'],
     response: {
       drep_id: 'drep_always_abstain',
@@ -82,8 +82,8 @@ export default [
     },
   },
   {
+    id: 'drep-drep-always-no-confidence_e2c640cd755e',
     testName: 'drep drep_always_no_confidence',
-
     endpoints: ['governance/dreps/drep_always_no_confidence'],
     response: {
       drep_id: 'drep_always_no_confidence',

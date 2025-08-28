@@ -2,6 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'blocks-hash-or-number-hash-genesis_8bc37520fae4',
     testName: 'blocks/:hash_or_number - hash - genesis',
     endpoints: ['blocks/90aeac71d8c48bfb8c1f0c540b2ec081fa429c5f106e669f56a2748246b8dd07'],
     response: {
@@ -25,6 +26,7 @@ export default [
     },
   },
   {
+    id: 'blocks-hash-or-number-hash-generic-byron-no-txs_78ac63d28976',
     testName: 'blocks/:hash_or_number - hash - generic byron (no txs)',
     endpoints: [
       'blocks/cd619529ca62b4c37f7f728cd6d3472682115f001e1d1278bf1b7dce528db44e',
@@ -51,6 +53,7 @@ export default [
     },
   },
   {
+    id: 'blocks-hash-or-number-hash-generic-shelley_7eea28c654e9',
     testName: 'blocks/:hash_or_number - hash - generic shelley',
     endpoints: [
       'blocks/d00573be29d6df1245f4ae62cec4b58b0de14be8dd26f32f948d89bde1ba19bc',

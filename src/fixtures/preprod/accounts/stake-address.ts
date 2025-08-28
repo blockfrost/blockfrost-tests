@@ -8,8 +8,8 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'accounts-stake-address-bf-account_8e85c11a451b',
     testName: 'accounts/:stake_address - BF account',
-
     endpoints: ['accounts/stake_test1urmus498k7r299azjvhh50c9044zwqxgqfuqqrj3m46y8ucef0hex'],
     response: {
       stake_address: 'stake_test1urmus498k7r299azjvhh50c9044zwqxgqfuqqrj3m46y8ucef0hex',
@@ -26,10 +26,9 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-generic-stake-address_14356bed4860',
     testName: 'accounts/:stake_address generic stake address',
-
     endpoints: ['accounts/stake_test1uplm3vtt2637738tx4wy9l4sjlhtdld2nvtlv8pj9ng9feg6d3pr7'],
-
     response: {
       stake_address: 'stake_test1uplm3vtt2637738tx4wy9l4sjlhtdld2nvtlv8pj9ng9feg6d3pr7',
       active: expect.any(Boolean),
@@ -46,10 +45,9 @@ export default [
   },
 
   {
+    id: 'accounts-stake-address-reward-account-for-deregistered-pool_37d9ac964598',
     testName: 'accounts/:stake_address reward account for deregistered pool ',
-
     endpoints: ['accounts/stake_test1ur45959eevjt0f02hajmvs69ag9q2t9hmyl4vgwdrxacues76c7wx'],
-
     response: {
       stake_address: 'stake_test1ur45959eevjt0f02hajmvs69ag9q2t9hmyl4vgwdrxacues76c7wx',
       active: true,
@@ -65,10 +63,9 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-reward-account-for-pool-deregistered-multiple-times_4dea2bf545a3',
     testName: 'accounts/:stake_address reward account for pool deregistered multiple times',
-
     endpoints: ['accounts/stake_test1urt4kdcculn6lwpw5alfhehlhx8thax0cruy73gd0gr6kjs29vef7'],
-
     response: {
       stake_address: 'stake_test1urt4kdcculn6lwpw5alfhehlhx8thax0cruy73gd0gr6kjs29vef7',
       active: true,
@@ -85,10 +82,9 @@ export default [
   },
   // registered drep
   {
+    id: 'accounts-stake-address-registered-drep_77b6428e7f43',
     testName: 'accounts/:stake_address registered drep',
-
     endpoints: ['accounts/stake_test1uqtv67n99jt7mj0txqne80s7gn7q8xxyzyx4xaqxfpgd52c7aqzhd'],
-
     response: {
       stake_address: 'stake_test1uqtv67n99jt7mj0txqne80s7gn7q8xxyzyx4xaqxfpgd52c7aqzhd',
       active: expect.any(Boolean),
@@ -105,10 +101,9 @@ export default [
   },
   // registered drep_script
   {
+    id: 'accounts-stake-address-registered-drep-legacy-drep-script_18248dff2a35',
     testName: 'accounts/:stake_address registered drep (legacy drep_script)',
-
     endpoints: ['accounts/stake_test1uzyp0n0lqk65g9wae0uhn3fdzevww4u7w665w46wsdmeaysjvtvpu'],
-
     response: {
       stake_address: 'stake_test1uzyp0n0lqk65g9wae0uhn3fdzevww4u7w665w46wsdmeaysjvtvpu',
       active: expect.any(Boolean),
@@ -124,6 +119,7 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-when-d-rep-is-retired-all-delegators-to-that-d-rep-should-have-their-drep-id-cleared_bb6fc181bae8',
     testName:
       'accounts/:stake_address when DRep is retired all delegators to that DRep should have their drep_id cleared.',
     endpoints: ['accounts/stake_test1upjghly04re6yrr3nh3ntp9en3p5flnxh2yf6camc3vfhwg6dhc5w'],
@@ -142,6 +138,7 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-deregister-a-stake-key-should-clear-any-existing-vote-delegation-should-have-their-drep-id-cleared_3ff8e6621a3a',
     testName:
       'accounts/:stake_address deregister a stake key should clear any existing vote delegation. should have their drep_id cleared.',
     endpoints: ['accounts/stake_test1upq4d854xjc30jqkulsevam0jwt5wl2j9783twgzqpwtfvs705r7c'],
@@ -160,6 +157,7 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-retire-and-register-drep-after-voting-should-have-their-drep-id-cleared_38d4e081ae4b',
     testName:
       'accounts/:stake_address retire and register drep after voting. should have their drep_id cleared.',
     endpoints: ['accounts/stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq'],

@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'pools-pool-id-relays-best-pool_f355126f9bb3',
     testName: 'pools/pool_id/relays - best pool',
     endpoints: [
       'pools/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v/relays',
@@ -13,13 +14,7 @@ export default [
         dns_srv: null,
         port: 3001,
       },
-      {
-        ipv4: null,
-        ipv6: null,
-        dns: 'relay.preprod.wingriders.com',
-        dns_srv: null,
-        port: 3002,
-      },
+      { ipv4: null, ipv6: null, dns: 'relay.preprod.wingriders.com', dns_srv: null, port: 3002 },
     ],
   },
 ];

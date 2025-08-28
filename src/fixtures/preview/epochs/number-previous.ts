@@ -8,6 +8,7 @@ const paginationFixtures = getPaginationFixtures('epochs/121/previous').filter(
 export default [
   ...paginationFixtures,
   {
+    id: 'epochs-number-previous-generic_6fdf4436c208',
     testName: 'epochs/:number/previous - generic',
     endpoints: ['epochs/121/previous'],
     response: [
@@ -1214,6 +1215,7 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-previous-queryparams_4e72f4e98522',
     testName: 'epochs/:number/previous?queryparams',
     endpoints: ['epochs/10/previous?count=5'],
     response: [
@@ -1280,6 +1282,7 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-previous-out-of-range-epoch_fc184fdd75eb',
     testName: 'epochs/:number/previous - out of range epoch',
     response: error_400_epochs,
     endpoints: ['epochs/696969696969/previous'],

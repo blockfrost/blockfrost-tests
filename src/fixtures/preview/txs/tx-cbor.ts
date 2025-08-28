@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'txs-tx-cbor-generic-tx_3ccff7560d93',
     testName: 'txs/:tx/cbor - generic tx',
     endpoints: ['txs/eadcfeb38de327a0def9ab03f11ca37ca050c7318e96c9bfcc7c51406a584eec'],
     response: {

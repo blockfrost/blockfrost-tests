@@ -2,6 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'utils-txs-evaluate-success_a6cb628e30af',
     testName: 'utils/txs/evaluate success',
     endpoints: ['utils/txs/evaluate'],
     postBody:
@@ -12,18 +13,12 @@ export default [
       version: '1.0',
       servicename: 'ogmios',
       methodname: 'EvaluateTx',
-      result: {
-        EvaluationResult: {
-          'mint:0': {
-            memory: 585_506,
-            steps: 147_083_646,
-          },
-        },
-      },
+      result: { EvaluationResult: { 'mint:0': { memory: 585_506, steps: 147_083_646 } } },
       reflection: { id: expect.any(String) },
     },
   },
   {
+    id: 'utils-txs-evaluate-multi-purpose_a6cb628e30af',
     testName: 'utils/txs/evaluate multi purpose',
     endpoints: ['utils/txs/evaluate'],
     postBody:
@@ -36,20 +31,15 @@ export default [
       methodname: 'EvaluateTx',
       result: {
         EvaluationResult: {
-          'spend:0': {
-            memory: 8994,
-            steps: 3_193_105,
-          },
-          'mint:0': {
-            memory: 713_992,
-            steps: 180_490_034,
-          },
+          'spend:0': { memory: 8994, steps: 3_193_105 },
+          'mint:0': { memory: 713_992, steps: 180_490_034 },
         },
       },
       reflection: { id: expect.any(String) },
     },
   },
   {
+    id: 'utils-txs-evaluate-no-script_a6cb628e30af',
     testName: 'utils/txs/evaluate no script',
     endpoints: ['utils/txs/evaluate'],
     postBody:
@@ -60,13 +50,12 @@ export default [
       version: '1.0',
       servicename: 'ogmios',
       methodname: 'EvaluateTx',
-      result: {
-        EvaluationResult: {},
-      },
+      result: { EvaluationResult: {} },
       reflection: { id: expect.any(String) },
     },
   },
   {
+    id: 'utils-txs-evaluate-fails-to-evaluate-incompatible-era_a6cb628e30af',
     testName: 'utils/txs/evaluate - fails to evaluate - incompatible era',
     endpoints: ['utils/txs/evaluate'],
     postBody:
@@ -82,6 +71,7 @@ export default [
     },
   },
   {
+    id: 'utils-txs-evaluate-fails-client-fault-to-submit-on-ill-formed-tx_a6cb628e30af',
     testName: 'utils/txs/evaluate - fails (client fault) to submit on ill-formed tx',
     endpoints: ['utils/txs/evaluate'],
     postBody: '80',
@@ -99,6 +89,7 @@ export default [
     },
   },
   {
+    id: 'utils-txs-evaluate-fails-client-fault-to-submit-on-ill-formed-tx-not-base64-16_a6cb628e30af',
     testName:
       'utils/txs/evaluate - fails (client fault) to submit on ill-formed tx (not base64/16)',
     endpoints: ['utils/txs/evaluate'],

@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'scripts-hash-cbor_1edd774b7bac',
     testName: 'scripts/:hash/cbor',
     endpoints: ['scripts/8d73f125395466f1d68570447e4f4b87cd633c6728f3802b2dcfca20/cbor'],
     response: {

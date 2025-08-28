@@ -2,19 +2,18 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'governance-drep-key-hash-delegators_8c2e3705a198',
     testName: 'governance drep keyHash delegators',
     endpoints: [
       'governance/dreps/drep1df2uxemkj2j7gtwmj84455jv523kne57e8956v9sywu9jaq57f4/delegators',
       'governance/dreps/drep1yf49tsm8w6f2tepdmwg7kkjjfj32x60xnmyuknfskq3mskgfvuvhp/delegators', // CIP129 id
     ],
     response: expect.arrayContaining([
-      {
-        address: expect.toBeStakeAddress(),
-        amount: expect.toBeAdaQuantity(),
-      },
+      { address: expect.toBeStakeAddress(), amount: expect.toBeAdaQuantity() },
     ]),
   },
   {
+    id: 'governance-drep-script-hash-delegators_9650a69fcaf2',
     testName: 'governance drep scriptHash delegators',
     endpoints: [
       'governance/dreps/drep_script1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhqu0c4hhj/delegators',
@@ -48,26 +47,23 @@ export default [
     ],
   },
   {
+    id: 'governance-drep-always-no-confidence-delegators_1faca8a60c77',
     testName: 'governance drep_always_no_confidence delegators',
     endpoints: ['governance/dreps/drep_always_no_confidence/delegators'],
     response: expect.arrayContaining([
-      {
-        amount: expect.toBeAssetQuantity(),
-        address: expect.toBeStakeAddress(),
-      },
+      { amount: expect.toBeAssetQuantity(), address: expect.toBeStakeAddress() },
     ]),
   },
   {
+    id: 'governance-drep-always-abstain-delegators_2bdf5256ee3d',
     testName: 'governance drep_always_abstain delegators',
     endpoints: ['governance/dreps/drep_always_abstain/delegators'],
     response: expect.arrayContaining([
-      {
-        amount: expect.toBeAssetQuantity(),
-        address: expect.toBeStakeAddress(),
-      },
+      { amount: expect.toBeAssetQuantity(), address: expect.toBeStakeAddress() },
     ]),
   },
   {
+    id: 'governance-delegator-cleared-out-after-retiring-and-registering-again_220b12e7aa08',
     testName: 'governance delegator cleared out after retiring and registering again',
     endpoints: [
       'governance/dreps/drep1ytvd8c8wj7p8vypgazgevngkvxj97rh4hg8wpjf0mhvxwngmswgym/delegators',

@@ -8,6 +8,7 @@ const TX_CBOR_WITH_SPENT_UTXO =
 
 export default [
   {
+    id: 'utils-txs-evaluate_a6cb628e30af',
     testName: 'utils/txs/evaluate',
     endpoints: ['utils/txs/evaluate'],
     postBody: TX_CBOR,
@@ -17,15 +18,12 @@ export default [
       version: '1.0',
       servicename: 'ogmios',
       methodname: 'EvaluateTx',
-      result: {
-        EvaluationResult: {
-          'spend:0': { memory: 1_765_011, steps: 384791603 },
-        },
-      },
+      result: { EvaluationResult: { 'spend:0': { memory: 1_765_011, steps: 384791603 } } },
       reflection: { id: expect.any(String) },
     },
   },
   {
+    id: 'utils-txs-evaluate-with-spent-utxo_a6cb628e30af',
     testName: 'utils/txs/evaluate with spent utxo',
     endpoints: ['utils/txs/evaluate'],
     postBody: TX_CBOR_WITH_SPENT_UTXO,
@@ -51,6 +49,7 @@ export default [
     },
   },
   {
+    id: 'utils-txs-evaluate-b64_a6cb628e30af',
     testName: 'utils/txs/evaluate b64',
     endpoints: ['utils/txs/evaluate'],
     postBody:
@@ -61,11 +60,7 @@ export default [
       version: '1.0',
       servicename: 'ogmios',
       methodname: 'EvaluateTx',
-      result: {
-        EvaluationResult: {
-          'spend:0': { memory: 1_765_011, steps: 384791603 },
-        },
-      },
+      result: { EvaluationResult: { 'spend:0': { memory: 1_765_011, steps: 384791603 } } },
       reflection: { id: expect.any(String) },
     },
   },

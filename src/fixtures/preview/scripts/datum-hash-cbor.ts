@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'scripts-datum-hash-cbor-random-datum_de787d7b603f',
     testName: 'scripts/datum/:hash/cbor - random datum',
     endpoints: [
       'scripts/datum/40ee7fb2e3eee29a0a83551a9925fd10cfed6b6fc8a5c5226b872e9ab65e5481/cbor',
@@ -9,15 +10,15 @@ export default [
     },
   },
   {
+    id: 'scripts-datum-hash-cbor_eac4d8ca7241',
     testName: 'scripts/datum/:hash/cbor',
     endpoints: [
       'scripts/datum/9a977f5c5e80185295efb7cecc28513979666242c9ddab7822ff379c7c74dbbb/cbor',
     ],
-    response: {
-      cbor: '9f0000000000ff',
-    },
+    response: { cbor: '9f0000000000ff' },
   },
   {
+    id: 'scripts-datum-hash-cbor-redeemer-from-redeemer-data-table_6f9e62817e09',
     testName: 'scripts/datum/:hash/cbor - redeemer (from redeemer_data table)',
     endpoints: [
       'scripts/datum/0041bf96b13f74bcf6fa9c12aa53a5a4be5ce82d755b578d8cb8131331f5de9a/cbor',

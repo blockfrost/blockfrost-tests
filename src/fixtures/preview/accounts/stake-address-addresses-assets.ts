@@ -8,8 +8,8 @@ const paginationFixtures = getPaginationFixtures(`accounts/${bf_stake_address}/a
 export default [
   ...paginationFixtures,
   {
+    id: 'accounts-stake-address-addresses-assets-bf-account_4f53cda18c2b',
     testName: 'accounts/:stake_address/addresses/assets - BF account',
-
     endpoints: [
       `accounts/${bf_stake_address}/addresses/assets`,
       `accounts/${bf_stake_address}/addresses/assets?order=asc`,
@@ -29,14 +29,8 @@ export default [
         unit: '65d08640ec164353832b2425a3b1895c1c3fb7b461c67082e7f6e79946696e616e636542696e6172696573434950323576325465737430',
         quantity: '1000000',
       },
-      {
-        unit: 'e31c1656c2e6d1766187ed2d1f7340c47b0c4f191fb2363142ddb42f',
-        quantity: '1000000',
-      },
-      {
-        unit: '10c6c46f8e48850fcb416745e3fdbe35bacb80bb560d6cb31889cc00',
-        quantity: '1000000',
-      },
+      { unit: 'e31c1656c2e6d1766187ed2d1f7340c47b0c4f191fb2363142ddb42f', quantity: '1000000' },
+      { unit: '10c6c46f8e48850fcb416745e3fdbe35bacb80bb560d6cb31889cc00', quantity: '1000000' },
       {
         unit: '524311279cd7fde1c26d6c4b4f58f176d9bdd66d767700fc46a5ebed48656c6c6f4e4654',
         quantity: '1',
@@ -420,6 +414,7 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-addresses-assets-generic-stake-address-without-tokens_022cca69a101',
     testName: 'accounts/:stake_address/addresses/assets - generic stake address without tokens',
     endpoints: [
       'accounts/stake_test1ur2pejlgfqa5e4stqg529tqj06k6gamweaawgphvewkdgtqqkuwlr/addresses/assets',
@@ -427,11 +422,13 @@ export default [
     response: [],
   },
   {
+    id: 'accounts-stake-address-non-valid-account_ea7670c3d362',
     testName: 'accounts/:stake_address - non-valid account',
     response: error_400_accounts,
     endpoints: ['accounts/stake1kek/addresses/assets'],
   },
   {
+    id: 'accounts-stake-address-valid-not-on-chain-account_39b0054d65f0',
     testName: 'accounts/:stake_address - valid not on-chain account',
     response: error_404,
     endpoints: [
@@ -439,6 +436,7 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-addresses-assets-valid-not-on-chain-account_39b0054d65f0',
     testName: 'accounts/:stake_address/addresses/assets - valid not on-chain account',
     response: error_404,
     endpoints: [

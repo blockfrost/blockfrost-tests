@@ -7,13 +7,13 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'assets-asset-txs-djed-many-txs_666025dde76b',
     testName: 'assets/:asset/txs - DJED many txs',
     endpoints: [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/txs',
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/txs?order=asc',
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/txs?count=23&page=1&order=asc',
     ],
-
     response: [
       '44c572ccad7ac911bdaf0a46ce3758ccf5da408b79ce896b1dd2a31cb1c1c57d',
       'dff7528f4f9306dad36429dde693fec1142f1cc18509bbe65d38bfa4ee15e128',
@@ -41,12 +41,12 @@ export default [
     ],
   },
   {
+    id: 'assets-asset-txs-djed-many-txs-desc_9ea843e5fd14',
     testName: 'assets/:asset/txs - DJED many txs DESC',
     endpoints: [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/txs?count=23&page=1&order=desc',
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/txs?order=desc',
     ],
-
     response: [
       '90c01a3789a2788cf3da3b320d50c9ef2fc851b21dde328f9ed967f70c92f920',
       '9d7f5780a98f60ea4903d5443742aa164933166cddb64523856624e8d8f70e2b',

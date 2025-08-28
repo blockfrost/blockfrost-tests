@@ -2,6 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'epochs-latest_4d8d64a3e146',
     testName: 'epochs/latest',
     endpoints: ['epochs/latest'],
     response: {

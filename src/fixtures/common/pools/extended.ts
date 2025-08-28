@@ -21,18 +21,10 @@ export default [
       for (const poolExtendedData of poolsExtendedResponse) {
         const [poolResponse, poolMetadataResponse] = await Promise.all([
           gotClient
-            .get(`pools/${poolExtendedData.pool_id}`, {
-              timeout: {
-                request: 30000,
-              },
-            })
+            .get(`pools/${poolExtendedData.pool_id}`, { timeout: { request: 30000 } })
             .json<Responses['pool']>(),
           gotClient
-            .get(`pools/${poolExtendedData.pool_id}/metadata`, {
-              timeout: {
-                request: 30000,
-              },
-            })
+            .get(`pools/${poolExtendedData.pool_id}/metadata`, { timeout: { request: 30000 } })
             .json<Responses['pool_metadata']>()
             .catch(error => {
               if (error instanceof BlockfrostServerError && error.status_code === 404) {

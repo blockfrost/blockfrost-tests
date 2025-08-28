@@ -7,6 +7,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'epochs-number-stakes-pool-queryparams-generic-pool_0c869a37cba6',
     testName: 'epochs/:number/stakes/pool?queryparams generic pool',
     endpoints: [
       'epochs/242/stakes/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy',
@@ -162,10 +163,7 @@ export default [
         stake_address: 'stake1u9y3qt57glwuyl5gmhtf07jfcmn8u2xs9sa2vy4zhegprdqvugs8v',
         amount: '7821870243',
       },
-      {
-        stake_address: 'stake1u9ylzsgxaa6xctf4juup682ar3juj85n8tx3hthnljg47zctvm3rc',
-        amount: '0',
-      },
+      { stake_address: 'stake1u9ylzsgxaa6xctf4juup682ar3juj85n8tx3hthnljg47zctvm3rc', amount: '0' },
       {
         stake_address: 'stake1u99pjll22qd04nltp5waq7d5h6yfzyj9yxyrcevsdy4028cfr267r',
         amount: '2448333957',
@@ -210,10 +208,7 @@ export default [
         stake_address: 'stake1u9w9u7nnxgwq0qj0muckv7zdyxtc2tr9udlhhkgm3smc8jscmzt22',
         amount: '1750548329',
       },
-      {
-        stake_address: 'stake1u90lfvdwmqqlngh6mtzl63pz6u98uv06p49fg80d36c52cgpd2hws',
-        amount: '0',
-      },
+      { stake_address: 'stake1u90lfvdwmqqlngh6mtzl63pz6u98uv06p49fg80d36c52cgpd2hws', amount: '0' },
       {
         stake_address: 'stake1u9jyw6e97pguykpn9kw6jsrvq3x42tehhhzld9vlvhg6ecsw0k3u8',
         amount: '11895546866',
@@ -350,10 +345,7 @@ export default [
         stake_address: 'stake1ux3u6x5cs388djqz6awnyuvez2f6n8jzjhqq59s4yxhm8jskeh0t9',
         amount: '1102182',
       },
-      {
-        stake_address: 'stake1uxjfwrj2k29wv77q4rzlxu0jvsr5dcdyx3crl5f2mnx3agcnzd5vx',
-        amount: '0',
-      },
+      { stake_address: 'stake1uxjfwrj2k29wv77q4rzlxu0jvsr5dcdyx3crl5f2mnx3agcnzd5vx', amount: '0' },
       {
         stake_address: 'stake1ux4vspfvwuus9uwyp5p3f0ky7a30jq5j80jxse0fr7pa56sgn6kha',
         amount: '1975859151626',
@@ -417,6 +409,7 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-stakes-pool-queryparams-page-1-best-pool-ever_34eb1a7fbe26',
     testName: 'epochs/:number/stakes/pool?queryparams page 1 best pool ever',
     endpoints: [
       'epochs/242/stakes/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?page=1&count=2',
@@ -433,6 +426,7 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-stakes-pool-queryparams-page-2-best-pool-ever_573eb49e78f2',
     testName: 'epochs/:number/stakes/pool?queryparams page 2 best pool ever',
     endpoints: [
       'epochs/242/stakes/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?page=2&count=2',
@@ -449,6 +443,8 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-stakes-pool-queryparams-generic-new-old-and-expired-pools-without-active-delegators-for-that-epoch_436885b96a7f',
+
     testName:
       'epochs/:number/stakes/pool?queryparams generic new, old and expired pools without active delegators for that epoch',
     endpoints: [

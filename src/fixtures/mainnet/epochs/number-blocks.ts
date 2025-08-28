@@ -5,6 +5,7 @@ const paginationFixtures = getPaginationFixtures('epochs/123/blocks');
 export default [
   ...paginationFixtures,
   {
+    id: 'epochs-number-blocks-queryparams-first-blocks-generic-byron-epoch_38950d09cab0',
     testName: 'epochs/:number/blocks?queryparams first blocks generic byron epoch',
     endpoints: ['epochs/123/blocks?count=2'],
     response: [
@@ -13,6 +14,7 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-blocks-queryparams-last-blocks-generic-byron-epoch_b7676ba66e29',
     testName: 'epochs/:number/blocks?queryparams last blocks generic byron epoch',
     endpoints: ['epochs/123/blocks?count=2&order=desc'],
     response: [
@@ -21,6 +23,7 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-blocks-queryparams-last-blocks-generic-shelley-epoch_d000ba3a47bd',
     testName: 'epochs/:number/blocks?queryparams last blocks generic shelley epoch',
     endpoints: ['epochs/244/blocks?page=215'],
     response: [
@@ -118,6 +121,7 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-blocks-queryparams-first-blocks-inverted-generic-shelley-epoch_70b4c663de9b',
     testName: 'epochs/:number/blocks?queryparams first blocks inverted generic shelley epoch',
     endpoints: ['epochs/244/blocks?page=215&order=desc'],
     response: [
