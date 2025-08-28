@@ -416,7 +416,6 @@ export default [
   {
     id: 'accounts-stake-address-addresses-assets-generic-stake-address-without-tokens_022cca69a101',
     testName: 'accounts/:stake_address/addresses/assets - generic stake address without tokens',
-
     endpoints: [
       'accounts/stake_test1ur2pejlgfqa5e4stqg529tqj06k6gamweaawgphvewkdgtqqkuwlr/addresses/assets',
     ],
@@ -432,7 +431,6 @@ export default [
     id: 'accounts-stake-address-valid-not-on-chain-account_39b0054d65f0',
     testName: 'accounts/:stake_address - valid not on-chain account',
     response: error_404,
-
     endpoints: [
       'accounts/stake_test1upzvx3z7hlhjrvzzsu4gxknwjdjmhz08x3x7ddmhfw445dc7u96sn/addresses/assets',
     ],
@@ -441,7 +439,6 @@ export default [
     id: 'accounts-stake-address-addresses-assets-valid-not-on-chain-account_39b0054d65f0',
     testName: 'accounts/:stake_address/addresses/assets - valid not on-chain account',
     response: error_404,
-
     endpoints: [
       'accounts/stake_test1upzvx3z7hlhjrvzzsu4gxknwjdjmhz08x3x7ddmhfw445dc7u96sn/addresses/assets',
     ],

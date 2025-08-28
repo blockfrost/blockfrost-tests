@@ -6,7 +6,6 @@ export default [
   {
     id: 'pools-pool-id-best-pool_0676cad3a8a4',
     testName: 'pools/pool_id - best pool',
-
     endpoints: [
       'pools/pool13la5erny3srx9u4fz9tujtl2490350f89r4w4qjhk0vdjmuv78v',
       'pools/8ffb4c8e648c0662f2a91157c92feaa95f1a3d2728eaea8257b3d8d9',
@@ -50,7 +49,6 @@ export default [
   {
     id: 'pools-pool-id-pool-with-more-owners_679f988054e8',
     testName: 'pools/pool_id - pool with more owners',
-
     endpoints: [
       'pools/pool12r7sxy225v94m6qcpnzt7g85axrmrg9gc05ykplzkwu7um36dns',
       'pools/50fd03114aa30b5de8180cc4bf20f4e987b1a0a8c3e84b07e2b3b9ee',
@@ -84,7 +82,6 @@ export default [
   {
     id: 'pools-pool-id-pool-with-invalid-reward-stake-address_966db554b259',
     testName: 'pools/pool_id - pool with invalid reward stake address',
-
     endpoints: [
       'pools/pool1547tew8vmuj0g6vj3k5jfddudextcw6hsk2hwgg6pkhk7lwphe6',
       'pools/a57cbcb8ecdf24f469928da924b5bc6e4cbc3b57859577211a0daf6f',
@@ -115,7 +112,6 @@ export default [
   {
     id: 'pools-pool-id-multiple-times-deregistered-pool_b4920a976b87',
     testName: 'pools/pool_id - multiple times deregistered pool',
-
     endpoints: [
       'pools/pool1e0zq88g3duznzfenn08larmcnnarqxl7wluapazcft6jsssexch',
       'pools/cbc4039d116f053127339bcffe8f789cfa301bfe77f9d0f4584af528',

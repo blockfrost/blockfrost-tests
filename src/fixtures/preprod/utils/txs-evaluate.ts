@@ -101,7 +101,6 @@ export default [
 
     testName:
       'utils/txs/evaluate - fails (client fault) to submit on ill-formed tx (not base64/16)',
-
     endpoints: ['utils/txs/evaluate'],
 
     postBody:

@@ -305,7 +305,6 @@ export default [
 
     testName:
       'txs/:tx/delegations - generic shelley with MULTIPLE delegation, stake certs and pool updates',
-
     endpoints: ['txs/a3d6f2627a56fe7921eeda546abfe164321881d41549b7f2fbf09ea0b718d758/delegations'],
     response: [
       {

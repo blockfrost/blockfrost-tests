@@ -22,7 +22,6 @@ export default [
 
     testName:
       'governance cip129 drep (same as legacy drep_script16pxnn38ykshfahwmkaqmke3kdqaksg4w935d7uztvh8y5sh6f6d)',
-
     endpoints: ['governance/dreps/drep1y0gy6wwyuj6za8kamwm5rwmxxe5rk6pz4ckx3hmsfdjuujsr70shz'],
     response: {
       drep_id: 'drep1y0gy6wwyuj6za8kamwm5rwmxxe5rk6pz4ckx3hmsfdjuujsr70shz',

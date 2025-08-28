@@ -9,7 +9,6 @@ export default [
   {
     id: 'pools-pool-id-blocks-best-pool_a99202822a8b',
     testName: 'pools/pool_id/blocks - best pool',
-
     endpoints: [
       'pools/pool16h8ugt8k0a4kxa5g6x062zjrgfjc7cehpw0ze8374axlul76932/blocks',
       'pools/d5cfc42cf67f6b637688d19fa50a4342658f63370b9e2c9e3eaf4dfe/blocks',
@@ -120,7 +119,6 @@ export default [
   {
     id: 'pools-pool-id-blocks-querystring-best-pool_b521c4370a68',
     testName: 'pools/:pool_id/blocks?querystring - best pool',
-
     endpoints: [
       'pools/pool16h8ugt8k0a4kxa5g6x062zjrgfjc7cehpw0ze8374axlul76932/blocks?count=2&page=2',
       'pools/d5cfc42cf67f6b637688d19fa50a4342658f63370b9e2c9e3eaf4dfe/blocks?count=2&page=2',

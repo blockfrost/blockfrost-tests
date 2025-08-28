@@ -9,7 +9,6 @@ export default [
   {
     id: 'assets-asset-history-ada-usdc-lp_0fd327366960',
     testName: 'assets/:asset/history - ADA_USDC_LP',
-
     endpoints: [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4c50/history',
     ],
@@ -99,7 +98,6 @@ export default [
   {
     id: 'assets-asset-history-queryparams-ada-tedy-lp_4ced556ebe3b',
     testName: 'assets/:asset/history?queryparams - ADA_TEDY_LP',
-
     endpoints: [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595f4c50/history?count=1',
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595f4c50/history?count=1&page=1',

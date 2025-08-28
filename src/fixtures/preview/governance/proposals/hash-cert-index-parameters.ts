@@ -4,7 +4,6 @@ export default [
   {
     id: 'governance-proposal-parameter-change-parameters_79f333ca9918',
     testName: 'governance proposal parameter_change parameters',
-
     endpoints: [
       'governance/proposals/95af8608dc7aaf5c73025066b509a2c11c829f2984009ac92e7053d123fbce57/0/parameters',
     ],
@@ -92,7 +91,6 @@ export default [
   {
     id: 'governance-proposal-parameter-change-parameters-2_5de7a39fbd38',
     testName: 'governance proposal parameter_change parameters 2',
-
     endpoints: [
       'governance/proposals/4d5f4b83fecbc79767c34109b065119b28902f97b5a3f22b73ec0688a9eef86b/0/parameters',
     ],
@@ -162,7 +160,6 @@ export default [
 
     testName:
       'governance hard_fork_initiation, new_committee, new_constitution, info_action, treasury_withdrawals, new_constitution parameters (404)',
-
     endpoints: [
       'governance/proposals/86cc92f950aa991e0dc5a18f1fd71eb9bcfe2b1bc86c022b853789f95c3cf260/0/parameters',
       'governance/proposals/5feb12419d2702e11f91371194d104ce5a469f5f7f35555676503c6d523466c4/0/parameters',

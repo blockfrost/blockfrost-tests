@@ -2,7 +2,6 @@ export default [
   {
     id: 'blocks-hash-or-number-txs-queryparams-generic-shelley-desc_4f5c9f304918',
     testName: 'blocks/:hash_or_number/txs?queryparams - generic shelley desc',
-
     endpoints: [
       'blocks/d452532fd3bfb678548f00c210b639d31cecc7d5d3b3b7d8151ce7cc25dfbb15/txs?order=desc&count=2&page=2',
       'blocks/1846333/txs?order=desc&count=2&page=2',
@@ -15,7 +14,6 @@ export default [
   {
     id: 'blocks-hash-or-number-txs-queryparams-generic-shelley_e464ab26b689',
     testName: 'blocks/:hash_or_number/txs?queryparams - generic shelley',
-
     endpoints: [
       'blocks/d452532fd3bfb678548f00c210b639d31cecc7d5d3b3b7d8151ce7cc25dfbb15/txs?order=asc&count=2&page=2',
       'blocks/1846333/txs?order=asc&count=2&page=2',
@@ -30,7 +28,6 @@ export default [
   {
     id: 'blocks-hash-or-number-txs-generic-shelley_e9621942a54b',
     testName: 'blocks/:hash_or_number/txs - generic shelley',
-
     endpoints: [
       'blocks/d452532fd3bfb678548f00c210b639d31cecc7d5d3b3b7d8151ce7cc25dfbb15/txs',
       'blocks/1846333/txs',

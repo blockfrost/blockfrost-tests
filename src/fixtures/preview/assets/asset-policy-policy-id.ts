@@ -9,7 +9,6 @@ export default [
   {
     id: 'assets-policy-policy-id-queryparams-general-asset_4f53cda18c2b',
     testName: 'assets/policy/:policy_id?queryparams - general asset',
-
     endpoints: [
       `assets/policy/${policyId}`,
       `assets/policy/${policyId}?page=1`,

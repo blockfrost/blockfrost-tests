@@ -9,7 +9,6 @@ export default [
   {
     id: 'governance-drep-votes_e3ea2ce00518',
     testName: 'governance drep votes',
-
     endpoints: [
       'governance/dreps/drep_script1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhqu0c4hhj/votes',
       'governance/dreps/drep1ydmraa6kv8cvmry059v608tehl50nfmg0z764lmsqkvwurs40sw2z/votes', //CIP129 id

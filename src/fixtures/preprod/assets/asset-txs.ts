@@ -9,7 +9,6 @@ export default [
   {
     id: 'assets-asset-txs-cont_a5a841d95af9',
     testName: 'assets/:asset/txs - CONT',
-
     endpoints: [
       'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/txs',
       'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/txs?order=asc',
@@ -121,7 +120,6 @@ export default [
   {
     id: 'assets-asset-txs-queryparams-cont-desc_ae309f060f9f',
     testName: 'assets/:asset/txs?queryparams -  CONT desc',
-
     endpoints: [
       'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/txs?order=desc',
       'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/txs?count=100&page=1&order=desc',

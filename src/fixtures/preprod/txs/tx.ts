@@ -361,7 +361,6 @@ export default [
 
     testName:
       'txs/:tx - shelley tx of token mint with ridiculous hereafter out of range (Thu, 28 Jul 5289796 19:23:29 +0000) value',
-
     endpoints: ['txs/cff024d4d806cd7e934e188363a920630ba543482ef73439dc1ad4b47e16711f'],
     response: {
       hash: 'cff024d4d806cd7e934e188363a920630ba543482ef73439dc1ad4b47e16711f',

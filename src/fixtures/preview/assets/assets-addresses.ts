@@ -28,7 +28,6 @@ export default [
   {
     id: 'assets-addresses-valid-not-on-chain-asset_3ad55423382f',
     testName: 'assets addresses - valid not on-chain asset',
-
     endpoints: [
       'assets/ddd01d9531fcc25e3ca4b6429318c2cc374dbdbcf5e99c1c1e5da1ff444f4e545350414d/addresses',
     ],

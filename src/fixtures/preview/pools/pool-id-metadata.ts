@@ -4,7 +4,6 @@ export default [
   {
     id: 'pools-pool-id-metadata-pool-with-multiple-metadata-updates-in-one-update-upstr_cdf918758069',
     testName: 'pools/:pool_id/metadata - pool with multiple metadata updates in one update UPSTR',
-
     endpoints: [
       'pools/pool1407hpuvtp9ww8s5mt53ear7062j463mvwhnypurlcask7djg3ae/metadata',
       'pools/abfd70f18b095ce3c29b5d239e8fcfd2a55d476c75e640f07fc7616f/metadata',
@@ -23,7 +22,6 @@ export default [
   {
     id: 'pools-pool-id-metadata-topo_ef37a2ac0676',
     testName: 'pools/pool_id/metadata - TOPO',
-
     endpoints: [
       'pools/pool18x0rtv0vznym7cczsunqcfs5atrve4dfcavfmpe7wkg8ga4urve/metadata',
       'pools/pool18x0rtv0vznym7cczsunqcfs5atrve4dfcavfmpe7wkg8ga4urve/metadata',
@@ -42,7 +40,6 @@ export default [
   {
     id: 'pools-pool-id-metadata-best-pool_82ab39e4d4df',
     testName: 'pools/pool_id/metadata - best pool',
-
     endpoints: [
       'pools/pool1fw9mq9eyrp5yydl3njau2568jal62rx5f8anp2llt0e5s3pl3py/metadata',
       'pools/4b8bb0172418684237f19cbbc55347977fa50cd449fb30abff5bf348/metadata',

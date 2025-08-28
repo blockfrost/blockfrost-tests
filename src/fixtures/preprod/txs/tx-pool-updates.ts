@@ -2,7 +2,6 @@ export default [
   {
     id: 'txs-tx-pool-updates-generic-shelley-with-pool-certs_2631cae8298b',
     testName: 'txs/:tx/pool_updates - generic shelley with pool certs',
-
     endpoints: [
       'txs/6d8f5d067eb0d4cb0569514551ac83ae9c7a532e4b8e2d23126252cf443ab19e/pool_updates',
     ],
@@ -43,7 +42,6 @@ export default [
 
     testName:
       'txs/:tx/pool_updates - shelley with pool update which does not have onchain reward address',
-
     endpoints: [
       'txs/a3d6f2627a56fe7921eeda546abfe164321881d41549b7f2fbf09ea0b718d758/pool_updates',
     ],
@@ -137,7 +135,6 @@ export default [
   {
     id: 'txs-tx-generic-shelley-with-multiple-delegation-stake-certs-and-pool-updates_bc98fc67fe79',
     testName: 'txs/:tx - generic shelley with MULTIPLE delegation, stake certs and pool updates',
-
     endpoints: [
       'txs/a3d6f2627a56fe7921eeda546abfe164321881d41549b7f2fbf09ea0b718d758/pool_updates',
     ],

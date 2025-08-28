@@ -9,7 +9,6 @@ export default [
   {
     id: 'addresses-address-txs-generic-shelley-address_210e960f5805',
     testName: 'addresses/:address/txs generic shelley address',
-
     endpoints: [
       'addresses/addr_test1qqge9dt82fkvch0tqr44zf9msc4x70ualsdqmr7s7fhflzmqh5jv6xejejee287zpkfpaqt7yk6fk46xsfppgnece2nqtfhkjt/txs?page=22&count=6',
       'addresses/addr_test1qqge9dt82fkvch0tqr44zf9msc4x70ualsdqmr7s7fhflzmqh5jv6xejejee287zpkfpaqt7yk6fk46xsfppgnece2nqtfhkjt/txs?page=22&count=6&order=asc',
@@ -28,7 +27,6 @@ export default [
   {
     id: 'addresses-address-txs-generic-dormant-shelley-address-desc_3a7856d9b740',
     testName: 'addresses/:address/txs generic dormant shelley address desc',
-
     endpoints: [
       'addresses/addr_test1qqge9dt82fkvch0tqr44zf9msc4x70ualsdqmr7s7fhflzmqh5jv6xejejee287zpkfpaqt7yk6fk46xsfppgnece2nqtfhkjt/txs?page=22&count=6&order=desc',
       'addresses/addr_vkh1zxft2e6jdnx9m6cqadgjfwux9fhnl80urgxcl58jd60ckt4g3w6/txs?page=22&count=6&order=desc',
@@ -45,7 +43,6 @@ export default [
   {
     id: 'addresses-address-txs-generic-payment-cred-1_a8e5c9c0ea73',
     testName: 'addresses/:address/txs generic payment_cred 1',
-
     endpoints: [
       'addresses/addr_vkh12ux0cq59haf8ydty5577ztxzh9qcvhjn7xxaj4xr55esx49uztj/txs?order=asc&page=128',
       'addresses/addr_vkh12ux0cq59haf8ydty5577ztxzh9qcvhjn7xxaj4xr55esx49uztj/txs?page=128',
@@ -156,7 +153,6 @@ export default [
   {
     id: 'addresses-address-txs-generic-payment-cred-2_ba6a4f5de054',
     testName: 'addresses/:address/txs generic payment_cred 2',
-
     endpoints: [
       'addresses/addr_vkh12ux0cq59haf8ydty5577ztxzh9qcvhjn7xxaj4xr55esx49uztj/txs?order=asc&page=12800&count=1',
     ],

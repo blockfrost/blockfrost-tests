@@ -6,7 +6,6 @@ export default [
   {
     id: 'pools-pool-id-topo-pool_d6e4715892f3',
     testName: 'pools/pool_id - TOPO pool',
-
     endpoints: [
       'pools/399e35b1ec14c9bf630287260c2614eac6ccd5a9c7589d873e759074',
       'pools/pool18x0rtv0vznym7cczsunqcfs5atrve4dfcavfmpe7wkg8ga4urve',
@@ -37,7 +36,6 @@ export default [
   {
     id: 'pools-pool-id-pool-with-more-owners_3f6997e3c636',
     testName: 'pools/pool_id - pool with more owners',
-
     endpoints: [
       'pools/25f66fb1ecdff14df811542de1355650cd9e7e96dd281874521213d7',
       'pools/pool1yhmxlv0vmlc5m7q32sk7zd2k2rxeul5km55psazjzgfawzycpf4',
@@ -72,7 +70,6 @@ export default [
   {
     id: 'pools-pool-id-pool-with-invalid-reward-stake-address_874b1735d84c',
     testName: 'pools/pool_id - pool with invalid reward stake address',
-
     endpoints: [
       'pools/pool1grvqd4eu354qervmr62uew0nsrjqedx5kglldeqr4c29vv59rku',
       // 'pools/40d806d73c8d2a0c8d9b1e95ccb9f380e40cb4d4b23ff6e403ae1456',
@@ -103,7 +100,6 @@ export default [
   {
     id: 'pools-pool-id-multiple-times-deregistered-pool_bf237a8f6b25',
     testName: 'pools/pool_id - multiple times deregistered pool',
-
     endpoints: [
       'pools/pool1p73yrd7vzwkkjd2rff4g683smhlm3jkg45f2hwm79cke6uxxwq9',
       'pools/0fa241b7cc13ad6935434a6a8d1e30ddffb8cac8ad12abbb7e2e2d9d',
@@ -145,7 +141,6 @@ export default [
   {
     id: 'pools-pool-id-expired-pool_3f6997e3c636',
     testName: 'pools/:pool_id - expired pool',
-
     endpoints: [
       'pools/25f66fb1ecdff14df811542de1355650cd9e7e96dd281874521213d7',
       'pools/pool1yhmxlv0vmlc5m7q32sk7zd2k2rxeul5km55psazjzgfawzycpf4',
@@ -180,7 +175,6 @@ export default [
   {
     id: 'pools-pool-id-expired-pool-no-1-same-rewards-account_81b12b839c3e',
     testName: 'pools/:pool_id - expired pool no 1 - same rewards account',
-
     endpoints: [
       'pools/pool1nrh57s3qnflewm8vqs2gt3kdhr79kwgxfk6j0tfhrdspvkmhvce',
       'pools/98ef4f42209a7f976cec041485c6cdb8fc5b39064db527ad371b6016',
@@ -215,7 +209,6 @@ export default [
   {
     id: 'pools-pool-id-expired-pool-no-2-same-rewards-account_36b5917f9a90',
     testName: 'pools/:pool_id - expired pool no 2 - same rewards account',
-
     endpoints: [
       'pools/cc8f785dff1b122ef32ff11fad61526a5397b4e0f08986f74b0a45f5',
       'pools/pool1ej8hsh0lrvfzaue07y066c2jdffe0d8q7zycda6tpfzl262drtv',

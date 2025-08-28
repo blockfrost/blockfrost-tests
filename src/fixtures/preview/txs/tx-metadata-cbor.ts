@@ -2,7 +2,6 @@ export default [
   {
     id: 'txs-tx-metadata-cbor-generic-shelley-with-metadata-cbor_814e49f6bdd3',
     testName: 'txs/:tx/metadata/cbor - generic shelley with metadata cbor',
-
     endpoints: [
       'txs/27076b807853e8678c35bc668661021fed758a96899e715b6af746e0be849e92/metadata/cbor',
     ],
@@ -19,7 +18,6 @@ export default [
   {
     id: 'txs-tx-all-generic-shelley-with-no-data-blanks_b8b5078873b7',
     testName: 'txs/:tx/all - generic shelley with no data - blanks',
-
     endpoints: [
       'txs/d6f0e6c6d4d6ce4cb8ca0c72e10bf4cb1d95ca895a0c96b1997ad62afb3bcd09/withdrawals',
       'txs/d6f0e6c6d4d6ce4cb8ca0c72e10bf4cb1d95ca895a0c96b1997ad62afb3bcd09/mirs',

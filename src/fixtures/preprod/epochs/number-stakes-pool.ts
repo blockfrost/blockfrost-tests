@@ -9,7 +9,6 @@ export default [
   {
     id: 'epochs-number-stakes-pool-queryparams-generic-pool_66516d7917cf',
     testName: 'epochs/:number/stakes/pool?queryparams generic pool',
-
     endpoints: [
       'epochs/121/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v',
       'epochs/121/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v?page=1',
@@ -421,7 +420,6 @@ export default [
   {
     id: 'epochs-number-stakes-pool-queryparams-page-1-best-pool-ever_236a8c875e08',
     testName: 'epochs/:number/stakes/pool?queryparams page 1 best pool ever',
-
     endpoints: [
       'epochs/71/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v?page=1&count=2',
     ],
@@ -439,7 +437,6 @@ export default [
   {
     id: 'epochs-number-stakes-pool-queryparams-page-2-best-pool-ever_165bc9d8f176',
     testName: 'epochs/:number/stakes/pool?queryparams page 2 best pool ever',
-
     endpoints: [
       'epochs/71/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v?page=2&count=2',
     ],
@@ -455,7 +452,6 @@ export default [
 
     testName:
       'epochs/:number/stakes/pool?queryparams generic new, old and expired pools without active delegators for that epoch',
-
     endpoints: [
       'epochs/10/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v',
       'epochs/82/stakes/pool1dt5t2upg4mppj9y9trh6huq2qm8rcl86pqk6dmk04kfjg4e8ga6',

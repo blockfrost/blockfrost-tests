@@ -10,7 +10,6 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-with-3-pages-of-utxos-page-1_276c25170af9',
     testName: 'addresses/:address/utxos BF address with 3 pages of utxos, page=1',
-
     endpoints: [
       'addresses/addr_test1qzwuqsd70k70wcm8smxs6jw34r59r83ywm867t5nu3nutceksz8m2cq3qzq36wt37xengqnuweh8pmr4wrxqcavz996sj2cqw8/utxos',
       'addresses/addr_test1qzwuqsd70k70wcm8smxs6jw34r59r83ywm867t5nu3nutceksz8m2cq3qzq36wt37xengqnuweh8pmr4wrxqcavz996sj2cqw8/utxos?page=1',
@@ -1221,7 +1220,6 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-with-3-pages-of-utxos-page-3_3b0ac462947b',
     testName: 'addresses/:address/utxos BF address with 3 pages of utxos, page=3',
-
     endpoints: [
       'addresses/addr_test1qzwuqsd70k70wcm8smxs6jw34r59r83ywm867t5nu3nutceksz8m2cq3qzq36wt37xengqnuweh8pmr4wrxqcavz996sj2cqw8/utxos?page=3',
       'addresses/addr_test1qzwuqsd70k70wcm8smxs6jw34r59r83ywm867t5nu3nutceksz8m2cq3qzq36wt37xengqnuweh8pmr4wrxqcavz996sj2cqw8/utxos?page=3&count=100',
@@ -1244,7 +1242,6 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-without-tokens_22a40cddd8a0',
     testName: 'addresses/:address/utxos BF address without tokens',
-
     endpoints: [
       'addresses/addr_test1qp7e6ehqfskzywcswgmmsv9ajqw5hwhzxlm06er0q4fprlcts4rkp9pr85efml8k5h0f6sm62l9w0xlm9rnuzvaey8qqmlu9fp/utxos',
       'addresses/addr_vkh10kwkdczv9s3rkyrjx7urp0vsr49m4c3h7m7kgmc92ggl7recmtk/utxos',
@@ -1267,7 +1264,6 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-with-data-hash-and-normal-utxo-asc_f8ed3a2e362c',
     testName: 'addresses/:address/utxos BF address with data hash and normal utxo ASC',
-
     endpoints: [
       'addresses/addr_test1qpjtqlf5evmhd3zqy8gnldp7hu7cej7fs5nzqu7rnfn85xxaj2n6gf64mt0jesrug73dpqyj9prc7ytsmvcrlud25p2q9m97vy/utxos',
       'addresses/addr_vkh1vjc86dxtxamvgspp6ylmg04l8kxvhjv9ycs88su6veapszlcmsk/utxos',
@@ -1378,7 +1374,6 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-with-data-hash-and-normal-utxo-desc_a76e11d72c3f',
     testName: 'addresses/:address/utxos BF address with data hash and normal utxo DESC',
-
     endpoints: [
       'addresses/addr_test1qpjtqlf5evmhd3zqy8gnldp7hu7cej7fs5nzqu7rnfn85xxaj2n6gf64mt0jesrug73dpqyj9prc7ytsmvcrlud25p2q9m97vy/utxos?order=desc',
       'addresses/addr_vkh1vjc86dxtxamvgspp6ylmg04l8kxvhjv9ycs88su6veapszlcmsk/utxos?order=desc',
@@ -1507,7 +1502,6 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-with-token-but-with-lovelace-filter_68d6a2fdcbf9',
     testName: 'addresses/:address/utxos BF address with token but with lovelace filter',
-
     endpoints: [
       'addresses/addr_test1qq55vkc95wl7sg3tgwntcdsj95xu0dcv6fq2u0277vuyr8mlv3s9l8gzkmn7a0yztqtc2z23myduv4n0l842guj5m3pslqanxy/utxos/lovelace',
       'addresses/addr_vkh199r9kpdrhl5zy26r567rvy3dphrmwrxjgzhr6hhn8pqe7amw3h5/utxos/lovelace',
@@ -1530,7 +1524,6 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-that-had-a-specific-token-in-past-and-with-ada_9f6d2241ba56',
     testName: 'addresses/:address/utxos BF address that had a specific token in past and with ADA',
-
     endpoints: [
       'addresses/addr_test1qzhzquh95ux8s6c3crhmcnuhwycpmcgpmrj7dkna2g7e8yk0s2v84majm9we4n4gzjarlg7watg6au09eq22q5nfjrgs06d9x5/utxos/fa3eff2047fdf9293c5feef4dc85ce58097ea1c6da4845a35153518374494e4459',
     ],
@@ -1540,7 +1533,6 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-that-had-a-specific-token-in-past-no-ada_79004dcd33f6',
     testName: 'addresses/:address/utxos BF address that had a specific token in past / No ADA',
-
     endpoints: [
       'addresses/addr_test1qqg6a630r8lugmtha5ygvnngsatxpa4t7g8wqma9vc767lwerv4zq00vx9tyeee3wc73729qj7mmwm9dxm7r0v025qkskvnajp/utxos',
       'addresses/addr_vkh1zxhw5tcellzx6aldpzryu6y82es0d2ljpmsxlftx8khh6h0fv3c/utxos',
@@ -1550,7 +1542,6 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-with-some-token-empty-no-ada_2276c48d07f6',
     testName: 'addresses/:address/utxos BF address with some token empty / No ADA ',
-
     endpoints: [
       'addresses/addr_test1qqg6a630r8lugmtha5ygvnngsatxpa4t7g8wqma9vc767lwerv4zq00vx9tyeee3wc73729qj7mmwm9dxm7r0v025qkskvnajp/utxos/fa3eff2047fdf9293c5feef4dc85ce58097ea1c6da4845a35153518374494e4459',
       'addresses/addr_vkh1zxhw5tcellzx6aldpzryu6y82es0d2ljpmsxlftx8khh6h0fv3c/utxos/fa3eff2047fdf9293c5feef4dc85ce58097ea1c6da4845a35153518374494e4459',
@@ -1562,7 +1553,6 @@ export default [
 
     testName:
       'addresses/:address/utxos BF address with some token empty / No ADA - lovelace filter',
-
     endpoints: [
       'addresses/addr_test1qqg6a630r8lugmtha5ygvnngsatxpa4t7g8wqma9vc767lwerv4zq00vx9tyeee3wc73729qj7mmwm9dxm7r0v025qkskvnajp/utxos/lovelace',
       'addresses/addr_vkh1zxhw5tcellzx6aldpzryu6y82es0d2ljpmsxlftx8khh6h0fv3c/utxos/lovelace',
@@ -1573,7 +1563,6 @@ export default [
   {
     id: 'addresses-address-utxos-valid-on-chain-address-with-some-txs-0-utxos_87e7e2bab728',
     testName: 'addresses/:address/utxos  - valid on-chain address with some txs, 0 utxos',
-
     endpoints: [
       'addresses/addr_test1qqg6a630r8lugmtha5ygvnngsatxpa4t7g8wqma9vc767lwerv4zq00vx9tyeee3wc73729qj7mmwm9dxm7r0v025qkskvnajp/utxos',
     ],
@@ -1589,7 +1578,6 @@ export default [
     id: 'addresses-address-utxos-valid-not-on-chain-address_4172c95a0988',
     testName: 'addresses/:address/utxos - valid not on-chain address ',
     response: error_404,
-
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw/utxos',
     ],
@@ -1597,7 +1585,6 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-used-but-now-empty_cc1982b81213',
     testName: 'addresses/:address/utxos BF address - used but now empty',
-
     endpoints: [
       'addresses/addr_test1qqg6a630r8lugmtha5ygvnngsatxpa4t7g8wqma9vc767lwerv4zq00vx9tyeee3wc73729qj7mmwm9dxm7r0v025qkskvnajp/utxos',
       'addresses/addr_test1qqg6a630r8lugmtha5ygvnngsatxpa4t7g8wqma9vc767lwerv4zq00vx9tyeee3wc73729qj7mmwm9dxm7r0v025qkskvnajp/utxos/lovelace',

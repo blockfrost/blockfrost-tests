@@ -62,7 +62,6 @@ export default [
   {
     id: 'addresses-address-humongous-address-with-many-assets_9d53ab8090c7',
     testName: 'addresses/:address - humongous address with many assets',
-
     endpoints: [
       'addresses/addr_test1qqj3jkhct3qmnkta5l60y9wnuaxfemmlq3ee66aywwa89g343f8yzpwq3av7gauswp5ec7nj2e5fxve0nptaknn5904sj9ysa3',
     ],
@@ -94,7 +93,6 @@ export default [
   {
     id: 'addresses-address-biggest-address-with-most-assets_8944a451de44',
     testName: 'addresses/:address - biggest address with most assets',
-
     endpoints: [
       'addresses/addr_test1qqr585tvlc7ylnqvz8pyqwauzrdu0mxag3m7q56grgmgu7sxu2hyfhlkwuxupa9d5085eunq2qywy7hvmvej456flknswgndm3',
     ],
@@ -140,7 +138,6 @@ export default [
   {
     id: 'addresses-address-bf-address-used-but-now-empty_8dd32f84a8c0',
     testName: 'addresses/:address BF address - used but now empty',
-
     endpoints: [
       'addresses/addr_test1qrujnahmnm29rwj0x4u8lk6n748zrqwh6yg9gwmx9ddvrpa7t52n6f4qn453yelcangcspz3j5lywvllj7huzl34srgqg3ldgw',
     ],
@@ -156,7 +153,6 @@ export default [
   {
     id: 'addresses-address-bf-address-with-some-token_9d52d1afa0b1',
     testName: 'addresses/:address BF address with some token',
-
     endpoints: [
       'addresses/addr_test1qzttn9qfcwzd0c7whqv3p2ryynkktj9c45cgnjkq9n6tc9v6y6m63pymrzuxl6k0tq4tce9avm04wxvj6ayzs6nvx0mshk6rzv',
     ],
@@ -196,7 +192,6 @@ export default [
   {
     id: 'addresses-address-bf-address-without-tokens_76bcc30d2521',
     testName: 'addresses/:address BF address without tokens',
-
     endpoints: [
       'addresses/addr_test1qpxghn6cjkmawmxnufpvvc5kempxumyt9xv2tvzyswarmhenpjux68s5nrdttupgzq6wwg8m84kre34tlq8t2n2nxwqsxgf4vp',
     ],
@@ -221,7 +216,6 @@ export default [
   {
     id: 'addresses-address-valid-address-not-on-chain_4522081f4300',
     testName: 'addresses/:address - valid address not on-chain',
-
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw',
     ],
@@ -230,7 +224,6 @@ export default [
   {
     id: 'addresses-address-valid-address-not-on-chain-valid-not-on-chain-asset_157c9a43dd50',
     testName: 'addresses/:address - valid address not on-chain, valid not on-chain asset',
-
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw/utxos/f4988f549728dc76b58d7677849943cafee5385dc67e6c25f6aa901e506978656c54696c653235',
     ],
@@ -239,7 +232,6 @@ export default [
   {
     id: 'addresses-address-valid-address-not-on-chain-valid-on-chain-asset_58262ec3c5af',
     testName: 'addresses/:address - valid address not on-chain, valid on-chain asset',
-
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw/utxos/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f',
     ],
@@ -248,7 +240,6 @@ export default [
   {
     id: 'addresses-address-valid-on-chain-address-valid-not-on-chain-asset_283d93124563',
     testName: 'addresses/:address - valid on-chain address, valid not on-chain asset',
-
     endpoints: [
       'addresses/addr_test1qpxghn6cjkmawmxnufpvvc5kempxumyt9xv2tvzyswarmhenpjux68s5nrdttupgzq6wwg8m84kre34tlq8t2n2nxwqsxgf4vp/utxos/f4988f549728dc76b58d7677849943cafee5385dc67e6c25f6aa901e506978656c54696c653235',
     ],

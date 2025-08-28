@@ -4,7 +4,6 @@ export default [
   {
     id: 'governance-drep-key-hash-delegators_8c2e3705a198',
     testName: 'governance drep keyHash delegators',
-
     endpoints: [
       'governance/dreps/drep1df2uxemkj2j7gtwmj84455jv523kne57e8956v9sywu9jaq57f4/delegators',
       'governance/dreps/drep1yf49tsm8w6f2tepdmwg7kkjjfj32x60xnmyuknfskq3mskgfvuvhp/delegators', // CIP129 id
@@ -16,7 +15,6 @@ export default [
   {
     id: 'governance-drep-script-hash-delegators_9650a69fcaf2',
     testName: 'governance drep scriptHash delegators',
-
     endpoints: [
       'governance/dreps/drep_script1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhqu0c4hhj/delegators',
       'governance/dreps/drep1ydmraa6kv8cvmry059v608tehl50nfmg0z764lmsqkvwurs40sw2z/delegators', // CIP129 id
@@ -67,7 +65,6 @@ export default [
   {
     id: 'governance-delegator-cleared-out-after-retiring-and-registering-again_220b12e7aa08',
     testName: 'governance delegator cleared out after retiring and registering again',
-
     endpoints: [
       'governance/dreps/drep1ytvd8c8wj7p8vypgazgevngkvxj97rh4hg8wpjf0mhvxwngmswgym/delegators',
     ],

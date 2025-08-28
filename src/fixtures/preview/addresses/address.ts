@@ -4,13 +4,11 @@ import { expect } from 'vitest';
 export default [
   {
     id: 'addresses-address-script-payment-cred_1efd66b60291',
-
     // addr type 1 (scripthash/StakeKeyHash) holds 1 ada addr_test1zpv68zsj9af8sxg0du6zxzmnwm4ch6atlyhcwfqdyfc7qy3u7yzv8ay6qvmlywtgvt7exaxt783dxuzv03qal7muda5srdg8p9
     // addr type 3 (scripthash/scripthash) holds 3 ada addr_test1xpv68zsj9af8sxg0du6zxzmnwm4ch6atlyhcwfqdyfc7qyje5w9pyt6j0qvs7me5yv9hxaht3046h7f0sujq6gn3uqfqu495jl
     // script1tx3c5y302fupjrm0xs3skumkaw97h2le97rjgrfzw8spydzr5ej
     // https://gist.github.com/slowbackspace/53613acdafff950e08139a6e6d4fc9d2
     testName: 'addresses/:address (script payment cred)',
-
     endpoints: ['addresses/script1tx3c5y302fupjrm0xs3skumkaw97h2le97rjgrfzw8spydzr5ej'],
     response: {
       address: 'script1tx3c5y302fupjrm0xs3skumkaw97h2le97rjgrfzw8spydzr5ej',
@@ -37,7 +35,6 @@ export default [
   {
     id: 'addresses-address-big-address-with-0-assets-stake-address-no-script_085917c058b0',
     testName: 'addresses/:address - big address with 0 assets, stake address, no script',
-
     endpoints: [
       'addresses/addr_test1qrynuvvft74pzd08gd8ta543gs50l429ycvx46ype4exhhtmewj955x423l89jad0gescpg6zj6ppgydef23a4qwnxxsshe8eq',
     ],
@@ -125,7 +122,6 @@ export default [
   {
     id: 'addresses-address-bf-address-used-but-now-empty_282817ac8846',
     testName: 'addresses/:address BF address - used but now empty',
-
     endpoints: [
       'addresses/addr_test1qprwyxzmswhtjstxvj7epjc28gskffsqcxuurx80qrjdy3uayerntq74us2hsgxymgk3f5nka58z46zcqgctv9c05ctq8g0qn7',
     ],
@@ -141,7 +137,6 @@ export default [
   {
     id: 'addresses-address-bf-address-with-some-token_44d2c0aadeda',
     testName: 'addresses/:address BF address with some token',
-
     endpoints: [
       'addresses/addr_test1qpztm7xav83l26wgn3l5aqvtljld8qkhcxn47eqdxlv992umj6t6e3jwxrmy8rgfw9s2xzpyye6vfpzgmjxhv67f26ask2pcge',
     ],
@@ -181,7 +176,6 @@ export default [
   {
     id: 'addresses-address-bf-address-without-tokens_da1d85fb55fc',
     testName: 'addresses/:address BF address without tokens',
-
     endpoints: [
       'addresses/addr_test1qrgavepv2jt8czjxrf9zlchldcgluxq94j7x3aqcdqnps9mslnc2xh37p37yps628vn00y07zxzwfvph4q984mjfjtaq6m25rv',
     ],
@@ -206,7 +200,6 @@ export default [
   {
     id: 'addresses-address-valid-address-not-on-chain_4522081f4300',
     testName: 'addresses/:address - valid address not on-chain',
-
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw',
     ],
@@ -215,7 +208,6 @@ export default [
   {
     id: 'addresses-address-valid-address-not-on-chain-valid-not-on-chain-asset_157c9a43dd50',
     testName: 'addresses/:address - valid address not on-chain, valid not on-chain asset',
-
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw/utxos/f4988f549728dc76b58d7677849943cafee5385dc67e6c25f6aa901e506978656c54696c653235',
     ],
@@ -224,7 +216,6 @@ export default [
   {
     id: 'addresses-address-valid-address-not-on-chain-valid-on-chain-asset_58262ec3c5af',
     testName: 'addresses/:address - valid address not on-chain, valid on-chain asset',
-
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw/utxos/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f',
     ],
@@ -233,7 +224,6 @@ export default [
   {
     id: 'addresses-address-valid-on-chain-address-valid-not-on-chain-asset_ec4f89aba4b0',
     testName: 'addresses/:address - valid on-chain address, valid not on-chain asset',
-
     endpoints: [
       'addresses/addr_test1qz93grfnssuxr00vyutc92tw6dgj4jxtnsxzvf2as04harx9v4sp0psum0jrw94ldemxr5v5v87wcmtsc57ckjg968cqlq4rsm/utxos/f4988f549728dc76b58d7677849943cafee5385dc67e6c25f6aa901e506978656c54696c653235',
     ],

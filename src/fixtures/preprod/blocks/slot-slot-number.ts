@@ -6,7 +6,6 @@ export default [
 
     testName:
       'blocks/slot/:slot_number and blocks/epoch/:epoch_number/slot/:slot_number - generic shelley',
-
     endpoints: ['blocks/slot/470160', 'blocks/epoch/4/slot/383760'],
     response: {
       time: 1_656_153_360,

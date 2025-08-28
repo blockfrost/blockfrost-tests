@@ -9,7 +9,6 @@ export default [
   {
     id: 'accounts-stake-address-generic-empty-list_3b9e6ba4f33c',
     testName: 'accounts/:stake_address generic empty list',
-
     endpoints: [
       'accounts/stake_test1uplm3vtt2637738tx4wy9l4sjlhtdld2nvtlv8pj9ng9feg6d3pr7/rewards',
     ],
@@ -18,7 +17,6 @@ export default [
   {
     id: 'accounts-stake-address-rewards_4b1b60890b42',
     testName: 'accounts/:stake_address/rewards',
-
     endpoints: [
       'accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/rewards',
     ],
@@ -628,7 +626,6 @@ export default [
   {
     id: 'accounts-stake-address-queryparams-generic-stake-address-rewards_56c00acd70a6',
     testName: 'accounts/:stake_address?queryparams generic stake address rewards',
-
     endpoints: [
       'accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/rewards?count=3&page=2',
       'accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/rewards?count=3&page=2&order=asc',
@@ -659,7 +656,6 @@ export default [
 
     testName:
       'accounts/:stake_address?queryparams generic stake address rewards with multiple types',
-
     endpoints: [
       'accounts/stake_test1upcw6n4rw9afjud3l7xh2py8jukmdssn00rr6mu5p0krj9sq2jn8p/rewards?count=5&page=1',
       'accounts/stake_test1upcw6n4rw9afjud3l7xh2py8jukmdssn00rr6mu5p0krj9sq2jn8p/rewards?count=5&page=1&order=asc',
@@ -702,7 +698,6 @@ export default [
 
     testName:
       'accounts/:stake_address?queryparams generic stake address rewards with multiple types',
-
     endpoints: [
       'accounts/stake_test1upcw6n4rw9afjud3l7xh2py8jukmdssn00rr6mu5p0krj9sq2jn8p/rewards?count=2&page=13',
       'accounts/stake_test1upcw6n4rw9afjud3l7xh2py8jukmdssn00rr6mu5p0krj9sq2jn8p/rewards?count=2&page=13&order=asc',

@@ -2,7 +2,6 @@ export default [
   {
     id: 'blocks-hash-or-number-addresses-generic-shelley_9a49eebc65ab',
     testName: 'blocks/:hash_or_number/addresses - generic shelley',
-
     endpoints: [
       'blocks/d452532fd3bfb678548f00c210b639d31cecc7d5d3b3b7d8151ce7cc25dfbb15/addresses',
       'blocks/1846333/addresses',
@@ -112,7 +111,6 @@ export default [
   {
     id: 'blocks-hash-or-number-addresses-queryparams-generic-shelley_eaeb22d96343',
     testName: 'blocks/:hash_or_number/addresses?queryparams - generic shelley',
-
     endpoints: [
       'blocks/d452532fd3bfb678548f00c210b639d31cecc7d5d3b3b7d8151ce7cc25dfbb15/addresses?count=3&page=1',
       'blocks/1846333/addresses?count=3&page=1',

@@ -4,7 +4,6 @@ export default [
   {
     id: 'assets-asset-general-asset_d4709f84b630',
     testName: 'assets/:asset - general asset',
-
     endpoints: [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4c50',
     ],
@@ -25,7 +24,6 @@ export default [
   {
     id: 'assets-asset-asset-without-metadata_fec6bae7a0b7',
     testName: 'assets/:asset - asset without metadata',
-
     endpoints: [
       'assets/f3b07511d0882696143a41c3cfccc70e9e532de535629ba2c6146792446a6564546573744d6963726f555344',
     ],
@@ -103,7 +101,6 @@ export default [
   {
     id: 'assets-asset-asset-with-on-chain-cip-25v2_88ee6fb75b12',
     testName: 'assets/:asset - asset with on-chain CIP25v2',
-
     endpoints: [
       'assets/add8604a36a46446dd22281473614c5b390afbc064ff1338516b19f58424fcf2617ba79f8089f860c2ce679d14345c9b153d0c14ea0481eaa0624751',
     ],
@@ -150,7 +147,6 @@ export default [
   {
     id: 'assets-asset-blockfrost-nft-asset-with-cip-68-metadata_4fd6c7c79a3b',
     testName: 'assets/:asset - Blockfrost NFT asset with CIP68 metadata',
-
     endpoints: [
       'assets/fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd000de140426c6f636b66726f7374',
     ],
@@ -176,7 +172,6 @@ export default [
   {
     id: 'assets-asset-nft-asset-with-cip-68-metadata_1f5d9541c1a1',
     testName: 'assets/:asset - NFT asset with CIP68 metadata',
-
     endpoints: [
       'assets/9fd4b32460b3f63e22e1f0c4eaaf9371e5f202902e213770126b4fcb000de1406f766f3738',
     ],
@@ -209,7 +204,6 @@ export default [
   {
     id: 'assets-asset-blockfrost-ft-asset-with-cip-68-metadata_a57b57dd91c6',
     testName: 'assets/:asset - Blockfrost FT asset with CIP68 metadata',
-
     endpoints: [
       'assets/b038f29b249f42d870f8e5dd698c6020cf6fcbcbe620819771a4926f0014df10426c6f636b66726f73744654',
     ],
@@ -236,7 +230,6 @@ export default [
   {
     id: 'assets-asset-blockfrost-cip-68v1-rft-asset-with-extra-data_1aed5dda47e8',
     testName: 'assets/:asset - Blockfrost CIP68v1 RFT asset with extra data',
-
     endpoints: [
       'assets/ef29efa6742926e4e9810b3544c2b21c6d8b3f92cd85afb8618ff06a001bc280426c6f636b66726f737423303037',
     ],
@@ -264,7 +257,6 @@ export default [
   {
     id: 'assets-asset-blockfrost-cip-68v2-nft-asset-with-extra-data_8827f709cfa5',
     testName: 'assets/:asset - Blockfrost CIP68v2 NFT asset with extra data',
-
     endpoints: [
       'assets/a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee000de140426c6f636b66726f737423303039',
     ],
@@ -291,7 +283,6 @@ export default [
   {
     id: 'assets-asset-blockfrost-cip-68v2-rft-asset-with-extra-data_92370feaf511',
     testName: 'assets/:asset - Blockfrost CIP68v2 RFT asset with extra data',
-
     endpoints: [
       'assets/a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee001bc280426c6f636b66726f737423303130',
     ],

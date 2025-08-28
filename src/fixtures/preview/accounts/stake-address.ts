@@ -54,7 +54,6 @@ export default [
       pool_id: null,
     },
   },
-
   {
     id: 'accounts-stake-address-reward-account-for-pool-deregistered-multiple-times_fe99d73cdd6e',
     testName: 'accounts/:stake_address reward account for pool deregistered multiple times',
@@ -76,10 +75,8 @@ export default [
   // registered drep
   {
     id: 'accounts-stake-address-registered-drep-legacy-drep-script_77b6428e7f43',
-
     // shiver pottery tiny course sketch ranch castle little merit stomach page deliver weapon soon oval depart aisle consider envelope excite news feed toy kangaroo
     testName: 'accounts/:stake_address registered drep (legacy drep_script)',
-
     endpoints: ['accounts/stake_test1uqtv67n99jt7mj0txqne80s7gn7q8xxyzyx4xaqxfpgd52c7aqzhd'],
     response: {
       stake_address: 'stake_test1uqtv67n99jt7mj0txqne80s7gn7q8xxyzyx4xaqxfpgd52c7aqzhd',
@@ -116,10 +113,8 @@ export default [
   },
   {
     id: 'accounts-stake-address-when-d-rep-is-retired-all-delegators-to-that-d-rep-should-have-their-drep-id-cleared_639525c24f52',
-
     testName:
       'accounts/:stake_address when DRep is retired all delegators to that DRep should have their drep_id cleared.',
-
     endpoints: ['accounts/stake_test1uq3f3kt99hu4e3vt7cnx6uya88qjjw52yexh56qcknqkj9qa0awyd'],
     response: {
       stake_address: 'stake_test1uq3f3kt99hu4e3vt7cnx6uya88qjjw52yexh56qcknqkj9qa0awyd',
@@ -137,10 +132,8 @@ export default [
   },
   {
     id: 'accounts-stake-address-deregister-a-stake-key-should-clear-any-existing-vote-delegation-should-have-their-drep-id-cleared_3ff8e6621a3a',
-
     testName:
       'accounts/:stake_address deregister a stake key should clear any existing vote delegation. should have their drep_id cleared.',
-
     endpoints: ['accounts/stake_test1upq4d854xjc30jqkulsevam0jwt5wl2j9783twgzqpwtfvs705r7c'],
     response: {
       stake_address: 'stake_test1upq4d854xjc30jqkulsevam0jwt5wl2j9783twgzqpwtfvs705r7c',
@@ -158,10 +151,8 @@ export default [
   },
   {
     id: 'accounts-stake-address-deregister-and-register-stake-key-after-voting-should-have-their-drep-id-cleared-all-actions-in-single-epoch_08fae5e3b07f',
-
     testName:
       'accounts/:stake_address deregister and register stake key after voting. should have their drep_id cleared. (All actions in single epoch)',
-
     endpoints: ['accounts/stake_test1ur7h39znyuzdw7d809htgf9enusvzf67w6963cwn3x9tpcgm877g2'],
     response: {
       stake_address: 'stake_test1ur7h39znyuzdw7d809htgf9enusvzf67w6963cwn3x9tpcgm877g2',
@@ -182,7 +173,6 @@ export default [
 
     testName:
       'accounts/:stake_address retire and register drep after voting. should have their drep_id cleared.',
-
     endpoints: ['accounts/stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq'],
     response: {
       stake_address: 'stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq',

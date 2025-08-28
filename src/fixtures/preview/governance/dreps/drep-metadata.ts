@@ -2,7 +2,6 @@ export default [
   {
     id: 'governance-drep-metadata_db851404fc0f',
     testName: 'governance drep metadata',
-
     endpoints: [
       'governance/dreps/drep1yfzcnn53dd4t4xd225cnvj4zvg7huz578s6llln8qzasapsx5pvjs/metadata',
     ],

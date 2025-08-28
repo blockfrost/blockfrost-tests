@@ -10,7 +10,6 @@ export default [
   {
     id: 'blocks-hash-or-number-next-queryparams-generic-boundary_653b627607cb',
     testName: 'blocks/:hash_or_number/next?queryparams - generic boundary',
-
     endpoints: [
       'blocks/d4b8de7a11d929a323373cbab6c1a9bdc931beffff11db111cf9d57356ee1937/next?count=2',
     ],
@@ -58,7 +57,6 @@ export default [
   {
     id: 'blocks-hash-or-number-next-generic-shelley_212727c1b3a4',
     testName: 'blocks/:hash_or_number/next - generic shelley',
-
     endpoints: [
       'blocks/e4f47653c608c33b6b588552b8714ae3c920d8855e847ca5c2e5c6b9f1c3dd0f/next',
       'blocks/1922992/next',

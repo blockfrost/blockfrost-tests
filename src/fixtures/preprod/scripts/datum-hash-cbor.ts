@@ -2,7 +2,6 @@ export default [
   {
     id: 'scripts-datum-hash-cbor-random-datum_44cc6cb0aff2',
     testName: 'scripts/datum/:hash/cbor - random datum',
-
     endpoints: [
       'scripts/datum/b326a02cc8ebe16c272122843ce445d713fb5efe28b678133926066a61058776/cbor',
     ],
@@ -13,7 +12,6 @@ export default [
   {
     id: 'scripts-datum-hash-cbor-redeemer-from-redeemer-data-table_f1588c4293bf',
     testName: 'scripts/datum/:hash/cbor - redeemer (from redeemer_data table)',
-
     endpoints: [
       'scripts/datum/2a20b7cd2e0975cbfb711a6e10208965c5cdc73d424446f33ac10579346413cc/cbor',
     ],
