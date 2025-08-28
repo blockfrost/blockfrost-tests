@@ -16,7 +16,6 @@ export default [
       'addresses/addr_test1xznnmfk43w5cag3m7e9nnfe0wcsg5lx8afv4u9utjk3zxv9zj64kndceuuncuu2gqklnhjrcadgqjy9gsedww6ktq0hsgr6uxf/transactions?count=4&from=2871888:0&to=2872828:2',
       'addresses/addr_test1xznnmfk43w5cag3m7e9nnfe0wcsg5lx8afv4u9utjk3zxv9zj64kndceuuncuu2gqklnhjrcadgqjy9gsedww6ktq0hsgr6uxf/transactions?from=2871888:0&to=2872828:2',
     ],
-
     response: [
       {
         tx_hash: '36cb40e3a12fb5821fadcb4747dc57e50e7ec89bae245ab00dddf4707b1cc61b',
@@ -58,7 +57,6 @@ export default [
       'addresses/addr_vkh1zxft2e6jdnx9m6cqadgjfwux9fhnl80urgxcl58jd60ckt4g3w6/transactions?count=5&from=558320:9&to=571941:3',
       'addresses/addr_vkh1zxft2e6jdnx9m6cqadgjfwux9fhnl80urgxcl58jd60ckt4g3w6/transactions?from=558320:9&to=571941:3',
     ],
-
     response: [
       {
         tx_hash: '1ca15ff821ca2b4ea9d69d1aa16e4ab0b6437761d5314a6bb9fc4494050d395e',
@@ -100,7 +98,6 @@ export default [
       'addresses/addr_test1qqge9dt82fkvch0tqr44zf9msc4x70ualsdqmr7s7fhflzmqh5jv6xejejee287zpkfpaqt7yk6fk46xsfppgnece2nqtfhkjt/transactions?page=30&count=10&order=desc',
       'addresses/addr_vkh1zxft2e6jdnx9m6cqadgjfwux9fhnl80urgxcl58jd60ckt4g3w6/transactions?page=30&count=10&order=desc',
     ],
-
     response: [
       {
         tx_hash: '34b39075581e4c53d3e63ced9996b6c60de564e1b0c3a7898cd71776da42d974',
@@ -171,7 +168,6 @@ export default [
     endpoints: [
       'addresses/addr_vkh1zxft2e6jdnx9m6cqadgjfwux9fhnl80urgxcl58jd60ckt4g3w6/transactions?order=asc&page=5',
     ],
-
     response: [
       {
         tx_hash: 'dc97d7535c077ecf5258a78e8f7060b2dbcd61de987bc4afac3214953a05de74',
@@ -260,7 +256,6 @@ export default [
     endpoints: [
       'addresses/addr_vkh1zxft2e6jdnx9m6cqadgjfwux9fhnl80urgxcl58jd60ckt4g3w6/transactions?order=asc&page=25&count=1',
     ],
-
     response: [
       {
         tx_hash: 'd82701603c6434c5fee368f50bc79cff07721dba74dd0e3082170e46672e428d',

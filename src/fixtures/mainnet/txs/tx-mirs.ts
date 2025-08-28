@@ -3,7 +3,6 @@ export default [
     id: 'txs-tx-mirs-generic-shelley-with-treasury-mirs_1888fef58d1e',
     testName: 'txs/:tx/mirs - generic shelley with treasury MIRs',
     endpoints: ['txs/7b57f2cf1c442c563647ab29669c88b9116c2668d31d42526ff27ed614da1252/mirs'],
-
     response: [
       {
         pot: 'treasury',
@@ -245,7 +244,6 @@ export default [
     id: 'txs-tx-mirs-generic-shelley-with-reserve-mirs_5d8105829418',
     testName: 'txs/:tx/mirs - generic shelley with reserve MIRs',
     endpoints: ['txs/35d2728ea6ad89bf809565c9ed698bb1c5cddf83591ba2e8bba951cb8fee0035/mirs'],
-
     response: [
       {
         pot: 'reserve',
@@ -1453,7 +1451,6 @@ export default [
     id: 'txs-tx-mirs-shelley-with-one-treasury-mir_d2ae1d6397dd',
     testName: 'txs/:tx/mirs - shelley with one treasury MIR',
     endpoints: ['txs/fabfad0aaa2b52b8304f45edc0350659ad0d73f9d1065d9cd3ef7d5a599ac57d/mirs'],
-
     response: [
       {
         pot: 'treasury',

@@ -13,7 +13,6 @@ export default [
     endpoints: [
       'accounts/stake_test1uplm3vtt2637738tx4wy9l4sjlhtdld2nvtlv8pj9ng9feg6d3pr7/rewards',
     ],
-
     response: [],
   },
   {
@@ -23,7 +22,6 @@ export default [
     endpoints: [
       'accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/rewards',
     ],
-
     response: [
       {
         epoch: 39,
@@ -635,7 +633,6 @@ export default [
       'accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/rewards?count=3&page=2',
       'accounts/stake_test1uzg6rdrt4nes96g63jaygvrn777gfnr5wqdr8rq3r6xxtygj4m03u/rewards?count=3&page=2&order=asc',
     ],
-
     response: [
       {
         epoch: 42,
@@ -667,7 +664,6 @@ export default [
       'accounts/stake_test1upcw6n4rw9afjud3l7xh2py8jukmdssn00rr6mu5p0krj9sq2jn8p/rewards?count=5&page=1',
       'accounts/stake_test1upcw6n4rw9afjud3l7xh2py8jukmdssn00rr6mu5p0krj9sq2jn8p/rewards?count=5&page=1&order=asc',
     ],
-
     response: [
       {
         epoch: 703,
@@ -711,7 +707,6 @@ export default [
       'accounts/stake_test1upcw6n4rw9afjud3l7xh2py8jukmdssn00rr6mu5p0krj9sq2jn8p/rewards?count=2&page=13',
       'accounts/stake_test1upcw6n4rw9afjud3l7xh2py8jukmdssn00rr6mu5p0krj9sq2jn8p/rewards?count=2&page=13&order=asc',
     ],
-
     response: [
       {
         epoch: 727,

@@ -9,12 +9,8 @@ export default [
       'governance/dreps/drep1df2uxemkj2j7gtwmj84455jv523kne57e8956v9sywu9jaq57f4/delegators',
       'governance/dreps/drep1yf49tsm8w6f2tepdmwg7kkjjfj32x60xnmyuknfskq3mskgfvuvhp/delegators', // CIP129 id
     ],
-
     response: expect.arrayContaining([
-      {
-        address: expect.toBeStakeAddress(),
-        amount: expect.toBeAdaQuantity(),
-      },
+      { address: expect.toBeStakeAddress(), amount: expect.toBeAdaQuantity() },
     ]),
   },
   {
@@ -25,7 +21,6 @@ export default [
       'governance/dreps/drep_script1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhqu0c4hhj/delegators',
       'governance/dreps/drep1ydmraa6kv8cvmry059v608tehl50nfmg0z764lmsqkvwurs40sw2z/delegators', // CIP129 id
     ],
-
     response: [
       {
         address: 'stake_test1upqt8jvd8d045a6gs2wkzt57rnx47s5ewz4un2l746r847g7hgw24',
@@ -57,24 +52,16 @@ export default [
     id: 'governance-drep-always-no-confidence-delegators_1faca8a60c77',
     testName: 'governance drep_always_no_confidence delegators',
     endpoints: ['governance/dreps/drep_always_no_confidence/delegators'],
-
     response: expect.arrayContaining([
-      {
-        amount: expect.toBeAssetQuantity(),
-        address: expect.toBeStakeAddress(),
-      },
+      { amount: expect.toBeAssetQuantity(), address: expect.toBeStakeAddress() },
     ]),
   },
   {
     id: 'governance-drep-always-abstain-delegators_2bdf5256ee3d',
     testName: 'governance drep_always_abstain delegators',
     endpoints: ['governance/dreps/drep_always_abstain/delegators'],
-
     response: expect.arrayContaining([
-      {
-        amount: expect.toBeAssetQuantity(),
-        address: expect.toBeStakeAddress(),
-      },
+      { amount: expect.toBeAssetQuantity(), address: expect.toBeStakeAddress() },
     ]),
   },
   {
@@ -84,7 +71,6 @@ export default [
     endpoints: [
       'governance/dreps/drep1ytvd8c8wj7p8vypgazgevngkvxj97rh4hg8wpjf0mhvxwngmswgym/delegators',
     ],
-
     response: [
       {
         // stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq was cleared out

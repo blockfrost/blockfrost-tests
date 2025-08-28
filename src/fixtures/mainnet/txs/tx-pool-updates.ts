@@ -2,11 +2,9 @@ export default [
   {
     id: 'txs-tx-pool-updates-generic-shelley-with-pool-certs_498bd3a6909a',
     testName: 'txs/:tx/pool_updates - generic shelley with pool certs',
-
     endpoints: [
       'txs/28bd5e8c342ab89d6642e446cb299058ea36256af1718e4af9326898ce4192d7/pool_updates',
     ],
-
     response: [
       {
         cert_index: 0,
@@ -71,11 +69,9 @@ export default [
 
     testName:
       'txs/:tx/pool_updates - shelley with pool update which does not have onchain reward address',
-
     endpoints: [
       'txs/6299278d563d92bc10cf77562a0437ae600d2b52941fdef45efcefec2f921160/pool_updates',
     ],
-
     response: [
       {
         cert_index: 0,
@@ -95,13 +91,7 @@ export default [
           homepage: null,
         },
         relays: [
-          {
-            ipv4: null,
-            ipv6: null,
-            dns: 'relays.planetstake.com',
-            dns_srv: null,
-            port: 3001,
-          },
+          { ipv4: null, ipv6: null, dns: 'relays.planetstake.com', dns_srv: null, port: 3001 },
         ],
         active_epoch: 255,
       },
@@ -110,11 +100,9 @@ export default [
   {
     id: 'txs-tx-generic-shelley-with-multiple-delegation-stake-certs-and-pool-updates_474556906a6a',
     testName: 'txs/:tx - generic shelley with MULTIPLE delegation, stake certs and pool updates',
-
     endpoints: [
       'txs/f1aee024a482d5d21ed552d15eefbb664e98095cdabde75a9ff9c78c0812e6fb/pool_updates',
     ],
-
     response: [
       {
         cert_index: 2,

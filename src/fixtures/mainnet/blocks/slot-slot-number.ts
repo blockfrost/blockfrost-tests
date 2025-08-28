@@ -2,6 +2,8 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'blocks-slot-slot-number-and-blocks-epoch-epoch-number-slot-slot-number-generic-shelley_6cb3d2ece078',
+
     testName:
       'blocks/slot/:slot_number and blocks/epoch/:epoch_number/slot/:slot_number - generic shelley',
     endpoints: ['blocks/slot/16019999', 'blocks/epoch/234/slot/295199'],

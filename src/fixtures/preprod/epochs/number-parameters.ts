@@ -2,6 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'epochs-number-parameters-generic-shelley-epoch_e61ed742ccaa',
     testName: 'epochs/:number/parameters generic shelley epoch',
     endpoints: ['epochs/4/parameters'],
     response: {
@@ -63,6 +64,7 @@ export default [
     },
   },
   {
+    id: 'epochs-number-parameters-epoch-cost-models-plutus-v1_7ce7f7d7abef',
     testName: 'epochs/:number/parameters epoch - costModels.PlutusV1',
     endpoints: ['epochs/10/parameters'],
     response: {
@@ -308,6 +310,7 @@ export default [
     },
   },
   {
+    id: 'epochs-number-parameters-cost-models-plutus-v2_054b99ebe462',
     testName: 'epochs/:number/parameters - costModels.PlutusV2',
     endpoints: ['epochs/13/parameters'],
     response: {
@@ -742,6 +745,7 @@ export default [
     },
   },
   {
+    id: 'epochs-latest-parameters-latest-epoch_a73a0c95ff80',
     testName: 'epochs/latest/parameters - latest epoch',
     endpoints: ['epochs/latest/parameters'],
     response: {

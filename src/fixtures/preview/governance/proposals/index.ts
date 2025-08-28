@@ -8,7 +8,6 @@ export default [
     id: 'governance-proposals_1ad9da9ecbb6',
     testName: 'governance proposals',
     endpoints: ['governance/proposals?count=28'],
-
     response: [
       {
         tx_hash: 'e61f151fcef9e99dff5c705f8d5de18891f8d1d92d69fef5ff608d2c29a7c133',

@@ -6,7 +6,6 @@ export default [
     endpoints: [
       'governance/dreps/drep_script1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhqu0c4hhj/metadata',
     ],
-
     response: {
       drep_id: 'drep1wcl0w4np7rxceraptxne67dlaru6w6rchk407uq9nrhquq6gltn',
       hex: '763ef75661f0cd8c8fa159a79d79bfe8f9a76878bdaaff700598ee0e',
@@ -53,9 +52,7 @@ export default [
             '@context': {
               image: {
                 '@id': 'CIP119:image',
-                '@context': {
-                  ImageObject: 'https://schema.org/ImageObject',
-                },
+                '@context': { ImageObject: 'https://schema.org/ImageObject' },
               },
               title: 'CIP108:title',
               comment: 'CIP100:comment',
@@ -85,10 +82,7 @@ export default [
               qualifications: 'CIP119:qualifications',
               externalUpdates: {
                 '@id': 'CIP100:externalUpdates',
-                '@context': {
-                  uri: 'CIP100:update-uri',
-                  title: 'CIP100:update-title',
-                },
+                '@context': { uri: 'CIP100:update-uri', title: 'CIP100:update-title' },
               },
             },
           },
@@ -127,7 +121,6 @@ export default [
     endpoints: [
       'governance/dreps/drep1ydmraa6kv8cvmry059v608tehl50nfmg0z764lmsqkvwurs40sw2z/metadata',
     ],
-
     response: {
       drep_id: 'drep1ydmraa6kv8cvmry059v608tehl50nfmg0z764lmsqkvwurs40sw2z',
       hex: '23763ef75661f0cd8c8fa159a79d79bfe8f9a76878bdaaff700598ee0e',
@@ -174,9 +167,7 @@ export default [
             '@context': {
               image: {
                 '@id': 'CIP119:image',
-                '@context': {
-                  ImageObject: 'https://schema.org/ImageObject',
-                },
+                '@context': { ImageObject: 'https://schema.org/ImageObject' },
               },
               title: 'CIP108:title',
               comment: 'CIP100:comment',
@@ -206,10 +197,7 @@ export default [
               qualifications: 'CIP119:qualifications',
               externalUpdates: {
                 '@id': 'CIP100:externalUpdates',
-                '@context': {
-                  uri: 'CIP100:update-uri',
-                  title: 'CIP100:update-title',
-                },
+                '@context': { uri: 'CIP100:update-uri', title: 'CIP100:update-title' },
               },
             },
           },

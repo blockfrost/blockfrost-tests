@@ -3,7 +3,6 @@ export default [
     id: 'txs-tx-withdrawals-generic-shelley-with-withdrawals_88c322103d1b',
     testName: 'txs/:tx/withdrawals - generic shelley with withdrawals',
     endpoints: ['txs/9f811b021492a5544207f7b566b4e67c87f0918b9e7055ab3074d552ab18e895/withdrawals'],
-
     response: [
       {
         address: 'stake1ux77thpfertrfhkq3tlmssucn30ddvvn3s9fhvkvx7dd3msgmxve0',
@@ -15,7 +14,6 @@ export default [
     id: 'txs-tx-withdrawals-shelley-most-withdrawals_4e2fc832d642',
     testName: 'txs/:tx/withdrawals - shelley MOST withdrawals',
     endpoints: ['txs/b2fe200ae710815fc0b877b6df9a6f936f8c907bd6ce3fec2622d3539d35434a/withdrawals'],
-
     response: [
       {
         address: 'stake1uyzku3s2wxu2ljhe6ykd9v9a8qkvn548nru7qnhjlj6s2ds8hz4mc',

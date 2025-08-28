@@ -12,15 +12,11 @@ export default defineConfig({
     // Be aware that there is also customTimeout option that can be set in fixtures
     // AND DEFAULT_TEST_TIMEOUT ./test/integration/utils
     testTimeout: 15_000,
-    sequence: {
-      concurrent: true,
-    },
+    sequence: { concurrent: true },
     hookTimeout: 20_000,
     include: testFolders,
     passWithNoTests: true,
     setupFiles: ['./src/setup.ts'],
-    chaiConfig: {
-      truncateThreshold: 40_000,
-    },
+    chaiConfig: { truncateThreshold: 40_000 },
   },
 });

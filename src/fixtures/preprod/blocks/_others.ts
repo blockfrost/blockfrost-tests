@@ -31,7 +31,6 @@ export default [
       'blocks/69nice/addresses',
       'blocks/stonks/addresses',
     ],
-
     response: error_400_blocks,
   },
   {
@@ -56,7 +55,6 @@ export default [
       'blocks/53604351654465/addresses',
       'blocks/-5/addresses',
     ],
-
     response: error_400_blocks_out_of_range,
   },
 ];

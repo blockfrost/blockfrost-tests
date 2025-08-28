@@ -9,14 +9,12 @@ export default [
   {
     id: 'addresses-address-txs-generic-shelley-address_78a7760f794b',
     testName: 'addresses/:address/txs generic shelley address',
-
     endpoints: [
       'addresses/addr1q904hvj3tcr9cendlrm6y4fhcy34tgezlqn92z7z4lwkzczvqdpz4hpzh09mr3360akg0y9wss24hhvfhtkp2fjh65cs7q4z89/txs?count=5&page=2',
       'addresses/addr1q904hvj3tcr9cendlrm6y4fhcy34tgezlqn92z7z4lwkzczvqdpz4hpzh09mr3360akg0y9wss24hhvfhtkp2fjh65cs7q4z89/txs?count=5&page=2&order=asc',
       'addresses/addr_vkh1tadmy527qewxvm0c77392d7pyd26xghcye2shs40m4skqhysmzt/txs?count=5&page=2',
       'addresses/addr_vkh1tadmy527qewxvm0c77392d7pyd26xghcye2shs40m4skqhysmzt/txs?count=5&page=2&order=asc',
     ],
-
     response: [
       '197102e656d9d0e65f03d27c7bab18593f96592f5d08933d268bea4cc7aa83d7',
       'ac6ef171258c29d82ab6f640269d22e7091ad7611b8d8d0c0a4258e2875ca5cc',
@@ -28,12 +26,10 @@ export default [
   {
     id: 'addresses-address-txs-generic-dormant-exchange-byron-address_7d61e79dfdde',
     testName: 'addresses/:address/txs generic dormant exchange byron address',
-
     endpoints: [
       'addresses/DdzFFzCqrhstmqBkaU98vdHu6PdqjqotmgudToWYEeRmQKDrn4cAgGv9EZKtu1DevLrMA1pdVazufUCK4zhFkUcQZ5Gm88mVHnrwmXvT/txs?count=5&page=2',
       'addresses/DdzFFzCqrhstmqBkaU98vdHu6PdqjqotmgudToWYEeRmQKDrn4cAgGv9EZKtu1DevLrMA1pdVazufUCK4zhFkUcQZ5Gm88mVHnrwmXvT/txs?count=5&page=2&order=asc',
     ],
-
     response: [
       '5663e4bee226c57862716b6d6fef259d5b2924553a2ee7d6eaa440a3bffada78',
       '4fd88c6abac6def51317c4075d9cf0d55b4a0f83743ec39f27a7fc5c42c2040e',
@@ -45,11 +41,9 @@ export default [
   {
     id: 'addresses-address-txs-generic-payment-cred-1_ada2582fd6c1',
     testName: 'addresses/:address/txs generic payment_cred 1',
-
     endpoints: [
       'addresses/addr_vkh15ew2tzjwn364l2pszu7j5h9w63v2crrnl97m074w9elrk6zy2tc/txs?order=asc&page=42000',
     ],
-
     response: [
       '815e383c4c44458433940ec93b7d0d0b6db9f796d327bba2c9f98e02effae048',
       '83ee67e9ef6ef8529beb5d6471677c98ece3ad250d45f078dffc4520d5f81383',
@@ -156,11 +150,9 @@ export default [
   {
     id: 'addresses-address-txs-generic-payment-cred-2_32870c25a11c',
     testName: 'addresses/:address/txs generic payment_cred 2',
-
     endpoints: [
       'addresses/addr_vkh15ew2tzjwn364l2pszu7j5h9w63v2crrnl97m074w9elrk6zy2tc/txs?order=asc&page=69000&count=1',
     ],
-
     response: ['3d64b692ed46a423ad8fcadc8c8c288e179da3a405cefe322b310745ce4d2a81'],
   },
   {
@@ -168,13 +160,11 @@ export default [
 
     testName:
       'addresses/:address/txs generic payment_cred 3 - page with self tx in the same block and index (same pc, different addresses)',
-
     endpoints: [
       'addresses/addr_vkh15ew2tzjwn364l2pszu7j5h9w63v2crrnl97m074w9elrk6zy2tc/txs?order=asc&page=16884',
       'addresses/addr_vkh15ew2tzjwn364l2pszu7j5h9w63v2crrnl97m074w9elrk6zy2tc/txs?page=16884',
       'addresses/addr_vkh15ew2tzjwn364l2pszu7j5h9w63v2crrnl97m074w9elrk6zy2tc/txs?page=16884&count=100',
     ],
-
     response: [
       'cc0893b095d630cb23f121b9c0d22fea757361bab8fb7b9f4e49111111234ef7',
       '15e87c0d002e3c01e035bf47446f979caaed000831b122951b49a70212c1a09d',

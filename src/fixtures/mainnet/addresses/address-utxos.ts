@@ -10,21 +10,17 @@ export default [
   {
     id: 'addresses-address-utxos-generic-dormant-exchange-byron-address_d6b309e544d8',
     testName: 'addresses/:address/utxos generic dormant exchange byron address',
-
     endpoints: [
       'addresses/DdzFFzCqrhstmqBkaU98vdHu6PdqjqotmgudToWYEeRmQKDrn4cAgGv9EZKtu1DevLrMA1pdVazufUCK4zhFkUcQZ5Gm88mVHnrwmXvT/utxos',
     ],
-
     response: [],
   },
   {
     id: 'addresses-address-utxos-bf-address-without-tokens_6e05d2f75bd3',
     testName: 'addresses/:address/utxos BF address without tokens',
-
     endpoints: [
       'addresses/addr1qxlem7879m2ly03ljqldhz9jxtlkurc465hqysxr33z2a4ee3t4rc98rhcg4n0a3g60nd9f865gpy4unflgak3we53psrrk85u/utxos',
     ],
-
     response: [
       {
         address:
@@ -43,11 +39,9 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-without-tokens-lovelace-filter_3b879bc937b3',
     testName: 'addresses/:address/utxos BF address without tokens (lovelace filter)',
-
     endpoints: [
       'addresses/addr1qxlem7879m2ly03ljqldhz9jxtlkurc465hqysxr33z2a4ee3t4rc98rhcg4n0a3g60nd9f865gpy4unflgak3we53psrrk85u/utxos/lovelace',
     ],
-
     response: [
       {
         address:
@@ -66,12 +60,10 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-without-tokens_bbeb4a553e24',
     testName: 'addresses/:address/utxos BF address without tokens',
-
     endpoints: [
       'addresses/addr1qxlem7879m2ly03ljqldhz9jxtlkurc465hqysxr33z2a4ee3t4rc98rhcg4n0a3g60nd9f865gpy4unflgak3we53psrrk85u/utxos/lovelace',
       'addresses/addr_vkh1h7wl3l3w6heru0us8mdc3v3jlahq79w49cpypsuvgjhdwp5apep/utxos/lovelace',
     ],
-
     response: [
       {
         address:
@@ -90,51 +82,41 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-without-tokens_972a2060e298',
     testName: 'addresses/:address/utxos BF address without tokens',
-
     endpoints: [
       'addresses/addr1qxlem7879m2ly03ljqldhz9jxtlkurc465hqysxr33z2a4ee3t4rc98rhcg4n0a3g60nd9f865gpy4unflgak3we53psrrk85u/utxos/d436d9f6b754582f798fe33f4bed12133d47493f78b944b9cc55fd1853756d6d69744c6f64676534393539',
     ],
-
     response: [],
   },
   {
     id: 'addresses-address-utxos-bf-address-with-summit-token-empty_1f68d589d34e',
     testName: 'addresses/:address/utxos BF address with summit token empty',
-
     endpoints: [
       'addresses/addr1q9x625ny9y42s5z8n78afjg9meyeknvt5kwm3y6sdlrz66tc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgqsyx3uz/utxos',
     ],
-
     response: [],
   },
   {
     id: 'addresses-address-utxos-bf-address-with-summit-token-empty_cb8828594719',
     testName: 'addresses/:address/utxos BF address with summit token empty ',
-
     endpoints: [
       'addresses/addr1q9x625ny9y42s5z8n78afjg9meyeknvt5kwm3y6sdlrz66tc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgqsyx3uz/utxos/d436d9f6b754582f798fe33f4bed12133d47493f78b944b9cc55fd1853756d6d69744c6f64676534393539',
     ],
-
     response: [],
   },
   {
     id: 'addresses-address-utxos-bf-address-with-summit-token-empty_f09168b1319e',
     testName: 'addresses/:address/utxos BF address with summit token empty',
-
     endpoints: [
       'addresses/addr1q9x625ny9y42s5z8n78afjg9meyeknvt5kwm3y6sdlrz66tc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgqsyx3uz/utxos/lovelace',
     ],
-
     response: [],
   },
   {
     id: 'addresses-address-utxos-bf-address-used_e35a4089c6f2',
     testName: 'addresses/:address/utxos BF address - used',
-
     endpoints: [
       'addresses/addr1q8zsjx7vxkl4esfejafhxthyew8c54c9ch95gkv3nz37sxrc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgq3jd3w2/utxos',
     ],
-
     response: [
       {
         address:
@@ -142,12 +124,7 @@ export default [
         tx_hash: '619c90076e587b000856cc1a0830c45a51ec6ba9f8f8fb00dc9f4406b06ccf72',
         tx_index: 0,
         output_index: 0,
-        amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1000000',
-          },
-        ],
+        amount: [{ unit: 'lovelace', quantity: '1000000' }],
         block: '181f6b0368066e245e9510414d928f78a7ed73da33ffb2657103937275f8bb3d',
         data_hash: null,
         inline_datum: null,
@@ -160,10 +137,7 @@ export default [
         tx_index: 1,
         output_index: 1,
         amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1185250',
-          },
+          { unit: 'lovelace', quantity: '1185250' },
           {
             unit: 'd436d9f6b754582f798fe33f4bed12133d47493f78b944b9cc55fd1853756d6d69744c6f64676534393539',
             quantity: '1',
@@ -180,12 +154,7 @@ export default [
         tx_hash: '619c90076e587b000856cc1a0830c45a51ec6ba9f8f8fb00dc9f4406b06ccf72',
         tx_index: 2,
         output_index: 2,
-        amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1572116',
-          },
-        ],
+        amount: [{ unit: 'lovelace', quantity: '1572116' }],
         block: '181f6b0368066e245e9510414d928f78a7ed73da33ffb2657103937275f8bb3d',
         data_hash: null,
         inline_datum: null,
@@ -196,12 +165,10 @@ export default [
   {
     id: 'addresses-address-utxos-valid-on-chain-address-with-some-txs-0-utxos_47cb0ad150cc',
     testName: 'addresses/:address/utxos  - valid on-chain address with some txs, 0 utxos',
-
     endpoints: [
       'addresses/addr1qxj2qfk4rg7qtrsgrwwgzs8typ7nh9u7wueh6uhmpfs8d3nedw45r6kf23ktzztc6n8jud9j0nm3qq5sjpmmgalu7jssnpj8rv/utxos',
       'addresses/addr_vkh15jszd4g68szcuzqmnjq5p6eq05ae08nhxd7h97c2vpmvvlespnx/utxos',
     ],
-
     response: [],
   },
   {
@@ -214,7 +181,6 @@ export default [
     id: 'addresses-address-utxos-valid-not-on-chain-address_61adf0acde88',
     testName: 'addresses/:address/utxos - valid not on-chain address ',
     response: error_404,
-
     endpoints: [
       'addresses/addr1q9y2gschak8ny3cet4dymth3xtq8fycnzpzg4svvvmdy7vnhxc96x8daz6yw33kxv07qqpxyn6w9e2ydcfhqk85ckehqrgssre/utxos',
     ],
@@ -222,7 +188,6 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-used-but-now-empty_7efbdc740f7f',
     testName: 'addresses/:address/utxos BF address - used but now empty',
-
     endpoints: [
       'addresses/addr1q9x625ny9y42s5z8n78afjg9meyeknvt5kwm3y6sdlrz66tc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgqsyx3uz/utxos',
       'addresses/addr1q9x625ny9y42s5z8n78afjg9meyeknvt5kwm3y6sdlrz66tc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgqsyx3uz/utxos/lovelace',
@@ -231,18 +196,15 @@ export default [
       'addresses/addr_vkh1fkj4yepf9259q3ul3l2vjpw7fxd5mza9nkufx5r0cckkj0g4gpw/utxos/lovelace',
       'addresses/addr_vkh1fkj4yepf9259q3ul3l2vjpw7fxd5mza9nkufx5r0cckkj0g4gpw/utxos/d436d9f6b754582f798fe33f4bed12133d47493f78b944b9cc55fd1853756d6d69744c6f64676534393539',
     ],
-
     response: [],
   },
   {
     id: 'addresses-address-utxos-bf-address-with-summit-token_81e7078c90f4',
     testName: 'addresses/:address/utxos BF address - with summit token',
-
     endpoints: [
       'addresses/addr1q8zsjx7vxkl4esfejafhxthyew8c54c9ch95gkv3nz37sxrc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgq3jd3w2/utxos',
       'addresses/addr_vkh1c5y3hnp4hawvzwvh2dejaext3799wpw9edz9nyvc505pswzdya0/utxos',
     ],
-
     response: [
       {
         address:
@@ -250,12 +212,7 @@ export default [
         tx_hash: '619c90076e587b000856cc1a0830c45a51ec6ba9f8f8fb00dc9f4406b06ccf72',
         tx_index: 0,
         output_index: 0,
-        amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1000000',
-          },
-        ],
+        amount: [{ unit: 'lovelace', quantity: '1000000' }],
         block: '181f6b0368066e245e9510414d928f78a7ed73da33ffb2657103937275f8bb3d',
         data_hash: null,
         inline_datum: null,
@@ -268,10 +225,7 @@ export default [
         tx_index: 1,
         output_index: 1,
         amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1185250',
-          },
+          { unit: 'lovelace', quantity: '1185250' },
           {
             unit: 'd436d9f6b754582f798fe33f4bed12133d47493f78b944b9cc55fd1853756d6d69744c6f64676534393539',
             quantity: '1',
@@ -288,12 +242,7 @@ export default [
         tx_hash: '619c90076e587b000856cc1a0830c45a51ec6ba9f8f8fb00dc9f4406b06ccf72',
         tx_index: 2,
         output_index: 2,
-        amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1572116',
-          },
-        ],
+        amount: [{ unit: 'lovelace', quantity: '1572116' }],
         block: '181f6b0368066e245e9510414d928f78a7ed73da33ffb2657103937275f8bb3d',
         data_hash: null,
         inline_datum: null,
@@ -304,13 +253,11 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-with-100-utxos-page-1_58531b6e402c',
     testName: 'addresses/:address/utxos BF address with 100+ utxos, page=1',
-
     endpoints: [
       'addresses/addr1q8sypaxdrj6na6y48lxyhhl2hdzs8fhzrfgaj482yv2ju6ax60s74dvd8gtxq2hgh5xlk4quwqxn6xu4k9ghgapgllys29jrnm/utxos',
       'addresses/addr1q8sypaxdrj6na6y48lxyhhl2hdzs8fhzrfgaj482yv2ju6ax60s74dvd8gtxq2hgh5xlk4quwqxn6xu4k9ghgapgllys29jrnm/utxos?page=1',
       'addresses/addr1q8sypaxdrj6na6y48lxyhhl2hdzs8fhzrfgaj482yv2ju6ax60s74dvd8gtxq2hgh5xlk4quwqxn6xu4k9ghgapgllys29jrnm/utxos?page=1&count=100',
     ],
-
     response: [
       {
         address:
@@ -1517,12 +1464,10 @@ export default [
   {
     id: 'addresses-address-utxos-bf-address-with-100-utxos-page-2_de86d63dc030',
     testName: 'addresses/:address/utxos BF address with 100+ utxos, page=2',
-
     endpoints: [
       'addresses/addr1q8sypaxdrj6na6y48lxyhhl2hdzs8fhzrfgaj482yv2ju6ax60s74dvd8gtxq2hgh5xlk4quwqxn6xu4k9ghgapgllys29jrnm/utxos?page=2',
       'addresses/addr1q8sypaxdrj6na6y48lxyhhl2hdzs8fhzrfgaj482yv2ju6ax60s74dvd8gtxq2hgh5xlk4quwqxn6xu4k9ghgapgllys29jrnm/utxos?page=2&count=100',
     ],
-
     response: [
       {
         address:

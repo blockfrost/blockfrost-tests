@@ -6,7 +6,6 @@ export default [
     endpoints: [
       'txs/823048cecd15e2be0025e46dade7fc4b8de6e7f741f9416be17befff3c697605/pool_retires',
     ],
-
     response: [
       {
         cert_index: 0,

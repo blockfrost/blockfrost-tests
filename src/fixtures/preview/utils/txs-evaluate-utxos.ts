@@ -2,6 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'utils-txs-evaluate-utxos-success_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos success',
     endpoints: ['utils/txs/evaluate/utxos'],
     postBody: JSON.stringify({
@@ -13,18 +14,12 @@ export default [
       version: '1.0',
       servicename: 'ogmios',
       methodname: 'EvaluateTx',
-      result: {
-        EvaluationResult: {
-          'spend:0': {
-            memory: 15_694,
-            steps: 3776833,
-          },
-        },
-      },
+      result: { EvaluationResult: { 'spend:0': { memory: 15_694, steps: 3776833 } } },
       reflection: { id: expect.any(String) },
     },
   },
   {
+    id: 'utils-txs-evaluate-utxos-success-with-cbor-only-json_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos success with cbor only (JSON)',
     endpoints: ['utils/txs/evaluate/utxos'],
     postBody: JSON.stringify({
@@ -40,18 +35,12 @@ export default [
       version: '1.0',
       servicename: 'ogmios',
       methodname: 'EvaluateTx',
-      result: {
-        EvaluationResult: {
-          'spend:0': {
-            memory: 15_694,
-            steps: 3776833,
-          },
-        },
-      },
+      result: { EvaluationResult: { 'spend:0': { memory: 15_694, steps: 3776833 } } },
       reflection: { id: expect.any(String) },
     },
   },
   {
+    id: 'utils-txs-evaluate-utxos-error-unknown-transaction-input-missing-from-u-tx-o-set_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos - error Unknown transaction input (missing from UTxO set)',
     endpoints: ['utils/txs/evaluate/utxos'],
     postBody: JSON.stringify({
@@ -67,10 +56,7 @@ export default [
         '2A820000F5F6',
       additionalUtxoSet: [
         [
-          {
-            txId: '0000000000000000000000000000000000000000000000000000000000000000',
-            index: 42,
-          },
+          { txId: '0000000000000000000000000000000000000000000000000000000000000000', index: 42 },
           {
             address: 'addr_test1wpnlxv2xv9a9ucvnvzqakwepzl9ltx7jzgm53av2e9ncv4sysemm8',
             value: { coins: 200_000 },

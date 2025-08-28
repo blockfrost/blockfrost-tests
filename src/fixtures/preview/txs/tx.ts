@@ -1,6 +1,7 @@
 export default [
   // dd555f5e2f244fab37a42f45d944410268f9c91f150213525760d396283107ed/
   {
+    id: 'txs-tx-generic-shelley-tx-with-huge-size_92571b398fbe',
     testName: 'txs/:tx - generic shelley tx with huge size',
     endpoints: ['txs/c8dd5d6aafcc846ba84608c21d4fc74a65a338d9219d189677fa649daebcd0e6'],
     response: {
@@ -11,10 +12,7 @@ export default [
       slot: 28371492,
       index: 1,
       output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '1103005479',
-        },
+        { unit: 'lovelace', quantity: '1103005479' },
         {
           unit: '4b9ae3978af62cf98dcc3b9aecc3dbbd2f59fa06b55e1f443e3c7c81204c95cf200048fb859753f750126ec1270056f8a5543a10161b6c5fad269e73',
           quantity: '5',
@@ -42,6 +40,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-with-withdrawals_62883fe843e3',
     testName: 'txs/:tx - generic with withdrawals',
     endpoints: ['txs/0a3c6e3671a1705cd7bdb8a2052779ff93c6c32790b24ac09ecb1e5962729e5e'],
     response: {
@@ -70,6 +69,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-most-withdrawals_0ba9665318f1',
     testName: 'txs/:tx - MOST withdrawals',
     endpoints: ['txs/f4e5ea03d397d180946b84bc4c9484c9b404dc8c5a50177d3e3809d99cd71021'],
     response: {
@@ -98,6 +98,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-shelley-most-delegations_d508df85960a',
     testName: 'txs/:tx - shelley MOST delegations',
     endpoints: ['txs/64d1493be3245bc2daf2c87eabe6b19d3b95e281cd3866dac54975884b89d122'],
     response: {
@@ -126,6 +127,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-pool-certs_61eedfd6ae33',
     testName: 'txs/:tx - generic shelley with pool certs',
     endpoints: ['txs/fd193612c46d5939f66f1efa62a0ce70f835359eea1b13acc976fd0e9387625d'],
     response: {
@@ -154,6 +156,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-delegations-and-stake-certs_1c7336e2e9f9',
     testName: 'txs/:tx - generic shelley with delegations and stake certs',
     endpoints: ['txs/869e0eaeb990d2e4d5b9472f51c46ae114867c72c3526f655a7695a0580b2c12'],
     response: {
@@ -164,10 +167,7 @@ export default [
       slot: 3643259,
       index: 8,
       output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '13056529011',
-        },
+        { unit: 'lovelace', quantity: '13056529011' },
         { unit: 'd9b13c38a94f384c387915721463c11357c7ad0bab4c677505e4c2ae504154', quantity: '1' },
       ],
       fees: '438718',
@@ -188,6 +188,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-multiple-delegation-stake-certs-and-pool-updates_bf44b64f3a8e',
     testName: 'txs/:tx - generic shelley with MULTIPLE delegation, stake certs and pool updates',
     endpoints: ['txs/e3ca57e8f323265742a8f4e79ff9af884c9ff8719bd4f7788adaea4c33ba07b6'],
     response: {
@@ -216,6 +217,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-shelley-pool-retirements_c177e7926dbf',
     testName: 'txs/:tx - shelley pool retirements',
     endpoints: ['txs/6dc8d03c2b23c61576d56ef2fcf661a64a669d247c8795089bbe212bbfdcb98d'],
     response: {
@@ -244,6 +246,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-metadata_7516e8c6f99b',
     testName: 'txs/:tx - generic shelley with metadata',
     endpoints: ['txs/854d20408a3e5997ad8439cc7aa4dfd6af158e3f660a1aaf909a52d2efd6b867'],
     response: {
@@ -254,10 +257,7 @@ export default [
       slot: 55726193,
       index: +0,
       output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '7057437341',
-        },
+        { unit: 'lovelace', quantity: '7057437341' },
         {
           unit: 'edc3e672f72cd9971f75141bb54570f2f745033615eaa75a82434e71000de1404c616479204c79646961',
           quantity: '1',
@@ -281,6 +281,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-shelley-tx-with-ridiculous-hereafter-out-of-range-value_f945876fc255',
     testName: 'txs/:tx - shelley tx with ridiculous hereafter out of range value',
     endpoints: ['txs/46876a2250ec0e523eccc30b0fc6d6fa55c61dd200b83140acaab291edeb0b11'],
     response: {
@@ -309,6 +310,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-shelley-tx-with-a-lot-of-token-mints-burns_27406e1be12f',
     testName: 'txs/:tx - shelley tx with a lot of token mints/burns',
     endpoints: ['txs/dbfe8ae544bb0f7d34067a81366b42cbfce6e7f58360dffdf4c7977137bfa5d3'],
     response: {
@@ -337,6 +339,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-tx-with-assets_a95c190b4b1f',
     testName: 'txs/:tx - generic shelley tx with assets',
     endpoints: ['txs/6d9d379c4ec6c63f827257123da6b3fc80b44e615f9e6aa3b6949d15a8235847'],
     response: {
@@ -347,10 +350,7 @@ export default [
       slot: 80562926,
       index: +0,
       output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '265605366',
-        },
+        { unit: 'lovelace', quantity: '265605366' },
         {
           unit: '2fe3c3364b443194b10954771c95819b8d6ed464033c21f03f8facb569555344',
           quantity: '10000',

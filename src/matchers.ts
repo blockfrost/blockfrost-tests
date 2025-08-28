@@ -44,10 +44,7 @@ function createMatcher(description: string, compare: (...values: (bigint | numbe
       }
       const pass = compare(...(bigIntArguments as bigint[]));
 
-      return {
-        pass,
-        message: () => `expected ${arguments_.join(` ${description} `)}`,
-      };
+      return { pass, message: () => `expected ${arguments_.join(` ${description} `)}` };
     },
 
     getAsymmetricMatcher: (expected: BigValue) => ({
@@ -105,38 +102,26 @@ export const toBeLessThanOrEqual = createMatcher(
 export function toBeBlake2b256Hash(received: string) {
   const pass = typeof received === 'string' && received.length === 64;
 
-  return {
-    pass,
-    message: () => `Expected value ${received} to be Blake2b-256 hash.`,
-  };
+  return { pass, message: () => `Expected value ${received} to be Blake2b-256 hash.` };
 }
 
 export function toBePoolBech32(received: string) {
   const pass = typeof received === 'string' && received.startsWith('pool1');
 
-  return {
-    pass,
-    message: () => `Expected value ${received} to be bech32 pool ID.`,
-  };
+  return { pass, message: () => `Expected value ${received} to be bech32 pool ID.` };
 }
 
 export function toBeDrepId(received: string) {
   // sanity check for cip129 drep ids (legacy one could have drep_script prefix)
   const pass = typeof received === 'string' && received.startsWith('drep1');
 
-  return {
-    pass,
-    message: () => `Expected value ${received} to be bech32 DRep ID.`,
-  };
+  return { pass, message: () => `Expected value ${received} to be bech32 DRep ID.` };
 }
 
 export function toBeUnixTimestamp(received: number) {
   const pass = typeof received === 'number' && isValid(received * 1000);
 
-  return {
-    pass,
-    message: () => `Expected value ${received} to valid unix timestamp`,
-  };
+  return { pass, message: () => `Expected value ${received} to valid unix timestamp` };
 }
 
 export function toBeCurrentTimestamp(
@@ -261,8 +246,5 @@ export function confirmations(
     consoleError(messageContent);
   }
 
-  return {
-    pass,
-    message: () => messageContent,
-  };
+  return { pass, message: () => messageContent };
 }

@@ -2,12 +2,10 @@ export default [
   {
     id: 'blocks-hash-or-number-txs-queryparams-generic-shelley_f51f0d031cfd',
     testName: 'blocks/:hash_or_number/txs?queryparams - generic shelley',
-
     endpoints: [
       'blocks/c6e3901b2cd95598b0bf5dc55cb62d682ea369298be9825b4b58d891b844b320/txs?order=desc&count=2&page=2',
       'blocks/5360435/txs?order=desc&count=2&page=2',
     ],
-
     response: [
       'b29bd7a9e79345639d359f549bbf0b668d6177c90a105c66186d8b98835d187f',
       '2a6bb221aac6192e3fdb05a1c82c1c2236fc6b226363021ec8036ff6f9475ed0',
@@ -16,14 +14,12 @@ export default [
   {
     id: 'blocks-hash-or-number-txs-queryparams-generic-shelley_dc5352b11097',
     testName: 'blocks/:hash_or_number/txs?queryparams - generic shelley',
-
     endpoints: [
       'blocks/c6e3901b2cd95598b0bf5dc55cb62d682ea369298be9825b4b58d891b844b320/txs?order=asc&count=2&page=11',
       'blocks/5360435/txs?order=asc&count=2&page=11',
       'blocks/c6e3901b2cd95598b0bf5dc55cb62d682ea369298be9825b4b58d891b844b320/txs?count=2&page=11',
       'blocks/5360435/txs?count=2&page=11',
     ],
-
     response: [
       '2a6bb221aac6192e3fdb05a1c82c1c2236fc6b226363021ec8036ff6f9475ed0',
       'b29bd7a9e79345639d359f549bbf0b668d6177c90a105c66186d8b98835d187f',
@@ -32,12 +28,10 @@ export default [
   {
     id: 'blocks-hash-or-number-txs-generic-shelley_728609ce239f',
     testName: 'blocks/:hash_or_number/txs - generic shelley',
-
     endpoints: [
       'blocks/c6e3901b2cd95598b0bf5dc55cb62d682ea369298be9825b4b58d891b844b320/txs',
       'blocks/5360435/txs',
     ],
-
     response: [
       '055f9d4c86733997a9b8b12e3422feee8ef95d79ccbde20abdb6ff9222bb79c6',
       'e66077bac8d32cf16aa991d793a3e5840d3eee1ad3dfd04f1ee609d46a936dff',

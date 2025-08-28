@@ -3,6 +3,7 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'addresses-address-bf-address-without-tokens-payment-cred_e6ae3209fe88',
     testName: 'addresses/:address BF address without tokens (payment cred)',
     endpoints: ['addresses/addr_vkh1h7wl3l3w6heru0us8mdc3v3jlahq79w49cpypsuvgjhdwp5apep'],
     response: {
@@ -14,6 +15,7 @@ export default [
     },
   },
   {
+    id: 'addresses-address-big-address-with-0-assets-active-stake-address-no-script_e79b384a056b',
     testName: 'addresses/:address - big address with 0 assets, active stake address, no script',
     endpoints: [
       'addresses/addr1q9s5ws6xufe74h5vqyhxsd0n2hr4fdg895k9ztut2fjqz93z3znzpvegug3chp4dx556lp38h8ptu3smtj20q83rmdtqcjup2u',
@@ -30,6 +32,7 @@ export default [
     },
   },
   {
+    id: 'addresses-address-big-address-with-0-assets-inactive-stake-address-no-script_0e37a5444471',
     testName: 'addresses/:address - big address with 0 assets, inactive stake address, no script',
     endpoints: [
       'addresses/addr1q8fwxda8mq09rzjcluxrep9wyrnfe4e8kuzqzkvcdn53vskmspx9w7e55ly30vqnw4a0eza3hj2hxnhhq6hqqh58gyvstww5ww',
@@ -46,6 +49,7 @@ export default [
     },
   },
   {
+    id: 'addresses-address-large-address-with-few-assets-no-stake-address-script_edc182fdcbf0',
     testName: 'addresses/:address - large address with few assets, no stake address, script',
     endpoints: ['addresses/addr1w9vgcswrfxcujpqxt39wefrnd75ww35u3k3gauq4pf60mdc2rlkz7'],
     response: {
@@ -59,6 +63,7 @@ export default [
     },
   },
   {
+    id: 'addresses-address-humongous-address-with-many-assets_2db1919d8e0b',
     testName: 'addresses/:address - humongous address with many assets',
     endpoints: [
       'addresses/addr1zxj47sy4qxlktqzmkrw8dahe46gtv8seakrshsqz26qnvzypw288a4x0xf8pxgcntelxmyclq83s0ykeehchz2wtspksr3q9nx',
@@ -75,6 +80,7 @@ export default [
     },
   },
   {
+    id: 'addresses-address-payment-cred-address-with-many-assets_65b1972fe1f9',
     testName: 'addresses/:address - payment cred address with many assets',
     endpoints: ['addresses/addr_vkh1lu3rzd3pwjp54twx32ye9g4gqkr34x7cyp4urt8luq22jvjx5ul'],
     response: {
@@ -88,6 +94,7 @@ export default [
     },
   },
   {
+    id: 'addresses-address-biggest-address-with-most-assets_3da12e852805',
     testName: 'addresses/:address - biggest address with most assets',
     endpoints: ['addresses/addr1w999n67e86jn6xal07pzxtrmqynspgx0fwmcmpua4wc6yzsxpljz3'],
     response: {
@@ -99,9 +106,11 @@ export default [
       type: 'shelley',
       script: true,
     },
+
     customTimeout: 30_000,
   },
   {
+    id: 'addresses-address-generic-dormant-exchange-byron-address_2e89beeaf330',
     testName: 'addresses/:address generic dormant exchange byron address',
     endpoints: [
       'addresses/DdzFFzCqrhstmqBkaU98vdHu6PdqjqotmgudToWYEeRmQKDrn4cAgGv9EZKtu1DevLrMA1pdVazufUCK4zhFkUcQZ5Gm88mVHnrwmXvT',
@@ -116,11 +125,11 @@ export default [
     },
   },
   {
+    id: 'addresses-address-generic-shelley-address_96571aa48073',
     testName: 'addresses/:address generic shelley address',
     endpoints: [
       'addresses/addr1q8zu4smzyf2r2mfqjd6tc6vxf2p8rccdfk82ye3eut2udkw9etpkygj5x4kjpym5h35cvj5zw83s6nvw5fnrnck4cmvshkfm4y',
     ],
-
     response: {
       address:
         'addr1q8zu4smzyf2r2mfqjd6tc6vxf2p8rccdfk82ye3eut2udkw9etpkygj5x4kjpym5h35cvj5zw83s6nvw5fnrnck4cmvshkfm4y',
@@ -133,9 +142,9 @@ export default [
     },
   },
   {
+    id: 'addresses-address-generic-shelley-address-payment-cred_332aef81887d',
     testName: 'addresses/:address generic shelley address payment cred',
     endpoints: ['addresses/addr_vkh1ch9vxc3z2s6k6gynwj7xnpj2sfc7xr2d363xvw0z6hrdjxyfmju'],
-
     response: {
       address: 'addr_vkh1ch9vxc3z2s6k6gynwj7xnpj2sfc7xr2d363xvw0z6hrdjxyfmju',
       amount: expect.arrayContaining([
@@ -147,19 +156,16 @@ export default [
     },
   },
   {
+    id: 'addresses-address-bf-address-used-but-now-empty_b431acb4df02',
     testName: 'addresses/:address BF address - used but now empty',
     endpoints: [
       'addresses/addr1q8zsjx7vxkl4esfejafhxthyew8c54c9ch95gkv3nz37sxrc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgq3jd3w2',
     ],
-
     response: {
       address:
         'addr1q8zsjx7vxkl4esfejafhxthyew8c54c9ch95gkv3nz37sxrc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgq3jd3w2',
       amount: [
-        {
-          unit: 'lovelace',
-          quantity: '3757366',
-        },
+        { unit: 'lovelace', quantity: '3757366' },
         {
           unit: 'd436d9f6b754582f798fe33f4bed12133d47493f78b944b9cc55fd1853756d6d69744c6f64676534393539',
           quantity: '1',
@@ -171,11 +177,11 @@ export default [
     },
   },
   {
+    id: 'addresses-address-bf-address-with-summit-token_e81021941f4c',
     testName: 'addresses/:address BF address with summit token',
     endpoints: [
       'addresses/addr1q9x625ny9y42s5z8n78afjg9meyeknvt5kwm3y6sdlrz66tc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgqsyx3uz',
     ],
-
     response: {
       address:
         'addr1q9x625ny9y42s5z8n78afjg9meyeknvt5kwm3y6sdlrz66tc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgqsyx3uz',
@@ -186,11 +192,11 @@ export default [
     },
   },
   {
+    id: 'addresses-address-bf-address-without-tokens_eb39e8e4e8a4',
     testName: 'addresses/:address BF address without tokens',
     endpoints: [
       'addresses/addr1qxlem7879m2ly03ljqldhz9jxtlkurc465hqysxr33z2a4ee3t4rc98rhcg4n0a3g60nd9f865gpy4unflgak3we53psrrk85u',
     ],
-
     response: {
       address:
         'addr1qxlem7879m2ly03ljqldhz9jxtlkurc465hqysxr33z2a4ee3t4rc98rhcg4n0a3g60nd9f865gpy4unflgak3we53psrrk85u',
@@ -204,36 +210,37 @@ export default [
   // errors
 
   {
+    id: 'addresses-address-invalid-address_d52e2854f62d',
     testName: 'addresses/:address - invalid address',
     endpoints: ['addresses/addr1stonks'],
-
     response: error_400_addresses,
   },
   {
+    id: 'addresses-address-valid-address-not-on-chain_28a9e8dbd473',
     testName: 'addresses/:address - valid address not on-chain',
     endpoints: [
       'addresses/addr1qygl5xsd57u59wv6mszq6tu32t55qx60fz4t2mwytjxztxtswj8ngt9puck7f0cqxzsfe62un6ln88yy8c8tguz8twmq55qrdt',
     ],
-
     response: error_404,
   },
   {
+    id: 'addresses-address-valid-address-not-on-chain-valid-not-on-chain-asset_30c5106a5f9e',
     testName: 'addresses/:address - valid address not on-chain, valid not on-chain asset',
     endpoints: [
       'addresses/addr1qygl5xsd57u59wv6mszq6tu32t55qx60fz4t2mwytjxztxtswj8ngt9puck7f0cqxzsfe62un6ln88yy8c8tguz8twmq55qrdt/utxos/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87aacafe',
     ],
-
     response: error_404,
   },
   {
+    id: 'addresses-address-valid-address-not-on-chain-valid-on-chain-asset_f51bec3a6ac3',
     testName: 'addresses/:address - valid address not on-chain, valid on-chain asset',
     endpoints: [
       'addresses/addr1qygl5xsd57u59wv6mszq6tu32t55qx60fz4t2mwytjxztxtswj8ngt9puck7f0cqxzsfe62un6ln88yy8c8tguz8twmq55qrdt/utxos/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e',
     ],
-
     response: error_404,
   },
   {
+    id: 'addresses-address-valid-on-chain-address-valid-not-on-chain-asset_a5d7e6364368',
     testName: 'addresses/:address - valid on-chain address, valid not on-chain asset',
     endpoints: [
       'addresses/addr1qxcdc0jacmjcvz8rzc26ppntl03mdqtav6qa749d6wczckmswj8ngt9puck7f0cqxzsfe62un6ln88yy8c8tguz8twmq64snl8/utxos/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87aacafe',
@@ -241,22 +248,25 @@ export default [
     response: error_404,
   },
   {
+    id: 'invalid-path_56f50b52924c',
     testName: 'Invalid path',
     endpoints: ['addresses/'],
-
     response: error_400,
   },
   {
+    id: 'addresses-address-invalid-address_5064850408dc',
     testName: 'addresses/:address - invalid address ',
     response: error_400_addresses,
     endpoints: ['addresses/addr1uwu'],
   },
   {
+    id: 'addresses-address-invalid-payment-cred-address_fd2643492764',
     testName: 'addresses/:address - invalid paymentCred address ',
     response: error_400_addresses,
     endpoints: ['addresses/addr_vkh1uwu'],
   },
   {
+    id: 'addresses-address-valid-not-on-chain-address_2941ab7ed033',
     testName: 'addresses/:address - valid not on-chain address',
     response: error_404,
     endpoints: [
@@ -264,9 +274,9 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-bf-address-with-summit-token-payment-cred_b12247750b2a',
     testName: 'addresses/:address BF address with summit token (payment cred)',
     endpoints: ['addresses/addr_vkh1c5y3hnp4hawvzwvh2dejaext3799wpw9edz9nyvc505pswzdya0'],
-
     response: {
       address: 'addr_vkh1c5y3hnp4hawvzwvh2dejaext3799wpw9edz9nyvc505pswzdya0',
       amount: [

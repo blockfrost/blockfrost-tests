@@ -127,9 +127,7 @@ export default [
 
     testName:
       'accounts/:stake_address reward account for 3 pools, 2 of them retired in the same epoch',
-
     endpoints: ['accounts/stake1u80x0vdf8kwvptk7nar24d805p7wnlj4vm22cl0q8jngs9q5k2suq'],
-
     response: {
       stake_address: 'stake1u80x0vdf8kwvptk7nar24d805p7wnlj4vm22cl0q8jngs9q5k2suq',
       active: true,
@@ -206,12 +204,9 @@ export default [
   },
   {
     id: 'accounts-stake-address-when-d-rep-is-retired-all-delegators-to-that-d-rep-should-have-their-drep-id-cleared_215421638ada',
-
     testName:
       'accounts/:stake_address when DRep is retired all delegators to that DRep should have their drep_id cleared.',
-
     endpoints: ['accounts/stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4'],
-
     response: {
       stake_address: 'stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4',
       active: false,

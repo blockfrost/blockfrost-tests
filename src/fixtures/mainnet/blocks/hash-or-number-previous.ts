@@ -8,6 +8,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'blocks-hash-or-number-previous-generic-shelley_fa425e1e2df0',
     testName: 'blocks/:hash_or_number/previous - generic shelley',
     endpoints: [
       'blocks/f74fe59538d1c3a68842d0072e3aa68818e681d0ba45fd993a8bc9051fc4af3a/previous',
@@ -1917,6 +1918,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-next-previous-queryparams-generic-shelley_a9f548e17bd4',
     testName: 'blocks/:hash_or_number/next-previous?queryparams - generic shelley',
     endpoints: [
       'blocks/8d9309b0aa8faf0f4df797efb4e3af9b88072bef3f8177bd159befc186944649/next?count=2&page=2',
@@ -1966,6 +1968,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-previous-queryparams-generic-boundary-inside-1_89678de2d698',
     testName: 'blocks/:hash_or_number/previous?queryparams - generic boundary inside 1',
     endpoints: [
       'blocks/232b18231c885fd09ff7d643fd2536a64b07d4566860535f5bea7034d30cb630/previous?count=3',
@@ -2032,6 +2035,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-previous-queryparams-generic-boundary-inside-2_165c7bdc45a0',
     testName: 'blocks/:hash_or_number/previous?queryparams - generic boundary inside 2',
     endpoints: [
       'blocks/4009725/previous?page=398832&count=10',
@@ -2231,6 +2235,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-previous-queryparams-generic-boundary_26ea4175532d',
     testName: 'blocks/:hash_or_number/previous?queryparams - generic boundary',
     endpoints: [
       'blocks/fd509e014462437d1786934ec6b622a705aab62318c87107a0f245b4cb404a83/previous?page=298020&count=5',
@@ -2334,6 +2339,7 @@ export default [
     ],
   },
   {
+    id: 'blocks-hash-or-number-previous-queryparams-generic-boundary-edge_ec5faffe4928',
     testName: 'blocks/:hash_or_number/previous?queryparams - generic boundary edge',
     endpoints: [
       'blocks/4009732/previous?page=797664&count=5',

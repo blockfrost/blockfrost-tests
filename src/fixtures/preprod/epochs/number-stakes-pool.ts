@@ -15,7 +15,6 @@ export default [
       'epochs/121/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v?page=1',
       'epochs/121/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v?page=1&count=100',
     ],
-
     response: [
       {
         stake_address: 'stake_test17q2gqzjxlre8whyhj7m7rajdev63hqn0f4jvykvz2pk6fhcyhr3nn',
@@ -426,7 +425,6 @@ export default [
     endpoints: [
       'epochs/71/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v?page=1&count=2',
     ],
-
     response: [
       {
         stake_address: 'stake_test1uqvqu9jrzywh8qyz0ey4dq39vdfg6wvrg5vt5mru88s62lgjj5jv5',
@@ -445,7 +443,6 @@ export default [
     endpoints: [
       'epochs/71/stakes/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v?page=2&count=2',
     ],
-
     response: [
       {
         stake_address: 'stake_test1uz8qeh9f3dgdssyzdzjp6padp4pret7hvxcphf3z866r2kgxghumg',
@@ -465,7 +462,6 @@ export default [
       'epochs/10/stakes/pool1z063uemr7k9zzg95ymz0gfqnfv5k58et8xrnk6ynfyqdgjjw0e7',
       'epochs/74/stakes/pool16lk5fgc4zfthjza8fardhmj4jn2tcuzc2558pterlw4gykhsnep',
     ],
-
     response: [],
   },
 ];

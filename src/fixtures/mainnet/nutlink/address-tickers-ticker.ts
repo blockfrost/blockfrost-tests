@@ -7,6 +7,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'nutlink-address-tickers-ticker-nut-link-oracle-address_f23e25a20d0d',
     testName: 'nutlink/:address/tickers/:ticker nut.link oracle address',
     endpoints: [
       'nutlink/addr1q85yx2w7ragn5sx6umgmtjpc3865s9sg59sz4rrh6f90kgwfwlzu3w8ttacqg89mkdgwshwnplj5c5n9f8dhp0h55q2q7qm63t/tickers/ADAUSD?count=2&page=2',
@@ -34,6 +35,7 @@ export default [
     ],
   },
   {
+    id: 'nutlink-tickers-ticker-nut-link-oracle-address_75832bbe41ee',
     testName: 'nutlink/tickers/:ticker nut.link oracle address',
     endpoints: [
       'nutlink/tickers/ADAUSD?count=2&page=2',

@@ -8,7 +8,6 @@ export default [
     endpoints: [
       'governance/proposals/95af8608dc7aaf5c73025066b509a2c11c829f2984009ac92e7053d123fbce57/0/parameters',
     ],
-
     response: {
       tx_hash: '95af8608dc7aaf5c73025066b509a2c11c829f2984009ac92e7053d123fbce57',
       cert_index: +0,
@@ -97,7 +96,6 @@ export default [
     endpoints: [
       'governance/proposals/4d5f4b83fecbc79767c34109b065119b28902f97b5a3f22b73ec0688a9eef86b/0/parameters',
     ],
-
     response: {
       tx_hash: '4d5f4b83fecbc79767c34109b065119b28902f97b5a3f22b73ec0688a9eef86b',
       cert_index: +0,
@@ -173,7 +171,6 @@ export default [
       'governance/proposals/cbdfd1717b4e7ea2d4b3c141387b24f2f31fac8be8fec64c3b70870bad425643/0/parameters',
       'governance/proposals/88f0d0fc7a6bac735be72963d2919105c1220b25ffaa69b0b166f4d4b8027ff1/0/parameters',
     ],
-
     response: error_404,
   },
 ];

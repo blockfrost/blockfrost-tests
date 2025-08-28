@@ -18,7 +18,6 @@ export default [
     endpoints: [
       'accounts/stake_test1uzkdwx64sjkt6xxtzye00y3k2m9wn5zultsguadaf4ggmssadyunp/addresses',
     ],
-
     response: [],
   },
 ];

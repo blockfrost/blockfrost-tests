@@ -2,6 +2,7 @@ import { error_404, error_400_epochs } from '../../errors/index.js';
 
 export default [
   {
+    id: 'epochs-number-first_6f4c27191e8e',
     testName: 'epochs/:number - first',
     endpoints: ['epochs/0'],
     response: {
@@ -18,6 +19,7 @@ export default [
     },
   },
   {
+    id: 'epochs-number-generic-byron_afa9f4dc2d75',
     testName: 'epochs/:number - generic byron',
     endpoints: ['epochs/3'],
     response: {
@@ -34,6 +36,7 @@ export default [
     },
   },
   {
+    id: 'epochs-number-generic-shelley_4c37e81e2126',
     testName: 'epochs/:number - generic shelley',
     endpoints: ['epochs/10'],
     response: {
@@ -50,11 +53,13 @@ export default [
     },
   },
   {
+    id: 'epochs-number-out-of-range-epoch_da47e487d954',
     testName: 'epochs/:number - out of range epoch',
     response: error_400_epochs,
     endpoints: ['epochs/696969696969'],
   },
   {
+    id: 'epochs-number-not-found-epoch_3011e5362cc4',
     testName: 'epochs/:number - not found epoch',
     response: error_404,
     endpoints: ['epochs/69696969'],

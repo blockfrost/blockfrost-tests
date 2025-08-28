@@ -8,7 +8,6 @@ export default [
     id: 'governance-dreps-list_e28c1d992335',
     testName: 'governance dreps list',
     endpoints: ['governance/dreps?count=43'],
-
     response: [
       {
         drep_id: 'drep1ytcw6qzpqqclx2yd0zy64ztvlkkhnf6yrzza8whgnq4vz5gh89626',

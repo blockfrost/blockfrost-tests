@@ -16,7 +16,6 @@ export default [
       'assets/policy/104d51dd927761bf5d50d32e1ede4b2cff477d475fe32f4f780a4b21?page=1&count=100',
       'assets/policy/104d51dd927761bf5d50d32e1ede4b2cff477d475fe32f4f780a4b21?page=1&count=100&order=asc',
     ],
-
     response: [
       {
         asset:

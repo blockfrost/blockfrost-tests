@@ -8,7 +8,6 @@ export default [
     endpoints: [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4c50',
     ],
-
     response: {
       asset: '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4c50',
       policy_id: '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d',
@@ -30,7 +29,6 @@ export default [
     endpoints: [
       'assets/f3b07511d0882696143a41c3cfccc70e9e532de535629ba2c6146792446a6564546573744d6963726f555344',
     ],
-
     response: {
       asset:
         'f3b07511d0882696143a41c3cfccc70e9e532de535629ba2c6146792446a6564546573744d6963726f555344',
@@ -50,7 +48,6 @@ export default [
     id: 'assets-asset-ft-asset-with-off-chain-metadata_f56c85a15bd1',
     testName: 'assets/:asset - FT asset with off-chain metadata',
     endpoints: ['assets/f6f49b186751e61f1fb8c64e7504e771f968cea9f4d11f5222b169e3744d494e'],
-
     response: {
       asset: 'f6f49b186751e61f1fb8c64e7504e771f968cea9f4d11f5222b169e3744d494e',
       policy_id: 'f6f49b186751e61f1fb8c64e7504e771f968cea9f4d11f5222b169e3',
@@ -76,7 +73,6 @@ export default [
     id: 'assets-asset-nft-asset-with-on-chain-cip-25v1_2e4ee2e9d6c1',
     testName: 'assets/:asset - NFT asset with on-chain CIP25v1',
     endpoints: ['assets/f0ff48bbb7bbe9d59a40f1ce90e9e9d0ff5002ec48f232b49ca0fb9a6a616d6573'],
-
     response: {
       asset: 'f0ff48bbb7bbe9d59a40f1ce90e9e9d0ff5002ec48f232b49ca0fb9a6a616d6573',
       policy_id: 'f0ff48bbb7bbe9d59a40f1ce90e9e9d0ff5002ec48f232b49ca0fb9a',
@@ -111,7 +107,6 @@ export default [
     endpoints: [
       'assets/add8604a36a46446dd22281473614c5b390afbc064ff1338516b19f58424fcf2617ba79f8089f860c2ce679d14345c9b153d0c14ea0481eaa0624751',
     ],
-
     response: {
       asset:
         'add8604a36a46446dd22281473614c5b390afbc064ff1338516b19f58424fcf2617ba79f8089f860c2ce679d14345c9b153d0c14ea0481eaa0624751',
@@ -134,7 +129,6 @@ export default [
     id: 'assets-asset-asset-with-on-chain-cip-25v2-no-asset-name_6f827e4eaf1f',
     testName: 'assets/:asset - asset with on-chain CIP25v2 (no assetName)',
     endpoints: ['assets/1b6ed7ba4c9671b8b798af6eff7146396c7b04dc12a6463c6a29be85'],
-
     response: {
       asset: '1b6ed7ba4c9671b8b798af6eff7146396c7b04dc12a6463c6a29be85',
       policy_id: '1b6ed7ba4c9671b8b798af6eff7146396c7b04dc12a6463c6a29be85',
@@ -160,7 +154,6 @@ export default [
     endpoints: [
       'assets/fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd000de140426c6f636b66726f7374',
     ],
-
     response: {
       asset: 'fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd000de140426c6f636b66726f7374',
       policy_id: 'fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd',
@@ -187,7 +180,6 @@ export default [
     endpoints: [
       'assets/9fd4b32460b3f63e22e1f0c4eaaf9371e5f202902e213770126b4fcb000de1406f766f3738',
     ],
-
     response: {
       asset: '9fd4b32460b3f63e22e1f0c4eaaf9371e5f202902e213770126b4fcb000de1406f766f3738',
       policy_id: '9fd4b32460b3f63e22e1f0c4eaaf9371e5f202902e213770126b4fcb',
@@ -221,7 +213,6 @@ export default [
     endpoints: [
       'assets/b038f29b249f42d870f8e5dd698c6020cf6fcbcbe620819771a4926f0014df10426c6f636b66726f73744654',
     ],
-
     response: {
       asset:
         'b038f29b249f42d870f8e5dd698c6020cf6fcbcbe620819771a4926f0014df10426c6f636b66726f73744654',
@@ -249,7 +240,6 @@ export default [
     endpoints: [
       'assets/ef29efa6742926e4e9810b3544c2b21c6d8b3f92cd85afb8618ff06a001bc280426c6f636b66726f737423303037',
     ],
-
     response: {
       asset:
         'ef29efa6742926e4e9810b3544c2b21c6d8b3f92cd85afb8618ff06a001bc280426c6f636b66726f737423303037',
@@ -278,7 +268,6 @@ export default [
     endpoints: [
       'assets/a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee000de140426c6f636b66726f737423303039',
     ],
-
     response: {
       asset:
         'a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee000de140426c6f636b66726f737423303039',
@@ -306,7 +295,6 @@ export default [
     endpoints: [
       'assets/a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee001bc280426c6f636b66726f737423303130',
     ],
-
     response: {
       asset:
         'a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee001bc280426c6f636b66726f737423303130',

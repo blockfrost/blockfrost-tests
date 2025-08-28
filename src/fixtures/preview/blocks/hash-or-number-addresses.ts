@@ -7,7 +7,6 @@ export default [
       'blocks/d452532fd3bfb678548f00c210b639d31cecc7d5d3b3b7d8151ce7cc25dfbb15/addresses',
       'blocks/1846333/addresses',
     ],
-
     response: [
       {
         address:
@@ -118,33 +117,26 @@ export default [
       'blocks/d452532fd3bfb678548f00c210b639d31cecc7d5d3b3b7d8151ce7cc25dfbb15/addresses?count=3&page=1',
       'blocks/1846333/addresses?count=3&page=1',
     ],
-
     response: [
       {
         address:
           'addr_test1qq24mvjrum794w5nqrx5swajl8aef3x9ufs3rthehwqqx06en5artl69ku4ar8sekm0kjx5fdk63re4p4pgwergxdghszdk0ek',
         transactions: [
-          {
-            tx_hash: '199f119a7fd0463c5cda3a89b990985fd3ce380e2f6c28ef7e36971bb776bc92',
-          },
+          { tx_hash: '199f119a7fd0463c5cda3a89b990985fd3ce380e2f6c28ef7e36971bb776bc92' },
         ],
       },
       {
         address:
           'addr_test1qq4wtw7knupw8c6vqc665x99m4v0uxecrpzp2a8lsyr4pqx3t96w308w9hvzxd4qqqf79elgflekqh43em3ch7j3vyws3yfxz9',
         transactions: [
-          {
-            tx_hash: '789569936efd4a8aa367a73bee9a511f732f8079d05566d7451f95a893c93b3f',
-          },
+          { tx_hash: '789569936efd4a8aa367a73bee9a511f732f8079d05566d7451f95a893c93b3f' },
         ],
       },
       {
         address:
           'addr_test1qqewn4mcz2rgu5gflnfjnzpfea8p8pzm54a5wemlh5nc4vfvzlnz6mz9lvtypkcrc4jvvqk0ev55f2ja64xqtvf3uz8sevuet8',
         transactions: [
-          {
-            tx_hash: '1cb2d4f2f8f870d2c9fe293bdbde1dc8d800d688d008f2671def10099cccf741',
-          },
+          { tx_hash: '1cb2d4f2f8f870d2c9fe293bdbde1dc8d800d688d008f2671def10099cccf741' },
         ],
       },
     ],

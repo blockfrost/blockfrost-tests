@@ -8,6 +8,7 @@ const TX_CBOR_WITH_SPENT_UTXO =
 
 export default [
   {
+    id: 'utils-txs-evaluate-utxos-with-cbor-only-json_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos with cbor only (JSON)',
     endpoints: ['utils/txs/evaluate/utxos'],
     postBody: JSON.stringify({ cbor: TX_CBOR }),
@@ -17,23 +18,17 @@ export default [
       version: '1.0',
       servicename: 'ogmios',
       methodname: 'EvaluateTx',
-      result: {
-        EvaluationResult: {
-          'spend:0': {
-            memory: 1_765_011,
-            steps: 384791603,
-          },
-        },
-      },
+      result: { EvaluationResult: { 'spend:0': { memory: 1_765_011, steps: 384791603 } } },
       reflection: { id: expect.any(String) },
     },
   },
   {
+    id: 'utils-txs-evaluate-utxos-with-missing-additional-utxo-set-json_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos with missing additional utxo set (JSON)',
     endpoints: ['utils/txs/evaluate/utxos'],
-    postBody: JSON.stringify({
-      cbor: TX_CBOR_WITH_SPENT_UTXO,
-    }),
+
+    postBody: JSON.stringify({ cbor: TX_CBOR_WITH_SPENT_UTXO }),
+
     headers: { 'Content-Type': 'application/json' },
     response: {
       type: 'jsonwsp/response',
@@ -59,22 +54,20 @@ export default [
   // success
 
   {
+    id: 'utils-txs-evaluate-utxos-successfully-evaluate-execution-units-when-unknown-inputs-are-provided-as-additional-utxo_f9b2e7c14cae',
+
     testName:
       'utils/txs/evaluate/utxos successfully evaluate execution units when unknown inputs are provided as additional utxo',
     endpoints: ['utils/txs/evaluate/utxos'],
+
     postBody: JSON.stringify({
       cbor: '84A30081825820FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00018182581D70C40F9129C2684046EB02325B96CA2899A6FA6478C1DDE9B5C53206A51A00D59F800200A10581840000D8799F4D48656C6C6F2C20576F726C6421FF820000F5F6',
       additionalUtxoSet: [
         [
-          {
-            txId: 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF',
-            index: 0,
-          },
+          { txId: 'FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF', index: 0 },
           {
             address: 'addr_test1wrzqlyffcf5yq3htqge9h9k29zv6d7ny0rqam6d4c5eqdfgg0h7yw',
-            value: {
-              coins: 14_000_000,
-            },
+            value: { coins: 14_000_000 },
             datum: 'd87980',
             script: {
               'plutus:v2':
@@ -84,35 +77,28 @@ export default [
         ],
       ],
     }),
+
     headers: { 'Content-Type': 'application/json' },
     response: {
       type: 'jsonwsp/response',
       version: '1.0',
       servicename: 'ogmios',
       methodname: 'EvaluateTx',
-      result: {
-        EvaluationResult: {
-          'spend:0': {
-            memory: 15_694,
-            steps: 3776833,
-          },
-        },
-      },
+      result: { EvaluationResult: { 'spend:0': { memory: 15_694, steps: 3776833 } } },
       reflection: { id: expect.any(String) },
     },
   },
   {
+    id: 'utils-txs-evaluate-utxos-with-additional-utxo-set-json_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos with additional utxo set (JSON)',
     endpoints: ['utils/txs/evaluate/utxos'],
+
     postBody: JSON.stringify({
       cbor: TX_CBOR_WITH_SPENT_UTXO,
       additionalUtxoSet: [
         [
           // this utxo is already spent on blockchain, but it will work for ogmios if passed as additional utxo set
-          {
-            txId: 'ec6eb047f74e5412c116a819cdd43f1c27a29f2871241453019637b850461b43',
-            index: 0,
-          },
+          { txId: 'ec6eb047f74e5412c116a819cdd43f1c27a29f2871241453019637b850461b43', index: 0 },
           {
             address:
               'addr1qxvduldkktan65x4dg5gkfaaehc798pjg755yckuk5tjcedre5df3pzwwmyq946axfcejy5n4x0y99wqpgtp2gd0k09qgcyhcc',
@@ -121,20 +107,14 @@ export default [
         ],
       ],
     }),
+
     headers: { 'Content-Type': 'application/json' },
     response: {
       type: 'jsonwsp/response',
       version: '1.0',
       servicename: 'ogmios',
       methodname: 'EvaluateTx',
-      result: {
-        EvaluationResult: {
-          'spend:0': {
-            memory: 1_376_449,
-            steps: 292679291,
-          },
-        },
-      },
+      result: { EvaluationResult: { 'spend:0': { memory: 1_376_449, steps: 292679291 } } },
       reflection: { id: expect.any(String) },
     },
   },

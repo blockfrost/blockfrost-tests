@@ -2,11 +2,9 @@ export default [
   {
     id: 'governance-drep-metadata_cbc2a3b2507a',
     testName: 'governance drep metadata',
-
     endpoints: [
       'governance/dreps/drep14pjm8ytt682wkp4jcegdj2yerkcy9a20xevvp7udlcd0ggjxdud/metadata',
     ],
-
     response: {
       drep_id: 'drep14pjm8ytt682wkp4jcegdj2yerkcy9a20xevvp7udlcd0ggjxdud',
       hex: 'a865b3916bd1d4eb06b2c650d928991db042f54f3658c0fb8dfe1af4',
@@ -17,13 +15,9 @@ export default [
           doNotList: false,
           givenName: 'Chris-O',
           objectives:
-            '✅1. Adoption /User acquisition/Blockchain Interoperability \n✅2. Ecosystem growth hacking\n✅3. Access to capital for startups\n✅4. Responsible Treasury Management for long term protocol viability/health\n✅5. Increase blockchain performance, maintain/improve rate of innovation, to accommodate future use on a global scale.\n✅6. Create an atmosphere of transparency & accountability community wide.\n\nHere my detailed DRep position paper:\n\nhttps://x.com/TheOCcryptobro/status/1832252928998175196\n',
+            '✅1. Adoption /User acquisition/Blockchain Interoperability ✅2. Ecosystem growth hacking✅3. Access to capital for startups✅4. Responsible Treasury Management for long term protocol viability/health✅5. Increase blockchain performance, maintain/improve rate of innovation, to accommodate future use on a global scale.✅6. Create an atmosphere of transparency & accountability community wide.Here my detailed DRep position paper:https://x.com/TheOCcryptobro/status/1832252928998175196',
           references: [
-            {
-              uri: 'https://x.com/TheOCcryptobro',
-              '@type': 'Link',
-              label: 'X',
-            },
+            { uri: 'https://x.com/TheOCcryptobro', '@type': 'Link', label: 'X' },
             {
               uri: 'https://t.me/ChrisO_DRep_Discuss',
               '@type': 'Link',
@@ -46,7 +40,7 @@ export default [
             },
           ],
           motivations:
-            "My purpose in becoming a dRep is to represent the interests, perspectives, & advocate for our retail community, the regular individuals who make up the silent majority of our ecosystem in addition to our startup projects/entrepreneurs. I will work to drive adoption and development of Cardano as the next open global financial operating & public digital infrastructure system. I envision a world where social and financial systems are open, inclusive, fair, accessible, and better for all.\n\nMy plan is to support our entrepreneurs through a blend of community-driven funding, formal proposal systems, venture capital initiatives, and a growing infrastructure that's both academically rigorous and practically supportive. This environment not only nurtures new ideas but also provides tangible support mechanisms for those ideas to flourish into sustainable businesses or projects within the blockchain space and Cardano.\n\n",
+            "My purpose in becoming a dRep is to represent the interests, perspectives, & advocate for our retail community, the regular individuals who make up the silent majority of our ecosystem in addition to our startup projects/entrepreneurs. I will work to drive adoption and development of Cardano as the next open global financial operating & public digital infrastructure system. I envision a world where social and financial systems are open, inclusive, fair, accessible, and better for all.My plan is to support our entrepreneurs through a blend of community-driven funding, formal proposal systems, venture capital initiatives, and a growing infrastructure that's both academically rigorous and practically supportive. This environment not only nurtures new ideas but also provides tangible support mechanisms for those ideas to flourish into sustainable businesses or projects within the blockchain space and Cardano.",
           paymentAddress: '$chris.o',
           qualifications: '10yrs of Crypto Industry Experience',
         },
@@ -113,11 +107,9 @@ export default [
 
     testName:
       'governance cip129 drep metadata (same as legacy drep1y25xtvu3d0gaf6cxktr9pkfgnywmqsh4fum93s8m3hlp4aqj3uqdp)',
-
     endpoints: [
       'governance/dreps/drep1y25xtvu3d0gaf6cxktr9pkfgnywmqsh4fum93s8m3hlp4aqj3uqdp/metadata',
     ],
-
     response: {
       drep_id: 'drep1y25xtvu3d0gaf6cxktr9pkfgnywmqsh4fum93s8m3hlp4aqj3uqdp',
       hex: '22a865b3916bd1d4eb06b2c650d928991db042f54f3658c0fb8dfe1af4',
@@ -128,13 +120,9 @@ export default [
           doNotList: false,
           givenName: 'Chris-O',
           objectives:
-            '✅1. Adoption /User acquisition/Blockchain Interoperability \n✅2. Ecosystem growth hacking\n✅3. Access to capital for startups\n✅4. Responsible Treasury Management for long term protocol viability/health\n✅5. Increase blockchain performance, maintain/improve rate of innovation, to accommodate future use on a global scale.\n✅6. Create an atmosphere of transparency & accountability community wide.\n\nHere my detailed DRep position paper:\n\nhttps://x.com/TheOCcryptobro/status/1832252928998175196\n',
+            '✅1. Adoption /User acquisition/Blockchain Interoperability ✅2. Ecosystem growth hacking✅3. Access to capital for startups✅4. Responsible Treasury Management for long term protocol viability/health✅5. Increase blockchain performance, maintain/improve rate of innovation, to accommodate future use on a global scale.✅6. Create an atmosphere of transparency & accountability community wide.Here my detailed DRep position paper:https://x.com/TheOCcryptobro/status/1832252928998175196',
           references: [
-            {
-              uri: 'https://x.com/TheOCcryptobro',
-              '@type': 'Link',
-              label: 'X',
-            },
+            { uri: 'https://x.com/TheOCcryptobro', '@type': 'Link', label: 'X' },
             {
               uri: 'https://t.me/ChrisO_DRep_Discuss',
               '@type': 'Link',
@@ -157,7 +145,7 @@ export default [
             },
           ],
           motivations:
-            "My purpose in becoming a dRep is to represent the interests, perspectives, & advocate for our retail community, the regular individuals who make up the silent majority of our ecosystem in addition to our startup projects/entrepreneurs. I will work to drive adoption and development of Cardano as the next open global financial operating & public digital infrastructure system. I envision a world where social and financial systems are open, inclusive, fair, accessible, and better for all.\n\nMy plan is to support our entrepreneurs through a blend of community-driven funding, formal proposal systems, venture capital initiatives, and a growing infrastructure that's both academically rigorous and practically supportive. This environment not only nurtures new ideas but also provides tangible support mechanisms for those ideas to flourish into sustainable businesses or projects within the blockchain space and Cardano.\n\n",
+            "My purpose in becoming a dRep is to represent the interests, perspectives, & advocate for our retail community, the regular individuals who make up the silent majority of our ecosystem in addition to our startup projects/entrepreneurs. I will work to drive adoption and development of Cardano as the next open global financial operating & public digital infrastructure system. I envision a world where social and financial systems are open, inclusive, fair, accessible, and better for all.My plan is to support our entrepreneurs through a blend of community-driven funding, formal proposal systems, venture capital initiatives, and a growing infrastructure that's both academically rigorous and practically supportive. This environment not only nurtures new ideas but also provides tangible support mechanisms for those ideas to flourish into sustainable businesses or projects within the blockchain space and Cardano.",
           paymentAddress: '$chris.o',
           qualifications: '10yrs of Crypto Industry Experience',
         },

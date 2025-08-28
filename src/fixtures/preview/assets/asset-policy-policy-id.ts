@@ -16,7 +16,6 @@ export default [
       `assets/policy/${policyId}?page=1&count=100`,
       `assets/policy/${policyId}?page=1&count=100&order=asc`,
     ],
-
     response: [
       {
         asset: '7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d48454c4c4f574f524c44',

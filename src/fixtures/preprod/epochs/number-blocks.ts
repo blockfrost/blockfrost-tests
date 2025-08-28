@@ -8,7 +8,6 @@ export default [
     id: 'epochs-number-blocks-queryparams-first-blocks-generic-byron-epoch_a391dcd85248',
     testName: 'epochs/:number/blocks?queryparams first blocks generic byron epoch',
     endpoints: ['epochs/0/blocks?count=2'],
-
     response: [
       '9ad7ff320c9cf74e0f5ee78d22a85ce42bb0a487d0506bf60cfb5a91ea4497d2',
       '1d031daf47281f69cd95ab929c269fd26b1434a56a5bbbd65b7afe85ef96b233',
@@ -18,7 +17,6 @@ export default [
     id: 'epochs-number-blocks-queryparams-last-blocks-generic-byron-epoch_034ee546f58c',
     testName: 'epochs/:number/blocks?queryparams last blocks generic byron epoch',
     endpoints: ['epochs/3/blocks?count=2&order=desc'],
-
     response: [
       '45899e8002b27df291e09188bfe3aeb5397ac03546a7d0ead93aa2500860f1af',
       '7aa118379e64ead193b7e312d7dcdf1927f494c2684ecbf9801adfb3b62deafc',
@@ -28,7 +26,6 @@ export default [
     id: 'epochs-number-blocks-queryparams-last-blocks-generic-shelley-epoch_d5199fd3dde7',
     testName: 'epochs/:number/blocks?queryparams last blocks generic shelley epoch',
     endpoints: ['epochs/121/blocks?page=186'],
-
     response: [
       '47531238268c656276814ba152393b4ecd218c020ffbf038e917ed3b069feb43',
       'd263b0812ef6248448fba04aa09ef331624f2b8f2f11d23f4f870576e382c08e',
@@ -104,7 +101,6 @@ export default [
     id: 'epochs-number-blocks-queryparams-first-blocks-inverted-generic-shelley-epoch_c8ef04a903cf',
     testName: 'epochs/:number/blocks?queryparams first blocks inverted generic shelley epoch',
     endpoints: ['epochs/121/blocks?page=186&order=desc'],
-
     response: [
       'e20c4a76eef117ab0360598c220738c5358e3c483c1a6091344282e5311f4dea',
       'a117951412afd6139268c6e49f04569e1e5f7c5ae67db01e277d3190b26bcaa3',

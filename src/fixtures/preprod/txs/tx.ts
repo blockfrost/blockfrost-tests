@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'txs-tx-generic-shelley-tx-with-huge-size_fba04e6277c8',
     testName: 'txs/:tx - generic shelley tx with huge size',
     endpoints: ['txs/5694141e5678082fd7705d506e9f41134fbfb10cafcef4279856487db7ac799a'],
     response: {
@@ -9,12 +10,7 @@ export default [
       block_time: 1_666_508_494,
       slot: 10_825_294,
       index: 0,
-      output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '3438230',
-        },
-      ],
+      output_amount: [{ unit: 'lovelace', quantity: '3438230' }],
       fees: '1561770',
       deposit: '0',
       size: 16_171,
@@ -33,6 +29,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-with-withdrawals_801eb38ac20c',
     testName: 'txs/:tx - generic with withdrawals',
     endpoints: ['txs/93ac37bf94ee2f8bc991ccdfee458c853b5c5548a15e4b5ec45bb1f113a51236'],
     response: {
@@ -43,10 +40,7 @@ export default [
       slot: 51_630_507,
       index: 0,
       output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '79577571',
-        },
+        { unit: 'lovelace', quantity: '79577571' },
         {
           unit: 'eab730739ac93ab7de17fb1e8919456b2c407ff89a133de5fbd1bf14164367186d8cbd7d4c6a1ad54dbf726243055a67e5cded411744f03e6c13a83c',
           quantity: '1',
@@ -78,6 +72,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-most-withdrawals_16de1a03bbc5',
     testName: 'txs/:tx - MOST withdrawals',
     endpoints: ['txs/869606513d642894b73e8d15ffc7ee47e7b8556431a71ce2daf8dadf6e486d2c'],
     response: {
@@ -88,10 +83,7 @@ export default [
       slot: 51_630_487,
       index: 0,
       output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '42333782497',
-        },
+        { unit: 'lovelace', quantity: '42333782497' },
         {
           unit: 'eab730739ac93ab7de17fb1e8919456b2c407ff89a133de5fbd1bf14095ef9536521537cf1c2a8e6e874e418fb08596b6be4bc861f01700a6b3f09d4',
           quantity: '1',
@@ -191,6 +183,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-shelley-most-delegations_857d28512de4',
     testName: 'txs/:tx - shelley MOST delegations',
     endpoints: ['txs/2bfc48d71e1897aa0eba8f96c95742b0616311a93616311cf863d358902b06b1'],
     response: {
@@ -200,12 +193,7 @@ export default [
       block_time: 1_685_995_952,
       slot: 30_312_752,
       index: 2,
-      output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '702910284',
-        },
-      ],
+      output_amount: [{ unit: 'lovelace', quantity: '702910284' }],
       fees: '829857',
       deposit: '80000000',
       size: 8194,
@@ -224,6 +212,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-pool-certs_17e8f750ed39',
     testName: 'txs/:tx - generic shelley with pool certs',
     endpoints: ['txs/6d8f5d067eb0d4cb0569514551ac83ae9c7a532e4b8e2d23126252cf443ab19e'],
     response: {
@@ -233,12 +222,7 @@ export default [
       block_time: 1_707_246_658,
       slot: 51_563_458,
       index: 0,
-      output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '34576143338',
-        },
-      ],
+      output_amount: [{ unit: 'lovelace', quantity: '34576143338' }],
       fees: '250000',
       deposit: '0',
       size: 702,
@@ -257,6 +241,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-delegations-and-stake-certs_6fb4e588148f',
     testName: 'txs/:tx - generic shelley with delegations and stake certs',
     endpoints: ['txs/22db777567c1896a508298ac56df753968cd17b5e32f28d903e87963d9ee1e7f'],
     response: {
@@ -266,12 +251,7 @@ export default [
       block_time: 1_707_320_456,
       slot: 51_637_256,
       index: 2,
-      output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '9999259830',
-        },
-      ],
+      output_amount: [{ unit: 'lovelace', quantity: '9999259830' }],
       fees: '176149',
       deposit: '2000000',
       size: 467,
@@ -290,6 +270,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-multiple-delegation-stake-certs-and-pool-updates_b442012ddc3c',
     testName: 'txs/:tx - generic shelley with MULTIPLE delegation, stake certs and pool updates',
     endpoints: ['txs/a3d6f2627a56fe7921eeda546abfe164321881d41549b7f2fbf09ea0b718d758'],
     response: {
@@ -299,12 +280,7 @@ export default [
       block_time: 1_655_769_640,
       slot: 86_440,
       index: 0,
-      output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '29999998493561943',
-        },
-      ],
+      output_amount: [{ unit: 'lovelace', quantity: '29999998493561943' }],
       fees: '238057',
       deposit: '1506000000',
       size: 1879,
@@ -323,6 +299,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-pool-retirements_042e18314bc1',
     testName: 'txs/:tx - generic shelley with pool retirements',
     endpoints: ['txs/823048cecd15e2be0025e46dade7fc4b8de6e7f741f9416be17befff3c697605'],
     response: {
@@ -332,12 +309,7 @@ export default [
       block_time: 1_706_659_133,
       slot: 50_975_933,
       index: 0,
-      output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '9497100907',
-        },
-      ],
+      output_amount: [{ unit: 'lovelace', quantity: '9497100907' }],
       fees: '176061',
       deposit: '0',
       size: 470,
@@ -356,6 +328,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-metadata_b83a29e630e8',
     testName: 'txs/:tx - generic shelley with metadata',
     endpoints: ['txs/0acadcce0e878b088bb7b856db7da4ef1fcd4505a5008becc13208440b3a601f'],
     response: {
@@ -365,12 +338,7 @@ export default [
       block_time: 1_707_334_209,
       slot: 51_651_009,
       index: 0,
-      output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '90895646',
-        },
-      ],
+      output_amount: [{ unit: 'lovelace', quantity: '90895646' }],
       fees: '170605',
       deposit: '0',
       size: 341,
@@ -389,8 +357,11 @@ export default [
     },
   },
   {
+    id: 'txs-tx-shelley-tx-of-token-mint-with-ridiculous-hereafter-out-of-range-thu-28-jul-5289796-19-23-29-0000-value_10b5341ba984',
+
     testName:
       'txs/:tx - shelley tx of token mint with ridiculous hereafter out of range (Thu, 28 Jul 5289796 19:23:29 +0000) value',
+
     endpoints: ['txs/cff024d4d806cd7e934e188363a920630ba543482ef73439dc1ad4b47e16711f'],
     response: {
       hash: 'cff024d4d806cd7e934e188363a920630ba543482ef73439dc1ad4b47e16711f',
@@ -400,10 +371,7 @@ export default [
       slot: 13_010_279,
       index: 2,
       output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '399811839',
-        },
+        { unit: 'lovelace', quantity: '399811839' },
         {
           unit: 'd455f086c896f4c5dba004671e7c79519f631786eaaca0863025d6e3434343435030',
           quantity: '1',
@@ -428,6 +396,7 @@ export default [
   },
 
   {
+    id: 'txs-tx-shelley-tx-with-a-lot-of-token-mints-burns_1497818102ab',
     testName: 'txs/:tx - shelley tx with a lot of token mints/burns',
     endpoints: ['txs/b3247a517353c951fbb9b0693a25cba36aad78ddf47c1f90ea0117c01e53ae82'],
     response: {
@@ -438,10 +407,7 @@ export default [
       slot: 41_460_368,
       index: 1,
       output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '268087247347',
-        },
+        { unit: 'lovelace', quantity: '268087247347' },
         {
           unit: '1ec5272d977cfc24ce0de039fb7669e93623b616aace4498c0538b892444455250',
           quantity: '4000',
@@ -469,6 +435,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-assets_bbe597b9135f',
     testName: 'txs/:tx - generic shelley with assets',
     endpoints: ['txs/5dda6588ca90c7f7e3503251229aedd6d1b5546a95433f03a0d2bf90af9278a4'],
     response: {
@@ -479,14 +446,8 @@ export default [
       slot: 51_650_549,
       index: 0,
       output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '11161500320',
-        },
-        {
-          unit: '2912c4707b5695db33e60e89467125bda41fecd62c7f8e56cd854247454e4353',
-          quantity: '1',
-        },
+        { unit: 'lovelace', quantity: '11161500320' },
+        { unit: '2912c4707b5695db33e60e89467125bda41fecd62c7f8e56cd854247454e4353', quantity: '1' },
         {
           unit: 'fa765a4f65920d1aaa4a072457d27a00d81374245afbe33d94fc16710116f10942606bc6e5bc306bba727993ea5179d614b69a1b044127fe9c5826f4',
           quantity: '1',

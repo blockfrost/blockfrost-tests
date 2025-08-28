@@ -3,7 +3,6 @@ export default [
     id: 'txs-tx-withdrawals-generic-shelley-with-withdrawals_790f260d75b7',
     testName: 'txs/:tx/withdrawals - generic shelley with withdrawals',
     endpoints: ['txs/5d438ccecf62ad384ec1e75c5ff0ed60217c37fd6cfefd1625622e3bf8e8a71b/withdrawals'],
-
     response: [
       {
         address: 'stake_test17qtu26mrza0nea07a58w0t8kvxjs9e4xgtr3x490322s9ecuysch4',

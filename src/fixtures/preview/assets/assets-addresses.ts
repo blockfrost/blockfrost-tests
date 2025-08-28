@@ -11,7 +11,6 @@ export default [
     id: 'assets-addresses_f82d27175878',
     testName: 'assets addresses',
     endpoints: ['assets/b43d4ad8386fc831db53cfa5c31bf37d42647eea60ce4b1cafddb247/addresses'],
-
     response: [
       {
         address:
@@ -33,7 +32,6 @@ export default [
     endpoints: [
       'assets/ddd01d9531fcc25e3ca4b6429318c2cc374dbdbcf5e99c1c1e5da1ff444f4e545350414d/addresses',
     ],
-
     response: error_404,
   },
 ];

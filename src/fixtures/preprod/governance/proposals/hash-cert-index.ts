@@ -6,14 +6,11 @@ export default [
     endpoints: [
       'governance/proposals/aff2909f8175ee02a8c1bf96ff516685d25bf0c6b95aac91f4dfd53a5c0867cc/0',
     ],
-
     response: {
       tx_hash: 'aff2909f8175ee02a8c1bf96ff516685d25bf0c6b95aac91f4dfd53a5c0867cc',
       cert_index: 0,
       governance_type: 'info_action',
-      governance_description: {
-        tag: 'InfoAction',
-      },
+      governance_description: { tag: 'InfoAction' },
       deposit: '100000000000',
       return_address: 'stake_test1upqt8jvd8d045a6gs2wkzt57rnx47s5ewz4un2l746r847g7hgw24',
       ratified_epoch: null,
@@ -30,7 +27,6 @@ export default [
     endpoints: [
       'governance/proposals/b52f02288e3ce8c7e57455522f4edd09c12797749e2db32098ecbe980b645d45/0',
     ],
-
     response: {
       tx_hash: 'b52f02288e3ce8c7e57455522f4edd09c12797749e2db32098ecbe980b645d45',
       cert_index: 0,
@@ -84,7 +80,6 @@ export default [
     endpoints: [
       'governance/proposals/0ecc74fe26532cec1ab9a299f082afc436afc888ca2dc0fc6acda431c52dc60d/0',
     ],
-
     response: {
       tx_hash: '0ecc74fe26532cec1ab9a299f082afc436afc888ca2dc0fc6acda431c52dc60d',
       cert_index: 0,
@@ -93,9 +88,7 @@ export default [
         tag: 'ParameterChange',
         contents: [
           null,
-          {
-            stakeAddressDeposit: 1234567,
-          },
+          { stakeAddressDeposit: 1234567 },
           'fa24fb305126805cf2164c161d852a0e7330cf988f1fe558cf7d4a64',
         ],
       },
@@ -115,20 +108,13 @@ export default [
     endpoints: [
       'governance/proposals/ccb27f6b0d58c25ae33fd821b62c387f5230dae930afd07489fa3df56ae56522/0',
     ],
-
     response: {
       tx_hash: 'ccb27f6b0d58c25ae33fd821b62c387f5230dae930afd07489fa3df56ae56522',
       cert_index: 0,
       governance_type: 'hard_fork_initiation',
       governance_description: {
         tag: 'HardForkInitiation',
-        contents: [
-          null,
-          {
-            major: 10,
-            minor: 0,
-          },
-        ],
+        contents: [null, { major: 10, minor: 0 }],
       },
       deposit: '100000000000',
       return_address: 'stake_test1uz6ljatyc7w52z44hskd5pu5cvw7qemwz6re3ux4pmdqumcn2qyrx',
@@ -146,7 +132,6 @@ export default [
     endpoints: [
       'governance/proposals/be1640dd2b3485e94703be5683c804d5051d96c12e1eaacc17c30e74de580ce5/0',
     ],
-
     response: {
       tx_hash: 'be1640dd2b3485e94703be5683c804d5051d96c12e1eaacc17c30e74de580ce5',
       cert_index: 0,
@@ -156,9 +141,7 @@ export default [
         contents: [
           null,
           [],
-          {
-            'keyHash-379569411996ae5b16fc5d79ec08cd9cbe420e7a73456c8dc6c13367': 200,
-          },
+          { 'keyHash-379569411996ae5b16fc5d79ec08cd9cbe420e7a73456c8dc6c13367': 200 },
           0.66,
         ],
       },
@@ -178,7 +161,6 @@ export default [
     endpoints: [
       'governance/proposals/372d688faa77e146798b581b322c0f2981a9023764736ade5d12e0e4e796af8c/0',
     ],
-
     response: {
       tx_hash: '372d688faa77e146798b581b322c0f2981a9023764736ade5d12e0e4e796af8c',
       cert_index: 0,
@@ -190,9 +172,7 @@ export default [
             [
               {
                 network: 'Testnet',
-                credential: {
-                  keyHash: '4245236ab8056760efceebbff57e8cab220182be3e36439e520a6454',
-                },
+                credential: { keyHash: '4245236ab8056760efceebbff57e8cab220182be3e36439e520a6454' },
               },
               1000000000000,
             ],

@@ -15,7 +15,6 @@ export default [
       'addresses/addr_test1qzwuqsd70k70wcm8smxs6jw34r59r83ywm867t5nu3nutceksz8m2cq3qzq36wt37xengqnuweh8pmr4wrxqcavz996sj2cqw8/utxos',
       'addresses/addr_test1qzwuqsd70k70wcm8smxs6jw34r59r83ywm867t5nu3nutceksz8m2cq3qzq36wt37xengqnuweh8pmr4wrxqcavz996sj2cqw8/utxos?page=1',
     ],
-
     response: [
       {
         address:
@@ -1227,7 +1226,6 @@ export default [
       'addresses/addr_test1qzwuqsd70k70wcm8smxs6jw34r59r83ywm867t5nu3nutceksz8m2cq3qzq36wt37xengqnuweh8pmr4wrxqcavz996sj2cqw8/utxos?page=3',
       'addresses/addr_test1qzwuqsd70k70wcm8smxs6jw34r59r83ywm867t5nu3nutceksz8m2cq3qzq36wt37xengqnuweh8pmr4wrxqcavz996sj2cqw8/utxos?page=3&count=100',
     ],
-
     response: [
       {
         address:
@@ -1235,12 +1233,7 @@ export default [
         tx_hash: 'cbf3bae3b5e1c383cf49aa8b22fe7db90e0c3828e87ed2fd242e5e7b61e34e7e',
         tx_index: 50,
         output_index: 50,
-        amount: [
-          {
-            unit: 'lovelace',
-            quantity: '98765864',
-          },
-        ],
+        amount: [{ unit: 'lovelace', quantity: '98765864' }],
         block: '23c262b1582313727ef950bf22d6c30179e6ae61b91cd74876e198a109d2a836',
         data_hash: null,
         inline_datum: null,
@@ -1256,7 +1249,6 @@ export default [
       'addresses/addr_test1qp7e6ehqfskzywcswgmmsv9ajqw5hwhzxlm06er0q4fprlcts4rkp9pr85efml8k5h0f6sm62l9w0xlm9rnuzvaey8qqmlu9fp/utxos',
       'addresses/addr_vkh10kwkdczv9s3rkyrjx7urp0vsr49m4c3h7m7kgmc92ggl7recmtk/utxos',
     ],
-
     response: [
       {
         address:
@@ -1280,7 +1272,6 @@ export default [
       'addresses/addr_test1qpjtqlf5evmhd3zqy8gnldp7hu7cej7fs5nzqu7rnfn85xxaj2n6gf64mt0jesrug73dpqyj9prc7ytsmvcrlud25p2q9m97vy/utxos',
       'addresses/addr_vkh1vjc86dxtxamvgspp6ylmg04l8kxvhjv9ycs88su6veapszlcmsk/utxos',
     ],
-
     response: [
       {
         address:
@@ -1289,10 +1280,7 @@ export default [
         tx_index: 1,
         output_index: 1,
         amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1189560',
-          },
+          { unit: 'lovelace', quantity: '1189560' },
           {
             unit: '94ffdbeff3d55343693ba42eb25000592cb77690088f8a66e1cb043d6461726b65722d776f726d2d74657374',
             quantity: '1',
@@ -1322,10 +1310,7 @@ export default [
         tx_index: +0,
         output_index: +0,
         amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1262830',
-          },
+          { unit: 'lovelace', quantity: '1262830' },
           {
             unit: 'f0ff48bbb7bbe9d59a40f1ce90e9e9d0ff5002ec48f232b49ca0fb9a000de140636f756e74646f6f6b75',
             quantity: '1',
@@ -1359,10 +1344,7 @@ export default [
         tx_index: 4,
         output_index: 4,
         amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1211110',
-          },
+          { unit: 'lovelace', quantity: '1211110' },
           {
             unit: 'f0ff48bbb7bbe9d59a40f1ce90e9e9d0ff5002ec48f232b49ca0fb9a000de140646868647268646668646668646668',
             quantity: '1',
@@ -1380,10 +1362,7 @@ export default [
         tx_index: 6,
         output_index: 6,
         amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1211110',
-          },
+          { unit: 'lovelace', quantity: '1211110' },
           {
             unit: 'f0ff48bbb7bbe9d59a40f1ce90e9e9d0ff5002ec48f232b49ca0fb9a000de1407465737468616e646c653132333435',
             quantity: '1',
@@ -1404,7 +1383,6 @@ export default [
       'addresses/addr_test1qpjtqlf5evmhd3zqy8gnldp7hu7cej7fs5nzqu7rnfn85xxaj2n6gf64mt0jesrug73dpqyj9prc7ytsmvcrlud25p2q9m97vy/utxos?order=desc',
       'addresses/addr_vkh1vjc86dxtxamvgspp6ylmg04l8kxvhjv9ycs88su6veapszlcmsk/utxos?order=desc',
     ],
-
     response: [
       {
         address:
@@ -1413,10 +1391,7 @@ export default [
         tx_index: 6,
         output_index: 6,
         amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1211110',
-          },
+          { unit: 'lovelace', quantity: '1211110' },
           {
             unit: 'f0ff48bbb7bbe9d59a40f1ce90e9e9d0ff5002ec48f232b49ca0fb9a000de1407465737468616e646c653132333435',
             quantity: '1',
@@ -1434,10 +1409,7 @@ export default [
         tx_index: 4,
         output_index: 4,
         amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1211110',
-          },
+          { unit: 'lovelace', quantity: '1211110' },
           {
             unit: 'f0ff48bbb7bbe9d59a40f1ce90e9e9d0ff5002ec48f232b49ca0fb9a000de140646868647268646668646668646668',
             quantity: '1',
@@ -1467,10 +1439,7 @@ export default [
         tx_index: +0,
         output_index: +0,
         amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1262830',
-          },
+          { unit: 'lovelace', quantity: '1262830' },
           {
             unit: 'f0ff48bbb7bbe9d59a40f1ce90e9e9d0ff5002ec48f232b49ca0fb9a000de140636f756e74646f6f6b75',
             quantity: '1',
@@ -1504,10 +1473,7 @@ export default [
         tx_index: 1,
         output_index: 1,
         amount: [
-          {
-            unit: 'lovelace',
-            quantity: '1189560',
-          },
+          { unit: 'lovelace', quantity: '1189560' },
           {
             unit: '94ffdbeff3d55343693ba42eb25000592cb77690088f8a66e1cb043d6461726b65722d776f726d2d74657374',
             quantity: '1',
@@ -1524,7 +1490,6 @@ export default [
     id: 'addresses-address-utxos-address-with-inline-datums_19104f9ec9ec',
     testName: 'addresses/:address/utxos address with inline datums',
     endpoints: ['addresses/addr_test1wpzh3u3c377zqntd82qn90wzz0c6a2mqy0uv0w48ytx3hxce608km/utxos'],
-
     response: [
       {
         address: 'addr_test1wpzh3u3c377zqntd82qn90wzz0c6a2mqy0uv0w48ytx3hxce608km',
@@ -1547,7 +1512,6 @@ export default [
       'addresses/addr_test1qq55vkc95wl7sg3tgwntcdsj95xu0dcv6fq2u0277vuyr8mlv3s9l8gzkmn7a0yztqtc2z23myduv4n0l842guj5m3pslqanxy/utxos/lovelace',
       'addresses/addr_vkh199r9kpdrhl5zy26r567rvy3dphrmwrxjgzhr6hhn8pqe7amw3h5/utxos/lovelace',
     ],
-
     response: [
       {
         address:
@@ -1570,7 +1534,6 @@ export default [
     endpoints: [
       'addresses/addr_test1qzhzquh95ux8s6c3crhmcnuhwycpmcgpmrj7dkna2g7e8yk0s2v84majm9we4n4gzjarlg7watg6au09eq22q5nfjrgs06d9x5/utxos/fa3eff2047fdf9293c5feef4dc85ce58097ea1c6da4845a35153518374494e4459',
     ],
-
     response: [],
   },
 
@@ -1582,7 +1545,6 @@ export default [
       'addresses/addr_test1qqg6a630r8lugmtha5ygvnngsatxpa4t7g8wqma9vc767lwerv4zq00vx9tyeee3wc73729qj7mmwm9dxm7r0v025qkskvnajp/utxos',
       'addresses/addr_vkh1zxhw5tcellzx6aldpzryu6y82es0d2ljpmsxlftx8khh6h0fv3c/utxos',
     ],
-
     response: [],
   },
   {
@@ -1593,7 +1555,6 @@ export default [
       'addresses/addr_test1qqg6a630r8lugmtha5ygvnngsatxpa4t7g8wqma9vc767lwerv4zq00vx9tyeee3wc73729qj7mmwm9dxm7r0v025qkskvnajp/utxos/fa3eff2047fdf9293c5feef4dc85ce58097ea1c6da4845a35153518374494e4459',
       'addresses/addr_vkh1zxhw5tcellzx6aldpzryu6y82es0d2ljpmsxlftx8khh6h0fv3c/utxos/fa3eff2047fdf9293c5feef4dc85ce58097ea1c6da4845a35153518374494e4459',
     ],
-
     response: [],
   },
   {
@@ -1606,7 +1567,6 @@ export default [
       'addresses/addr_test1qqg6a630r8lugmtha5ygvnngsatxpa4t7g8wqma9vc767lwerv4zq00vx9tyeee3wc73729qj7mmwm9dxm7r0v025qkskvnajp/utxos/lovelace',
       'addresses/addr_vkh1zxhw5tcellzx6aldpzryu6y82es0d2ljpmsxlftx8khh6h0fv3c/utxos/lovelace',
     ],
-
     response: [],
   },
 
@@ -1617,7 +1577,6 @@ export default [
     endpoints: [
       'addresses/addr_test1qqg6a630r8lugmtha5ygvnngsatxpa4t7g8wqma9vc767lwerv4zq00vx9tyeee3wc73729qj7mmwm9dxm7r0v025qkskvnajp/utxos',
     ],
-
     response: [],
   },
   {
@@ -1647,7 +1606,6 @@ export default [
       'addresses/addr_vkh1zxhw5tcellzx6aldpzryu6y82es0d2ljpmsxlftx8khh6h0fv3c/utxos/lovelace',
       'addresses/addr_vkh1zxhw5tcellzx6aldpzryu6y82es0d2ljpmsxlftx8khh6h0fv3c/utxos/fa3eff2047fdf9293c5feef4dc85ce58097ea1c6da4845a35153518374494e4459',
     ],
-
     response: [],
   },
 ];

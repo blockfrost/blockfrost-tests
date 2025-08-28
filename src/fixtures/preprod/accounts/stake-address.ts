@@ -158,12 +158,9 @@ export default [
   },
   {
     id: 'accounts-stake-address-retire-and-register-drep-after-voting-should-have-their-drep-id-cleared_38d4e081ae4b',
-
     testName:
       'accounts/:stake_address retire and register drep after voting. should have their drep_id cleared.',
-
     endpoints: ['accounts/stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq'],
-
     response: {
       stake_address: 'stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq',
       active: true,

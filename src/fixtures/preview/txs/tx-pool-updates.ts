@@ -6,7 +6,6 @@ export default [
     endpoints: [
       'txs/6091f714ccbb720fcb7db72fad984afe94095f7a5aa9a03879b60fbc35740a97/pool_updates',
     ],
-
     response: [
       {
         cert_index: 0,
@@ -25,15 +24,7 @@ export default [
           description: null,
           homepage: null,
         },
-        relays: [
-          {
-            ipv4: '75.119.159.254',
-            ipv6: null,
-            dns: null,
-            dns_srv: null,
-            port: 3001,
-          },
-        ],
+        relays: [{ ipv4: '75.119.159.254', ipv6: null, dns: null, dns_srv: null, port: 3001 }],
         active_epoch: 349,
       },
     ],
@@ -48,7 +39,6 @@ export default [
     endpoints: [
       'txs/e3ca57e8f323265742a8f4e79ff9af884c9ff8719bd4f7788adaea4c33ba07b6/pool_updates',
     ],
-
     response: [
       {
         cert_index: 1,
@@ -143,7 +133,6 @@ export default [
     endpoints: [
       'txs/e3ca57e8f323265742a8f4e79ff9af884c9ff8719bd4f7788adaea4c33ba07b6/pool_updates',
     ],
-
     response: [
       {
         cert_index: 1,

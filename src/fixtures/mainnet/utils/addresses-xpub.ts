@@ -2,11 +2,9 @@ export default [
   {
     id: 'utils-addresses-xpub-xpub-role-index-0-0_e9bf5c3d4c33',
     testName: 'utils/addresses/xpub/:xpub/:role/:index 0/0',
-
     endpoints: [
       'utils/addresses/xpub/7ec9738746cb4708df52a455b43aa3fdee8955abaf37f68ffc79bb84fbf9e1b39d77e2deb9749faf890ff8326d350ed3fd0e4aa271b35cad063692af87102152/0/0',
     ],
-
     response: {
       xpub: '7ec9738746cb4708df52a455b43aa3fdee8955abaf37f68ffc79bb84fbf9e1b39d77e2deb9749faf890ff8326d350ed3fd0e4aa271b35cad063692af87102152',
       role: 0,
@@ -18,11 +16,9 @@ export default [
   {
     id: 'utils-addresses-xpub-xpub-role-index-1-1_685644230256',
     testName: 'utils/addresses/xpub/:xpub/:role/:index 1/1',
-
     endpoints: [
       'utils/addresses/xpub/7ec9738746cb4708df52a455b43aa3fdee8955abaf37f68ffc79bb84fbf9e1b39d77e2deb9749faf890ff8326d350ed3fd0e4aa271b35cad063692af87102152/1/1',
     ],
-
     response: {
       xpub: '7ec9738746cb4708df52a455b43aa3fdee8955abaf37f68ffc79bb84fbf9e1b39d77e2deb9749faf890ff8326d350ed3fd0e4aa271b35cad063692af87102152',
       role: 1,
@@ -34,11 +30,9 @@ export default [
   {
     id: 'utils-addresses-xpub-xpub-role-index-0-3_d80dfda10674',
     testName: 'utils/addresses/xpub/:xpub/:role/:index 0/3',
-
     endpoints: [
       'utils/addresses/xpub/7ec9738746cb4708df52a455b43aa3fdee8955abaf37f68ffc79bb84fbf9e1b39d77e2deb9749faf890ff8326d350ed3fd0e4aa271b35cad063692af87102152/0/3',
     ],
-
     response: {
       xpub: '7ec9738746cb4708df52a455b43aa3fdee8955abaf37f68ffc79bb84fbf9e1b39d77e2deb9749faf890ff8326d350ed3fd0e4aa271b35cad063692af87102152',
       role: 0,
@@ -50,11 +44,9 @@ export default [
   {
     id: 'utils-addresses-xpub-xpub-role-index-1-3_2a4c518025e7',
     testName: 'utils/addresses/xpub/:xpub/:role/:index 1/3',
-
     endpoints: [
       'utils/addresses/xpub/7ec9738746cb4708df52a455b43aa3fdee8955abaf37f68ffc79bb84fbf9e1b39d77e2deb9749faf890ff8326d350ed3fd0e4aa271b35cad063692af87102152/1/3',
     ],
-
     response: {
       xpub: '7ec9738746cb4708df52a455b43aa3fdee8955abaf37f68ffc79bb84fbf9e1b39d77e2deb9749faf890ff8326d350ed3fd0e4aa271b35cad063692af87102152',
       role: 1,

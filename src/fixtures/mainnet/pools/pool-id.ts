@@ -4,6 +4,7 @@ import { error_400_pools, error_404 } from '../../errors/index.js';
 
 export default [
   {
+    id: 'pools-pool-id-best-pool_ed86d68945e0',
     testName: 'pools/pool_id - best pool',
     endpoints: [
       'pools/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy',
@@ -36,11 +37,13 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-pool-with-more-owners_392882e765e9',
     testName: 'pools/pool_id - pool with more owners',
     endpoints: [
       'pools/pool108zdflss3ayqlm5c7vr6mtqj2uwl99vk28ur8dv4zswdzt6yauc',
       'pools/79c4d4fe108f480fee98f307adac12571df2959651f833b595141cd1',
     ],
+
     customTimeout: 20_000,
     response: {
       pool_id: 'pool108zdflss3ayqlm5c7vr6mtqj2uwl99vk28ur8dv4zswdzt6yauc',
@@ -96,6 +99,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-pool-with-unused-reward-stake-address_97ed5eda6cde',
     testName: 'pools/pool_id - pool with unused reward stake address',
     endpoints: [
       'pools/pool17s3mr9c4ejjfq20dz0ls9ggskc770kt267s9xmw93payzdswwgg',
@@ -145,6 +149,7 @@ export default [
   stake1u80x0vdf8kwvptk7nar24d805p7wnlj4vm22cl0q8jngs9q5k2suq // 3 pools, two of them retired in the same epoch pool10ehxcuxmryvg5ae6g8krdvhaj3m07a6rzdtv8a0grtxpv7fnrpu, pool1qu4gywwxgdgep3t3pdgd92nclz9khr645dhn6fzyrmkuu4jk6th, pool1x6pcty09rx70ujg5lkxl7tdenamzh002y3uppkk0qczzcxyguyd
   */
   {
+    id: 'pools-pool-id-2-times-deregistered-pool_b738ec1f9f2c',
     testName: 'pools/pool_id - 2 times deregistered pool',
     endpoints: ['pools/pool1av0amckqhv85qxctwg2hj4jcgdgfhpmvvw3c5evrkg9a76tr7jh'],
     response: {
@@ -178,6 +183,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-expired-pool_9bfe38015437',
     testName: 'pools/:pool_id - expired pool',
     endpoints: ['pools/pool1tz9k09jylmnk74z74v2t384smfypr7cwpzvs5sd2w537wu5jlrk'],
     response: {
@@ -214,6 +220,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-expired-pool-no-1-same-rewards-account_043cc9d61dae',
     testName: 'pools/:pool_id - expired pool no 1 - same rewards account',
     endpoints: ['pools/pool10ehxcuxmryvg5ae6g8krdvhaj3m07a6rzdtv8a0grtxpv7fnrpu'],
     response: {
@@ -249,6 +256,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-expired-pool-no-2-same-rewards-account_bd22449ec400',
     testName: 'pools/:pool_id - expired pool no 2 - same rewards account',
     endpoints: ['pools/pool1qu4gywwxgdgep3t3pdgd92nclz9khr645dhn6fzyrmkuu4jk6th'],
     response: {
@@ -280,6 +288,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-expired-pool-no-3-same-rewards-account_fc3087c937f4',
     testName: 'pools/:pool_id - expired pool no 3 - same rewards account',
     endpoints: ['pools/pool1x6pcty09rx70ujg5lkxl7tdenamzh002y3uppkk0qczzcxyguyd'],
     response: {
@@ -309,6 +318,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-retired-pool-with-non-zero-live-stake_055d54c1d76c',
     testName: 'pools/:pool_id - retired pool with non-zero live stake',
     endpoints: ['pools/pool13d2tchandz87ux0pgkxjdxd62zkuj872tx5stpcth8f6xequ579'],
     response: {
@@ -339,6 +349,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-retired-pool-with-accounts-with-mirs_07d5cfc922a9',
     testName: 'pools/:pool_id - retired pool with accounts with MIRs',
     endpoints: ['pools/pool1n2yl5u5ycyp07aj6np7clwhwdh7v734swrrpy2hcvmhhj953awm'],
     response: {
@@ -386,6 +397,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-pool-with-calidus-key_4dc38a99b846',
     testName: 'pools/:pool_id - pool with calidus_key',
     endpoints: ['pools/pool10pd44d65586rldtdzuu88e7mn4sxjctvdksmt05nnqfzqu7g7hd'],
     response: {
@@ -428,6 +440,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-pool-with-multiple-calidus-key-registered-pick-last-one_61c99e1050b4',
     testName: 'pools/:pool_id - pool with multiple calidus_key registered (pick last one)',
     endpoints: ['pools/pool1pgmuramw9waw9ckxsvpxmcn9p6fd4xl5jmavu8jje0x5vuc00l0'],
     response: {
@@ -469,14 +482,14 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-invalid-pool_d9a0ef561623',
     testName: 'pools/:pool_id - invalid pool',
-
     response: error_400_pools,
     endpoints: ['pools/pool1kek'],
   },
   {
+    id: 'pools-pool-id-valid-non-existing-pool-for-this-network_bc28201fd319',
     testName: 'pools/:pool_id - valid non-existing pool (for this network)',
-
     response: error_404,
     endpoints: ['pools/pool1y6chk7x7fup4ms9leesdr57r4qy9cwxuee0msan72x976a6u0nc'],
   },

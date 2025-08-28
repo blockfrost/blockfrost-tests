@@ -9,13 +9,11 @@ export default [
   {
     id: 'epochs-number-stakes-pool-queryparams-generic-pool_0c869a37cba6',
     testName: 'epochs/:number/stakes/pool?queryparams generic pool',
-
     endpoints: [
       'epochs/242/stakes/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy',
       'epochs/242/stakes/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?page=1',
       'epochs/242/stakes/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?page=1&count=100',
     ],
-
     response: [
       {
         stake_address: 'stake1uyq0yr438xvf533765w8s62eh5cmj33sed73cypt37l2m9ch78kup',
@@ -165,10 +163,7 @@ export default [
         stake_address: 'stake1u9y3qt57glwuyl5gmhtf07jfcmn8u2xs9sa2vy4zhegprdqvugs8v',
         amount: '7821870243',
       },
-      {
-        stake_address: 'stake1u9ylzsgxaa6xctf4juup682ar3juj85n8tx3hthnljg47zctvm3rc',
-        amount: '0',
-      },
+      { stake_address: 'stake1u9ylzsgxaa6xctf4juup682ar3juj85n8tx3hthnljg47zctvm3rc', amount: '0' },
       {
         stake_address: 'stake1u99pjll22qd04nltp5waq7d5h6yfzyj9yxyrcevsdy4028cfr267r',
         amount: '2448333957',
@@ -213,10 +208,7 @@ export default [
         stake_address: 'stake1u9w9u7nnxgwq0qj0muckv7zdyxtc2tr9udlhhkgm3smc8jscmzt22',
         amount: '1750548329',
       },
-      {
-        stake_address: 'stake1u90lfvdwmqqlngh6mtzl63pz6u98uv06p49fg80d36c52cgpd2hws',
-        amount: '0',
-      },
+      { stake_address: 'stake1u90lfvdwmqqlngh6mtzl63pz6u98uv06p49fg80d36c52cgpd2hws', amount: '0' },
       {
         stake_address: 'stake1u9jyw6e97pguykpn9kw6jsrvq3x42tehhhzld9vlvhg6ecsw0k3u8',
         amount: '11895546866',
@@ -353,10 +345,7 @@ export default [
         stake_address: 'stake1ux3u6x5cs388djqz6awnyuvez2f6n8jzjhqq59s4yxhm8jskeh0t9',
         amount: '1102182',
       },
-      {
-        stake_address: 'stake1uxjfwrj2k29wv77q4rzlxu0jvsr5dcdyx3crl5f2mnx3agcnzd5vx',
-        amount: '0',
-      },
+      { stake_address: 'stake1uxjfwrj2k29wv77q4rzlxu0jvsr5dcdyx3crl5f2mnx3agcnzd5vx', amount: '0' },
       {
         stake_address: 'stake1ux4vspfvwuus9uwyp5p3f0ky7a30jq5j80jxse0fr7pa56sgn6kha',
         amount: '1975859151626',
@@ -422,11 +411,9 @@ export default [
   {
     id: 'epochs-number-stakes-pool-queryparams-page-1-best-pool-ever_34eb1a7fbe26',
     testName: 'epochs/:number/stakes/pool?queryparams page 1 best pool ever',
-
     endpoints: [
       'epochs/242/stakes/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?page=1&count=2',
     ],
-
     response: [
       {
         stake_address: 'stake1uyq0yr438xvf533765w8s62eh5cmj33sed73cypt37l2m9ch78kup',
@@ -441,11 +428,9 @@ export default [
   {
     id: 'epochs-number-stakes-pool-queryparams-page-2-best-pool-ever_573eb49e78f2',
     testName: 'epochs/:number/stakes/pool?queryparams page 2 best pool ever',
-
     endpoints: [
       'epochs/242/stakes/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy?page=2&count=2',
     ],
-
     response: [
       {
         stake_address: 'stake1uyyr6da2au8kmm52xjljtzs3zu43pg3e9alflh6jaw0eelqmlf8mt',
@@ -462,14 +447,12 @@ export default [
 
     testName:
       'epochs/:number/stakes/pool?queryparams generic new, old and expired pools without active delegators for that epoch',
-
     endpoints: [
       'epochs/224/stakes/pool1ezskfrplms9h6hxcw7adqghmfrtpn6cy7ax8ajrm5kn0crvl6sn',
       'epochs/242/stakes/pool14qacykhn8lzvltxrntkfvzakdn3acyj2m28lfc8q02gzylu8l9a',
       'epochs/247/stakes/pool105y08fgl97g255q7v9nk0x7aqyxaqcluve2jxhgwemkaxkeyd82',
       'epochs/200/stakes/pool105y08fgl97g255q7v9nk0x7aqyxaqcluve2jxhgwemkaxkeyd82',
     ],
-
     response: [],
   },
 ];

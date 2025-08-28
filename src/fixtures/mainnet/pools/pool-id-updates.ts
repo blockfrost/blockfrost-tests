@@ -2,12 +2,10 @@ export default [
   {
     id: 'pools-pool-id-updates-generic-pool-updates_a431cf52a511',
     testName: 'pools/:pool_id/updates - generic pool updates',
-
     endpoints: [
       'pools/pool1kchver88u3kygsak8wgll7htr8uxn5v35lfrsyy842nkscrzyvj/updates?count=10',
       'pools/b62ecc8ce7e46c4443b63b91fffaeb19f869d191a7d2381087aaa768/updates?count=10',
     ],
-
     response: [
       {
         tx_hash: 'c3af622e2817bc27436b952b4109b24bfc73e1acc57a4ec6691be5a7d8c0a5b0',
@@ -64,12 +62,10 @@ export default [
   {
     id: 'pools-pool-id-updates-best-pool_f9339a4c9f32',
     testName: 'pools/:pool_id/updates - best pool',
-
     endpoints: [
       'pools/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy/updates?count=1&page=1',
       'pools/0f292fcaa02b8b2f9b3c8f9fd8e0bb21abedb692a6d5058df3ef2735/updates?count=1&page=1',
     ],
-
     response: [
       {
         tx_hash: 'a96c79773b7506211eb56bf94886a2face17657d1009f52fb5ea05f19cc8823e',

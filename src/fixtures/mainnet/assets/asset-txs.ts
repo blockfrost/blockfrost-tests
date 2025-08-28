@@ -9,11 +9,9 @@ export default [
   {
     id: 'assets-asset-txs-all-hail-nutcoin_b3a9947e3422',
     testName: 'assets/:asset/txs -  all hail nutcoin!',
-
     endpoints: [
       'assets/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e/txs',
     ],
-
     response: [
       'e252be4c7e40d35919f741c9649ff207c3e49d53bb819e5c1cb458055fd363ed',
       'c38a0892729d071242b89ddd0069eb7c3b6cb0eb7170f040c4b59020b2081a0f',
@@ -26,12 +24,10 @@ export default [
   {
     id: 'assets-asset-txs-queryparams-spacecoin-huge-asset_c1b170d8ade8',
     testName: 'assets/:asset/txs?queryparams - spacecoin huge asset',
-
     endpoints: [
       'assets/d894897411707efa755a76deb66d26dfd50593f2e70863e1661e98a07370616365636f696e73/txs?count=100&page=2',
       'assets/d894897411707efa755a76deb66d26dfd50593f2e70863e1661e98a07370616365636f696e73/txs?page=2',
     ],
-
     response: [
       '7460d8e7f9f9d8955cd7f41f8fd8f59fe507faa918d6e5c20bc55ec74564cef2',
       '7df145f3ab8e2a8a8c85c95a4d191371f6dad74f276e7d5a68346f6bdc6d08ae',
@@ -138,13 +134,11 @@ export default [
   {
     id: 'assets-asset-txs-queryparams-hosky-ultra-huge-asset_c5393c55aed8',
     testName: 'assets/:asset/txs?queryparams - hosky ultra huge asset',
-
     endpoints: [
       'assets/a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235484f534b59/txs?page=42420',
       'assets/a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235484f534b59/txs?page=42420&order=asc',
       'assets/a0028f350aaabe0545fdcb56b039bfb08e4bb4d8c4d7c3c7d481c235484f534b59/txs?page=42420&order=asc&count=100',
     ],
-
     response: [
       '329f5c17ca5631376e4831bdf173d88d588e29081cd5afd2826bf83963285467',
       '157c43857df805f6cae820536aa5608ca5ad27f4d9617ba5d92248e67683660d',
@@ -251,13 +245,11 @@ export default [
   {
     id: 'assets-asset-txs-queryparams-spacecoin-huge-asset_ba3641e75ab0',
     testName: 'assets/:asset/txs?queryparams - spacecoin huge asset',
-
     endpoints: [
       'assets/d894897411707efa755a76deb66d26dfd50593f2e70863e1661e98a07370616365636f696e73/txs?page=21234',
       'assets/d894897411707efa755a76deb66d26dfd50593f2e70863e1661e98a07370616365636f696e73/txs?page=21234&order=asc',
       'assets/d894897411707efa755a76deb66d26dfd50593f2e70863e1661e98a07370616365636f696e73/txs?page=21234&order=asc&count=100',
     ],
-
     response: [
       'f91c886b0bf82ac6ca2254977e5942d558d2e2286fe0dce2bfccad81bfee3ea0',
       '97da02274e2790478f7cd4e436ef676005a5ca8fb6054e8de1aa12a640ce70fd',
@@ -366,11 +358,9 @@ export default [
 
     testName:
       'assets/8654e8b350e298c80d2451beb5ed80fc9eee9f38ce6b039fb8706bc34c4f4253544552/txs precached response',
-
     endpoints: [
       'assets/8654e8b350e298c80d2451beb5ed80fc9eee9f38ce6b039fb8706bc34c4f4253544552/txs?page=123',
     ],
-
     response: [
       '900bd8bae8d907c15958cefe08c68c061026387093a5286ca6a19eb3a14df5cb',
       'b55353c89b77b7c32552267cf7a9acafac35c22ba2c8cb973f9d46d918fa77e6',
@@ -479,11 +469,9 @@ export default [
 
     testName:
       'assets/4247d5091db82330100904963ab8d0850976c80d3f1b927e052e07bd546f6b68756e/txs precached response',
-
     endpoints: [
       'assets/4247d5091db82330100904963ab8d0850976c80d3f1b927e052e07bd546f6b68756e/txs?page=123',
     ],
-
     response: [
       'fbd210a94a33075c6c707de82e0acfd3fa60825f1056a4c9c1b99446c18420f5',
       '20f004fbe54db3558b440b84ee0e03ee8bafdee392f9c4000ec5e14dec8378ab',
@@ -592,11 +580,9 @@ export default [
 
     testName:
       'assets/5ad8deb64bfec21ad2d96e1270b5873d0c4d0f231b928b4c39eb243561646f736961/txs precached response',
-
     endpoints: [
       'assets/5ad8deb64bfec21ad2d96e1270b5873d0c4d0f231b928b4c39eb243561646f736961/txs?page=123',
     ],
-
     response: [
       '6897fe2daf45f9958bfa3bf46987da79d38d0ac66b30c5d82c7ddadd086d364e',
       'fe2d6ebbc3cd7d4c7f1c21600150ac17713bb6a4782e50bdb90feb43d3e1fd8d',
@@ -705,11 +691,9 @@ export default [
 
     testName:
       'assets/9a9693a9a37912a5097918f97918d15240c92ab729a0b7c4aa144d7753554e444145/txs precached response',
-
     endpoints: [
       'assets/9a9693a9a37912a5097918f97918d15240c92ab729a0b7c4aa144d7753554e444145/txs?page=123',
     ],
-
     response: [
       'a09ad2b01b8fddbbdfc1578de75b2251ae62c690bf07257756aac3d1fc176792',
       '167cc992ac2e58867d4c96b5770a431c4310cdb2dcd8ba10527e1bccd8e7721e',
@@ -818,11 +802,9 @@ export default [
 
     testName:
       'assets/29d222ce763455e3d7a09a665ce554f00ac89d2e99a1a83d267170c64d494e/txs precached response',
-
     endpoints: [
       'assets/29d222ce763455e3d7a09a665ce554f00ac89d2e99a1a83d267170c64d494e/txs?page=123',
     ],
-
     response: [
       '7bbbd2fac95ee54ed4f50ce52fc15b6b0e2f03f9bf3b0f247b6a8a6b587040dd',
       '22a2d54e5073833e82d2fa185a549ff439d6d5e1f7483ccd29de82c0f9225e10',
@@ -931,11 +913,9 @@ export default [
 
     testName:
       'assets/afc910d7a306d20c12903979d4935ae4307241d03245743548e767834153484942/txs precached response',
-
     endpoints: [
       'assets/afc910d7a306d20c12903979d4935ae4307241d03245743548e767834153484942/txs?page=123',
     ],
-
     response: [
       'e15bccd189abc1cb630c8780baccd4c8d61e47f3c35705740f180daf73135e37',
       '30f53c880fe69544410d2f62bc9e89bc9801006d8642cc48001e234aea4314db',
@@ -1044,11 +1024,9 @@ export default [
 
     testName:
       'assets/b788fbee71a32d2efc5ee7d151f3917d99160f78fb1e41a1bbf80d8f4c454146544f4b454e/txs precached response',
-
     endpoints: [
       'assets/b788fbee71a32d2efc5ee7d151f3917d99160f78fb1e41a1bbf80d8f4c454146544f4b454e/txs?page=123',
     ],
-
     response: [
       '9b03646e7ec1db4ac26d6d8dde8734dddaa9d87a662e0eee6b99592dc90e2283',
       '84cb1e409eac3d00cff28fb514c170d5eef579f4ff46f5d17427ed6c1cd99383',
@@ -1157,11 +1135,9 @@ export default [
 
     testName:
       'assets/b6a7467ea1deb012808ef4e87b5ff371e85f7142d7b356a40d9b42a0436f726e75636f70696173205b76696120436861696e506f72742e696f5d/txs precached response',
-
     endpoints: [
       'assets/b6a7467ea1deb012808ef4e87b5ff371e85f7142d7b356a40d9b42a0436f726e75636f70696173205b76696120436861696e506f72742e696f5d/txs?page=123',
     ],
-
     response: [
       'cf8cfbc176b153aa124eb85d19230b9f96b0ef0815b79ccd83d264671c512262',
       'a51816a4b884499ae5ae109ab0b1c26c1a8abfbeee426623e2e09eb83c686f6d',
@@ -1270,11 +1246,9 @@ export default [
 
     testName:
       'assets/6954264b15bc92d6d592febeac84f14645e1ed46ca5ebb9acdb5c15f5354524950/txs precached response',
-
     endpoints: [
       'assets/6954264b15bc92d6d592febeac84f14645e1ed46ca5ebb9acdb5c15f5354524950/txs?page=123',
     ],
-
     response: [
       'a96d541137dd557c5e8d754414188b4d036def9b6bc251e801a7f71b1a890d25',
       '165354ede7c54d12ad7f68a4cad7634d4e4b0a74ba08fcb2dae47b8ff12955bd',
@@ -1383,11 +1357,9 @@ export default [
 
     testName:
       'assets/d030b626219d81673bd32932d2245e0c71ae5193281f971022b23a78436172646f67656f/txs precached response',
-
     endpoints: [
       'assets/d030b626219d81673bd32932d2245e0c71ae5193281f971022b23a78436172646f67656f/txs?page=123',
     ],
-
     response: [
       '7c4d5a554056cffd52912fd29ca303ce39a7275cecda587f64cdac6135ad118c',
       '2d899025f620449610e606253df2036f289af0e63746af5e10154f1421ae130e',
@@ -1496,11 +1468,9 @@ export default [
 
     testName:
       'assets/a4da8764a57e66a0085b5bfcde96c89b798d92ee83a75f59237e375b46495245/txs precached response',
-
     endpoints: [
       'assets/a4da8764a57e66a0085b5bfcde96c89b798d92ee83a75f59237e375b46495245/txs?page=123',
     ],
-
     response: [
       'ff5bf826b3350bcd2a9ad3b14fff4911a948ea76a1dfef77ec84a3e0b583a2ce',
       'e7f41bf3012e5e679b036481c47d28a1f040dbb47d018c6d1c1d9385e729cc92',
@@ -1609,11 +1579,9 @@ export default [
 
     testName:
       'assets/2afb448ef716bfbed1dcb676102194c3009bee5399e93b90def9db6a4249534f4e/txs precached response',
-
     endpoints: [
       'assets/2afb448ef716bfbed1dcb676102194c3009bee5399e93b90def9db6a4249534f4e/txs?page=123',
     ],
-
     response: [
       'e86490fcc8e0d02756a8195dd032fd85651471226e5f3aacd95ebcb0f4610bc2',
       '61146ee8bf6f32cd984922771e016b5e8a870e7248df677ae7458832ca45d4b1',
@@ -1722,11 +1690,9 @@ export default [
 
     testName:
       'assets/1a71dc14baa0b4fcfb34464adc6656d0e562571e2ac1bc990c9ce5f6574f4c46/txs precached response',
-
     endpoints: [
       'assets/1a71dc14baa0b4fcfb34464adc6656d0e562571e2ac1bc990c9ce5f6574f4c46/txs?page=123',
     ],
-
     response: [
       'eaeb139ae8a7b466e71d8f6b426aa4bc4cd0e8d200f967575d9ba63a76d8ccb8',
       '47179f9489ab364ae371fbd6a32ba9ae597c9c1e1777bf7d551e4a029170bb38',
@@ -1835,11 +1801,9 @@ export default [
 
     testName:
       'assets/2d7444cf9e317a12e3eb72bf424fd2a0c8fbafedf10e20bfdb4ad8ab434845444441/txs precached response',
-
     endpoints: [
       'assets/2d7444cf9e317a12e3eb72bf424fd2a0c8fbafedf10e20bfdb4ad8ab434845444441/txs?page=123',
     ],
-
     response: [
       '941e1dd7883cc277f18f241762797ebb023754ac0793062469d454c57429d5ce',
       'af0bf205ac258f32e619165faf69ca7c28838b6337dce9557508b2b132701665',
@@ -1948,11 +1912,9 @@ export default [
 
     testName:
       'assets/544571c086d0e5c5022aca9717dd0f438e21190abb48f37b3ae129f047524f57/txs precached response',
-
     endpoints: [
       'assets/544571c086d0e5c5022aca9717dd0f438e21190abb48f37b3ae129f047524f57/txs?page=123',
     ],
-
     response: [
       '92b131578274f41dfdea868e1c99d02b424b7a24a338d16f37b67d4aafde813b',
       'bfdd9432978eebb28437133f44f6b051f3719be1625d8d0bb24581cad1198d7d',
@@ -2061,11 +2023,9 @@ export default [
 
     testName:
       'assets/1d7f33bd23d85e1a25d87d86fac4f199c3197a2f7afeb662a0f34e1e776f726c646d6f62696c65746f6b656e/txs precached response',
-
     endpoints: [
       'assets/1d7f33bd23d85e1a25d87d86fac4f199c3197a2f7afeb662a0f34e1e776f726c646d6f62696c65746f6b656e/txs?page=123',
     ],
-
     response: [
       '1e316a58676e6f8a2675a10f0a648af9a38216abe3f44b68eda5dadc85ff00e4',
       '13b033b4e54c936d297f9925db6c303ab3f25a5464d8dbb1a1ad6d54d2bc1fa7',
@@ -2174,11 +2134,9 @@ export default [
 
     testName:
       'assets/d1333653aa3ac24adfa9c6d09c1a2cc8e2b7b86ad334c17f2acb864742696f546f6b656e/txs precached response',
-
     endpoints: [
       'assets/d1333653aa3ac24adfa9c6d09c1a2cc8e2b7b86ad334c17f2acb864742696f546f6b656e/txs?page=123',
     ],
-
     response: [
       'ffdd4500b3478faeb7abb7f376874bc44c98a36a022d4b8740d1d468212f000e',
       '4cdb9212c386cb5a2df74c5e6bbc622fbaef67947fca03535268d35965daf8c1',
@@ -2287,11 +2245,9 @@ export default [
 
     testName:
       'assets/884892bcdc360bcef87d6b3f806e7f9cd5ac30d999d49970e7a903ae5041564941/txs precached response',
-
     endpoints: [
       'assets/884892bcdc360bcef87d6b3f806e7f9cd5ac30d999d49970e7a903ae5041564941/txs?page=123',
     ],
-
     response: [
       'd52317ab10938530d6774724be7e764aa89e84e60c28f1c509730e442596c225',
       '4e2c1186991b774559ae7d9109b72cfa515cc5b29b5165c81ad97e290cb1185a',
@@ -2400,11 +2356,9 @@ export default [
 
     testName:
       'assets/b7c783f6304eddbdf8f0dece4715d63cb9f453be89d97c8fba155d5752455349/txs precached response',
-
     endpoints: [
       'assets/b7c783f6304eddbdf8f0dece4715d63cb9f453be89d97c8fba155d5752455349/txs?page=123',
     ],
-
     response: [
       'f98b1b51701d828eb2583d1faba4af16a6cebf13bf373c9b52a6322b760ecf55',
       'bde26cd01eabff19875d3237718a660ec2d561b6e77cf2af9359f7dc6184dc2d',
@@ -2513,11 +2467,9 @@ export default [
 
     testName:
       'assets/f28f457472e539dc75e1598a2beddf49ce5a717998c708f05f5de61044454653/txs precached response',
-
     endpoints: [
       'assets/f28f457472e539dc75e1598a2beddf49ce5a717998c708f05f5de61044454653/txs?page=123',
     ],
-
     response: [
       'b1c01797c5b0b5ff788812148ae7ad1f942bfdead6a2746eaa409809a14d6406',
       '4d078a24f375c04fdfc962c0f7acf6994a919930cda30c9509c222322096a73c',
@@ -2626,11 +2578,9 @@ export default [
 
     testName:
       'assets/6ac8ef33b510ec004fe11585f7c5a9f0c07f0c23428ab4f29c1d7d104d454c44/txs precached response',
-
     endpoints: [
       'assets/6ac8ef33b510ec004fe11585f7c5a9f0c07f0c23428ab4f29c1d7d104d454c44/txs?page=123',
     ],
-
     response: [
       '1131bb9b2359b8c8aa84439158d3efd33c9dfcf3bb00c6db5a7e3564b90693ba',
       '821f1d34ba9a426d95f4a1f734b1d724c794a2c796fe6cde9e9c077152b2f6b5',
@@ -2739,11 +2689,9 @@ export default [
 
     testName:
       'assets/ff97c85de383ebf0b047667ef23c697967719def58d380caf7f04b64534f554c/txs precached response',
-
     endpoints: [
       'assets/ff97c85de383ebf0b047667ef23c697967719def58d380caf7f04b64534f554c/txs?page=123',
     ],
-
     response: [
       'd1772c3097afbb26ece41f3d0d66fa8a2abcdda992e0a1a9757493ba304e78dd',
       '6f914a105dce636f7235d69a0d26b977c00395cc477f547e55e17c62650c6145',
@@ -2852,11 +2800,9 @@ export default [
 
     testName:
       'assets/4fd0d998dc0700ca6ef89fafff05fbf523a3a25c1fc8314bf7e4d1c247726f777468/txs precached response',
-
     endpoints: [
       'assets/4fd0d998dc0700ca6ef89fafff05fbf523a3a25c1fc8314bf7e4d1c247726f777468/txs?page=123',
     ],
-
     response: [
       '7507f808bc07cdf76ca246460b54942dda78619ea844fd8d7eb237a1194c9c05',
       'e26aeeda9422efbf693e9d826e60d29daa22beec04367c46ac99475a8e6e2b51',
@@ -2965,11 +2911,9 @@ export default [
 
     testName:
       'assets/641f0571d02b45b868ac1c479fc8118c5be6744ec3d2c5e13bd888b65a4f4d424945/txs precached response',
-
     endpoints: [
       'assets/641f0571d02b45b868ac1c479fc8118c5be6744ec3d2c5e13bd888b65a4f4d424945/txs?page=123',
     ],
-
     response: [
       'b2eff2c570458e02ff0e82a1776021282f523a7db1dddd7a6ab63efa743cfd72',
       '28d015559610056f1d5291c7b9f744e16930c23af8ed2c877e867b0565dd1c78',

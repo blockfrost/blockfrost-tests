@@ -8,10 +8,7 @@ export default [
     response: expect.toBeOneOf([
       [],
       expect.arrayContaining([
-        expect.objectContaining({
-          tx_hash: expect.toBeBlake2b256Hash(),
-          cbor: expect.any(String),
-        }),
+        expect.objectContaining({ tx_hash: expect.toBeBlake2b256Hash(), cbor: expect.any(String) }),
       ]),
     ]),
   },

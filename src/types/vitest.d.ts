@@ -42,8 +42,5 @@ declare module 'vitest' {
 
 // Declare a new interface to extend the existing NodeJS.Global interface
 declare global {
-  var latest: {
-    block: Responses['block_content'];
-    epoch: Responses['epoch_content'];
-  };
+  var latest: { block: Responses['block_content']; epoch: Responses['epoch_content'] };
 }

@@ -8,7 +8,6 @@ export default [
     id: 'metadata-txs-labels-label_4e8a5486ac6c',
     testName: 'metadata/txs/labels/label',
     endpoints: ['metadata/txs/labels/2?count=2&page=2'],
-
     response: [
       {
         tx_hash: 'eb1b95cf9d8a4a20f7b941b0e530d58e10c4ed5897e5305f5bdd72aac973679e',
@@ -24,7 +23,6 @@ export default [
     id: 'metadata-txs-labels-label_77bace432f32',
     testName: 'metadata/txs/labels/label',
     endpoints: ['metadata/txs/labels/2'],
-
     response: [
       {
         tx_hash: '5cb4f3f2b94cb04cb1ef96de7860ec4b7c4966d2748de6d9445c6480d72f0455',
@@ -32,9 +30,7 @@ export default [
       },
       {
         tx_hash: '2035d9eaa2598a31748f98ac94e3cfa6b39d2cf756a99e8accb3fe87f89239a2',
-        json_metadata: {
-          test: 'first entry',
-        },
+        json_metadata: { test: 'first entry' },
       },
       {
         tx_hash: 'eb1b95cf9d8a4a20f7b941b0e530d58e10c4ed5897e5305f5bdd72aac973679e',
@@ -166,9 +162,7 @@ export default [
       },
       {
         tx_hash: 'cb59141bd720cb9da6c6e8e48e671edfab26f7c2eeee0697179658ec5de8acd8',
-        json_metadata: {
-          string: 'sha256',
-        },
+        json_metadata: { string: 'sha256' },
       },
       {
         tx_hash: '12931cbbbd654b5c18c120c84476164ad7d55b1ae37d7380580f23a8ad65497e',
@@ -212,13 +206,7 @@ export default [
       },
       {
         tx_hash: '11ac103bda9fa14338b3b87b3a78ea5c9c804f9ded28749aca3e372c63653f6d',
-        json_metadata: [
-          1,
-          2,
-          {
-            '0': 'true',
-          },
-        ],
+        json_metadata: [1, 2, { '0': 'true' }],
       },
       {
         tx_hash: '4e9ed01f3639369b54dec6b5109b2427cb6c843260258947fec71476028a3b39',
@@ -226,13 +214,7 @@ export default [
       },
       {
         tx_hash: 'b25e325dfb7dc56628132f12e74a9249567f4ecd90a306e73db1cacf4539d5a1',
-        json_metadata: [
-          1,
-          2,
-          {
-            '0': 'true',
-          },
-        ],
+        json_metadata: [1, 2, { '0': 'true' }],
       },
       {
         tx_hash: '66c18adeaaf5f3d47ae43c95e189043414bae874ed8d71ac8c8db714ccfa091d',
@@ -268,43 +250,19 @@ export default [
       },
       {
         tx_hash: 'b614c93ffe39fb80060f05e1b44f7af1e4ae193ffb38e25a3287980f868d1026',
-        json_metadata: [
-          1,
-          2,
-          {
-            '0': 'true',
-          },
-        ],
+        json_metadata: [1, 2, { '0': 'true' }],
       },
       {
         tx_hash: '15f9b1090e360ebc25d5e71aa1c2ea9ea1f504d143fdf79d01643e8c4cae5a62',
-        json_metadata: [
-          1,
-          2,
-          {
-            '0': 'true',
-          },
-        ],
+        json_metadata: [1, 2, { '0': 'true' }],
       },
       {
         tx_hash: '9187793901c1b7846d600685e1e916914837a6b496d74de5d661c4f9df844b5d',
-        json_metadata: [
-          1,
-          2,
-          {
-            '0': 'true',
-          },
-        ],
+        json_metadata: [1, 2, { '0': 'true' }],
       },
       {
         tx_hash: '2d8822ee934f21c1291a309e9a3586f1c2a38bdef9d11988348fbf94741aa9c5',
-        json_metadata: [
-          1,
-          2,
-          {
-            '0': 'true',
-          },
-        ],
+        json_metadata: [1, 2, { '0': 'true' }],
       },
       {
         tx_hash: '5fae10270a646d666bc3c1b90774295e0e1ff5cf474cef64b656d5aa2d0b1bcf',

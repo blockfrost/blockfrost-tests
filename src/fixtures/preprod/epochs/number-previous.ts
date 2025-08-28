@@ -8,9 +8,9 @@ const paginationFixtures = getPaginationFixtures('epochs/121/previous').filter(
 export default [
   ...paginationFixtures,
   {
+    id: 'epochs-number-previous-generic_6fdf4436c208',
     testName: 'epochs/:number/previous - generic',
     endpoints: ['epochs/121/previous'],
-
     response: [
       {
         epoch: 21,
@@ -1215,9 +1215,9 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-previous-queryparams-generic-shelley_e27e224ee896',
     testName: 'epochs/:number/previous?queryparams - generic shelley',
     endpoints: ['epochs/121/previous?page=2&count=2'],
-
     response: [
       {
         epoch: 117,
@@ -1246,9 +1246,9 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-previous-queryparams-generic-byron-4-and-shelley-4_80a47790e37a',
     testName: 'epochs/:number/previous?queryparams - generic byron (<4) and shelley (>=4)',
     endpoints: ['epochs/6/previous?count=3'],
-
     response: [
       {
         epoch: 3,
@@ -1289,9 +1289,9 @@ export default [
     ],
   },
   {
+    id: 'epochs-number-previous-out-of-range-epoch_fc184fdd75eb',
     testName: 'epochs/:number/previous - out of range epoch',
     endpoints: ['epochs/696969696969/previous'],
-
     response: error_400_epochs,
   },
 ];

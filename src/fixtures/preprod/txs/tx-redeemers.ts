@@ -3,7 +3,6 @@ export default [
     id: 'txs-tx-redeemers_bcba392ad135',
     testName: 'txs/:tx/redeemers',
     endpoints: ['txs/d5fed4dca96c7efda3d1b0897c91c0eee8f8c6a18e5931dfbd56b6ec7a5951a1/redeemers'],
-
     response: [
       {
         tx_index: 0,

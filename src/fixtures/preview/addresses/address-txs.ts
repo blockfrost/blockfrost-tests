@@ -16,7 +16,6 @@ export default [
       'addresses/addr_vkh1zxft2e6jdnx9m6cqadgjfwux9fhnl80urgxcl58jd60ckt4g3w6/txs?page=22&count=6',
       'addresses/addr_vkh1zxft2e6jdnx9m6cqadgjfwux9fhnl80urgxcl58jd60ckt4g3w6/txs?page=22&count=6&order=asc',
     ],
-
     response: [
       '19c27ff32589016a588fe3e452df5e09ac65310c660e17834264adabe91bf418',
       'c1290aa7e54de553abcbd630f089a1ec6cd44a038282f147a18c04dff22d051b',
@@ -34,7 +33,6 @@ export default [
       'addresses/addr_test1qqge9dt82fkvch0tqr44zf9msc4x70ualsdqmr7s7fhflzmqh5jv6xejejee287zpkfpaqt7yk6fk46xsfppgnece2nqtfhkjt/txs?page=22&count=6&order=desc',
       'addresses/addr_vkh1zxft2e6jdnx9m6cqadgjfwux9fhnl80urgxcl58jd60ckt4g3w6/txs?page=22&count=6&order=desc',
     ],
-
     response: [
       '3d37acf41feda4fa5e6a1af0b3bc0f945ae9eff7fed0ddd41b7c9d9b2ba23666',
       'ead712d343cbc7a10c921a3cfbba45f4d38bb4f093006f86afab07d8f1b8a12a',
@@ -52,7 +50,6 @@ export default [
       'addresses/addr_vkh12ux0cq59haf8ydty5577ztxzh9qcvhjn7xxaj4xr55esx49uztj/txs?order=asc&page=128',
       'addresses/addr_vkh12ux0cq59haf8ydty5577ztxzh9qcvhjn7xxaj4xr55esx49uztj/txs?page=128',
     ],
-
     response: [
       'b5271044089880ac91cf57c212b540c6fda044277b92b1c2625566e996c214d4',
       'dadd00d89a882bf4580d42798b2a2ef277864a6ed93671169c6f21b64973af55',
@@ -163,7 +160,6 @@ export default [
     endpoints: [
       'addresses/addr_vkh12ux0cq59haf8ydty5577ztxzh9qcvhjn7xxaj4xr55esx49uztj/txs?order=asc&page=12800&count=1',
     ],
-
     response: ['01dd8c3feb63cfa7ac881b31eae52b687f4022568134880fb171c3640de2b78f'],
   },
 ];

@@ -2,6 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'blocks-latest_f94253466f6c',
     testName: 'blocks/latest',
     endpoints: ['blocks/latest'],
     response: {

@@ -10,7 +10,6 @@ export default [
     id: 'epochs-number-stakes-generic-shelley-epoch_705e2cf91d90',
     testName: 'epochs/:number/stakes generic shelley epoch',
     endpoints: ['epochs/121/stakes'],
-
     response: [
       {
         stake_address: 'stake_test17qzah5vcfhna464cf2v5f3p27pv35lv0dxxyv50grcq96ysgwalle',
@@ -524,7 +523,6 @@ export default [
     id: 'epochs-number-stakes-queryparams-first-epoch-with-stakes_d638c2d533c8',
     testName: 'epochs/:number/stakes?queryparams first epoch with stakes',
     endpoints: ['epochs/6/stakes'],
-
     response: [
       {
         stake_address: 'stake_test1uquj460qdrj4az6uy7kvtzct4w8226xq4t30dlzfhc360tgegny4m',
@@ -547,7 +545,6 @@ export default [
     id: 'epochs-number-stakes-queryparams-generic-epoch-with-stakes-middle-page_b0c9edb4b95c',
     testName: 'epochs/:number/stakes?queryparams generic epoch with stakes, middle page',
     endpoints: ['epochs/121/stakes?page=100&count=2'],
-
     response: [
       {
         stake_address: 'stake_test1uqprktzy42sfaj393d5wlynwqq5zqh6v0cgusz0c7xge4vqsghw64',
@@ -565,7 +562,6 @@ export default [
     id: 'epochs-number-stakes-queryparams-generic-epoch-with-stakes-last-page_9464408b7992',
     testName: 'epochs/:number/stakes?queryparams generic epoch with stakes, last page',
     endpoints: ['epochs/118/stakes?page=80'],
-
     response: [
       {
         stake_address: 'stake_test1ur74k4wluhnhrw0erzm4j60yax9kt53ah34ns8ca6pqmjssvwhrwf',

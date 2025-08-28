@@ -13,7 +13,6 @@ export default [
     endpoints: [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f555344435f4c50/history',
     ],
-
     response: [
       {
         tx_hash: '0afe98cc104c3a70d23489ecd91be9574864f85e7cb0b8b84cd48fe887256227',
@@ -105,7 +104,6 @@ export default [
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595f4c50/history?count=1',
       'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595f4c50/history?count=1&page=1',
     ],
-
     response: [
       {
         tx_hash: '179e86521fda21983e7fae36efa23759735ee2d54196c047a4d7bf07c0bc0efc',

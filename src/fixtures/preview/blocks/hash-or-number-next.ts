@@ -8,7 +8,9 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
+    id: 'blocks-hash-or-number-next-queryparams-generic-boundary_ebdf23d80e93',
     testName: 'blocks/:hash_or_number/next?queryparams - generic boundary',
+
     endpoints: [
       'blocks/90aeac71d8c48bfb8c1f0c540b2ec081fa429c5f106e669f56a2748246b8dd07/next',
       'blocks/19234/next',

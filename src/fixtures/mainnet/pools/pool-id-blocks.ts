@@ -9,12 +9,10 @@ export default [
   {
     id: 'pools-pool-id-blocks-best-pool_5ebad84b79a5',
     testName: 'pools/pool_id/blocks - best pool',
-
     endpoints: [
       'pools/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy/blocks',
       'pools/0f292fcaa02b8b2f9b3c8f9fd8e0bb21abedb692a6d5058df3ef2735/blocks',
     ],
-
     response: [
       'da5e26446948b8d1f91396218dcd0131a5e7b3adb200cbd8f124d738438ed5ec',
       '1038b2c76a23ea7d89cbd84d7744c97560eb3412661beed6959d748e24ff8229',
@@ -121,12 +119,10 @@ export default [
   {
     id: 'pools-pool-id-blocks-querystring-best-pool_03e2bf715428',
     testName: 'pools/:pool_id/blocks?querystring - best pool',
-
     endpoints: [
       'pools/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy/blocks?count=2&page=2',
       'pools/0f292fcaa02b8b2f9b3c8f9fd8e0bb21abedb692a6d5058df3ef2735/blocks?count=2&page=2',
     ],
-
     response: [
       'e4198b0e351c48aa52e6ac3fdff46887f7061866e75f89dd0310793fbeba2336',
       '9ec30b9c941eb9ace623e94457ff103757c8a6b6c26530261be1ea0ff1a1df76',

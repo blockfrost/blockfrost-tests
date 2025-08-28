@@ -3,7 +3,6 @@ export default [
     id: 'txs-tx-utxos-alonzo-tx-with-a-script_21c701b0e771',
     testName: 'txs/:tx/utxos - alonzo tx with a script',
     endpoints: ['txs/5d438ccecf62ad384ec1e75c5ff0ed60217c37fd6cfefd1625622e3bf8e8a71b/utxos'],
-
     response: {
       hash: '5d438ccecf62ad384ec1e75c5ff0ed60217c37fd6cfefd1625622e3bf8e8a71b',
       inputs: [
@@ -138,7 +137,6 @@ export default [
     id: 'txs-tx-utxos-generic-shelley-tx-with-huge-size_eb117531cef7',
     testName: 'txs/:tx/utxos - generic shelley tx with huge size',
     endpoints: ['txs/f34e11ba32554a149be664d0adec57b6829b3af045f678445af158fa09721a9a/utxos'],
-
     response: {
       hash: 'f34e11ba32554a149be664d0adec57b6829b3af045f678445af158fa09721a9a',
       inputs: [
@@ -156,10 +154,7 @@ export default [
         {
           address: 'addr_test1wqzwpaeqty24g73cnp6h7qyvm68hht5dxsvpnsus0tprv4gceyth2',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
             { unit: '08a4fd7110beefc4d925803fe6a7fe0aa0de8f4627b612d726e62f86', quantity: '1' },
           ],
           tx_hash: '8207c3f95272da19b3906432956b14744622d144b3e3308692d1cdd27eab2fd9',
@@ -185,10 +180,7 @@ export default [
         {
           address: 'addr_test1wzccrw3f4n7qavr67uvupxm4jd46uv0f9evgzpytlwz4zgq6sfuv9',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
             { unit: 'ef20052bbf1f18149e5346d9e5cc2b2aa7b95685e4693ea9712967ee', quantity: '1' },
           ],
           tx_hash: 'b74df8d9dc2b94d773f77e93d422bf4a4381966eea495e4d3d84648620444c56',
@@ -203,10 +195,7 @@ export default [
         {
           address: 'addr_test1wp0zd2jtjvkk2evq59hpqqjztvaffpwd7tm3lscre927zxg36etun',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
             { unit: '4330f26c4f8a20a338c52aa6dddff2b7c8f20d80aaf36c21067e30ed', quantity: '1' },
           ],
           tx_hash: '8207c3f95272da19b3906432956b14744622d144b3e3308692d1cdd27eab2fd9',
@@ -220,14 +209,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -244,14 +227,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -268,14 +245,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -292,14 +263,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -316,14 +281,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -340,14 +299,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -364,14 +317,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -388,14 +335,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -412,14 +353,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -436,14 +371,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -460,14 +389,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -484,14 +407,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -508,14 +425,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -532,14 +443,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -556,14 +461,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033100',
@@ -580,14 +479,8 @@ export default [
         {
           address: 'addr_test1wp82uw2sqcwf3rzkww2mm5g5sj226els624jw6gzpvj5nggymcl22',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '3000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '3000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '416291033115',
@@ -630,18 +523,9 @@ export default [
         {
           address: 'addr_test1wr4c5ruvn9ss5r4davqh8nf964c8t2hu7kl8cqmxt42hdwqhuqp46',
           amount: [
-            {
-              unit: 'lovelace',
-              quantity: '51000000',
-            },
-            {
-              unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed',
-              quantity: '16',
-            },
-            {
-              unit: '4330f26c4f8a20a338c52aa6dddff2b7c8f20d80aaf36c21067e30ed',
-              quantity: '1',
-            },
+            { unit: 'lovelace', quantity: '51000000' },
+            { unit: '25df95e4715420554350deb8fda2bd03513abeb8b9cfe05c365974ed', quantity: '16' },
+            { unit: '4330f26c4f8a20a338c52aa6dddff2b7c8f20d80aaf36c21067e30ed', quantity: '1' },
             {
               unit: '919d4c2c9455016289341b1a14dedf697687af31751170d56a31466e745348454e',
               quantity: '6660656529615',

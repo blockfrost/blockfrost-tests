@@ -9,7 +9,6 @@ export default [
     id: 'pools-extended-queryparams_33c8fc92f5c2',
     testName: 'pools/extended?queryparams',
     endpoints: ['pools/extended?count=5&page=3', 'pools/extended?count=5&page=3&order=asc'],
-
     response: [
       {
         pool_id: 'pool18xykgvvvxej2e5ap04ks72d8fdke4qsqeh30satznyrtj88634d',

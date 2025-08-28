@@ -8,7 +8,6 @@ export default [
     id: 'metadata-txs-labels-label-cbor_ba4568da07f3',
     testName: 'metadata/txs/labels/label/cbor',
     endpoints: ['metadata/txs/labels/1967/cbor?count=2&page=2'],
-
     response: [
       {
         tx_hash: '4bced18ba56cc9f416295687fe6d53940ee772d141cd32cc5af50d41b6510ca4',
@@ -30,7 +29,6 @@ export default [
     id: 'metadata-txs-labels-label-cbor_40de58336f2c',
     testName: 'metadata/txs/labels/label/cbor',
     endpoints: ['metadata/txs/labels/1968/cbor'],
-
     response: [
       {
         tx_hash: '473a6f5ef23c8f9ea10e6d17372ee90031f44273fb2be6700673269bdd04eb19',

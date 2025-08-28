@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'txs-tx-generic-shelley-tx-with-huge-size_368319daec24',
     testName: 'txs/:tx - generic shelley tx with huge size',
     endpoints: ['txs/28172ea876c3d1e691284e5179fae2feb3e69d7d41e43f8023dc380115741026'],
     response: {
@@ -28,6 +29,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-withdrawals_e7cb4ec94054',
     testName: 'txs/:tx - generic shelley with withdrawals',
     endpoints: ['txs/9f811b021492a5544207f7b566b4e67c87f0918b9e7055ab3074d552ab18e895'],
     response: {
@@ -56,6 +58,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-shelley-most-withdrawals_f8c7b2913a61',
     testName: 'txs/:tx - shelley MOST withdrawals',
     endpoints: ['txs/b2fe200ae710815fc0b877b6df9a6f936f8c907bd6ce3fec2622d3539d35434a'],
     response: {
@@ -84,6 +87,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-shelley-most-delegations_79837018026b',
     testName: 'txs/:tx - shelley MOST delegations',
     endpoints: ['txs/0d78f1a66d9d73ff70f5c3a5edc44de7abba77af37bdd7547f4d6c02450246f3'],
     response: {
@@ -112,6 +116,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-pool-certs_27394e8a86fa',
     testName: 'txs/:tx - generic shelley with pool certs',
     endpoints: ['txs/28bd5e8c342ab89d6642e446cb299058ea36256af1718e4af9326898ce4192d7'],
     response: {
@@ -140,6 +145,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-delegations-and-stake-certs_6e05a84facbe',
     testName: 'txs/:tx - generic shelley with delegations and stake certs',
     endpoints: ['txs/c2120581050a1116ab38a5ac8a62d64df4cf12cf3370d22337201d36eb65fcc4'],
     response: {
@@ -168,6 +174,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-multiple-delegation-stake-certs-and-pool-updates_b6df4856fe86',
     testName: 'txs/:tx - generic shelley with MULTIPLE delegation, stake certs and pool updates',
     endpoints: ['txs/f1aee024a482d5d21ed552d15eefbb664e98095cdabde75a9ff9c78c0812e6fb'],
     response: {
@@ -196,6 +203,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-pool-retirements_62df59a82720',
     testName: 'txs/:tx - generic shelley with pool retirements',
     endpoints: ['txs/33770d42c7bc8a9a0bc9830ffb97941574dc61dc534796dd8614b99b6aadace4'],
     response: {
@@ -224,6 +232,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-shelley-most-pool-retirements_573ad4b9a88f',
     testName: 'txs/:tx - shelley MOST pool retirements',
     endpoints: ['txs/8c8376b28e8d729115ea6e88540747160fab22d754ad6a11c55ab159024d8005'],
     response: {
@@ -252,6 +261,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-metadata_d1e0d0c9242a',
     testName: 'txs/:tx - generic shelley with metadata',
     endpoints: ['txs/e641005803337a553a03cf3c11a1819491a629bd7d0a3c39e4866a01b5dac36d'],
     response: {
@@ -280,6 +290,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-byron-dust-tx-with-hacky-address-and-huge-size_3fabe1deea89',
     testName: 'txs/:tx - byron dust tx with hacky address and huge size',
     endpoints: ['txs/313223c9f0d09ee287148874f938ecf37fea7bf3c10a5d649522d0f40db1cf71'],
     response: {
@@ -308,6 +319,8 @@ export default [
     },
   },
   {
+    id: 'txs-tx-shelley-tx-of-token-mint-with-ridiculous-hereafter-out-of-range-fri-26-jan-2970-01-43-53-am-cet-value_3582617d514f',
+
     testName:
       'txs/:tx - shelley tx of token mint with ridiculous hereafter out of range (Fri 26 Jan 2970 01:43:53 AM CET) value',
     endpoints: ['txs/af1b12ecf33760253cac6c64fc71205848e4106bb46b2663380cb67ee7100b51'],
@@ -371,6 +384,8 @@ export default [
     },
   },
   {
+    id: 'txs-tx-shelley-tx-of-token-mint-with-ridiculous-hereafter-out-of-range-sat-20-nov-2286-06-46-40-pm-cet-value_6a7407520301',
+
     testName:
       'txs/:tx - shelley tx of token mint with ridiculous hereafter out of range (Sat 20 Nov 2286 06:46:40 PM CET) value',
     endpoints: ['txs/6d34c455dc79529a2aeace0f7b45f137874825a9c8160550b27e7bbaefd24000'],
@@ -406,6 +421,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-all-hail-nutcoin_83afba453c8c',
     testName: 'txs/:tx - all hail nutcoin!',
     endpoints: ['txs/e252be4c7e40d35919f741c9649ff207c3e49d53bb819e5c1cb458055fd363ed'],
     response: {
@@ -440,6 +456,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-shelley-tx-with-a-lot-of-token-mints-burns_4067204fc6c2',
     testName: 'txs/:tx - shelley tx with a lot of token mints/burns',
     endpoints: ['txs/d4f9c98ab75084a63f57181931a791703f3b3cf18cf7e8449c41a51b6ac33679'],
     response: {
@@ -468,6 +485,7 @@ export default [
     },
   },
   {
+    id: 'txs-tx-generic-shelley-with-assets_1292d30b0492',
     testName: 'txs/:tx - generic shelley with assets',
     endpoints: ['txs/4e686b3c16670497f10f8dfd74ff4f1426221deda7b34816f426d4964589e1de'],
     response: {
@@ -478,10 +496,7 @@ export default [
       slot: 76_354_700,
       index: 5,
       output_amount: [
-        {
-          unit: 'lovelace',
-          quantity: '221592031',
-        },
+        { unit: 'lovelace', quantity: '221592031' },
         {
           unit: '0029cb7c88c7567b63d1a512c0ed626aa169688ec980730c0473b9136c702008',
           quantity: '17118362867',
@@ -650,10 +665,7 @@ export default [
           unit: '4247d5091db82330100904963ab8d0850976c80d3f1b927e052e07bd546f6b68756e',
           quantity: '1',
         },
-        {
-          unit: '5029eeccd52fef299509d509a8318fd7930c3dffcce1f9f39ff11ef9464743',
-          quantity: '506',
-        },
+        { unit: '5029eeccd52fef299509d509a8318fd7930c3dffcce1f9f39ff11ef9464743', quantity: '506' },
         {
           unit: 'af2e27f580f7f08e93190a81f72462f153026d06450924726645891b44524950',
           quantity: '26547718568',

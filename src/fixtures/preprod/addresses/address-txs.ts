@@ -9,14 +9,12 @@ export default [
   {
     id: 'addresses-address-txs-generic-dormant-shelley-address_c9a9236e94d8',
     testName: 'addresses/:address/txs generic dormant shelley address',
-
     endpoints: [
       'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/txs?page=1011&count=6',
       'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/txs?page=1011&count=6&order=asc',
       'addresses/addr_vkh1c6xg0hkmmplr98yl08lrjpqlswmg636hnjpxvvp48th3zsq296f/txs?page=1011&count=6',
       'addresses/addr_vkh1c6xg0hkmmplr98yl08lrjpqlswmg636hnjpxvvp48th3zsq296f/txs?page=1011&count=6&order=asc',
     ],
-
     response: [
       '209c23e0235c15db272b00790313a34d61d37fda3eb4f8b544280963af4095d8',
       'ae5987bef40e9e9370e824b6596f6f3413a9770cd2ad0dbf5bea8944468fb37c',
@@ -29,12 +27,10 @@ export default [
   {
     id: 'addresses-address-txs-generic-dormant-shelley-address-desc_9af6dc662686',
     testName: 'addresses/:address/txs generic dormant shelley address desc',
-
     endpoints: [
       'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/txs?page=1011&count=99&order=desc',
       'addresses/addr_vkh1c6xg0hkmmplr98yl08lrjpqlswmg636hnjpxvvp48th3zsq296f/txs?page=1011&count=99&order=desc',
     ],
-
     response: [
       '37921a2f70715c224293fbb719bf0d70d5c955d60efb79e1233b0234c0b32c7f',
       '0c22f7d3055698ea28af59399ba8d39ac4db06f92383abe1a63e636830a5bea6',
@@ -48,11 +44,9 @@ export default [
   {
     id: 'addresses-address-txs-generic-payment-cred-1_957944637cb5',
     testName: 'addresses/:address/txs generic payment_cred 1',
-
     endpoints: [
       'addresses/addr_vkh1pjggm5nyjkll8amnrsh4hvjz6zsdvr9knmnlsgtgczls7x9qy3y/txs?order=asc&page=420',
     ],
-
     response: [
       '41de5228692409f2801f1ed84a4fb237fc120b0461b80cb915115f95de4468eb',
       '57fd693ea4b7ef369eeb074bc38d53d58063623a43813f1c28d51a550f15451f',
@@ -159,11 +153,9 @@ export default [
   {
     id: 'addresses-address-txs-generic-payment-cred-2_209c6157eb4b',
     testName: 'addresses/:address/txs generic payment_cred 2',
-
     endpoints: [
       'addresses/addr_vkh1pjggm5nyjkll8amnrsh4hvjz6zsdvr9knmnlsgtgczls7x9qy3y/txs?order=asc&page=42000&count=1',
     ],
-
     response: ['6dfe026597d79968d6321a31b2b1f44c2434446aadd406adc445eea1b3af6167'],
   },
 ];

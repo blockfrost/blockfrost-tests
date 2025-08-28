@@ -3,8 +3,9 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import slugify from '@sindresorhus/slugify';
 import * as recast from 'recast';
+// @ts-expect-error this is weird yes
+import babelParser from 'recast/parsers/babel';
 import { fileURLToPath } from 'node:url';
-import { parse } from '@babel/parser';
 import * as t from '@babel/types';
 import traverse from '@babel/traverse';
 
@@ -19,15 +20,8 @@ const getStableId = (testName: string, endpoints: string[]) => {
 
 export const updateCode = (code: string): { updated: boolean; newCode: string } => {
   const ast = recast.parse(code, {
-    parser: {
-      parse: (source: string) =>
-        parse(source, {
-          sourceType: 'module',
-          plugins: ['typescript', 'jsx'],
-        }),
-    },
+    parser: babelParser,
   });
-
   let updated = false;
 
   traverse.default(ast, {
@@ -44,9 +38,8 @@ export const updateCode = (code: string): { updated: boolean; newCode: string } 
       const hasId = !!getProp('id');
       const testNameProp = getProp('testName');
       const endpointsProp = getProp('endpoints');
-      const responseProp = getProp('response');
 
-      if (!hasId && testNameProp && endpointsProp && responseProp) {
+      if (!hasId && testNameProp && endpointsProp) {
         const testName = t.isStringLiteral(testNameProp.value)
           ? testNameProp.value.value
           : undefined;
@@ -54,8 +47,8 @@ export const updateCode = (code: string): { updated: boolean; newCode: string } 
 
         if (t.isArrayExpression(endpointsProp.value)) {
           endpoints = endpointsProp.value.elements
-            .filter((el: string) => t.isStringLiteral(el))
-            .map((el: { value: string }) => el.value);
+            .filter((el: t.StringLiteral): el is t.StringLiteral => t.isStringLiteral(el))
+            .map((el: t.StringLiteral) => el.value);
         }
 
         if (testName) {
@@ -84,7 +77,7 @@ const processFile = (fileName: string) => {
       fs.writeFileSync(fileName, newCode, 'utf8');
       console.log(`Updated file: ${fileName}`);
     } else {
-      console.log(`No changes for: ${fileName}`);
+      // console.log(`No changes for: ${fileName}`);
     }
   } catch (error) {
     console.error(`Error processing file ${fileName}: ${(error as Error).message}`);
@@ -115,6 +108,5 @@ if (process.argv[1] === __filename) {
   const directory = process.argv[2] || './src/fixtures';
 
   console.log(`Processing folder: ${directory}`);
-
   processFolder(directory);
 }

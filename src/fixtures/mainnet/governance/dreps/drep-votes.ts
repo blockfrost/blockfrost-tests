@@ -9,12 +9,10 @@ export default [
   {
     id: 'governance-drep-votes_7490a85dc1f2',
     testName: 'governance drep votes',
-
     endpoints: [
       'governance/dreps/drep14pjm8ytt682wkp4jcegdj2yerkcy9a20xevvp7udlcd0ggjxdud/votes?count=8',
       'governance/dreps/drep1y25xtvu3d0gaf6cxktr9pkfgnywmqsh4fum93s8m3hlp4aqj3uqdp/votes?count=8', //CIP129 id
     ],
-
     response: [
       {
         tx_hash: 'dfe4ead3170e0de0e14ad40d6e83571282c5d2d17b7243260e02f9882149937f',

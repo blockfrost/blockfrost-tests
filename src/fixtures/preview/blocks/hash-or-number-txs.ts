@@ -7,7 +7,6 @@ export default [
       'blocks/d452532fd3bfb678548f00c210b639d31cecc7d5d3b3b7d8151ce7cc25dfbb15/txs?order=desc&count=2&page=2',
       'blocks/1846333/txs?order=desc&count=2&page=2',
     ],
-
     response: [
       '789569936efd4a8aa367a73bee9a511f732f8079d05566d7451f95a893c93b3f',
       '7f1cc8b7195d40faf032ebbace56d6bd9e46ec9846725677f1bf99294bc86172',
@@ -23,7 +22,6 @@ export default [
       'blocks/d452532fd3bfb678548f00c210b639d31cecc7d5d3b3b7d8151ce7cc25dfbb15/txs?count=2&page=2',
       'blocks/1846333/txs?count=2&page=2',
     ],
-
     response: [
       '1822701a8edd2bce097fa874703a1ea0b4eb28303bfd9d5d6cb79b70d52fca48',
       '1cb2d4f2f8f870d2c9fe293bdbde1dc8d800d688d008f2671def10099cccf741',
@@ -37,7 +35,6 @@ export default [
       'blocks/d452532fd3bfb678548f00c210b639d31cecc7d5d3b3b7d8151ce7cc25dfbb15/txs',
       'blocks/1846333/txs',
     ],
-
     response: [
       '199f119a7fd0463c5cda3a89b990985fd3ce380e2f6c28ef7e36971bb776bc92',
       '8b67b493c112ff92e22716130300f3d49958d6e13322c16ef13f5cbcf3475924',

@@ -5,7 +5,6 @@ export default [
     id: 'network-test_2e08306ecd5d',
     testName: 'network test',
     endpoints: ['network'],
-
     response: {
       supply: {
         max: '45000000000000000',

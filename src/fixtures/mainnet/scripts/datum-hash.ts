@@ -1,5 +1,6 @@
 export default [
   {
+    id: 'scripts-datum-hash-random-datum_a9e1440d4778',
     testName: 'scripts/datum/:hash - random datum',
     endpoints: ['scripts/datum/fe9af0a9392b6b2435a3be352c20c5034452fad062895493a88aa1ffb6c08826'],
     response: {

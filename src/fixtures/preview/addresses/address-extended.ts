@@ -6,17 +6,11 @@ export default [
     endpoints: [
       'addresses/addr_test1qrqjwsuymavvnf53y7qcvhz7qcm7zr5rjhxyj0vnsq7m4u4u899n2da7ns0qx5ljdsrszx8yc4avckxcjn7muwqtva7sgqevx2/extended',
     ],
-
     response: {
       address:
         'addr_test1qrqjwsuymavvnf53y7qcvhz7qcm7zr5rjhxyj0vnsq7m4u4u899n2da7ns0qx5ljdsrszx8yc4avckxcjn7muwqtva7sgqevx2',
       amount: [
-        {
-          unit: 'lovelace',
-          quantity: '9749829175',
-          decimals: 6,
-          has_nft_onchain_metadata: false,
-        },
+        { unit: 'lovelace', quantity: '9749829175', decimals: 6, has_nft_onchain_metadata: false },
       ],
       stake_address: 'stake_test1uz7rjje4x7lfc8sr20excpcprrjv27kvtrvffld78q9kwlgfq6uqe',
       type: 'shelley',
@@ -27,16 +21,10 @@ export default [
     id: 'addresses-address-extended-bf-address-without-tokens-payment-cred_bf0257c251d2',
     testName: 'addresses/:address/extended BF address without tokens (payment cred)',
     endpoints: ['addresses/addr_vkh1cyn58pxltry6dyf8sxr9chsxxlssaqu4e3ynmyuq8ka0y6zsswp/extended'],
-
     response: {
       address: 'addr_vkh1cyn58pxltry6dyf8sxr9chsxxlssaqu4e3ynmyuq8ka0y6zsswp',
       amount: [
-        {
-          unit: 'lovelace',
-          quantity: '9749829175',
-          decimals: 6,
-          has_nft_onchain_metadata: false,
-        },
+        { unit: 'lovelace', quantity: '9749829175', decimals: 6, has_nft_onchain_metadata: false },
       ],
       stake_address: null,
       type: 'shelley',
@@ -50,17 +38,11 @@ export default [
     endpoints: [
       'addresses/addr_test1qzttn9qfcwzd0c7whqv3p2ryynkktj9c45cgnjkq9n6tc9v6y6m63pymrzuxl6k0tq4tce9avm04wxvj6ayzs6nvx0mshk6rzv/extended',
     ],
-
     response: {
       address:
         'addr_test1qzttn9qfcwzd0c7whqv3p2ryynkktj9c45cgnjkq9n6tc9v6y6m63pymrzuxl6k0tq4tce9avm04wxvj6ayzs6nvx0mshk6rzv',
       amount: [
-        {
-          unit: 'lovelace',
-          quantity: '95811289',
-          decimals: 6,
-          has_nft_onchain_metadata: false,
-        },
+        { unit: 'lovelace', quantity: '95811289', decimals: 6, has_nft_onchain_metadata: false },
         {
           unit: 'fbbd966dcd5587510aa81863f53a1bb1d4ddd3d61cfa2041598e7fcd000de140426c6f636b66726f7374',
           quantity: '3',
@@ -80,17 +62,11 @@ export default [
     endpoints: [
       'addresses/addr_test1qz9z8azrqnzyu085vwz7lxr3vslplrfv3uwetp9zvfcws3zdfd60xmfdzz6sq83fvjd9fhvktzlruzwvfaqzrmwgg7mstknksy/extended',
     ],
-
     response: {
       address:
         'addr_test1qz9z8azrqnzyu085vwz7lxr3vslplrfv3uwetp9zvfcws3zdfd60xmfdzz6sq83fvjd9fhvktzlruzwvfaqzrmwgg7mstknksy',
       amount: [
-        {
-          unit: 'lovelace',
-          quantity: '98597299',
-          decimals: 6,
-          has_nft_onchain_metadata: false,
-        },
+        { unit: 'lovelace', quantity: '98597299', decimals: 6, has_nft_onchain_metadata: false },
         {
           unit: 'b038f29b249f42d870f8e5dd698c6020cf6fcbcbe620819771a4926f0014df10426c6f636b66726f73744654',
           quantity: '10000000',
@@ -110,17 +86,11 @@ export default [
     endpoints: [
       'addresses/addr_test1qqptln5t5s0mastzc9rksn6wdqp9ynt67ahw0nhzukar5keu7yzv8ay6qvmlywtgvt7exaxt783dxuzv03qal7muda5surhhy9/extended',
     ],
-
     response: {
       address:
         'addr_test1qqptln5t5s0mastzc9rksn6wdqp9ynt67ahw0nhzukar5keu7yzv8ay6qvmlywtgvt7exaxt783dxuzv03qal7muda5surhhy9',
       amount: [
-        {
-          unit: 'lovelace',
-          quantity: '10130017654',
-          decimals: 6,
-          has_nft_onchain_metadata: false,
-        },
+        { unit: 'lovelace', quantity: '10130017654', decimals: 6, has_nft_onchain_metadata: false },
         {
           unit: '009e26bc34eb06487b74d94476d9377a2b4869c7562c7c3b80874a8a48656c6c6f4e4654',
           quantity: '1',
@@ -818,17 +788,11 @@ export default [
     endpoints: [
       'addresses/addr_test1qrqk39u966fhjtt2n7v24cmvu8rh02k62lpjm005jwffcunedw45r6kf23ktzztc6n8jud9j0nm3qq5sjpmmgalu7jssqt3hyf/extended',
     ],
-
     response: {
       address:
         'addr_test1qrqk39u966fhjtt2n7v24cmvu8rh02k62lpjm005jwffcunedw45r6kf23ktzztc6n8jud9j0nm3qq5sjpmmgalu7jssqt3hyf',
       amount: [
-        {
-          unit: 'lovelace',
-          quantity: '1211110',
-          decimals: 6,
-          has_nft_onchain_metadata: false,
-        },
+        { unit: 'lovelace', quantity: '1211110', decimals: 6, has_nft_onchain_metadata: false },
         {
           unit: '56455542e52eb9b2a823a045d679ae063c09b2c8c4d9c376294315c00014df10426c6f636b66726f7374546f6b656e',
           quantity: '1000',
@@ -848,17 +812,11 @@ export default [
     endpoints: [
       'addresses/addr_test1qqu0fdq939s7505uwrc3tae03e8rgd0xpt94673n56m03efu7yzv8ay6qvmlywtgvt7exaxt783dxuzv03qal7muda5snq24zy/extended',
     ],
-
     response: {
       address:
         'addr_test1qqu0fdq939s7505uwrc3tae03e8rgd0xpt94673n56m03efu7yzv8ay6qvmlywtgvt7exaxt783dxuzv03qal7muda5snq24zy',
       amount: [
-        {
-          unit: 'lovelace',
-          quantity: '3318700',
-          decimals: 6,
-          has_nft_onchain_metadata: false,
-        },
+        { unit: 'lovelace', quantity: '3318700', decimals: 6, has_nft_onchain_metadata: false },
         {
           unit: '56455542e52eb9b2a823a045d679ae063c09b2c8c4d9c376294315c0000de140426c6f636b66726f73744e4654',
           quantity: '1',
@@ -887,16 +845,10 @@ export default [
     testName: 'addresses/:address/extended (script payment cred)',
 
     endpoints: ['addresses/script1tx3c5y302fupjrm0xs3skumkaw97h2le97rjgrfzw8spydzr5ej/extended'],
-
     response: {
       address: 'script1tx3c5y302fupjrm0xs3skumkaw97h2le97rjgrfzw8spydzr5ej',
       amount: [
-        {
-          unit: 'lovelace',
-          quantity: '3000000',
-          decimals: 6,
-          has_nft_onchain_metadata: false,
-        },
+        { unit: 'lovelace', quantity: '3000000', decimals: 6, has_nft_onchain_metadata: false },
       ],
       stake_address: null,
       type: 'shelley',
@@ -912,17 +864,11 @@ export default [
     endpoints: [
       'addresses/addr_test1qqy86uaj7pv57c6jdg6d9m3rvu7r5pzay8dguayveaacmntxnerm95lm9pazslgsw04q73akal6pscheqhrxmsjcn4eqh3mz4s/extended',
     ],
-
     response: {
       address:
         'addr_test1qqy86uaj7pv57c6jdg6d9m3rvu7r5pzay8dguayveaacmntxnerm95lm9pazslgsw04q73akal6pscheqhrxmsjcn4eqh3mz4s',
       amount: [
-        {
-          unit: 'lovelace',
-          quantity: '9997143918',
-          decimals: 6,
-          has_nft_onchain_metadata: false,
-        },
+        { unit: 'lovelace', quantity: '9997143918', decimals: 6, has_nft_onchain_metadata: false },
         {
           unit: 'a6c7a3a79c686320e4becc8831a90781c79c13dd32a72b03a96724ee000de140426c6f636b66726f737423303039',
           quantity: '1',

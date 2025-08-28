@@ -4,6 +4,7 @@ import { error_400_pools, error_404 } from '../../errors/index.js';
 
 export default [
   {
+    id: 'pools-pool-id-topo-pool_d6e4715892f3',
     testName: 'pools/pool_id - TOPO pool',
 
     endpoints: [
@@ -34,6 +35,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-pool-with-more-owners_3f6997e3c636',
     testName: 'pools/pool_id - pool with more owners',
 
     endpoints: [
@@ -68,6 +70,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-pool-with-invalid-reward-stake-address_874b1735d84c',
     testName: 'pools/pool_id - pool with invalid reward stake address',
 
     endpoints: [
@@ -98,6 +101,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-multiple-times-deregistered-pool_bf237a8f6b25',
     testName: 'pools/pool_id - multiple times deregistered pool',
 
     endpoints: [
@@ -139,6 +143,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-expired-pool_3f6997e3c636',
     testName: 'pools/:pool_id - expired pool',
 
     endpoints: [
@@ -173,6 +178,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-expired-pool-no-1-same-rewards-account_81b12b839c3e',
     testName: 'pools/:pool_id - expired pool no 1 - same rewards account',
 
     endpoints: [
@@ -207,6 +213,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-expired-pool-no-2-same-rewards-account_36b5917f9a90',
     testName: 'pools/:pool_id - expired pool no 2 - same rewards account',
 
     endpoints: [
@@ -237,8 +244,8 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-revoked-calidus-key_615d18d7d7a7',
     testName: 'pools/:pool_id - revoked calidus key',
-
     endpoints: ['pools/pool1w83ux7vrwafrsuz044knxl9xxtr38q5jj2l3p28fl3g26faqqwg'],
     response: {
       pool_id: 'pool1w83ux7vrwafrsuz044knxl9xxtr38q5jj2l3p28fl3g26faqqwg',
@@ -269,8 +276,8 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-calidus-key-registered_ec20101fd64a',
     testName: 'pools/:pool_id - calidus key registered ',
-
     endpoints: ['pools/pool14fdr8cpz0qpgzkrucu2q7hst2pa3u5ssfej7kuepdq4v7lkyxg3'],
     response: {
       pool_id: 'pool14fdr8cpz0qpgzkrucu2q7hst2pa3u5ssfej7kuepdq4v7lkyxg3',
@@ -314,8 +321,8 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-multiple-calidus-keys-registered-return-last-one_3292cf38a98d',
     testName: 'pools/:pool_id - multiple calidus keys registered (return last one)',
-
     endpoints: ['pools/pool1k4rdvvuhy7h927psyew9syupwddy77t4j8lc74hpgzpvv7yklwg'],
     response: {
       pool_id: 'pool1k4rdvvuhy7h927psyew9syupwddy77t4j8lc74hpgzpvv7yklwg',
@@ -352,14 +359,14 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-invalid-pool_d9a0ef561623',
     testName: 'pools/:pool_id - invalid pool',
-
     response: error_400_pools,
     endpoints: ['pools/pool1kek'],
   },
   {
+    id: 'pools-pool-id-valid-non-existing-pool-for-this-network_bc28201fd319',
     testName: 'pools/:pool_id - valid non-existing pool (for this network)',
-
     response: error_404,
     endpoints: ['pools/pool1y6chk7x7fup4ms9leesdr57r4qy9cwxuee0msan72x976a6u0nc'],
   },

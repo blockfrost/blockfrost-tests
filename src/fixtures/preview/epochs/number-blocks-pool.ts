@@ -15,7 +15,6 @@ export default [
       'epochs/469/blocks/pool1p9xu88dzmpp5l8wmjd6f5xfs9z89mky6up86ty2wz4aavmm8f3m?order=asc',
       'epochs/469/blocks/pool1p9xu88dzmpp5l8wmjd6f5xfs9z89mky6up86ty2wz4aavmm8f3m?order=asc&count=87',
     ],
-
     response: [
       'dec64e771bcb7970c71f0aebc2160d4b33eb78d1c95bb541be7f1913d873af0e',
       '08c408eed0a936175f3f74475652efe3604465a6e531c3e436b4d9960ac2826e',
@@ -114,7 +113,6 @@ export default [
       'epochs/469/blocks/pool1p9xu88dzmpp5l8wmjd6f5xfs9z89mky6up86ty2wz4aavmm8f3m?order=desc',
       'epochs/469/blocks/pool1p9xu88dzmpp5l8wmjd6f5xfs9z89mky6up86ty2wz4aavmm8f3m?order=desc&count=87',
     ],
-
     response: [
       'd365a8bd65618d0f5f776882621bdbc68e57442cd1f3d042afb8a12149d56a62',
       'ac84697bfbd5fbff2b0c0130a397fb7309067837f0b297a2ed1a1779f8ee51de',

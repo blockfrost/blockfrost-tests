@@ -14,7 +14,6 @@ export default [
     id: 'pools-queryparams_cf8cccbd48e4',
     testName: 'pools?queryparams',
     endpoints: ['pools?count=5&page=3', 'pools?count=5&page=3&order=asc'],
-
     response: [
       'pool18xykgvvvxej2e5ap04ks72d8fdke4qsqeh30satznyrtj88634d',
       'pool1qqq6qqa0hpzvumv5p87ynczfmdj557xuwlc3289ke42g72z7f74',

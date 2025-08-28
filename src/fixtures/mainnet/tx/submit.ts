@@ -12,7 +12,6 @@ export default [
     ),
 
     headers: { 'Content-Type': 'application/cbor' },
-
     response: {
       error: 'Bad Request',
       message: expect.stringContaining(
@@ -27,7 +26,6 @@ export default [
     endpoints: ['tx/submit'],
     postBody: 'invalid CBOR',
     headers: { 'Content-Type': 'application/cbor' },
-
     response: {
       error: 'Bad Request',
       message:

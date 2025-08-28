@@ -8,7 +8,6 @@ export default [
     id: 'metadata-txs-labels-label_4e8a5486ac6c',
     testName: 'metadata/txs/labels/label',
     endpoints: ['metadata/txs/labels/2?count=2&page=2'],
-
     response: [
       {
         tx_hash: '3b81efcd4f2d7fb1491a3974aa0e552af967a188d1fcbe779ad6268fdeb96d50',
@@ -24,7 +23,6 @@ export default [
     id: 'metadata-txs-labels-label_77bace432f32',
     testName: 'metadata/txs/labels/label',
     endpoints: ['metadata/txs/labels/2'],
-
     response: [
       {
         tx_hash: '5331a14e596dc14616a533b5968a9ae6c3846cd69cbbd553ad57304309c700c1',

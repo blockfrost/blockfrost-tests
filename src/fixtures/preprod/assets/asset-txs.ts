@@ -15,7 +15,6 @@ export default [
       'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/txs?order=asc',
       'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/txs?count=100&page=1&order=asc',
     ],
-
     response: [
       '28e0d3e3375090b456625af0156761f3da1c430d04230a1f273086a616638cf0',
       'cca1fe9acf8ce5eb1e058c6dd2825cf6fc1fa7127ca7876463b0cf3b82a20354',
@@ -127,7 +126,6 @@ export default [
       'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/txs?order=desc',
       'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/txs?count=100&page=1&order=desc',
     ],
-
     response: [
       '56e96f74a1f0e8b20c882e19dd8310e826eb96a4bb2c00b8170bf8cd6c4fbc83',
       'cb5be4b8bfe4f73be9bc61284cca4917d9aada70f91042ce3172f21703a9f5e5',

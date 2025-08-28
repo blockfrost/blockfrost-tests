@@ -14,7 +14,6 @@ export default [
       'governance/dreps/drep_script1rphr974gpgngzqujlknd2kw8a4rjrfjuu8yafme7rjrmg6hv64g/updates',
       'governance/dreps/drep1yvvxuvh64q9zdqgrjt76d42eclk5wgdxtnsun4808cwg0dquhj65s/updates', // CIP129 id
     ],
-
     response: [
       {
         tx_hash: '819402987a3ceb222911126d588c1f568db8a529d4dd842eea8fee306d6e7064',
@@ -46,7 +45,6 @@ export default [
       'governance/dreps/drep_script13gh7zuw0nzuh6dhm96narlcl36a9x8tzvhdu4uaaryw05yltmjy/updates',
       'governance/dreps/drep1yw9zlct3e7vtjlfklvh2050lr78t55cavfjahjhnh5v3e7s2h3c8k/updates',
     ],
-
     response: [
       {
         tx_hash: '68e606fff03dad8e554f1cad72fc251fb98f1957ee7d609b3b07576e46e472a2',

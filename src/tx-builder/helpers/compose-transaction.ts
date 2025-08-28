@@ -8,10 +8,7 @@ export const composeTransaction = (
   outputAddress: string,
   outputAmount: string,
   utxos: UTXO,
-  params: {
-    protocolParams: Responses['epoch_param_content'];
-    currentSlot: number;
-  },
+  params: { protocolParams: Responses['epoch_param_content']; currentSlot: number },
 ): {
   txHash: string;
   txBody: CardanoWasm.TransactionBody;
@@ -86,8 +83,5 @@ export const composeTransaction = (
   const txBody = txBuilder.build();
   const txHash = Buffer.from(CardanoWasm.hash_transaction(txBody).to_bytes()).toString('hex');
 
-  return {
-    txHash,
-    txBody,
-  };
+  return { txHash, txBody };
 };

@@ -14,7 +14,6 @@ export default [
       'pools/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v/blocks',
       'pools/8ed5ab11e76094fa2a2ab29fc3a57498d07e68f6fde6f326162eea88/blocks',
     ],
-
     response: [
       '71a664b91a2ff929b0ed1f4a24d77e4a9340bdcadd3ae80db75df52bf3690861',
       'f9dc2a598e636fa97034e4cf7c0114f992d73c6efb732ae3cc13cdd213c3412c',
@@ -126,7 +125,6 @@ export default [
       'pools/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v/blocks?count=2&page=2',
       'pools/8ed5ab11e76094fa2a2ab29fc3a57498d07e68f6fde6f326162eea88/blocks?count=2&page=2',
     ],
-
     response: [
       '6f73d870a9b3cbdb46b7cda0a4efc877d5083740e65d191bb718cc4fec307486',
       'da4f089babda71afdd45e9824cc40f9e8f78cb01312cc6f95e2be6088d0a0ff8',

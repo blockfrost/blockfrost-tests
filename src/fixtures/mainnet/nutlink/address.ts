@@ -2,11 +2,9 @@ export default [
   {
     id: 'nutlink-address-nut-link-oracle-address_a4811a9e1e89',
     testName: 'nutlink/:address nut.link oracle address',
-
     endpoints: [
       'nutlink/addr1q85yx2w7ragn5sx6umgmtjpc3865s9sg59sz4rrh6f90kgwfwlzu3w8ttacqg89mkdgwshwnplj5c5n9f8dhp0h55q2q7qm63t',
     ],
-
     response: {
       address:
         'addr1q85yx2w7ragn5sx6umgmtjpc3865s9sg59sz4rrh6f90kgwfwlzu3w8ttacqg89mkdgwshwnplj5c5n9f8dhp0h55q2q7qm63t',

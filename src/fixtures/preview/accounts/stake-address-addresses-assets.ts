@@ -29,14 +29,8 @@ export default [
         unit: '65d08640ec164353832b2425a3b1895c1c3fb7b461c67082e7f6e79946696e616e636542696e6172696573434950323576325465737430',
         quantity: '1000000',
       },
-      {
-        unit: 'e31c1656c2e6d1766187ed2d1f7340c47b0c4f191fb2363142ddb42f',
-        quantity: '1000000',
-      },
-      {
-        unit: '10c6c46f8e48850fcb416745e3fdbe35bacb80bb560d6cb31889cc00',
-        quantity: '1000000',
-      },
+      { unit: 'e31c1656c2e6d1766187ed2d1f7340c47b0c4f191fb2363142ddb42f', quantity: '1000000' },
+      { unit: '10c6c46f8e48850fcb416745e3fdbe35bacb80bb560d6cb31889cc00', quantity: '1000000' },
       {
         unit: '524311279cd7fde1c26d6c4b4f58f176d9bdd66d767700fc46a5ebed48656c6c6f4e4654',
         quantity: '1',
@@ -426,7 +420,6 @@ export default [
     endpoints: [
       'accounts/stake_test1ur2pejlgfqa5e4stqg529tqj06k6gamweaawgphvewkdgtqqkuwlr/addresses/assets',
     ],
-
     response: [],
   },
   {
