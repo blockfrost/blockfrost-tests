@@ -29,7 +29,8 @@ export const updateCode = (code: string): { updated: boolean; newCode: string } 
       const node = path.node;
       const getProp = (name: string) =>
         node.properties.find(
-          (p: unknown): p is t.ObjectProperty =>
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (p: any): p is t.ObjectProperty =>
             t.isObjectProperty(p) &&
             ((t.isIdentifier(p.key) && p.key.name === name) ||
               (t.isStringLiteral(p.key) && p.key.value === name)),
