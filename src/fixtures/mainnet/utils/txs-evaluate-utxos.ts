@@ -26,9 +26,9 @@ export default [
     id: 'utils-txs-evaluate-utxos-with-missing-additional-utxo-set-json_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos with missing additional utxo set (JSON)',
     endpoints: ['utils/txs/evaluate/utxos'],
-
-    postBody: JSON.stringify({ cbor: TX_CBOR_WITH_SPENT_UTXO }),
-
+    postBody: JSON.stringify({
+      cbor: TX_CBOR_WITH_SPENT_UTXO,
+    }),
     headers: { 'Content-Type': 'application/json' },
     response: {
       type: 'jsonwsp/response',
@@ -55,11 +55,9 @@ export default [
 
   {
     id: 'utils-txs-evaluate-utxos-successfully-evaluate-execution-units-when-unknown-inputs-are-provided-as-additional-utxo_f9b2e7c14cae',
-
     testName:
       'utils/txs/evaluate/utxos successfully evaluate execution units when unknown inputs are provided as additional utxo',
     endpoints: ['utils/txs/evaluate/utxos'],
-
     postBody: JSON.stringify({
       cbor: '84A30081825820FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00018182581D70C40F9129C2684046EB02325B96CA2899A6FA6478C1DDE9B5C53206A51A00D59F800200A10581840000D8799F4D48656C6C6F2C20576F726C6421FF820000F5F6',
       additionalUtxoSet: [
@@ -77,7 +75,6 @@ export default [
         ],
       ],
     }),
-
     headers: { 'Content-Type': 'application/json' },
     response: {
       type: 'jsonwsp/response',
@@ -92,7 +89,6 @@ export default [
     id: 'utils-txs-evaluate-utxos-with-additional-utxo-set-json_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos with additional utxo set (JSON)',
     endpoints: ['utils/txs/evaluate/utxos'],
-
     postBody: JSON.stringify({
       cbor: TX_CBOR_WITH_SPENT_UTXO,
       additionalUtxoSet: [

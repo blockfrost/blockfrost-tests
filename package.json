@@ -14,7 +14,8 @@
     "test:mainnet:local": "NETWORK=mainnet vitest --ui -c ./vitest.config.integration.ts",
     "test:preprod:local": "NETWORK=preprod vitest --ui -c ./vitest.config.integration.ts",
     "test:preview:local": "NETWORK=preview vitest --ui -c ./vitest.config.integration.ts",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "prettier-fix": "prettier --write ."
   },
   "dependencies": {
     "@blockfrost/blockfrost-js": "6.0.0",
