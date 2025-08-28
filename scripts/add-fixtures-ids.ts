@@ -35,7 +35,7 @@ export const updateCode = (code: string): { updated: boolean; newCode: string } 
       const node = path.node;
       const getProp = (name: string) =>
         node.properties.find(
-          (p: any): p is t.ObjectProperty =>
+          (p: unknown): p is t.ObjectProperty =>
             t.isObjectProperty(p) &&
             ((t.isIdentifier(p.key) && p.key.name === name) ||
               (t.isStringLiteral(p.key) && p.key.value === name)),
@@ -55,14 +55,14 @@ export const updateCode = (code: string): { updated: boolean; newCode: string } 
         if (t.isArrayExpression(endpointsProp.value)) {
           endpoints = endpointsProp.value.elements
             .filter((el: string) => t.isStringLiteral(el))
-            .map((el: any) => el.value);
+            .map((el: { value: string }) => el.value);
         }
 
         if (testName) {
           const id = getStableId(testName, endpoints);
           const idProp = t.objectProperty(t.identifier('id'), t.stringLiteral(id));
 
-          // add
+          // add at start
           node.properties.unshift(idProp);
           updated = true;
         }
@@ -97,6 +97,7 @@ const processFolder = (folderName: string) => {
 
     for (const file of files) {
       const fullPath = path.join(folderName, file.name);
+
       if (file.isDirectory()) {
         processFolder(fullPath);
       } else if (file.isFile() && ['.ts', '.tsx'].includes(path.extname(file.name))) {
@@ -112,6 +113,7 @@ const __filename = fileURLToPath(import.meta.url);
 
 if (process.argv[1] === __filename) {
   const directory = process.argv[2] || './src/fixtures';
+
   console.log(`Processing folder: ${directory}`);
 
   processFolder(directory);
