@@ -35,6 +35,11 @@ export default [
       name: null,
       description: null,
       homepage: null,
+      error: {
+        code: 'HTTP_RESPONSE_ERROR',
+        message:
+          'Error Offchain Pool: HTTP Response error from https://git.io/JmBOm resulted in HTTP status code : 404 "Not Found"',
+      },
     },
   },
   {

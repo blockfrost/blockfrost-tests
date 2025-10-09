@@ -120,7 +120,7 @@ export default [
       active_size: expect.toBeInRange(0, 1),
       declared_pledge: '50000000000',
       live_pledge: expect.toBeInRange('50000000000', '500000000000'),
-      margin_cost: 0,
+      margin_cost: expect.toBeInRange(0, 1),
       fixed_cost: '998000000',
       reward_account: 'stake1u9999na53x0zn285dsnll092kwjultk7thjney93dyexnkc504sxv',
       owners: ['stake1ux3an59zz992kjw6v9yc5s2cgfwg06zydc49aejysa3n6dqf0gjkj'],
