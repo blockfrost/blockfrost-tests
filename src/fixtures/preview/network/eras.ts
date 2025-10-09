@@ -2,6 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
+    id: 'network-eras_161d67e8a062',
     testName: 'network eras',
     endpoints: ['network/eras'],
     response: [
