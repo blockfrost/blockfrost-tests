@@ -52,7 +52,6 @@ export default [
   },
   {
     id: 'governance-drep-cip129-script-hash-drep-id-same-as-legacy-drep-script190xv8v32n43luhu9ag05s5mvcs6079lg4zghzyg3j9vlgle68y3_438314602694',
-
     testName:
       'governance drep cip129 scriptHash drep id (same as legacy drep_script190xv8v32n43luhu9ag05s5mvcs6079lg4zghzyg3j9vlgle68y3)',
     endpoints: ['governance/dreps/drep1yv4uesaj92wk8ljlsh4p7jzndnzrflchaz5fzug3zxg4naqkpeas3'],
@@ -124,11 +123,11 @@ export default [
       drep_id: 'drep1ygkfv2u7aazrfhqgh0qssramjd6av09rsh3ejd0rd95cmusezderl',
       hex: '222c962b9eef4434dc08bbc1080fbb9375d63ca385e39935e369698df2',
       amount: expect.toBeAdaQuantity(),
-      active: true,
-      active_epoch: 507,
+      active: false,
+      active_epoch: null,
       has_script: false,
       last_active_epoch: expect.toBeEpochNumber(),
-      retired: false,
+      retired: true,
       expired: false,
     },
   },
