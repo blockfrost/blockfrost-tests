@@ -17,6 +17,11 @@ export default [
       name: null,
       description: null,
       homepage: null,
+      error: {
+        code: 'HASH_MISMATCH',
+        message:
+          'Hash mismatch when fetching metadata from https://www.logicalmechanism.io/metadata/. Expected "970a7b1d60d340ec37e6b94f23dcab9547e8124be7603640c567a36374291516" but got "86f728e3571775995b7f13e36353aef0e9b4bf4b60300079598ffab29971a6b5".',
+      },
     },
   },
   {

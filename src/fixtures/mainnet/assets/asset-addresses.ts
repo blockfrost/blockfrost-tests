@@ -30,13 +30,13 @@ export default [
     response: [
       {
         address:
-          'addr1q8h22z0n3zqecr9n4q9ysds2m2ms3dqesz575accjpc3jclw55yl8zypnsxt82q2fqmq4k4hpz6pnq9fafm33yr3r93sgnpdw6',
-        quantity: '100000',
+          'addr1qxeal3u4jlknqpmpkswyqmq58ggzrytu6v5rg73p64eppaxgvhcs6e4zud6jg267l8c940yggr2pxssestmzcdwwf7lsswrvnt',
+        quantity: '9900000',
       },
       {
         address:
-          'addr1qxeal3u4jlknqpmpkswyqmq58ggzrytu6v5rg73p64eppaxgvhcs6e4zud6jg267l8c940yggr2pxssestmzcdwwf7lsswrvnt',
-        quantity: '9900000',
+          'addr1q8h22z0n3zqecr9n4q9ysds2m2ms3dqesz575accjpc3jclw55yl8zypnsxt82q2fqmq4k4hpz6pnq9fafm33yr3r93sgnpdw6',
+        quantity: '100000',
       },
     ],
   },

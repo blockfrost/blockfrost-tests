@@ -4,8 +4,10 @@ export default [
     testName: 'governance proposal info_action detail',
     endpoints: [
       'governance/proposals/15f82a365bdee483a4b03873a40d3829cc88c048ff3703e11bd01dd9e035c916/0',
+      'governance/proposals/gov_action1zhuz5djmmmjg8f9s8pe6grfc98xg3szglums8cgm6qwancp4eytqqmpu0pr',
     ],
     response: {
+      id: 'gov_action1zhuz5djmmmjg8f9s8pe6grfc98xg3szglums8cgm6qwancp4eytqqmpu0pr',
       tx_hash: '15f82a365bdee483a4b03873a40d3829cc88c048ff3703e11bd01dd9e035c916',
       cert_index: 0,
       governance_type: 'info_action',
@@ -24,8 +26,10 @@ export default [
     testName: 'governance proposal parameter_change detail',
     endpoints: [
       'governance/proposals/b2a591ac219ce6dcca5847e0248015209c7cb0436aa6bd6863d0c1f152a60bc5/0',
+      'governance/proposals/gov_action1k2jertppnnndejjcglszfqq4yzw8evzrd2nt66rr6rqlz54xp0zsq05ecsn',
     ],
     response: {
+      id: 'gov_action1k2jertppnnndejjcglszfqq4yzw8evzrd2nt66rr6rqlz54xp0zsq05ecsn',
       tx_hash: 'b2a591ac219ce6dcca5847e0248015209c7cb0436aa6bd6863d0c1f152a60bc5',
       cert_index: 0,
       governance_type: 'parameter_change',
@@ -76,8 +80,10 @@ export default [
     testName: 'governance proposal hard_fork_initiation detail',
     endpoints: [
       'governance/proposals/0b19476e40bbbb5e1e8ce153523762e2b6859e7ecacbaf06eae0ee6a447e79b9/0',
+      'governance/proposals/gov_action1pvv5wmjqhwa4u85vu9f4ydmzu2mgt8n7et967ph2urhx53r70xusqnmm525',
     ],
     response: {
+      id: 'gov_action1pvv5wmjqhwa4u85vu9f4ydmzu2mgt8n7et967ph2urhx53r70xusqnmm525',
       tx_hash: '0b19476e40bbbb5e1e8ce153523762e2b6859e7ecacbaf06eae0ee6a447e79b9',
       cert_index: 0,
       governance_type: 'hard_fork_initiation',

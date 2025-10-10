@@ -17,6 +17,9 @@ export default [
       {
         tx_hash: 'e239058473ab5ab1f5829b9058a93cbd0daaf72f9252cc16b34925cd87b37d35',
         cert_index: 0,
+        proposal_id: 'gov_action14lefp8upwhhq92xph7t075txshf9huxxh9d2ey05ml2n5hqgvlxqqp92kfl',
+        proposal_tx_hash: 'aff2909f8175ee02a8c1bf96ff516685d25bf0c6b95aac91f4dfd53a5c0867cc',
+        proposal_cert_index: 0,
         vote: 'yes',
       },
     ],

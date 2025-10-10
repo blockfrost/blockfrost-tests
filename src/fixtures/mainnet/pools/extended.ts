@@ -36,8 +36,8 @@ export default [
         live_stake: expect.toBeGreaterThan('0'),
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(11269),
-        margin_cost: 0.028,
-        fixed_cost: '170000000',
+        margin_cost: 0.01,
+        fixed_cost: '380000000',
         declared_pledge: '400000000000',
         metadata: {
           hash: expect.any(String),

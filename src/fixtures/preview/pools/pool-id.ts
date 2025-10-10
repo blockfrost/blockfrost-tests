@@ -352,6 +352,96 @@ export default [
     },
   },
   {
+    testName: 'pools/:pool_id/metadata - CONNECTION_ERROR - only basic pool metadata info returned',
+    endpoints: [
+      'pools/pool1clnnqvd5t8y9gnsqd229glt5ag4mljz3q74y3v5lxcnk2ye056s/metadata',
+      'pools/c7e73031b459c8544e006a94547d74ea2bbfc85107aa48b29f362765/metadata',
+    ],
+    response: {
+      pool_id: 'pool1clnnqvd5t8y9gnsqd229glt5ag4mljz3q74y3v5lxcnk2ye056s',
+      hex: 'c7e73031b459c8544e006a94547d74ea2bbfc85107aa48b29f362765',
+      url: expect.any(String),
+      hash: expect.any(String),
+      ticker: null,
+      name: null,
+      description: null,
+      homepage: null,
+      error: {
+        code: 'CONNECTION_ERROR',
+        message:
+          'Error Offchain Pool: Connection failure error when fetching metadata from http://localhost:23009/p/pool_clai_registration_metadata.json.',
+      },
+    },
+  },
+  {
+    testName:
+      'pools/:pool_id/metadata - HTTP_RESPONSE_ERROR - only basic pool metadata info returned',
+    endpoints: [
+      'pools/pool1uuknk4htd29v9y5ym0r33d60ftdhktqnwrygtq4km9hqu8p2dph/metadata',
+      'pools/e72d3b56eb6a8ac29284dbc718b74f4adb7b2c1370c88582b6d96e0e/metadata',
+    ],
+    response: {
+      pool_id: 'pool1uuknk4htd29v9y5ym0r33d60ftdhktqnwrygtq4km9hqu8p2dph',
+      hex: 'e72d3b56eb6a8ac29284dbc718b74f4adb7b2c1370c88582b6d96e0e',
+      url: expect.any(String),
+      hash: expect.any(String),
+      ticker: null,
+      name: null,
+      description: null,
+      homepage: null,
+      error: {
+        code: 'HTTP_RESPONSE_ERROR',
+        message:
+          'Error Offchain Pool: HTTP Response error from https://example.com: expected JSON, but got : "text/html"',
+      },
+    },
+  },
+  {
+    testName:
+      'pools/:pool_id/metadata - HTTP_RESPONSE_ERROR (404) - only basic pool metadata info returned',
+    endpoints: [
+      'pools/pool1n935yzlmu7528fx4qjf2gak0cdv2nune9cku730zg7vh707rnnd/metadata',
+      'pools/9963420bfbe7a8a3a4d50492a476cfc358a9f2792e2dcf45e247997f/metadata',
+    ],
+    response: {
+      pool_id: 'pool1n935yzlmu7528fx4qjf2gak0cdv2nune9cku730zg7vh707rnnd',
+      hex: '9963420bfbe7a8a3a4d50492a476cfc358a9f2792e2dcf45e247997f',
+      url: expect.any(String),
+      hash: expect.any(String),
+      ticker: null,
+      name: null,
+      description: null,
+      homepage: null,
+      error: {
+        code: 'HTTP_RESPONSE_ERROR',
+        message:
+          'Error Offchain Pool: HTTP Response error from https://digitalfortress.online/digi3-pv.json resulted in HTTP status code : 404 "Not Found"',
+      },
+    },
+  },
+  {
+    testName: 'pools/:pool_id/metadata - HASH_MISMATCH - only basic pool metadata info returned',
+    endpoints: [
+      'pools/pool1xkfew9wzhefz2at44eqdu5d6hk6s6xjdjj8h54tgvmymwea4vk3/metadata',
+      'pools/35939715c2be52257575ae40de51babdb50d1a4d948f7a556866c9b7/metadata',
+    ],
+    response: {
+      pool_id: 'pool1xkfew9wzhefz2at44eqdu5d6hk6s6xjdjj8h54tgvmymwea4vk3',
+      hex: '35939715c2be52257575ae40de51babdb50d1a4d948f7a556866c9b7',
+      url: expect.any(String),
+      hash: expect.any(String),
+      ticker: null,
+      name: null,
+      description: null,
+      homepage: null,
+      error: {
+        code: 'HASH_MISMATCH',
+        message:
+          'Hash mismatch when fetching metadata from https://tinyurl.com/39a7pnv5. Expected "643a016d84fb171855f8b6d9c9a5efa230fb4665de3ee0ee0a1ed0f486d26be2" but got "b123ea83d1f87afcb95a76661be508b37a0957c7fa95baa883a80d1203ffcd94".',
+      },
+    },
+  },
+  {
     id: 'pools-pool-id-invalid-pool_d9a0ef561623',
     testName: 'pools/:pool_id - invalid pool',
     response: error_400_pools,

@@ -5,9 +5,11 @@ export default [
     id: 'governance-proposal-parameter-change-parameters_79f333ca9918',
     testName: 'governance proposal parameter_change parameters',
     endpoints: [
+      'governance/proposals/gov_action1jkhcvzxu02h4cucz2pnt2zdzcywg98efssqf4jfwwpfazglmeetsqypdyqf/parameters',
       'governance/proposals/95af8608dc7aaf5c73025066b509a2c11c829f2984009ac92e7053d123fbce57/0/parameters',
     ],
     response: {
+      id: 'gov_action1jkhcvzxu02h4cucz2pnt2zdzcywg98efssqf4jfwwpfazglmeetsqypdyqf',
       tx_hash: '95af8608dc7aaf5c73025066b509a2c11c829f2984009ac92e7053d123fbce57',
       cert_index: +0,
       parameters: {
@@ -93,8 +95,10 @@ export default [
     testName: 'governance proposal parameter_change parameters 2',
     endpoints: [
       'governance/proposals/4d5f4b83fecbc79767c34109b065119b28902f97b5a3f22b73ec0688a9eef86b/0/parameters',
+      'governance/proposals/gov_action1f405hql7e0rewe7rgyymqeg3nv5fqtuhkk3ly2mnasrg320wlp4sq0r68jd/parameters',
     ],
     response: {
+      id: 'gov_action1f405hql7e0rewe7rgyymqeg3nv5fqtuhkk3ly2mnasrg320wlp4sq0r68jd',
       tx_hash: '4d5f4b83fecbc79767c34109b065119b28902f97b5a3f22b73ec0688a9eef86b',
       cert_index: +0,
       parameters: {
@@ -165,6 +169,7 @@ export default [
       'governance/proposals/5feb12419d2702e11f91371194d104ce5a469f5f7f35555676503c6d523466c4/0/parameters',
       'governance/proposals/0a53d015f377831f09909930667ef004905396bf4b95a8567cb9981f6e07e8af/0/parameters',
       'governance/proposals/e61f151fcef9e99dff5c705f8d5de18891f8d1d92d69fef5ff608d2c29a7c133/0/parameters',
+      'governance/proposals/gov_action1uc03287wl85eml6uwp0c6h0p3zgl35we945laa0lvzxjc2d8cyesq4whp09/parameters',
       'governance/proposals/cbdfd1717b4e7ea2d4b3c141387b24f2f31fac8be8fec64c3b70870bad425643/0/parameters',
       'governance/proposals/88f0d0fc7a6bac735be72963d2919105c1220b25ffaa69b0b166f4d4b8027ff1/0/parameters',
     ],
