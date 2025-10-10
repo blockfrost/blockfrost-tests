@@ -1426,7 +1426,7 @@ export default [
       dvt_p_p_technical_group: 0.67,
       dvt_p_p_gov_group: 0.75,
       dvt_treasury_withdrawal: 0.67,
-      committee_min_size: '0',
+      committee_min_size: '3',
       committee_max_term_length: '365',
       gov_action_lifetime: '30',
       gov_action_deposit: '100000000000',
