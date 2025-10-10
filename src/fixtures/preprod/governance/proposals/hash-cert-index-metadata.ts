@@ -174,8 +174,10 @@ export default [
     testName: 'governance proposal new_committee metadata',
     endpoints: [
       'governance/proposals/be1640dd2b3485e94703be5683c804d5051d96c12e1eaacc17c30e74de580ce5/0/metadata',
+      'governance/proposals/gov_action1hctyphftxjz7j3crhetg8jqy65z3m9kp9c024nqhcv88fhjcpnjsqxvf8yk/metadata',
     ],
     response: {
+      id: 'gov_action1hctyphftxjz7j3crhetg8jqy65z3m9kp9c024nqhcv88fhjcpnjsqxvf8yk',
       tx_hash: 'be1640dd2b3485e94703be5683c804d5051d96c12e1eaacc17c30e74de580ce5',
       cert_index: 0,
       url: 'https://hornan7.github.io/mike_hornan.jsonld',
@@ -248,8 +250,10 @@ export default [
     testName: 'governance proposal treasury_withdrawals metadata',
     endpoints: [
       'governance/proposals/372d688faa77e146798b581b322c0f2981a9023764736ade5d12e0e4e796af8c/0/metadata',
+      'governance/proposals/gov_action1xukk3ra2wls5v7vttqdnytq09xq6jq3hv3ek4hjaztswfeuk47xqqg4644z/metadata',
     ],
     response: {
+      id: 'gov_action1xukk3ra2wls5v7vttqdnytq09xq6jq3hv3ek4hjaztswfeuk47xqqg4644z',
       tx_hash: '372d688faa77e146798b581b322c0f2981a9023764736ade5d12e0e4e796af8c',
       cert_index: 0,
       url: 'https://raw.githubusercontent.com/IntersectMBO/governance-actions/refs/heads/main/mainnet/2024-11-19-infohf/metadata.jsonld',

@@ -4,8 +4,10 @@ export default [
     testName: 'governance proposal info_action detail',
     endpoints: [
       'governance/proposals/aff2909f8175ee02a8c1bf96ff516685d25bf0c6b95aac91f4dfd53a5c0867cc/0',
+      'governance/proposals/gov_action14lefp8upwhhq92xph7t075txshf9huxxh9d2ey05ml2n5hqgvlxqqp92kfl',
     ],
     response: {
+      id: 'gov_action14lefp8upwhhq92xph7t075txshf9huxxh9d2ey05ml2n5hqgvlxqqp92kfl',
       tx_hash: 'aff2909f8175ee02a8c1bf96ff516685d25bf0c6b95aac91f4dfd53a5c0867cc',
       cert_index: 0,
       governance_type: 'info_action',
@@ -24,8 +26,10 @@ export default [
     testName: 'governance proposal parameter_change detail',
     endpoints: [
       'governance/proposals/b52f02288e3ce8c7e57455522f4edd09c12797749e2db32098ecbe980b645d45/0',
+      'governance/proposals/gov_action1k5hsy2yw8n5v0et524fz7nkap8qj09m5nckmxgycajlfszmyt4zsqp0n7ft',
     ],
     response: {
+      id: 'gov_action1k5hsy2yw8n5v0et524fz7nkap8qj09m5nckmxgycajlfszmyt4zsqp0n7ft',
       tx_hash: 'b52f02288e3ce8c7e57455522f4edd09c12797749e2db32098ecbe980b645d45',
       cert_index: 0,
       governance_type: 'parameter_change',
@@ -76,8 +80,10 @@ export default [
     testName: 'governance proposal parameter_change Ryan',
     endpoints: [
       'governance/proposals/0ecc74fe26532cec1ab9a299f082afc436afc888ca2dc0fc6acda431c52dc60d/0',
+      'governance/proposals/gov_action1pmx8fl3x2vkwcx4e52vlpq40csm2ljygegkuplr2ekjrr3fdccxsq0jegy9',
     ],
     response: {
+      id: 'gov_action1pmx8fl3x2vkwcx4e52vlpq40csm2ljygegkuplr2ekjrr3fdccxsq0jegy9',
       tx_hash: '0ecc74fe26532cec1ab9a299f082afc436afc888ca2dc0fc6acda431c52dc60d',
       cert_index: 0,
       governance_type: 'parameter_change',
@@ -103,8 +109,10 @@ export default [
     testName: 'governance proposal hard_fork_initiation detail',
     endpoints: [
       'governance/proposals/ccb27f6b0d58c25ae33fd821b62c387f5230dae930afd07489fa3df56ae56522/0',
+      'governance/proposals/gov_action1eje876cdtrp94celmqsmvtpc0afrpkhfxzhaqayflg7l26h9v53qqnjsjww',
     ],
     response: {
+      id: 'gov_action1eje876cdtrp94celmqsmvtpc0afrpkhfxzhaqayflg7l26h9v53qqnjsjww',
       tx_hash: 'ccb27f6b0d58c25ae33fd821b62c387f5230dae930afd07489fa3df56ae56522',
       cert_index: 0,
       governance_type: 'hard_fork_initiation',
@@ -126,8 +134,10 @@ export default [
     testName: 'governance proposal new_committee detail',
     endpoints: [
       'governance/proposals/be1640dd2b3485e94703be5683c804d5051d96c12e1eaacc17c30e74de580ce5/0',
+      'governance/proposals/gov_action1hctyphftxjz7j3crhetg8jqy65z3m9kp9c024nqhcv88fhjcpnjsqxvf8yk',
     ],
     response: {
+      id: 'gov_action1hctyphftxjz7j3crhetg8jqy65z3m9kp9c024nqhcv88fhjcpnjsqxvf8yk',
       tx_hash: 'be1640dd2b3485e94703be5683c804d5051d96c12e1eaacc17c30e74de580ce5',
       cert_index: 0,
       governance_type: 'new_committee',
@@ -154,8 +164,10 @@ export default [
     testName: 'governance proposal treasury_withdrawals detail',
     endpoints: [
       'governance/proposals/372d688faa77e146798b581b322c0f2981a9023764736ade5d12e0e4e796af8c/0',
+      'governance/proposals/gov_action1xukk3ra2wls5v7vttqdnytq09xq6jq3hv3ek4hjaztswfeuk47xqqg4644z',
     ],
     response: {
+      id: 'gov_action1xukk3ra2wls5v7vttqdnytq09xq6jq3hv3ek4hjaztswfeuk47xqqg4644z',
       tx_hash: '372d688faa77e146798b581b322c0f2981a9023764736ade5d12e0e4e796af8c',
       cert_index: 0,
       governance_type: 'treasury_withdrawals',

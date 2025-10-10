@@ -10,19 +10,22 @@ export default [
     endpoints: ['governance/proposals?count=3'],
     response: [
       {
+        id: 'gov_action1pmx8fl3x2vkwcx4e52vlpq40csm2ljygegkuplr2ekjrr3fdccxsq0jegy9',
         tx_hash: '0ecc74fe26532cec1ab9a299f082afc436afc888ca2dc0fc6acda431c52dc60d',
         cert_index: 0,
         governance_type: 'parameter_change',
       },
       {
+        id: 'gov_action14lefp8upwhhq92xph7t075txshf9huxxh9d2ey05ml2n5hqgvlxqqp92kfl',
         tx_hash: 'aff2909f8175ee02a8c1bf96ff516685d25bf0c6b95aac91f4dfd53a5c0867cc',
         cert_index: 0,
         governance_type: 'info_action',
       },
       {
+        id: 'gov_action1a960ajl5ttpcdfmxqh57s3azuhf8cqrlm597vaxt44fcurp4lcqsqqfz6j2',
+        tx_hash: 'e974fecbf45ac386a76605e9e847a2e5d27c007fdd0be674cbad538e0c35fe01',
         cert_index: 0,
         governance_type: 'parameter_change',
-        tx_hash: 'e974fecbf45ac386a76605e9e847a2e5d27c007fdd0be674cbad538e0c35fe01',
       },
     ],
   },

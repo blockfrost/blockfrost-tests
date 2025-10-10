@@ -13,7 +13,6 @@ export default [
   },
   {
     id: 'governance-proposal-hard-fork-initiation-metadata-hash-mismatch-dbsync-bug_dd74ac9360de',
-
     // dbsync cant fetch the metadata for this proposal due to  https://github.com/IntersectMBO/cardano-db-sync/issues/1928
     testName: 'governance proposal hard_fork_initiation metadata (hash mismatch, dbsync bug)',
     endpoints: [

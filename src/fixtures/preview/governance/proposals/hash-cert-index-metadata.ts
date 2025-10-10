@@ -3,19 +3,107 @@ import { error_404 } from '../../../errors/index.js';
 export default [
   {
     id: 'governance-treasury-withdrawals-metadata-404_502662b9ea33',
-    testName: 'governance treasury_withdrawals metadata (404)',
+    testName: 'governance treasury_withdrawals metadata (404 hash mismatch)',
     endpoints: [
       'governance/proposals/cbdfd1717b4e7ea2d4b3c141387b24f2f31fac8be8fec64c3b70870bad425643/0/metadata',
     ],
     response: error_404,
   },
   {
+    testName: 'governance treasury_withdrawals metadata (hash mismatch, only basic info returned)',
+    services: ['ryo'],
+    endpoints: [
+      'governance/proposals/gov_action1e00azutmfel2949nc9qns7ey7te3ltytarlvvnpmwzrsht2z2epsqwmg2ug/metadata',
+    ],
+    response: {
+      id: 'gov_action1e00azutmfel2949nc9qns7ey7te3ltytarlvvnpmwzrsht2z2epsqwmg2ug',
+      tx_hash: 'cbdfd1717b4e7ea2d4b3c141387b24f2f31fac8be8fec64c3b70870bad425643',
+      cert_index: 0,
+      url: 'https://metadata-govtool.cardanoapi.io/data/data.jsonld',
+      hash: '9d8ec42877de9c7a11faaf8d78415f1ee6d6cc8f1506a6c34afe3e6499233752',
+      json_metadata: null,
+      bytes: null,
+      error: {
+        code: 'HASH_MISMATCH',
+        message:
+          'Hash mismatch when fetching metadata from https://metadata-govtool.cardanoapi.io/data/data.jsonld. Expected "9d8ec42877de9c7a11faaf8d78415f1ee6d6cc8f1506a6c34afe3e6499233752" but got "7b48494cf73690fb67b7619768948655754cb1c1ab40575123803b16cd2d5f01".',
+      },
+    },
+  },
+  {
+    testName: 'governance treasury_withdrawals metadata (DECODE_ERROR, only basic info returned)',
+    services: ['ryo'],
+    endpoints: [
+      'governance/proposals/gov_action1qrklg3dsyck9r38htg980h06f4yj88fqfewn9ezfw9al6xutnfxsqg4j2c8/metadata',
+    ],
+    response: {
+      id: 'gov_action1qrklg3dsyck9r38htg980h06f4yj88fqfewn9ezfw9al6xutnfxsqg4j2c8',
+      tx_hash: '00edf445b0262c51c4f75a0a77ddfa4d49239d204e5d32e449717bfd1b8b9a4d',
+      cert_index: 0,
+      url: 'https://metadata-govtool.cardanoapi.io/data/clibanus',
+      hash: 'c9aae16737c6728f1e4ba4ced075fdf7f04033ba60346079429fee8aa4616238',
+      json_metadata: null,
+      bytes: null,
+      error: {
+        code: 'DECODE_ERROR',
+        message:
+          'Error Offchain Voting Anchor: JSON decode error from when fetching metadata from Just https://metadata-govtool.cardanoapi.io/data/clibanus resulted in : "Error in $: key \\"authors\\" not found, CIP-100:Error in $: key \\"authors\\" not found"',
+      },
+    },
+  },
+  {
+    testName:
+      'governance treasury_withdrawals metadata (HTTP_RESPONSE_ERROR, only basic info returned)',
+    services: ['ryo'],
+    endpoints: [
+      'governance/proposals/gov_action1qlzkadfp0u434qgt23dsnjuuqep90xkmh48tf86z2xx0mz4g8z8qqsewdh4/metadata',
+    ],
+    response: {
+      id: 'gov_action1qlzkadfp0u434qgt23dsnjuuqep90xkmh48tf86z2xx0mz4g8z8qqsewdh4',
+      tx_hash: '07c56eb5217f2b1a810b545b09cb9c0642579adbbd4eb49f42518cfd8aa8388e',
+      cert_index: 0,
+      url: 'http://bit.ly/3QFMhii?index=0',
+      hash: '1111111111111111111111111111111111111111111111111111111111111112',
+      json_metadata: null,
+      bytes: null,
+      error: {
+        code: 'HTTP_RESPONSE_ERROR',
+        message:
+          'Error Offchain Voting Anchor: HTTP Response error from http://bit.ly/3QFMhii?index=0: expected JSON, but got : "text/html; charset=utf-8"',
+      },
+    },
+  },
+  {
+    testName:
+      'governance treasury_withdrawals metadata (DECODE_ERROR IPFS, only basic info returned)',
+    services: ['ryo'],
+    endpoints: [
+      'governance/proposals/gov_action1qw0qq0xpfq3dzft7y3ft7ec7xywafqfqqtult83x0cfgwevnlh3qqsfv0nt/metadata',
+    ],
+    response: {
+      id: 'gov_action1qw0qq0xpfq3dzft7y3ft7ec7xywafqfqqtult83x0cfgwevnlh3qqsfv0nt',
+      tx_hash: '039e003cc14822d1257e2452bf671e311dd4812002f9f59e267e12876593fde2',
+      cert_index: 0,
+      url: 'ipfs://bafkreie7p3aj2hytzse3pnetzf4erzwhh5xymnyb3acjyoszgpmgay4djm',
+      hash: '7fb589379acc9a75f396946aa5af6596188fbc25082c785eccbae9ab6320864a',
+      json_metadata: null,
+      bytes: null,
+      error: {
+        code: 'DECODE_ERROR',
+        message:
+          'Error Offchain Voting Anchor: List of errors for each ipfs gateway: Error Offchain Voting Anchor: JSON decode error from when fetching metadata from Just https://ipfs.io/ipfs/bafkreie7p3aj2hytzse3pnetzf4erzwhh5xymnyb3acjyoszgpmgay4djm resulted in : "Error in $: key \\"authors\\" not found, CIP-100:Error in $: key \\"authors\\" not found"',
+      },
+    },
+  },
+  {
     id: 'governance-proposal-parameter-change-metadata_7abeb6ea4c0a',
     testName: 'governance proposal parameter_change metadata',
     endpoints: [
+      'governance/proposals/gov_action187qnn3dx05l09y8th7w26cqqjuflhwv5h4qafjy9l0h05urrstuqqq4ddzd/metadata',
       'governance/proposals/3f8139c5a67d3ef290ebbf9cad60009713fbb994bd41d4c885fbeefa706382f8/0/metadata',
     ],
     response: {
+      id: 'gov_action187qnn3dx05l09y8th7w26cqqjuflhwv5h4qafjy9l0h05urrstuqqq4ddzd',
       tx_hash: '3f8139c5a67d3ef290ebbf9cad60009713fbb994bd41d4c885fbeefa706382f8',
       cert_index: +0,
       url: 'https://metadata-govtool.cardanoapi.io/data/apollo?index=0',
@@ -99,9 +187,11 @@ export default [
     id: 'governance-info-action-metadata_efe309747c5e',
     testName: 'governance info_action metadata',
     endpoints: [
+      'governance/proposals/gov_action1qp2wggldx45zswydt3vkaump4lkajm2ce7vh7ya8smtql78j82ssqu7aqst/metadata',
       'governance/proposals/0054e423ed356828388d5c596ef361afedd96d58cf997f13a786d60ff8f23aa1/0/metadata',
     ],
     response: {
+      id: 'gov_action1qp2wggldx45zswydt3vkaump4lkajm2ce7vh7ya8smtql78j82ssqu7aqst',
       tx_hash: '0054e423ed356828388d5c596ef361afedd96d58cf997f13a786d60ff8f23aa1',
       cert_index: 0,
       url: 'https://raw.githubusercontent.com/m-i-k-e/meta_test/refs/heads/main/data%20(10).jsonld',
@@ -168,12 +258,36 @@ export default [
     },
   },
   {
+    testName:
+      'governance proposal hard_fork_initiation metadatav2 (DECODE_ERROR, basic info returned)',
+    services: ['ryo'],
+    endpoints: [
+      'governance/proposals/gov_action12advnz0y2dfng33dgj7pwvmen4tu0reg92kfejqtnzqgsf7feylqq9vg23w/metadata',
+    ],
+    response: {
+      id: 'gov_action12advnz0y2dfng33dgj7pwvmen4tu0reg92kfejqtnzqgsf7feylqq9vg23w',
+      tx_hash: '575ac989e4535334462d44bc1733799d57c78f282aac9cc80b98808827c9c93e',
+      cert_index: 0,
+      url: 'https://ipfs.io/ipfs/QmX36VAfuobxj6fcipyZV7DvX6jW7H69VoZLT7TaKqJv3d',
+      hash: 'b404e5bb1486a7c057adc8ff366dc71dbc10a7d62b1020479ac88fad2f95da22',
+      json_metadata: null,
+      bytes: null,
+      error: {
+        code: 'DECODE_ERROR',
+        message:
+          'Error Offchain Voting Anchor: JSON decode error from when fetching metadata from Just https://ipfs.io/ipfs/QmX36VAfuobxj6fcipyZV7DvX6jW7H69VoZLT7TaKqJv3d resulted in : "Error in $: key \\"authors\\" not found, CIP-100:Error in $: key \\"authors\\" not found"',
+      },
+    },
+  },
+  {
     id: 'governance-proposal-treasury-withdrawals-metadata_4200e637ef70',
     testName: 'governance proposal treasury_withdrawals metadata',
     endpoints: [
+      'governance/proposals/gov_action1msjmluh3h0nqgrtn7sjsrwrp8cyvh3d9hty6cumvvcev5ejrpwjsqpqet5n/metadata',
       'governance/proposals/dc25bff2f1bbe6040d73f42501b8613e08cbc5a5bac9ac736c6632ca66430ba5/0/metadata',
     ],
     response: {
+      id: 'gov_action1msjmluh3h0nqgrtn7sjsrwrp8cyvh3d9hty6cumvvcev5ejrpwjsqpqet5n',
       tx_hash: 'dc25bff2f1bbe6040d73f42501b8613e08cbc5a5bac9ac736c6632ca66430ba5',
       cert_index: +0,
       url: 'https://most-brass-sun.quicknode-ipfs.com/ipfs/QmXfUwMDHomJxYEuXsWhBwF8VSqgPNP6RZdx6p9c1Eys3h',

@@ -11,6 +11,7 @@ export default [
     testName: 'governance proposal votes',
     endpoints: [
       'governance/proposals/e61f151fcef9e99dff5c705f8d5de18891f8d1d92d69fef5ff608d2c29a7c133/0/votes',
+      'governance/proposals/gov_action1uc03287wl85eml6uwp0c6h0p3zgl35we945laa0lvzxjc2d8cyesq4whp09/votes',
     ],
     response: [
       {
