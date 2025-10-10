@@ -1431,7 +1431,7 @@ export default [
       gov_action_lifetime: '30',
       gov_action_deposit: '100000000000',
       drep_deposit: '500000000',
-      drep_activity: '20',
+      drep_activity: '31',
       pvtpp_security_group: 0.51,
       pvt_p_p_security_group: 0.51,
       min_fee_ref_script_cost_per_byte: 15,
