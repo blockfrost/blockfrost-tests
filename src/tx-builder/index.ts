@@ -10,7 +10,11 @@ import { UTXO } from './types/index.js';
 import { sleep } from '../index.js';
 
 // BIP39 mnemonic (seed) from which we will generate address to retrieve utxo from and private key used for signing the transaction
-const MNEMONIC: string = process.env.SUBMIT_MNEMONIC || '';
+const MNEMONIC: string | undefined = process.env.SUBMIT_MNEMONIC;
+
+if (!MNEMONIC) {
+  throw new Error('Environment variable SUBMIT_MNEMONIC is required but not set.');
+}
 
 export type Network = 'mainnet' | 'preview' | 'preprod';
 

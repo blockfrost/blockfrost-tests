@@ -296,9 +296,9 @@ export default [
         body: {
           title: 'Treasury Withdrawals',
           abstract:
-            'Governance Action type: New ConstitutionAbstract (in art):In the realm of art, abstract refers to works that do not directly represent real objects or scenes. Abstract art focuses on shapes, colors, forms, and textures rather than depicting things realistically.Example: "The artist’s abstract painting used bold colors and geometric shapes to convey emotion without representing any specific object."',
+            'Governance Action type: New Constitution\nAbstract (in art):\n\nIn the realm of art, abstract refers to works that do not directly represent real objects or scenes. Abstract art focuses on shapes, colors, forms, and textures rather than depicting things realistically.\nExample: "The artist’s abstract painting used bold colors and geometric shapes to convey emotion without representing any specific object."',
           rationale:
-            'Rational (in terms of reasoning or logic):Refers to thinking that is based on reason or logic. For example, a rational decision is one made after careful thought, weighing evidence, and avoiding emotional bias.Example: "He made a rational choice, considering all the possible outcomes before making his decision."',
+            'Rational (in terms of reasoning or logic):\n\nRefers to thinking that is based on reason or logic. For example, a rational decision is one made after careful thought, weighing evidence, and avoiding emotional bias.\nExample: "He made a rational choice, considering all the possible outcomes before making his decision."',
           motivation:
             '"Believe in your potential, and take that first step towards your goals. Every small action you take brings you closer to the life you want to live. Challenges will come, but each one is an opportunity to grow stronger, smarter, and more resilient. Keep moving forward with confidence, and remember that success is not a destination but a journey. You’ve got this!"',
           references: [
