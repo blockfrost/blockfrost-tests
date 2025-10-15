@@ -1,7 +1,8 @@
 import { expect } from 'vitest';
 import { BlockFrostAPI } from '@blockfrost/blockfrost-js';
-import { buildTx, Network, waitForTx } from './index.js';
+import { buildTx, waitForTx } from './index.js';
 import { sleep } from '../index.js';
+import { Network } from './types/index.js';
 
 export const submitTest = async (network: Network) => {
   let blockfrostClient: BlockFrostAPI;

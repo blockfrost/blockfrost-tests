@@ -1,28 +1,33 @@
-// This example is written in Typescript.
-// In order to run it on Node.js your need to compile the code first.
-// Follow instructions in README
 import { BlockFrostAPI, BlockfrostServerError } from '@blockfrost/blockfrost-js';
 
 import { composeTransaction } from './helpers/compose-transaction.js';
 import { signTransaction } from './helpers/sign-transaction.js';
 import { deriveAddressPrvKey, mnemonicToPrivateKey } from './helpers/key.js';
-import { UTXO } from './types/index.js';
+import { Network, UTXO } from './types/index.js';
 import { sleep } from '../index.js';
 
-// BIP39 mnemonic (seed) from which we will generate address to retrieve utxo from and private key used for signing the transaction
-const MNEMONIC: string | undefined = process.env.SUBMIT_MNEMONIC;
+const init = async () => {
+  // BIP39 mnemonic (seed) from which we will generate address to retrieve utxo from and private key used for signing the transaction
+  const MNEMONIC: string | undefined = process.env.SUBMIT_MNEMONIC;
 
-if (!MNEMONIC) {
-  throw new Error('Environment variable SUBMIT_MNEMONIC is required but not set.');
-}
+  if (!MNEMONIC) {
+    throw new Error('Environment variable SUBMIT_MNEMONIC is required but not set.');
+  }
 
-export type Network = 'mainnet' | 'preview' | 'preprod';
+  // Amount sent to the recipient
+  const OUTPUT_AMOUNT = '1000000'; // 1 000 000 lovelaces = 1 ADA
+  const environment = (process.env.TEST_ENV ?? 'dev') as 'prod' | 'dev';
 
-// Amount sent to the recipient
-const OUTPUT_AMOUNT = '1000000'; // 1 000 000 lovelaces = 1 ADA
-const environment = (process.env.TEST_ENV ?? 'dev') as 'prod' | 'dev';
+  return {
+    MNEMONIC,
+    OUTPUT_AMOUNT,
+    environment,
+  };
+};
 
 export const buildTx = async (blockfrostClient: BlockFrostAPI, _network: Network) => {
+  const { MNEMONIC, OUTPUT_AMOUNT, environment } = await init();
+
   let network: 'mainnet' | 'testnet' = 'mainnet';
 
   if (_network !== 'mainnet') {

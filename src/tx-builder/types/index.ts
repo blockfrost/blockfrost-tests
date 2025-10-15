@@ -6,3 +6,5 @@ export interface AssetAmount {
   unit: string;
   quantity: string;
 }
+
+export type Network = 'mainnet' | 'testnet' | 'preview' | 'preprod';
