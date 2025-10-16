@@ -408,15 +408,10 @@ export default [
       hex: '9963420bfbe7a8a3a4d50492a476cfc358a9f2792e2dcf45e247997f',
       url: expect.any(String),
       hash: expect.any(String),
-      ticker: null,
-      name: null,
-      description: null,
-      homepage: null,
-      error: {
-        code: 'HTTP_RESPONSE_ERROR',
-        message:
-          'Error Offchain Pool: HTTP Response error from https://digitalfortress.online/digi3-pv.json resulted in HTTP status code : 404 "Not Found"',
-      },
+      ticker: 'DIGI3',
+      name: 'Digital Fortress',
+      description: 'Digital Fortress on preview.',
+      homepage: 'https://digitalfortress.online',
     },
   },
   {
