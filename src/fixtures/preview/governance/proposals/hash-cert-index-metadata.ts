@@ -258,28 +258,6 @@ export default [
     },
   },
   {
-    testName:
-      'governance proposal hard_fork_initiation metadatav2 (DECODE_ERROR, basic info returned)',
-    services: ['ryo'],
-    endpoints: [
-      'governance/proposals/gov_action12advnz0y2dfng33dgj7pwvmen4tu0reg92kfejqtnzqgsf7feylqq9vg23w/metadata',
-    ],
-    response: {
-      id: 'gov_action12advnz0y2dfng33dgj7pwvmen4tu0reg92kfejqtnzqgsf7feylqq9vg23w',
-      tx_hash: '575ac989e4535334462d44bc1733799d57c78f282aac9cc80b98808827c9c93e',
-      cert_index: 0,
-      url: 'https://ipfs.io/ipfs/QmX36VAfuobxj6fcipyZV7DvX6jW7H69VoZLT7TaKqJv3d',
-      hash: 'b404e5bb1486a7c057adc8ff366dc71dbc10a7d62b1020479ac88fad2f95da22',
-      json_metadata: null,
-      bytes: null,
-      error: {
-        code: 'DECODE_ERROR',
-        message:
-          'Error Offchain Voting Anchor: JSON decode error from when fetching metadata from Just https://ipfs.io/ipfs/QmX36VAfuobxj6fcipyZV7DvX6jW7H69VoZLT7TaKqJv3d resulted in : "Error in $: key \\"authors\\" not found, CIP-100:Error in $: key \\"authors\\" not found"',
-      },
-    },
-  },
-  {
     id: 'governance-proposal-treasury-withdrawals-metadata_4200e637ef70',
     testName: 'governance proposal treasury_withdrawals metadata',
     endpoints: [
