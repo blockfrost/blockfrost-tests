@@ -110,7 +110,7 @@ export const mainnetFixtures = {
     ...accountStakeAddressRewards,
     ...accountsStakeAddressUtxos,
     ...accountsStakeAddressWithdrawals,
-    ...accountsStakeAddressTransactions
+    ...accountsStakeAddressTransactions,
   ],
   blocks: [
     ...blocksOthers,
