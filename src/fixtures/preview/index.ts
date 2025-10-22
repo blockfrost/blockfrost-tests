@@ -8,6 +8,7 @@ import accountsStakeAddressRegistrations from './accounts/stake-address-registra
 import accountStakeAddressRewards from './accounts/stake-address-rewards.js';
 import accountsStakeAddressUtxos from './accounts/stake-address-utxos.js';
 import accountsStakeAddressWithdrawals from './accounts/stake-address-withdrawals.js';
+import accountStakeAddressTransactions from './accounts/stake-address-transactions.js';
 
 import address from './addresses/address.js';
 import addressExtended from './addresses/address-extended.js';
@@ -111,6 +112,7 @@ export const previewFixtures = {
     ...accountStakeAddressRewards,
     ...accountsStakeAddressUtxos,
     ...accountsStakeAddressWithdrawals,
+    ...accountStakeAddressTransactions,
   ],
   addresses: [
     ...address,
