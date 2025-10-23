@@ -30,7 +30,7 @@ const fetchBlockchainState = async (clientInstance: Got) => {
   return { block, epoch };
 };
 
-const setCurrentBlockchainState = async () => {
+export const setCurrentBlockchainState = async () => {
   const CARDANO_NETWORKS = ['mainnet', 'preprod', 'preview'];
 
   if (CARDANO_NETWORKS.includes(process.env.NETWORK ?? '') === false) {
