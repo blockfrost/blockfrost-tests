@@ -86,6 +86,7 @@ If this file is **empty**, **all** endpoints will be allowed by default.
   "/accounts/{stake_address}/addresses/assets",
   "/accounts/{stake_address}/addresses/total",
   "/accounts/{stake_address}/utxos",
+  "/accounts/{stake_address}/transactions",
   "/addresses/{address}",
   "/addresses/{address}/extended",
   "/addresses/{address}/total",
