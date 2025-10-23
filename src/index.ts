@@ -262,56 +262,52 @@ export const getPaginationFixtures = (url: string) =>
 export const generateTest = (fixture: Fixture, endpoint: string) => {
   const timeout = fixture.customTimeout || DEFAULT_TEST_TIMEOUT;
 
-  test(
-    `[${fixture.testName}] - ${endpoint}`,
-    async () => {
-      if (fixture.customTest) {
-        // custom assertion defined within fixture
-        const gotClient = getClientForFixture(fixture);
+  test(`[${fixture.testName}] - ${endpoint}`, { timeout, retry: fixture.retry }, async () => {
+    if (fixture.customTest) {
+      // custom assertion defined within fixture
+      const gotClient = getClientForFixture(fixture);
 
-        await fixture.customTest(endpoint, gotClient);
-        return;
+      await fixture.customTest(endpoint, gotClient);
+      return;
+    }
+
+    let response: unknown;
+
+    try {
+      const { data } = await makeRequest(fixture, endpoint);
+
+      response = data;
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+      if (!error.response) {
+        // non backend error
+        console.log('Thrown unexpected error', error);
+        throw error;
       }
 
-      let response: unknown;
-
-      try {
-        const { data } = await makeRequest(fixture, endpoint);
-
-        response = data;
-
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      } catch (error: any) {
-        if (!error.response) {
-          // non backend error
-          console.log('Thrown unexpected error', error);
-          throw error;
-        }
-
-        if (fixture.customExpect) {
-          await fixture.customExpect(error.response.body);
-        } else {
-          if (!('error' in fixture.response)) {
-            // fixture did not expect an error, rethrow
-            // uncomment this line to see the huge error
-            // throw error;
-          }
-
-          expect(error.response.body).toStrictEqual(fixture.response);
-        }
-
-        return;
-      }
-
-      // Request-did-not-throw branch
       if (fixture.customExpect) {
-        await fixture.customExpect(response);
+        await fixture.customExpect(error.response.body);
       } else {
-        expect(response).toStrictEqual(fixture.response);
+        if (!('error' in fixture.response)) {
+          // fixture did not expect an error, rethrow
+          // uncomment this line to see the huge error
+          // throw error;
+        }
+
+        expect(error.response.body).toStrictEqual(fixture.response);
       }
-    },
-    { timeout, retry: fixture.retry },
-  );
+
+      return;
+    }
+
+    // Request-did-not-throw branch
+    if (fixture.customExpect) {
+      await fixture.customExpect(response);
+    } else {
+      expect(response).toStrictEqual(fixture.response);
+    }
+  });
 };
 
 export const sleep = (delayMs: number) => {
