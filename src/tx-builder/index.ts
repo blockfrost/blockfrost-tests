@@ -1,10 +1,15 @@
-import { BlockFrostAPI, BlockfrostServerError } from '@blockfrost/blockfrost-js';
-
 import { composeTransaction } from './helpers/compose-transaction.js';
 import { signTransaction } from './helpers/sign-transaction.js';
 import { deriveAddressPrvKey, mnemonicToPrivateKey } from './helpers/key.js';
-import { Network, UTXO } from './types/index.js';
+import { Network } from './types/index.js';
 import { sleep } from '../index.js';
+import {
+  getAddressUtxos,
+  getEpochsLatestParameters,
+  getLatestBlock,
+  getTxs,
+} from '../blockfrost-client.js';
+import { BlockfrostServerError } from '@blockfrost/blockfrost-js';
 
 const init = async () => {
   // BIP39 mnemonic (seed) from which we will generate address to retrieve utxo from and private key used for signing the transaction
@@ -25,7 +30,7 @@ const init = async () => {
   };
 };
 
-export const buildTx = async (blockfrostClient: BlockFrostAPI, _network: Network) => {
+export const buildTx = async (_network: Network) => {
   const { MNEMONIC, OUTPUT_AMOUNT, environment } = await init();
 
   let network: 'mainnet' | 'testnet' = 'mainnet';
@@ -44,28 +49,16 @@ export const buildTx = async (blockfrostClient: BlockFrostAPI, _network: Network
   );
 
   // Retrieve protocol parameters
-  const protocolParameters = await blockfrostClient.epochsLatestParameters();
+  const protocolParameters = await getEpochsLatestParameters();
 
   // Retrieve utxo for the address
-  let utxo: UTXO = [];
-
-  try {
-    utxo = await blockfrostClient.addressesUtxosAll(address);
-  } catch (error) {
-    if (error instanceof BlockfrostServerError && error.status_code === 404) {
-      // Address derived from the seed was not used yet
-      // In this case Blockfrost API will return 404
-      utxo = [];
-    } else {
-      throw error;
-    }
-  }
+  const utxos = await getAddressUtxos(address);
 
   const hasLowBalance =
-    utxo.length === 1 &&
-    BigInt(utxo.at(0)?.amount.find(a => a.unit === 'lovelace')?.quantity ?? '0') < 2000000;
+    utxos.length === 1 &&
+    BigInt(utxos.at(0)?.amount.find(a => a.unit === 'lovelace')?.quantity ?? '0') < 2000000;
 
-  if (utxo.length === 0 || hasLowBalance) {
+  if (utxos.length === 0 || hasLowBalance) {
     throw new Error(`You should send ADA to ${address} to have enough funds to sent a transaction`);
   }
 
@@ -73,7 +66,7 @@ export const buildTx = async (blockfrostClient: BlockFrostAPI, _network: Network
   // console.log(JSON.stringify(utxo, undefined, 4));
 
   // Get current blockchain slot from latest block
-  const latestBlock = await blockfrostClient.blocksLatest();
+  const latestBlock = await getLatestBlock();
   const currentSlot = latestBlock.slot;
 
   if (!currentSlot) {
@@ -81,7 +74,7 @@ export const buildTx = async (blockfrostClient: BlockFrostAPI, _network: Network
   }
 
   // Prepare transaction
-  const { txBody } = composeTransaction(address, address, OUTPUT_AMOUNT, utxo, {
+  const { txBody } = composeTransaction(address, address, OUTPUT_AMOUNT, utxos, {
     protocolParams: protocolParameters,
     currentSlot,
   });
@@ -92,7 +85,7 @@ export const buildTx = async (blockfrostClient: BlockFrostAPI, _network: Network
   return transaction;
 };
 
-export const waitForTx = async (blockfrostClient: BlockFrostAPI, txHash: string) => {
+export const waitForTx = async (txHash: string) => {
   const maxRetries = 5;
 
   for (let index = 0; index < maxRetries; index++) {
@@ -100,7 +93,7 @@ export const waitForTx = async (blockfrostClient: BlockFrostAPI, txHash: string)
     await sleep(20_000);
 
     try {
-      const tx = await blockfrostClient.txs(txHash);
+      const tx = await getTxs(txHash);
 
       return tx;
     } catch (error) {

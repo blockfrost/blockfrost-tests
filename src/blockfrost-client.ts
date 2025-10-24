@@ -1,4 +1,4 @@
-import { BlockFrostAPI } from '@blockfrost/blockfrost-js';
+import { BlockFrostAPI, BlockfrostServerError } from '@blockfrost/blockfrost-js';
 
 const projectId = process.env.PROJECT_ID;
 const serverUrl = process.env.SERVER_URL;
@@ -47,5 +47,23 @@ export const getEpochsLatestParameters = () =>
 export const getEpochsLatest = () =>
   callWithFallback(instance => instance.epochsLatest(), 'epochs latest');
 
+export const getTxs = (txHash: string) =>
+  callWithFallback(instance => instance.txs(txHash), `txs for ${txHash}`);
+
 export const getLatestBlock = () =>
   callWithFallback(instance => instance.blocksLatest(), 'latest block');
+
+export const getAddressUtxos = (address: string) =>
+  callWithFallback(async instance => {
+    try {
+      return await instance.addressesUtxosAll(address);
+    } catch (error) {
+      if (error instanceof BlockfrostServerError && error.status_code === 404) {
+        // Address derived from the seed was not used yet
+        // In this case Blockfrost API will return 404
+        return [];
+      } else {
+        throw error;
+      }
+    }
+  }, `address UTXOs for ${address}`);
