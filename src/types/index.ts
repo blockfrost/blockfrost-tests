@@ -16,3 +16,5 @@ export type Fixture = {
   customTest?: (endpoint: string, client: Got) => Promise<void>;
   customExpect?: (response: unknown | null) => Promise<void>;
 };
+
+export type Network = 'mainnet' | 'preview' | 'preprod';
