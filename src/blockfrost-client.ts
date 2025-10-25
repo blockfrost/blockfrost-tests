@@ -1,7 +1,8 @@
 import { BlockFrostAPI, BlockfrostServerError } from '@blockfrost/blockfrost-js';
 
 const projectId = process.env.PROJECT_ID;
-const serverUrl = process.env.SERVER_URL;
+const serverUrl = process.env.SERVER_URL as string;
+const isLocal = serverUrl.includes('localhost');
 
 if (!projectId) {
   throw new Error('PROJECT_ID env is required');
@@ -12,11 +13,17 @@ if (!serverUrl) {
 }
 
 export const getPrimaryInstance = (): BlockFrostAPI => {
-  return new BlockFrostAPI({ projectId });
+  return new BlockFrostAPI({
+    projectId,
+    ...(isLocal && { gotOptions: { rejectUnauthorized: false } }),
+  });
 };
 
 export const getFallbackInstance = (): BlockFrostAPI => {
-  return new BlockFrostAPI({ projectId, customBackend: serverUrl });
+  return new BlockFrostAPI({
+    projectId,
+    ...(isLocal && { gotOptions: { rejectUnauthorized: false } }),
+  });
 };
 
 async function callWithFallback<T>(
