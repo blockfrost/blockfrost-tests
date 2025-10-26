@@ -47,30 +47,48 @@ async function callWithFallback<T>(
   apiCall: (instance: BlockFrostAPI) => Promise<T>,
   name: string,
 ): Promise<T> {
+  console.log(`Attempting to fetch ${name} from PRIMARY (${serverUrl})`);
   const primary = getPrimaryInstance();
 
   try {
-    return await apiCall(primary);
-  } catch (error) {
-    console.error(`Error fetching ${name} from primary:`, error);
+    const result = await apiCall(primary);
 
+    console.log(`✓ SUCCESS fetching ${name} from PRIMARY`);
+    return result;
+  } catch (error) {
+    console.error(`✗ FAILED fetching ${name} from PRIMARY:`, error);
+
+    console.log(`Attempting to fetch ${name} from FALLBACK (production)`);
     const fallback = getFallbackInstance();
 
     try {
-      return await apiCall(fallback);
+      const result = await apiCall(fallback);
+
+      console.log(`✓ SUCCESS fetching ${name} from FALLBACK`);
+      return result;
     } catch (fallbackError) {
-      console.error(`Error fetching ${name} from fallback:`, fallbackError);
+      console.error(`✗ FAILED fetching ${name} from FALLBACK:`, fallbackError);
 
       const secondaryFallback = getSecondaryFallbackInstance();
 
       if (secondaryFallback) {
+        console.log(`Attempting to fetch ${name} from SECONDARY FALLBACK (${fallbackServerUrl})`);
         try {
-          return await apiCall(secondaryFallback);
-        } catch (secondaryFallbackError) {
-          console.error(`Error fetching ${name} from secondary fallback:`, secondaryFallbackError);
+          const result = await apiCall(secondaryFallback);
 
+          console.log(`✓ SUCCESS fetching ${name} from SECONDARY FALLBACK`);
+          return result;
+        } catch (secondaryFallbackError) {
+          console.error(
+            `✗ FAILED fetching ${name} from SECONDARY FALLBACK:`,
+            secondaryFallbackError,
+          );
+          console.error(`✗✗✗ ALL FALLBACKS EXHAUSTED for ${name}`);
           throw secondaryFallbackError;
         }
+      } else {
+        console.log(`No SECONDARY FALLBACK configured (FALLBACK_SERVER_URL not set)`);
+        console.error(` ✗✗ ALL FALLBACKS EXHAUSTED for ${name}`);
       }
 
       throw fallbackError;
