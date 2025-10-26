@@ -53,12 +53,18 @@ export const isUrlMatch = (urlParameter: string, _pattern: string) => {
 
     const adjustedPattern = pattern.replaceAll('{', ':').replaceAll('}', '');
 
-    if (url === '/pools/retired' && adjustedPattern === '/pools/:pool_id') {
-      return false;
+    if (adjustedPattern === '/pools/:pool_id') {
+      if (url === '/pools/retired') return false;
+      if (url === '/pools/retiring') return false;
+      if (url === '/pools/extended') return false;
     }
 
-    if (url === '/pools/retiring' && adjustedPattern === '/pools/:pool_id') {
-      return false;
+    if (adjustedPattern === '/blocks/:hash_or_number') {
+      if (url === '/blocks/latest') return false;
+    }
+
+    if (adjustedPattern === '/epochs/:number') {
+      if (url === '/epochs/latest') return false;
     }
 
     const urlMatch = match(adjustedPattern, url);
@@ -79,31 +85,6 @@ export const getInstance = (clientOptions?: ExtendOptions): Got => {
     https: { rejectUnauthorized: false },
     ...clientOptions,
     headers: { ...DEFAULT_HEADERS, ...clientOptions?.headers },
-  });
-};
-
-export const getBlockfrostProductionInstance = (): Got => {
-  let initPrefixUrl;
-
-  if (!projectId) {
-    throw new Error('projectId is required');
-  }
-
-  if (projectId.startsWith('preview')) {
-    initPrefixUrl = 'https://cardano-preview.blockfrost.io/api/v0';
-  } else if (projectId.startsWith('preprod')) {
-    initPrefixUrl = 'https://cardano-preprod.blockfrost.io/api/v0';
-  } else if (projectId.startsWith('mainnet')) {
-    initPrefixUrl = 'https://cardano-mainnet.blockfrost.io/api/v0';
-  } else {
-    throw new Error(`Unsupported projectId prefix: ${projectId}`);
-  }
-
-  return got.extend({
-    responseType: 'json',
-    prefixUrl: initPrefixUrl,
-    https: { rejectUnauthorized: false },
-    headers: { project_id: projectId },
   });
 };
 

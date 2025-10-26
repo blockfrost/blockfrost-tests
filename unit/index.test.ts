@@ -34,4 +34,30 @@ describe('isUrlMatch', () => {
   it('does not throw on malformed patterns', () => {
     expect(isUrlMatch('/foo', '/[invalid][')).toBe(false);
   });
+
+  it('special cases pools extended to not match pool_id', () => {
+    const pattern = '/pools/{pool_id}';
+
+    expect(isUrlMatch('/pools/extended', pattern)).toBe(false);
+  });
+
+  it('special cases blocks latest to not match hash_or_number', () => {
+    const pattern = '/blocks/{hash_or_number}';
+
+    expect(isUrlMatch('/blocks/latest', pattern)).toBe(false);
+  });
+
+  it('special cases epochs latest to not match number', () => {
+    const pattern = '/epochs/{number}';
+
+    expect(isUrlMatch('/epochs/latest', pattern)).toBe(false);
+  });
+
+  it('still matches literal endpoints for blocks/epochs/pools', () => {
+    expect(isUrlMatch('/blocks/latest', '/blocks/latest')).toBe(true);
+    expect(isUrlMatch('/epochs/latest', '/epochs/latest')).toBe(true);
+    expect(isUrlMatch('/pools/extended', '/pools/extended')).toBe(true);
+    expect(isUrlMatch('/pools/retired', '/pools/retired')).toBe(true);
+    expect(isUrlMatch('/pools/retiring', '/pools/retiring')).toBe(true);
+  });
 });

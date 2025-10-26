@@ -2,6 +2,7 @@ import { BlockFrostAPI, BlockfrostServerError } from '@blockfrost/blockfrost-js'
 
 const projectId = process.env.PROJECT_ID;
 const serverUrl = process.env.SERVER_URL as string;
+const fallbackServerUrl = process.env.FALLBACK_SERVER_URL;
 const isLocal = serverUrl.includes('localhost');
 
 if (!projectId) {
@@ -12,17 +13,35 @@ if (!serverUrl) {
   throw new Error('SERVER_URL env is required');
 }
 
+// try local instance first
 export const getPrimaryInstance = (): BlockFrostAPI => {
+  return new BlockFrostAPI({
+    projectId,
+    customBackend: serverUrl,
+    ...(isLocal && { gotOptions: { rejectUnauthorized: false } }),
+  });
+};
+
+// fallback to production servers
+export const getFallbackInstance = (): BlockFrostAPI => {
   return new BlockFrostAPI({
     projectId,
     ...(isLocal && { gotOptions: { rejectUnauthorized: false } }),
   });
 };
 
-export const getFallbackInstance = (): BlockFrostAPI => {
+// try custom secondary fallback instance
+export const getSecondaryFallbackInstance = (): BlockFrostAPI | null => {
+  if (!fallbackServerUrl) {
+    return null;
+  }
+
+  const isLocalFallback = fallbackServerUrl.includes('localhost');
+
   return new BlockFrostAPI({
     projectId,
-    ...(isLocal && { gotOptions: { rejectUnauthorized: false } }),
+    customBackend: fallbackServerUrl,
+    ...(isLocalFallback && { gotOptions: { rejectUnauthorized: false } }),
   });
 };
 
@@ -43,6 +62,19 @@ async function callWithFallback<T>(
       return await apiCall(fallback);
     } catch (fallbackError) {
       console.error(`Error fetching ${name} from fallback:`, fallbackError);
+
+      const secondaryFallback = getSecondaryFallbackInstance();
+
+      if (secondaryFallback) {
+        try {
+          return await apiCall(secondaryFallback);
+        } catch (secondaryFallbackError) {
+          console.error(`Error fetching ${name} from secondary fallback:`, secondaryFallbackError);
+
+          throw secondaryFallbackError;
+        }
+      }
+
       throw fallbackError;
     }
   }

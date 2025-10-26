@@ -21,23 +21,17 @@ import {
   toBeInRange,
   toBeStakeAddress,
 } from './matchers.js';
-import { Network } from './types/index.js';
 
 (async () => {
-  const network = process.env.NETWORK as Network;
-  const networksRequiringSetup: Network[] = ['mainnet', 'preview', 'preprod'];
+  try {
+    const [epoch, block] = await Promise.all([getEpochsLatest(), getLatestBlock()]);
 
-  if (network && networksRequiringSetup.includes(network)) {
-    try {
-      const [epoch, block] = await Promise.all([getEpochsLatest(), getLatestBlock()]);
-
-      globalThis.latest = {
-        block,
-        epoch,
-      };
-    } catch (error) {
-      console.error('Failed to setup global test data:', error);
-    }
+    globalThis.latest = {
+      block,
+      epoch,
+    };
+  } catch (error) {
+    console.error('Failed to setup global test data:', error);
   }
 })();
 
