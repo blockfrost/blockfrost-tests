@@ -36,12 +36,10 @@ export const getSecondaryFallbackInstance = (): BlockFrostAPI | null => {
     return null;
   }
 
-  const isLocalFallback = fallbackServerUrl.includes('localhost');
-
   return new BlockFrostAPI({
     projectId,
     customBackend: fallbackServerUrl,
-    ...(isLocalFallback && { gotOptions: { rejectUnauthorized: false } }),
+    gotOptions: { rejectUnauthorized: false },
   });
 };
 
