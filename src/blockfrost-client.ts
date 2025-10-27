@@ -17,7 +17,7 @@ export const getPrimaryInstance = (): BlockFrostAPI => {
   return new BlockFrostAPI({
     projectId,
     customBackend: serverUrl,
-    gotOptions: { rejectUnauthorized: false },
+    gotOptions: { https: { rejectUnauthorized: false } },
   });
 };
 
@@ -29,13 +29,14 @@ export const getFallbackInstance = (): BlockFrostAPI => {
 // try custom secondary fallback instance
 export const getSecondaryFallbackInstance = (): BlockFrostAPI | null => {
   if (!fallbackServerUrl) {
+    console.log('No custom fallback server URL provided');
     return null;
   }
 
   return new BlockFrostAPI({
     projectId,
     customBackend: fallbackServerUrl,
-    gotOptions: { rejectUnauthorized: false },
+    gotOptions: { https: { rejectUnauthorized: false } },
   });
 };
 
