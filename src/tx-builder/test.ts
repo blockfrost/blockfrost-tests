@@ -21,7 +21,7 @@ export const submitTest = async (network: Network) => {
     https: { rejectUnauthorized: false },
   });
 
-  const signedTx = await buildTx(blockfrostClient, network);
+  const signedTx = await buildTx(network);
   const signedTxJson = signedTx.to_js_value();
 
   // Push transaction to network
@@ -35,7 +35,7 @@ export const submitTest = async (network: Network) => {
 
   console.log(`Submitted tx ${txHash}.\nWaiting for the tx to be included in a block...`);
 
-  const tx = await waitForTx(blockfrostClient, txHash);
+  const tx = await waitForTx(txHash);
 
   expect(tx).toStrictEqual({
     hash: txHash,
