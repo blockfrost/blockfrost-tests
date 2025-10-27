@@ -3,7 +3,6 @@ import { BlockFrostAPI, BlockfrostServerError } from '@blockfrost/blockfrost-js'
 const projectId = process.env.PROJECT_ID;
 const serverUrl = process.env.SERVER_URL as string;
 const fallbackServerUrl = process.env.FALLBACK_SERVER_URL;
-const isLocal = serverUrl.includes('localhost');
 
 if (!projectId) {
   throw new Error('PROJECT_ID env is required');
@@ -18,16 +17,13 @@ export const getPrimaryInstance = (): BlockFrostAPI => {
   return new BlockFrostAPI({
     projectId,
     customBackend: serverUrl,
-    ...(isLocal && { gotOptions: { rejectUnauthorized: false } }),
+    gotOptions: { rejectUnauthorized: false },
   });
 };
 
 // fallback to production servers
 export const getFallbackInstance = (): BlockFrostAPI => {
-  return new BlockFrostAPI({
-    projectId,
-    ...(isLocal && { gotOptions: { rejectUnauthorized: false } }),
-  });
+  return new BlockFrostAPI({ projectId });
 };
 
 // try custom secondary fallback instance
