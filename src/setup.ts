@@ -30,6 +30,8 @@ import {
       block,
       epoch,
     };
+
+    console.log('Global test data setup completed.', globalThis.latest);
   } catch (error) {
     console.error('Failed to setup global test data:', error);
   }
