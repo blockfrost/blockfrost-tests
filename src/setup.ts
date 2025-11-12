@@ -1,4 +1,4 @@
-import { expect } from 'vitest';
+import { expect, beforeAll } from 'vitest';
 import * as jestExtendedMatchers from 'jest-extended';
 import { getEpochsLatest, getLatestBlock } from './blockfrost-client.js';
 import {
