@@ -1,4 +1,4 @@
-import { expect, beforeAll } from 'vitest';
+import { expect } from 'vitest';
 import * as jestExtendedMatchers from 'jest-extended';
 import { getEpochsLatest, getLatestBlock } from './blockfrost-client.js';
 import {
@@ -22,29 +22,19 @@ import {
   toBeStakeAddress,
 } from './matchers.js';
 
-let setupPromise: Promise<void> | null = null;
-
-export async function ensureTestData() {
-  if (globalThis.latest) {
-    return globalThis.latest;
-  }
-
-  if (!setupPromise) {
-    setupPromise = (async () => {
-      const [epoch, block] = await Promise.all([getEpochsLatest(), getLatestBlock()]);
-
-      globalThis.latest = { block, epoch };
-      console.log('Global test data setup completed.', globalThis.latest);
-    })();
-  }
-
-  await setupPromise;
-
-  return globalThis.latest;
-}
-
 beforeAll(async () => {
-  await ensureTestData();
+  try {
+    const [epoch, block] = await Promise.all([getEpochsLatest(), getLatestBlock()]);
+
+    globalThis.latest = {
+      block,
+      epoch,
+    };
+    console.log('Global test data setup completed.', globalThis.latest);
+  } catch (error) {
+    console.error('Failed to setup global test data:', error);
+    throw error;
+  }
 });
 
 expect.extend({
