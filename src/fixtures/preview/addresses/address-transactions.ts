@@ -272,4 +272,66 @@ export default [
       },
     ],
   },
+  {
+    testName: 'addresses/:address/transactions script payment_cred (cip19 test vector)',
+    endpoints: [
+      'addresses/script1cda3khwqv60360rp5m7akt50m6ttapacs8rqhn5w342z7r35m37/transactions?page=1&count=2',
+      // same hash encoded as vkh address just to be sure both return the same
+      'addresses/addr_vkh1cda3khwqv60360rp5m7akt50m6ttapacs8rqhn5w342z7lydx4l/transactions?page=1&count=2',
+    ],
+    response: [
+      {
+        tx_hash: 'a6cc6dd120a913f724b6b6fe8ca78d66dcea8e235fdd05628e166e2705dd30f1',
+        tx_index: 11,
+        block_height: 502518,
+        block_time: 1677752670,
+      },
+      {
+        tx_hash: '430a653ca8119ea24b73efdb7ea94d1e5b21f74838362af21240ded86507b464',
+        tx_index: 6,
+        block_height: 502523,
+        block_time: 1677752867,
+      },
+    ],
+  },
+  {
+    testName:
+      'addresses/:address/transactions script payment_cred (native script normal and self tx)',
+    endpoints: [
+      'addresses/script1cxh3ctuplv6tmaehtdl9vwcwrpsqkwxcget3926j3cq0w5cw5d6/transactions',
+      'addresses/addr_vkh1cxh3ctuplv6tmaehtdl9vwcwrpsqkwxcget3926j3cq0wgdhffm/transactions',
+    ],
+    response: [
+      {
+        tx_hash: 'd954ff6d9e97ad825787838239327adc5ce8d9bfbd2b53d5ec1200374a24da90',
+        tx_index: 0,
+        block_height: 3752962,
+        block_time: 1762419551,
+      },
+      {
+        tx_hash: 'dfe42068f426d87a8bde763c7f391ec020ff4da6a34f1ae0e6310b20fbf3f6f5',
+        tx_index: 0,
+        block_height: 3752965,
+        block_time: 1762419618,
+      },
+      {
+        tx_hash: 'abb4a79485645dfdceb76ead5997bcd27f39055cdcd5e20c682eaae4960e1509',
+        tx_index: 0,
+        block_height: 3752966,
+        block_time: 1762419706,
+      },
+      {
+        tx_hash: '1a067c96f12c8b525aa292300a4e7cfacb78fd25f15b73f2de2d90b9a97463f4',
+        tx_index: 1,
+        block_height: 3752966,
+        block_time: 1762419706,
+      },
+      {
+        tx_hash: '3e204f5d7f784b81e65ad67a9ca448cc6302a21e85306cae78370ff3a04acf36',
+        tx_index: 0,
+        block_height: 3752968,
+        block_time: 1762419732,
+      },
+    ],
+  },
 ];
