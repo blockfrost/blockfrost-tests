@@ -2111,6 +2111,45 @@ export default [
       },
     ],
   },
-
+  {
+    testName:
+      'addresses/:address/transactions script payment_cred (native script normal and self tx)',
+    endpoints: [
+      'addresses/script1lerc55p33x8f5xwk3xjc0erkqewnesnskxkw3nj93ekdcu230rm/transactions',
+      'addresses/addr_vkh1lerc55p33x8f5xwk3xjc0erkqewnesnskxkw3nj93ekdcqlgj86/transactions',
+    ],
+    response: [
+      {
+        tx_hash: '868827c39d485831ed5e4e34a148657289b655c2109d0db582bb0b8f82e3e61c',
+        tx_index: 0,
+        block_height: 12649003,
+        block_time: 1763117431,
+      },
+      {
+        tx_hash: '19170c31b1e9b30b7f2df65c9dfa00a9cd64548babee0f5785d75f96feaa64da',
+        tx_index: 4,
+        block_height: 12649017,
+        block_time: 1763117610,
+      },
+      {
+        tx_hash: 'ae27fb0e827445fd337fa76522b3be303c110417f4f1e7ab5c1b032ec04a1fa4',
+        tx_index: 8,
+        block_height: 12649018,
+        block_time: 1763117660,
+      },
+      {
+        tx_hash: '5139849cb2b4e0207c9942dbe45e1e91e2325a82f32e9f06a14b2041e27797bd',
+        tx_index: 5,
+        block_height: 12649019,
+        block_time: 1763117696,
+      },
+      {
+        tx_hash: '676ce65f68ba0b01d693668aca048f66cf2c8eb3427b4c8177c7a8a6a609af03',
+        tx_index: 0,
+        block_height: 12649022,
+        block_time: 1763117769,
+      },
+    ],
+  },
   ...paginationFixtures,
 ];
