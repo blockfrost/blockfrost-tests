@@ -70,7 +70,7 @@ export default [
       return_address: 'stake1uyguuqwdpexmhgjd07vax5t2ay3f7qvea49ex907g6fmvjclq6l03',
       ratified_epoch: 525,
       enacted_epoch: 526,
-      dropped_epoch: 526,
+      dropped_epoch: null,
       expired_epoch: null,
       expiration: 526,
     },

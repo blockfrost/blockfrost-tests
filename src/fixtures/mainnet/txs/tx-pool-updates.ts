@@ -66,7 +66,6 @@ export default [
   },
   {
     id: 'txs-tx-pool-updates-shelley-with-pool-update-which-does-not-have-onchain-reward-address_2c63ff74b466',
-
     testName:
       'txs/:tx/pool_updates - shelley with pool update which does not have onchain reward address',
     endpoints: [
@@ -85,10 +84,9 @@ export default [
         metadata: {
           url: 'https://planetstake.s3.eu-west-2.amazonaws.com/STAKE1-004.json',
           hash: 'fa95abfe646b85e194e86a202d099a1c6bb93f8ac6c30e70c59c03c055d4433e',
-          ticker: null,
-          name: null,
-          description: null,
-          homepage: null,
+          homepage: 'https://planetstake.com',
+          name: '🌍 PLANETSTAKE 1',
+          ticker: 'STAKE',
         },
         relays: [
           { ipv4: null, ipv6: null, dns: 'relays.planetstake.com', dns_srv: null, port: 3001 },
