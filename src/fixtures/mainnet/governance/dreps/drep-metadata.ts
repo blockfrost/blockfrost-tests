@@ -123,9 +123,13 @@ export default [
           doNotList: false,
           givenName: 'Chris-O',
           objectives:
-            '✅1. Adoption /User acquisition/Blockchain Interoperability ✅2. Ecosystem growth hacking✅3. Access to capital for startups✅4. Responsible Treasury Management for long term protocol viability/health✅5. Increase blockchain performance, maintain/improve rate of innovation, to accommodate future use on a global scale.✅6. Create an atmosphere of transparency & accountability community wide.Here my detailed DRep position paper:https://x.com/TheOCcryptobro/status/1832252928998175196',
+            '✅1. Adoption /User acquisition/Blockchain Interoperability \n✅2. Ecosystem growth hacking\n✅3. Access to capital for startups\n✅4. Responsible Treasury Management for long term protocol viability/health\n✅5. Increase blockchain performance, maintain/improve rate of innovation, to accommodate future use on a global scale.\n✅6. Create an atmosphere of transparency & accountability community wide.\n\nHere my detailed DRep position paper:\n\nhttps://x.com/TheOCcryptobro/status/1832252928998175196\n',
           references: [
-            { uri: 'https://x.com/TheOCcryptobro', '@type': 'Link', label: 'X' },
+            {
+              uri: 'https://x.com/TheOCcryptobro',
+              '@type': 'Link',
+              label: 'X',
+            },
             {
               uri: 'https://t.me/ChrisO_DRep_Discuss',
               '@type': 'Link',

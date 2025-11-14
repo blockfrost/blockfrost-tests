@@ -86,6 +86,7 @@ export default [
           hash: 'fa95abfe646b85e194e86a202d099a1c6bb93f8ac6c30e70c59c03c055d4433e',
           homepage: 'https://planetstake.com',
           name: '🌍 PLANETSTAKE 1',
+          description: '⭐⭐⭐⭐⭐ Please Delegate to PlanetStake 3',
           ticker: 'STAKE',
         },
         relays: [
