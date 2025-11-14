@@ -142,10 +142,9 @@ export default [
       pool_id: 'pool10ehxcuxmryvg5ae6g8krdvhaj3m07a6rzdtv8a0grtxpv7fnrpu',
     },
   },
-  // registered drep
   {
-    id: 'accounts-stake-address-registered-drep_215421638ada',
-    testName: 'accounts/:stake_address registered drep',
+    id: 'accounts-stake-address-retired-drep_215421638ada',
+    testName: 'accounts/:stake_address retired drep',
     endpoints: ['accounts/stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4'],
     response: {
       stake_address: 'stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4',
@@ -156,14 +155,13 @@ export default [
       withdrawals_sum: '0',
       reserves_sum: '0',
       treasury_sum: '0',
-      drep_id: 'drep1yf4r255tphufjz0g4vfh29aq4mz4udf4rsp5jy59yvd8s7qmejhpj',
+      drep_id: null,
       withdrawable_amount: expect.toBeAdaQuantity(),
       pool_id: null,
     },
   },
   {
     id: 'accounts-stake-address-huge-account_c72e1fc5be25',
-    // This was a bug affecting lace, we've returned drep_id: null for all accounts
     testName: 'accounts/:stake_address huge account',
     endpoints: ['accounts/stake1uygt23qnfwel5y6vl65mlzwzjf6wvjflnp3k23fj6l4qwngdjy4yn'],
     response: {

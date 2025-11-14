@@ -12,24 +12,9 @@ if (!serverUrl) {
   throw new Error('SERVER_URL env is required');
 }
 
-// try local instance first
-export const getPrimaryInstance = (): BlockFrostAPI => {
-  return new BlockFrostAPI({
-    projectId,
-    customBackend: serverUrl,
-    gotOptions: { https: { rejectUnauthorized: false } },
-  });
-};
-
-// fallback to production servers
-export const getFallbackInstance = (): BlockFrostAPI => {
-  return new BlockFrostAPI({ projectId });
-};
-
-// try custom secondary fallback instance
-export const getSecondaryFallbackInstance = (): BlockFrostAPI | null => {
+export const getPrimaryInstance = (): BlockFrostAPI | null => {
   if (!fallbackServerUrl) {
-    console.log('No custom fallback server URL provided');
+    console.log('No FALLBACK_SERVER_URL configured, skipping primary');
     return null;
   }
 
@@ -40,56 +25,63 @@ export const getSecondaryFallbackInstance = (): BlockFrostAPI | null => {
   });
 };
 
+export const getSecondaryInstance = (): BlockFrostAPI => {
+  return new BlockFrostAPI({
+    projectId,
+    customBackend: serverUrl,
+    gotOptions: { https: { rejectUnauthorized: false } },
+  });
+};
+
+export const getTertiaryFallbackInstance = (): BlockFrostAPI => {
+  return new BlockFrostAPI({ projectId });
+};
+
 async function callWithFallback<T>(
   apiCall: (instance: BlockFrostAPI) => Promise<T>,
   name: string,
 ): Promise<T> {
-  console.log(`Attempting to fetch ${name} from PRIMARY (${serverUrl})`);
+  // PRIMARY (FALLBACK_SERVER_URL) first
   const primary = getPrimaryInstance();
 
-  try {
-    const result = await apiCall(primary);
+  if (primary) {
+    console.log(`Attempting to fetch ${name} from PRIMARY (${fallbackServerUrl})`);
+    try {
+      const result = await apiCall(primary);
 
-    console.log(`✓ SUCCESS fetching ${name} from PRIMARY`);
+      console.log(`✓ SUCCESS fetching ${name} from PRIMARY`);
+      return result;
+    } catch (error) {
+      console.error(`✗ FAILED fetching ${name} from PRIMARY:`, error);
+    }
+  }
+
+  // SECONDARY (SERVER_URL)
+  console.log(`Attempting to fetch ${name} from SECONDARY (${serverUrl})`);
+  const secondary = getSecondaryInstance();
+
+  try {
+    const result = await apiCall(secondary);
+
+    console.log(`✓ SUCCESS fetching ${name} from SECONDARY`);
     return result;
   } catch (error) {
-    console.error(`✗ FAILED fetching ${name} from PRIMARY:`, error);
+    console.error(`✗ FAILED fetching ${name} from SECONDARY:`, error);
+  }
 
-    console.log(`Attempting to fetch ${name} from FALLBACK (production)`);
-    const fallback = getFallbackInstance();
+  // TERTIARY (production)
+  console.log(`Attempting to fetch ${name} from TERTIARY (production)`);
+  const tertiary = getTertiaryFallbackInstance();
 
-    try {
-      const result = await apiCall(fallback);
+  try {
+    const result = await apiCall(tertiary);
 
-      console.log(`✓ SUCCESS fetching ${name} from FALLBACK`);
-      return result;
-    } catch (fallbackError) {
-      console.error(`✗ FAILED fetching ${name} from FALLBACK:`, fallbackError);
-
-      const secondaryFallback = getSecondaryFallbackInstance();
-
-      if (secondaryFallback) {
-        console.log(`Attempting to fetch ${name} from SECONDARY FALLBACK (${fallbackServerUrl})`);
-        try {
-          const result = await apiCall(secondaryFallback);
-
-          console.log(`✓ SUCCESS fetching ${name} from SECONDARY FALLBACK`);
-          return result;
-        } catch (secondaryFallbackError) {
-          console.error(
-            `✗ FAILED fetching ${name} from SECONDARY FALLBACK:`,
-            secondaryFallbackError,
-          );
-          console.error(`✗✗✗ ALL FALLBACKS EXHAUSTED for ${name}`);
-          throw secondaryFallbackError;
-        }
-      } else {
-        console.log(`No SECONDARY FALLBACK configured (FALLBACK_SERVER_URL not set)`);
-        console.error(` ✗✗ ALL FALLBACKS EXHAUSTED for ${name}`);
-      }
-
-      throw fallbackError;
-    }
+    console.log(`✓ SUCCESS fetching ${name} from TERTIARY`);
+    return result;
+  } catch (tertiaryError) {
+    console.error(`✗ FAILED fetching ${name} from TERTIARY:`, tertiaryError);
+    console.error(`✗✗✗ ALL FALLBACKS EXHAUSTED for ${name}`);
+    throw tertiaryError;
   }
 }
 
