@@ -61,10 +61,24 @@ export const isUrlMatch = (urlParameter: string, _pattern: string) => {
 
     if (adjustedPattern === '/blocks/:hash_or_number') {
       if (url === '/blocks/latest') return false;
+      if (url.startsWith('/blocks/slot')) return false;
+      if (url.startsWith('/blocks/epoch')) return false;
     }
 
     if (adjustedPattern === '/epochs/:number') {
       if (url === '/epochs/latest') return false;
+    }
+
+    if (adjustedPattern === '/mempool/:hash') {
+      if (url.startsWith('/mempool/addresses')) return false;
+    }
+
+    if (adjustedPattern === '/scripts/:script_hash') {
+      if (url.startsWith('/scripts/datum')) return false;
+    }
+
+    if (adjustedPattern === '/nutlink/:address') {
+      if (url.startsWith('/nutlink/tickers')) return false;
     }
 
     const urlMatch = match(adjustedPattern, url);

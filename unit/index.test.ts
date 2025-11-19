@@ -60,4 +60,102 @@ describe('isUrlMatch', () => {
     expect(isUrlMatch('/pools/retired', '/pools/retired')).toBe(true);
     expect(isUrlMatch('/pools/retiring', '/pools/retiring')).toBe(true);
   });
+
+  it('matches multiple path parameters', () => {
+    expect(isUrlMatch('/blocks/123/txs/456', '/blocks/{hash_or_number}/txs/{index}')).toBe(true);
+    expect(isUrlMatch('/epochs/5/blocks/abc', '/epochs/{number}/blocks/{hash}')).toBe(true);
+    expect(
+      isUrlMatch(
+        'accounts/stake1/transactions/tx1',
+        '/accounts/{stake_address}/transactions/{hash}',
+      ),
+    ).toBe(true);
+  });
+
+  it('handles trailing slashes consistently', () => {
+    expect(isUrlMatch('/accounts/stake_address/', '/accounts/{stake_address}')).toBe(true);
+    expect(isUrlMatch('/accounts/stake_address', '/accounts/{stake_address}/')).toBe(true);
+    expect(isUrlMatch('/accounts/stake_address/', '/accounts/{stake_address}/')).toBe(true);
+  });
+
+  it('matches paths with special characters in parameter values', () => {
+    expect(isUrlMatch('/assets/asset.id-123', '/assets/{asset}')).toBe(true);
+    expect(isUrlMatch('/accounts/stake1_test+special', '/accounts/{stake_address}')).toBe(true);
+    expect(isUrlMatch('/txs/hash%20encoded', '/txs/{hash}')).toBe(true);
+  });
+
+  it('handles empty path segments', () => {
+    expect(isUrlMatch('/accounts//', '/accounts/{stake_address}')).toBe(false);
+    expect(isUrlMatch('//accounts/stake', '/accounts/{stake_address}')).toBe(false);
+  });
+
+  it('matches paths with numeric parameter values', () => {
+    expect(isUrlMatch('/epochs/123', '/epochs/{number}')).toBe(true);
+    expect(isUrlMatch('/blocks/9999999', '/blocks/{hash_or_number}')).toBe(true);
+    expect(isUrlMatch('/transactions/0', '/transactions/{index}')).toBe(true);
+  });
+
+  it('returns false when segment count differs', () => {
+    expect(isUrlMatch('/accounts', '/accounts/{stake_address}/transactions')).toBe(false);
+    expect(isUrlMatch('/accounts/stake/transactions/hash', '/accounts/{stake_address}')).toBe(
+      false,
+    );
+
+    expect(isUrlMatch('/a/b/c', '/a/{param}')).toBe(false);
+  });
+
+  it('matches exact paths without parameters', () => {
+    expect(isUrlMatch('/metrics', '/metrics')).toBe(true);
+    expect(isUrlMatch('/health', '/health')).toBe(true);
+    expect(isUrlMatch('epochs', 'epochs')).toBe(true);
+  });
+
+  it('handles query parameters with special characters', () => {
+    expect(isUrlMatch('/accounts/stake?order=asc&count=10', '/accounts/{stake_address}')).toBe(
+      true,
+    );
+    expect(isUrlMatch('/assets/asset?filter=policy_id:abc123', '/assets/{asset}')).toBe(true);
+  });
+
+  it('does not match when literal segments differ', () => {
+    expect(isUrlMatch('/accounts/stake', '/account/{stake_address}')).toBe(false);
+    expect(isUrlMatch('/blocks/123', '/block/{hash_or_number}')).toBe(false);
+  });
+
+  it('handles complex nested paths', () => {
+    expect(isUrlMatch('/epochs/5/blocks/abc/txs', '/epochs/{number}/blocks/{hash}/txs')).toBe(true);
+    expect(
+      isUrlMatch('/pools/pool1/delegators/stake1', '/pools/{pool_id}/delegators/{stake_address}'),
+    ).toBe(true);
+  });
+
+  it('matches paths with hash fragments (should ignore them)', () => {
+    expect(isUrlMatch('/accounts/stake#fragment', '/accounts/{stake_address}')).toBe(true);
+    expect(isUrlMatch('/blocks/123#section', '/blocks/{hash_or_number}')).toBe(true);
+  });
+
+  it('returns false for empty strings', () => {
+    expect(isUrlMatch('', '/accounts/{stake_address}')).toBe(false);
+    expect(isUrlMatch('/accounts/stake', '')).toBe(false);
+    expect(isUrlMatch('', '')).toBe(true);
+  });
+
+  it('handles URL-encoded parameter values', () => {
+    expect(isUrlMatch('/assets/asset%2Fid', '/assets/{asset}')).toBe(true);
+    expect(isUrlMatch('/accounts/stake%20address', '/accounts/{stake_address}')).toBe(true);
+  });
+
+  it('special case combinations do not interfere with each other', () => {
+    expect(isUrlMatch('/pools/retired', '/pools/{pool_id}')).toBe(false);
+    expect(isUrlMatch('/blocks/latest', '/blocks/{hash_or_number}')).toBe(false);
+    expect(isUrlMatch('/epochs/latest', '/epochs/{number}')).toBe(false);
+    expect(isUrlMatch('/pools/pool123', '/pools/{pool_id}')).toBe(true);
+    expect(isUrlMatch('/blocks/abc123', '/blocks/{hash_or_number}')).toBe(true);
+    expect(isUrlMatch('/epochs/5', '/epochs/{number}')).toBe(true);
+  });
+
+  it('matches when both path and pattern have no leading slash', () => {
+    expect(isUrlMatch('accounts/stake', 'accounts/{stake_address}')).toBe(true);
+    expect(isUrlMatch('blocks/123', 'blocks/{hash_or_number}')).toBe(true);
+  });
 });
