@@ -12,20 +12,7 @@ if (!serverUrl) {
   throw new Error('SERVER_URL env is required');
 }
 
-export const getPrimaryInstance = (): BlockFrostAPI | null => {
-  if (!fallbackServerUrl) {
-    console.log('No FALLBACK_SERVER_URL configured, skipping primary');
-    return null;
-  }
-
-  return new BlockFrostAPI({
-    projectId,
-    customBackend: fallbackServerUrl,
-    gotOptions: { https: { rejectUnauthorized: false } },
-  });
-};
-
-export const getSecondaryInstance = (): BlockFrostAPI => {
+export const getPrimaryInstance = (): BlockFrostAPI => {
   return new BlockFrostAPI({
     projectId,
     customBackend: serverUrl,
@@ -33,7 +20,16 @@ export const getSecondaryInstance = (): BlockFrostAPI => {
   });
 };
 
-export const getTertiaryFallbackInstance = (): BlockFrostAPI => {
+export const getSecondaryInstance = (): BlockFrostAPI => {
+  if (fallbackServerUrl) {
+    return new BlockFrostAPI({
+      projectId,
+      customBackend: fallbackServerUrl,
+      gotOptions: { https: { rejectUnauthorized: false } },
+    });
+  }
+
+  // Fallback to standard public Blockfrost API
   return new BlockFrostAPI({ projectId });
 };
 
@@ -41,47 +37,34 @@ async function callWithFallback<T>(
   apiCall: (instance: BlockFrostAPI) => Promise<T>,
   name: string,
 ): Promise<T> {
-  // PRIMARY (FALLBACK_SERVER_URL) first
   const primary = getPrimaryInstance();
+  const primaryUrl = serverUrl;
 
-  if (primary) {
-    console.log(`Attempting to fetch ${name} from PRIMARY (${fallbackServerUrl})`);
-    try {
-      const result = await apiCall(primary);
+  console.log(`[Attempt 1] Fetching ${name} from PRIMARY (${primaryUrl})`);
 
-      console.log(`✓ SUCCESS fetching ${name} from PRIMARY`);
-      return result;
-    } catch (error) {
-      console.error(`✗ FAILED fetching ${name} from PRIMARY:`, error);
-    }
+  try {
+    const result = await apiCall(primary);
+
+    console.log(`✓ SUCCESS: Fetched ${name} from PRIMARY`);
+    return result;
+  } catch (primaryError) {
+    console.warn(`! FAILURE: Could not fetch ${name} from PRIMARY.`, primaryError);
   }
 
-  // SECONDARY (SERVER_URL)
-  console.log(`Attempting to fetch ${name} from SECONDARY (${serverUrl})`);
   const secondary = getSecondaryInstance();
+  const secondaryUrl = fallbackServerUrl || 'Public Blockfrost API';
+
+  console.log(`[Attempt 2] Fetching ${name} from SECONDARY (${secondaryUrl})`);
 
   try {
     const result = await apiCall(secondary);
 
-    console.log(`✓ SUCCESS fetching ${name} from SECONDARY`);
+    console.log(`SUCCESS: Fetched ${name} from SECONDARY`);
     return result;
-  } catch (error) {
-    console.error(`✗ FAILED fetching ${name} from SECONDARY:`, error);
-  }
-
-  // TERTIARY (production)
-  console.log(`Attempting to fetch ${name} from TERTIARY (production)`);
-  const tertiary = getTertiaryFallbackInstance();
-
-  try {
-    const result = await apiCall(tertiary);
-
-    console.log(`✓ SUCCESS fetching ${name} from TERTIARY`);
-    return result;
-  } catch (tertiaryError) {
-    console.error(`✗ FAILED fetching ${name} from TERTIARY:`, tertiaryError);
-    console.error(`✗✗✗ ALL FALLBACKS EXHAUSTED for ${name}`);
-    throw tertiaryError;
+  } catch (secondaryError) {
+    console.error(`FAILED: Could not fetch ${name} from SECONDARY.`, secondaryError);
+    // Both attempts failed
+    throw secondaryError;
   }
 }
 
@@ -103,11 +86,9 @@ export const getAddressUtxos = (address: string) =>
       return await instance.addressesUtxosAll(address);
     } catch (error) {
       if (error instanceof BlockfrostServerError && error.status_code === 404) {
-        // Address derived from the seed was not used yet
-        // In this case Blockfrost API will return 404
+        // Address unused, return empty array
         return [];
-      } else {
-        throw error;
       }
+      throw error;
     }
   }, `address UTXOs for ${address}`);
