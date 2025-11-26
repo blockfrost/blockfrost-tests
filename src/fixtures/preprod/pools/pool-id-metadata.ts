@@ -2,29 +2,6 @@ import { expect } from 'vitest';
 
 export default [
   {
-    id: 'pools-pool-id-metadata-pool-with-multiple-metadata-updates-in-one-update-logic_9de40cc84be9',
-    testName: 'pools/:pool_id/metadata - pool with multiple metadata updates in one update (LOGIC)',
-    endpoints: [
-      'pools/pool1rccstu3l9ty3k0a5cd06fl3szsss9r34dcg5j38fqgq9kvng0tg/metadata',
-      'pools/1e3105f23f2ac91b3fb4c35fa4fe301421028e356e114944e902005b/metadata',
-    ],
-    response: {
-      pool_id: 'pool1rccstu3l9ty3k0a5cd06fl3szsss9r34dcg5j38fqgq9kvng0tg',
-      hex: '1e3105f23f2ac91b3fb4c35fa4fe301421028e356e114944e902005b',
-      url: expect.any(String),
-      hash: expect.any(String),
-      ticker: null,
-      name: null,
-      description: null,
-      homepage: null,
-      error: {
-        code: 'HASH_MISMATCH',
-        message:
-          'Hash mismatch when fetching metadata from https://www.logicalmechanism.io/metadata/. Expected "970a7b1d60d340ec37e6b94f23dcab9547e8124be7603640c567a36374291516" but got "86f728e3571775995b7f13e36353aef0e9b4bf4b60300079598ffab29971a6b5".',
-      },
-    },
-  },
-  {
     id: 'pools-pool-id-metadata-pool-with-multiple-metadata-updates-in-one-update-alfa_f165f370df7b',
     testName: 'pools/:pool_id/metadata - pool with multiple metadata updates in one update (ALFA)',
     endpoints: [

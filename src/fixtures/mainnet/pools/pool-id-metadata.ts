@@ -21,7 +21,8 @@ export default [
   },
   {
     id: 'pools-pool-id-metadata-pool-with-multiple-metadata-updates-in-one-update_edbde8d94192',
-    testName: 'pools/:pool_id/metadata - pool with multiple metadata updates in one update',
+    testName:
+      'pools/:pool_id/metadata - HTTP_RESPONSE_ERROR - only basic pool metadata info returned',
     endpoints: [
       'pools/pool1yhd6a8vvp0r0ads36j4zjwx7juztf6cgpa2fqm9dm0st790ptf2/metadata',
       'pools/25dbae9d8c0bc6feb611d4aa2938de9704b4eb080f54906caddbe0bf/metadata',

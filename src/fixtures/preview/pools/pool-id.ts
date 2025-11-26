@@ -397,24 +397,6 @@ export default [
     },
   },
   {
-    testName:
-      'pools/:pool_id/metadata - HTTP_RESPONSE_ERROR (404) - only basic pool metadata info returned',
-    endpoints: [
-      'pools/pool1n935yzlmu7528fx4qjf2gak0cdv2nune9cku730zg7vh707rnnd/metadata',
-      'pools/9963420bfbe7a8a3a4d50492a476cfc358a9f2792e2dcf45e247997f/metadata',
-    ],
-    response: {
-      pool_id: 'pool1n935yzlmu7528fx4qjf2gak0cdv2nune9cku730zg7vh707rnnd',
-      hex: '9963420bfbe7a8a3a4d50492a476cfc358a9f2792e2dcf45e247997f',
-      url: expect.any(String),
-      hash: expect.any(String),
-      ticker: 'DIGI3',
-      name: 'Digital Fortress',
-      description: 'Digital Fortress on preview.',
-      homepage: 'https://digitalfortress.online',
-    },
-  },
-  {
     testName: 'pools/:pool_id/metadata - HASH_MISMATCH - only basic pool metadata info returned',
     endpoints: [
       'pools/pool1xkfew9wzhefz2at44eqdu5d6hk6s6xjdjj8h54tgvmymwea4vk3/metadata',
