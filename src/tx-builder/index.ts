@@ -108,7 +108,7 @@ export const waitForTx = async (txHash: string) => {
     } catch (error) {
       if (error instanceof BlockfrostServerError && error.status_code === 404) {
         console.log(
-          `... attempt ${index + 1}/${maxRetries}: Pending (404) on ${isFallback ? 'SECONDARY' : 'PRIMARY'}...`,
+          `Waiting for the tx. Attempt ${index + 1}/${maxRetries}: Pending (404) on ${isFallback ? 'SECONDARY' : 'PRIMARY'}...`,
         );
 
         if (index === maxRetries - 1) {
