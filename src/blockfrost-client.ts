@@ -74,9 +74,6 @@ export const getEpochsLatestParameters = () =>
 export const getEpochsLatest = () =>
   callWithFallback(instance => instance.epochsLatest(), 'epochs latest');
 
-export const getTxs = (txHash: string) =>
-  callWithFallback(instance => instance.txs(txHash), `txs for ${txHash}`);
-
 export const getLatestBlock = () =>
   callWithFallback(instance => instance.blocksLatest(), 'latest block');
 

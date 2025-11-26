@@ -7,7 +7,8 @@ import {
   getAddressUtxos,
   getEpochsLatestParameters,
   getLatestBlock,
-  getTxs,
+  getPrimaryInstance,
+  getSecondaryInstance,
 } from '../blockfrost-client.js';
 import { BlockfrostServerError } from '@blockfrost/blockfrost-js';
 
@@ -86,30 +87,51 @@ export const buildTx = async (_network: Network) => {
 };
 
 export const waitForTx = async (txHash: string) => {
-  const maxRetries = 5;
+  const maxRetries = 60;
+  const intervalMs = 2_000;
+
+  let client = getPrimaryInstance();
+  let isFallback = false;
+
+  console.log(`Waiting for tx ${txHash}... (checking every ${intervalMs}ms, max 60s)`);
 
   for (let index = 0; index < maxRetries; index++) {
-    // wait for 20 seconds between attempts
-    await sleep(20_000);
+    await sleep(intervalMs);
 
     try {
-      const tx = await getTxs(txHash);
+      const tx = await client.txs(txHash);
 
+      console.log(
+        `Tx confirmed in block: ${tx.block} (via ${isFallback ? 'SECONDARY' : 'PRIMARY'})`,
+      );
       return tx;
     } catch (error) {
       if (error instanceof BlockfrostServerError && error.status_code === 404) {
-        // last attempt
+        console.log(
+          `... attempt ${index + 1}/${maxRetries}: Pending (404) on ${isFallback ? 'SECONDARY' : 'PRIMARY'}...`,
+        );
+
         if (index === maxRetries - 1) {
-          console.error(`Tx not found on blockchain after ${index + 1} attempts.`, error);
-          throw new Error('Tx not found on blockchain after maximum retries.');
+          console.error('Timeout: Tx not found within 60 seconds.');
+          throw new Error('Tx not found on blockchain within the timeout period (60s).');
         }
+
+        continue;
+      }
+
+      console.error(`Error retrieving tx from ${isFallback ? 'SECONDARY' : 'PRIMARY'}:`, error);
+
+      if (!isFallback) {
+        console.warn('Primary instance error. Switching to SECONDARY instance immediately.');
+        client = getSecondaryInstance();
+        isFallback = true;
+        continue;
       } else {
-        console.error(`Error retrieving tx from blockchain.`, error);
-        throw error;
+        console.warn('Secondary instance error. Retrying...');
+        continue;
       }
     }
   }
 
-  // If the transaction is not found after all retries, throw an error
-  throw new Error('Tx not found on blockchain after maximum retries.');
+  throw new Error('Tx not found on blockchain within the timeout period.');
 };
