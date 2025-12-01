@@ -19,13 +19,13 @@
   },
   "dependencies": {
     "@blockfrost/blockfrost-js": "6.0.0",
-    "@blockfrost/openapi": "0.1.82",
+    "@blockfrost/openapi": "0.1.84",
     "@emurgo/cardano-serialization-lib-nodejs": "12.1.1",
     "bip39": "^3.1.0",
     "date-fns": "^4.1.0",
     "dotenv": "^17.2.3",
     "jest-extended": "^4.0.2",
-    "node-match-path": "^0.6.3",
+    "radix3": "^1.1.2",
     "recast": "^0.23.11"
   },
   "devDependencies": {
