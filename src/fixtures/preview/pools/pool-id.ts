@@ -377,12 +377,12 @@ export default [
     testName:
       'pools/:pool_id/metadata - HTTP_RESPONSE_ERROR - only basic pool metadata info returned',
     endpoints: [
-      'pools/pool1uuknk4htd29v9y5ym0r33d60ftdhktqnwrygtq4km9hqu8p2dph/metadata',
-      'pools/e72d3b56eb6a8ac29284dbc718b74f4adb7b2c1370c88582b6d96e0e/metadata',
+      'pools/pool1rlykq5xksef5vxd3d06lkj5jzx72sefa443m8e7udyesyauheuv/metadata',
+      'pools/1fc96050d686534619b16bf5fb4a9211bca8653dad63b3e7dc693302/metadata',
     ],
     response: {
-      pool_id: 'pool1uuknk4htd29v9y5ym0r33d60ftdhktqnwrygtq4km9hqu8p2dph',
-      hex: 'e72d3b56eb6a8ac29284dbc718b74f4adb7b2c1370c88582b6d96e0e',
+      pool_id: 'pool1rlykq5xksef5vxd3d06lkj5jzx72sefa443m8e7udyesyauheuv',
+      hex: '1fc96050d686534619b16bf5fb4a9211bca8653dad63b3e7dc693302',
       url: expect.any(String),
       hash: expect.any(String),
       ticker: null,
@@ -392,19 +392,19 @@ export default [
       error: {
         code: 'HTTP_RESPONSE_ERROR',
         message:
-          'Error Offchain Pool: HTTP Response error from https://example.com: expected JSON, but got : "text/html"',
+          'Error Offchain Pool: HTTP Response error from https://blockfrost.io/fakemetadata resulted in HTTP status code : 404 "Not Found"',
       },
     },
   },
   {
     testName: 'pools/:pool_id/metadata - HASH_MISMATCH - only basic pool metadata info returned',
     endpoints: [
-      'pools/pool1xkfew9wzhefz2at44eqdu5d6hk6s6xjdjj8h54tgvmymwea4vk3/metadata',
-      'pools/35939715c2be52257575ae40de51babdb50d1a4d948f7a556866c9b7/metadata',
+      'pools/844042a0c14b96bf2c65fccaaaaa9e11bbf34f0b9bbf56c89ae3c8dd/metadata',
+      'pools/pool1s3qy9gxpfwtt7tr9ln924257zxalxnctnwl4djy6u0yd6z33vnj/metadata'
     ],
     response: {
-      pool_id: 'pool1xkfew9wzhefz2at44eqdu5d6hk6s6xjdjj8h54tgvmymwea4vk3',
-      hex: '35939715c2be52257575ae40de51babdb50d1a4d948f7a556866c9b7',
+      pool_id: 'pool1s3qy9gxpfwtt7tr9ln924257zxalxnctnwl4djy6u0yd6z33vnj',
+      hex: '844042a0c14b96bf2c65fccaaaaa9e11bbf34f0b9bbf56c89ae3c8dd',
       url: expect.any(String),
       hash: expect.any(String),
       ticker: null,
@@ -414,7 +414,7 @@ export default [
       error: {
         code: 'HASH_MISMATCH',
         message:
-          'Hash mismatch when fetching metadata from https://tinyurl.com/39a7pnv5. Expected "643a016d84fb171855f8b6d9c9a5efa230fb4665de3ee0ee0a1ed0f486d26be2" but got "b123ea83d1f87afcb95a76661be508b37a0957c7fa95baa883a80d1203ffcd94".',
+          'Hash mismatch when fetching metadata from https://tinyurl.com/39a7pnv5. Expected "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef" but got "b123ea83d1f87afcb95a76661be508b37a0957c7fa95baa883a80d1203ffcd94".',
       },
     },
   },
