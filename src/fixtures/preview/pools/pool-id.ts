@@ -400,7 +400,7 @@ export default [
     testName: 'pools/:pool_id/metadata - HASH_MISMATCH - only basic pool metadata info returned',
     endpoints: [
       'pools/844042a0c14b96bf2c65fccaaaaa9e11bbf34f0b9bbf56c89ae3c8dd/metadata',
-      'pools/pool1s3qy9gxpfwtt7tr9ln924257zxalxnctnwl4djy6u0yd6z33vnj/metadata'
+      'pools/pool1s3qy9gxpfwtt7tr9ln924257zxalxnctnwl4djy6u0yd6z33vnj/metadata',
     ],
     response: {
       pool_id: 'pool1s3qy9gxpfwtt7tr9ln924257zxalxnctnwl4djy6u0yd6z33vnj',
