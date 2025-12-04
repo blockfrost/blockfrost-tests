@@ -6,7 +6,7 @@ export default [
     id: 'tx-submit-valid-custom-tx_65373de66591',
     testName: 'tx/submit - valid custom tx',
     endpoints: ['tx/submit'],
-    customTimeout: 120_000,
+    customTimeout: 180_000,
     retry: 2,
     customTest: async () => await submitTest('preview'),
   },

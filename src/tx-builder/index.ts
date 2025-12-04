@@ -87,48 +87,55 @@ export const buildTx = async (_network: Network) => {
 };
 
 export const waitForTx = async (txHash: string) => {
-  const maxRetries = 60;
-  const intervalMs = 2_000;
+  const maxRetries = 12;
+  const intervalMs = 10_000;
+  const timeoutS = (maxRetries * intervalMs) / 1000;
 
   let client = getPrimaryInstance();
-  let isFallback = false;
 
-  console.log(`Waiting for tx ${txHash}... (checking every ${intervalMs}ms, max 60s)`);
+  console.log(`Waiting for tx ${txHash}... (checking every ${intervalMs}ms, max ${timeoutS}s)`);
 
   for (let index = 0; index < maxRetries; index++) {
+    let instance: 'PRIMARY' | 'SECONDARY' = 'PRIMARY';
+
     await sleep(intervalMs);
 
     try {
       const tx = await client.txs(txHash);
 
-      console.log(
-        `Tx confirmed in block: ${tx.block} (via ${isFallback ? 'SECONDARY' : 'PRIMARY'})`,
-      );
+      console.log(`Tx ${txHash} confirmed in block: ${tx.block} (instance: ${instance})`);
       return tx;
     } catch (error) {
       if (error instanceof BlockfrostServerError && error.status_code === 404) {
+        // Tx not yet found
         console.log(
-          `Waiting for the tx. Attempt ${index + 1}/${maxRetries}: Pending (404) on ${isFallback ? 'SECONDARY' : 'PRIMARY'}...`,
+          `Waiting for the tx. Attempt ${index + 1}/${maxRetries}: Pending (404) on instance ${instance}...`,
         );
 
         if (index === maxRetries - 1) {
-          console.error('Timeout: Tx not found within 60 seconds.');
-          throw new Error('Tx not found on blockchain within the timeout period (60s).');
+          console.error(
+            `Timeout: Tx ${txHash} not found on blockchain within ${timeoutS} seconds.`,
+            error,
+          );
+          throw new Error(`Tx not found on blockchain within ${timeoutS} seconds.`);
         }
-
-        continue;
-      }
-
-      console.error(`Error retrieving tx from ${isFallback ? 'SECONDARY' : 'PRIMARY'}:`, error);
-
-      if (!isFallback) {
-        console.warn('Primary instance error. Switching to SECONDARY instance immediately.');
-        client = getSecondaryInstance();
-        isFallback = true;
-        continue;
       } else {
-        console.warn('Secondary instance error. Retrying...');
-        continue;
+        // Unexpected error
+        console.error(
+          `Unexpected error while retrieving tx ${txHash} (instance: ${instance})`,
+          error,
+        );
+
+        if (instance === 'PRIMARY') {
+          // Note: if PRIMARY fails, then SECONDARY client fallbacks to public API in case env FALLBACK_SERVER_URL is not set,
+          // thus it doesn't necessarily test the same backend that was used for submitting the tx
+          console.warn(`Switching to SECONDARY instance.`, error);
+          client = getSecondaryInstance();
+          instance = 'SECONDARY';
+        } else {
+          // Fast fail on unexpected errors on SECONDARY instance
+          throw error;
+        }
       }
     }
   }

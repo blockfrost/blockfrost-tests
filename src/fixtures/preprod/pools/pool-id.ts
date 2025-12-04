@@ -289,4 +289,49 @@ export default [
     response: error_404,
     endpoints: ['pools/pool1y6chk7x7fup4ms9leesdr57r4qy9cwxuee0msan72x976a6u0nc'],
   },
+  {
+    testName:
+      'pools/:pool_id/metadata - HTTP_RESPONSE_ERROR - only basic pool metadata info returned',
+    endpoints: [
+      'pools/35d582e26b5bbcefc513bfc587d3f3065c42e6e98d5e3395fd78f960/metadata',
+      'pools/pool1xh2c9cnttw7wl3gnhlzc05lnqewy9ehf340r890a0rukq3rctfn/metadata',
+    ],
+    response: {
+      pool_id: 'pool1xh2c9cnttw7wl3gnhlzc05lnqewy9ehf340r890a0rukq3rctfn',
+      hex: '35d582e26b5bbcefc513bfc587d3f3065c42e6e98d5e3395fd78f960',
+      url: 'https://blockfrost.io/fakemetadata',
+      hash: '6e4796af5e3e336048f6f684738c6596a9b75c62be7e19d3841bd53e43ac24fd',
+      ticker: null,
+      name: null,
+      description: null,
+      homepage: null,
+      error: {
+        code: 'HTTP_RESPONSE_ERROR',
+        message:
+          'Error Offchain Pool: HTTP Response error from https://blockfrost.io/fakemetadata resulted in HTTP status code : 404 "Not Found"',
+      },
+    },
+  },
+  {
+    testName: 'pools/:pool_id/metadata - HASH_MISMATCH - only basic pool metadata info returned',
+    endpoints: [
+      'pools/pool1x5hja8cpym88s3txc45y7yq4nmq0nwma623e6duv3jx56g4ycva/metadata',
+      'pools/352f2e9f0126ce784566c5684f10159ec0f9bb7dd2a39d378c8c8d4d/metadata',
+    ],
+    response: {
+      pool_id: 'pool1x5hja8cpym88s3txc45y7yq4nmq0nwma623e6duv3jx56g4ycva',
+      hex: '352f2e9f0126ce784566c5684f10159ec0f9bb7dd2a39d378c8c8d4d',
+      url: 'https://tinyurl.com/39a7pnv5',
+      hash: '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef',
+      ticker: null,
+      name: null,
+      description: null,
+      homepage: null,
+      error: {
+        code: 'HASH_MISMATCH',
+        message:
+          'Hash mismatch when fetching metadata from https://tinyurl.com/39a7pnv5. Expected "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef" but got "b123ea83d1f87afcb95a76661be508b37a0957c7fa95baa883a80d1203ffcd94".',
+      },
+    },
+  },
 ];
