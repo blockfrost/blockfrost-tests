@@ -3,10 +3,6 @@ import { getUnixTime, isValid } from 'date-fns';
 
 type BigValue = string | number | bigint;
 
-const consoleError = (...msgs: unknown[]) => {
-  // red error
-  console.error('\u001B[31m%s\u001B[0m', ...msgs);
-};
 const toBigIntSafe = (value: BigValue): bigint | number | null => {
   if (typeof value === 'number') {
     return value;
@@ -231,20 +227,25 @@ export function confirmations(
   options: { height: number; toleranceInBlocks?: number },
 ) {
   const toleranceInBlocks = options.toleranceInBlocks ?? 2;
+  const currentHeight = globalThis.latest?.block?.height;
 
-  const shouldHaveConfirmations = globalThis.latest.block.height
-    ? globalThis.latest.block.height - options.height
-    : 0;
+  if (typeof currentHeight !== 'number') {
+    return {
+      pass: false,
+      message: () =>
+        `Cannot check confirmations: globalThis.latest.block.height is undefined or not a number. Check if the blockchain watcher is initialized.`,
+    };
+  }
+
+  const shouldHaveConfirmations = currentHeight - options.height;
 
   const pass =
     typeof received === 'number' &&
     Math.abs(received - shouldHaveConfirmations) <= toleranceInBlocks;
 
-  const messageContent = `Received ${received}. Expected ${shouldHaveConfirmations} confirmations (based on fixture height ${options.height}, blockchain height ${globalThis.latest.block.height} and tolerance ${toleranceInBlocks} blocks)`;
-
-  if (!pass) {
-    consoleError(messageContent);
-  }
-
-  return { pass, message: () => messageContent };
+  return {
+    pass,
+    message: () =>
+      `Received ${received}. Expected ${shouldHaveConfirmations} confirmations (based on fixture height ${options.height}, blockchain height ${currentHeight} and tolerance ${toleranceInBlocks} blocks)`,
+  };
 }
