@@ -140,7 +140,7 @@ __metadata:
     "@babel/parser": "npm:^7.28.4"
     "@babel/traverse": "npm:^7.28.4"
     "@blockfrost/blockfrost-js": "npm:6.0.0"
-    "@blockfrost/openapi": "npm:0.1.82"
+    "@blockfrost/openapi": "npm:0.1.84"
     "@emurgo/cardano-serialization-lib-nodejs": "npm:12.1.1"
     "@eslint/js": "npm:^9.38.0"
     "@sindresorhus/slugify": "npm:^2.2.1"
@@ -161,9 +161,9 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.5.4"
     got: "npm:14.4.5"
     jest-extended: "npm:^4.0.2"
-    node-match-path: "npm:^0.6.3"
     path-to-regexp: "npm:8.3.0"
     prettier: "npm:^3.6.2"
+    radix3: "npm:^1.1.2"
     recast: "npm:^0.23.11"
     ts-node: "npm:^10.9.2"
     tsx: "npm:^4.20.6"
@@ -187,15 +187,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockfrost/openapi@npm:0.1.82":
-  version: 0.1.82
-  resolution: "@blockfrost/openapi@npm:0.1.82"
+"@blockfrost/openapi@npm:0.1.84":
+  version: 0.1.84
+  resolution: "@blockfrost/openapi@npm:0.1.84"
   dependencies:
     ajv: "npm:^8.17.1"
     cbor: "npm:^9.0.2"
     rimraf: "npm:6.0.1"
     yaml: "npm:^2.6.1"
-  checksum: 10c0/d28ba5d94af3282857e186dd55abfa27207b414c9be8a229e4d2ea52deb7009f5a0b0b94b632fa2ef2a5f4c3e15d205fae3530533d3885a9ab74ddc53a99e9f0
+  checksum: 10c0/f1bc2972ae49574bf527b00e60933fc7f70208a3debfff7e41259ebcc7e46a2a2839b1b9f869ba97f42488ade5f6d0e55f880a0516173b65e11e2b7fc28ae48c
   languageName: node
   linkType: hard
 
@@ -4328,13 +4328,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-match-path@npm:^0.6.3":
-  version: 0.6.3
-  resolution: "node-match-path@npm:0.6.3"
-  checksum: 10c0/b2e6a084f32e3cd97e600f792a46da6e68fbcf77ebad6c13ccca9eceb030f4961c358cfca26e4532e48e98779ca9a83edd2b6d7ba216c1a06961d435b1b05f9b
-  languageName: node
-  linkType: hard
-
 "nofilter@npm:^3.1.0":
   version: 3.1.0
   resolution: "nofilter@npm:3.1.0"
@@ -4708,6 +4701,13 @@ __metadata:
   version: 5.1.1
   resolution: "quick-lru@npm:5.1.1"
   checksum: 10c0/a24cba5da8cec30d70d2484be37622580f64765fb6390a928b17f60cd69e8dbd32a954b3ff9176fa1b86d86ff2ba05252fae55dc4d40d0291c60412b0ad096da
+  languageName: node
+  linkType: hard
+
+"radix3@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "radix3@npm:1.1.2"
+  checksum: 10c0/d4a295547f71af079868d2c2ed3814a9296ee026c5488212d58c106e6b4797c6eaec1259b46c9728913622f2240c9a944bfc8e2b3b5f6e4a5045338b1609f1e4
   languageName: node
   linkType: hard
 

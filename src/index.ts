@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { match } from 'node-match-path';
+import openApiJsonSchema from '@blockfrost/openapi/json-schema.json' with { type: 'json' };
 import { test, describe, expect } from 'vitest';
 import { noCase } from 'change-case';
 import fs from 'fs';
@@ -7,6 +7,17 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import got, { ExtendOptions, Got } from 'got';
 import { Fixture } from './types/index.js';
+import { createRouter } from 'radix3';
+import { normalizePath } from './utils.js';
+
+const apiEndpointsKeys = Object.keys(openApiJsonSchema);
+const router = createRouter<{ pattern: string }>();
+
+apiEndpointsKeys.map(path => {
+  const normalizedPath = normalizePath(path);
+
+  router.insert(normalizedPath, { pattern: normalizedPath });
+});
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const filePath = path.resolve(__dirname, '../endpoints-allowlist.json');
@@ -37,53 +48,18 @@ try {
   throw new Error(`Error loading endpoints-allowlist.json: ${message}`);
 }
 
-export const isUrlMatch = (urlParameter: string, _pattern: string) => {
-  let url = urlParameter;
-
+export const isUrlMatch = (urlParameter: string, allowlistPattern: string) => {
   try {
-    if (url.includes('?')) {
-      url = url.split('?')[0];
-    }
+    const normalizedUrl = normalizePath(urlParameter);
+    const matchedRoute = router.lookup(normalizedUrl);
 
-    if (!url.startsWith('/')) url = '/' + url;
+    if (!matchedRoute) return false;
 
-    let pattern = _pattern.split('?')[0];
+    const normalizedPattern = normalizePath(allowlistPattern);
 
-    if (!pattern.startsWith('/')) pattern = '/' + pattern;
+    if (normalizedUrl === normalizedPattern) return true;
 
-    const adjustedPattern = pattern.replaceAll('{', ':').replaceAll('}', '');
-
-    if (adjustedPattern === '/pools/:pool_id') {
-      if (url === '/pools/retired') return false;
-      if (url === '/pools/retiring') return false;
-      if (url === '/pools/extended') return false;
-    }
-
-    if (adjustedPattern === '/blocks/:hash_or_number') {
-      if (url === '/blocks/latest') return false;
-      if (url.startsWith('/blocks/slot')) return false;
-      if (url.startsWith('/blocks/epoch')) return false;
-    }
-
-    if (adjustedPattern === '/epochs/:number') {
-      if (url === '/epochs/latest') return false;
-    }
-
-    if (adjustedPattern === '/mempool/:hash') {
-      if (url.startsWith('/mempool/addresses')) return false;
-    }
-
-    if (adjustedPattern === '/scripts/:script_hash') {
-      if (url.startsWith('/scripts/datum')) return false;
-    }
-
-    if (adjustedPattern === '/nutlink/:address') {
-      if (url.startsWith('/nutlink/tickers')) return false;
-    }
-
-    const urlMatch = match(adjustedPattern, url);
-
-    return urlMatch.matches;
+    return matchedRoute.pattern === normalizedPattern;
   } catch {
     return false;
   }
