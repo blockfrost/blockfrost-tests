@@ -74,10 +74,10 @@ export default [
       { pool_id: 'pool13jehpkxh5mwsyled40zyn66hdhml2n4zqqlhj5jddyvty7xc49a', epoch: 113 },
       { pool_id: 'pool1hn9wn3jufyym074ng389kh6v4fxt7560pez05tkf665dcm6yvn0', epoch: 113 },
       { pool_id: 'pool1mndyxsyw6yzgust4w2j2cfljwvj9s7k2059mm2f699c0ushgxe5', epoch: 114 },
-      { pool_id: 'pool1m8glad404zhwsa6k2lalm6qu95ptfffj9uk5drphmu0rsj3mnaz', epoch: 116 },
       { pool_id: 'pool1ad0efggjc3mwjdjxr7d5fza0j5222l2kvh7f9gp24hcyz7r279h', epoch: 118 },
       { pool_id: 'pool17l2xkn6kky64q2lqmdqas2dtw9r4kunmu5jc9856au9qu9mawa9', epoch: 121 },
       { pool_id: 'pool1a4rwdu0rykl0e48pcve7jyk02u96hm3h8lv2xf6t6vvdwngx4uk', epoch: 122 },
+      { pool_id: 'pool1lvnes87dstthek0zzz5zsrspew5ads4h9m335czzrsvkgp6wey6', epoch: 132 },
     ],
   },
   {
