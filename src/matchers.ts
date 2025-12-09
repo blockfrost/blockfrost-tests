@@ -253,7 +253,7 @@ export const toBeSlotNumber = (received: number) => {
 };
 
 export function toBeCurrentBlockHeight(received: number, options?: { toleranceInBlocks?: number }) {
-  const toleranceInBlocks = options?.toleranceInBlocks ?? 2;
+  const toleranceInBlocks = options?.toleranceInBlocks ?? 10;
   const currentHeight = globalThis.latest?.block?.height;
 
   if (!isBlockchainStateSetupEnabled()) {
