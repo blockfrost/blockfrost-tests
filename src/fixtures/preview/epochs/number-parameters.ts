@@ -687,7 +687,7 @@ export default [
     testName: 'epochs/latest/parameters - latest epoch',
     endpoints: ['epochs/latest/parameters'],
     response: {
-      epoch: globalThis.latest.epoch.epoch,
+      epoch: expect.toBeCurrentEpochNumber(),
       min_fee_a: 44,
       min_fee_b: 155381,
       max_block_size: 90112,
