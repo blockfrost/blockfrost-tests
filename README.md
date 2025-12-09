@@ -16,6 +16,11 @@ SERVER_URL=""
 
 # Target network: "mainnet", "preview", or "preprod"
 NETWORK=""
+
+# Enable fetching latest blockchain state (block and epoch) for advanced matchers.
+# When set to "1", enables blockchain-aware assertions like toBeSlotNumber, toBeEpochNumber, and confirmations.
+# When disabled, these matchers skip validation and pass automatically, useful for testing without needing to fetch blockchain state. Disabled by default.
+BLOCKCHAIN_STATE_SETUP="1"
 ```
 
 > If present, the `.env` file will be automatically loaded (e.g. via `dotenv`).

@@ -20,9 +20,16 @@ import {
   toBeLessThanOrEqual,
   toBeInRange,
   toBeStakeAddress,
+  toBeCurrentBlockHeight,
+  toBeCurrentEpochNumber,
 } from './matchers.js';
+import { isBlockchainStateSetupEnabled } from './utils.js';
 
-(async () => {
+export const setGlobalBlockchainState = async (options?: { force?: boolean }) => {
+  if (globalThis.latest && !options?.force) {
+    return;
+  }
+
   try {
     const [epoch, block] = await Promise.all([getEpochsLatest(), getLatestBlock()]);
 
@@ -31,11 +38,23 @@ import {
       epoch,
     };
 
-    console.log('Global test data setup completed.', globalThis.latest);
+    console.log('[SETUP] Blockchain state setup completed.', globalThis.latest);
   } catch (error) {
-    console.error('Failed to setup global test data:', error);
+    console.error(
+      '[SETUP] Failed to retrieve blockchain state (latest epoch and/or block):',
+      error,
+    );
+    throw error;
   }
-})();
+};
+
+if (isBlockchainStateSetupEnabled()) {
+  await setGlobalBlockchainState();
+} else {
+  console.warn(
+    `[SETUP] Env var BLOCKCHAIN_STATE_SETUP is not set. Skipping blockchain state setup.`,
+  );
+}
 
 expect.extend({
   ...jestExtendedMatchers,
@@ -57,4 +76,6 @@ expect.extend({
   toBeAssetUnit,
   confirmations,
   toBeStakeAddress,
+  toBeCurrentBlockHeight,
+  toBeCurrentEpochNumber,
 });

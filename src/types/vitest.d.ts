@@ -37,6 +37,8 @@ declare module 'vitest' {
     toBeAssetUnit(): void;
     confirmations(options?: { height?: number }): void;
     toBeStakeAddress(): void;
+    toBeCurrentBlockHeight(options?: { toleranceInBlocks?: number }): void;
+    toBeCurrentEpochNumber(): void;
   }
 }
 

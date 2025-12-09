@@ -15,3 +15,9 @@ export const normalizePath = (pathStr: string) => {
   // 4. {param} -> :param
   return normalized.replace(/\{([^}]+)\}/g, ':$1');
 };
+
+export const isBlockchainStateSetupEnabled = () => {
+  return (
+    process.env.BLOCKCHAIN_STATE_SETUP === 'true' || process.env.BLOCKCHAIN_STATE_SETUP === '1'
+  );
+};

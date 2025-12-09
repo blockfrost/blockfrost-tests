@@ -1,5 +1,6 @@
 import { expect } from 'vitest';
 import { getUnixTime, isValid } from 'date-fns';
+import { isBlockchainStateSetupEnabled } from './utils.js';
 
 type BigValue = string | number | bigint;
 
@@ -174,6 +175,14 @@ export const toBeEpochNumber = (received: number) => {
   // Note: missing inversion (could be handled with this.isNot),
   // but since we are not using this feature it is not implemented
   const min = 0;
+
+  if (!isBlockchainStateSetupEnabled()) {
+    return {
+      pass: typeof received === 'number' && toBeGreaterThanOrEqual.toBe(received, min).pass,
+      message: () => `Expected value ${received} to be greater than ${min}`,
+    };
+  }
+
   const max = globalThis.latest.epoch.epoch;
 
   return {
@@ -181,11 +190,40 @@ export const toBeEpochNumber = (received: number) => {
     message: () => `Expected value ${received} to be within range for an epoch <${min}, ${max}>`,
   };
 };
+
+export const toBeCurrentEpochNumber = (received: number) => {
+  // Note: missing inversion (could be handled with this.isNot),
+  // but since we are not using this feature it is not implemented
+
+  if (!isBlockchainStateSetupEnabled()) {
+    return {
+      pass: typeof received === 'number' && toBeGreaterThanOrEqual.toBe(received, 0).pass,
+      message: () => `Expected value ${received} to be greater than 0`,
+    };
+  }
+
+  const min = globalThis.latest.epoch.epoch;
+  const max = globalThis.latest.epoch.epoch;
+
+  return {
+    pass: typeof received === 'number' && toBeInRange.toBe(received, min, max).pass,
+    message: () => `Expected value ${received} to be within range for an epoch <${min}, ${max}>`,
+  };
+};
+
 export const toBeEpochSlotNumber = (received: number) => {
   // Note: missing inversion (could be handled with this.isNot),
   // but since we are not using this feature it is not implemented
   const buffer = 240; // new blocks could be minted between initial fetch of the blockchain state and the execution of the test
   const min = 0;
+
+  if (!isBlockchainStateSetupEnabled()) {
+    return {
+      pass: typeof received === 'number' && toBeGreaterThanOrEqual.toBe(received, min).pass,
+      message: () => `Expected value ${received} to be greater than ${min}`,
+    };
+  }
+
   const max = globalThis.latest.block.epoch_slot! + buffer;
 
   expect(received).toBeInRange(min, max);
@@ -197,6 +235,14 @@ export const toBeEpochSlotNumber = (received: number) => {
 
 export const toBeSlotNumber = (received: number) => {
   const min = 0;
+
+  if (!isBlockchainStateSetupEnabled()) {
+    return {
+      pass: typeof received === 'number' && toBeGreaterThanOrEqual.toBe(received, min).pass,
+      message: () => `Expected value ${received} to be greater than or equal to ${min}`,
+    };
+  }
+
   const max = globalThis.latest.block.slot!; // Note: this could be improved to match interval for given network
 
   expect(received).toBeInRange(min, max + 150);
@@ -205,6 +251,36 @@ export const toBeSlotNumber = (received: number) => {
     message: () => `Expected value ${received} to be within range for a slot <${min}, ${max}>`,
   };
 };
+
+export function toBeCurrentBlockHeight(received: number, options?: { toleranceInBlocks?: number }) {
+  const toleranceInBlocks = options?.toleranceInBlocks ?? 10;
+  const currentHeight = globalThis.latest?.block?.height;
+
+  if (!isBlockchainStateSetupEnabled()) {
+    return {
+      pass: typeof received === 'number' && toBeGreaterThanOrEqual.toBe(received, 0).pass,
+      message: () => `Expected value ${received} to be greater than or equal to 0`,
+    };
+  }
+
+  if (typeof currentHeight !== 'number') {
+    return {
+      pass: false,
+      message: () =>
+        `Cannot check confirmations: globalThis.latest.block.height is undefined or not a number. Check if the blockchain state is initialized.`,
+    };
+  }
+
+  const maxHeight = currentHeight + toleranceInBlocks;
+  const pass =
+    typeof received === 'number' && toBeInRange.toBe(received, currentHeight, maxHeight).pass;
+
+  return {
+    pass,
+    message: () =>
+      `Received ${received}. Expected to be within range for a block height <${currentHeight}, ${maxHeight}> (blockchain height ${currentHeight} and tolerance ${toleranceInBlocks} blocks)`,
+  };
+}
 
 export const toBeAssetUnit = (received: string) => {
   return {
@@ -228,6 +304,13 @@ export function confirmations(
 ) {
   const toleranceInBlocks = options.toleranceInBlocks ?? 2;
   const currentHeight = globalThis.latest?.block?.height;
+
+  if (!isBlockchainStateSetupEnabled()) {
+    return {
+      pass: typeof received === 'number' && toBeGreaterThanOrEqual.toBe(received, 0).pass,
+      message: () => `Expected value ${received} to be greater than or equal to 0`,
+    };
+  }
 
   if (typeof currentHeight !== 'number') {
     return {
