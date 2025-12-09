@@ -821,7 +821,6 @@ export default [
     endpoints: [
       'accounts/stake_test1urpwxtn2k7r6v3nkpjehverz2mde8cgkuwp5p8njruneewgzlf4t8/transactions?count=2&page=1',
     ],
-    customTimeout: 40000,
     response: [
       {
         address:
