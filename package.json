@@ -1,6 +1,6 @@
 {
   "name": "@blockfrost/blockfrost-tests",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "git@github.com:blockfrost/blockfrost-tests.git",
   "license": "Apache-2.0",
   "author": "blockfrost.io",
