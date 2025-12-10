@@ -3,6 +3,7 @@ import { TestOptions } from 'vitest';
 import { Options, Got } from 'got';
 
 export type Fixture = {
+  id: string;
   testName: string;
   customTimeout?: TestOptions['timeout'];
   // Times to retry the test if fails. Useful for making flaky tests more stable.
@@ -13,6 +14,11 @@ export type Fixture = {
   postBody?: Options['body'];
   headers?: Options['headers'];
   clientOptions?: Options;
-  customTest?: (endpoint: string, client: Got) => Promise<void>;
+  customTest?: (
+    endpoint: string,
+    client: Got,
+    customTestParams?: Record<string, unknown>,
+  ) => Promise<void>;
   customExpect?: (response: unknown | null) => Promise<void>;
+  customTestParams?: Record<string, unknown>;
 };

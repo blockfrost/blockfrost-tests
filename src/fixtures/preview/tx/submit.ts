@@ -1,5 +1,6 @@
 import { submitTest } from '../../../tx-builder/test.js';
 import { expect } from 'vitest';
+import { Fixture } from '../../../types/index.js';
 
 export default [
   {
@@ -8,7 +9,8 @@ export default [
     endpoints: ['tx/submit'],
     customTimeout: 180_000,
     retry: 2,
-    customTest: async () => await submitTest('preview'),
+    customTest: async (_endpoint, _client, customTestParams) =>
+      await submitTest('preview', customTestParams),
   },
   {
     id: 'tx-submit-valid-cbor_65373de66591',
@@ -42,4 +44,4 @@ export default [
       status_code: 400,
     },
   },
-];
+] as Fixture[];
