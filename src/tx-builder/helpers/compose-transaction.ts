@@ -3,12 +3,25 @@ import * as CardanoWasm from '@emurgo/cardano-serialization-lib-nodejs';
 import { UTXO } from '../types/index.js';
 import { Responses } from '@blockfrost/blockfrost-js';
 
+export interface BlockchainParameters {
+  protocolParams: Pick<
+    Responses['epoch_param_content'],
+    | 'min_fee_a'
+    | 'min_fee_b'
+    | 'pool_deposit'
+    | 'key_deposit'
+    | 'coins_per_utxo_size'
+    | 'max_val_size'
+    | 'max_tx_size'
+  >;
+  currentSlot: number;
+}
 export const composeTransaction = (
   address: string,
   outputAddress: string,
   outputAmount: string,
   utxos: UTXO,
-  params: { protocolParams: Responses['epoch_param_content']; currentSlot: number },
+  params: BlockchainParameters,
 ): {
   txHash: string;
   txBody: CardanoWasm.TransactionBody;

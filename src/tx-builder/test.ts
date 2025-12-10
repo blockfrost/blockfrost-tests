@@ -3,39 +3,85 @@ import { BlockFrostAPI } from '@blockfrost/blockfrost-js';
 import { buildTx, waitForTx } from './index.js';
 import { sleep } from '../index.js';
 import { Network } from './types/index.js';
+import { BlockchainParameters } from './helpers/compose-transaction.js';
+import { getConfig } from '../config.js';
 
-export const submitTest = async (network: Network) => {
-  let blockfrostClient: BlockFrostAPI;
+/**
+ * Submits a transaction and verifies it gets included in a block.
+ *
+ * @param network - Target network: 'mainnet', 'preprod', or 'preview'
+ * @param options - Optional configuration
+ * @param options.testMempool - If true, verifies the transaction appears in mempool before block inclusion. False by default.
+ * @param options.blockchainParameters - Pre-fetched blockchain parameters (protocol params and current slot). If not provided, they will be fetched.
+ * @param options.fetchParametersFromPublicAPI - If true, fetches blockchain parameters from public Blockfrost API instead of the configured backend. Defaults to false.
+ * @param options.verifyTxUsingPublicAPI - If true, verifies transaction confirmation using public Blockfrost API instead of the configured backend. Defaults to false,
+ */
+export const submitTest = async (
+  network: Network,
+  options?: {
+    testMempool?: boolean;
+    blockchainParameters?: BlockchainParameters;
+    fetchParametersFromPublicAPI?: boolean;
+    verifyTxUsingPublicAPI?: boolean;
+  },
+) => {
+  const envConfig = getConfig();
+  const fetchParametersFromPublicAPI = options?.fetchParametersFromPublicAPI ?? false;
 
-  if (process.env.PROJECT_ID) {
-    blockfrostClient = new BlockFrostAPI({
-      projectId: process.env.PROJECT_ID,
-      customBackend: process.env.SERVER_URL || 'http://localhost:3000',
-    });
-  } else {
+  if (!envConfig.projectId) {
     throw new Error('PROJECT_ID environment variable is not set');
   }
 
+  const localBFClient = new BlockFrostAPI({
+    projectId: envConfig.projectId,
+    customBackend: envConfig.serverUrl,
+  });
+
   // disable SSL on SDK's Got otherwise tests run directly on backend fail with  unable to verify the first certificate
-  blockfrostClient.instance = blockfrostClient.instance.extend({
+  localBFClient.instance = localBFClient.instance.extend({
     https: { rejectUnauthorized: false },
   });
 
-  const signedTx = await buildTx(network);
+  // Optionally use public Blockfrost API client to fetch protocol parameters and current slot
+  const publicBFClient = fetchParametersFromPublicAPI
+    ? new BlockFrostAPI({
+        projectId: envConfig.projectId,
+      })
+    : null;
+
+  const signedTx = await buildTx({
+    network,
+    blockchainParameters: options?.blockchainParameters,
+    blockfrostClient: publicBFClient ?? localBFClient,
+  });
   const signedTxJson = signedTx.to_js_value();
 
   // Push transaction to network
-  const txHash = await blockfrostClient.txSubmit(signedTx.to_bytes());
+  const txHash = await localBFClient.txSubmit(signedTx.to_bytes());
 
   expect(txHash).toBeString();
-  // Before the tx is included in a block it is a waiting room known as mempool
-  // Retrieve transaction from Blockfrost Mempool
 
-  await sleep(100); // seems that fetching the tx from mempool right after submitting it is not reliable enough
+  if (options?.testMempool) {
+    // Before the tx is included in a block it is stored in a mempool
+    // Retrieve transaction from Blockfrost Mempool
+    await sleep(100); // seems that fetching the tx from mempool right after submitting it is not reliable enough
+    const client = options?.verifyTxUsingPublicAPI ? publicBFClient! : localBFClient;
+    const mempoolTx = await client.mempoolTx(txHash).catch(error => error);
+
+    expect(mempoolTx).toMatchObject({
+      tx: {
+        hash: txHash,
+      },
+    });
+    console.log(`Tx ${txHash} found in mempool.`);
+  }
 
   console.log(`Submitted tx ${txHash}.\nWaiting for the tx to be included in a block...`);
 
-  const tx = await waitForTx(txHash);
+  const tx = await waitForTx(
+    txHash,
+    options?.verifyTxUsingPublicAPI ? publicBFClient! : localBFClient,
+  );
 
   expect(tx).toStrictEqual({
     hash: txHash,

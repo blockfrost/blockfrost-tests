@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitest/config';
 
 if (!['mainnet', 'preprod', 'preview'].includes(process.env.NETWORK || '')) {
-  throw 'Error NETWORK env variable can be only `mainnet, preview, preprod, ipfs, milkomeda-mainnet, milkomeda-testnet`';
+  throw 'Error NETWORK env variable can be only mainnet, preview or preprod.';
 }
 
 const testFolders = [`./src/tests/${process.env.NETWORK}/**/*.ts`, `./src/tests/common/**/*.ts`];
