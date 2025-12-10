@@ -1,6 +1,6 @@
 import { expect } from 'vitest';
 import * as jestExtendedMatchers from 'jest-extended';
-import { getEpochsLatest, getLatestBlock } from './blockfrost-client.js';
+import { getBlockfrostAPIClient } from './blockfrost-client.js';
 import {
   toBeBlake2b256Hash,
   toBePoolBech32,
@@ -31,7 +31,8 @@ export const setGlobalBlockchainState = async (options?: { force?: boolean }) =>
   }
 
   try {
-    const [epoch, block] = await Promise.all([getEpochsLatest(), getLatestBlock()]);
+    const client = getBlockfrostAPIClient();
+    const [epoch, block] = await Promise.all([client.epochsLatest(), client.blocksLatest()]);
 
     globalThis.latest = {
       block,

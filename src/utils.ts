@@ -1,3 +1,5 @@
+import { getConfig } from './config.js';
+
 export const normalizePath = (pathStr: string) => {
   // 1. query params
   let normalized = pathStr.split(/[?#]/)[0];
@@ -17,7 +19,7 @@ export const normalizePath = (pathStr: string) => {
 };
 
 export const isBlockchainStateSetupEnabled = () => {
-  return (
-    process.env.BLOCKCHAIN_STATE_SETUP === 'true' || process.env.BLOCKCHAIN_STATE_SETUP === '1'
-  );
+  const envConfig = getConfig();
+
+  return envConfig.blockchainStateSetup;
 };
