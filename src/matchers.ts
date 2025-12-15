@@ -1,6 +1,7 @@
 import { expect } from 'vitest';
 import { getUnixTime, isValid } from 'date-fns';
 import { isBlockchainStateSetupEnabled } from './utils.js';
+import { getConfig } from './config.js';
 
 type BigValue = string | number | bigint;
 
@@ -290,7 +291,7 @@ export const toBeAssetUnit = (received: string) => {
 };
 
 export const toBeStakeAddress = (received: string) => {
-  const stakeAddrPrefix = process.env.NETWORK === 'mainnet' ? 'stake1' : 'stake_test1';
+  const stakeAddrPrefix = getConfig().network === 'mainnet' ? 'stake1' : 'stake_test1';
 
   return {
     pass: typeof received === 'string' && received.startsWith(stakeAddrPrefix),

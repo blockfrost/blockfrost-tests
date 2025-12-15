@@ -9,6 +9,7 @@ import got, { ExtendOptions, Got } from 'got';
 import { Fixture } from './types/index.js';
 import { createRouter } from 'radix3';
 import { normalizePath } from './utils.js';
+import { getConfig } from './config.js';
 
 const apiEndpointsKeys = Object.keys(openApiJsonSchema);
 const router = createRouter<{ pattern: string }>();
@@ -24,7 +25,8 @@ const filePath = path.resolve(__dirname, '../endpoints-allowlist.json');
 
 export const DEFAULT_TEST_TIMEOUT = 15_000;
 
-const projectId = process.env.PROJECT_ID;
+const envConfig = getConfig();
+
 let endpointsAllowlist: string[] | undefined;
 
 try {
@@ -65,13 +67,12 @@ export const isUrlMatch = (urlParameter: string, allowlistPattern: string) => {
   }
 };
 
-const prefixUrl = process.env.SERVER_URL || 'http://localhost:3000';
-const DEFAULT_HEADERS = projectId ? { project_id: projectId } : {};
-
 export const getInstance = (clientOptions?: ExtendOptions): Got => {
+  const DEFAULT_HEADERS = envConfig.projectId ? { project_id: envConfig.projectId } : {};
+
   return got.extend({
     responseType: 'json',
-    prefixUrl,
+    prefixUrl: envConfig.serverUrl,
     https: { rejectUnauthorized: false },
     ...clientOptions,
     headers: { ...DEFAULT_HEADERS, ...clientOptions?.headers },
@@ -238,7 +239,7 @@ export const generateTest = (fixture: Fixture, endpoint: string) => {
       // custom assertion defined within fixture
       const gotClient = getClientForFixture(fixture);
 
-      await fixture.customTest(endpoint, gotClient);
+      await fixture.customTest(endpoint, gotClient, fixture.customTestParams);
       return;
     }
 
