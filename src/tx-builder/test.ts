@@ -14,7 +14,8 @@ import { getConfig } from '../config.js';
  * @param options.testMempool - If true, verifies the transaction appears in mempool before block inclusion. False by default.
  * @param options.blockchainParameters - Pre-fetched blockchain parameters (protocol params and current slot). If not provided, they will be fetched.
  * @param options.fetchParametersFromPublicAPI - If true, fetches blockchain parameters from public Blockfrost API instead of the configured backend. Defaults to false.
- * @param options.verifyTxUsingPublicAPI - If true, verifies transaction confirmation using public Blockfrost API instead of the configured backend. Defaults to false,
+ * @param options.verifyTxUsingPublicAPI - If true, verifies transaction confirmation using public Blockfrost API instead of the configured backend. Defaults to false.
+ * @param options.blockfrostAPIUrl - Custom Blockfrost API URL to use when fetchParametersFromPublicAPI or verifyTxUsingPublicAPI is true. If not provided, uses the default public Blockfrost API.
  */
 export const submitTest = async (
   network: Network,
@@ -23,6 +24,7 @@ export const submitTest = async (
     blockchainParameters?: BlockchainParameters;
     fetchParametersFromPublicAPI?: boolean;
     verifyTxUsingPublicAPI?: boolean;
+    blockfrostAPIUrl?: string;
   },
 ) => {
   const envConfig = getConfig();
@@ -46,6 +48,7 @@ export const submitTest = async (
   const publicBFClient = fetchParametersFromPublicAPI
     ? new BlockFrostAPI({
         projectId: envConfig.projectId,
+        ...(options?.blockfrostAPIUrl ? { customBackend: options.blockfrostAPIUrl } : {}),
       })
     : null;
 
@@ -65,7 +68,7 @@ export const submitTest = async (
     // Before the tx is included in a block it is stored in a mempool
     // Retrieve transaction from Blockfrost Mempool
     await sleep(100); // seems that fetching the tx from mempool right after submitting it is not reliable enough
-    const client = options?.verifyTxUsingPublicAPI ? publicBFClient! : localBFClient;
+    const client = localBFClient;
     const mempoolTx = await client.mempoolTx(txHash).catch(error => error);
 
     expect(mempoolTx).toMatchObject({
