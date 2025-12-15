@@ -68,7 +68,7 @@ export const submitTest = async (
     // Before the tx is included in a block it is stored in a mempool
     // Retrieve transaction from Blockfrost Mempool
     await sleep(100); // seems that fetching the tx from mempool right after submitting it is not reliable enough
-    const client = options?.verifyTxUsingPublicAPI ? publicBFClient! : localBFClient;
+    const client = localBFClient;
     const mempoolTx = await client.mempoolTx(txHash).catch(error => error);
 
     expect(mempoolTx).toMatchObject({
