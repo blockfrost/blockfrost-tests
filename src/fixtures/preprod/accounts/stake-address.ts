@@ -72,7 +72,7 @@ export default [
       drep_id: null,
       active_epoch: 98,
       controlled_amount: '500000000',
-      rewards_sum: '0',
+      rewards_sum: '500000000',
       withdrawals_sum: '500000000',
       reserves_sum: '0',
       treasury_sum: '0',
