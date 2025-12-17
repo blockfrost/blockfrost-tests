@@ -227,9 +227,8 @@ export const toBeEpochSlotNumber = (received: number) => {
 
   const max = globalThis.latest.block.epoch_slot! + buffer;
 
-  expect(received).toBeInRange(min, max);
   return {
-    pass: true,
+    pass: typeof received === 'number' && toBeInRange.toBe(received, min, max).pass,
     message: () => `Expected value ${received} to be within range for an epoch <${min}, ${max}>`,
   };
 };
@@ -246,9 +245,8 @@ export const toBeSlotNumber = (received: number) => {
 
   const max = globalThis.latest.block.slot!; // Note: this could be improved to match interval for given network
 
-  expect(received).toBeInRange(min, max + 150);
   return {
-    pass: true,
+    pass: typeof received === 'number' && toBeInRange.toBe(received, min, max + 150).pass,
     message: () => `Expected value ${received} to be within range for a slot <${min}, ${max}>`,
   };
 };
