@@ -1,4 +1,3 @@
-import { expect } from 'vitest';
 import { getUnixTime, isValid } from 'date-fns';
 import { isBlockchainStateSetupEnabled } from './utils.js';
 import { getConfig } from './config.js';
