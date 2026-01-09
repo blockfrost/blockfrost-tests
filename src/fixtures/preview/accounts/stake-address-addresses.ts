@@ -20,4 +20,24 @@ export default [
     ],
     response: [],
   },
+  {
+    testName: 'accounts/:stake_address bf stake address with many addresses',
+    endpoints: [
+      'accounts/stake_test1uq70zpxr7jdqxdlj895x9lvnwn9lrcknwpx8cswlld7x76gtzvrjp/addresses',
+    ],
+    response: [
+      {
+        address:
+          'addr_test1qqptln5t5s0mastzc9rksn6wdqp9ynt67ahw0nhzukar5keu7yzv8ay6qvmlywtgvt7exaxt783dxuzv03qal7muda5surhhy9',
+      },
+      {
+        address:
+          'addr_test1qqu0fdq939s7505uwrc3tae03e8rgd0xpt94673n56m03efu7yzv8ay6qvmlywtgvt7exaxt783dxuzv03qal7muda5snq24zy',
+      },
+      {
+        address:
+          'addr_test1zpv68zsj9af8sxg0du6zxzmnwm4ch6atlyhcwfqdyfc7qy3u7yzv8ay6qvmlywtgvt7exaxt783dxuzv03qal7muda5srdg8p9',
+      },
+    ],
+  },
 ];
