@@ -8,7 +8,7 @@ const testFolders = [`./src/tests/${process.env.NETWORK}/**/*.ts`, `./src/tests/
 
 export default defineConfig({
   test: {
-    reporters: process.env.GITHUB_ACTIONS ? ['github-actions'] : ['verbose'],
+    reporters: ['verbose'],
     // Be aware that there is also customTimeout option that can be set in fixtures
     // AND DEFAULT_TEST_TIMEOUT ./test/integration/utils
     testTimeout: 15_000,
