@@ -118,7 +118,7 @@ export default [
     endpoints: ['accounts/stake_test1uq3f3kt99hu4e3vt7cnx6uya88qjjw52yexh56qcknqkj9qa0awyd'],
     response: {
       stake_address: 'stake_test1uq3f3kt99hu4e3vt7cnx6uya88qjjw52yexh56qcknqkj9qa0awyd',
-      active: false,
+      active: true,
       active_epoch: 647,
       controlled_amount: expect.toBeAdaQuantity(),
       rewards_sum: expect.toBeAdaQuantity(),
