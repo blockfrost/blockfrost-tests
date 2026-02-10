@@ -36,7 +36,7 @@ export default [
         live_stake: expect.toBeAdaQuantity(),
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(1079),
-        margin_cost: 0.0,
+        margin_cost: 0.1,
         fixed_cost: '340000000',
         declared_pledge: '1000000000000',
         metadata: {
@@ -70,8 +70,8 @@ export default [
       {
         pool_id: 'pool1uhkxzvt9rj5s9emzr3uklwg2wdt7uky3aatgv9amhn2yz59laey',
         hex: 'e5ec6131651ca902e7621c796fb90a7357ee5891ef568617bbbcd441',
-        active_stake: '16171042958',
-        live_stake: '16171042958',
+        active_stake: '17168869757',
+        live_stake: '17168869757',
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(820),
         margin_cost: 0.15,
