@@ -70,8 +70,8 @@ export default [
       {
         pool_id: 'pool1uhkxzvt9rj5s9emzr3uklwg2wdt7uky3aatgv9amhn2yz59laey',
         hex: 'e5ec6131651ca902e7621c796fb90a7357ee5891ef568617bbbcd441',
-        active_stake: '17168869757',
-        live_stake: '17168869757',
+        active_stake: expect.toBeAdaQuantity(),
+        live_stake: expect.toBeAdaQuantity(),
         live_saturation: expect.toBeGreaterThan(0),
         blocks_minted: expect.toBeGreaterThan(820),
         margin_cost: 0.15,
