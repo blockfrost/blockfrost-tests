@@ -194,7 +194,7 @@ export default [
     endpoints: ['accounts/stake_test1upktggljr9mdvslp9lkzm5689vggykptqlcmv6euw3l9rzs8l3m4m'],
     response: {
       stake_address: 'stake_test1upktggljr9mdvslp9lkzm5689vggykptqlcmv6euw3l9rzs8l3m4m',
-      active: false,
+      active: true,
       active_epoch: 683,
       controlled_amount: expect.toBeAdaQuantity(),
       rewards_sum: expect.toBeAdaQuantity(),

@@ -148,7 +148,7 @@ export default [
     endpoints: ['accounts/stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4'],
     response: {
       stake_address: 'stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4',
-      active: false,
+      active: true,
       active_epoch: 508,
       controlled_amount: expect.toBeAdaQuantity(),
       rewards_sum: '0',
@@ -207,7 +207,7 @@ export default [
     endpoints: ['accounts/stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4'],
     response: {
       stake_address: 'stake1ux3dy2p970cv2lsqvl4nqxwj7c878tgs6a6h9yekk3pr27g70l5g4',
-      active: false,
+      active: true,
       active_epoch: 508,
       controlled_amount: expect.toBeAdaQuantity(),
       rewards_sum: expect.toBeAdaQuantity(),
