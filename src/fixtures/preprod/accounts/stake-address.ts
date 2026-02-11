@@ -14,6 +14,7 @@ export default [
     response: {
       stake_address: 'stake_test1urmus498k7r299azjvhh50c9044zwqxgqfuqqrj3m46y8ucef0hex',
       active: true,
+      registered: true,
       active_epoch: 164,
       controlled_amount: expect.toBeGreaterThanOrEqual('10003065667'),
       rewards_sum: expect.toBeGreaterThanOrEqual('8150815'),
@@ -26,12 +27,13 @@ export default [
     },
   },
   {
-    id: 'accounts-stake-address-bf-account_deregistered',
-    testName: 'accounts/:stake_address - deregistered and registred again after delegating stake',
+    id: 'accounts-stake-address-account_deregistered',
+    testName: 'accounts/:stake_address - delegated, deregistered and registered again',
     endpoints: ['accounts/stake_test1uqqauqr2wtdq3jwl49z5j6zgzs98gqtjfgwuntw7up5pemc3dax4t'],
     response: {
       stake_address: 'stake_test1uqqauqr2wtdq3jwl49z5j6zgzs98gqtjfgwuntw7up5pemc3dax4t',
-      active: true,
+      active: false,
+      registered: true,
       active_epoch: 270,
       controlled_amount: '0',
       rewards_sum: '3013827',
@@ -50,6 +52,7 @@ export default [
     response: {
       stake_address: 'stake_test1uplm3vtt2637738tx4wy9l4sjlhtdld2nvtlv8pj9ng9feg6d3pr7',
       active: expect.any(Boolean),
+      registered: expect.any(Boolean),
       active_epoch: expect.toBeOneOf([expect.toBeEpochNumber(), null]),
       controlled_amount: expect.toBeAdaQuantity(),
       drep_id: null,
@@ -69,6 +72,7 @@ export default [
     response: {
       stake_address: 'stake_test1ur45959eevjt0f02hajmvs69ag9q2t9hmyl4vgwdrxacues76c7wx',
       active: true,
+      registered: true,
       active_epoch: 38,
       controlled_amount: '511130715',
       drep_id: null,
@@ -87,6 +91,7 @@ export default [
     response: {
       stake_address: 'stake_test1urt4kdcculn6lwpw5alfhehlhx8thax0cruy73gd0gr6kjs29vef7',
       active: true,
+      registered: true,
       drep_id: null,
       active_epoch: 98,
       controlled_amount: '500000000',
@@ -106,6 +111,7 @@ export default [
     response: {
       stake_address: 'stake_test1uqtv67n99jt7mj0txqne80s7gn7q8xxyzyx4xaqxfpgd52c7aqzhd',
       active: expect.any(Boolean),
+      registered: true,
       active_epoch: expect.toBeEpochNumber(),
       controlled_amount: expect.any(String),
       rewards_sum: expect.any(String),
@@ -125,6 +131,7 @@ export default [
     response: {
       stake_address: 'stake_test1uzyp0n0lqk65g9wae0uhn3fdzevww4u7w665w46wsdmeaysjvtvpu',
       active: expect.any(Boolean),
+      registered: true,
       active_epoch: expect.toBeEpochNumber(),
       controlled_amount: expect.any(String),
       rewards_sum: expect.any(String),
@@ -143,7 +150,8 @@ export default [
     endpoints: ['accounts/stake_test1upjghly04re6yrr3nh3ntp9en3p5flnxh2yf6camc3vfhwg6dhc5w'],
     response: {
       stake_address: 'stake_test1upjghly04re6yrr3nh3ntp9en3p5flnxh2yf6camc3vfhwg6dhc5w',
-      active: true,
+      active: false,
+      registered: true,
       active_epoch: 169,
       controlled_amount: expect.toBeAdaQuantity(),
       rewards_sum: expect.toBeAdaQuantity(),
@@ -163,6 +171,7 @@ export default [
     response: {
       stake_address: 'stake_test1upq4d854xjc30jqkulsevam0jwt5wl2j9783twgzqpwtfvs705r7c',
       active: false,
+      registered: false,
       active_epoch: 218,
       controlled_amount: expect.toBeAdaQuantity(),
       rewards_sum: expect.toBeAdaQuantity(),
@@ -182,6 +191,7 @@ export default [
     response: {
       stake_address: 'stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq',
       active: true,
+      registered: true,
       active_epoch: 219,
       controlled_amount: expect.toBeAdaQuantity(),
       rewards_sum: expect.toBeAdaQuantity(),
