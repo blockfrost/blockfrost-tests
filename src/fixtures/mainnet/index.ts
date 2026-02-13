@@ -47,9 +47,6 @@ import metadataTxsLabelsLabel from './metadata/txs-labels-label.js';
 import metadataTxsLabelsLabelCbor from './metadata/txs-labels-label-cbor.js';
 import networkRoot from './network/root.js';
 import networkEras from './network/eras.js';
-import nutlinkAddress from './nutlink/address.js';
-import nutlinkAddressTickers from './nutlink/address-tickers.js';
-import nutlinkAddressTickersTicker from './nutlink/address-tickers-ticker.js';
 import poolsExtended from './pools/extended.js';
 import poolsPoolId from './pools/pool-id.js';
 import poolsPoolIdBlocks from './pools/pool-id-blocks.js';
@@ -153,7 +150,6 @@ export const mainnetFixtures = {
   ledger: [...ledgerRoot],
   metadata: [...metadataTxsLabelsLabelCbor, ...metadataTxsLabelsLabel, ...metadataTxsLabels],
   network: [...networkRoot, ...networkEras],
-  nutlink: [...nutlinkAddressTickers, ...nutlinkAddressTickersTicker, ...nutlinkAddress],
   pools: [
     ...poolsExtended,
     ...poolsPoolId,
