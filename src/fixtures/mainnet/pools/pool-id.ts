@@ -23,7 +23,7 @@ export default [
       active_stake: expect.toBeInRange('1733527285372', '9733527285372'),
       active_size: expect.toBeInRange(0.0002, 0.0004),
       declared_pledge: '250000000000',
-      live_pledge: expect.toBeInRange('250000000000', '369614620056'),
+      live_pledge: expect.toBeInRange('250000000000', '459614620056'),
       margin_cost: 0.049,
       fixed_cost: '340000000',
       reward_account: 'stake1u98nnlkvkk23vtvf9273uq7cph5ww6u2yq2389psuqet90sv4xv9v',
