@@ -100,19 +100,19 @@ export default [
   {
     testName: 'governance drep metadata - HASH_MISMATCH - only basic info is returned ',
     endpoints: [
-      'governance/dreps/drep1xr9pg62740dtnpawawrjg8xp45a7nzupuq6w38aysrlwjyvz8sf/metadata',
+      'governance/dreps/drep1yfeewq0yz8f59e4rshwtas0h3mwrzs626xk3vmfqj4y394cz4mfl3/metadata',
     ],
     response: {
-      drep_id: 'drep1xr9pg62740dtnpawawrjg8xp45a7nzupuq6w38aysrlwjyvz8sf',
-      hex: '30ca14695eabdab987aeeb87241cc1ad3be98b81e034e89fa480fee9',
-      url: 'https://metadata-govtool.cardanoapi.io/data/Lysanne',
-      hash: '63f947909f6333be7d791695f74e39083620b75190b5537a8b52f6a97a380a67',
+      drep_id: 'drep1yfeewq0yz8f59e4rshwtas0h3mwrzs626xk3vmfqj4y394cz4mfl3',
+      hex: '22739701e411d342e6a385dcbec1f78edc31434ad1ad166d20954912d7',
+      url: 'https://raw.githubusercontent.com/mirceahasegan/drep-registry/main/Mircea.jsonld',
+      hash: '603f3202d8d1c15f54adfd944a437e7c0b6183a4ec3c04c0dec3faadb7825ccb',
       json_metadata: null,
       bytes: null,
       error: {
         code: 'HASH_MISMATCH',
         message:
-          'Hash mismatch when fetching metadata from https://metadata-govtool.cardanoapi.io/data/Lysanne. Expected "63f947909f6333be7d791695f74e39083620b75190b5537a8b52f6a97a380a67" but got "20d47de66a173e7a1f912ba1030368755b15bfc4cb490905da2b1f8c1af2ba4e".',
+          'Hash mismatch when fetching metadata from https://raw.githubusercontent.com/mirceahasegan/drep-registry/main/Mircea.jsonld. Expected "603f3202d8d1c15f54adfd944a437e7c0b6183a4ec3c04c0dec3faadb7825ccb" but got "3a0593d40c051d06780a6f4e70643ac61807e074377a1937ab2e7bad9a1ac08a".',
       },
     },
   },
