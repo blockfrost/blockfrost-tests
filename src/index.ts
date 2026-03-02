@@ -22,6 +22,7 @@ apiEndpointsKeys.map(path => {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const filePath = path.resolve(__dirname, '../endpoints-allowlist.json');
+const blacklistFilePath = path.resolve(__dirname, '../tests-blacklist.json');
 
 export const DEFAULT_TEST_TIMEOUT = 15_000;
 
@@ -48,6 +49,20 @@ try {
   const message = error instanceof Error ? error.message : String(error);
 
   throw new Error(`Error loading endpoints-allowlist.json: ${message}`);
+}
+
+let testsBlacklist: string[] = [];
+
+if (fs.existsSync(blacklistFilePath)) {
+  try {
+    const rawData = fs.readFileSync(blacklistFilePath, 'utf8');
+
+    testsBlacklist = JSON.parse(rawData);
+  } catch (parseError: unknown) {
+    const message = parseError instanceof Error ? parseError.message : String(parseError);
+
+    throw new Error(`tests-blacklist.json is not a valid json: ${message}`);
+  }
 }
 
 export const isUrlMatch = (urlParameter: string, allowlistPattern: string) => {
@@ -81,7 +96,15 @@ export const getInstance = (clientOptions?: ExtendOptions): Got => {
 
 const skippedTests: { endpoint: string; reason: string }[] = [];
 
+export const isTestBlacklisted = (fixture: Fixture) => {
+  return testsBlacklist.length > 0 && testsBlacklist.includes(fixture.id);
+};
+
 export const shouldRunTest = (fixture: Fixture) => {
+  if (isTestBlacklisted(fixture)) {
+    return false;
+  }
+
   if (!endpointsAllowlist || endpointsAllowlist.length === 0) {
     return true;
   }
@@ -95,8 +118,12 @@ export const generateTestFromFixture = (fixture: Fixture, endpoint: string) => {
   if (shouldRunTest(fixture)) {
     generateTest(fixture, endpoint);
   } else {
-    console.log(`Skipped [${fixture.testName}] - ${endpoint}.`);
-    skippedTests.push({ endpoint, reason: `Test is not defined for ${endpoint}` });
+    const reason = isTestBlacklisted(fixture)
+      ? `Test "${fixture.id}" is blacklisted`
+      : `Test is not defined for ${endpoint}`;
+
+    console.log(`Skipped [${fixture.testName}] - ${endpoint}. Reason: ${reason}`);
+    skippedTests.push({ endpoint, reason });
   }
 };
 
