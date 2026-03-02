@@ -10,10 +10,16 @@ export default [
       {
         tx_hash: '5b75b84367bb406dcc7e404847f8c5e0c22fb5a7bae97128157fc13b458162e0',
         amount: '126321622',
+        tx_slot: 40262569,
+        block_height: 1729937,
+        block_time: 1706918569,
       },
       {
         tx_hash: 'eede3559e71c26d0ef7e01d896f631c6c714d419a83d0271a41d5abb54bda191',
         amount: '514812352',
+        tx_slot: 40348898,
+        block_height: 1733415,
+        block_time: 1707004898,
       },
     ],
   },
