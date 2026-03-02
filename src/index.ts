@@ -22,7 +22,7 @@ apiEndpointsKeys.map(path => {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const filePath = path.resolve(__dirname, '../endpoints-allowlist.json');
-const blacklistFilePath = path.resolve(__dirname, '../tests-blacklist.json');
+const blacklistFilePath = path.resolve(__dirname, '../endpoints-blacklist.json');
 
 export const DEFAULT_TEST_TIMEOUT = 15_000;
 
@@ -51,7 +51,11 @@ try {
   throw new Error(`Error loading endpoints-allowlist.json: ${message}`);
 }
 
-let testsBlacklist: string[] = [];
+type BlacklistRule = {
+  id?: string;
+};
+
+let testsBlacklist: BlacklistRule[] = [];
 
 if (fs.existsSync(blacklistFilePath)) {
   try {
@@ -96,9 +100,16 @@ export const getInstance = (clientOptions?: ExtendOptions): Got => {
 
 const skippedTests: { endpoint: string; reason: string }[] = [];
 
-export const isTestBlacklisted = (fixture: Fixture) => {
-  return testsBlacklist.length > 0 && testsBlacklist.includes(fixture.id);
+const matchesBlacklistRule = (fixture: Fixture, rule: BlacklistRule) => {
+  if (rule.id !== undefined) {
+    return rule.id === fixture.id;
+  }
+
+  return true;
 };
+
+export const isTestBlacklisted = (fixture: Fixture) =>
+  testsBlacklist.some(rule => matchesBlacklistRule(fixture, rule));
 
 export const shouldRunTest = (fixture: Fixture) => {
   if (isTestBlacklisted(fixture)) {
