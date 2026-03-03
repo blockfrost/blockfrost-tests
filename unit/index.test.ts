@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { isUrlMatch } from '../src/index.js';
+import { isUrlMatch, matchesBlacklistRule } from '../src/index.js';
+import { Fixture } from '../src/types/index.js';
 
 describe('isUrlMatch', () => {
   it('matches simple parameterized paths', () => {
@@ -133,5 +134,30 @@ describe('isUrlMatch', () => {
   it('matches when both path and pattern have no leading slash', () => {
     expect(isUrlMatch('accounts/stake', 'accounts/{stake_address}')).toBe(true);
     expect(isUrlMatch('blocks/123', 'blocks/{hash_or_number}')).toBe(true);
+  });
+});
+
+const createFixture = (id: string): Fixture => ({
+  id,
+  testName: `test-${id}`,
+  endpoints: ['health'],
+  response: {},
+});
+
+describe('matchesBlacklistRule', () => {
+  it('matches fixture by id', () => {
+    expect(matchesBlacklistRule(createFixture('abc'), { id: 'abc' })).toBe(true);
+  });
+
+  it('does not match fixture with different id', () => {
+    expect(matchesBlacklistRule(createFixture('abc'), { id: 'xyz' })).toBe(false);
+  });
+
+  it('does not match on empty rule', () => {
+    expect(matchesBlacklistRule(createFixture('abc'), {})).toBe(false);
+  });
+
+  it('does not match when rule id is undefined', () => {
+    expect(matchesBlacklistRule(createFixture('abc'), { id: undefined })).toBe(false);
   });
 });

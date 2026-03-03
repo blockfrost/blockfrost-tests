@@ -22,6 +22,7 @@ apiEndpointsKeys.map(path => {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const filePath = path.resolve(__dirname, '../endpoints-allowlist.json');
+const blacklistFilePath = path.resolve(__dirname, '../endpoints-blacklist.json');
 
 export const DEFAULT_TEST_TIMEOUT = 15_000;
 
@@ -48,6 +49,30 @@ try {
   const message = error instanceof Error ? error.message : String(error);
 
   throw new Error(`Error loading endpoints-allowlist.json: ${message}`);
+}
+
+export type BlacklistRule = {
+  id?: string;
+};
+
+let testsBlacklist: BlacklistRule[] = [];
+
+if (fs.existsSync(blacklistFilePath)) {
+  try {
+    const rawData = fs.readFileSync(blacklistFilePath, 'utf8');
+
+    const parsed: unknown = JSON.parse(rawData);
+
+    if (!Array.isArray(parsed)) {
+      throw new Error('Expected endpoints-blacklist.json to contain a JSON array.');
+    }
+
+    testsBlacklist = parsed as BlacklistRule[];
+  } catch (parseError: unknown) {
+    const message = parseError instanceof Error ? parseError.message : String(parseError);
+
+    throw new Error(`endpoints-blacklist.json is not a valid json: ${message}`);
+  }
 }
 
 export const isUrlMatch = (urlParameter: string, allowlistPattern: string) => {
@@ -81,7 +106,20 @@ export const getInstance = (clientOptions?: ExtendOptions): Got => {
 
 const skippedTests: { endpoint: string; reason: string }[] = [];
 
+export const matchesBlacklistRule = (fixture: Fixture, rule: BlacklistRule) => {
+  if (rule.id !== undefined) return rule.id === fixture.id;
+
+  return false;
+};
+
+export const isTestBlacklisted = (fixture: Fixture) =>
+  testsBlacklist.some(rule => matchesBlacklistRule(fixture, rule));
+
 export const shouldRunTest = (fixture: Fixture) => {
+  if (isTestBlacklisted(fixture)) {
+    return false;
+  }
+
   if (!endpointsAllowlist || endpointsAllowlist.length === 0) {
     return true;
   }
@@ -92,11 +130,17 @@ export const shouldRunTest = (fixture: Fixture) => {
 };
 
 export const generateTestFromFixture = (fixture: Fixture, endpoint: string) => {
-  if (shouldRunTest(fixture)) {
+  const blacklisted = isTestBlacklisted(fixture);
+
+  if (!blacklisted && shouldRunTest(fixture)) {
     generateTest(fixture, endpoint);
   } else {
-    console.log(`Skipped [${fixture.testName}] - ${endpoint}.`);
-    skippedTests.push({ endpoint, reason: `Test is not defined for ${endpoint}` });
+    const reason = blacklisted
+      ? `Test "${fixture.id}" is blacklisted`
+      : `Test is not defined for ${endpoint}`;
+
+    console.log(`Skipped [${fixture.testName}] - ${endpoint}. Reason: ${reason}`);
+    skippedTests.push({ endpoint, reason });
   }
 };
 
