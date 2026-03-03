@@ -51,7 +51,7 @@ try {
   throw new Error(`Error loading endpoints-allowlist.json: ${message}`);
 }
 
-type BlacklistRule = {
+export type BlacklistRule = {
   id?: string;
 };
 
@@ -61,11 +61,17 @@ if (fs.existsSync(blacklistFilePath)) {
   try {
     const rawData = fs.readFileSync(blacklistFilePath, 'utf8');
 
-    testsBlacklist = JSON.parse(rawData);
+    const parsed: unknown = JSON.parse(rawData);
+
+    if (!Array.isArray(parsed)) {
+      throw new Error('Expected endpoints-blacklist.json to contain a JSON array.');
+    }
+
+    testsBlacklist = parsed as BlacklistRule[];
   } catch (parseError: unknown) {
     const message = parseError instanceof Error ? parseError.message : String(parseError);
 
-    throw new Error(`tests-blacklist.json is not a valid json: ${message}`);
+    throw new Error(`endpoints-blacklist.json is not a valid json: ${message}`);
   }
 }
 
@@ -100,12 +106,10 @@ export const getInstance = (clientOptions?: ExtendOptions): Got => {
 
 const skippedTests: { endpoint: string; reason: string }[] = [];
 
-const matchesBlacklistRule = (fixture: Fixture, rule: BlacklistRule) => {
-  if (rule.id !== undefined) {
-    return rule.id === fixture.id;
-  }
+export const matchesBlacklistRule = (fixture: Fixture, rule: BlacklistRule) => {
+  if (rule.id !== undefined) return rule.id === fixture.id;
 
-  return true;
+  return false;
 };
 
 export const isTestBlacklisted = (fixture: Fixture) =>
@@ -126,10 +130,12 @@ export const shouldRunTest = (fixture: Fixture) => {
 };
 
 export const generateTestFromFixture = (fixture: Fixture, endpoint: string) => {
-  if (shouldRunTest(fixture)) {
+  const blacklisted = isTestBlacklisted(fixture);
+
+  if (!blacklisted && shouldRunTest(fixture)) {
     generateTest(fixture, endpoint);
   } else {
-    const reason = isTestBlacklisted(fixture)
+    const reason = blacklisted
       ? `Test "${fixture.id}" is blacklisted`
       : `Test is not defined for ${endpoint}`;
 
