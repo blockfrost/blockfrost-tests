@@ -86,7 +86,7 @@ export const submitTest = async (
     options?.verifyTxUsingPublicAPI ? publicBFClient! : localBFClient,
   );
 
-  expect(tx).toStrictEqual({
+  expect(tx).toMatchObject({
     hash: txHash,
     block: expect.toBeBlake2b256Hash(),
     block_height: expect.any(Number),

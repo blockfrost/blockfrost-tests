@@ -37,6 +37,7 @@ export default [
       asset_mint_or_burn_count: 1,
       redeemer_count: 3,
       valid_contract: true,
+      treasury_donation: '0',
     },
   },
   {
@@ -66,6 +67,7 @@ export default [
       asset_mint_or_burn_count: +0,
       redeemer_count: +0,
       valid_contract: true,
+      treasury_donation: '0',
     },
   },
   {
@@ -95,6 +97,7 @@ export default [
       asset_mint_or_burn_count: +0,
       redeemer_count: 194,
       valid_contract: true,
+      treasury_donation: '0',
     },
   },
   {
@@ -124,6 +127,7 @@ export default [
       asset_mint_or_burn_count: +0,
       redeemer_count: +0,
       valid_contract: true,
+      treasury_donation: '0',
     },
   },
   {
@@ -153,6 +157,7 @@ export default [
       asset_mint_or_burn_count: +0,
       redeemer_count: +0,
       valid_contract: true,
+      treasury_donation: '0',
     },
   },
   {
@@ -185,6 +190,7 @@ export default [
       asset_mint_or_burn_count: 1,
       redeemer_count: 2,
       valid_contract: true,
+      treasury_donation: '0',
     },
   },
   {
@@ -214,6 +220,7 @@ export default [
       asset_mint_or_burn_count: +0,
       redeemer_count: +0,
       valid_contract: true,
+      treasury_donation: '0',
     },
   },
   {
@@ -243,6 +250,7 @@ export default [
       asset_mint_or_burn_count: +0,
       redeemer_count: +0,
       valid_contract: true,
+      treasury_donation: '0',
     },
   },
   {
@@ -278,6 +286,7 @@ export default [
       asset_mint_or_burn_count: +0,
       redeemer_count: +0,
       valid_contract: true,
+      treasury_donation: '0',
     },
   },
   {
@@ -307,6 +316,7 @@ export default [
       asset_mint_or_burn_count: +0,
       redeemer_count: +0,
       valid_contract: true,
+      treasury_donation: '0',
     },
   },
   {
@@ -336,6 +346,7 @@ export default [
       asset_mint_or_burn_count: 168,
       redeemer_count: +0,
       valid_contract: true,
+      treasury_donation: '0',
     },
   },
   {
@@ -523,6 +534,42 @@ export default [
       asset_mint_or_burn_count: +0,
       redeemer_count: 1,
       valid_contract: true,
+      treasury_donation: '0',
+    },
+  },
+  {
+    id: 'txs-tx-treasury_donation-fbbf202f8d929db7767a2a6287f4400d295ba577a97f682af49a98b7d92f838b',
+    testName: 'txs/:tx - treasury donation',
+    endpoints: ['txs/fbbf202f8d929db7767a2a6287f4400d295ba577a97f682af49a98b7d92f838b'],
+    response: {
+      hash: 'fbbf202f8d929db7767a2a6287f4400d295ba577a97f682af49a98b7d92f838b',
+      block: 'afa36d85e64adb895613dbe62942d283bf3354ada28191ec167b102d1ee116cf',
+      block_height: 2557270,
+      block_time: 1728388821,
+      slot: 61732821,
+      index: 19,
+      output_amount: [
+        {
+          unit: 'lovelace',
+          quantity: '9879821497',
+        },
+      ],
+      fees: '168493',
+      deposit: '0',
+      size: 293,
+      invalid_before: null,
+      invalid_hereafter: null,
+      utxo_count: 3,
+      withdrawal_count: 0,
+      mir_cert_count: 0,
+      delegation_count: 0,
+      stake_cert_count: 0,
+      pool_update_count: 0,
+      pool_retire_count: 0,
+      asset_mint_or_burn_count: 0,
+      redeemer_count: 0,
+      valid_contract: true,
+      treasury_donation: '120010010',
     },
   },
 ];

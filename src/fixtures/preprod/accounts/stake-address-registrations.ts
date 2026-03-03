@@ -10,10 +10,16 @@ export default [
       {
         tx_hash: '1362badd13dd77c70416ac2c7ae6cb815944335d16bcadf4ac94e7cfaa382d00',
         action: 'registered',
+        tx_slot: 22180627,
+        block_height: 687640,
+        block_time: 1677863827,
       },
       {
         tx_hash: '8c6db967792ae28f8702254797a5aa99445900def7e09c2f3f82bda3854f35ab',
         action: 'deregistered',
+        tx_slot: 22180677,
+        block_height: 687641,
+        block_time: 1677863877,
       },
     ],
   },
