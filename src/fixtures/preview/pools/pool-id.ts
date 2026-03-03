@@ -353,6 +353,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-metadata-connection-error-only-basic-pool-metadata-info-returned_18d32a0a2891',
     testName: 'pools/:pool_id/metadata - CONNECTION_ERROR - only basic pool metadata info returned',
     endpoints: [
       'pools/pool1clnnqvd5t8y9gnsqd229glt5ag4mljz3q74y3v5lxcnk2ye056s/metadata',
@@ -398,6 +399,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-metadata-hash-mismatch-only-basic-pool-metadata-info-returned_4107da6e3b39',
     testName: 'pools/:pool_id/metadata - HASH_MISMATCH - only basic pool metadata info returned',
     endpoints: [
       'pools/844042a0c14b96bf2c65fccaaaaa9e11bbf34f0b9bbf56c89ae3c8dd/metadata',

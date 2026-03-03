@@ -313,6 +313,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-metadata-hash-mismatch-only-basic-pool-metadata-info-returned_629d26fb24ae',
     testName: 'pools/:pool_id/metadata - HASH_MISMATCH - only basic pool metadata info returned',
     endpoints: [
       'pools/pool1x5hja8cpym88s3txc45y7yq4nmq0nwma623e6duv3jx56g4ycva/metadata',

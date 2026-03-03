@@ -10,6 +10,7 @@ export default [
     response: error_404,
   },
   {
+    id: 'governance-proposal-info-action-metadata-hash-mismatch-only-basic-info-returned_e73a5bd08914',
     testName: 'governance proposal info_action metadata (hash mismatch, only basic info returned)',
     endpoints: [
       'governance/proposals/gov_action14lefp8upwhhq92xph7t075txshf9huxxh9d2ey05ml2n5hqgvlxqqp92kfl/metadata',

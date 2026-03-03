@@ -830,11 +830,11 @@ export default [
     },
   },
   {
-    id: 'addresses-address-extended-script-payment-cred_b79a52409326',
     // addr type 1 (scripthash/StakeKeyHash) holds 1 ada addr_test1zpv68zsj9af8sxg0du6zxzmnwm4ch6atlyhcwfqdyfc7qy3u7yzv8ay6qvmlywtgvt7exaxt783dxuzv03qal7muda5srdg8p9
     // addr type 3 (scripthash/scripthash) holds 3 ada addr_test1xpv68zsj9af8sxg0du6zxzmnwm4ch6atlyhcwfqdyfc7qyje5w9pyt6j0qvs7me5yv9hxaht3046h7f0sujq6gn3uqfqu495jl
     // script1tx3c5y302fupjrm0xs3skumkaw97h2le97rjgrfzw8spydzr5ej
     // https://gist.github.com/slowbackspace/53613acdafff950e08139a6e6d4fc9d2
+    id: 'addresses-address-extended-script-payment-cred_b79a52409326',
     testName: 'addresses/:address/extended (script payment cred)',
     endpoints: ['addresses/script1tx3c5y302fupjrm0xs3skumkaw97h2le97rjgrfzw8spydzr5ej/extended'],
     response: {

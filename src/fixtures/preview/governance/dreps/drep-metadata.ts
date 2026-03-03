@@ -79,6 +79,7 @@ export default [
     },
   },
   {
+    id: 'governance-drep-metadata-http-response-error-only-basic-info-is-returned_a0eeebc259a4',
     testName: 'governance drep metadata - HTTP_RESPONSE_ERROR - only basic info is returned',
     endpoints: [
       'governance/dreps/drep1ytk24kw396d09x7yccnkn2pyhc9lh6pyvr58nsz87cw4m5cgz07nr/metadata',
@@ -98,6 +99,7 @@ export default [
     },
   },
   {
+    id: 'governance-drep-metadata-hash-mismatch-only-basic-info-is-returned_6c9153c31c7c',
     testName: 'governance drep metadata - HASH_MISMATCH - only basic info is returned ',
     endpoints: [
       'governance/dreps/drep1yfeewq0yz8f59e4rshwtas0h3mwrzs626xk3vmfqj4y394cz4mfl3/metadata',
