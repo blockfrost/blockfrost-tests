@@ -178,6 +178,7 @@ export default [
   //   },
   // },
   {
+    id: 'blocks-hash-or-number-first-blocks-1-4_8cfce818362a',
     testName: 'blocks/:hash_or_number - first blocks 1/4',
     endpoints: ['blocks/1'],
     response: {
@@ -201,6 +202,7 @@ export default [
     },
   },
   {
+    id: 'blocks-hash-or-number-first-blocks-2-4_947ee266fdda',
     testName: 'blocks/:hash_or_number - first blocks 2/4',
     endpoints: ['blocks/2'],
     response: {
@@ -224,6 +226,7 @@ export default [
     },
   },
   {
+    id: 'blocks-hash-or-number-first-blocks-3-4_cfb3953a8637',
     testName: 'blocks/:hash_or_number - first blocks 3/4',
     endpoints: ['blocks/3'],
     response: {
@@ -247,6 +250,7 @@ export default [
     },
   },
   {
+    id: 'blocks-hash-or-number-first-blocks-4-4_b299ac8fa01f',
     testName: 'blocks/:hash_or_number - first blocks 4/4',
     endpoints: ['blocks/4'],
     response: {

@@ -144,6 +144,7 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-transactions-huge-stake-account-22k-txs_1484cd6ee6ae',
     testName: 'accounts/:stake_address/transactions huge stake account (22k+ txs)',
     endpoints: [
       'accounts/stake1u89xt5ewlfl0ww0a7zvn2ent0cmgl8yhh2865ppwzss9d4gltk92h/transactions?count=2&page=1',
@@ -168,6 +169,7 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-transactions-script-hash-stake-account_43c9804e787e',
     testName: 'accounts/:stake_address/transactions scriptHash stake account',
     endpoints: [
       'accounts/stake17xzc8pt7fgf0lc0x7eq6z7z6puhsxmzktna7dluahrj6g6ghh5qjr/transactions?count=2&page=1',
@@ -193,6 +195,7 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-transactions-generic-account-stake-vk-cip19-test-vector_6ddd7a7d7b0f',
     testName: 'accounts/:stake_address/transactions generic account stake_vk (cip19 test vector)',
     endpoints: [
       'accounts/stake_vk1px4j0r2fk7ux5p23shz8f3y5y2qam7s954rgf3lg5merqcj6aetsft99wu/transactions?count=1&page=1',
@@ -211,6 +214,7 @@ export default [
   },
   // query params tests
   {
+    id: 'accounts-stake-address-transactions-bf-account-from-param_cba46f8d8a70',
     testName: 'accounts/:stake_address/transactions BF account from param',
     endpoints: [
       'accounts/stake1u9uz4j024qfud557ucrqw3kqfdndjgaxj7m44x7tamkvmyqzdwe7v/transactions?from=8223596',
@@ -251,6 +255,7 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-transactions-bf-account-to-param_09eb06d7273c',
     testName: 'accounts/:stake_address/transactions BF account to param',
     endpoints: [
       'accounts/stake1u9uz4j024qfud557ucrqw3kqfdndjgaxj7m44x7tamkvmyqzdwe7v/transactions?to=7900557',
@@ -283,6 +288,7 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-transactions-bf-account-from-and-to-param_cfcc11b0ad7d',
     testName: 'accounts/:stake_address/transactions BF account from&to param',
     endpoints: [
       'accounts/stake1u9uz4j024qfud557ucrqw3kqfdndjgaxj7m44x7tamkvmyqzdwe7v/transactions?from=8223596:9&to=8223596:9',
@@ -315,6 +321,7 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-transactions-bf-account-from-and-to-param-empty-result_6534be641871',
     testName: 'accounts/:stake_address/transactions BF account from&to param empty result',
     endpoints: [
       'accounts/stake1u9uz4j024qfud557ucrqw3kqfdndjgaxj7m44x7tamkvmyqzdwe7v/transactions?from=8223596:8&to=8223596:8',

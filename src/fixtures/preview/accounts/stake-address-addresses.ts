@@ -21,6 +21,7 @@ export default [
     response: [],
   },
   {
+    id: 'accounts-stake-address-bf-stake-address-with-many-addresses_f48209785411',
     testName: 'accounts/:stake_address bf stake address with many addresses',
     endpoints: [
       'accounts/stake_test1uq70zpxr7jdqxdlj895x9lvnwn9lrcknwpx8cswlld7x76gtzvrjp/addresses',

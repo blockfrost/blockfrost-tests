@@ -21,6 +21,7 @@ export default [
     response: [],
   },
   {
+    id: 'accounts-stake-address-generic-stake-address-with-many-addresses_da5cba0a0ec7',
     testName: 'accounts/:stake_address generic stake address with many addresses',
     endpoints: [
       'accounts/stake_test1urxzevdat43p44llqk45mt4kfnr2j25p83nvq0ymxku4xdcaxnffm/addresses?count=15',

@@ -78,8 +78,8 @@ export default [
   },
   // registered drep
   {
-    id: 'accounts-stake-address-registered-drep-legacy-drep-script_77b6428e7f43',
     // shiver pottery tiny course sketch ranch castle little merit stomach page deliver weapon soon oval depart aisle consider envelope excite news feed toy kangaroo
+    id: 'accounts-stake-address-registered-drep-legacy-drep-script_77b6428e7f43',
     testName: 'accounts/:stake_address registered drep (legacy drep_script)',
     endpoints: ['accounts/stake_test1uqtv67n99jt7mj0txqne80s7gn7q8xxyzyx4xaqxfpgd52c7aqzhd'],
     response: {

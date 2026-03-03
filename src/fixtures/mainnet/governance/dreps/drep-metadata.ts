@@ -215,6 +215,7 @@ export default [
     },
   },
   {
+    id: 'governance-drep-metadata-http-response-error-only-basic-info-is-returned_7f8437747387',
     testName: 'governance drep metadata - HTTP_RESPONSE_ERROR - only basic info is returned',
     endpoints: [
       'governance/dreps/drep1yaj3k43yjt26y2hz7d2wm42j6gkvaq5j6z2da2f7n7jpkn854jk/metadata',

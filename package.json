@@ -14,6 +14,7 @@
     "test:mainnet:local": "NETWORK=mainnet vitest --ui -c ./vitest.config.integration.ts",
     "test:preprod:local": "NETWORK=preprod vitest --ui -c ./vitest.config.integration.ts",
     "test:preview:local": "NETWORK=preview vitest --ui -c ./vitest.config.integration.ts",
+    "update-fixtures-ids": "tsx scripts/add-fixtures-ids.ts",
     "type-check": "tsc --noEmit",
     "prettier-fix": "prettier --write ."
   },

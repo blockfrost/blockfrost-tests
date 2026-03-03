@@ -12,8 +12,8 @@ export default [
     response: error_404,
   },
   {
-    id: 'governance-proposal-hard-fork-initiation-metadata-hash-mismatch-dbsync-bug_dd74ac9360de',
     // dbsync cant fetch the metadata for this proposal due to  https://github.com/IntersectMBO/cardano-db-sync/issues/1928
+    id: 'governance-proposal-hard-fork-initiation-metadata-hash-mismatch-dbsync-bug_21e350a53303',
     testName: 'governance proposal hard_fork_initiation metadata (hash mismatch, dbsync bug)',
     endpoints: [
       'governance/proposals/gov_action1pvv5wmjqhwa4u85vu9f4ydmzu2mgt8n7et967ph2urhx53r70xusqnmm525/metadata',

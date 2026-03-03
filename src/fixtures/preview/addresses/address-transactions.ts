@@ -273,6 +273,7 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-transactions-script-payment-cred-cip19-test-vector_967724d19b69',
     testName: 'addresses/:address/transactions script payment_cred (cip19 test vector)',
     endpoints: [
       'addresses/script1cda3khwqv60360rp5m7akt50m6ttapacs8rqhn5w342z7r35m37/transactions?page=1&count=2',
