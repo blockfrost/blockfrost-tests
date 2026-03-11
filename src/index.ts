@@ -137,10 +137,20 @@ export const shouldRunTest = (fixture: Fixture, ignorelist: IgnoreRule[]) => {
 const generateTestFromFixture = (fixture: Fixture, endpoint: string, ignorelist: IgnoreRule[]) => {
   const ignored = isTestIgnored(fixture, ignorelist);
 
-  if (!ignored && shouldRunTest(fixture, ignorelist)) {
+  // In IGNORELIST_ONLY mode, only run tests that are on the ignorelist.
+  // This is used by CI to verify blacklisted tests still fail.
+  const shouldGenerate = envConfig.ignorelistOnly
+    ? ignored
+    : !ignored && shouldRunTest(fixture, ignorelist);
+
+  if (shouldGenerate) {
     generateTest(fixture, endpoint);
   } else {
-    const reason = ignored ? `On the ignorelist (id: "${fixture.id}")` : `Not in allowlist`;
+    const reason = envConfig.ignorelistOnly
+      ? `Not on the ignorelist (IGNORELIST_ONLY mode)`
+      : ignored
+        ? `On the ignorelist (id: "${fixture.id}")`
+        : `Not in allowlist`;
 
     skippedTests.push({ id: fixture.id, testName: fixture.testName, endpoint, reason });
   }

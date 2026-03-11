@@ -7,6 +7,8 @@ export const getConfig = () => {
   const blockchainStateSetup =
     process.env.BLOCKCHAIN_STATE_SETUP === 'true' || process.env.BLOCKCHAIN_STATE_SETUP === '1';
   const ignorelistPath: string | undefined = process.env.IGNORELIST_PATH;
+  const ignorelistOnly =
+    process.env.IGNORELIST_ONLY === 'true' || process.env.IGNORELIST_ONLY === '1';
 
   return {
     projectId,
@@ -16,5 +18,6 @@ export const getConfig = () => {
     submitMnemonic,
     blockchainStateSetup,
     ignorelistPath,
+    ignorelistOnly,
   };
 };
