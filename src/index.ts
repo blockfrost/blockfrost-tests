@@ -60,16 +60,27 @@ const loadIgnorelist = (filePath: string): IgnoreRule[] => {
     return [];
   }
 
+  const network = envConfig.network;
+
   try {
     const rawData = fs.readFileSync(filePath, 'utf8');
-
     const parsed: unknown = JSON.parse(rawData);
 
-    if (!Array.isArray(parsed)) {
-      throw new Error(`Expected ${path.basename(filePath)} to contain a JSON array.`);
+    if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) {
+      throw new Error(`Expected ${path.basename(filePath)} to be a JSON object keyed by network.`);
     }
 
-    return parsed as IgnoreRule[];
+    const entries = (parsed as Record<string, IgnoreRule[]>)[network];
+
+    if (!entries) {
+      return [];
+    }
+
+    if (!Array.isArray(entries)) {
+      throw new Error(`Expected ${path.basename(filePath)}["${network}"] to be an array.`);
+    }
+
+    return entries;
   } catch (parseError: unknown) {
     const message = parseError instanceof Error ? parseError.message : String(parseError);
 
@@ -77,8 +88,7 @@ const loadIgnorelist = (filePath: string): IgnoreRule[] => {
   }
 };
 
-// IGNORELIST_PATH env takes precedence over the default file in root
-const ignorelist = loadIgnorelist(envConfig.ignorelistPath ?? ignorelistFilePath);
+const ignorelist = loadIgnorelist(ignorelistFilePath);
 
 export const isUrlMatch = (urlParameter: string, allowlistPattern: string) => {
   try {
