@@ -32,15 +32,13 @@ export default [
   {
     id: 'accounts-stake-address-bf-stake-address-with-4-addresses_b5f5bd71c725',
     testName: 'accounts/:stake_address/addresses bf stake address with 4 addresses',
-    endpoints: ['accounts/stake1u9uz4j024qfud557ucrqw3kqfdndjgaxj7m44x7tamkvmyqzdwe7v/addresses'],
+    endpoints: [
+      'accounts/stake1u9uz4j024qfud557ucrqw3kqfdndjgaxj7m44x7tamkvmyqzdwe7v/addresses?order=desc',
+    ],
     response: [
       {
         address:
-          'addr1q8zsjx7vxkl4esfejafhxthyew8c54c9ch95gkv3nz37sxrc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgq3jd3w2',
-      },
-      {
-        address:
-          'addr1qxrrzqsqnzqx3p8sxxsry936h6c78ml4rdl224f33l7pmcnc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgqr735lq',
+          'addr1qy6qvd3szupa7ayqf6zw7cd0ple7w3yg5f3xh5gkkc4q9zmc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgq52e2en',
       },
       {
         address:
@@ -48,7 +46,11 @@ export default [
       },
       {
         address:
-          'addr1qy6qvd3szupa7ayqf6zw7cd0ple7w3yg5f3xh5gkkc4q9zmc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgq52e2en',
+          'addr1qxrrzqsqnzqx3p8sxxsry936h6c78ml4rdl224f33l7pmcnc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgqr735lq',
+      },
+      {
+        address:
+          'addr1q8zsjx7vxkl4esfejafhxthyew8c54c9ch95gkv3nz37sxrc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgq3jd3w2',
       },
     ],
   },

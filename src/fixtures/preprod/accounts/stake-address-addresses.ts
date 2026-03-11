@@ -89,4 +89,21 @@ export default [
       },
     ],
   },
+  {
+    id: 'accounts-stake-address-generic-stake-address-with-many-addresses_da5cba0a0ec7',
+    testName: 'accounts/:stake_address/addresses generic stake address with many addresses',
+    endpoints: [
+      'accounts/stake_test1urxzevdat43p44llqk45mt4kfnr2j25p83nvq0ymxku4xdcaxnffm/addresses?count=2&page=3',
+    ],
+    response: [
+      {
+        address:
+          'addr_test1qrkzc4slyjag0aj73sahznxjarqqwdchjzrp8h02097vzuxv9jcm6htzrttl7pdtfkhtvnxx4y4gz0rxcq7fkdde2vmsrlzzfk',
+      },
+      {
+        address:
+          'addr_test1qpntm4dxgusfmq7e54ymscvts9fuagph7h37s244ta3wmh7v9jcm6htzrttl7pdtfkhtvnxx4y4gz0rxcq7fkdde2vmsd0wx9q',
+      },
+    ],
+  },
 ];
