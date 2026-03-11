@@ -17,16 +17,14 @@ export default [
       'accounts/stake1u833p40y8cm07ra9wgrqgp70z6khc5pttrena97c6en6p8c7pzxda/addresses?count=2&page=2',
     ],
     response: [
-      [
-        {
-          address:
-            'addr1qxdfqunt6cjd03485aqpma6e065kvf2vuxznfu6ex0kjnclrzr27g03klu862usxqsru794d03gzkk8n86ta34n85z0s704vzm',
-        },
-        {
-          address:
-            'addr1qx9kyme7tyhqdlsglxx2w2e34qv85jvqxxlv9xjvm6vvzrlrzr27g03klu862usxqsru794d03gzkk8n86ta34n85z0scrj6mx',
-        },
-      ],
+      {
+        address:
+          'addr1qxdfqunt6cjd03485aqpma6e065kvf2vuxznfu6ex0kjnclrzr27g03klu862usxqsru794d03gzkk8n86ta34n85z0s704vzm',
+      },
+      {
+        address:
+          'addr1qx9kyme7tyhqdlsglxx2w2e34qv85jvqxxlv9xjvm6vvzrlrzr27g03klu862usxqsru794d03gzkk8n86ta34n85z0scrj6mx',
+      },
     ],
   },
   {
