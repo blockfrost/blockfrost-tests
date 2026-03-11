@@ -14,7 +14,7 @@ export default [
   },
   {
     id: 'tx-submit-valid-cbor_65373de66591',
-    testName: 'tx/submit - valid CBOR',
+    testName: 'tx/submit - valid CBOR (invalid tx)',
     endpoints: ['tx/submit'],
 
     postBody: Buffer.from(
@@ -26,7 +26,7 @@ export default [
     response: {
       error: 'Bad Request',
       message: expect.stringContaining(
-        '{"contents":{"contents":{"contents":{"era":"ShelleyBasedEraConway","error":["ConwayUtxowFailure (UtxoFailure (OutsideValidityIntervalUTxO (ValidityInterval {invalidBefore = SNothing, invalidHereafter = SJust (SlotNo 39433888)})',
+        '{"contents":{"contents":{"contents":{"era":"ShelleyBasedEraConway","error":["ConwayMempoolFailure \\"All inputs are spent. Transaction has probably already been included\\""],"kind":"ShelleyTxValidationError"},"tag":"TxValidationErrorInCardanoMode"},"tag":"TxCmdTxSubmitValidationError"},"tag":"TxSubmitFail"}',
       ),
       status_code: 400,
     },
