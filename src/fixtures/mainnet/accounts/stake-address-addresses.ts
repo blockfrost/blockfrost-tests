@@ -1,7 +1,7 @@
 export default [
   {
     id: 'accounts-stake-address-generic-dormant-stake-address-with-one-address_d3cca304de9a',
-    testName: 'accounts/:stake_address generic dormant stake address with one address',
+    testName: 'accounts/:stake_address/addresses generic dormant stake address with one address',
     endpoints: ['accounts/stake1uyluup0rh6r2cc7kcw8nudqz990ezf5ltagxmw3u8deukvqwq7etq/addresses'],
     response: [
       {
@@ -11,17 +11,32 @@ export default [
     ],
   },
   {
-    id: 'accounts-stake-address-bf-stake-address-with-4-addresses_b5f5bd71c725',
-    testName: 'accounts/:stake_address bf stake address with 4 addresses',
-    endpoints: ['accounts/stake1u9uz4j024qfud557ucrqw3kqfdndjgaxj7m44x7tamkvmyqzdwe7v/addresses'],
+    id: 'accounts-stake-address-400k',
+    testName: 'accounts/:stake_address/addresses 400k+ addresses',
+    endpoints: [
+      'accounts/stake1u833p40y8cm07ra9wgrqgp70z6khc5pttrena97c6en6p8c7pzxda/addresses?count=2&page=2',
+    ],
     response: [
       {
         address:
-          'addr1q8zsjx7vxkl4esfejafhxthyew8c54c9ch95gkv3nz37sxrc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgq3jd3w2',
+          'addr1qxdfqunt6cjd03485aqpma6e065kvf2vuxznfu6ex0kjnclrzr27g03klu862usxqsru794d03gzkk8n86ta34n85z0s704vzm',
       },
       {
         address:
-          'addr1qxrrzqsqnzqx3p8sxxsry936h6c78ml4rdl224f33l7pmcnc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgqr735lq',
+          'addr1qx9kyme7tyhqdlsglxx2w2e34qv85jvqxxlv9xjvm6vvzrlrzr27g03klu862usxqsru794d03gzkk8n86ta34n85z0scrj6mx',
+      },
+    ],
+  },
+  {
+    id: 'accounts-stake-address-bf-stake-address-with-4-addresses_b5f5bd71c725',
+    testName: 'accounts/:stake_address/addresses bf stake address with 4 addresses',
+    endpoints: [
+      'accounts/stake1u9uz4j024qfud557ucrqw3kqfdndjgaxj7m44x7tamkvmyqzdwe7v/addresses?order=desc',
+    ],
+    response: [
+      {
+        address:
+          'addr1qy6qvd3szupa7ayqf6zw7cd0ple7w3yg5f3xh5gkkc4q9zmc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgq52e2en',
       },
       {
         address:
@@ -29,13 +44,17 @@ export default [
       },
       {
         address:
-          'addr1qy6qvd3szupa7ayqf6zw7cd0ple7w3yg5f3xh5gkkc4q9zmc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgq52e2en',
+          'addr1qxrrzqsqnzqx3p8sxxsry936h6c78ml4rdl224f33l7pmcnc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgqr735lq',
+      },
+      {
+        address:
+          'addr1q8zsjx7vxkl4esfejafhxthyew8c54c9ch95gkv3nz37sxrc9ty742qncmffaesxqarvqjmxmy36d9aht2duhmhvekgq3jd3w2',
       },
     ],
   },
   {
     id: 'accounts-stake-address-generic-stake-address-with-zero-addresses_58a5c07d3316',
-    testName: 'accounts/:stake_address generic stake address with zero addresses',
+    testName: 'accounts/:stake_address/addresses generic stake address with zero addresses',
     endpoints: ['accounts/stake1u9q7y25vy0l4jan6k8r0g2zn2ranezmmk0jnprvvmxqns9cvnhhkl/addresses'],
     response: [],
   },
