@@ -15,6 +15,7 @@ export interface BlockchainParameters {
     | 'max_tx_size'
   >;
   currentSlot: number;
+  invalidBefore?: number;
 }
 export const composeTransaction = (
   address: string,
@@ -55,6 +56,12 @@ export const composeTransaction = (
   const ttl = params.currentSlot + 7200;
 
   txBuilder.set_ttl(ttl);
+
+  if (params.invalidBefore !== undefined) {
+    txBuilder.set_validity_start_interval_bignum(
+      CardanoWasm.BigNum.from_str(params.invalidBefore.toString()),
+    );
+  }
 
   // Add output to the tx
   txBuilder.add_output(
