@@ -16,6 +16,7 @@ import { getConfig } from '../config.js';
  * @param options.fetchParametersFromPublicAPI - If true, fetches blockchain parameters from public Blockfrost API instead of the configured backend. Defaults to false.
  * @param options.verifyTxUsingPublicAPI - If true, verifies transaction confirmation using public Blockfrost API instead of the configured backend. Defaults to false.
  * @param options.blockfrostAPIUrl - Custom Blockfrost API URL to use when fetchParametersFromPublicAPI or verifyTxUsingPublicAPI is true. If not provided, uses the default public Blockfrost API.
+ * @param options.invalidBefore - Optional slot number. If set, the transaction will not be valid before this slot.
  */
 export const submitTest = async (
   network: Network,
@@ -25,6 +26,7 @@ export const submitTest = async (
     fetchParametersFromPublicAPI?: boolean;
     verifyTxUsingPublicAPI?: boolean;
     blockfrostAPIUrl?: string;
+    invalidBefore?: number;
   },
 ) => {
   const envConfig = getConfig();
@@ -56,6 +58,7 @@ export const submitTest = async (
     network,
     blockchainParameters: options?.blockchainParameters,
     blockfrostClient: publicBFClient ?? localBFClient,
+    invalidBefore: options?.invalidBefore,
   });
   const signedTxJson = signedTx.to_js_value();
 
@@ -99,7 +102,7 @@ export const submitTest = async (
     fees: signedTxJson.body.fee,
     deposit: '0',
     size: expect.any(Number),
-    invalid_before: null,
+    invalid_before: options?.invalidBefore ? String(options.invalidBefore) : null,
     invalid_hereafter: signedTxJson.body.ttl,
     utxo_count: signedTxJson.body.outputs.length + signedTxJson.body.inputs.length,
     withdrawal_count: 0,

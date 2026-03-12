@@ -29,6 +29,7 @@ export const buildTx = async (options: {
   blockfrostClient: BlockFrostAPI;
   network: Network;
   blockchainParameters?: BlockchainParameters;
+  invalidBefore?: number;
 }) => {
   const { MNEMONIC, OUTPUT_AMOUNT, environment } = await init();
   const { blockfrostClient, blockchainParameters } = options;
@@ -68,6 +69,7 @@ export const buildTx = async (options: {
   const { txBody } = composeTransaction(address, address, OUTPUT_AMOUNT, utxos, {
     protocolParams: protocolParameters,
     currentSlot: currentSlot!,
+    invalidBefore: options.invalidBefore,
   });
 
   // Sign transaction
