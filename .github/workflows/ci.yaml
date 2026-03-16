@@ -28,3 +28,5 @@ jobs:
 
       - name: Test
         run: yarn test
+        env:
+          NETWORK: mainnet
