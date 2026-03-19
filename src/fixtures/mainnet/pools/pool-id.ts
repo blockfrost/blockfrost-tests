@@ -64,8 +64,8 @@ export default [
       reward_account: 'stake1u85438ffegdckx7ue4dnlnmam3y9pj706ca5ty6k7hfw66cr88h5z',
       owners: [
         'stake1uy5z0sz2rp8cd2r0m6vencdnt9m0y99eack2yryrtpxn60qknvq55',
-        'stake1u9s00yejt9nvmwfj7yhu0cjg6744alpcfcwhtr7sx9kt0tsmcuq55',
         'stake1uxt4xh7hxkkz6la2ndnlnwg07djsncvdptqmz8t8jqc9zjgj8gac4',
+        'stake1uxeum36f74cmyjm9k7lvvjnzwts76h529hrv036frzrhw2c76ghv0',
         'stake1u8tln79d7040nxum39agnc8v2e473khmkn9jmc9sljgyksszeft6x',
         'stake1u85438ffegdckx7ue4dnlnmam3y9pj706ca5ty6k7hfw66cr88h5z',
         'stake1u8ahk5y0kp3gdtuur9tu0llj6hk85kfhmca5ngnpnxmaa9qnpeqct',
@@ -96,6 +96,7 @@ export default [
         'aecc7042fd314164ab3b3193235d063ea9d9427f01e412c2d3999c065f070321',
         'f046b5b76608c29b1bc125e2fe6c6b4c9da7ed1c6716a51a68b667dbd4234da5',
         'f3efabf021628e0568a9cba0c564f27c75a0af0b07ad1c2010fb3aa616768704',
+        '10c22f409630b08b9c12a3014c817e9989183dafc6c40a1f07488541c8aedaba',
       ],
       retirement: [],
       calidus_key: null,
