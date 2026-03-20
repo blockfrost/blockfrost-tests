@@ -92,6 +92,8 @@ import governanceDrepDelegators from './governance/dreps/drep-metadata.js';
 import governanceDrepMetadata from './governance/dreps/drep-delegators.js';
 import governanceDrepUpdates from './governance/dreps/drep-updates.js';
 import governanceDrepVotes from './governance/dreps/drep-votes.js';
+import governanceProposalsHashIndexMetadata from './governance/proposals/hash-cert-index-metadata.js';
+import governanceProposalsHashIndexParameters from './governance/proposals/hash-cert-index-parameters.js';
 
 import governanceProposals from './governance/proposals/index.js';
 import governanceProposalsHashIndex from './governance/proposals/hash-cert-index.js';
@@ -186,6 +188,8 @@ export const mainnetFixtures = {
     ...governanceProposals,
     ...governanceProposalsHashIndex,
     ...governanceProposalsHashIndexVotes,
+    ...governanceProposalsHashIndexMetadata,
+    ...governanceProposalsHashIndexParameters,
   ],
   txs: [
     ...txsTx,
