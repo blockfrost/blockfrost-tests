@@ -22,7 +22,7 @@ apiEndpointsKeys.map(path => {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const filePath = path.resolve(__dirname, '../endpoints-allowlist.json');
-const blacklistFilePath = path.resolve(__dirname, '../endpoints-blacklist.json');
+const ignorelistFilePath = path.resolve(__dirname, '../endpoints-ignorelist.json');
 
 export const DEFAULT_TEST_TIMEOUT = 15_000;
 
@@ -51,29 +51,44 @@ try {
   throw new Error(`Error loading endpoints-allowlist.json: ${message}`);
 }
 
-export type BlacklistRule = {
+export type IgnoreRule = {
   id?: string;
 };
 
-let testsBlacklist: BlacklistRule[] = [];
+const loadIgnorelist = (filePath: string): IgnoreRule[] => {
+  if (!fs.existsSync(filePath)) {
+    return [];
+  }
 
-if (fs.existsSync(blacklistFilePath)) {
+  const network = envConfig.network;
+
   try {
-    const rawData = fs.readFileSync(blacklistFilePath, 'utf8');
-
+    const rawData = fs.readFileSync(filePath, 'utf8');
     const parsed: unknown = JSON.parse(rawData);
 
-    if (!Array.isArray(parsed)) {
-      throw new Error('Expected endpoints-blacklist.json to contain a JSON array.');
+    if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) {
+      throw new Error(`Expected ${path.basename(filePath)} to be a JSON object keyed by network.`);
     }
 
-    testsBlacklist = parsed as BlacklistRule[];
+    const entries = (parsed as Record<string, IgnoreRule[]>)[network];
+
+    if (!entries) {
+      return [];
+    }
+
+    if (!Array.isArray(entries)) {
+      throw new Error(`Expected ${path.basename(filePath)}["${network}"] to be an array.`);
+    }
+
+    return entries;
   } catch (parseError: unknown) {
     const message = parseError instanceof Error ? parseError.message : String(parseError);
 
-    throw new Error(`endpoints-blacklist.json is not a valid json: ${message}`);
+    throw new Error(`${path.basename(filePath)} is not a valid json: ${message}`);
   }
-}
+};
+
+const ignorelist = loadIgnorelist(ignorelistFilePath);
 
 export const isUrlMatch = (urlParameter: string, allowlistPattern: string) => {
   try {
@@ -104,19 +119,19 @@ export const getInstance = (clientOptions?: ExtendOptions): Got => {
   });
 };
 
-const skippedTests: { endpoint: string; reason: string }[] = [];
+const skippedTests: { id: string; testName: string; endpoint: string; reason: string }[] = [];
 
-export const matchesBlacklistRule = (fixture: Fixture, rule: BlacklistRule) => {
+export const matchesIgnoreRule = (fixture: Fixture, rule: IgnoreRule) => {
   if (rule.id !== undefined) return rule.id === fixture.id;
 
   return false;
 };
 
-export const isTestBlacklisted = (fixture: Fixture) =>
-  testsBlacklist.some(rule => matchesBlacklistRule(fixture, rule));
+export const isTestIgnored = (fixture: Fixture, ignorelist: IgnoreRule[]) =>
+  ignorelist.some(rule => matchesIgnoreRule(fixture, rule));
 
-export const shouldRunTest = (fixture: Fixture) => {
-  if (isTestBlacklisted(fixture)) {
+export const shouldRunTest = (fixture: Fixture, ignorelist: IgnoreRule[]) => {
+  if (isTestIgnored(fixture, ignorelist)) {
     return false;
   }
 
@@ -129,18 +144,25 @@ export const shouldRunTest = (fixture: Fixture) => {
   );
 };
 
-export const generateTestFromFixture = (fixture: Fixture, endpoint: string) => {
-  const blacklisted = isTestBlacklisted(fixture);
+const generateTestFromFixture = (fixture: Fixture, endpoint: string, ignorelist: IgnoreRule[]) => {
+  const ignored = isTestIgnored(fixture, ignorelist);
 
-  if (!blacklisted && shouldRunTest(fixture)) {
+  // In IGNORELIST_ONLY mode, only run tests that are on the ignorelist.
+  // This is used by CI to verify blacklisted tests still fail.
+  const shouldGenerate = envConfig.ignorelistOnly
+    ? ignored
+    : !ignored && shouldRunTest(fixture, ignorelist);
+
+  if (shouldGenerate) {
     generateTest(fixture, endpoint);
   } else {
-    const reason = blacklisted
-      ? `Test "${fixture.id}" is blacklisted`
-      : `Test is not defined for ${endpoint}`;
+    const reason = envConfig.ignorelistOnly
+      ? `Not on the ignorelist (IGNORELIST_ONLY mode)`
+      : ignored
+        ? `On the ignorelist (id: "${fixture.id}")`
+        : `Not in allowlist`;
 
-    console.log(`Skipped [${fixture.testName}] - ${endpoint}. Reason: ${reason}`);
-    skippedTests.push({ endpoint, reason });
+    skippedTests.push({ id: fixture.id, testName: fixture.testName, endpoint, reason });
   }
 };
 
@@ -171,6 +193,42 @@ const makeRequest = async (
   return { data, headers: response.headers, time_elapsed: end - start };
 };
 
+const printIgnoredTests = () => {
+  if (skippedTests.length === 0) return;
+
+  const ignored = skippedTests.filter(t => t.reason.startsWith('On the ignorelist'));
+  const notInAllowlist = skippedTests.filter(t => !t.reason.startsWith('On the ignorelist'));
+
+  const lines: string[] = [];
+
+  lines.push('');
+  lines.push(`  Skipped tests: ${skippedTests.length} total`);
+  lines.push('  ' + '─'.repeat(60));
+
+  if (ignored.length > 0) {
+    lines.push('');
+    lines.push(`  Ignored (${ignored.length}):`);
+
+    for (const t of ignored) {
+      lines.push(`    ⊘ [${t.id}] ${t.testName} — ${t.endpoint}`);
+    }
+  }
+
+  if (notInAllowlist.length > 0) {
+    lines.push('');
+    lines.push(`  Not in allowlist (${notInAllowlist.length}):`);
+
+    for (const t of notInAllowlist) {
+      lines.push(`    ⊘ [${t.id}] ${t.testName} — ${t.endpoint}`);
+    }
+  }
+
+  lines.push('  ' + '─'.repeat(60));
+  lines.push('');
+
+  console.log(lines.join('\n'));
+};
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const generateTestSuite = (fixtures: any) => {
   for (const fixtureName of Object.keys(fixtures)) {
@@ -186,16 +244,13 @@ export const generateTestSuite = (fixtures: any) => {
 
       for (const fixture of f) {
         for (const endpoint of fixture.endpoints) {
-          generateTestFromFixture(fixture, endpoint);
+          generateTestFromFixture(fixture, endpoint, ignorelist);
         }
       }
     });
   }
 
-  if (skippedTests.length > 0) {
-    console.log('Skipped tests:');
-    console.table(skippedTests);
-  }
+  printIgnoredTests();
 };
 
 export const getPaginationFixtures = (url: string) =>

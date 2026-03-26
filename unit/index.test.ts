@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isUrlMatch, matchesBlacklistRule } from '../src/index.js';
+import { isUrlMatch, matchesIgnoreRule } from '../src/index.js';
 import { Fixture } from '../src/types/index.js';
 
 describe('isUrlMatch', () => {
@@ -144,20 +144,20 @@ const createFixture = (id: string): Fixture => ({
   response: {},
 });
 
-describe('matchesBlacklistRule', () => {
+describe('matchesIgnoreRule', () => {
   it('matches fixture by id', () => {
-    expect(matchesBlacklistRule(createFixture('abc'), { id: 'abc' })).toBe(true);
+    expect(matchesIgnoreRule(createFixture('abc'), { id: 'abc' })).toBe(true);
   });
 
   it('does not match fixture with different id', () => {
-    expect(matchesBlacklistRule(createFixture('abc'), { id: 'xyz' })).toBe(false);
+    expect(matchesIgnoreRule(createFixture('abc'), { id: 'xyz' })).toBe(false);
   });
 
   it('does not match on empty rule', () => {
-    expect(matchesBlacklistRule(createFixture('abc'), {})).toBe(false);
+    expect(matchesIgnoreRule(createFixture('abc'), {})).toBe(false);
   });
 
   it('does not match when rule id is undefined', () => {
-    expect(matchesBlacklistRule(createFixture('abc'), { id: undefined })).toBe(false);
+    expect(matchesIgnoreRule(createFixture('abc'), { id: undefined })).toBe(false);
   });
 });

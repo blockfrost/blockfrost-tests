@@ -6,6 +6,12 @@ export const getConfig = () => {
   const submitMnemonic: string | undefined = process.env.SUBMIT_MNEMONIC;
   const blockchainStateSetup =
     process.env.BLOCKCHAIN_STATE_SETUP === 'true' || process.env.BLOCKCHAIN_STATE_SETUP === '1';
+  const ignorelistOnly =
+    process.env.IGNORELIST_ONLY === 'true' || process.env.IGNORELIST_ONLY === '1';
+
+  if (!network) {
+    throw new Error(`NETWORK env is not set.`);
+  }
 
   return {
     projectId,
@@ -14,5 +20,6 @@ export const getConfig = () => {
     environment,
     submitMnemonic,
     blockchainStateSetup,
+    ignorelistOnly,
   };
 };
