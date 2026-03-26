@@ -376,6 +376,7 @@ export default [
     },
   },
   {
+    id: 'pools-pool-id-metadata-http-response-error-only-basic-pool-metadata-info-returned_873f98ce50c5',
     testName:
       'pools/:pool_id/metadata - HTTP_RESPONSE_ERROR - only basic pool metadata info returned',
     endpoints: [

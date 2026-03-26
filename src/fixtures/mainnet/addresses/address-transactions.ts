@@ -2112,6 +2112,7 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-transactions-script-payment-cred-native-script-normal-and-self-tx_951fc6e53eae',
     testName:
       'addresses/:address/transactions script payment_cred (native script normal and self tx)',
     endpoints: [

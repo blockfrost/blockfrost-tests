@@ -6,6 +6,7 @@ const paginationFixtures = getPaginationFixtures(
 
 export default [
   {
+    id: 'accounts-stake-address-transactions-bf-account-16-txs-on-4-addresses-11-txs-without-sent-to-self-duplicates_5bbd153cd6da',
     testName:
       'accounts/:stake_address/transactions BF account (16 txs on 4 addresses, 11 txs without sent to self duplicates)',
     endpoints: [

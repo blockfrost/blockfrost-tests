@@ -278,7 +278,7 @@ export const getPaginationFixtures = (url: string) =>
 export const generateTest = (fixture: Fixture, endpoint: string) => {
   const timeout = fixture.customTimeout || DEFAULT_TEST_TIMEOUT;
 
-  test(`[${fixture.testName}] - ${endpoint}`, { timeout, retry: fixture.retry }, async () => {
+  test(`[${fixture.id}] [${fixture.testName}] - ${endpoint}`, { timeout, retry: fixture.retry }, async () => {
     if (fixture.customTest) {
       // custom assertion defined within fixture
       const gotClient = getClientForFixture(fixture);
