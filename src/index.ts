@@ -148,7 +148,7 @@ const generateTestFromFixture = (fixture: Fixture, endpoint: string, ignorelist:
   const ignored = isTestIgnored(fixture, ignorelist);
 
   // In IGNORELIST_ONLY mode, only run tests that are on the ignorelist.
-  // This is used by CI to verify blacklisted tests still fail.
+  // This is used by CI to verify tests on the ignorelist still fail.
   const shouldGenerate = envConfig.ignorelistOnly
     ? ignored
     : !ignored && shouldRunTest(fixture, ignorelist);
