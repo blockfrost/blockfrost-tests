@@ -11,6 +11,7 @@ export default [
   },
 
   {
+    id: 'governance-treasury-withdrawals-metadata-http-response-error-only-basic-info-returned_c4bd5a95b1e7',
     testName:
       'governance treasury_withdrawals metadata (HTTP_RESPONSE_ERROR, only basic info returned)',
     services: ['ryo'],
@@ -33,6 +34,7 @@ export default [
     },
   },
   {
+    id: 'governance-treasury-withdrawals-metadata-decode-error-ipfs-only-basic-info-returned_3509e8913797',
     testName:
       'governance treasury_withdrawals metadata (DECODE_ERROR IPFS, only basic info returned)',
     services: ['ryo'],

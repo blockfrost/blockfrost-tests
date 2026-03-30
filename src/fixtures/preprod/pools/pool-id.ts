@@ -290,6 +290,7 @@ export default [
     endpoints: ['pools/pool1y6chk7x7fup4ms9leesdr57r4qy9cwxuee0msan72x976a6u0nc'],
   },
   {
+    id: 'pools-pool-id-metadata-http-response-error-only-basic-pool-metadata-info-returned_e033412b7920',
     testName:
       'pools/:pool_id/metadata - HTTP_RESPONSE_ERROR - only basic pool metadata info returned',
     endpoints: [

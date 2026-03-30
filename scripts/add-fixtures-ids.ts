@@ -57,8 +57,12 @@ function processFile(filePath: string): { modified: boolean; idsAdded: number } 
     const line = lines[i];
     const trimmed = line.trim();
 
-    // Match testName line
-    const testNameMatch = trimmed.match(/^testName:\s*['"](.*?)['"]/);
+    // Match testName line (single-line or multi-line)
+    let testNameMatch = trimmed.match(/^testName:\s*['"](.*?)['"]/);
+
+    if (!testNameMatch && trimmed === 'testName:' && i + 1 < lines.length) {
+      testNameMatch = lines[i + 1].trim().match(/^['"](.*?)['"]/);
+    }
 
     if (testNameMatch) {
       // Check if id already exists (look back for it)

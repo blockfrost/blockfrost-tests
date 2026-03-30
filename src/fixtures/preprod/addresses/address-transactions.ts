@@ -7,15 +7,59 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
-    id: 'addresses-address-transactions-generic-dormant-shelley-address_70982dbb329f',
-    testName: 'addresses/:address/transactions generic dormant shelley address',
+    id: 'addresses-address-transactions-generic-dormant-shelley-address-paginated_70982dbb329f',
+    testName: 'addresses/:address/transactions generic dormant shelley address paginated',
     endpoints: [
       'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/transactions?page=1011&count=6',
       'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/transactions?page=1011&count=6&order=asc',
-      'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/transactions?count=6&from=723665:24&to=723665:29',
-      'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/transactions?from=723665:24&to=723665:29',
       'addresses/addr_vkh1c6xg0hkmmplr98yl08lrjpqlswmg636hnjpxvvp48th3zsq296f/transactions?page=1011&count=6',
       'addresses/addr_vkh1c6xg0hkmmplr98yl08lrjpqlswmg636hnjpxvvp48th3zsq296f/transactions?page=1011&count=6&order=asc',
+    ],
+    response: [
+      {
+        tx_hash: '209c23e0235c15db272b00790313a34d61d37fda3eb4f8b544280963af4095d8',
+        tx_index: 24,
+        block_height: 723_665,
+        block_time: 1_678_782_258,
+      },
+      {
+        tx_hash: 'ae5987bef40e9e9370e824b6596f6f3413a9770cd2ad0dbf5bea8944468fb37c',
+        tx_index: 25,
+        block_height: 723_665,
+        block_time: 1_678_782_258,
+      },
+      {
+        tx_hash: '362f8f687eff040008da0569f6669a1a3c74affc91cd3cefa17ab9185863d73c',
+        tx_index: 26,
+        block_height: 723_665,
+        block_time: 1_678_782_258,
+      },
+      {
+        tx_hash: 'cbad6308e91e31fc6642243c7ff91a21fac6eb789f1e5c7b59e56cb41938769c',
+        tx_index: 27,
+        block_height: 723_665,
+        block_time: 1_678_782_258,
+      },
+      {
+        tx_hash: 'fa116de4602ec3204cb1181bfab5041e331ea435951c69bf10388ac179c237ae',
+        tx_index: 28,
+        block_height: 723_665,
+        block_time: 1_678_782_258,
+      },
+      {
+        tx_hash: '78d8eb18923e9d1a914d88bf7f94054acf88d0e49e87fd6894fab514b5be552a',
+        tx_index: 29,
+        block_height: 723_665,
+        block_time: 1_678_782_258,
+      },
+    ],
+  },
+  {
+    id: 'addresses-address-transactions-generic-dormant-shelley-address-from-to_70982dbb329f',
+    testName: 'addresses/:address/transactions generic dormant shelley address from/to',
+    endpoints: [
+      'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/transactions?count=6&from=723665:24&to=723665:29',
+      'addresses/addr_test1wrrgep77m0v8uv5unauluwgyr7pmdr2827wgye3sx5aw7yg7z2dsu/transactions?from=723665:24&to=723665:29',
       'addresses/addr_vkh1c6xg0hkmmplr98yl08lrjpqlswmg636hnjpxvvp48th3zsq296f/transactions?count=6&from=723665:24&to=723665:29',
       'addresses/addr_vkh1c6xg0hkmmplr98yl08lrjpqlswmg636hnjpxvvp48th3zsq296f/transactions?from=723665:24&to=723665:29',
     ],
@@ -735,6 +779,7 @@ export default [
     ],
   },
   {
+    id: 'addresses-address-transactions-script-payment-cred-native-script-normal-and-self-tx_3a5284ae96ce',
     testName:
       'addresses/:address/transactions script payment_cred (native script normal and self tx)',
     endpoints: [
