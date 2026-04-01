@@ -9,10 +9,6 @@ export const getConfig = () => {
   const ignorelistOnly =
     process.env.IGNORELIST_ONLY === 'true' || process.env.IGNORELIST_ONLY === '1';
 
-  if (!network) {
-    throw new Error(`NETWORK env is not set.`);
-  }
-
   return {
     projectId,
     serverUrl,
