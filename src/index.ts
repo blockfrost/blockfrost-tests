@@ -70,6 +70,10 @@ const loadIgnorelist = (filePath: string): IgnoreRule[] => {
       throw new Error(`Expected ${path.basename(filePath)} to be a JSON object keyed by network.`);
     }
 
+    if (!network) {
+      return [];
+    }
+
     const entries = (parsed as Record<string, IgnoreRule[]>)[network];
 
     if (!entries) {
