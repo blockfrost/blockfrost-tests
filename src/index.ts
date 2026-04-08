@@ -257,8 +257,42 @@ export const generateTestSuite = (fixtures: any) => {
   printIgnoredTests();
 };
 
-export const getPaginationFixtures = (url: string) =>
-  [
+export const getPaginationFixtures = (
+  url: string,
+  options?: { fromToPagination?: { format: 'height' | 'height:index' } },
+) => {
+  const fromToFixtures =
+    options?.fromToPagination ?
+      [
+        // from/to - invalid range
+        {
+          testName: `${url} pagination from/to range error`,
+          type: 'from_to',
+          endpoints:
+            options.fromToPagination.format === 'height:index'
+              ? [`${url}?from=999999999:0&to=1:0`]
+              : [`${url}?from=999999999&to=1`],
+          response: {
+            status_code: 400,
+            error: 'Bad Request',
+            message: 'Invalid (malformed or out of range) from/to parameter(s).',
+          },
+        },
+        // from/to - not integer
+        {
+          testName: `${url} pagination from/to format error`,
+          type: 'from_to',
+          endpoints: [`${url}?from=abc`],
+          response: {
+            status_code: 400,
+            error: 'Bad Request',
+            message: 'Invalid (malformed or out of range) from/to parameter(s).',
+          },
+        },
+      ]
+    : [];
+
+  return [
     // order
     {
       testName: `${url} pagination order error`,
@@ -332,7 +366,10 @@ export const getPaginationFixtures = (url: string) =>
         message: 'querystring/count must be >= 1',
       },
     },
+    // from/to (optional)
+    ...fromToFixtures,
   ] as const;
+};
 
 export const generateTest = (fixture: Fixture, endpoint: string) => {
   const timeout = fixture.customTimeout || DEFAULT_TEST_TIMEOUT;

@@ -24,6 +24,7 @@ import assetHistory from './assets/asset-history.js';
 import assetPolicyPolicyId from './assets/asset-policy-policy-id.js';
 import assetTransactions from './assets/asset-transactions.js';
 import assetTxs from './assets/asset-txs.js';
+import assetUtxos from './assets/asset-utxos.js';
 
 import blocksOthers from './blocks/_others.js';
 import blocksHashOrNumber from './blocks/hash-or-number.js';
@@ -130,6 +131,7 @@ export const previewFixtures = {
     ...assetPolicyPolicyId,
     ...assetTransactions,
     ...assetTxs,
+    ...assetUtxos,
   ],
   blocks: [
     ...blocksOthers,

@@ -7,10 +7,12 @@ import blocksLatestTxsCbor from './blocks/latest/txs/cbor.js';
 import epochsLatest from './epochs/latest.js';
 import utilsTxsEvaluate from './utils/txs-evaluate.js';
 import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
+import assetUtxos from './assets/asset-utxos.js';
 
 export const commonFixtures = {
   health: [...healthRoot, ...healthClock],
   root: [...root],
+  assets: [...assetUtxos],
   blocks: [...blocksLatest, ...blocksLatestTxs, ...blocksLatestTxsCbor],
   epochs: [...epochsLatest],
   utils: [...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos],
