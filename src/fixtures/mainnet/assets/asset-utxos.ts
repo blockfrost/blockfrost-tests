@@ -145,7 +145,6 @@ export default [
     id: 'assets-utxos-hosky-oldest-2_8a1b2c3d4e5f',
     testName: 'assets/:asset/utxos - HOSKY oldest 2 UTxOs (stress test)',
     endpoints: [`assets/${HOSKY_TOKEN}/utxos?count=2&order=asc`],
-    customTimeout: 60_000,
     response: [
       {
         address:

@@ -83,6 +83,7 @@ import txStakes from './txs/tx-stakes.js';
 import txRedeemers from './txs/tx-redeemers.js';
 import txWithdrawals from './txs/tx-withdrawals.js';
 import txSubmit from './tx/submit.js';
+import swapsAsset from './swaps/asset.js';
 import txRequiredSigners from './txs/tx-required-signers.js';
 import utilsTxsEvaluate from './utils/txs-evaluate.js';
 import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
@@ -189,6 +190,7 @@ export const preprodFixtures = {
     ...scriptsHashCbor,
     ...scriptsHashRedeemers,
   ],
+  swaps: [...swapsAsset],
   tx: [...txSubmit],
   txs: [
     ...txsTx,

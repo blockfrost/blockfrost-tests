@@ -86,6 +86,7 @@ import txWithdrawals from './txs/tx-withdrawals.js';
 import txRequiredSigners from './txs/tx-required-signers.js';
 import txSubmit from './tx/submit.js';
 import utilsAddressesXpub from './utils/addresses-xpub.js';
+import swapsAsset from './swaps/asset.js';
 
 import governanceDrep from './governance/dreps/drep.js';
 import governanceDreps from './governance/dreps/index.js';
@@ -209,6 +210,7 @@ export const mainnetFixtures = {
     ...txRedeemers,
     ...txRequiredSigners,
   ],
+  swaps: [...swapsAsset],
   tx: [...txSubmit],
   utils: [...utilsAddressesXpub, ...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos],
 };

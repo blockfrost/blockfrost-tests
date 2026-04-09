@@ -1,29 +1,28 @@
 import { getPaginationFixtures } from '../../../index.js';
 
-// cardano-swaps v1 one-way beacon token on preview (script-locked, stable UTxOs)
+// cardano-swaps v1 beacon tokens on preview
 const V1_ONE_WAY_BEACON =
   '47cec2a1404ed91fc31124f29db15dc1aae77e0617868bcef351b8fd' +
   '016e1bc9aafb50bf22059a36db003e16e3e43d415cf8eae5f122d251f66ca307';
 
-// cardano-swaps v1 two-way beacon token on preview (script-locked, stable UTxOs)
 const V1_TWO_WAY_BEACON =
   '84662c22dc5c0cadad7b2ebf9757ce9ea61dbd8fe64bc8c43c112a40' +
   '29bfb1978aa7aa9edda9bdf0fb68a79cc3957c7a217960a12da70204dadf0d87';
 
-const paginationFixtures = getPaginationFixtures(`assets/${V1_ONE_WAY_BEACON}/utxos`, {
+const paginationFixtures = getPaginationFixtures(`swaps/${V1_ONE_WAY_BEACON}`, {
   fromToPagination: { format: 'height' },
 });
 
 export default [
   ...paginationFixtures,
 
-  // --- Success (200) ---
-  // cardano-swaps v1 one-way swap beacon (locked by swap validator)
+  // --- Success (200) - sorted by swap price ---
+  // cardano-swaps v1 one-way (price sorted)
 
   {
-    id: 'assets-utxos-cardano-swaps-v1-one-way_2b3c4d5e6f1a',
-    testName: 'assets/:asset/utxos - cardano-swaps v1 one-way swap beacon',
-    endpoints: [`assets/${V1_ONE_WAY_BEACON}/utxos?count=2&order=asc`],
+    id: 'swaps-asset-v1-one-way-price-asc_4d5e6f1a2b3c',
+    testName: 'swaps/:asset - cardano-swaps v1 one-way price asc',
+    endpoints: [`swaps/${V1_ONE_WAY_BEACON}?order_by=price&order=asc&count=1`],
     response: [
       {
         address:
@@ -72,80 +71,15 @@ export default [
         },
         reference_script_hash: null,
       },
-      {
-        address:
-          'addr_test1zqql5djxthlrdcnvy87m7uswf0d0es9cdw6nvl72gcqj745ptvj8pqlpr2e7z5e0nzc8zhaplg442cf7xpnz6v9knc9q8mfus0',
-        tx_hash: 'fe11ea4d987d8f537a5eb5575519e26eb7ffc7cffcca77a629b55ee280e7cacc',
-        output_index: 0,
-        amount: [
-          { unit: 'lovelace', quantity: '3008380' },
-          {
-            unit: '47cec2a1404ed91fc31124f29db15dc1aae77e0617868bcef351b8fd016e1bc9aafb50bf22059a36db003e16e3e43d415cf8eae5f122d251f66ca307',
-            quantity: '1',
-          },
-          {
-            unit: '47cec2a1404ed91fc31124f29db15dc1aae77e0617868bcef351b8fd461e1f087114b671d83b7b461fb93ac6c89b3ee5491deae6a91039bef997a9b6',
-            quantity: '1',
-          },
-          {
-            unit: '47cec2a1404ed91fc31124f29db15dc1aae77e0617868bcef351b8fddf91e329aa5a47288aca86568d24d4c1dbd69c8483934d0795fdc2c4fd13ec2c',
-            quantity: '1',
-          },
-          {
-            unit: 'cd453198b8056208716e175e2638f99465712d79d1f39b34248c8bee446a65644d6963726f555344',
-            quantity: '150000000',
-          },
-        ],
-        block: 'cf56d887b17488a69c1525934810b7fc869dca9ec18dc53a3bde9cf573408a25',
-        block_height: 1_947_396,
-        block_time: 1_712_149_166,
-        data_hash: '63e433665789985fc81db51bea7d7cd33fb0aa3c7cddca3fc9fee866f993173d',
-        inline_datum:
-          'd8799f581c47cec2a1404ed91fc31124f29db15dc1aae77e0617868bcef351b8fd5820df91e329aa5a47288aca86568d24d4c1dbd69c8483934d0795fdc2c4fd13ec2c581c91d4f382273f442f15e9da48cb23349ba275f8818e4c7ac5d1004a16454d795553445820461e1f087114b671d83b7b461fb93ac6c89b3ee5491deae6a91039bef997a9b6581ccd453198b8056208716e175e2638f99465712d79d1f39b34248c8bee4c446a65644d6963726f5553445820016e1bc9aafb50bf22059a36db003e16e3e43d415cf8eae5f122d251f66ca307d8799f1a08f0d1801a08f0d180ffd8799fd8799fd8799f582093044bf4abeb14737dcd1a808a8df477f7935ba493cefa7dfa1354450e44d886ff00ffffff',
-        inline_datum_json: {
-          fields: [
-            { bytes: '47cec2a1404ed91fc31124f29db15dc1aae77e0617868bcef351b8fd' },
-            { bytes: 'df91e329aa5a47288aca86568d24d4c1dbd69c8483934d0795fdc2c4fd13ec2c' },
-            { bytes: '91d4f382273f442f15e9da48cb23349ba275f8818e4c7ac5d1004a16' },
-            { bytes: '4d79555344' },
-            { bytes: '461e1f087114b671d83b7b461fb93ac6c89b3ee5491deae6a91039bef997a9b6' },
-            { bytes: 'cd453198b8056208716e175e2638f99465712d79d1f39b34248c8bee' },
-            { bytes: '446a65644d6963726f555344' },
-            { bytes: '016e1bc9aafb50bf22059a36db003e16e3e43d415cf8eae5f122d251f66ca307' },
-            { fields: [{ int: 150000000 }, { int: 150000000 }], constructor: 0 },
-            {
-              fields: [
-                {
-                  fields: [
-                    {
-                      fields: [
-                        {
-                          bytes: '93044bf4abeb14737dcd1a808a8df477f7935ba493cefa7dfa1354450e44d886',
-                        },
-                      ],
-                      constructor: 0,
-                    },
-                    { int: 0 },
-                  ],
-                  constructor: 0,
-                },
-              ],
-              constructor: 0,
-            },
-          ],
-          constructor: 0,
-        },
-        reference_script_hash: null,
-      },
     ],
   },
 
-  // cardano-swaps v1 two-way swap beacon (locked by swap validator)
+  // cardano-swaps v1 two-way (price sorted)
 
   {
-    id: 'assets-utxos-cardano-swaps-v1-two-way_3c4d5e6f1a2b',
-    testName: 'assets/:asset/utxos - cardano-swaps v1 two-way swap beacon',
-    endpoints: [`assets/${V1_TWO_WAY_BEACON}/utxos?count=1&order=asc`],
+    id: 'swaps-asset-v1-two-way-price-asc_5e6f1a2b3c4d',
+    testName: 'swaps/:asset - cardano-swaps v1 two-way price asc',
+    endpoints: [`swaps/${V1_TWO_WAY_BEACON}?order_by=price&order=asc&count=1`],
     response: [
       {
         address:
@@ -196,7 +130,8 @@ export default [
                     {
                       fields: [
                         {
-                          bytes: '6d8632241fe53245815c558ba1a8b719c3b513d67f04283add24dd9b2fe5d567',
+                          bytes:
+                            '6d8632241fe53245815c558ba1a8b719c3b513d67f04283add24dd9b2fe5d567',
                         },
                       ],
                       constructor: 0,
@@ -214,11 +149,5 @@ export default [
         reference_script_hash: null,
       },
     ],
-  },
-  {
-    id: 'assets-utxos-from-high-block-empty_5e6f1a2b3c4d',
-    testName: 'assets/:asset/utxos - from=99999999 returns empty array',
-    endpoints: [`assets/${V1_ONE_WAY_BEACON}/utxos?from=99999999`],
-    response: [],
   },
 ];

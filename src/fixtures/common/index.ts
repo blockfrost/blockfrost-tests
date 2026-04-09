@@ -8,11 +8,13 @@ import epochsLatest from './epochs/latest.js';
 import utilsTxsEvaluate from './utils/txs-evaluate.js';
 import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
 import assetUtxos from './assets/asset-utxos.js';
+import swapsAsset from './swaps/asset.js';
 
 export const commonFixtures = {
   health: [...healthRoot, ...healthClock],
   root: [...root],
   assets: [...assetUtxos],
+  swaps: [...swapsAsset],
   blocks: [...blocksLatest, ...blocksLatestTxs, ...blocksLatestTxsCbor],
   epochs: [...epochsLatest],
   utils: [...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos],
