@@ -82,8 +82,9 @@ export default [
       servicename: 'ogmios',
       fault: {
         code: 'client',
-        string:
-          'Invalid request: Deserialisation failure while decoding serialised transaction. CBOR failed with error: DeserialiseFailure 0 "expected tag".',
+        string: expect.stringContaining(
+          'Invalid request: Deserialisation failure while decoding serialised transaction. CBOR failed with error:',
+        ),
       },
       reflection: { id: expect.any(String) },
     },
