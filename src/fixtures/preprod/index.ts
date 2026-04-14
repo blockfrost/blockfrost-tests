@@ -23,6 +23,7 @@ import assetHistory from './assets/asset-history.js';
 import assetPolicyPolicyId from './assets/asset-policy-policy-id.js';
 import assetTransactions from './assets/asset-transactions.js';
 import assetTxs from './assets/asset-txs.js';
+import assetUtxos from './assets/asset-utxos.js';
 
 import blocksOthers from './blocks/_others.js';
 import blocksHashOrNumber from './blocks/hash-or-number.js';
@@ -82,6 +83,7 @@ import txStakes from './txs/tx-stakes.js';
 import txRedeemers from './txs/tx-redeemers.js';
 import txWithdrawals from './txs/tx-withdrawals.js';
 import txSubmit from './tx/submit.js';
+import swapsAsset from './swaps/asset.js';
 import txRequiredSigners from './txs/tx-required-signers.js';
 import utilsTxsEvaluate from './utils/txs-evaluate.js';
 import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
@@ -128,6 +130,7 @@ export const preprodFixtures = {
     ...assetPolicyPolicyId,
     ...assetTransactions,
     ...assetTxs,
+    ...assetUtxos,
   ],
   blocks: [
     ...blocksOthers,
@@ -187,6 +190,7 @@ export const preprodFixtures = {
     ...scriptsHashCbor,
     ...scriptsHashRedeemers,
   ],
+  swaps: [...swapsAsset],
   tx: [...txSubmit],
   txs: [
     ...txsTx,

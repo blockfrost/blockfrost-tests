@@ -24,6 +24,7 @@ import assetHistory from './assets/asset-history.js';
 import assetPolicyPolicyId from './assets/asset-policy-policy-id.js';
 import assetTransactions from './assets/asset-transactions.js';
 import assetTxs from './assets/asset-txs.js';
+import assetUtxos from './assets/asset-utxos.js';
 import assetsRoot from './assets/root.js';
 import blocksOthers from './blocks/_others.js';
 import blocksHashOrNumber from './blocks/hash-or-number.js';
@@ -85,6 +86,7 @@ import txWithdrawals from './txs/tx-withdrawals.js';
 import txRequiredSigners from './txs/tx-required-signers.js';
 import txSubmit from './tx/submit.js';
 import utilsAddressesXpub from './utils/addresses-xpub.js';
+import swapsAsset from './swaps/asset.js';
 
 import governanceDrep from './governance/dreps/drep.js';
 import governanceDreps from './governance/dreps/index.js';
@@ -138,6 +140,7 @@ export const mainnetFixtures = {
     ...assetHistory,
     ...assetPolicyPolicyId,
     ...assetTxs,
+    ...assetUtxos,
     ...asset,
     ...assetTransactions,
     ...assetsRoot,
@@ -207,6 +210,7 @@ export const mainnetFixtures = {
     ...txRedeemers,
     ...txRequiredSigners,
   ],
+  swaps: [...swapsAsset],
   tx: [...txSubmit],
   utils: [...utilsAddressesXpub, ...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos],
 };
