@@ -261,9 +261,8 @@ export const getPaginationFixtures = (
   url: string,
   options?: { fromToPagination?: { format: 'height' | 'height:index' } },
 ) => {
-  const fromToFixtures =
-    options?.fromToPagination ?
-      [
+  const fromToFixtures = options?.fromToPagination
+    ? [
         // from/to - invalid range
         {
           testName: `${url} pagination from/to range error`,

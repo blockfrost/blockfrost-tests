@@ -130,8 +130,7 @@ export default [
                     {
                       fields: [
                         {
-                          bytes:
-                            '6d8632241fe53245815c558ba1a8b719c3b513d67f04283add24dd9b2fe5d567',
+                          bytes: '6d8632241fe53245815c558ba1a8b719c3b513d67f04283add24dd9b2fe5d567',
                         },
                       ],
                       constructor: 0,
