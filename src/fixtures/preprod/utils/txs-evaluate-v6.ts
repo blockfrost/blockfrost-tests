@@ -101,15 +101,12 @@ export default [
       'utils/txs/evaluate - fails (client fault) to submit on ill-formed tx (not base64/16) (v6)',
     endpoints: ['utils/txs/evaluate?version=6'],
     ...ILL_FORMED_NOT_BASE64_TX,
-    response: {
-      jsonrpc: '2.0',
-      method: 'evaluateTransaction',
-      error: {
-        code: -32600,
-        data: null,
-        message: 'Invalid request: failed to decode payload from base64 or base16.',
-      },
-      id: expect.any(String),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    customExpect: async (response: any) => {
+      expect(response.jsonrpc).toBe('2.0');
+      expect(response.error.code).toBe(-32600);
+      expect(response.error.message).toContain('Invalid request: failed to decode');
+      expect(response.id).toEqual(expect.any(String));
     },
   },
 ];

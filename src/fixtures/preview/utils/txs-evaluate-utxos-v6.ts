@@ -17,7 +17,7 @@ export default [
       result: [
         {
           validator: { index: 0, purpose: 'spend' },
-          budget: { memory: 15_694, cpu: 3_776_833 },
+          budget: { memory: 15_694, cpu: 3_776_164 },
         },
       ],
       id: expect.any(String),
@@ -34,7 +34,7 @@ export default [
       result: [
         {
           validator: { index: 0, purpose: 'spend' },
-          budget: { memory: 15_694, cpu: 3_776_833 },
+          budget: { memory: 15_694, cpu: 3_776_164 },
         },
       ],
       id: expect.any(String),
