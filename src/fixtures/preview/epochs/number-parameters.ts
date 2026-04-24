@@ -1523,7 +1523,7 @@ export default [
           'remainderInteger-cpu-arguments-model-arguments-c02': 7305,
           'remainderInteger-cpu-arguments-model-arguments-c10': -900,
           'remainderInteger-cpu-arguments-model-arguments-c11': 1716,
-          'remainderInteger-cpu-arguments-model-arguments-c20': 549,
+          'remainderInteger-cpu-arguments-model-arguments-c20': 960,
           'remainderInteger-cpu-arguments-model-arguments-minimum': 57,
           'remainderInteger-memory-arguments-intercept': 85848,
           'remainderInteger-memory-arguments-minimum': 0,
