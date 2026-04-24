@@ -81,7 +81,7 @@ export default [
       version: '1.0',
       servicename: 'ogmios',
       methodname: 'EvaluateTx',
-      result: { EvaluationResult: { 'spend:0': { memory: 15_694, steps: 3776833 } } },
+      result: { EvaluationResult: { 'spend:0': { memory: 15_694, steps: 3776164 } } },
       reflection: { id: expect.any(String) },
     },
   },
