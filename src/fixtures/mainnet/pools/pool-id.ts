@@ -144,6 +144,7 @@ export default [
         'b5a06664d1a86a5778ee650b0c53413cea04f39eac554b7b6e080c9d6377e48a',
         'c2aee6d5dc5cc30a502eedf6b2d3c769fca2175347d9c514cc948ae26f9f162c',
         'de76130d36e40912f6934e88c3a085f0e0e6f3fe3d417daae16f0bb1aea60d67',
+        'f0cb40edc3b84d43132673d2a8525fbc3419400a4aca4e481f3c65f1e5819185',
       ],
       retirement: [],
       calidus_key: null,
