@@ -240,6 +240,39 @@ export default [
     },
   },
   {
+    id: 'governance-proposal-minimal-cip0129-encoding_55596ded33ed',
+    testName: 'governance proposal minimal CIP-0129 encoding (cert_index 0)',
+    endpoints: [
+      'governance/proposals/55596ded33edf2083c152026708c648140e5f33a7cb47c4e6312864146f4ff56/0',
+      'governance/proposals/gov_action124vkmmfnaheqs0q4yqn8prrys9qwtue60j68cnnrz2ryz3h5latqquux28u',
+      // CIP-0129 minimal encoding used by cexplorer: cert_index 0 omits the suffix byte entirely (32-byte payload).
+      'governance/proposals/gov_action124vkmmfnaheqs0q4yqn8prrys9qwtue60j68cnnrz2ryz3h5latqgzgzxc',
+    ],
+    response: {
+      id: 'gov_action124vkmmfnaheqs0q4yqn8prrys9qwtue60j68cnnrz2ryz3h5latqquux28u',
+      tx_hash: '55596ded33edf2083c152026708c648140e5f33a7cb47c4e6312864146f4ff56',
+      cert_index: 0,
+      governance_type: 'hard_fork_initiation',
+      governance_description: {
+        tag: 'HardForkInitiation',
+        contents: [
+          {
+            txId: '049ae5d612b2fa825655809133b023d60c7f8cac683c278cf95de1622e4592f3',
+            govActionIx: +0,
+          },
+          { major: 11, minor: +0 },
+        ],
+      },
+      deposit: '100000000000',
+      return_address: 'stake_test1uz4a8g550dtqqdwrg8lnjzctkgtpeh94ryxhjyu4pyre0eqghwntt',
+      ratified_epoch: null,
+      enacted_epoch: null,
+      dropped_epoch: 1044,
+      expired_epoch: 1043,
+      expiration: 1043,
+    },
+  },
+  {
     id: 'governance-proposal-no-confidence-detail_23f5fd7b6008',
     testName: 'governance proposal no_confidence detail',
     endpoints: [
