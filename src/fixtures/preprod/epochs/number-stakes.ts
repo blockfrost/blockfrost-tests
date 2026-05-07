@@ -17,11 +17,6 @@ export default [
         amount: '8225880',
       },
       {
-        stake_address: 'stake_test17qrv2rp63qn8tmzzjekstvxlt5wn7d8amx8wpnggrj82uyqvx080q',
-        pool_id: 'pool1h4n2c2g6c5saatezzs0mpe0z7rknmf33txulf8sl2q9v7e72nky',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17qr044rk9vksnmx4ntj7ddhj9mg6nvuck3xkesew94qkfqcluasak',
         pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
         amount: '5055372',
@@ -32,19 +27,9 @@ export default [
         amount: '38613623',
       },
       {
-        stake_address: 'stake_test17q98lsmwwy0wpm72u5n660jkxaw3z05y5vvdmjengjfg4qgrlmeu2',
-        pool_id: 'pool1rccstu3l9ty3k0a5cd06fl3szsss9r34dcg5j38fqgq9kvng0tg',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17qxx4t0wuq2jxdaculn7xyhhdsmjmst3wh3wtj790tpx8lqa3ja65',
         pool_id: 'pool1n84mel6x3e8sp0jjgmepme0zmv8gkw8chs98sqwxtruvkhhcsg8',
         amount: '1020390638',
-      },
-      {
-        stake_address: 'stake_test17qx8wn9hn2f4x0fnwcfw4dy4ll0my96e6mxl3ewdfrhm3zsj4gry2',
-        pool_id: 'pool1h4n2c2g6c5saatezzs0mpe0z7rknmf33txulf8sl2q9v7e72nky',
-        amount: '0',
       },
       {
         stake_address: 'stake_test17q8tkjdrha5kmgzcgpc0qdyd6egrlzk0pf7k7yze8frsncckefyk2',
@@ -112,11 +97,6 @@ export default [
         amount: '4808420553',
       },
       {
-        stake_address: 'stake_test17qn0y2d89wu8l8gr9mg6xvsf9mlnjvtgrl92csl0qnljs0qfk9a74',
-        pool_id: 'pool1h4n2c2g6c5saatezzs0mpe0z7rknmf33txulf8sl2q9v7e72nky',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17qnlq0ezpnjxevwas06v7tysj6vsx4z44e3wzkfhvu2w8wg5apwel',
         pool_id: 'pool1z05xqzuxnpl8kg8u2wwg8ftng0fwtdluv3h20ruryfqc5gc3efl',
         amount: '6109573',
@@ -147,29 +127,9 @@ export default [
         amount: '5000000',
       },
       {
-        stake_address: 'stake_test17qudzeu5wwrrdnlcaz28yfsuls2e2r0k28dpex4eka2gjlsxe5nt5',
-        pool_id: 'pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v',
-        amount: '0',
-      },
-      {
-        stake_address: 'stake_test17qunyfwlvgz2n2y9kadvlqunafpswmmuxud5dgtmv4h7n2ctu5jvf',
-        pool_id: 'pool1h4n2c2g6c5saatezzs0mpe0z7rknmf33txulf8sl2q9v7e72nky',
-        amount: '0',
-      },
-      {
-        stake_address: 'stake_test17qucgkqqs3t6w4urc9gdtz7n2qmzhvmq86pjqcmp93swghsettj5x',
-        pool_id: 'pool1h4n2c2g6c5saatezzs0mpe0z7rknmf33txulf8sl2q9v7e72nky',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17qlud2vtcr5k70ks7dw7w3d8s7tu36q79d3tpsca657th4gcn45ue',
         pool_id: 'pool1n84mel6x3e8sp0jjgmepme0zmv8gkw8chs98sqwxtruvkhhcsg8',
         amount: '5000000',
-      },
-      {
-        stake_address: 'stake_test17pq4pdg4v0w4fvcl03qe5caj6a4xjfuutwr9qchltlar54qcux429',
-        pool_id: 'pool1rccstu3l9ty3k0a5cd06fl3szsss9r34dcg5j38fqgq9kvng0tg',
-        amount: '0',
       },
       {
         stake_address: 'stake_test17prqess2dvsrsyw3mpljh45mg994t7s3mg34vhezkq9sexctswghj',
@@ -192,19 +152,9 @@ export default [
         amount: '10000000',
       },
       {
-        stake_address: 'stake_test17p9jnfpe6nc0y828ms6am698tv2shnhl4vjqdepcrp9ss2q69nmgs',
-        pool_id: 'pool107k26e3wrqxwghju2py40ngngx2qcu48ppeg7lk0cm35jl2aenx',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17p8zpvm84y36cd3v2jlcflmq3snrewmevhgf9pnca3eetzcysd7k5',
         pool_id: 'pool1j5ykmf5a87myg947w2svnnj8f3evt8dqmvv624kugv9tcwwk8vr',
         amount: '29415348010',
-      },
-      {
-        stake_address: 'stake_test17p8z7nk39wnv86gr7wv2sut4dawlm666tc6jlkpx8gwc0cc0934wj',
-        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
-        amount: '0',
       },
       {
         stake_address: 'stake_test17p8g82t994mpvlvj3xcephhn2fmtasnzlvxdrr92fgyrt4gw25zwy',
@@ -257,29 +207,14 @@ export default [
         amount: '2098889',
       },
       {
-        stake_address: 'stake_test17pvjzzd7dy43jk0rs4cvpuhqs7nwjxl74c4p7y27l3epz9c8enk69',
-        pool_id: 'pool1h4n2c2g6c5saatezzs0mpe0z7rknmf33txulf8sl2q9v7e72nky',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17pvjlv8emrk3tsrgtqgc6y6dt39hcaejq5rczrlwntpdm7g9hxfk8',
         pool_id: 'pool1vtfhwwy868ryf49j3ft58ug3t9lq44t9fdcavyl5pawsx6hlvam',
         amount: '956436838',
       },
       {
-        stake_address: 'stake_test17p0w9racghc9p9jx3lz0l4mkf20a3clnt549ww7tvggl48qw5mdcm',
-        pool_id: 'pool1h4n2c2g6c5saatezzs0mpe0z7rknmf33txulf8sl2q9v7e72nky',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17p3ka3x22e79dkwlnyj394n3ctnu7nf4qg87p3dsgzrs4ec9evtvg',
         pool_id: 'pool1mvgpsafktxs883p66awp7fplj73cj6j9hqdxzvqw494f7f0v2dp',
         amount: '238004744',
-      },
-      {
-        stake_address: 'stake_test17p3kl0n84rvzpyl27acue3s8xfcckqlzflj78dpltqhfxdsfdz57k',
-        pool_id: 'pool13la5erny3srx9u4fz9tujtl2490350f89r4w4qjhk0vdjmuv78v',
-        amount: '0',
       },
       {
         stake_address: 'stake_test17p4vkt8w0w565qqy644afe9p36fhty33scdetxfn5d46h8ct6aqua',
@@ -322,11 +257,6 @@ export default [
         amount: '1951911300',
       },
       {
-        stake_address: 'stake_test17pu3d9ggaj5a0gg076qwvs8k5ghpgf4ht6ytatdy9vszv9sysymlx',
-        pool_id: 'pool1rccstu3l9ty3k0a5cd06fl3szsss9r34dcg5j38fqgq9kvng0tg',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17plfxnjhr45cc074pl6zpnhvpk7ql3wp0j2c6k0um0equaqjzu8mh',
         pool_id: 'pool1mvgpsafktxs883p66awp7fplj73cj6j9hqdxzvqw494f7f0v2dp',
         amount: '1612330962',
@@ -337,29 +267,14 @@ export default [
         amount: '10703417',
       },
       {
-        stake_address: 'stake_test17zznhf4vtcru5ag0n9actxek2fyageg4shmgzrl9pt32afguhkca5',
-        pool_id: 'pool13la5erny3srx9u4fz9tujtl2490350f89r4w4qjhk0vdjmuv78v',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17zrte98379rmtkr7wxewc2kzk36g3nrc43mx0he3wdl3ggc3q356x',
         pool_id: 'pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v',
         amount: '29353472',
       },
       {
-        stake_address: 'stake_test17zrahu5e7d8rs62650dzsumt5cp5223y4z38z6t8asgx7csgqxjal',
-        pool_id: 'pool13fmuunlup35sgxt8t2jnjm0e5wxfe5swxeyr6tfyvh8gv9hdz68',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17zytu7t7nemaqsqaf6ppy28d443ygpr72akl3p37enw095q87c4k6',
         pool_id: 'pool15udpynn4qj4sdtlfz400he4narmagth659nzlx83rmklq2773kg',
         amount: '243237556',
-      },
-      {
-        stake_address: 'stake_test17zyllze9uc376uy4xyd8cdkgtvcmmkxqe70rn9neje7v0cc5887t7',
-        pool_id: 'pool1rccstu3l9ty3k0a5cd06fl3szsss9r34dcg5j38fqgq9kvng0tg',
-        amount: '0',
       },
       {
         stake_address: 'stake_test17z9telfazyvkgg6muqptep3d9g9qlsv98j6cxfrldptv6dsd5ecxz',
@@ -392,11 +307,6 @@ export default [
         amount: '4267209149',
       },
       {
-        stake_address: 'stake_test17z24933nchulmjx7mjr973yma4pzs27r2wcgf4frvhyu39g6zsze6',
-        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17zt3vxfjx9pjnpnapa65lx375p2utwxmpc8afj053h0l3vgc8a3g3',
         pool_id: 'pool1e0arfuamnymdkmjztvkryasxv9d8u8key27ajgc4mquz2nr8mk9',
         amount: '31889697592835',
@@ -412,11 +322,6 @@ export default [
         amount: '294976243',
       },
       {
-        stake_address: 'stake_test17zdzysh6e5sk92mcj9h2n5e578sdym5h6g227pjfsdh086gyhwdu9',
-        pool_id: 'pool1h4n2c2g6c5saatezzs0mpe0z7rknmf33txulf8sl2q9v7e72nky',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17z0s3xhezscrlh9h5k5flduvx6q0v45zqdvekcp2kqwaqqgdtnsl0',
         pool_id: 'pool1z05xqzuxnpl8kg8u2wwg8ftng0fwtdluv3h20ruryfqc5gc3efl',
         amount: '17771174',
@@ -425,11 +330,6 @@ export default [
         stake_address: 'stake_test17zsygn6t97e3y3yxgmd5p76903h5uh23nsnjxgrg2znh2tshgyqdk',
         pool_id: 'pool1tjc56tq7adk64nnq2ldu3f4nh6sxkphhmnejlu67ux7acq8y7rx',
         amount: '51086156',
-      },
-      {
-        stake_address: 'stake_test17zs5qpu7dgqq7c20p39fkrfx4k6pgn0wl32jcqzf575e6nqe66393',
-        pool_id: 'pool1h4n2c2g6c5saatezzs0mpe0z7rknmf33txulf8sl2q9v7e72nky',
-        amount: '0',
       },
       {
         stake_address: 'stake_test17z32yq3xwcjce6ecmhldjc6ks5vqurrnamk87da7s8uh9jsdptd6w',
@@ -465,11 +365,6 @@ export default [
         stake_address: 'stake_test17zhy3tfmc4d9ghd94wwwrkflp7f5k9txmhqmjzahzl49z4qpldgz8',
         pool_id: 'pool1rccstu3l9ty3k0a5cd06fl3szsss9r34dcg5j38fqgq9kvng0tg',
         amount: '20262196',
-      },
-      {
-        stake_address: 'stake_test17zhuqzy3pusedf54gx40vjlgkj3ww78lhvrk5h5pmf5cxjs57vyzs',
-        pool_id: 'pool1h4n2c2g6c5saatezzs0mpe0z7rknmf33txulf8sl2q9v7e72nky',
-        amount: '0',
       },
       {
         stake_address: 'stake_test17zcc32d4p996d2e8p3s3mcdf22gxucwv0ayuz0gw86g0arqm3acgd',
@@ -511,6 +406,111 @@ export default [
         pool_id: 'pool13la5erny3srx9u4fz9tujtl2490350f89r4w4qjhk0vdjmuv78v',
         amount: '20648896228',
       },
+      {
+        stake_address: 'stake_test17rx2pchgkda9n0q7qycv58arpjqrruax4fdpnzrfkh85u0c9evfzt',
+        pool_id: 'pool1tjc56tq7adk64nnq2ldu3f4nh6sxkphhmnejlu67ux7acq8y7rx',
+        amount: '212081209',
+      },
+      {
+        stake_address: 'stake_test17rx25g8u82jgnkgwm4dwf0nvqnh5czzmx2vhvkxesuzac3gr67072',
+        pool_id: 'pool1h4n2c2g6c5saatezzs0mpe0z7rknmf33txulf8sl2q9v7e72nky',
+        amount: '8173106',
+      },
+      {
+        stake_address: 'stake_test17rxezetp08yvhv6tspez4nyucaq5n5nnucjgshd2ev2kndg29cs3j',
+        pool_id: 'pool1tjc56tq7adk64nnq2ldu3f4nh6sxkphhmnejlu67ux7acq8y7rx',
+        amount: '2957881660',
+      },
+      {
+        stake_address: 'stake_test17r8gprxvn05nm47ek2guc63u7p0w5lpv6kwl60jdaa5avmcvd9xeu',
+        pool_id: 'pool13la5erny3srx9u4fz9tujtl2490350f89r4w4qjhk0vdjmuv78v',
+        amount: '98670955',
+      },
+      {
+        stake_address: 'stake_test17rff44lyzf0dacxvwyyunqfjcl29we23hycpm3gcqmq6hlgq2mjxu',
+        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
+        amount: '10703417',
+      },
+      {
+        stake_address: 'stake_test17rt4uhtmq4nhm28u792evp9h3udqff80ue5zfs7pyzrj2vgjk7lpj',
+        pool_id: 'pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v',
+        amount: '417097685',
+      },
+      {
+        stake_address: 'stake_test17rd06vhht8rfz36twkm4grft7thsp8xqgjzraszr6hw7klqs5yl4m',
+        pool_id: 'pool1g20peax827vmg9yyqfzj4g8d65fpz9y9uhsuhe70jwmfvaceg2m',
+        amount: '2112627',
+      },
+      {
+        stake_address: 'stake_test17rwc0exgmk7muuagp6q63g2lm36y76yavm3aedgj9jeserqfyet9m',
+        pool_id: 'pool1mvgpsafktxs883p66awp7fplj73cj6j9hqdxzvqw494f7f0v2dp',
+        amount: '1628441523',
+      },
+      {
+        stake_address: 'stake_test17r0zcf8we0wrqvyd8y0xegcup27vvqk83ua5z3wxhv8h8hclqgk09',
+        pool_id: 'pool13fmuunlup35sgxt8t2jnjm0e5wxfe5swxeyr6tfyvh8gv9hdz68',
+        amount: '6215287',
+      },
+      {
+        stake_address: 'stake_test17r3y8hcedx0qlzul8j794uzzlmejc45jdnuyrgr07smc4lcxk77tn',
+        pool_id: 'pool13fmuunlup35sgxt8t2jnjm0e5wxfe5swxeyr6tfyvh8gv9hdz68',
+        amount: '256662204',
+      },
+      {
+        stake_address: 'stake_test17r50c9pv90wz0yn5kn9unz6tf5djk877j96remfv3k4wlnqf6gafa',
+        pool_id: 'pool1h4n2c2g6c5saatezzs0mpe0z7rknmf33txulf8sl2q9v7e72nky',
+        amount: '75028428',
+      },
+      {
+        stake_address: 'stake_test17r4qwajlyr755sexek7x9knjhvfzp9da9hjnpnyvh0hkcuqywcsuf',
+        pool_id: 'pool1n84mel6x3e8sp0jjgmepme0zmv8gkw8chs98sqwxtruvkhhcsg8',
+        amount: '3223880',
+      },
+      {
+        stake_address: 'stake_test17r4qkc6cvj2qzrvglm082djgsclyzdyxrt089yhut0ycj4sqj0c6u',
+        pool_id: 'pool1axqjzy6mtr7h0cm6trz36fjn4d33qvlu7a6yxaxf2f6wuarlh2k',
+        amount: '99221466',
+      },
+      {
+        stake_address: 'stake_test17r4fdndj73msxur24neaqqzapksjphk3ju7g5syk7zkjxusezlrj5',
+        pool_id: 'pool1e0mu44gtaglzv3507aaw34eyhw6jea93d7zjywsr5yfh20h4zv8',
+        amount: '20272332',
+      },
+      {
+        stake_address: 'stake_test17rht93qry3zyhhf09v6a0hshyr5zzw7jasxthzjcpa0zvegn4usdm',
+        pool_id: 'pool144pedg8hc3lr660w30te9jqv5zllaesegh8vt3ptft5s7qu45re',
+        amount: '5012526060',
+      },
+      {
+        stake_address: 'stake_test17rckvjw7k4dqewqk0cuv77nw3mrnxj6vl2tyhhxq84n6u2qg7yd6q',
+        pool_id: 'pool1nmfr5j5rnqndprtazre802glpc3h865sy50mxdny65kfgf3e5eh',
+        amount: '300871091',
+      },
+      {
+        stake_address: 'stake_test17rumx90pnz6mxll306wqs0zzy7dtwg95p4up9vcgkj92erqd37puc',
+        pool_id: 'pool1z05xqzuxnpl8kg8u2wwg8ftng0fwtdluv3h20ruryfqc5gc3efl',
+        amount: '12311571',
+      },
+      {
+        stake_address: 'stake_test17ra50evjx7jg7vyxcvanwkqxq7a3asp694hpctql4n69seg92ayq7',
+        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
+        amount: '444000000',
+      },
+      {
+        stake_address: 'stake_test17rl8p977k6702u8hr8j97vhftcr65mktwwdjc6jlau2gjwgg9mmx8',
+        pool_id: 'pool1tjc56tq7adk64nnq2ldu3f4nh6sxkphhmnejlu67ux7acq8y7rx',
+        amount: '252318802',
+      },
+      {
+        stake_address: 'stake_test17rl64xglvgerwg6hxvzwtzgcddm8s2kgtax80r30hxtpwqcw32pkv',
+        pool_id: 'pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v',
+        amount: '327392689',
+      },
+      {
+        stake_address: 'stake_test1uqqqr8ny8u3ua4ayqnvddmfa495k49sulqgy7gsq8eyle6sd4w7l7',
+        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
+        amount: '2960101',
+      },
     ],
   },
   {
@@ -547,22 +547,72 @@ export default [
     endpoints: ['epochs/121/stakes?page=100&count=2'],
     response: [
       {
-        stake_address: 'stake_test1uqprktzy42sfaj393d5wlynwqq5zqh6v0cgusz0c7xge4vqsghw64',
-        pool_id: 'pool13la5erny3srx9u4fz9tujtl2490350f89r4w4qjhk0vdjmuv78v',
-        amount: '10201466065',
+        stake_address: 'stake_test1uqpneee79648f7nrjh8xslt7cjrpgn7r9swj5frea2vfe0ck5nwfw',
+        pool_id: 'pool1ndxf966uknq89g8xvurh0cduskr2yq4ua678qt5pkyc4u6eq0mv',
+        amount: '2011340',
       },
       {
-        stake_address: 'stake_test1uqpru6ssvep76r4zm9cvzwtqskxx7ymn9le30f5ptmpusjcwqt7xk',
-        pool_id: 'pool1njr03m7t9k808fcav8phxnskacr4v59w5cnqgqsgnug2j2lvn85',
-        amount: '8183370663',
+        stake_address: 'stake_test1uqp5fq9v9r3cd7qtv6mzqtfdjufhk0jr8nxwlzde72qtc0srj5kya',
+        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
+        amount: '2962709',
       },
     ],
   },
   {
     id: 'epochs-number-stakes-queryparams-generic-epoch-with-stakes-last-page_9464408b7992',
     testName: 'epochs/:number/stakes?queryparams generic epoch with stakes, last page',
-    endpoints: ['epochs/118/stakes?page=80'],
+    endpoints: ['epochs/118/stakes?page=76'],
     response: [
+      {
+        stake_address: 'stake_test1ur7su8739hz0qhshfd464hhwh4fmuakay6tuq5z9clz8edquyspex',
+        pool_id: 'pool1ext7qrwjzaxcdfhdnkq5mth59ukuu2atcg6tgqpmevpt7ratkta',
+        amount: '1870054721',
+      },
+      {
+        stake_address: 'stake_test1ur73ee059xwz6cs2e8sdxnz2vyajkv3h3g800ldystwwpngq7n5sz',
+        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
+        amount: '11695934',
+      },
+      {
+        stake_address: 'stake_test1ur7jzyge05e657zd7skj3v3qa6m3shna3lzur0vl2tsmh6sfpmf9u',
+        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
+        amount: '2900040',
+      },
+      {
+        stake_address: 'stake_test1ur7jkmtpp4ph7sx4xkx26rez78xrz6gvhhzn8kst7jan64cahvf5y',
+        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
+        amount: '10338409098',
+      },
+      {
+        stake_address: 'stake_test1ur7jukf3pq8e4x3waxlzew783q36zr6jwwgtuyvtm9f7kqqyqa8gs',
+        pool_id: 'pool1n84mel6x3e8sp0jjgmepme0zmv8gkw8chs98sqwxtruvkhhcsg8',
+        amount: '21472613432',
+      },
+      {
+        stake_address: 'stake_test1ur7n82sv0ksjnxr2kw00hehqa9fpew5gk3a0qxpxzl7fyxs30y6qk',
+        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
+        amount: '2902513',
+      },
+      {
+        stake_address: 'stake_test1ur750sgzdlrxmah7la7vx0663eek6usmjnzd9x8v0f8gw9gnegzqd',
+        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
+        amount: '2986072',
+      },
+      {
+        stake_address: 'stake_test1ur75nkeuukmp8dyddsn3pep8cpzf39kq3pkea5qe54zvkhganmraq',
+        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
+        amount: '29243031',
+      },
+      {
+        stake_address: 'stake_test1ur75cnxppsnksclvuhh0k5dyqz6eu0v5nre740d2g4nh4sqvh6aja',
+        pool_id: 'pool1f8c7lz93ysh00k09lwm8uycrq7plxsz5kqwd7cyq9v6sgvf6cnl',
+        amount: '9486068846',
+      },
+      {
+        stake_address: 'stake_test1ur74rmdav8fp8w54waxvfpphwta2zd0fdqfpcr683qhey6qc7dcyg',
+        pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
+        amount: '2978060',
+      },
       {
         stake_address: 'stake_test1ur74k4wluhnhrw0erzm4j60yax9kt53ah34ns8ca6pqmjssvwhrwf',
         pool_id: 'pool1xrflm7hknav65t3chtcy2ca4s5v64erm2320g23jeuejvw60t7l',
@@ -659,11 +709,6 @@ export default [
         amount: '249547135',
       },
       {
-        stake_address: 'stake_test1urlzusmxf6czjapc39qq3m7h5qvgapz387la82g4f2x8ppgqzl5ys',
-        pool_id: 'pool1wf9j0stckxueuxtrkupzug7463el4mdwz3fwxwlsdr98q9292s8',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test1urlzlhkrnvdgdkekp5y9smf9nle4amfqmdwcnnytuwqe6qgvsdukx',
         pool_id: 'pool1egfg26w0syqly9qc65hz33gqv2qrzyka8tfue3ccsk3c73a56jp',
         amount: '10457741692',
@@ -757,11 +802,6 @@ export default [
         stake_address: 'stake_test1url03m2a68y4u25x4ywq7czh4myxvpkxz4htnrq6r45k0qgcjns4y',
         pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
         amount: '2907499',
-      },
-      {
-        stake_address: 'stake_test1url04v0r8fscpy6nhgv44j424w2skv4ra549qjcvgdkpjzcupee9n',
-        pool_id: 'pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v',
-        amount: '0',
       },
       {
         stake_address: 'stake_test1url0eh64cw65trjq0zc4jhz4knzf4ce7asu43c4y4htv0vgazvd64',
