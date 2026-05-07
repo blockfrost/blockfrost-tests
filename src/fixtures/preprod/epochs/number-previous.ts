@@ -22,7 +22,7 @@ export default [
         tx_count: 0,
         output: '0',
         fees: '0',
-        active_stake: '300000000000000',
+        active_stake: null,
       },
       {
         epoch: 22,
@@ -34,7 +34,7 @@ export default [
         tx_count: 0,
         output: '0',
         fees: '0',
-        active_stake: '300000000000000',
+        active_stake: null,
       },
       {
         epoch: 23,
@@ -46,7 +46,7 @@ export default [
         tx_count: 0,
         output: '0',
         fees: '0',
-        active_stake: '300000000000000',
+        active_stake: null,
       },
       {
         epoch: 24,
@@ -58,7 +58,7 @@ export default [
         tx_count: 0,
         output: '0',
         fees: '0',
-        active_stake: '300000000000000',
+        active_stake: null,
       },
       {
         epoch: 25,
@@ -70,7 +70,7 @@ export default [
         tx_count: 0,
         output: '0',
         fees: '0',
-        active_stake: '300000000000000',
+        active_stake: null,
       },
       {
         epoch: 26,
@@ -82,7 +82,7 @@ export default [
         tx_count: 1,
         output: '29699998491821316',
         fees: '217729',
-        active_stake: '300000000000000',
+        active_stake: null,
       },
       {
         epoch: 27,
@@ -94,7 +94,7 @@ export default [
         tx_count: 0,
         output: '0',
         fees: '0',
-        active_stake: '300000000000000',
+        active_stake: null,
       },
       {
         epoch: 28,
@@ -106,7 +106,7 @@ export default [
         tx_count: 4045,
         output: '17847453521738724661',
         fees: '877160908',
-        active_stake: '300000000000000',
+        active_stake: null,
       },
       {
         epoch: 29,
