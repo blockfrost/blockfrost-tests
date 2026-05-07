@@ -7,6 +7,8 @@ import blocksLatestTxsCbor from './blocks/latest/txs/cbor.js';
 import epochsLatest from './epochs/latest.js';
 import utilsTxsEvaluate from './utils/txs-evaluate.js';
 import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
+import utilsTxsEvaluateV6 from './utils/txs-evaluate-v6.js';
+import utilsTxsEvaluateUtxosV6 from './utils/txs-evaluate-utxos-v6.js';
 import assetUtxos from './assets/asset-utxos.js';
 import swapsAsset from './swaps/asset.js';
 
@@ -17,5 +19,10 @@ export const commonFixtures = {
   swaps: [...swapsAsset],
   blocks: [...blocksLatest, ...blocksLatestTxs, ...blocksLatestTxsCbor],
   epochs: [...epochsLatest],
-  utils: [...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos],
+  utils: [
+    ...utilsTxsEvaluate,
+    ...utilsTxsEvaluateUtxos,
+    ...utilsTxsEvaluateV6,
+    ...utilsTxsEvaluateUtxosV6,
+  ],
 };

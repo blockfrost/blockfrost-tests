@@ -72,6 +72,8 @@ import scriptsHashRedeemers from './scripts/hash-redeemers.js';
 import txsLabels from './txs/tx.js';
 import utilsTxsEvaluate from './utils/txs-evaluate.js';
 import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
+import utilsTxsEvaluateV6 from './utils/txs-evaluate-v6.js';
+import utilsTxsEvaluateUtxosV6 from './utils/txs-evaluate-utxos-v6.js';
 import txsTx from './txs/tx.js';
 import tsxMetadata from './txs/tx-metadata.js';
 import txsDelegations from './txs/tx-delegations.js';
@@ -212,5 +214,11 @@ export const mainnetFixtures = {
   ],
   swaps: [...swapsAsset],
   tx: [...txSubmit],
-  utils: [...utilsAddressesXpub, ...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos],
+  utils: [
+    ...utilsAddressesXpub,
+    ...utilsTxsEvaluate,
+    ...utilsTxsEvaluateUtxos,
+    ...utilsTxsEvaluateV6,
+    ...utilsTxsEvaluateUtxosV6,
+  ],
 };

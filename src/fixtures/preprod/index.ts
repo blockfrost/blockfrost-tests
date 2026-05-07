@@ -87,6 +87,8 @@ import swapsAsset from './swaps/asset.js';
 import txRequiredSigners from './txs/tx-required-signers.js';
 import utilsTxsEvaluate from './utils/txs-evaluate.js';
 import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
+import utilsTxsEvaluateV6 from './utils/txs-evaluate-v6.js';
+import utilsTxsEvaluateUtxosV6 from './utils/txs-evaluate-utxos-v6.js';
 
 import governanceDrep from './governance/dreps/drep.js';
 import governanceDreps from './governance/dreps/index.js';
@@ -206,5 +208,10 @@ export const preprodFixtures = {
     ...txUtxos,
     ...txRedeemers,
   ],
-  utils: [...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos],
+  utils: [
+    ...utilsTxsEvaluate,
+    ...utilsTxsEvaluateUtxos,
+    ...utilsTxsEvaluateV6,
+    ...utilsTxsEvaluateUtxosV6,
+  ],
 };
