@@ -120,10 +120,6 @@ export default [
         amount: '7141780',
       },
       {
-        stake_address: 'stake_test17py5rjm6kx8k0ees4g8l0758v0terqlt4sgdj8ff0qsp4cclgnce7',
-        amount: '0',
-      },
-      {
         stake_address: 'stake_test17p9ykv8m5gx7yvskqzqhsryx8g65d8pay6l57csmpxseu0c5pgpnu',
         amount: '549250664',
       },
@@ -415,6 +411,10 @@ export default [
         stake_address: 'stake_test17rn8gx8d2ktzcwhl2mtkeyn4rklpge8fg7pwzrs7kdnjm9qtx5jnh',
         amount: '3352208608',
       },
+      {
+        stake_address: 'stake_test17r5trfmxtljc3gymafgf2q4gt6knfdym2saus998duruhxckzvj9n',
+        amount: '3857990139',
+      },
     ],
   },
   {
@@ -424,22 +424,6 @@ export default [
       'epochs/520/stakes/cbb2d3a93e5b7fc422d250203ec892ed840cba51cc7c15530d6f06b7?page=1',
     ],
     response: [
-      {
-        stake_address: 'stake_test1uqpr2kk9mxg60n5czt5lt95pwmrjve5e6t8dlutd9wlalkcunhnm9',
-        amount: '0',
-      },
-      {
-        stake_address: 'stake_test1uq958ug54czcx2kl3g6q9xdyd2f30jz66hz9rlelk8akyps5a2wc7',
-        amount: '0',
-      },
-      {
-        stake_address: 'stake_test1uq0c73usnzs3gpa7y83plg0mgr2yn22rmdqzjk5c5lkaurs77pfve',
-        amount: '0',
-      },
-      {
-        stake_address: 'stake_test1upy80dt06d9j5lvyxzr4vshratrmysn5e2w4d9dldf04u8glqdn06',
-        amount: '0',
-      },
       {
         stake_address: 'stake_test1upd2sewkr6j8ggj7yna82c5kj768a05285ymnqp8j82ferg7xqhcs',
         amount: '27126614',
@@ -451,14 +435,6 @@ export default [
       {
         stake_address: 'stake_test1uzhvwv5u722n0rwpeke2rppdklkwfapj3v45tdhesg8yrmgtgfqhm',
         amount: '27595719',
-      },
-      {
-        stake_address: 'stake_test1urq3s2szd7ledc2n46gjc26rq8c6zjd5xm4e99y645sr28gwph4t6',
-        amount: '0',
-      },
-      {
-        stake_address: 'stake_test1ur9250dpckg3x7rndacp4lavhdjrl9lfyle8frw4sndsuec65dq3c',
-        amount: '0',
       },
     ],
   },
