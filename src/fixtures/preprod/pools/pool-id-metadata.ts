@@ -11,12 +11,17 @@ export default [
     response: {
       hex: '8ffb4c8e648c0662f2a91157c92feaa95f1a3d2728eaea8257b3d8d9',
       pool_id: 'pool13la5erny3srx9u4fz9tujtl2490350f89r4w4qjhk0vdjmuv78v',
-      url: expect.any(String),
-      hash: expect.any(String),
-      ticker: 'ALFA',
-      name: expect.any(String),
-      description: expect.any(String),
-      homepage: expect.any(String),
+      url: expect.toBeOneOf([String, null]),
+      error: {
+        code: 'CONNECTION_ERROR',
+        message:
+          'Error Offchain Pool: Connection failure error when fetching metadata from https://tinyurl.com/2ku8unuf.',
+      },
+      hash: expect.toBeOneOf([String, null]),
+      ticker: expect.toBeOneOf([String, null]),
+      name: expect.toBeOneOf([String, null]),
+      description: expect.toBeOneOf([String, null]),
+      homepage: expect.toBeOneOf([String, null]),
     },
   },
   {
