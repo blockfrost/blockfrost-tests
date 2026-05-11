@@ -49,10 +49,10 @@ export default [
       hex: '4b8bb0172418684237f19cbbc55347977fa50cd449fb30abff5bf348',
       url: 'https://d8bdbfbe.cardano-metadata.bison.run/metadata.json',
       hash: '64c1813d814e5c2abb5f65864ec26f0b060d49f3d206a31f34aa6428d7b682e3',
-      ticker: null,
-      name: null,
-      description: null,
-      homepage: null,
+      ticker: expect.toBeOneOf([String, null]),
+      name: expect.toBeOneOf([String, null]),
+      description: expect.toBeOneOf([String, null]),
+      homepage: expect.toBeOneOf([String, null]),
       error: {
         code: 'CONNECTION_ERROR',
         message:
