@@ -49,11 +49,15 @@ export default [
       hex: '4b8bb0172418684237f19cbbc55347977fa50cd449fb30abff5bf348',
       url: 'https://d8bdbfbe.cardano-metadata.bison.run/metadata.json',
       hash: '64c1813d814e5c2abb5f65864ec26f0b060d49f3d206a31f34aa6428d7b682e3',
-      ticker: 'CLOUD',
-      name: 'Coinbase Cloud',
-      description:
-        'Coinbase Cloud provides secure and reliable blockchain infrastructure and APIs. Stake your crypto to our enterprise-grade validators.',
-      homepage: 'https://coinbase.com/cloud',
+      ticker: null,
+      name: null,
+      description: null,
+      homepage: null,
+      error: {
+        code: 'CONNECTION_ERROR',
+        message:
+          'Error Offchain Pool: Connection failure error when fetching metadata from https://d8bdbfbe.cardano-metadata.bison.run/metadata.json.',
+      },
     },
   },
 ];
