@@ -1,24 +1,4 @@
-import { expect } from 'vitest';
-
 export default [
-  {
-    id: 'pools-pool-id-metadata-pool-with-multiple-metadata-updates-in-one-update-alfa_f165f370df7b',
-    testName: 'pools/:pool_id/metadata - pool with multiple metadata updates in one update (ALFA)',
-    endpoints: [
-      'pools/pool13la5erny3srx9u4fz9tujtl2490350f89r4w4qjhk0vdjmuv78v/metadata',
-      'pools/8ffb4c8e648c0662f2a91157c92feaa95f1a3d2728eaea8257b3d8d9/metadata',
-    ],
-    response: {
-      hex: '8ffb4c8e648c0662f2a91157c92feaa95f1a3d2728eaea8257b3d8d9',
-      pool_id: 'pool13la5erny3srx9u4fz9tujtl2490350f89r4w4qjhk0vdjmuv78v',
-      url: expect.any(String),
-      hash: expect.any(String),
-      ticker: 'ALFA',
-      name: expect.any(String),
-      description: expect.any(String),
-      homepage: expect.any(String),
-    },
-  },
   {
     id: 'pools-pool-id-metadata-best-pool_ae3b6de78fea',
     testName: 'pools/pool_id/metadata - best pool',

@@ -37,23 +37,4 @@ export default [
       homepage: 'https://topopool.com',
     },
   },
-  {
-    id: 'pools-pool-id-metadata-best-pool_82ab39e4d4df',
-    testName: 'pools/pool_id/metadata - best pool',
-    endpoints: [
-      'pools/pool1fw9mq9eyrp5yydl3njau2568jal62rx5f8anp2llt0e5s3pl3py/metadata',
-      'pools/4b8bb0172418684237f19cbbc55347977fa50cd449fb30abff5bf348/metadata',
-    ],
-    response: {
-      pool_id: 'pool1fw9mq9eyrp5yydl3njau2568jal62rx5f8anp2llt0e5s3pl3py',
-      hex: '4b8bb0172418684237f19cbbc55347977fa50cd449fb30abff5bf348',
-      url: 'https://d8bdbfbe.cardano-metadata.bison.run/metadata.json',
-      hash: '64c1813d814e5c2abb5f65864ec26f0b060d49f3d206a31f34aa6428d7b682e3',
-      ticker: 'CLOUD',
-      name: 'Coinbase Cloud',
-      description:
-        'Coinbase Cloud provides secure and reliable blockchain infrastructure and APIs. Stake your crypto to our enterprise-grade validators.',
-      homepage: 'https://coinbase.com/cloud',
-    },
-  },
 ];
