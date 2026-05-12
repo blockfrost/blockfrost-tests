@@ -10,6 +10,7 @@ export default [
       proposal_tx_hash: '6f8b70a482e10ae4077d70730826ef27f72b08e148118a5171c72e7fe3c6d551',
       proposal_cert_index: 0,
       gov_action_id: 'gov_action1d79hpfyzuy9wgpmawpessfh0ylmjkz8pfqgc55t3cuh8lc7x64gsq8nmy5g',
+      is_dissolved: false,
       epoch_no: expect.toBeEpochNumber(),
       quorum_numerator: 2,
       quorum_denominator: 3,
