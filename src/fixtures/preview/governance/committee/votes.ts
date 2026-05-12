@@ -15,7 +15,7 @@ export default [
         voter_hot_id: 'cc_hot1qdjt7zpx7a8d76y29r4tml9aryff9m6pegz84lttspujfdcrkr62j',
         proposal_id: 'gov_action1u008nt84f5tssj2m9zt7qfw9vh07kt7ukmy92u6ufrlx4v8uhe9qq7qtkgd',
         proposal_tx_hash: 'e3de79acf54d1708495b2897e025c565dfeb2fdcb6c855735c48fe6ab0fcbe4a',
-        proposal_cert_index: 0,
+        proposal_index: 0,
         governance_type: 'info_action',
         vote: 'abstain',
         metadata_url:
@@ -29,7 +29,7 @@ export default [
         voter_hot_id: 'cc_hot1qdjt7zpx7a8d76y29r4tml9aryff9m6pegz84lttspujfdcrkr62j',
         proposal_id: 'gov_action1u008nt84f5tssj2m9zt7qfw9vh07kt7ukmy92u6ufrlx4v8uhe9qq7qtkgd',
         proposal_tx_hash: 'e3de79acf54d1708495b2897e025c565dfeb2fdcb6c855735c48fe6ab0fcbe4a',
-        proposal_cert_index: 0,
+        proposal_index: 0,
         governance_type: 'info_action',
         vote: 'no',
         metadata_url:
@@ -43,7 +43,7 @@ export default [
         voter_hot_id: 'cc_hot1qdjt7zpx7a8d76y29r4tml9aryff9m6pegz84lttspujfdcrkr62j',
         proposal_id: 'gov_action1u008nt84f5tssj2m9zt7qfw9vh07kt7ukmy92u6ufrlx4v8uhe9qq7qtkgd',
         proposal_tx_hash: 'e3de79acf54d1708495b2897e025c565dfeb2fdcb6c855735c48fe6ab0fcbe4a',
-        proposal_cert_index: 0,
+        proposal_index: 0,
         governance_type: 'info_action',
         vote: 'abstain',
         metadata_url:
@@ -57,7 +57,7 @@ export default [
         voter_hot_id: 'cc_hot1qdjt7zpx7a8d76y29r4tml9aryff9m6pegz84lttspujfdcrkr62j',
         proposal_id: 'gov_action1jkhcvzxu02h4cucz2pnt2zdzcywg98efssqf4jfwwpfazglmeetsqypdyqf',
         proposal_tx_hash: '95af8608dc7aaf5c73025066b509a2c11c829f2984009ac92e7053d123fbce57',
-        proposal_cert_index: 0,
+        proposal_index: 0,
         governance_type: 'parameter_change',
         vote: 'yes',
         metadata_url:
@@ -71,7 +71,7 @@ export default [
         voter_hot_id: 'cc_hot1qdjt7zpx7a8d76y29r4tml9aryff9m6pegz84lttspujfdcrkr62j',
         proposal_id: 'gov_action1rarl8newf7gsn03wl6gc9jhqsvr72autml4zz58xjq7y3mw2pw8sqsymael',
         proposal_tx_hash: '1f47f3cf2e4f9109be2efe9182cae08307e5778bdfea2150e6903c48edca0b8f',
-        proposal_cert_index: 0,
+        proposal_index: 0,
         governance_type: 'parameter_change',
         vote: 'yes',
         metadata_url:
@@ -92,7 +92,7 @@ export default [
         voter_hot_id: expect.stringMatching(/^cc_hot1/),
         proposal_id: expect.stringMatching(/^gov_action1/),
         proposal_tx_hash: expect.stringMatching(/^[0-9a-f]{64}$/),
-        proposal_cert_index: expect.any(Number),
+        proposal_index: expect.any(Number),
         governance_type: expect.toBeOneOf([
           'hard_fork_initiation',
           'new_committee',

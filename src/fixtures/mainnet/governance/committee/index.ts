@@ -5,12 +5,10 @@ export default [
     endpoints: ['governance/committee'],
     response: {
       proposal_tx_hash: '4dab331457b61b824bbc6ba4b9d9be4750e25c0b5dd42207aeb63c7431a6b704',
-      proposal_cert_index: 0,
+      proposal_index: 0,
       gov_action_id: 'gov_action1fk4nx9zhkcdcyjaudwjtnkd7gagwyhqtth2zypawkc78gvdxkuzqqtvqdkv',
       is_dissolved: false,
-      quorum_numerator: 2,
-      quorum_denominator: 3,
-      members_count: 8,
+      quorum: { numerator: 2, denominator: 3 },
       members: [
         {
           cc_cold_id: 'cc_cold1zgf5jdusmxcrfqapu8ngf6j04u0wfzjc7sp9wnnlyfr0f4q68as9w',

@@ -10,7 +10,7 @@ const VOTES_FOR_MEMBER = [
     voter_hot_id: 'cc_hot1qdjt7zpx7a8d76y29r4tml9aryff9m6pegz84lttspujfdcrkr62j',
     proposal_id: 'gov_action1u008nt84f5tssj2m9zt7qfw9vh07kt7ukmy92u6ufrlx4v8uhe9qq7qtkgd',
     proposal_tx_hash: 'e3de79acf54d1708495b2897e025c565dfeb2fdcb6c855735c48fe6ab0fcbe4a',
-    proposal_cert_index: 0,
+    proposal_index: 0,
     governance_type: 'info_action',
     vote: 'abstain',
     metadata_url:
@@ -24,7 +24,7 @@ const VOTES_FOR_MEMBER = [
     voter_hot_id: 'cc_hot1qdjt7zpx7a8d76y29r4tml9aryff9m6pegz84lttspujfdcrkr62j',
     proposal_id: 'gov_action1u008nt84f5tssj2m9zt7qfw9vh07kt7ukmy92u6ufrlx4v8uhe9qq7qtkgd',
     proposal_tx_hash: 'e3de79acf54d1708495b2897e025c565dfeb2fdcb6c855735c48fe6ab0fcbe4a',
-    proposal_cert_index: 0,
+    proposal_index: 0,
     governance_type: 'info_action',
     vote: 'no',
     metadata_url:
@@ -38,7 +38,7 @@ const VOTES_FOR_MEMBER = [
     voter_hot_id: 'cc_hot1qdjt7zpx7a8d76y29r4tml9aryff9m6pegz84lttspujfdcrkr62j',
     proposal_id: 'gov_action1u008nt84f5tssj2m9zt7qfw9vh07kt7ukmy92u6ufrlx4v8uhe9qq7qtkgd',
     proposal_tx_hash: 'e3de79acf54d1708495b2897e025c565dfeb2fdcb6c855735c48fe6ab0fcbe4a',
-    proposal_cert_index: 0,
+    proposal_index: 0,
     governance_type: 'info_action',
     vote: 'abstain',
     metadata_url:
