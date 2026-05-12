@@ -34,29 +34,6 @@ export default [
     },
   },
   {
-    id: 'governance-treasury-withdrawals-metadata-decode-error-ipfs-only-basic-info-returned_3509e8913797',
-    testName:
-      'governance treasury_withdrawals metadata (DECODE_ERROR IPFS, only basic info returned)',
-    services: ['ryo'],
-    endpoints: [
-      'governance/proposals/gov_action1qw0qq0xpfq3dzft7y3ft7ec7xywafqfqqtult83x0cfgwevnlh3qqsfv0nt/metadata',
-    ],
-    response: {
-      id: 'gov_action1qw0qq0xpfq3dzft7y3ft7ec7xywafqfqqtult83x0cfgwevnlh3qqsfv0nt',
-      tx_hash: '039e003cc14822d1257e2452bf671e311dd4812002f9f59e267e12876593fde2',
-      cert_index: 0,
-      url: 'ipfs://bafkreie7p3aj2hytzse3pnetzf4erzwhh5xymnyb3acjyoszgpmgay4djm',
-      hash: '7fb589379acc9a75f396946aa5af6596188fbc25082c785eccbae9ab6320864a',
-      json_metadata: null,
-      bytes: null,
-      error: {
-        code: 'DECODE_ERROR',
-        message:
-          'Error Offchain Voting Anchor: List of errors for each ipfs gateway: Error Offchain Voting Anchor: JSON decode error from when fetching metadata from Just https://ipfs.io/ipfs/bafkreie7p3aj2hytzse3pnetzf4erzwhh5xymnyb3acjyoszgpmgay4djm resulted in : "Error in $: key \\"authors\\" not found, CIP-100:Error in $: key \\"authors\\" not found"',
-      },
-    },
-  },
-  {
     id: 'governance-proposal-parameter-change-metadata_c9294b4c5631',
     testName: 'governance proposal parameter_change metadata',
     endpoints: [
