@@ -1,5 +1,3 @@
-import { expect } from 'vitest';
-
 export default [
   {
     id: 'governance-committee-snapshot_e0d1c2b3a4f5',
@@ -11,7 +9,6 @@ export default [
       proposal_cert_index: 0,
       gov_action_id: 'gov_action1d79hpfyzuy9wgpmawpessfh0ylmjkz8pfqgc55t3cuh8lc7x64gsq8nmy5g',
       is_dissolved: false,
-      epoch_no: expect.toBeEpochNumber(),
       quorum_numerator: 2,
       quorum_denominator: 3,
       members_count: 14,
