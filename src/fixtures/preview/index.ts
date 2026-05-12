@@ -102,6 +102,10 @@ import governanceProposalsHashIndexVotes from './governance/proposals/hash-cert-
 import governanceProposalsHashIndexMetadata from './governance/proposals/hash-cert-index-metadata.js';
 import governanceProposalsHashIndexParameters from './governance/proposals/hash-cert-index-parameters.js';
 
+import governanceCommittee from './governance/committee/index.js';
+import governanceCommitteeVotes from './governance/committee/votes.js';
+import governanceCommitteeCcIdVotes from './governance/committee/cc-id-votes.js';
+
 export const previewFixtures = {
   accounts: [
     ...accountsStakeAddress,
@@ -191,6 +195,9 @@ export const previewFixtures = {
     ...governanceProposalsHashIndexVotes,
     ...governanceProposalsHashIndexMetadata,
     ...governanceProposalsHashIndexParameters,
+    ...governanceCommittee,
+    ...governanceCommitteeVotes,
+    ...governanceCommitteeCcIdVotes,
   ],
   swaps: [...swapsAsset],
   tx: [...txSubmit],

@@ -101,6 +101,10 @@ import governanceProposals from './governance/proposals/index.js';
 import governanceProposalsHashIndex from './governance/proposals/hash-cert-index.js';
 import governanceProposalsHashIndexVotes from './governance/proposals/hash-cert-index-votes.js';
 
+import governanceCommittee from './governance/committee/index.js';
+import governanceCommitteeVotes from './governance/committee/votes.js';
+import governanceCommitteeCcIdVotes from './governance/committee/cc-id-votes.js';
+
 export const mainnetFixtures = {
   accounts: [
     ...accountsStakeAddress,
@@ -193,6 +197,9 @@ export const mainnetFixtures = {
     ...governanceProposalsHashIndexVotes,
     ...governanceProposalsHashIndexMetadata,
     ...governanceProposalsHashIndexParameters,
+    ...governanceCommittee,
+    ...governanceCommitteeVotes,
+    ...governanceCommitteeCcIdVotes,
   ],
   txs: [
     ...txsTx,
