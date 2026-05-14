@@ -163,7 +163,6 @@ export default [
         stake_address: 'stake1u9y3qt57glwuyl5gmhtf07jfcmn8u2xs9sa2vy4zhegprdqvugs8v',
         amount: '7821870243',
       },
-      { stake_address: 'stake1u9ylzsgxaa6xctf4juup682ar3juj85n8tx3hthnljg47zctvm3rc', amount: '0' },
       {
         stake_address: 'stake1u99pjll22qd04nltp5waq7d5h6yfzyj9yxyrcevsdy4028cfr267r',
         amount: '2448333957',
@@ -208,7 +207,6 @@ export default [
         stake_address: 'stake1u9w9u7nnxgwq0qj0muckv7zdyxtc2tr9udlhhkgm3smc8jscmzt22',
         amount: '1750548329',
       },
-      { stake_address: 'stake1u90lfvdwmqqlngh6mtzl63pz6u98uv06p49fg80d36c52cgpd2hws', amount: '0' },
       {
         stake_address: 'stake1u9jyw6e97pguykpn9kw6jsrvq3x42tehhhzld9vlvhg6ecsw0k3u8',
         amount: '11895546866',
@@ -345,7 +343,6 @@ export default [
         stake_address: 'stake1ux3u6x5cs388djqz6awnyuvez2f6n8jzjhqq59s4yxhm8jskeh0t9',
         amount: '1102182',
       },
-      { stake_address: 'stake1uxjfwrj2k29wv77q4rzlxu0jvsr5dcdyx3crl5f2mnx3agcnzd5vx', amount: '0' },
       {
         stake_address: 'stake1ux4vspfvwuus9uwyp5p3f0ky7a30jq5j80jxse0fr7pa56sgn6kha',
         amount: '1975859151626',
@@ -405,6 +402,18 @@ export default [
       {
         stake_address: 'stake1u8zkrjr4nm5rwflqvgrpcj9nsemdp3zsutyv3vpxfufng4sq3fkwm',
         amount: '123440748326',
+      },
+      {
+        stake_address: 'stake1u8rrqrnh86m0h8s7r0a7nvd9tf4z8zca9gpg73x6z3wxg8qphl6jx',
+        amount: '9120521283',
+      },
+      {
+        stake_address: 'stake1u8rhfyte8t3jxpadjgxsjvmxy54uldnte55y7pg7fpvr84g6guj73',
+        amount: '18890499889',
+      },
+      {
+        stake_address: 'stake1u8yh03wghr447uqyrjamx58gthfsle2v2fj5nkmshm62q9qa9muhq',
+        amount: '829153588',
       },
     ],
   },
