@@ -702,7 +702,7 @@ export default [
       tau: 0.2,
       decentralisation_param: 0,
       extra_entropy: null,
-      protocol_major_ver: 10,
+      protocol_major_ver: 11,
       protocol_minor_ver: 0,
       min_utxo: '4310',
       min_pool_cost: '170000000',
