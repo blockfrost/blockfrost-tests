@@ -371,7 +371,7 @@ export default [
       error: {
         code: 'CONNECTION_ERROR',
         message:
-          'Error Offchain Pool: Connection failure error when fetching metadata from http://localhost:23009/p/pool_clai_registration_metadata.json.',
+          'Error Offchain Pool: URL parse error for http://localhost:23009/p/pool_clai_registration_metadata.json resulted in : "Access to localhost is not allowed"',
       },
     },
   },
