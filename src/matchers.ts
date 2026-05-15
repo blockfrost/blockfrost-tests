@@ -280,6 +280,32 @@ export function toBeCurrentBlockHeight(received: number, options?: { toleranceIn
   };
 }
 
+function deepEqual(a: unknown, b: unknown): boolean {
+  if (Object.is(a, b)) return true;
+  if (typeof a !== typeof b || a === null || b === null || typeof a !== 'object') return false;
+  const aObj = a as Record<string, unknown>;
+  const bObj = b as Record<string, unknown>;
+  const keys = Object.keys(aObj);
+
+  return keys.length === Object.keys(bObj).length && keys.every(k => deepEqual(aObj[k], bObj[k]));
+}
+
+/**
+ * Asymmetric matcher that accepts any value deeply equal to one of the
+ * provided alternatives. Useful inside `toStrictEqual` when multiple
+ * valid responses are acceptable.
+ */
+export function oneOf<T>(...expected: T[]) {
+  return {
+    asymmetricMatch(received: unknown): boolean {
+      return expected.some(value => deepEqual(received, value));
+    },
+    toString() {
+      return `OneOf(${expected.map(v => JSON.stringify(v)).join(' | ')})`;
+    },
+  };
+}
+
 export const toBeAssetUnit = (received: string) => {
   return {
     pass: typeof received === 'string',
