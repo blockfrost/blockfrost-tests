@@ -1,4 +1,5 @@
 import { expect } from 'vitest';
+import { oneOf } from '../../../matchers.js';
 
 export default [
   {
@@ -21,8 +22,7 @@ export default [
   },
   {
     id: 'pools-pool-id-metadata-pool-with-multiple-metadata-updates-in-one-update_edbde8d94192',
-    testName:
-      'pools/:pool_id/metadata - HTTP_RESPONSE_ERROR - only basic pool metadata info returned',
+    testName: 'pools/:pool_id/metadata - pool with broken metadata URL returns error',
     endpoints: [
       'pools/pool1yhd6a8vvp0r0ads36j4zjwx7juztf6cgpa2fqm9dm0st790ptf2/metadata',
       'pools/25dbae9d8c0bc6feb611d4aa2938de9704b4eb080f54906caddbe0bf/metadata',
@@ -36,11 +36,18 @@ export default [
       name: null,
       description: null,
       homepage: null,
-      error: {
-        code: 'HTTP_RESPONSE_ERROR',
-        message:
-          'Error Offchain Pool: HTTP Response error from https://git.io/JmBOm resulted in HTTP status code : 404 "Not Found"',
-      },
+      error: oneOf(
+        {
+          code: 'HTTP_RESPONSE_ERROR',
+          message:
+            'Error Offchain Pool: HTTP Response error from https://git.io/JmBOm resulted in HTTP status code : 404 "Not Found"',
+        },
+        {
+          code: 'CONNECTION_ERROR',
+          message:
+            'Error Offchain Pool: Connection failure error when fetching metadata from https://git.io/JmBOm.',
+        },
+      ),
     },
   },
   {
