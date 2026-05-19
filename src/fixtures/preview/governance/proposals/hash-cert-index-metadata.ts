@@ -1,4 +1,5 @@
 import { error_404 } from '../../../errors/index.js';
+import { expect } from 'vitest';
 
 export default [
   {
