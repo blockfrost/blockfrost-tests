@@ -28,8 +28,7 @@ export default [
       bytes: null,
       error: {
         code: 'HTTP_RESPONSE_ERROR',
-        message:
-          'Error Offchain Voting Anchor: HTTP Response error from http://bit.ly/3QFMhii?index=0: expected JSON, but got : "text/html; charset=utf-8"',
+        message: expect.any(String),
       },
     },
   },

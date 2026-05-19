@@ -39,7 +39,7 @@
     "@types/node": "22.10.2",
     "@typescript-eslint/eslint-plugin": "8.46.2",
     "@typescript-eslint/parser": "8.46.2",
-    "@vitest/ui": "^4.0.1",
+    "@vitest/ui": "4.0.15",
     "change-case": "^5.4.4",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
@@ -54,7 +54,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.2",
     "vite": "^7.1.12",
-    "vitest": "4.0.1",
+    "vitest": "4.0.15",
     "yaml": "^2.8.1"
   },
   "engines": {
