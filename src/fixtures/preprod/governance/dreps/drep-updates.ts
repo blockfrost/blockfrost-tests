@@ -26,11 +26,13 @@ export default [
         tx_hash: '744fb092ab6d8a4d8ca8f66ea3c0abb6b9d49381205aa41c75c8597e91137948',
         cert_index: 0,
         action: 'registered',
+        deposit: '500000000',
       },
       {
         tx_hash: 'ebab27b88379f662d5bdcd2db7c0be391fd94674a889255411d540b6684e5c13',
         cert_index: 0,
         action: 'updated',
+        deposit: null,
       },
     ],
   },

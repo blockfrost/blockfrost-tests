@@ -10,6 +10,7 @@ export default [
       {
         tx_hash: '45220a740fc56a9de8fd66a33961caad498867a899164ac4d0e545b384e7701e',
         action: 'registered',
+        deposit: '2000000',
         tx_slot: 38879461,
         block_height: 1675107,
         block_time: 1705535461,
