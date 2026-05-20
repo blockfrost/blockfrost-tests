@@ -1,6 +1,7 @@
 import { expect } from 'vitest';
 
 import { error_400_pools, error_404 } from '../../errors/index.js';
+import { oneOf } from '../../../matchers.js';
 
 export default [
   {
@@ -370,8 +371,10 @@ export default [
       homepage: null,
       error: {
         code: 'CONNECTION_ERROR',
-        message:
+        message: oneOf(
           'Error Offchain Pool: URL parse error for http://localhost:23009/p/pool_clai_registration_metadata.json resulted in : "Access to localhost is not allowed"',
+          'Error Offchain Pool: Connection failure error when fetching metadata from http://localhost:23009/p/pool_clai_registration_metadata.json.',
+        ),
       },
     },
   },
