@@ -64,9 +64,8 @@ export default [
       reward_account: 'stake1u85438ffegdckx7ue4dnlnmam3y9pj706ca5ty6k7hfw66cr88h5z',
       owners: [
         'stake1uy5z0sz2rp8cd2r0m6vencdnt9m0y99eack2yryrtpxn60qknvq55',
+        'stake1u9508fvrykz9nqfhgefwulyd065u33uwlq7fncmkvvwyteceqc9pc',
         'stake1uxt4xh7hxkkz6la2ndnlnwg07djsncvdptqmz8t8jqc9zjgj8gac4',
-        'stake1uxeum36f74cmyjm9k7lvvjnzwts76h529hrv036frzrhw2c76ghv0',
-        'stake1u8tln79d7040nxum39agnc8v2e473khmkn9jmc9sljgyksszeft6x',
         'stake1u85438ffegdckx7ue4dnlnmam3y9pj706ca5ty6k7hfw66cr88h5z',
         'stake1u8ahk5y0kp3gdtuur9tu0llj6hk85kfhmca5ngnpnxmaa9qnpeqct',
       ],
@@ -97,9 +96,20 @@ export default [
         'f046b5b76608c29b1bc125e2fe6c6b4c9da7ed1c6716a51a68b667dbd4234da5',
         'f3efabf021628e0568a9cba0c564f27c75a0af0b07ad1c2010fb3aa616768704',
         '10c22f409630b08b9c12a3014c817e9989183dafc6c40a1f07488541c8aedaba',
+        'a57e9ed7d406a5c577ad16daa1d393f07f452ea16f05ae374bd9485307d50e05',
       ],
       retirement: [],
-      calidus_key: null,
+      calidus_key: {
+        id: 'calidus158sxtmzp624u9hv5nx3jhwkkkm3q527r2sa6errkckdytlge7n7u9',
+        pub_key:
+          'ab0448054320f4c57a79950d0ab2bb61a2ee973a35547e2f2f0fb402c342d9ab',
+        nonce: 188_803_083,
+        tx_hash:
+          '0d16f082ead229827a1a9641fe0f28edc2591c5ea445977b53fd60f85912bccd',
+        block_height: 13_496_148,
+        block_time: 1_780_369_587,
+        epoch: 634,
+      },
     },
   },
   {
