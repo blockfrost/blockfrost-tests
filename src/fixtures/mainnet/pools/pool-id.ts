@@ -64,8 +64,9 @@ export default [
       reward_account: 'stake1u85438ffegdckx7ue4dnlnmam3y9pj706ca5ty6k7hfw66cr88h5z',
       owners: [
         'stake1uy5z0sz2rp8cd2r0m6vencdnt9m0y99eack2yryrtpxn60qknvq55',
-        'stake1u9508fvrykz9nqfhgefwulyd065u33uwlq7fncmkvvwyteceqc9pc',
         'stake1uxt4xh7hxkkz6la2ndnlnwg07djsncvdptqmz8t8jqc9zjgj8gac4',
+        'stake1uxeum36f74cmyjm9k7lvvjnzwts76h529hrv036frzrhw2c76ghv0',
+        'stake1u8tln79d7040nxum39agnc8v2e473khmkn9jmc9sljgyksszeft6x',
         'stake1u85438ffegdckx7ue4dnlnmam3y9pj706ca5ty6k7hfw66cr88h5z',
         'stake1u8ahk5y0kp3gdtuur9tu0llj6hk85kfhmca5ngnpnxmaa9qnpeqct',
       ],
