@@ -101,11 +101,9 @@ export default [
       retirement: [],
       calidus_key: {
         id: 'calidus158sxtmzp624u9hv5nx3jhwkkkm3q527r2sa6errkckdytlge7n7u9',
-        pub_key:
-          'ab0448054320f4c57a79950d0ab2bb61a2ee973a35547e2f2f0fb402c342d9ab',
+        pub_key: 'ab0448054320f4c57a79950d0ab2bb61a2ee973a35547e2f2f0fb402c342d9ab',
         nonce: 188_803_083,
-        tx_hash:
-          '0d16f082ead229827a1a9641fe0f28edc2591c5ea445977b53fd60f85912bccd',
+        tx_hash: '0d16f082ead229827a1a9641fe0f28edc2591c5ea445977b53fd60f85912bccd',
         block_height: 13_496_148,
         block_time: 1_780_369_587,
         epoch: 634,
