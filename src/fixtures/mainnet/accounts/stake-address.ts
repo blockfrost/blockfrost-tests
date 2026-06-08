@@ -34,7 +34,7 @@ export default [
       stake_address: 'stake1u9fzg77vrgfqlplkjqe9hntdcvsurpvxd60yp2fhn73002qsv9pdk',
       active: expect.any(Boolean),
       registered: expect.any(Boolean),
-      drep_id: 'drep1yf2jzhuc4f7eu2yay9d9ta3dykxxcwn34wz8kak7nhd7vcgrxn7ns',
+      drep_id: 'drep1ygsgfhcydhlfglamhzkjn97rz3edef8a4z99fwl2frcwnrcmgurt3',
       active_epoch: expect.toBeOneOf([expect.toBeGreaterThan(223), null]),
       controlled_amount: expect.toBeGreaterThanOrEqual('0'),
       rewards_sum: expect.toBeGreaterThanOrEqual('0'),
