@@ -39,6 +39,7 @@ declare module 'vitest' {
     toBeStakeAddress(): void;
     toBeCurrentBlockHeight(options?: { toleranceInBlocks?: number }): void;
     toBeCurrentEpochNumber(): void;
+    toBeNullableEpochNumber(): void;
   }
 }
 

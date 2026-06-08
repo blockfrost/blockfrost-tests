@@ -1,4 +1,5 @@
 import { getUnixTime, isValid } from 'date-fns';
+import { expect } from 'vitest';
 import { isBlockchainStateSetupEnabled } from './utils.js';
 import { getConfig } from './config.js';
 
@@ -210,6 +211,40 @@ export const toBeCurrentEpochNumber = (received: number) => {
     message: () => `Expected value ${received} to be within range for an epoch <${min}, ${max}>`,
   };
 };
+
+export const toBeNullableEpochNumber = (received: number | null) => {
+  if (received === null) {
+    return { pass: true, message: () => `Expected value to be null or a valid epoch number` };
+  }
+
+  return toBeEpochNumber(received);
+};
+
+/**
+ * Shape matcher for the `metadata` field of each `/governance/dreps` list item.
+ * Content correctness (json_metadata, bytes, hash) is covered by the dedicated
+ * `/governance/dreps/{drep_id}/metadata` tests, so here we only assert one of the
+ * three valid shapes:
+ *  - `null` when the DRep has no registered anchor,
+ *  - resolved metadata (anchor registered and fetched), or
+ *  - an off-chain fetch error (anchor registered, fetch failed).
+ */
+export const drepListMetadata = expect.toBeOneOf([
+  null,
+  {
+    url: expect.any(String),
+    hash: expect.any(String),
+    json_metadata: expect.any(Object),
+    bytes: expect.any(String),
+  },
+  {
+    url: expect.any(String),
+    hash: expect.any(String),
+    json_metadata: null,
+    bytes: null,
+    error: { code: expect.any(String), message: expect.any(String) },
+  },
+]);
 
 export const toBeEpochSlotNumber = (received: number) => {
   // Note: missing inversion (could be handled with this.isNot),

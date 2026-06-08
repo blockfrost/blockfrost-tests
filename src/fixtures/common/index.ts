@@ -9,6 +9,7 @@ import utilsTxsEvaluate from './utils/txs-evaluate.js';
 import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
 import assetUtxos from './assets/asset-utxos.js';
 import swapsAsset from './swaps/asset.js';
+import governanceDreps from './governance/dreps.js';
 
 export const commonFixtures = {
   health: [...healthRoot, ...healthClock],
@@ -18,4 +19,5 @@ export const commonFixtures = {
   blocks: [...blocksLatest, ...blocksLatestTxs, ...blocksLatestTxsCbor],
   epochs: [...epochsLatest],
   utils: [...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos],
+  governance: [...governanceDreps],
 };

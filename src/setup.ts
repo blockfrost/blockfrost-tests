@@ -22,6 +22,7 @@ import {
   toBeStakeAddress,
   toBeCurrentBlockHeight,
   toBeCurrentEpochNumber,
+  toBeNullableEpochNumber,
 } from './matchers.js';
 import { isBlockchainStateSetupEnabled } from './utils.js';
 
@@ -79,4 +80,5 @@ expect.extend({
   toBeStakeAddress,
   toBeCurrentBlockHeight,
   toBeCurrentEpochNumber,
+  toBeNullableEpochNumber,
 });
