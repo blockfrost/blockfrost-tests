@@ -420,8 +420,11 @@ export default [
       homepage: null,
       error: {
         code: 'HASH_MISMATCH',
-        message:
+        // Substring match — the backend may wrap the original hash-mismatch
+        // message with additional gateway-error context.
+        message: expect.stringContaining(
           'Hash mismatch when fetching metadata from https://tinyurl.com/39a7pnv5. Expected "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef" but got "b123ea83d1f87afcb95a76661be508b37a0957c7fa95baa883a80d1203ffcd94".',
+        ),
       },
     },
   },

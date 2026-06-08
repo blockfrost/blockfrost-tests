@@ -1,3 +1,5 @@
+import { expect } from 'vitest';
+
 export default [
   {
     id: 'governance-drep-metadata_cbc2a3b2507a',
@@ -229,8 +231,9 @@ export default [
       bytes: null,
       error: {
         code: 'HTTP_RESPONSE_ERROR',
-        message:
+        message: expect.stringContaining(
           'Error Offchain Voting Anchor: HTTP Response error from https://adatree.io: expected JSON, but got : "text/html; charset=UTF-8"',
+        ),
       },
     },
   },

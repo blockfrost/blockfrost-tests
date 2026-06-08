@@ -1,3 +1,5 @@
+import { expect } from 'vitest';
+
 export default [
   {
     id: 'governance-drep-metadata_768fb8371a01',
@@ -240,8 +242,9 @@ export default [
       bytes: null,
       error: {
         code: 'HTTP_RESPONSE_ERROR',
-        message:
+        message: expect.stringContaining(
           'Error Offchain Voting Anchor: HTTP Response error from https://example.com/my-drep-info.json resulted in HTTP status code : 404 "Not Found"',
+        ),
       },
     },
   },

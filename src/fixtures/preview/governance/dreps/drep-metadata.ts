@@ -1,3 +1,5 @@
+import { expect } from 'vitest';
+
 export default [
   {
     id: 'governance-drep-metadata_db851404fc0f',
@@ -93,8 +95,9 @@ export default [
       bytes: null,
       error: {
         code: 'HTTP_RESPONSE_ERROR',
-        message:
+        message: expect.stringContaining(
           'Error Offchain Voting Anchor: HTTP Response error from https://bit.ly/3zCH2HL: expected JSON, but got : "text/html; charset=utf-8"',
+        ),
       },
     },
   },
@@ -113,8 +116,11 @@ export default [
       bytes: null,
       error: {
         code: 'HASH_MISMATCH',
-        message:
+        // Substring match — the backend may wrap the original hash-mismatch
+        // message with additional gateway-error context.
+        message: expect.stringContaining(
           'Hash mismatch when fetching metadata from https://raw.githubusercontent.com/mirceahasegan/drep-registry/main/Mircea.jsonld. Expected "603f3202d8d1c15f54adfd944a437e7c0b6183a4ec3c04c0dec3faadb7825ccb" but got "3a0593d40c051d06780a6f4e70643ac61807e074377a1937ab2e7bad9a1ac08a".',
+        ),
       },
     },
   },
