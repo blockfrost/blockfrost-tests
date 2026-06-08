@@ -1,3 +1,4 @@
+import { expect } from 'vitest';
 import { error_404 } from '../../../errors/index.js';
 
 export default [
@@ -25,8 +26,11 @@ export default [
       bytes: null,
       error: {
         code: 'HASH_MISMATCH',
-        message:
+        // Substring match — the backend may wrap the original hash-mismatch
+        // message with additional gateway-error context.
+        message: expect.stringContaining(
           'Hash mismatch when fetching metadata from https://raw.githubusercontent.com/logical-mechanism/dRep/main/scripts/data/actions/simple.action.json. Expected "b0ea2fb2fb9a573b8d8b856f861053382e1ef0ca6ecb76cec39c53e94f2c5a29" but got "25a678e8f8dc511d96005aebb34f8cba23f7bf8a032d394691cb60f6d1c2f1a3".',
+        ),
       },
     },
   },
