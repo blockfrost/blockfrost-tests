@@ -71,6 +71,7 @@ import scriptsHash from './scripts/hash.js';
 import scriptsHashJson from './scripts/hash-json.js';
 import scriptsHashCbor from './scripts/hash-cbor.js';
 import scriptsHashRedeemers from './scripts/hash-redeemers.js';
+import scriptsHashUtxos from './scripts/hash-utxos.js';
 
 import tsxMetadata from './txs/tx-metadata.js';
 import txsTx from './txs/tx.js';
@@ -196,6 +197,7 @@ export const preprodFixtures = {
     ...scriptsHashJson,
     ...scriptsHashCbor,
     ...scriptsHashRedeemers,
+    ...scriptsHashUtxos,
   ],
   swaps: [...swapsAsset],
   tx: [...txSubmit],
