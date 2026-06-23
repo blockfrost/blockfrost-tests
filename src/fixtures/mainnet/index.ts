@@ -69,6 +69,7 @@ import scriptsHash from './scripts/hash.js';
 import scriptsHashJson from './scripts/hash-json.js';
 import scriptsHashCbor from './scripts/hash-cbor.js';
 import scriptsHashRedeemers from './scripts/hash-redeemers.js';
+import scriptsHashUtxos from './scripts/hash-utxos.js';
 import txsLabels from './txs/tx.js';
 import utilsTxsEvaluate from './utils/txs-evaluate.js';
 import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
@@ -184,6 +185,7 @@ export const mainnetFixtures = {
     ...scriptsHashJson,
     ...scriptsHashCbor,
     ...scriptsHashRedeemers,
+    ...scriptsHashUtxos,
   ],
   governance: [
     ...governanceDrep,

@@ -72,6 +72,7 @@ import scriptsHash from './scripts/hash.js';
 import scriptsHashJson from './scripts/hash-json.js';
 import scriptsHashCbor from './scripts/hash-cbor.js';
 import scriptsHashRedeemers from './scripts/hash-redeemers.js';
+import scriptsHashUtxos from './scripts/hash-utxos.js';
 
 import txsTx from './txs/tx.js';
 import txsDelegations from './txs/tx-delegations.js';
@@ -182,6 +183,7 @@ export const previewFixtures = {
     ...scriptsHashJson,
     ...scriptsHashCbor,
     ...scriptsHashRedeemers,
+    ...scriptsHashUtxos,
   ],
   governance: [
     ...governanceDrep,
