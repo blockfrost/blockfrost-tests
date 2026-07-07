@@ -173,6 +173,11 @@ describe('validateAllowlistPattern', () => {
   it('rejects a malformed pattern gracefully', () => {
     expect(validateAllowlistPattern('/[invalid][')).not.toBeNull();
   });
+
+  it('ignores query strings and hash fragments, same as URL matching does', () => {
+    expect(validateAllowlistPattern('/blocks/latest?count=5')).toBeNull();
+    expect(validateAllowlistPattern('/accounts/{stake_address}#fragment')).toBeNull();
+  });
 });
 
 const createFixture = (id: string): Fixture => ({
