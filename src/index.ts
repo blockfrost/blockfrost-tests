@@ -20,6 +20,23 @@ apiEndpointsKeys.map(path => {
   router.insert(normalizedPath, { pattern: normalizedPath });
 });
 
+// The set of every OpenAPI route, in normalized form. An allowlist entry is only
+// valid if it is byte-for-byte identical (after normalization) to one of these.
+const normalizedApiEndpoints = new Set(apiEndpointsKeys.map(normalizePath));
+
+/**
+ * Checks whether an allowlist pattern is an exact OpenAPI route.
+ */
+export const validateAllowlistPattern = (allowlistPattern: string): string | null => {
+  const normalizedPattern = normalizePath(allowlistPattern);
+
+  if (!normalizedApiEndpoints.has(normalizedPattern)) {
+    return `is not an exact endpoint in the @blockfrost/openapi specification (paths and parameter names must match exactly)`;
+  }
+
+  return null;
+};
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const filePath = path.resolve(__dirname, '../endpoints-allowlist.json');
 const ignorelistFilePath = path.resolve(__dirname, '../endpoints-ignorelist.json');
@@ -45,6 +62,19 @@ try {
   endpointsAllowlist = parsed.map(endpoint => {
     return endpoint.startsWith('/') ? endpoint.slice(1) : endpoint;
   });
+
+  const invalidEntries = endpointsAllowlist
+    .map(entry => ({ entry, error: validateAllowlistPattern(entry) }))
+    .filter((result): result is { entry: string; error: string } => result.error !== null);
+
+  if (invalidEntries.length > 0) {
+    const details = invalidEntries.map(({ entry, error }) => `  - "${entry}": ${error}`).join('\n');
+
+    throw new Error(
+      `endpoints-allowlist.json contains ${invalidEntries.length} invalid entr${invalidEntries.length === 1 ? 'y' : 'ies'} ` +
+        `that would silently match no tests:\n${details}`,
+    );
+  }
 } catch (error) {
   const message = error instanceof Error ? error.message : String(error);
 

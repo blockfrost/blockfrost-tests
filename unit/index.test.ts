@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isUrlMatch, matchesIgnoreRule } from '../src/index.js';
+import { isUrlMatch, matchesIgnoreRule, validateAllowlistPattern } from '../src/index.js';
 import { Fixture } from '../src/types/index.js';
 
 describe('isUrlMatch', () => {
@@ -134,6 +134,49 @@ describe('isUrlMatch', () => {
   it('matches when both path and pattern have no leading slash', () => {
     expect(isUrlMatch('accounts/stake', 'accounts/{stake_address}')).toBe(true);
     expect(isUrlMatch('blocks/123', 'blocks/{hash_or_number}')).toBe(true);
+  });
+});
+
+describe('validateAllowlistPattern', () => {
+  it('accepts valid parameterized routes', () => {
+    expect(validateAllowlistPattern('/accounts/{stake_address}')).toBeNull();
+    expect(validateAllowlistPattern('/blocks/slot/{slot_number}')).toBeNull();
+    expect(validateAllowlistPattern('/pools/{pool_id}')).toBeNull();
+  });
+
+  it('accepts valid literal routes', () => {
+    expect(validateAllowlistPattern('/health')).toBeNull();
+    expect(validateAllowlistPattern('/blocks/latest')).toBeNull();
+    expect(validateAllowlistPattern('/pools/extended')).toBeNull();
+  });
+
+  it('accepts entries with or without a leading slash', () => {
+    expect(validateAllowlistPattern('accounts/{stake_address}')).toBeNull();
+    expect(validateAllowlistPattern('/accounts/{stake_address}')).toBeNull();
+  });
+
+  it('rejects a route with a mistyped/renamed path parameter', () => {
+    // This is the real-world bug: the spec uses `{slot_number}`, not `{slot}`.
+    // We require an exact match rather than trying to guess the intended route.
+    expect(validateAllowlistPattern('/blocks/slot/{slot}')).not.toBeNull();
+    expect(validateAllowlistPattern('/accounts/{stake}')).not.toBeNull();
+  });
+
+  it('rejects a completely unknown route', () => {
+    expect(validateAllowlistPattern('/this/does/not/exist')).not.toBeNull();
+  });
+
+  it('rejects a route with the wrong number of segments', () => {
+    expect(validateAllowlistPattern('/accounts')).not.toBeNull();
+  });
+
+  it('rejects a malformed pattern gracefully', () => {
+    expect(validateAllowlistPattern('/[invalid][')).not.toBeNull();
+  });
+
+  it('ignores query strings and hash fragments, same as URL matching does', () => {
+    expect(validateAllowlistPattern('/blocks/latest?count=5')).toBeNull();
+    expect(validateAllowlistPattern('/accounts/{stake_address}#fragment')).toBeNull();
   });
 });
 
