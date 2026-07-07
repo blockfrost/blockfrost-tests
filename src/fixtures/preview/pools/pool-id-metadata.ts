@@ -3,7 +3,8 @@ import { expect } from 'vitest';
 export default [
   {
     id: 'pools-pool-id-metadata-pool-with-multiple-metadata-updates-in-one-update-upstr_cdf918758069',
-    testName: 'pools/:pool_id/metadata - pool with multiple metadata updates in one update UPSTR',
+    testName:
+      'pools/:pool_id/metadata - pool with multiple metadata updates in one update UPSTR - pool with broken metadata URL returns error',
     endpoints: [
       'pools/pool1407hpuvtp9ww8s5mt53ear7062j463mvwhnypurlcask7djg3ae/metadata',
       'pools/abfd70f18b095ce3c29b5d239e8fcfd2a55d476c75e640f07fc7616f/metadata',
@@ -13,10 +14,15 @@ export default [
       hex: 'abfd70f18b095ce3c29b5d239e8fcfd2a55d476c75e640f07fc7616f',
       url: expect.any(String),
       hash: expect.any(String),
-      ticker: 'UPSTR',
-      name: expect.any(String),
-      description: expect.any(String),
-      homepage: expect.any(String),
+      ticker: null,
+      name: null,
+      description: null,
+      homepage: null,
+      error: {
+        code: 'CONNECTION_ERROR',
+        message:
+          'Error Offchain Pool: Connection failure error when fetching metadata from https://upstream.org.uk/assets/preview/metadata.json.',
+      },
     },
   },
   {
