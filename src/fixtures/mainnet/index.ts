@@ -74,6 +74,7 @@ import txsLabels from './txs/tx.js';
 import utilsTxsEvaluate from './utils/txs-evaluate.js';
 import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
 import txsTx from './txs/tx.js';
+import txsTxCbor from './txs/tx-cbor.js';
 import tsxMetadata from './txs/tx-metadata.js';
 import txsDelegations from './txs/tx-delegations.js';
 import txsMetadataCbor from './txs/tx-metadata-cbor.js';
@@ -205,6 +206,7 @@ export const mainnetFixtures = {
   ],
   txs: [
     ...txsTx,
+    ...txsTxCbor,
     ...tsxMetadata,
     ...txsDelegations,
     ...txsMetadataCbor,

@@ -75,6 +75,7 @@ import scriptsHashUtxos from './scripts/hash-utxos.js';
 
 import tsxMetadata from './txs/tx-metadata.js';
 import txsTx from './txs/tx.js';
+import txsTxCbor from './txs/tx-cbor.js';
 import txsDelegations from './txs/tx-delegations.js';
 import txsMetadataCbor from './txs/tx-metadata-cbor.js';
 import txUtxos from './txs/tx-utxos.js';
@@ -203,6 +204,7 @@ export const preprodFixtures = {
   tx: [...txSubmit],
   txs: [
     ...txsTx,
+    ...txsTxCbor,
     ...txsDelegations,
     ...tsxMetadata,
     ...txsMetadataCbor,

@@ -75,6 +75,7 @@ import scriptsHashRedeemers from './scripts/hash-redeemers.js';
 import scriptsHashUtxos from './scripts/hash-utxos.js';
 
 import txsTx from './txs/tx.js';
+import txsTxCbor from './txs/tx-cbor.js';
 import txsDelegations from './txs/tx-delegations.js';
 import txsTxMetadata from './txs/tx-metadata.js';
 import txsMetadataCbor from './txs/tx-metadata-cbor.js';
@@ -206,6 +207,7 @@ export const previewFixtures = {
   txs: [
     ...txsTxMetadata,
     ...txsTx,
+    ...txsTxCbor,
     ...txsDelegations,
     ...txsMetadataCbor,
     ...txsPoolRetires,
