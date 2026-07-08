@@ -2110,7 +2110,7 @@ export default [
     testName: 'epochs/latest/parameters',
     endpoints: ['epochs/latest/parameters'],
     response: {
-      epoch: 641,
+      epoch: expect.toBeEpochNumber(),
       min_fee_a: 44,
       min_fee_b: 155381,
       max_block_size: 90112,
@@ -2129,7 +2129,7 @@ export default [
       protocol_minor_ver: 0,
       min_utxo: '4310',
       min_pool_cost: '170000000',
-      nonce: '6147d6eb5afd4a425cfb37272d29560556834971e65f919671d2486e66984c18',
+      nonce: expect.any(String),
       cost_models: {
         PlutusV1: {
           'addInteger-cpu-arguments-intercept': 100788,
