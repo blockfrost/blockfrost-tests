@@ -1819,7 +1819,7 @@ export default [
       committee_min_size: '3',
       committee_max_term_length: '146',
       gov_action_lifetime: '6',
-      gov_action_deposit: '100000000000',
+      gov_action_deposit: '1000000000',
       drep_deposit: '500000000',
       drep_activity: '20',
       pvtpp_security_group: 0.51,
