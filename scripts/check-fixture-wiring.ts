@@ -14,11 +14,13 @@ const FIXTURES_ROOT = 'src/fixtures';
  * intentionally-not-wired modules and are excluded from the orphan check.
  * Add an entry here (with a short justification) when a fixture file is
  * legitimately not meant to be wired into a network aggregator.
+ *
+ * Note: nested `index.ts` files (e.g. `governance/dreps/index.ts`) are real
+ * fixture modules and are intentionally not excluded here. Only the
+ * network-root `src/fixtures/<network>/index.ts` aggregator is skipped (see
+ * `auditNetwork`).
  */
-const IGNORED_BASENAMES = new Set<string>([
-  // Nested aggregators that are themselves imported by the network index.ts.
-  'index.ts',
-]);
+const IGNORED_BASENAMES = new Set<string>([]);
 
 interface Orphan {
   file: string;
@@ -32,8 +34,11 @@ interface NetworkReport {
   deadImports: string[]; // default imports that are never spread into the export
 }
 
-/** Recursively collect fixture `.ts` files (excluding aggregator index files). */
-function findFixtureFiles(dir: string): string[] {
+/**
+ * Recursively collect fixture `.ts` files. Nested `index.ts` files count as fixtures;
+ * only the given `rootIndex` (the network-root aggregator) is skipped.
+ */
+function findFixtureFiles(dir: string, rootIndex: string): string[] {
   const results: string[] = [];
   let entries: fs.Dirent[];
 
@@ -47,11 +52,12 @@ function findFixtureFiles(dir: string): string[] {
     const fullPath = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
-      results.push(...findFixtureFiles(fullPath));
+      results.push(...findFixtureFiles(fullPath, rootIndex));
     } else if (
       entry.name.endsWith('.ts') &&
       !entry.name.endsWith('.d.ts') &&
-      !IGNORED_BASENAMES.has(entry.name)
+      !IGNORED_BASENAMES.has(entry.name) &&
+      path.normalize(fullPath) !== rootIndex
     ) {
       results.push(fullPath);
     }
@@ -61,9 +67,9 @@ function findFixtureFiles(dir: string): string[] {
 }
 
 interface ParsedIndex {
-  /** Absolute-from-repo-root .ts paths that the index imports as default bindings. */
+  /** Resolved .ts paths the index imports (default, named, or namespace). */
   importedFiles: Set<string>;
-  /** Map of local binding name -> resolved .ts file path. */
+  /** Map of default-import local binding name -> resolved .ts file path. */
   bindingToFile: Map<string, string>;
   /** Set of local binding names that appear in a spread element anywhere in the module. */
   spreadBindings: Set<string>;
@@ -100,12 +106,23 @@ function parseIndex(indexPath: string): ParsedIndex {
       const specifier = nodePath.node.source.value;
       const resolved = resolveImport(indexDir, specifier);
 
+      if (!resolved) return;
+
       for (const spec of nodePath.node.specifiers) {
-        if (spec.type === 'ImportDefaultSpecifier' || spec.type === 'ImportSpecifier') {
-          if (resolved) {
-            importedFiles.add(resolved);
-            bindingToFile.set(spec.local.name, resolved);
-          }
+        // Any imported local module counts as "referenced" for the orphan check.
+        if (
+          spec.type === 'ImportDefaultSpecifier' ||
+          spec.type === 'ImportSpecifier' ||
+          spec.type === 'ImportNamespaceSpecifier'
+        ) {
+          importedFiles.add(resolved);
+        }
+
+        // The dead-import check mirrors the wiring pattern (`import x from './f.js'`
+        // followed by `...x`), so only default imports are candidates. Named/namespace
+        // imports are helpers and must not be flagged as unspread.
+        if (spec.type === 'ImportDefaultSpecifier') {
+          bindingToFile.set(spec.local.name, resolved);
         }
       }
     },
@@ -139,7 +156,7 @@ function auditNetwork(network: string): NetworkReport {
   }
 
   const { importedFiles, bindingToFile, spreadBindings } = parseIndex(indexPath);
-  const fixtureFiles = findFixtureFiles(networkDir).map(f => path.normalize(f));
+  const fixtureFiles = findFixtureFiles(networkDir, path.normalize(indexPath));
 
   // 1. Orphan files: exist on disk but never imported by the index.
   for (const file of fixtureFiles) {
