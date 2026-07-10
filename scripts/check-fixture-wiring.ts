@@ -10,8 +10,8 @@ const NETWORKS = ['mainnet', 'preprod', 'preview'] as const;
 const FIXTURES_ROOT = 'src/fixtures';
 
 /**
- * Fixture files whose names match these patterns are treated as shared helpers /
- * intentionally-not-wired modules and are excluded from the orphan check.
+ * Fixture files whose basenames are listed in `IGNORED_BASENAMES` are treated as shared
+ * helpers / intentionally-not-wired modules and are excluded from the orphan check.
  * Add an entry here (with a short justification) when a fixture file is
  * legitimately not meant to be wired into a network aggregator.
  *
