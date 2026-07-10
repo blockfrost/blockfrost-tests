@@ -19,12 +19,14 @@ import addressUtxos from './addresses/address-utxos.js';
 import addressUtxosAsset from './addresses/address-utxos-asset.js';
 
 import asset from './assets/asset.js';
+import assetAddresses from './assets/asset-addresses.js';
 import assetsAsset from './assets/asset.js';
 import assetHistory from './assets/asset-history.js';
 import assetPolicyPolicyId from './assets/asset-policy-policy-id.js';
 import assetTransactions from './assets/asset-transactions.js';
 import assetTxs from './assets/asset-txs.js';
 import assetUtxos from './assets/asset-utxos.js';
+import assetsRoot from './assets/root.js';
 
 import blocksOthers from './blocks/_others.js';
 import blocksHashOrNumber from './blocks/hash-or-number.js';
@@ -133,12 +135,14 @@ export const previewFixtures = {
   ],
   assets: [
     ...asset,
+    ...assetAddresses,
     ...assetsAsset,
     ...assetHistory,
     ...assetPolicyPolicyId,
     ...assetTransactions,
     ...assetTxs,
     ...assetUtxos,
+    ...assetsRoot,
   ],
   blocks: [
     ...blocksOthers,
