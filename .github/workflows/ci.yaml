@@ -26,6 +26,9 @@ jobs:
       - name: Lint
         run: yarn lint
 
+      - name: Check fixture wiring
+        run: yarn check-fixture-wiring
+
       - name: Test
         run: yarn test
         env:
