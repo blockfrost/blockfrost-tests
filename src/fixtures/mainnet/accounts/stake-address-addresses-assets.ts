@@ -66,7 +66,7 @@ export default [
     response: [],
   },
   {
-    id: 'accounts-stake-address-non-valid-account_ea7670c3d362',
+    id: 'accounts-stake-address-non-valid-account_ab53dda7506d',
     testName: 'accounts/:stake_address - non-valid account',
     response: error_400_accounts,
     endpoints: ['accounts/stake1kek/addresses/assets'],
@@ -130,13 +130,5 @@ export default [
         quantity: '1',
       },
     ],
-  },
-  {
-    id: 'accounts-stake-address-addresses-assets-generic-stake-address-without-tokens_361b73a34537',
-    testName: 'accounts/:stake_address/addresses/assets generic stake address without tokens',
-    endpoints: [
-      'accounts/stake1uyfckx3mk6rqy6epdfqswhw3p6kpfad83mgcmyez2vacuws8yppkw/addresses/assets',
-    ],
-    response: [],
   },
 ];

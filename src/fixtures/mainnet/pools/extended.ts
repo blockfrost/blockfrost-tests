@@ -6,7 +6,7 @@ const paginationFixtures = getPaginationFixtures('pools/extended');
 export default [
   ...paginationFixtures,
   {
-    id: 'pools-extended-queryparams_33c8fc92f5c2',
+    id: 'pools-extended-queryparams_f93f8df6a57c',
     testName: 'pools/extended?queryparams',
     endpoints: ['pools/extended?count=5&page=3', 'pools/extended?count=5&page=3&order=asc'],
     response: [
@@ -108,7 +108,7 @@ export default [
     ],
   },
   {
-    id: 'pools-extended-queryparams-we-are-not-there-yet_8f1cad435c64',
+    id: 'pools-extended-queryparams-we-are-not-there-yet_436d881bc670',
     testName: 'pools/extended?queryparams - we are not there yet',
     endpoints: ['pools/extended?page=694269'],
     response: [],

@@ -31,7 +31,7 @@ export default [
     },
   },
   {
-    id: 'addresses-address-extended-blockfrost-nft-asset-with-cip-68-metadata_a5ea59275fe7',
+    id: 'addresses-address-extended-blockfrost-nft-asset-with-cip-68-metadata_188ac638a1ec',
     testName: 'addresses/:address/extended Blockfrost NFT asset with CIP68 metadata',
     endpoints: [
       'addresses/addr_test1qzttn9qfcwzd0c7whqv3p2ryynkktj9c45cgnjkq9n6tc9v6y6m63pymrzuxl6k0tq4tce9avm04wxvj6ayzs6nvx0mshk6rzv/extended',
@@ -54,7 +54,7 @@ export default [
     },
   },
   {
-    id: 'addresses-address-extended-blockfrost-ft-asset-with-cip-68-metadata_6d0b7703d90b',
+    id: 'addresses-address-extended-blockfrost-ft-asset-with-cip-68-metadata_b9ec7cb2dd7a',
     testName: 'addresses/:address/extended Blockfrost FT asset with CIP68 metadata',
     endpoints: [
       'addresses/addr_test1qz9z8azrqnzyu085vwz7lxr3vslplrfv3uwetp9zvfcws3zdfd60xmfdzz6sq83fvjd9fhvktzlruzwvfaqzrmwgg7mstknksy/extended',

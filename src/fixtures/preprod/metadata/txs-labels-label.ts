@@ -5,7 +5,7 @@ const paginationFixtures = getPaginationFixtures('metadata/txs/labels/1967');
 export default [
   ...paginationFixtures,
   {
-    id: 'metadata-txs-labels-label_4e8a5486ac6c',
+    id: 'metadata-txs-labels-label_00581fb28c11',
     testName: 'metadata/txs/labels/label',
     endpoints: ['metadata/txs/labels/2?count=2&page=2'],
     response: [
@@ -20,7 +20,7 @@ export default [
     ],
   },
   {
-    id: 'metadata-txs-labels-label_77bace432f32',
+    id: 'metadata-txs-labels-label_ed119f19382b',
     testName: 'metadata/txs/labels/label',
     endpoints: ['metadata/txs/labels/2'],
     response: [

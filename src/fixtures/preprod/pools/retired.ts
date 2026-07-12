@@ -5,7 +5,7 @@ const paginationFixtures = getPaginationFixtures('pools/retired');
 export default [
   ...paginationFixtures,
   {
-    id: 'pools-retired_4e7d74cc2c10',
+    id: 'pools-retired_f6389e9f01c6',
     testName: 'pools/retired',
     endpoints: ['pools/retired?count=69'],
     response: [
@@ -81,7 +81,7 @@ export default [
     ],
   },
   {
-    id: 'pools-retired-queryparams_bf04317a3c1e',
+    id: 'pools-retired-queryparams_8805ed90ab22',
     testName: 'pools/retired?queryparams',
     endpoints: ['pools/retired?count=2&page=5'],
     response: [
@@ -90,7 +90,7 @@ export default [
     ],
   },
   {
-    id: 'pools-retired-queryparams_8d86fc0f3450',
+    id: 'pools-retired-queryparams_a05c4df98b85',
     testName: 'pools/retired?queryparams',
     endpoints: ['pools/retired?count=2&page=10'],
     response: [
@@ -100,7 +100,7 @@ export default [
   },
 
   {
-    id: 'pools-retired-queryparams_b9fff6ca8089',
+    id: 'pools-retired-queryparams_8314d6083dc7',
     testName: 'pools/retired?queryparams',
     endpoints: ['pools/retired?page=3&count=3'],
     response: [

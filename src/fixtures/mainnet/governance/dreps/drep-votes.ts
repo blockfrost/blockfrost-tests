@@ -81,13 +81,13 @@ export default [
     ],
   },
   {
-    id: 'governance-drep-always-no-confidence-votes_8448e67e592c',
+    id: 'governance-drep-always-no-confidence-votes_ec9d2d05e802',
     testName: 'governance drep_always_no_confidence votes',
     endpoints: ['governance/dreps/drep_always_no_confidence/votes'],
     response: [],
   },
   {
-    id: 'governance-drep-always-abstain-votes_a2b741ae9ba6',
+    id: 'governance-drep-always-abstain-votes_efa196e2e0a8',
     testName: 'governance drep_always_abstain votes',
     endpoints: ['governance/dreps/drep_always_abstain/votes'],
     response: [],

@@ -2,7 +2,7 @@ import { error_404, error_400_epochs } from '../../errors/index.js';
 
 export default [
   {
-    id: 'epochs-number-first_6f4c27191e8e',
+    id: 'epochs-number-first_88b339648d6b',
     testName: 'epochs/:number - first',
     endpoints: ['epochs/0'],
     response: {
@@ -53,13 +53,13 @@ export default [
     },
   },
   {
-    id: 'epochs-number-out-of-range-epoch_da47e487d954',
+    id: 'epochs-number-out-of-range-epoch_ce04a5611fb7',
     testName: 'epochs/:number - out of range epoch',
     endpoints: ['epochs/696969696969'],
     response: error_400_epochs,
   },
   {
-    id: 'epochs-number-not-found-epoch_3011e5362cc4',
+    id: 'epochs-number-not-found-epoch_723679dda33a',
     testName: 'epochs/:number - not found epoch',
     endpoints: ['epochs/69696969'],
     response: error_404,

@@ -7,7 +7,7 @@ const paginationFixtures = getPaginationFixtures('governance/dreps');
 export default [
   ...paginationFixtures,
   {
-    id: 'governance-dreps-list_1cc0cb3cc8cc',
+    id: 'governance-dreps-list_18dbc1d4ed88',
     testName: 'governance dreps list',
     endpoints: ['governance/dreps?count=10'],
     response: [

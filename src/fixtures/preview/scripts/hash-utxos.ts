@@ -63,7 +63,7 @@ export default [
     response: [],
   },
   {
-    id: 'scripts-script-hash-utxos-unknown-script-hash_5ff58ba04810',
+    id: 'scripts-script-hash-utxos-unknown-script-hash_eb91e5f42089',
     testName: 'scripts/:script_hash/utxos - unknown script hash',
     endpoints: ['scripts/0000000000000000000000000000000000000000000000000000dead/utxos'],
     response: error_404,

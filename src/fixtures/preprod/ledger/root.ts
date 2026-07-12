@@ -1,6 +1,6 @@
 export default [
   {
-    id: 'genesis_769e8bcdde9a',
+    id: 'genesis_2c737bbcb476',
     testName: 'genesis',
     endpoints: ['genesis'],
     response: {

@@ -192,13 +192,13 @@ export default [
   // errors
 
   {
-    id: 'addresses-address-invalid-address_d52e2854f62d',
+    id: 'addresses-address-invalid-address_f67895a3d6b4',
     testName: 'addresses/:address - invalid address',
     endpoints: ['addresses/addr1stonks'],
     response: error_400_addresses,
   },
   {
-    id: 'addresses-address-valid-address-not-on-chain_4522081f4300',
+    id: 'addresses-address-valid-address-not-on-chain_c9f39c981609',
     testName: 'addresses/:address - valid address not on-chain',
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw',
@@ -206,7 +206,7 @@ export default [
     response: error_404,
   },
   {
-    id: 'addresses-address-valid-address-not-on-chain-valid-not-on-chain-asset_157c9a43dd50',
+    id: 'addresses-address-valid-address-not-on-chain-valid-not-on-chain-asset_661719f12994',
     testName: 'addresses/:address - valid address not on-chain, valid not on-chain asset',
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw/utxos/f4988f549728dc76b58d7677849943cafee5385dc67e6c25f6aa901e506978656c54696c653235',
@@ -214,7 +214,7 @@ export default [
     response: error_404,
   },
   {
-    id: 'addresses-address-valid-address-not-on-chain-valid-on-chain-asset_58262ec3c5af',
+    id: 'addresses-address-valid-address-not-on-chain-valid-on-chain-asset_d07ec734e055',
     testName: 'addresses/:address - valid address not on-chain, valid on-chain asset',
     endpoints: [
       'addresses/addr_test1qre63def8pypvq95cw07lwy4hge4dl8e2nl36sa7h4amx56ycdz9a0l0yxcy9pe2sddxaym9hwy7wdzdu6mhwjattgms2p6puw/utxos/e68f1cea19752d1292b4be71b7f5d2b3219a15859c028f7454f66cdf74544555524f',
@@ -230,13 +230,13 @@ export default [
     response: error_404,
   },
   {
-    id: 'invalid-path_56f50b52924c',
+    id: 'invalid-path_48ab7e52f1fe',
     testName: 'Invalid path',
     endpoints: ['addresses/'],
     response: error_400,
   },
   {
-    id: 'addresses-address-invalid-address_4ccd274cc3b4',
+    id: 'addresses-address-invalid-address_5b922b5d3e5f',
     testName: 'addresses/:address - invalid address ',
     response: error_400_addresses,
     endpoints: ['addresses/addr_test1uwu'],

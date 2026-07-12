@@ -6,7 +6,7 @@ const paginationFixtures = getPaginationFixtures('metadata/txs/labels');
 export default [
   ...paginationFixtures,
   {
-    id: 'metadata-list-of-all-labels-with-queryparams_d8757b303f18',
+    id: 'metadata-list-of-all-labels-with-queryparams_3aad4ff54e40',
     testName: 'metadata list of all labels with queryparams',
     endpoints: ['metadata/txs/labels?page=44&count=2'],
     response: [
@@ -19,7 +19,7 @@ export default [
     ],
   },
   {
-    id: 'metadata-txs-labels_f1096e876143',
+    id: 'metadata-txs-labels_cc4ef4f38009',
     testName: 'metadata/txs/labels',
     endpoints: ['metadata/txs/labels'],
     response: [
@@ -134,7 +134,7 @@ export default [
     ],
   },
   {
-    id: 'metadata-txs-labels_d46b0e99581a',
+    id: 'metadata-txs-labels_9f03b7de2e4b',
     testName: 'metadata/txs/labels',
     endpoints: ['metadata/txs/labels?page=694269'],
     response: [],

@@ -1289,19 +1289,19 @@ export default [
     ],
   },
   {
-    id: 'epochs-number-next-out-of-range-epoch_d521d7b0e320',
+    id: 'epochs-number-next-out-of-range-epoch_598cbb0688b6',
     testName: 'epochs/:number/next - out of range epoch',
     endpoints: ['epochs/696969696969/next'],
     response: error_400_epochs,
   },
   {
-    id: 'epochs-number-next-not-found-epoch_5ca36dbdf7f7',
+    id: 'epochs-number-next-not-found-epoch_a5497f93220f',
     testName: 'epochs/:number/next - not found epoch',
     endpoints: ['epochs/69696969/next'],
     response: error_404,
   },
   {
-    id: 'epochs-number-next-not-found-epoch_3c066b5c3e21',
+    id: 'epochs-number-next-not-found-epoch_36be23b5f456',
     testName: 'epochs/:number/next - not found epoch',
     endpoints: ['epochs/69696969/previous'],
     response: error_404,

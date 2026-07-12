@@ -5,7 +5,7 @@ const paginationFixtures = getPaginationFixtures('epochs/123/blocks');
 export default [
   ...paginationFixtures,
   {
-    id: 'epochs-number-blocks-queryparams-first-blocks-generic-byron-epoch_a391dcd85248',
+    id: 'epochs-number-blocks-queryparams-first-blocks-generic-byron-epoch_25d55994bfec',
     testName: 'epochs/:number/blocks?queryparams first blocks generic byron epoch',
     endpoints: ['epochs/0/blocks?count=2'],
     response: [

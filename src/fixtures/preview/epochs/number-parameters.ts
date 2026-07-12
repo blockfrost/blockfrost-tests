@@ -248,7 +248,7 @@ export default [
     },
   },
   {
-    id: 'epochs-number-parameters-cost-models-plutus-v2_054b99ebe462',
+    id: 'epochs-number-parameters-cost-models-plutus-v2_76ee823c95c5',
     testName: 'epochs/:number/parameters - costModels.PlutusV2',
     endpoints: ['epochs/13/parameters'],
     response: {
@@ -683,7 +683,7 @@ export default [
     },
   },
   {
-    id: 'epochs-latest-parameters-latest-epoch_a73a0c95ff80',
+    id: 'epochs-latest-parameters-latest-epoch_c46b428b6ee6',
     testName: 'epochs/latest/parameters - latest epoch',
     endpoints: ['epochs/latest/parameters'],
     response: {

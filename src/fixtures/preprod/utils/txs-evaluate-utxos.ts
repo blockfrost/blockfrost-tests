@@ -2,7 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
-    id: 'utils-txs-evaluate-utxos-success-with-cbor-only-json_f9b2e7c14cae',
+    id: 'utils-txs-evaluate-utxos-success-with-cbor-only-json_fd42e9584d8d',
     testName: 'utils/txs/evaluate/utxos success with cbor only (JSON)',
     endpoints: ['utils/txs/evaluate/utxos'],
     postBody: JSON.stringify({

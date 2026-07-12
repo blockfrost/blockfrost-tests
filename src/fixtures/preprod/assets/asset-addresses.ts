@@ -20,13 +20,13 @@ export default [
     ],
   },
   {
-    id: 'assets-addresses-invalid-asset_69058bf7c16e',
+    id: 'assets-addresses-invalid-asset_b8903969e2f5',
     testName: 'assets addresses - invalid asset',
     endpoints: ['assets/stonksasset/addresses'],
     response: error_400_assets,
   },
   {
-    id: 'assets-addresses-valid-not-on-chain-asset_3ad55423382f',
+    id: 'assets-addresses-valid-not-on-chain-asset_a75af8981394',
     testName: 'assets addresses - valid not on-chain asset',
     endpoints: [
       'assets/ddd01d9531fcc25e3ca4b6429318c2cc374dbdbcf5e99c1c1e5da1ff444f4e545350414d/addresses',

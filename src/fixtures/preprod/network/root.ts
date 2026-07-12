@@ -2,7 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
-    id: 'network-test_2e08306ecd5d',
+    id: 'network-test_d55883ba5576',
     testName: 'network test',
     endpoints: ['network'],
     response: {

@@ -8,7 +8,7 @@ const paginationFixtures = getPaginationFixtures('epochs/20/next').filter(
 export default [
   ...paginationFixtures,
   {
-    id: 'epochs-number-next-generic_00ad8eb3c535',
+    id: 'epochs-number-next-generic_fde73e510cd5',
     testName: 'epochs/:number/next - generic',
     endpoints: ['epochs/20/next'],
     response: [
@@ -1258,7 +1258,7 @@ export default [
     ],
   },
   {
-    id: 'epochs-number-next-queryparams-generic-shelley_40a30304dfc9',
+    id: 'epochs-number-next-queryparams-generic-shelley_bcd3932f46ff',
     testName: 'epochs/:number/next?queryparams - generic shelley',
     endpoints: ['epochs/20/next?page=2&count=2'],
     response: [
@@ -1289,19 +1289,19 @@ export default [
     ],
   },
   {
-    id: 'epochs-number-next-out-of-range-epoch_d521d7b0e320',
+    id: 'epochs-number-next-out-of-range-epoch_73ffc085fe0b',
     testName: 'epochs/:number/next - out of range epoch',
     response: error_400_epochs,
     endpoints: ['epochs/696969696969/next'],
   },
   {
-    id: 'epochs-number-next-not-found-epoch_5ca36dbdf7f7',
+    id: 'epochs-number-next-not-found-epoch_03e8fe367d70',
     testName: 'epochs/:number/next - not found epoch',
     response: error_404,
     endpoints: ['epochs/69696969/next'],
   },
   {
-    id: 'epochs-number-next-not-found-epoch_3c066b5c3e21',
+    id: 'epochs-number-next-not-found-epoch_015e09e087f3',
     testName: 'epochs/:number/next - not found epoch',
     response: error_404,
     endpoints: ['epochs/69696969/previous'],

@@ -6,7 +6,7 @@ const paginationFixtures = getPaginationFixtures('pools/retiring');
 export default [
   ...paginationFixtures,
   {
-    id: 'pools-retiring_7675e239b03b',
+    id: 'pools-retiring_32841da2ceaa',
     testName: 'pools retiring',
     endpoints: ['pools/retiring'],
     response: expect.toBeOneOf([

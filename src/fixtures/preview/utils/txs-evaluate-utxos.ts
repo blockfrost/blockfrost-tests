@@ -19,7 +19,7 @@ export default [
     },
   },
   {
-    id: 'utils-txs-evaluate-utxos-success-with-cbor-only-json_f9b2e7c14cae',
+    id: 'utils-txs-evaluate-utxos-success-with-cbor-only-json_9fc6ed6a289d',
     testName: 'utils/txs/evaluate/utxos success with cbor only (JSON)',
     endpoints: ['utils/txs/evaluate/utxos'],
     postBody: JSON.stringify({
