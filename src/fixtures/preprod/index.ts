@@ -18,6 +18,7 @@ import addressUtxos from './addresses/address-utxos.js';
 import addressUtxosAsset from './addresses/address-utxos-asset.js';
 
 import asset from './assets/asset.js';
+import assetsAsset from './assets/asset.js';
 import assetHistory from './assets/asset-history.js';
 import assetPolicyPolicyId from './assets/asset-policy-policy-id.js';
 import assetTransactions from './assets/asset-transactions.js';
@@ -129,6 +130,7 @@ export const preprodFixtures = {
   ],
   assets: [
     ...asset,
+    ...assetsAsset,
     ...assetHistory,
     ...assetPolicyPolicyId,
     ...assetTransactions,

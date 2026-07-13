@@ -489,13 +489,13 @@ export default [
     },
   },
   {
-    id: 'pools-pool-id-invalid-pool_68bf8fbaa605',
+    id: 'pools-pool-id-invalid-pool_d9a0ef561623',
     testName: 'pools/:pool_id - invalid pool',
     response: error_400_pools,
     endpoints: ['pools/pool1kek'],
   },
   {
-    id: 'pools-pool-id-valid-non-existing-pool-for-this-network_4e46578bae9a',
+    id: 'pools-pool-id-valid-non-existing-pool-for-this-network_bc28201fd319',
     testName: 'pools/:pool_id - valid non-existing pool (for this network)',
     response: error_404,
     endpoints: ['pools/pool1y6chk7x7fup4ms9leesdr57r4qy9cwxuee0msan72x976a6u0nc'],

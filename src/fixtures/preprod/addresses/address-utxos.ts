@@ -29,7 +29,7 @@ export default [
     ],
   },
   {
-    id: 'addresses-address-utxos-bf-address-with-3-pages-of-utxos-page-1_83d11adc61a9',
+    id: 'addresses-address-utxos-bf-address-with-3-pages-of-utxos-page-1_276c25170af9',
     testName: 'addresses/:address/utxos BF address with 3 pages of utxos, page=1',
     endpoints: [
       'addresses/addr_test1qzwuqsd70k70wcm8smxs6jw34r59r83ywm867t5nu3nutceksz8m2cq3qzq36wt37xengqnuweh8pmr4wrxqcavz996sj2cqw8/utxos',
@@ -1391,7 +1391,7 @@ export default [
     ],
   },
   {
-    id: 'addresses-address-utxos-bf-address-with-3-pages-of-utxos-page-3_6c1b6f16597c',
+    id: 'addresses-address-utxos-bf-address-with-3-pages-of-utxos-page-3_3b0ac462947b',
     testName: 'addresses/:address/utxos BF address with 3 pages of utxos, page=3',
     endpoints: [
       'addresses/addr_test1qzwuqsd70k70wcm8smxs6jw34r59r83ywm867t5nu3nutceksz8m2cq3qzq36wt37xengqnuweh8pmr4wrxqcavz996sj2cqw8/utxos?page=3',
@@ -1541,7 +1541,7 @@ export default [
     response: [],
   },
   {
-    id: 'addresses-address-utxos-valid-not-on-chain-address_d0a3b2f88ac4',
+    id: 'addresses-address-utxos-valid-not-on-chain-address_4172c95a0988',
     testName: 'addresses/:address/utxos - valid not on-chain address ',
     response: error_404,
     endpoints: [

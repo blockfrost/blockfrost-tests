@@ -4,7 +4,7 @@ import { Fixture } from '../../../types/index.js';
 
 export default [
   {
-    id: 'tx-submit-valid-custom-tx_37d1e37502a1',
+    id: 'tx-submit-valid-custom-tx_65373de66591',
     testName: 'tx/submit - valid custom tx',
     endpoints: ['tx/submit'],
     customTimeout: 180_000,
@@ -13,7 +13,7 @@ export default [
       await submitTest('preprod', customTestParams),
   },
   {
-    id: 'tx-submit-valid-cbor-invalid-tx_37d1e37502a1',
+    id: 'tx-submit-valid-cbor_65373de66591',
     testName: 'tx/submit - valid CBOR (invalid tx)',
     endpoints: ['tx/submit'],
     postBody: Buffer.from(
@@ -31,7 +31,7 @@ export default [
     },
   },
   {
-    id: 'tx-submit-invalid-cbor_37d1e37502a1',
+    id: 'tx-submit-invalid-cbor_65373de66591',
     testName: 'tx/submit - invalid CBOR',
     endpoints: ['tx/submit'],
     postBody: 'invalid CBOR',

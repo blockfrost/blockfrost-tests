@@ -13,7 +13,7 @@ export default [
     ]),
   },
   {
-    id: 'governance-drep-always-no-confidence-delegators_2beae4a2f330',
+    id: 'governance-drep-always-no-confidence-delegators_1faca8a60c77',
     testName: 'governance drep_always_no_confidence delegators',
     endpoints: ['governance/dreps/drep_always_no_confidence/delegators'],
     response: expect.arrayContaining([
@@ -21,7 +21,7 @@ export default [
     ]),
   },
   {
-    id: 'governance-drep-always-abstain-delegators_808ed66efff7',
+    id: 'governance-drep-always-abstain-delegators_2bdf5256ee3d',
     testName: 'governance drep_always_abstain delegators',
     endpoints: ['governance/dreps/drep_always_abstain/delegators'],
     response: expect.arrayContaining([

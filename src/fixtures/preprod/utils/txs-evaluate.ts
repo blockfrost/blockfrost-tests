@@ -55,7 +55,7 @@ export default [
     },
   },
   {
-    id: 'utils-txs-evaluate-fails-to-evaluate-incompatible-era_db059921fc1a',
+    id: 'utils-txs-evaluate-fails-to-evaluate-incompatible-era_a6cb628e30af',
     testName: 'utils/txs/evaluate - fails to evaluate - incompatible era',
     endpoints: ['utils/txs/evaluate'],
     postBody:
@@ -71,7 +71,7 @@ export default [
     },
   },
   {
-    id: 'utils-txs-evaluate-fails-client-fault-to-submit-on-ill-formed-tx_db059921fc1a',
+    id: 'utils-txs-evaluate-fails-client-fault-to-submit-on-ill-formed-tx_a6cb628e30af',
     testName: 'utils/txs/evaluate - fails (client fault) to submit on ill-formed tx',
     endpoints: ['utils/txs/evaluate'],
     postBody: '80',

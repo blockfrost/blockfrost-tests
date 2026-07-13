@@ -21,7 +21,7 @@ export default [
   // cardano-swaps v1 one-way swap beacon (locked by swap validator)
 
   {
-    id: 'assets-asset-utxos-cardano-swaps-v1-one-way-swap-beacon_5b7ef937ec9f',
+    id: 'assets-utxos-cardano-swaps-v1-one-way_2b3c4d5e6f1a',
     testName: 'assets/:asset/utxos - cardano-swaps v1 one-way swap beacon',
     endpoints: [`assets/${V1_ONE_WAY_BEACON}/utxos?count=2&order=asc`],
     response: [
@@ -143,7 +143,7 @@ export default [
   // cardano-swaps v1 two-way swap beacon (locked by swap validator)
 
   {
-    id: 'assets-asset-utxos-cardano-swaps-v1-two-way-swap-beacon_79cb491853c8',
+    id: 'assets-utxos-cardano-swaps-v1-two-way_3c4d5e6f1a2b',
     testName: 'assets/:asset/utxos - cardano-swaps v1 two-way swap beacon',
     endpoints: [`assets/${V1_TWO_WAY_BEACON}/utxos?count=1&order=asc`],
     response: [
@@ -216,7 +216,7 @@ export default [
     ],
   },
   {
-    id: 'assets-asset-utxos-from-99999999-returns-empty-array_8360a85f5dc3',
+    id: 'assets-utxos-from-high-block-empty_5e6f1a2b3c4d',
     testName: 'assets/:asset/utxos - from=99999999 returns empty array',
     endpoints: [`assets/${V1_ONE_WAY_BEACON}/utxos?from=99999999`],
     response: [],

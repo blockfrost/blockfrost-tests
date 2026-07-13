@@ -8,7 +8,7 @@ const paginationFixtures = getPaginationFixtures(
 export default [
   ...paginationFixtures,
   {
-    id: 'addresses-address-utxos-asset-valid-on-chain-address-invalid-asset_c044530edf9b',
+    id: 'addresses-address-utxos-asset-valid-on-chain-address-invalid-asset_fa49a9183e03',
     testName: 'addresses/:address/utxos/:asset - valid on-chain address, invalid asset',
     endpoints: [
       'addresses/addr_test1qpxghn6cjkmawmxnufpvvc5kempxumyt9xv2tvzyswarmhenpjux68s5nrdttupgzq6wwg8m84kre34tlq8t2n2nxwqsxgf4vp/utxos/asset1stonks',
@@ -16,13 +16,13 @@ export default [
     response: error_400_assets,
   },
   {
-    id: 'addresses-address-utxos-asset-invalid-address-invalid-asset_2166b31c2925',
+    id: 'addresses-address-utxos-asset-invalid-address-invalid-asset_ac65c8f456e8',
     testName: 'addresses/:address/utxos/:asset - invalid address, invalid asset',
     endpoints: ['addresses/add_testr1stonks/utxos/asset1stonks'],
     response: error_400_addresses,
   },
   {
-    id: 'addresses-address-utxos-asset-valid-not-on-chain-address-with-valid-not-on-chain-asset_4decf01c7ba1',
+    id: 'addresses-address-utxos-asset-valid-not-on-chain-address-with-valid-not-on-chain-asset_3b685d7246f0',
 
     testName:
       'addresses/:address/utxos/:asset - valid not on-chain address with valid not on-chain asset ',
@@ -72,7 +72,7 @@ export default [
     response: [],
   },
   {
-    id: 'addresses-address-utxos-asset-valid-on-chain-address-with-valid-not-on-chain-asset_05558c146cd0',
+    id: 'addresses-address-utxos-asset-valid-on-chain-address-with-valid-not-on-chain-asset_bf6baf99d4a1',
 
     testName:
       'addresses/:address/utxos/:asset - valid on-chain address with valid not on-chain asset',
@@ -82,7 +82,7 @@ export default [
     response: error_404,
   },
   {
-    id: 'addresses-address-utxos-asset-valid-not-on-chain-address_e417e0da0208',
+    id: 'addresses-address-utxos-asset-valid-not-on-chain-address_58262ec3c5af',
     testName: 'addresses/:address/utxos/:asset - valid not on-chain address ',
     response: error_404,
     endpoints: [

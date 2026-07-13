@@ -21,7 +21,7 @@ export default [
     response: [],
   },
   {
-    id: 'accounts-stake-address-addresses-generic-stake-address-with-many-addresses_e46c5c9b9b6d',
+    id: 'accounts-stake-address-generic-stake-address-with-many-addresses_da5cba0a0ec7',
     testName: 'accounts/:stake_address/addresses generic stake address with many addresses',
     endpoints: [
       'accounts/stake_test1urxzevdat43p44llqk45mt4kfnr2j25p83nvq0ymxku4xdcaxnffm/addresses?count=15',
@@ -90,7 +90,7 @@ export default [
     ],
   },
   {
-    id: 'accounts-stake-address-addresses-generic-stake-address-with-many-addresses_c967176d5840',
+    id: 'accounts-stake-address-generic-stake-address-with-many-addresses_da5cba0a0ec7',
     testName: 'accounts/:stake_address/addresses generic stake address with many addresses',
     endpoints: [
       'accounts/stake_test1urxzevdat43p44llqk45mt4kfnr2j25p83nvq0ymxku4xdcaxnffm/addresses?count=2&page=3',

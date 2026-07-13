@@ -1,6 +1,6 @@
 export default [
   {
-    id: 'assets-list-of-all-assets_2faa6afadd8b',
+    id: 'assets-list-of-all-assets_ce309855f9d6',
     testName: 'assets list of all assets',
     endpoints: ['assets'],
     response: [
@@ -412,7 +412,7 @@ export default [
     ],
   },
   {
-    id: 'assets-queryparams-list-of-all-assets_9a27ca30e3b2',
+    id: 'assets-queryparams-list-of-all-assets_889b407a54a7',
     testName: 'assets?queryparams list of all assets',
     endpoints: ['assets?page=2&count=2'],
     response: [

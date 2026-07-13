@@ -57,13 +57,13 @@ export default [
     ],
   },
   {
-    id: 'governance-drep-always-abstain-updates_870cd10c0dc5',
+    id: 'governance-drep-always-abstain-updates_2500cf48ae74',
     testName: 'governance drep_always_abstain updates',
     endpoints: ['governance/dreps/drep_always_abstain/updates'],
     response: [],
   },
   {
-    id: 'governance-drep-always-no-confidence-updates_6614ee61863d',
+    id: 'governance-drep-always-no-confidence-updates_79668a77e7b5',
     testName: 'governance drep_always_no_confidence updates',
     endpoints: ['governance/dreps/drep_always_no_confidence/updates'],
     response: [],

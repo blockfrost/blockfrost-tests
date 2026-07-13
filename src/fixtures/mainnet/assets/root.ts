@@ -5,7 +5,7 @@ const paginationFixtures = getPaginationFixtures('assets');
 export default [
   ...paginationFixtures,
   {
-    id: 'assets-list-of-all-assets_08edcdcff06d',
+    id: 'assets-list-of-all-assets_ce309855f9d6',
     testName: 'assets list of all assets',
     endpoints: ['assets'],
     response: [
@@ -415,7 +415,7 @@ export default [
     ],
   },
   {
-    id: 'assets-queryparams-list-of-all-assets_47064a8de6bb',
+    id: 'assets-queryparams-list-of-all-assets_889b407a54a7',
     testName: 'assets?queryparams list of all assets',
     endpoints: ['assets?page=2&count=2'],
     response: [

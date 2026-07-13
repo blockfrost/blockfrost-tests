@@ -1289,7 +1289,7 @@ export default [
     ],
   },
   {
-    id: 'epochs-number-previous-out-of-range-epoch_399b37a61e5f',
+    id: 'epochs-number-previous-out-of-range-epoch_fc184fdd75eb',
     testName: 'epochs/:number/previous - out of range epoch',
     endpoints: ['epochs/696969696969/previous'],
     response: error_400_epochs,

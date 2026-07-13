@@ -2,7 +2,7 @@ import { expect } from 'vitest';
 
 export default [
   {
-    id: 'tx-submit-valid-cbor-invalid-tx_928173850825',
+    id: 'tx-submit-valid-cbor_65373de66591',
     testName: 'tx/submit - valid CBOR (invalid tx)',
     endpoints: ['tx/submit'],
     postBody: Buffer.from(
@@ -20,7 +20,7 @@ export default [
     },
   },
   {
-    id: 'tx-submit-invalid-cbor_928173850825',
+    id: 'tx-submit-invalid-cbor_65373de66591',
     testName: 'tx/submit - invalid CBOR',
     endpoints: ['tx/submit'],
     postBody: 'invalid CBOR',

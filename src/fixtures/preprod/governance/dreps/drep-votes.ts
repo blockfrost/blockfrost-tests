@@ -25,13 +25,13 @@ export default [
     ],
   },
   {
-    id: 'governance-drep-always-no-confidence-votes_449a5ba38c6b',
+    id: 'governance-drep-always-no-confidence-votes_8448e67e592c',
     testName: 'governance drep_always_no_confidence votes',
     endpoints: ['governance/dreps/drep_always_no_confidence/votes'],
     response: [],
   },
   {
-    id: 'governance-drep-always-abstain-votes_c152310db40c',
+    id: 'governance-drep-always-abstain-votes_a2b741ae9ba6',
     testName: 'governance drep_always_abstain votes',
     endpoints: ['governance/dreps/drep_always_abstain/votes'],
     response: [],

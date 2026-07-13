@@ -5,13 +5,13 @@ const paginationFixtures = getPaginationFixtures('pools');
 export default [
   ...paginationFixtures,
   {
-    id: 'pools-queryparams-we-are-not-there-yet_b39aea0bde15',
+    id: 'pools-queryparams-we-are-not-there-yet_5da7ab665f2b',
     testName: 'pools?queryparams - we are not there yet',
     endpoints: ['pools?page=694269'],
     response: [],
   },
   {
-    id: 'pools-queryparams_f09bb8241c52',
+    id: 'pools-queryparams_cf8cccbd48e4',
     testName: 'pools?queryparams',
     endpoints: ['pools?count=5&page=3', 'pools?count=5&page=3&order=asc'],
     response: [

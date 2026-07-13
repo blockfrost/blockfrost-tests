@@ -210,7 +210,7 @@ export default [
   // errors
 
   {
-    id: 'addresses-address-invalid-address_0bbb1643e78a',
+    id: 'addresses-address-invalid-address_d52e2854f62d',
     testName: 'addresses/:address - invalid address',
     endpoints: ['addresses/addr1stonks'],
     response: error_400_addresses,
@@ -248,7 +248,7 @@ export default [
     response: error_404,
   },
   {
-    id: 'invalid-path_6d6e013377e8',
+    id: 'invalid-path_56f50b52924c',
     testName: 'Invalid path',
     endpoints: ['addresses/'],
     response: error_400,
@@ -260,7 +260,7 @@ export default [
     endpoints: ['addresses/addr1uwu'],
   },
   {
-    id: 'addresses-address-invalid-payment-cred-address_a76cc1aa52f3',
+    id: 'addresses-address-invalid-payment-cred-address_fd2643492764',
     testName: 'addresses/:address - invalid paymentCred address ',
     response: error_400_addresses,
     endpoints: ['addresses/addr_vkh1uwu'],

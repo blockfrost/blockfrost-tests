@@ -36,7 +36,7 @@ export default [
     },
   },
   {
-    id: 'drep-drep-always-abstain_97e2ef460935',
+    id: 'drep-drep-always-abstain_0ecd19881df8',
     testName: 'drep drep_always_abstain',
     endpoints: ['governance/dreps/drep_always_abstain'],
     response: {
@@ -52,7 +52,7 @@ export default [
     },
   },
   {
-    id: 'drep-drep-always-no-confidence_3238d9e32d59',
+    id: 'drep-drep-always-no-confidence_e2c640cd755e',
     testName: 'drep drep_always_no_confidence',
     endpoints: ['governance/dreps/drep_always_no_confidence'],
     response: {

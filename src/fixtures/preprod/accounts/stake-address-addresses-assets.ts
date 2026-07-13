@@ -45,13 +45,13 @@ export default [
     response: [],
   },
   {
-    id: 'accounts-stake-address-non-valid-account_ac1ede98a6e9',
+    id: 'accounts-stake-address-non-valid-account_ea7670c3d362',
     testName: 'accounts/:stake_address - non-valid account',
     response: error_400_accounts,
     endpoints: ['accounts/stake1kek/addresses/assets'],
   },
   {
-    id: 'accounts-stake-address-valid-not-on-chain-account_158dff89a34a',
+    id: 'accounts-stake-address-valid-not-on-chain-account_39b0054d65f0',
     testName: 'accounts/:stake_address - valid not on-chain account',
     response: error_404,
     endpoints: [
@@ -59,7 +59,7 @@ export default [
     ],
   },
   {
-    id: 'accounts-stake-address-addresses-assets-valid-not-on-chain-account_158dff89a34a',
+    id: 'accounts-stake-address-addresses-assets-valid-not-on-chain-account_39b0054d65f0',
     testName: 'accounts/:stake_address/addresses/assets - valid not on-chain account',
     response: error_404,
     endpoints: [

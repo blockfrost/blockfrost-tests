@@ -46,7 +46,7 @@ export default [
     },
   },
   {
-    id: 'accounts-stake-address-generic-stake-address_30d2a2502a2c',
+    id: 'accounts-stake-address-generic-stake-address_14356bed4860',
     testName: 'accounts/:stake_address generic stake address',
     endpoints: ['accounts/stake_test1uplm3vtt2637738tx4wy9l4sjlhtdld2nvtlv8pj9ng9feg6d3pr7'],
     response: {
@@ -164,7 +164,7 @@ export default [
     },
   },
   {
-    id: 'accounts-stake-address-deregister-a-stake-key-should-clear-any-existing-vote-delegation-should-have-their-drep-id-cleared_a34ffcee9337',
+    id: 'accounts-stake-address-deregister-a-stake-key-should-clear-any-existing-vote-delegation-should-have-their-drep-id-cleared_3ff8e6621a3a',
     testName:
       'accounts/:stake_address deregister a stake key should clear any existing vote delegation. should have their drep_id cleared.',
     endpoints: ['accounts/stake_test1upq4d854xjc30jqkulsevam0jwt5wl2j9783twgzqpwtfvs705r7c'],
@@ -184,7 +184,7 @@ export default [
     },
   },
   {
-    id: 'accounts-stake-address-retire-and-register-drep-after-voting-should-have-their-drep-id-cleared_09771e1e7f97',
+    id: 'accounts-stake-address-retire-and-register-drep-after-voting-should-have-their-drep-id-cleared_38d4e081ae4b',
     testName:
       'accounts/:stake_address retire and register drep after voting. should have their drep_id cleared.',
     endpoints: ['accounts/stake_test1upvjras0sny422fesgr9yhq0cjnqjmzk8as08qsjvlr37ng796phq'],

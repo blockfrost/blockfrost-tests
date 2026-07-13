@@ -20,7 +20,7 @@ export default [
   // cardano-swaps v1 one-way (price sorted)
 
   {
-    id: 'swaps-asset-cardano-swaps-v1-one-way-price-asc_46f286da02e6',
+    id: 'swaps-asset-v1-one-way-price-asc_4d5e6f1a2b3c',
     testName: 'swaps/:asset - cardano-swaps v1 one-way price asc',
     endpoints: [`swaps/${V1_ONE_WAY_BEACON}?order_by=price&order=asc&count=1`],
     response: [
@@ -77,7 +77,7 @@ export default [
   // cardano-swaps v1 two-way (price sorted)
 
   {
-    id: 'swaps-asset-cardano-swaps-v1-two-way-price-asc_8980a9494bd7',
+    id: 'swaps-asset-v1-two-way-price-asc_5e6f1a2b3c4d',
     testName: 'swaps/:asset - cardano-swaps v1 two-way price asc',
     endpoints: [`swaps/${V1_TWO_WAY_BEACON}?order_by=price&order=asc&count=1`],
     response: [
