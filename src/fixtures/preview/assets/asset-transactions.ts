@@ -156,6 +156,49 @@ export default [
     ],
   },
   {
+    id: 'assets-asset-transactions-djed-from-to-block-height-range_a629e5725aea',
+    testName: 'assets/:asset/transactions - DJED from/to block-height range',
+    endpoints: [
+      'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/transactions?from=1449826&to=1449832',
+      'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/transactions?from=1449826&to=1449832&order=asc',
+    ],
+    response: [
+      {
+        tx_hash: 'dff7528f4f9306dad36429dde693fec1142f1cc18509bbe65d38bfa4ee15e128',
+        tx_index: 0,
+        block_height: 1_449_826,
+        block_time: 1_700_117_988,
+      },
+      {
+        tx_hash: 'ec544bff35f1045132cd92e9ae73e6a4333aa1729f029369898e240994028dc6',
+        tx_index: 0,
+        block_height: 1_449_831,
+        block_time: 1_700_118_109,
+      },
+      {
+        tx_hash: 'f5c1de2e622d0327d8f3e9229ac3c8a0f01bb9720389d59d78cfe957dfff8ddd',
+        tx_index: 0,
+        block_height: 1_449_832,
+        block_time: 1_700_118_197,
+      },
+    ],
+  },
+  {
+    id: 'assets-asset-transactions-djed-from-to-block-tx-index-single-pin_1678f222112c',
+    testName: 'assets/:asset/transactions - DJED from/to block:tx_index single-pin',
+    endpoints: [
+      'assets/7c833f1eb9b70c2e700d028e0ee28d421edad2af4222061be525382d4144415f544544595354414b45315f4c50/transactions?from=1449809:1&to=1449809:1',
+    ],
+    response: [
+      {
+        tx_hash: '44c572ccad7ac911bdaf0a46ce3758ccf5da408b79ce896b1dd2a31cb1c1c57d',
+        tx_index: 1,
+        block_height: 1_449_809,
+        block_time: 1_700_117_698,
+      },
+    ],
+  },
+  {
     id: 'assets-asset-transactions-djed-desc_716b44e3e2ad',
     testName: 'assets/:asset/transactions - DJED desc',
     endpoints: [
