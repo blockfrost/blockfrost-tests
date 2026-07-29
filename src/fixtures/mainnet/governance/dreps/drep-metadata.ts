@@ -232,7 +232,8 @@ export default [
       error: {
         code: 'HTTP_RESPONSE_ERROR',
         message: expect.stringContaining(
-          'Error Offchain Voting Anchor: HTTP Response error from https://adatree.io: expected JSON, but got : "text/html; charset=UTF-8"',
+          // Only the content-type prefix — adatree.io's charset suffix has changed over time
+          'Error Offchain Voting Anchor: HTTP Response error from https://adatree.io: expected JSON, but got : "text/html',
         ),
       },
     },

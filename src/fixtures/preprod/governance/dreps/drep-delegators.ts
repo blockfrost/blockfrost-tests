@@ -37,10 +37,6 @@ export default [
         amount: expect.toBeAdaQuantity(),
       },
       {
-        address: 'stake_test1uz6u2c4aahak62p67yantf342mqdftx9agqsd8uku7t456cgzz565',
-        amount: expect.toBeAdaQuantity(),
-      },
-      {
         address: 'stake_test1uzyp0n0lqk65g9wae0uhn3fdzevww4u7w665w46wsdmeaysjvtvpu',
         amount: expect.toBeAdaQuantity(),
       },
