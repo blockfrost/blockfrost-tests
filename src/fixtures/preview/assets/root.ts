@@ -48,7 +48,7 @@ export default [
       { asset: 'ee1ce9d7560f48a4ba3867037dbec2d8fed776d94dd6b00a35309073', quantity: '1000000000' },
       {
         asset: 'a1c0a4e322cb639198421ec70e4d9d2c3586df70103a63c35494f5176775657373',
-        quantity: '75',
+        quantity: '78',
       },
       {
         asset: 'c22560ac64be051102d6d1cfe5b9b82eb6af4f00dd3806e5cd82e8376d696e742d6275726e',

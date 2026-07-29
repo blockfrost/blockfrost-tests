@@ -14,7 +14,7 @@ export default [
     response: [
       {
         address:
-          'addr_test1qr3uhus8q7pat5a2h99t4ws4upt9excr5ce5k4fp7lv6qfcjvuw9j2fcs3xpgqxkt5f5zd0rtd8jnnw8n2s5qjswzyfqmyqptf',
+          'addr_test1qzv4wvx3rafc4w9ujue9lgazaw6ldn9dk5t6vfepe2dgjrgamy6q8sz9r5eyrl5vfrsx8v7m6aamn9ywu4zq6w3hwxfsq82wyq',
         quantity: '1',
       },
     ],
