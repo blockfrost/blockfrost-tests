@@ -42,6 +42,43 @@ export default [
     ],
   },
   {
+    id: 'assets-asset-transactions-from-to-block-height-range_a96e1f44bd70',
+    testName: 'assets/:asset/transactions - from/to block-height range',
+    endpoints: [
+      'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/transactions?from=799974&to=800439',
+      'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/transactions?from=799974&to=800439&order=asc',
+    ],
+    response: [
+      {
+        tx_hash: '28e0d3e3375090b456625af0156761f3da1c430d04230a1f273086a616638cf0',
+        tx_index: 14,
+        block_height: 799_974,
+        block_time: 1_680_691_366,
+      },
+      {
+        tx_hash: 'cca1fe9acf8ce5eb1e058c6dd2825cf6fc1fa7127ca7876463b0cf3b82a20354',
+        tx_index: 1,
+        block_height: 800_439,
+        block_time: 1_680_702_777,
+      },
+    ],
+  },
+  {
+    id: 'assets-asset-transactions-from-to-block-tx-index-single-pin_89cbb82cdd1e',
+    testName: 'assets/:asset/transactions - from/to block:tx_index single-pin',
+    endpoints: [
+      'assets/295ac3ec6d2795c55582f1280e62601afd2d6bc674830112144bd025434f4e54/transactions?from=800439:1&to=800439:1',
+    ],
+    response: [
+      {
+        tx_hash: 'cca1fe9acf8ce5eb1e058c6dd2825cf6fc1fa7127ca7876463b0cf3b82a20354',
+        tx_index: 1,
+        block_height: 800_439,
+        block_time: 1_680_702_777,
+      },
+    ],
+  },
+  {
     id: 'assets-asset-transactions-queryparams-t-teuro-many-txs_817c9bcb13fd',
     testName: 'assets/:asset/transactions?queryparams -  tTEURO - many txs',
     endpoints: [

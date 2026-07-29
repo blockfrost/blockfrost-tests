@@ -53,6 +53,43 @@ export default [
     ],
   },
   {
+    id: 'assets-asset-transactions-nutcoin-from-to-block-height-range_90422469fb97',
+    testName: 'assets/:asset/transactions - nutcoin from/to block-height range',
+    endpoints: [
+      'assets/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e/transactions?from=5602653&to=5616031',
+      'assets/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e/transactions?from=5602653&to=5616031&order=asc',
+    ],
+    response: [
+      {
+        tx_hash: 'c38a0892729d071242b89ddd0069eb7c3b6cb0eb7170f040c4b59020b2081a0f',
+        tx_index: 12,
+        block_height: 5_602_653,
+        block_time: 1_618_666_110,
+      },
+      {
+        tx_hash: '09869a301892df7020e0b54a838e53821e304d2fcf64c9aa00902d8bce92a4c3',
+        tx_index: 3,
+        block_height: 5_616_031,
+        block_time: 1_618_938_881,
+      },
+    ],
+  },
+  {
+    id: 'assets-asset-transactions-nutcoin-from-to-block-tx-index-single-pin_76c3a6ec16c2',
+    testName: 'assets/:asset/transactions - nutcoin from/to block:tx_index single-pin',
+    endpoints: [
+      'assets/00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e/transactions?from=5406748:8&to=5406748:8',
+    ],
+    response: [
+      {
+        tx_hash: 'e252be4c7e40d35919f741c9649ff207c3e49d53bb819e5c1cb458055fd363ed',
+        tx_index: 8,
+        block_height: 5_406_748,
+        block_time: 1_614_635_257,
+      },
+    ],
+  },
+  {
     id: 'assets-asset-transactions-queryparams-all-hail-nutcoin_5eb41ce346b8',
     testName: 'assets/:asset/transactions?queryparams -  all hail nutcoin!',
     endpoints: [
