@@ -27,6 +27,27 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-deregistered-and-re-registered-in-the-same-tx_6a6b8cbb4983',
+    testName: 'accounts/:stake_address - deregistered and re-registered in the same tx',
+    endpoints: ['accounts/stake1u80m3f9xx9pld4tjlh6pr9vgn5a5nn08tkf86ump5h6z7zcswtsex'],
+    response: {
+      stake_address: 'stake1u80m3f9xx9pld4tjlh6pr9vgn5a5nn08tkf86ump5h6z7zcswtsex',
+      // dereg + re-reg + delegation certs in one tx apply in cert_index
+      // order, so the final state is registered and delegated
+      active: true,
+      registered: true,
+      active_epoch: 373,
+      controlled_amount: expect.toBeGreaterThanOrEqual('2452953'),
+      rewards_sum: expect.toBeGreaterThanOrEqual('145141'),
+      withdrawals_sum: '0',
+      drep_id: null,
+      reserves_sum: '0',
+      treasury_sum: '0',
+      withdrawable_amount: expect.toBeGreaterThanOrEqual('145141'),
+      pool_id: 'pool1m3h5p82m6v99nda37rmed8vrkqt43e2a8d89k76gw5ets0gdyag',
+    },
+  },
+  {
     id: 'accounts-stake-address-generic-stake-address-1-case_37b4c7d97926',
     testName: 'accounts/:stake_address generic stake address 1. case',
     endpoints: ['accounts/stake1u9fzg77vrgfqlplkjqe9hntdcvsurpvxd60yp2fhn73002qsv9pdk'],
