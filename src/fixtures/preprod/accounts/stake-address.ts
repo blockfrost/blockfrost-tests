@@ -46,6 +46,27 @@ export default [
     },
   },
   {
+    id: 'accounts-stake-address-deregistered-and-re-registered-in-the-same-tx_f522d2652cd5',
+    testName: 'accounts/:stake_address - deregistered and re-registered in the same tx',
+    endpoints: ['accounts/stake_test1upssxqqvnx3wrc4n67p4jsgfvmams7jym9t3w2ha6mzvpfgmxv6vg'],
+    response: {
+      stake_address: 'stake_test1upssxqqvnx3wrc4n67p4jsgfvmams7jym9t3w2ha6mzvpfgmxv6vg',
+      active: false,
+      // dereg (cert_index 0) + re-reg (cert_index 1) in tx 918d77f3... apply
+      // in ledger order, so the final state is registered
+      registered: true,
+      active_epoch: expect.toBeEpochNumber(),
+      controlled_amount: expect.toBeAdaQuantity(),
+      rewards_sum: expect.toBeAdaQuantity(),
+      withdrawals_sum: expect.toBeAdaQuantity(),
+      reserves_sum: '0',
+      treasury_sum: '0',
+      withdrawable_amount: expect.toBeAdaQuantity(),
+      pool_id: null,
+      drep_id: null,
+    },
+  },
+  {
     id: 'accounts-stake-address-generic-stake-address_14356bed4860',
     testName: 'accounts/:stake_address generic stake address',
     endpoints: ['accounts/stake_test1uplm3vtt2637738tx4wy9l4sjlhtdld2nvtlv8pj9ng9feg6d3pr7'],
