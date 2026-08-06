@@ -341,6 +341,28 @@ export function oneOf<T>(...expected: T[]) {
   };
 }
 
+/**
+ * Rows of /epochs/:number/stakes. Their order currently differs between
+ * replicas — an ordering bug fixed by
+ * https://github.com/blockfrost/blockfrost-backend-ryo/pull/338 but not
+ * deployed yet — so which rows land on a given page isn't stable. Paged
+ * fixtures therefore assert only the page length (order-invariant for a fixed
+ * epoch snapshot) and the row shape.
+ */
+export const epochStakeRows = (length: number) =>
+  Array.from({ length }, () => ({
+    stake_address: expect.toBeStakeAddress(),
+    pool_id: expect.toBePoolBech32(),
+    amount: expect.toBeAdaQuantity(),
+  }));
+
+/** Rows of /epochs/:number/stakes/:pool_id — see epochStakeRows. */
+export const epochPoolStakeRows = (length: number) =>
+  Array.from({ length }, () => ({
+    stake_address: expect.toBeStakeAddress(),
+    amount: expect.toBeAdaQuantity(),
+  }));
+
 export const toBeAssetUnit = (received: string) => {
   return {
     pass: typeof received === 'string',
