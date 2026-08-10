@@ -1,5 +1,10 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import * as jestExtendedMatchers from 'jest-extended';
+
+// toBeStakeAddress derives the expected address prefix from NETWORK (stake1
+// on mainnet, stake_test1 elsewhere), so pin it to keep the stake_test1
+// assertions below deterministic no matter where the unit tests run.
+vi.stubEnv('NETWORK', 'preprod');
 
 // matchers.ts builds drepListMetadata with expect.toBeOneOf at module scope,
 // so jest-extended must be registered before the module is evaluated
