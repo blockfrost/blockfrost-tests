@@ -8,6 +8,7 @@ import type { toBeOneOf } from 'jest-extended';
 
 interface CustomMatchers<R = unknown> {
   toBeOneOf(p: any): R;
+  toIncludeSameMembers(p: any[]): R;
 }
 
 declare module 'vitest' {
