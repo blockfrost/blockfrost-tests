@@ -767,7 +767,7 @@ export default [
       protocol_major_ver: 11,
       protocol_minor_ver: 0,
       min_utxo: '4310',
-      min_pool_cost: '170000000',
+      min_pool_cost: '75000000',
       nonce: expect.any(String),
       cost_models: {
         PlutusV1: {
@@ -1793,9 +1793,9 @@ export default [
       },
       price_mem: 0.0577,
       price_step: 7.21e-5,
-      max_tx_ex_mem: '16500000',
+      max_tx_ex_mem: '17500000',
       max_tx_ex_steps: '10000000000',
-      max_block_ex_mem: '72000000',
+      max_block_ex_mem: '77500000',
       max_block_ex_steps: '20000000000',
       max_val_size: '5000',
       collateral_percent: 150,
