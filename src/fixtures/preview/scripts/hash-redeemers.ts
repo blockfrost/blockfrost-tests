@@ -1013,4 +1013,47 @@ export default [
       },
     ],
   },
+  {
+    // a stake script: its redeemers witness a delegation cert and later
+    // withdrawals. the script is still active, so pin the first rows of its
+    // history with order=asc&count — those never change. row order is total
+    // here (r.id), unlike txs/:tx/redeemers.
+    id: 'scripts-hash-redeemers-cert-and-reward-purposes_5e01e5aa61c6',
+    testName: 'scripts/:hash/redeemers cert and reward purposes',
+    endpoints: [
+      'scripts/40dbb8715d7db31f26b6b575949ea238b5fda885c3165caadbfcc031/redeemers?order=asc&count=3',
+    ],
+    response: [
+      {
+        tx_hash: 'c1c026a093dd36419da14ae6f2c022df919c37c1ce8a0814181b75e7ebb12915',
+        tx_index: 4,
+        purpose: 'cert',
+        redeemer_data_hash: '923918e403bf43c34b4ef6b48eb2ee04babed17320d8d1b9ff9ad086e86f44ec',
+        datum_hash: '923918e403bf43c34b4ef6b48eb2ee04babed17320d8d1b9ff9ad086e86f44ec',
+        unit_mem: '15126',
+        unit_steps: '4226086',
+        fee: '1178',
+      },
+      {
+        tx_hash: '47b9f70f986dda5c44143220fbfc260da5bcd713ad61f9317713505f39909dea',
+        tx_index: 0,
+        purpose: 'reward',
+        redeemer_data_hash: '4774507669636702c7f5caa2c69ca175b9fea22fd5f3f4d4be544d4740450945',
+        datum_hash: '4774507669636702c7f5caa2c69ca175b9fea22fd5f3f4d4be544d4740450945',
+        unit_mem: '123243',
+        unit_steps: '37567633',
+        fee: '9820',
+      },
+      {
+        tx_hash: '087f868bc8abd18e011b37f171e0983f96203a412b8429923e68a40e6df3a428',
+        tx_index: 0,
+        purpose: 'reward',
+        redeemer_data_hash: '4774507669636702c7f5caa2c69ca175b9fea22fd5f3f4d4be544d4740450945',
+        datum_hash: '4774507669636702c7f5caa2c69ca175b9fea22fd5f3f4d4be544d4740450945',
+        unit_mem: '123243',
+        unit_steps: '37567633',
+        fee: '9820',
+      },
+    ],
+  },
 ];
