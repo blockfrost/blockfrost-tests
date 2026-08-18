@@ -41,4 +41,29 @@ export default [
       },
     ],
   },
+  {
+    // The oldest address of this account is also its most recently used
+    // one, so this case catches implementations that order `desc` by the
+    // latest on-chain appearance. Blockfrost orders addresses by first
+    // appearance and `desc` returns the exact reverse of the `asc` list.
+    id: 'accounts-stake-address-addresses-bf-stake-address-with-many-addresses-desc-order_8522e17f36c6',
+    testName: 'accounts/:stake_address/addresses bf stake address with many addresses desc order',
+    endpoints: [
+      'accounts/stake_test1uq70zpxr7jdqxdlj895x9lvnwn9lrcknwpx8cswlld7x76gtzvrjp/addresses?order=desc',
+    ],
+    response: [
+      {
+        address:
+          'addr_test1zpv68zsj9af8sxg0du6zxzmnwm4ch6atlyhcwfqdyfc7qy3u7yzv8ay6qvmlywtgvt7exaxt783dxuzv03qal7muda5srdg8p9',
+      },
+      {
+        address:
+          'addr_test1qqu0fdq939s7505uwrc3tae03e8rgd0xpt94673n56m03efu7yzv8ay6qvmlywtgvt7exaxt783dxuzv03qal7muda5snq24zy',
+      },
+      {
+        address:
+          'addr_test1qqptln5t5s0mastzc9rksn6wdqp9ynt67ahw0nhzukar5keu7yzv8ay6qvmlywtgvt7exaxt783dxuzv03qal7muda5surhhy9',
+      },
+    ],
+  },
 ];
