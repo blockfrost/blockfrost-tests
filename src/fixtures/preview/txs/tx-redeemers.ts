@@ -114,4 +114,57 @@ export default [
       },
     ]),
   },
+  {
+    // a governance tx mixing a spend redeemer with a vote redeemer. the API
+    // returns the vote row ahead of its own published schema (the serializer
+    // does not enforce the purpose enum) and with an empty script_hash —
+    // db-sync does not attribute voter scripts. pinning both facts makes any
+    // change visible: schema catch-up, attribution fix, or a backend that
+    // skips or resolves governance purposes differently.
+    id: 'txs-redeemers-vote-purpose_b3d8eb460d05',
+    testName: 'txs/:hash/redeemers with a vote redeemer',
+    endpoints: ['txs/a1b750a957946629b17b730c933bf2d8b087c0ffef73ab7a0c0f886a15ce80c8/redeemers'],
+    response: [
+      {
+        tx_index: 0,
+        purpose: 'spend',
+        script_hash: '56d74aedf28354a7d97ed2462503873500d70e6a7ef5647c8f42fd11',
+        redeemer_data_hash: '357ea89304163aa90e1bde5c87f453b082758b3268759b9d7ec41f8c7f971049',
+        datum_hash: '357ea89304163aa90e1bde5c87f453b082758b3268759b9d7ec41f8c7f971049',
+        unit_mem: '1005026',
+        unit_steps: '224728232',
+        fee: '74193',
+      },
+      {
+        tx_index: 0,
+        purpose: 'vote',
+        script_hash: '',
+        redeemer_data_hash: 'd36a2619a672494604e11bb447cbcf5231e9f2ba25c2169177edc941bd50ad6c',
+        datum_hash: 'd36a2619a672494604e11bb447cbcf5231e9f2ba25c2169177edc941bd50ad6c',
+        unit_mem: '474084',
+        unit_steps: '124554306',
+        fee: '36336',
+      },
+    ],
+  },
+  {
+    // a parameter-change proposal: the guardrails script executes with a
+    // propose redeemer. same schema-lag and empty-script_hash facts as the
+    // vote fixture above.
+    id: 'txs-redeemers-propose-purpose_48f827aadeaa',
+    testName: 'txs/:hash/redeemers with a propose redeemer',
+    endpoints: ['txs/f6cb185a1fe988dad1011eb239d9a281e8abd3557417918cffd7ef9e7afcf599/redeemers'],
+    response: [
+      {
+        tx_index: 0,
+        purpose: 'propose',
+        script_hash: '',
+        redeemer_data_hash: '923918e403bf43c34b4ef6b48eb2ee04babed17320d8d1b9ff9ad086e86f44ec',
+        datum_hash: '923918e403bf43c34b4ef6b48eb2ee04babed17320d8d1b9ff9ad086e86f44ec',
+        unit_mem: '576238',
+        unit_steps: '121963335',
+        fee: '42043',
+      },
+    ],
+  },
 ];
