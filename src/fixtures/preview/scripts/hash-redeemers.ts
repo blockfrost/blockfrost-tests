@@ -1546,12 +1546,10 @@ export default [
     // divergence once schemas support the propose purpose.
     id: 'scripts-hash-redeemers-guardrails-unattributed_9a80de768427',
     testName: 'scripts/:hash/redeemers guardrails script governance executions',
-    endpoints: [
-      'scripts/fa24fb305126805cf2164c161d852a0e7330cf988f1fe558cf7d4a64/redeemers',
-    ],
+    endpoints: ['scripts/fa24fb305126805cf2164c161d852a0e7330cf988f1fe558cf7d4a64/redeemers'],
     response: expect.toSatisfy(
       (rows: { purpose: string }[]) =>
-        Array.isArray(rows) && rows.every((row) => row.purpose === 'propose'),
+        Array.isArray(rows) && rows.every(row => row.purpose === 'propose'),
     ),
   },
 ];

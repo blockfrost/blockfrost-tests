@@ -107,12 +107,10 @@ export default [
     // pass; any other purpose under this script fails.
     id: 'scripts-hash-redeemers-guardrails-unattributed_f0c6fbe97beb',
     testName: 'scripts/:hash/redeemers guardrails script governance executions',
-    endpoints: [
-      'scripts/fa24fb305126805cf2164c161d852a0e7330cf988f1fe558cf7d4a64/redeemers',
-    ],
+    endpoints: ['scripts/fa24fb305126805cf2164c161d852a0e7330cf988f1fe558cf7d4a64/redeemers'],
     response: expect.toSatisfy(
       (rows: { purpose: string }[]) =>
-        Array.isArray(rows) && rows.every((row) => row.purpose === 'propose'),
+        Array.isArray(rows) && rows.every(row => row.purpose === 'propose'),
     ),
   },
 ];
