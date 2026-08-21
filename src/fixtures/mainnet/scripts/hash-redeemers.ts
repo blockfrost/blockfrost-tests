@@ -1,3 +1,4 @@
+import { expect } from 'vitest';
 import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
@@ -102,12 +103,16 @@ export default [
     // enacted parameter change and treasury withdrawal, but db-sync leaves
     // propose redeemers unattributed, so the API finds no rows for it. a
     // backend that attributes governance redeemers from the ledger lists
-    // those executions here — expected divergence, kept visible.
+    // those executions here. an empty page and propose-only rows both
+    // pass; any other purpose under this script fails.
     id: 'scripts-hash-redeemers-guardrails-unattributed_f0c6fbe97beb',
-    testName: 'scripts/:hash/redeemers guardrails script has no attributed rows',
+    testName: 'scripts/:hash/redeemers guardrails script governance executions',
     endpoints: [
       'scripts/fa24fb305126805cf2164c161d852a0e7330cf988f1fe558cf7d4a64/redeemers',
     ],
-    response: [],
+    response: expect.toSatisfy(
+      (rows: { purpose: string }[]) =>
+        Array.isArray(rows) && rows.every((row) => row.purpose === 'propose'),
+    ),
   },
 ];

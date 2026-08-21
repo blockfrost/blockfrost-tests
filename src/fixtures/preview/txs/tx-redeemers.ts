@@ -115,12 +115,10 @@ export default [
     ]),
   },
   {
-    // a governance tx mixing a spend redeemer with a vote redeemer. the API
-    // returns the vote row ahead of its own published schema (the serializer
-    // does not enforce the purpose enum) and with an empty script_hash —
-    // db-sync does not attribute voter scripts. pinning both facts makes any
-    // change visible: schema catch-up, attribution fix, or a backend that
-    // skips or resolves governance purposes differently.
+    // a governance tx mixing a spend redeemer with a vote redeemer.
+    // db-sync does not attribute voter scripts (script_hash is empty);
+    // a ledger-attributing backend returns the voter's script credential.
+    // both are accepted; any other value fails.
     id: 'txs-redeemers-vote-purpose_b3d8eb460d05',
     testName: 'txs/:hash/redeemers with a vote redeemer',
     endpoints: ['txs/a1b750a957946629b17b730c933bf2d8b087c0ffef73ab7a0c0f886a15ce80c8/redeemers'],
@@ -138,7 +136,10 @@ export default [
       {
         tx_index: 0,
         purpose: 'vote',
-        script_hash: '',
+        script_hash: expect.toBeOneOf([
+          '',
+          'a11f594d3004a2a40b8837872493a54379e8898dfa3b9847d115e20a',
+        ]),
         redeemer_data_hash: 'd36a2619a672494604e11bb447cbcf5231e9f2ba25c2169177edc941bd50ad6c',
         datum_hash: 'd36a2619a672494604e11bb447cbcf5231e9f2ba25c2169177edc941bd50ad6c',
         unit_mem: '474084',
@@ -158,7 +159,10 @@ export default [
       {
         tx_index: 0,
         purpose: 'propose',
-        script_hash: '',
+        script_hash: expect.toBeOneOf([
+          '',
+          'fa24fb305126805cf2164c161d852a0e7330cf988f1fe558cf7d4a64',
+        ]),
         redeemer_data_hash: '923918e403bf43c34b4ef6b48eb2ee04babed17320d8d1b9ff9ad086e86f44ec',
         datum_hash: '923918e403bf43c34b4ef6b48eb2ee04babed17320d8d1b9ff9ad086e86f44ec',
         unit_mem: '576238',
