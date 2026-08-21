@@ -79,4 +79,27 @@ export default [
       },
     ]),
   },
+  {
+    // a mainnet parameter-change proposal: the constitution guardrails
+    // script executes with a propose redeemer. pins two current-API facts:
+    // the propose row is served ahead of the published schema, and
+    // script_hash is empty — db-sync does not attribute governance
+    // redeemers. a ledger-attributing backend returns the guardrails hash
+    // (fa24fb30…) here instead.
+    id: 'txs-redeemers-propose-purpose_c48e858a027e',
+    testName: 'txs/:hash/redeemers with a propose redeemer',
+    endpoints: ['txs/51f495aa23f4b3b3aa90afde4a0e67823bb7ac4ac65f5ffbb138373b863f2f74/redeemers'],
+    response: [
+      {
+        tx_index: 0,
+        purpose: 'propose',
+        script_hash: '',
+        redeemer_data_hash: 'd36a2619a672494604e11bb447cbcf5231e9f2ba25c2169177edc941bd50ad6c',
+        datum_hash: 'd36a2619a672494604e11bb447cbcf5231e9f2ba25c2169177edc941bd50ad6c',
+        unit_mem: '478665',
+        unit_steps: '104574320',
+        fee: '35159',
+      },
+    ],
+  },
 ];

@@ -97,4 +97,17 @@ export default [
       },
     ],
   },
+  {
+    // the constitution guardrails script (fa24fb30…) has executed on every
+    // enacted parameter change and treasury withdrawal, but db-sync leaves
+    // propose redeemers unattributed, so the API finds no rows for it. a
+    // backend that attributes governance redeemers from the ledger lists
+    // those executions here — expected divergence, kept visible.
+    id: 'scripts-hash-redeemers-guardrails-unattributed_f0c6fbe97beb',
+    testName: 'scripts/:hash/redeemers guardrails script has no attributed rows',
+    endpoints: [
+      'scripts/fa24fb305126805cf2164c161d852a0e7330cf988f1fe558cf7d4a64/redeemers',
+    ],
+    response: [],
+  },
 ];
