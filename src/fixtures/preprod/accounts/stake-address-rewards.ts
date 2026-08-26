@@ -70,6 +70,23 @@ export default [
     ],
   },
   {
+    id: 'accounts-stake-address-queryparams-generic-stake-address-rewards-with-multiple-types_a1ac561f2177',
+    testName:
+      'accounts/:stake_address?queryparams generic stake address rewards with multiple types',
+    endpoints: [
+      'accounts/stake_test1uqcvsan32r2a6hwc5jy7tmtynr5yat9jhvtq63gnynwlungj0dxs3/rewards?count=1&page=2',
+      'accounts/stake_test1uqcvsan32r2a6hwc5jy7tmtynr5yat9jhvtq63gnynwlungj0dxs3/rewards?count=1&page=2&order=asc',
+    ],
+    response: [
+      {
+        epoch: 134,
+        amount: '500000000',
+        pool_id: 'pool1esdh2fzfdgqkklsjd774c0e6pup56zwvlkjun7u7mkaecnnncwn',
+        type: 'pool_deposit_refund',
+      },
+    ],
+  },
+  {
     id: 'accounts-stake-address-generic-empty-list_58380b5c192d',
     testName: 'accounts/:stake_address generic empty list',
     endpoints: [
