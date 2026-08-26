@@ -179,4 +179,76 @@ export default [
       },
     ],
   },
+  // The two rows in the middle of this page (8a94d3ea…, then 32dc6ad5…) are
+  // proposed by two txs of the same block, and the listing follows the order
+  // of the txs inside that block. Their hashes sort the other way round, so a
+  // backend tie-breaking on the tx hash serves this page swapped while the
+  // page above, whose proposals all sit in blocks of their own, still passes.
+  {
+    id: 'governance-proposals-tx-order-inside-a-block_8e641fb48b4f',
+    testName: 'governance proposals - tx order inside a block',
+    endpoints: ['governance/proposals?count=10&page=4'],
+    response: [
+      {
+        id: 'gov_action1u008nt84f5tssj2m9zt7qfw9vh07kt7ukmy92u6ufrlx4v8uhe9qq7qtkgd',
+        tx_hash: 'e3de79acf54d1708495b2897e025c565dfeb2fdcb6c855735c48fe6ab0fcbe4a',
+        cert_index: 0,
+        governance_type: 'info_action',
+      },
+      {
+        id: 'gov_action1latrsmmradldt5gq2lc6d7pkr683ycqpd22ze6lzu0a2nln6szpqqzxcl94',
+        tx_hash: 'ff56386f63eb7ed5d10057f1a6f8361e8f1260016a942cebe2e3faa9fe7a8082',
+        cert_index: 0,
+        governance_type: 'info_action',
+      },
+      {
+        id: 'gov_action10yyjajlc2fcg87plhwajtwl2nrnel79h5gkmyymt6x4flgd2yh7sqrjtw56',
+        tx_hash: '79092ecbf8527083f83fbbbb25bbea98e79ff8b7a22db2136bd1aa9fa1aa25fd',
+        cert_index: 0,
+        governance_type: 'info_action',
+      },
+      {
+        id: 'gov_action1rtg43cfks4alu8wvklhjzk0j3age0qph5pjg2y4edk2flg5cce7sqhvrj7k',
+        tx_hash: '1ad158e136857bfe1dccb7ef2159f28f51978037a0648512b96d949fa298c67d',
+        cert_index: 0,
+        governance_type: 'info_action',
+      },
+      {
+        id: 'gov_action1zzx0f0k2jvqhwfe08lauprcn3ef4ea5cthhrlax08jdmx702uzpqqwkshzn',
+        tx_hash: '108cf4beca930177272f3ffbc08f138e535cf6985dee3ff4cf3c9bb379eae082',
+        cert_index: 0,
+        governance_type: 'info_action',
+      },
+      {
+        id: 'gov_action1322d86j85chlcsfzffgg2q5fwglx46f9ctuxeqqv2zw3zjzut3lqqxlacmu',
+        tx_hash: '8a94d3ea47a62ffc41224a50850289723e6ae925c2f86c800c509d11485c5c7e',
+        cert_index: 0,
+        governance_type: 'info_action',
+      },
+      {
+        id: 'gov_action1xtwx44wf83flkhfn0jn2vslthm2rd248859thr479xn2yzleym2qqvt70fy',
+        tx_hash: '32dc6ad5c93c53fb5d337ca6a643ebbed436aaa73d0abb8ebe29a6a20bf926d4',
+        cert_index: 0,
+        governance_type: 'info_action',
+      },
+      {
+        id: 'gov_action1u2z02w28qzuvk5qce8uz73ex8y7ffk7u43hnfg8qmggdpcga47qqq2dckdc',
+        tx_hash: 'e284f5394700b8cb5018c9f82f4726393c94dbdcac6f34a0e0da10d0e11daf80',
+        cert_index: 0,
+        governance_type: 'info_action',
+      },
+      {
+        id: 'gov_action1q7qksufyu8em6l7vsjeshw2xhuxfw9axm3tgmheeprklgs9dvy8qqtlmsh7',
+        tx_hash: '0781687124e1f3bd7fcc84b30bb946bf0c9717a6dc568ddf3908edf440ad610e',
+        cert_index: 0,
+        governance_type: 'info_action',
+      },
+      {
+        id: 'gov_action1e94fkkuxdzl3hyahux2ra6n40z726wuyrmk6lrskyrn42wt5ykusq52t96v',
+        tx_hash: 'c96a9b5b8668bf1b93b7e1943eea7578bcad3b841eedaf8e1620e755397425b9',
+        cert_index: 0,
+        governance_type: 'parameter_change',
+      },
+    ],
+  },
 ];

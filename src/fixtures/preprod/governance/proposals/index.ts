@@ -29,4 +29,74 @@ export default [
       },
     ],
   },
+  // One tx proposing many actions at once: the listing walks its cert
+  // indexes in order and only then moves on to the next tx, and the ids of
+  // those rows carry the index in their CIP-129 payload.
+  {
+    id: 'governance-proposals-cert-index-order-inside-one-tx_06d509ac9f32',
+    testName: 'governance proposals - cert index order inside one tx',
+    endpoints: ['governance/proposals?count=10&page=5'],
+    response: [
+      {
+        id: 'gov_action19nvvldw9x8cv05q923fyympcgsff0zumvmmy73z86rpvw0ueakrpzwjz90m',
+        tx_hash: '2cd8cfb5c531f0c7d0055452426c384412978b9b66f64f4447d0c2c73f99ed86',
+        cert_index: 17,
+        governance_type: 'treasury_withdrawals',
+      },
+      {
+        id: 'gov_action19nvvldw9x8cv05q923fyympcgsff0zumvmmy73z86rpvw0ueakrpyjapqnv',
+        tx_hash: '2cd8cfb5c531f0c7d0055452426c384412978b9b66f64f4447d0c2c73f99ed86',
+        cert_index: 18,
+        governance_type: 'treasury_withdrawals',
+      },
+      {
+        id: 'gov_action10md95hawtukx6yqmj33ndwpg7wxd35zdez88gazqkxhna9jzkgnsqpt3cra',
+        tx_hash: '7eda5a5fae5f2c6d101b946336b828f38cd8d04dc88e747440b1af3e9642b227',
+        cert_index: 0,
+        governance_type: 'treasury_withdrawals',
+      },
+      {
+        id: 'gov_action10md95hawtukx6yqmj33ndwpg7wxd35zdez88gazqkxhna9jzkgnszjwsmss',
+        tx_hash: '7eda5a5fae5f2c6d101b946336b828f38cd8d04dc88e747440b1af3e9642b227',
+        cert_index: 1,
+        governance_type: 'treasury_withdrawals',
+      },
+      {
+        id: 'gov_action10md95hawtukx6yqmj33ndwpg7wxd35zdez88gazqkxhna9jzkgnsywpn7v8',
+        tx_hash: '7eda5a5fae5f2c6d101b946336b828f38cd8d04dc88e747440b1af3e9642b227',
+        cert_index: 2,
+        governance_type: 'treasury_withdrawals',
+      },
+      {
+        id: 'gov_action10md95hawtukx6yqmj33ndwpg7wxd35zdez88gazqkxhna9jzkgnsxayjal2',
+        tx_hash: '7eda5a5fae5f2c6d101b946336b828f38cd8d04dc88e747440b1af3e9642b227',
+        cert_index: 3,
+        governance_type: 'treasury_withdrawals',
+      },
+      {
+        id: 'gov_action10md95hawtukx6yqmj33ndwpg7wxd35zdez88gazqkxhna9jzkgnsgll45aq',
+        tx_hash: '7eda5a5fae5f2c6d101b946336b828f38cd8d04dc88e747440b1af3e9642b227',
+        cert_index: 4,
+        governance_type: 'treasury_withdrawals',
+      },
+      {
+        id: 'gov_action10md95hawtukx6yqmj33ndwpg7wxd35zdez88gazqkxhna9jzkgns2v65hwd',
+        tx_hash: '7eda5a5fae5f2c6d101b946336b828f38cd8d04dc88e747440b1af3e9642b227',
+        cert_index: 5,
+        governance_type: 'treasury_withdrawals',
+      },
+      {
+        id: 'gov_action10md95hawtukx6yqmj33ndwpg7wxd35zdez88gazqkxhna9jzkgnsvs4hjj6',
+        tx_hash: '7eda5a5fae5f2c6d101b946336b828f38cd8d04dc88e747440b1af3e9642b227',
+        cert_index: 6,
+        governance_type: 'treasury_withdrawals',
+      },
+      {
+        id: 'gov_action10md95hawtukx6yqmj33ndwpg7wxd35zdez88gazqkxhna9jzkgnswrsk3ph',
+        tx_hash: '7eda5a5fae5f2c6d101b946336b828f38cd8d04dc88e747440b1af3e9642b227',
+        cert_index: 7,
+        governance_type: 'treasury_withdrawals',
+      },
+    ],
+  },
 ];
