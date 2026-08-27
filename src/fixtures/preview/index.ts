@@ -89,6 +89,7 @@ import txWithdrawals from './txs/tx-withdrawals.js';
 import txSubmit from './tx/submit.js';
 import swapsAsset from './swaps/asset.js';
 import txRequiredSigners from './txs/tx-required-signers.js';
+import utilsAddressesXpub from './utils/addresses-xpub.js';
 import utilsTxsEvaluate from './utils/txs-evaluate.js';
 import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
 
@@ -220,5 +221,5 @@ export const previewFixtures = {
     ...txUtxos,
     ...txRedeemers,
   ],
-  utils: [...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos],
+  utils: [...utilsAddressesXpub, ...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos],
 };
