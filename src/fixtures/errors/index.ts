@@ -69,3 +69,15 @@ export const error_400_blocks_out_of_range = {
   message: 'Missing, out of range or malformed block number.',
   status_code: 400,
 };
+
+export const error_400_gov_action_id = {
+  error: 'Bad Request',
+  message: 'Invalid or malformed gov action id.',
+  status_code: 400,
+};
+
+export const error_400_cert_index = {
+  error: 'Bad Request',
+  message: 'params/cert_index must be integer',
+  status_code: 400,
+};

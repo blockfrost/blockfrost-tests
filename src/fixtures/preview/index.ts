@@ -105,6 +105,7 @@ import governanceProposalsHashIndex from './governance/proposals/hash-cert-index
 import governanceProposalsHashIndexVotes from './governance/proposals/hash-cert-index-votes.js';
 import governanceProposalsHashIndexMetadata from './governance/proposals/hash-cert-index-metadata.js';
 import governanceProposalsHashIndexParameters from './governance/proposals/hash-cert-index-parameters.js';
+import governanceProposalsHashIndexWithdrawals from './governance/proposals/hash-cert-index-withdrawals.js';
 
 import governanceCommittee from './governance/committee/index.js';
 import governanceCommitteeVotes from './governance/committee/votes.js';
@@ -201,6 +202,7 @@ export const previewFixtures = {
     ...governanceProposalsHashIndexVotes,
     ...governanceProposalsHashIndexMetadata,
     ...governanceProposalsHashIndexParameters,
+    ...governanceProposalsHashIndexWithdrawals,
     ...governanceCommittee,
     ...governanceCommitteeVotes,
     ...governanceCommitteeCcIdVotes,
