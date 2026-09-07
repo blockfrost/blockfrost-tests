@@ -12,7 +12,8 @@ import { getConfig } from './config.js';
 
 const apiEndpointsKeys = Object.keys(openApiJsonSchema);
 
-// These OpenAPI routes use the `:param` format. Each route contains a list of path segments.
+// The `normalizePath` function converts each imported OpenAPI route from `{param}` to `:param`.
+// Each normalized route contains a list of path segments.
 type NormalizedRoute = { pattern: string; segments: string[] };
 
 const isParamSegment = (segment: string): boolean => segment.startsWith(':');
@@ -50,7 +51,13 @@ const isMoreSpecific = (candidate: string[], incumbent: string[]): boolean => {
 //
 // The radix3 router stores `{gov_action_id}` and `{tx_hash}` in the same parameter node.
 // As a result, it cannot resolve the longer route that contains `{cert_index}`.
+const resolvedRouteCache = new Map<string, string | null>();
+
 const resolveRoute = (normalizedUrl: string): string | null => {
+  const cachedRoute = resolvedRouteCache.get(normalizedUrl);
+
+  if (cachedRoute !== undefined) return cachedRoute;
+
   const urlSegments = toSegments(normalizedUrl);
 
   let best: NormalizedRoute | null = null;
@@ -69,7 +76,11 @@ const resolveRoute = (normalizedUrl: string): string | null => {
     }
   }
 
-  return best?.pattern ?? null;
+  const resolvedRoute = best?.pattern ?? null;
+
+  resolvedRouteCache.set(normalizedUrl, resolvedRoute);
+
+  return resolvedRoute;
 };
 
 export const isUrlMatch = (urlParameter: string, allowlistPattern: string): boolean => {
