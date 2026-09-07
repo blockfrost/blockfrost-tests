@@ -51,7 +51,9 @@ export default [
     endpoints: ['accounts/stake_test1upssxqqvnx3wrc4n67p4jsgfvmams7jym9t3w2ha6mzvpfgmxv6vg'],
     response: {
       stake_address: 'stake_test1upssxqqvnx3wrc4n67p4jsgfvmams7jym9t3w2ha6mzvpfgmxv6vg',
-      active: false,
+      // the account was delegated to a pool in epoch 311 (tx f454a4f5...),
+      // after the dereg + re-reg this fixture was written for
+      active: true,
       // dereg (cert_index 0) + re-reg (cert_index 1) in tx 918d77f3... apply
       // in ledger order, so the final state is registered
       registered: true,
@@ -62,7 +64,7 @@ export default [
       reserves_sum: '0',
       treasury_sum: '0',
       withdrawable_amount: expect.toBeAdaQuantity(),
-      pool_id: null,
+      pool_id: 'pool1vvkurfxhajtj4f7x8wjkeet7rg8amz34duy5nux76per5sn3npx',
       drep_id: null,
     },
   },
