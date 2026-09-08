@@ -54,6 +54,17 @@ describe('isUrlMatch', () => {
     expect(isUrlMatch('/epochs/latest', pattern)).toBe(false);
   });
 
+  it('resolves overlapping governance proposal routes', () => {
+    const govActionUrl = '/governance/proposals/gov_action1example/withdrawals';
+    const txCertUrl = '/governance/proposals/abc123/0/withdrawals';
+    const govActionPattern = '/governance/proposals/{gov_action_id}/withdrawals';
+    const txCertPattern = '/governance/proposals/{tx_hash}/{cert_index}/withdrawals';
+
+    expect(isUrlMatch(govActionUrl, govActionPattern)).toBe(true);
+    expect(isUrlMatch(txCertUrl, txCertPattern)).toBe(true);
+    expect(isUrlMatch(govActionUrl, '/governance/proposals/{tx_hash}/{cert_index}')).toBe(false);
+  });
+
   it('still matches literal endpoints for blocks/epochs/pools', () => {
     expect(isUrlMatch('/blocks/latest', '/blocks/latest')).toBe(true);
     expect(isUrlMatch('/epochs/latest', '/epochs/latest')).toBe(true);
@@ -142,6 +153,15 @@ describe('validateAllowlistPattern', () => {
     expect(validateAllowlistPattern('/accounts/{stake_address}')).toBeNull();
     expect(validateAllowlistPattern('/blocks/slot/{slot_number}')).toBeNull();
     expect(validateAllowlistPattern('/pools/{pool_id}')).toBeNull();
+  });
+
+  it('accepts overlapping governance proposal routes', () => {
+    expect(
+      validateAllowlistPattern('/governance/proposals/{gov_action_id}/withdrawals'),
+    ).toBeNull();
+    expect(
+      validateAllowlistPattern('/governance/proposals/{tx_hash}/{cert_index}/withdrawals'),
+    ).toBeNull();
   });
 
   it('accepts valid literal routes', () => {
