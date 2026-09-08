@@ -30,6 +30,7 @@ describe('isUrlMatch', () => {
   it('handles completely unrelated URLs gracefully', () => {
     expect(isUrlMatch('/metrics', '/accounts/{stake_address}')).toBe(false);
     expect(isUrlMatch('metrics/endpoints', '/metrics')).toBe(false);
+    expect(isUrlMatch('/not-an-endpoint', '/not-an-endpoint')).toBe(false);
   });
 
   it('does not throw on malformed patterns', () => {
@@ -97,6 +98,11 @@ describe('isUrlMatch', () => {
     );
 
     expect(isUrlMatch('/a/b/c', '/a/{param}')).toBe(false);
+  });
+
+  it('does not remove empty path segments', () => {
+    expect(isUrlMatch('/accounts//stake_address', '/accounts/{stake_address}')).toBe(false);
+    expect(isUrlMatch('/accounts//', '/accounts/{stake_address}')).toBe(false);
   });
 
   it('matches exact paths without parameters', () => {
