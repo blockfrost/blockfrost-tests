@@ -2,19 +2,19 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { Assertion as BaseAssertion } from 'vitest';
 import { Responses } from '@blockfrost/blockfrost-js';
-import type { toBeOneOf } from 'jest-extended';
 
+// jest-extended matchers used in src, typed on vitest's shared Matchers
+// interface (Assertion, AsymmetricMatchersContaining and ExpectStatic all
+// extend it).
 interface CustomMatchers<R = unknown> {
   toBeOneOf(p: any): R;
   toIncludeSameMembers(p: any[]): R;
+  toBeString(): R;
 }
 
 declare module 'vitest' {
-  interface toBeOneOf<T = any> extends CustomMatchers {}
-  interface Assertion<T = any> extends CustomMatchers<T> {}
-  interface AsymmetricMatchersContaining extends CustomMatchers {}
+  interface Matchers<R, T> extends CustomMatchers<R> {}
 }
 
 declare module 'vitest' {
