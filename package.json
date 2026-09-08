@@ -16,6 +16,7 @@
     "test:preview:local": "NETWORK=preview vitest --ui -c ./vitest.config.integration.ts",
     "update-fixtures-ids": "tsx scripts/add-fixtures-ids.ts",
     "check-fixture-wiring": "tsx scripts/check-fixture-wiring.ts",
+    "check-endpoint-coverage": "tsx scripts/check-endpoint-coverage.ts",
     "type-check": "tsc --noEmit",
     "prettier-fix": "prettier --write ."
   },
