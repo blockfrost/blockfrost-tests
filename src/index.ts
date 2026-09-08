@@ -7,31 +7,128 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import got, { ExtendOptions, Got } from 'got';
 import { Fixture } from './types/index.js';
-import { createRouter } from 'radix3';
 import { normalizePath } from './utils.js';
 import { getConfig } from './config.js';
 
 const apiEndpointsKeys = Object.keys(openApiJsonSchema);
-const router = createRouter<{ pattern: string }>();
 
-apiEndpointsKeys.map(path => {
-  const normalizedPath = normalizePath(path);
+// The `normalizePath` function converts each imported OpenAPI route from `{param}` to `:param`.
+// Each normalized route contains a list of path segments.
+type NormalizedRoute = { pattern: string; segments: string[] };
 
-  router.insert(normalizedPath, { pattern: normalizedPath });
+const isParamSegment = (segment: string): boolean => segment.startsWith(':');
+const toSegments = (normalized: string): string[] => normalized.split('/').filter(Boolean);
+
+const normalizedRoutes: NormalizedRoute[] = apiEndpointsKeys.map(key => {
+  const pattern = normalizePath(key);
+
+  return { pattern, segments: toSegments(pattern) };
 });
 
 // The set of every OpenAPI route, in normalized form. An allowlist entry is only
 // valid if it is byte-for-byte identical (after normalization) to one of these.
-const normalizedApiEndpoints = new Set(apiEndpointsKeys.map(normalizePath));
+const normalizedApiEndpoints = new Set(normalizedRoutes.map(route => route.pattern));
+
+// This function compares two routes that match and have the same number of segments.
+// At the first difference, a static segment has priority over a parameter segment.
+// Thus, the matcher selects `/blocks/latest` instead of `/blocks/{hash_or_number}`.
+const isMoreSpecific = (candidate: string[], incumbent: string[]): boolean => {
+  for (let i = 0; i < candidate.length; i++) {
+    const candidateStatic = !isParamSegment(candidate[i]);
+    const incumbentStatic = !isParamSegment(incumbent[i]);
+
+    if (candidateStatic !== incumbentStatic) return candidateStatic;
+  }
+
+  return false;
+};
+
+// This function resolves a normalized URL to one OpenAPI route.
+// The URL and the route must have the same number of segments.
+// Each static segment must be equal. Each parameter segment accepts one value.
+// If multiple routes match, the function selects the most specific route.
+// The function returns `null` if no route matches.
+//
+// The radix3 router stores `{gov_action_id}` and `{tx_hash}` in the same parameter node.
+// As a result, it cannot resolve the longer route that contains `{cert_index}`.
+const resolvedRouteCache = new Map<string, string | null>();
+
+const resolveRoute = (normalizedUrl: string): string | null => {
+  const cachedRoute = resolvedRouteCache.get(normalizedUrl);
+
+  if (cachedRoute !== undefined) return cachedRoute;
+
+  const urlSegments = toSegments(normalizedUrl);
+
+  let best: NormalizedRoute | null = null;
+
+  for (const route of normalizedRoutes) {
+    if (route.segments.length !== urlSegments.length) continue;
+
+    const matches = route.segments.every(
+      (segment, i) => isParamSegment(segment) || segment === urlSegments[i],
+    );
+
+    if (!matches) continue;
+
+    if (best === null || isMoreSpecific(route.segments, best.segments)) {
+      best = route;
+    }
+  }
+
+  const resolvedRoute = best?.pattern ?? null;
+
+  resolvedRouteCache.set(normalizedUrl, resolvedRoute);
+
+  return resolvedRoute;
+};
+
+export const isUrlMatch = (urlParameter: string, allowlistPattern: string): boolean => {
+  try {
+    const normalizedUrl = normalizePath(urlParameter);
+    const normalizedPattern = normalizePath(allowlistPattern);
+
+    // The exact comparison covers routes without parameters. It also preserves the match between two empty strings.
+    if (normalizedUrl === normalizedPattern) return true;
+
+    return resolveRoute(normalizedUrl) === normalizedPattern;
+  } catch {
+    return false;
+  }
+};
+
+// This function replaces each parameter with a test value to make a concrete URL.
+// The test value does not equal a static segment in the current specification.
+const buildProbeUrl = (normalizedRoute: string): string => {
+  let index = 0;
+
+  return normalizedRoute
+    .split('/')
+    .map(segment => (isParamSegment(segment) ? `__bf_probe_${index++}__` : segment))
+    .join('/');
+};
 
 /**
- * Checks whether an allowlist pattern is an exact OpenAPI route.
+ * This function makes sure that an allowlist entry matches the @blockfrost/openapi specification.
+ *
+ * First, the entry must match an OpenAPI route. The path and parameter names must be identical.
+ * Then, the function makes a test URL and makes sure that the URL resolves to the same route.
+ * This second comparison detects conflicts between parameter routes.
+ * Without this comparison, a conflict can cause the matcher to select no tests.
  */
 export const validateAllowlistPattern = (allowlistPattern: string): string | null => {
   const normalizedPattern = normalizePath(allowlistPattern);
 
   if (!normalizedApiEndpoints.has(normalizedPattern)) {
     return `is not an exact endpoint in the @blockfrost/openapi specification (paths and parameter names must match exactly)`;
+  }
+
+  const probeUrl = buildProbeUrl(normalizedPattern);
+
+  if (!isUrlMatch(probeUrl, normalizedPattern)) {
+    const resolved = resolveRoute(normalizePath(probeUrl)) ?? 'no route';
+
+    return `is an exact route in the @blockfrost/openapi specification. The matcher resolves the test URL (${probeUrl}) to ${resolved}, not this route. As a result, the matcher selects no tests for this entry`;
   }
 
   return null;
@@ -123,23 +220,6 @@ const loadIgnorelist = (filePath: string): IgnoreRule[] => {
 };
 
 const ignorelist = loadIgnorelist(ignorelistFilePath);
-
-export const isUrlMatch = (urlParameter: string, allowlistPattern: string) => {
-  try {
-    const normalizedUrl = normalizePath(urlParameter);
-    const matchedRoute = router.lookup(normalizedUrl);
-
-    if (!matchedRoute) return false;
-
-    const normalizedPattern = normalizePath(allowlistPattern);
-
-    if (normalizedUrl === normalizedPattern) return true;
-
-    return matchedRoute.pattern === normalizedPattern;
-  } catch {
-    return false;
-  }
-};
 
 export const getInstance = (clientOptions?: ExtendOptions): Got => {
   const DEFAULT_HEADERS = envConfig.projectId ? { project_id: envConfig.projectId } : {};
