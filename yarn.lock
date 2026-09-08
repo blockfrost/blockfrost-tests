@@ -140,7 +140,7 @@ __metadata:
     "@babel/parser": "npm:^7.28.4"
     "@babel/traverse": "npm:^7.28.4"
     "@blockfrost/blockfrost-js": "npm:6.0.0"
-    "@blockfrost/openapi": "npm:0.1.84"
+    "@blockfrost/openapi": "npm:0.1.93"
     "@emurgo/cardano-serialization-lib-nodejs": "npm:12.1.1"
     "@eslint/js": "npm:^9.38.0"
     "@sindresorhus/slugify": "npm:^2.2.1"
@@ -187,15 +187,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockfrost/openapi@npm:0.1.84":
-  version: 0.1.84
-  resolution: "@blockfrost/openapi@npm:0.1.84"
+"@blockfrost/openapi@npm:0.1.93":
+  version: 0.1.93
+  resolution: "@blockfrost/openapi@npm:0.1.93"
   dependencies:
     ajv: "npm:^8.17.1"
     cbor: "npm:^9.0.2"
     rimraf: "npm:6.0.1"
     yaml: "npm:^2.6.1"
-  checksum: 10c0/f1bc2972ae49574bf527b00e60933fc7f70208a3debfff7e41259ebcc7e46a2a2839b1b9f869ba97f42488ade5f6d0e55f880a0516173b65e11e2b7fc28ae48c
+  checksum: 10c0/fee1a951c355751e900ece6981777801955e531e77189cd0818f7f35f510146a02afdb51740c16cd05b531127e88a6e5af38c07c044116597f63576e5b9d5d2d
   languageName: node
   linkType: hard
 
