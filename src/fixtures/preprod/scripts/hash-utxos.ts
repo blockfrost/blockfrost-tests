@@ -5,6 +5,33 @@ const paginationFixtures = getPaginationFixtures(
   'scripts/12108f654f8a58118e06fa8cccf5b6def94b07eab73f03ae0dbf8e3d/utxos',
 );
 
+// Multiple stable UTxOs (deployed 2023-04) hold the same script as a
+// reference script; both sit at the same script address and are unspent.
+// Listed the way the API returns them: by the position of the UTxO on the
+// chain, oldest first.
+const MULTI_UTXOS = [
+  {
+    address: 'addr_test1wzzqfeykqa5qu0xk7fqznf5hej9gcvk0xsx9h8h32hlwxccqxy5ad',
+    tx_hash: '171de32825c7ec95095d8d2cace20e4a246fb68dafb970e08e7b2a68bca1790e',
+    output_index: 0,
+    amount: [{ unit: 'lovelace', quantity: '28148610' }],
+    block: '61ee967c3079c1e31d1ccf25d787ea028540a31626c1dd9e9234c00c847071e5',
+    data_hash: '923918e403bf43c34b4ef6b48eb2ee04babed17320d8d1b9ff9ad086e86f44ec',
+    inline_datum: null,
+    reference_script_hash: '8404e49607680e3cd6f24029a697cc8a8c32cf340c5b9ef155fee363',
+  },
+  {
+    address: 'addr_test1wzzqfeykqa5qu0xk7fqznf5hej9gcvk0xsx9h8h32hlwxccqxy5ad',
+    tx_hash: '1e491f556a3afbcb669fc4b0ce1a3fdb541613b3641fb7ac1d2dfd6484a09585',
+    output_index: 0,
+    amount: [{ unit: 'lovelace', quantity: '28148610' }],
+    block: 'fdd8e3b31b71f9963136408b75e3bc291f88968290add0d80e1515f15990cb79',
+    data_hash: '923918e403bf43c34b4ef6b48eb2ee04babed17320d8d1b9ff9ad086e86f44ec',
+    inline_datum: null,
+    reference_script_hash: '8404e49607680e3cd6f24029a697cc8a8c32cf340c5b9ef155fee363',
+  },
+];
+
 export default [
   ...paginationFixtures,
   {
@@ -28,33 +55,38 @@ export default [
     ],
   },
   {
-    // Multiple stable UTxOs (deployed 2023-04) hold the same script as a
-    // reference script; both sit at the same script address and are unspent.
     id: 'scripts-script-hash-utxos-multiple-utxos-hold-the-same-reference-script_471d8725760e',
     testName: 'scripts/:script_hash/utxos - multiple utxos hold the same reference script',
     endpoints: ['scripts/8404e49607680e3cd6f24029a697cc8a8c32cf340c5b9ef155fee363/utxos'],
-    response: [
-      {
-        address: 'addr_test1wzzqfeykqa5qu0xk7fqznf5hej9gcvk0xsx9h8h32hlwxccqxy5ad',
-        tx_hash: '171de32825c7ec95095d8d2cace20e4a246fb68dafb970e08e7b2a68bca1790e',
-        output_index: 0,
-        amount: [{ unit: 'lovelace', quantity: '28148610' }],
-        block: '61ee967c3079c1e31d1ccf25d787ea028540a31626c1dd9e9234c00c847071e5',
-        data_hash: '923918e403bf43c34b4ef6b48eb2ee04babed17320d8d1b9ff9ad086e86f44ec',
-        inline_datum: null,
-        reference_script_hash: '8404e49607680e3cd6f24029a697cc8a8c32cf340c5b9ef155fee363',
-      },
-      {
-        address: 'addr_test1wzzqfeykqa5qu0xk7fqznf5hej9gcvk0xsx9h8h32hlwxccqxy5ad',
-        tx_hash: '1e491f556a3afbcb669fc4b0ce1a3fdb541613b3641fb7ac1d2dfd6484a09585',
-        output_index: 0,
-        amount: [{ unit: 'lovelace', quantity: '28148610' }],
-        block: 'fdd8e3b31b71f9963136408b75e3bc291f88968290add0d80e1515f15990cb79',
-        data_hash: '923918e403bf43c34b4ef6b48eb2ee04babed17320d8d1b9ff9ad086e86f44ec',
-        inline_datum: null,
-        reference_script_hash: '8404e49607680e3cd6f24029a697cc8a8c32cf340c5b9ef155fee363',
-      },
+    response: MULTI_UTXOS,
+  },
+  {
+    id: 'scripts-script-hash-utxos-desc_861077681972',
+    testName: 'scripts/:script_hash/utxos - desc',
+    endpoints: [
+      'scripts/8404e49607680e3cd6f24029a697cc8a8c32cf340c5b9ef155fee363/utxos?order=desc',
     ],
+    response: [...MULTI_UTXOS].reverse(),
+  },
+  {
+    id: 'scripts-script-hash-utxos-first-page_12329ceb5c1a',
+    testName: 'scripts/:script_hash/utxos - first page',
+    endpoints: ['scripts/8404e49607680e3cd6f24029a697cc8a8c32cf340c5b9ef155fee363/utxos?count=1'],
+    response: MULTI_UTXOS.slice(0, 1),
+  },
+  {
+    id: 'scripts-script-hash-utxos-second-page_4063d33ba9d6',
+    testName: 'scripts/:script_hash/utxos - second page',
+    endpoints: [
+      'scripts/8404e49607680e3cd6f24029a697cc8a8c32cf340c5b9ef155fee363/utxos?count=1&page=2',
+    ],
+    response: MULTI_UTXOS.slice(1),
+  },
+  {
+    id: 'scripts-script-hash-utxos-page-past-the-end_d8f5a167c759',
+    testName: 'scripts/:script_hash/utxos - page past the end',
+    endpoints: ['scripts/8404e49607680e3cd6f24029a697cc8a8c32cf340c5b9ef155fee363/utxos?page=3'],
+    response: [],
   },
   {
     // Valid on-chain script that is not used as a reference script anywhere.
@@ -67,6 +99,17 @@ export default [
     id: 'scripts-script-hash-utxos-unknown-script-hash_5ff58ba04810',
     testName: 'scripts/:script_hash/utxos - unknown script hash',
     endpoints: ['scripts/0000000000000000000000000000000000000000000000000000dead/utxos'],
+    response: error_404,
+  },
+  {
+    // The hash is matched as text, so anything that is not the hash of a
+    // known script is the same 404 rather than a bad request.
+    id: 'scripts-script-hash-utxos-malformed-script-hash_3dbd27f78d7b',
+    testName: 'scripts/:script_hash/utxos - malformed script hash',
+    endpoints: [
+      'scripts/abc/utxos',
+      'scripts/zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz/utxos',
+    ],
     response: error_404,
   },
 ];

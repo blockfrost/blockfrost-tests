@@ -7,6 +7,7 @@ import accountsStakeAddressHistory from './accounts/stake-address-history.js';
 import accountsStakeAddressRegistrations from './accounts/stake-address-registrations.js';
 import accountStakeAddressRewards from './accounts/stake-address-rewards.js';
 import accountsStakeAddressUtxos from './accounts/stake-address-utxos.js';
+import accountsStakeAddressMirs from './accounts/stake-address-mirs.js';
 import accountsStakeAddressWithdrawals from './accounts/stake-address-withdrawals.js';
 import accountStakeAddressTransactions from './accounts/stake-address-transactions.js';
 
@@ -61,6 +62,7 @@ import poolsPoolIdHistory from './pools/pool-id-history.js';
 import poolsPoolIdMetadata from './pools/pool-id-metadata.js';
 import poolsPoolIdRelays from './pools/pool-id-relays.js';
 import poolsPoolIdUpdates from './pools/pool-id-updates.js';
+import poolsPoolIdVotes from './pools/pool-id-votes.js';
 import poolsRetired from './pools/retired.js';
 import poolsRetiring from './pools/retiring.js';
 import poolsRoot from './pools/root.js';
@@ -105,6 +107,7 @@ import governanceProposalsHashIndex from './governance/proposals/hash-cert-index
 import governanceProposalsHashIndexVotes from './governance/proposals/hash-cert-index-votes.js';
 import governanceProposalsHashIndexMetadata from './governance/proposals/hash-cert-index-metadata.js';
 import governanceProposalsHashIndexParameters from './governance/proposals/hash-cert-index-parameters.js';
+import governanceProposalsHashIndexWithdrawals from './governance/proposals/hash-cert-index-withdrawals.js';
 
 import governanceCommittee from './governance/committee/index.js';
 import governanceCommitteeVotes from './governance/committee/votes.js';
@@ -121,6 +124,7 @@ export const preprodFixtures = {
     ...accountsStakeAddressRegistrations,
     ...accountStakeAddressRewards,
     ...accountsStakeAddressUtxos,
+    ...accountsStakeAddressMirs,
     ...accountsStakeAddressWithdrawals,
     ...accountStakeAddressTransactions,
   ],
@@ -175,6 +179,7 @@ export const preprodFixtures = {
     ...governanceProposalsHashIndexVotes,
     ...governanceProposalsHashIndexMetadata,
     ...governanceProposalsHashIndexParameters,
+    ...governanceProposalsHashIndexWithdrawals,
     ...governanceCommittee,
     ...governanceCommitteeVotes,
     ...governanceCommitteeCcIdVotes,
@@ -190,6 +195,7 @@ export const preprodFixtures = {
     ...poolsPoolIdMetadata,
     ...poolsPoolIdRelays,
     ...poolsPoolIdUpdates,
+    ...poolsPoolIdVotes,
     ...poolsRetired,
     ...poolsRoot,
     ...poolsRetiring,

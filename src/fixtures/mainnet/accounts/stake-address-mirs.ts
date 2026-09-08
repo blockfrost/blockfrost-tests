@@ -1,3 +1,5 @@
+import { error_400_accounts, error_404 } from '../../errors/index.js';
+
 export default [
   {
     id: 'accounts-stake-address-queryparams-generic-stake-address-mirs_d58c64399ad6',
@@ -15,5 +17,17 @@ export default [
         block_time: 1613058287,
       },
     ],
+  },
+  {
+    id: 'accounts-stake-address-mirs-valid-not-on-chain-account_64a1c4180603',
+    testName: 'accounts/:stake_address/mirs - valid not on-chain account',
+    endpoints: ['accounts/stake1u9mnvzarrk73dz8gcmrx8lqqqnzfa8zu4zxuymstr6vtvmsutca3h/mirs'],
+    response: error_404,
+  },
+  {
+    id: 'accounts-stake-address-mirs-non-valid-account_da8d571c373f',
+    testName: 'accounts/:stake_address/mirs - non-valid account',
+    endpoints: ['accounts/stake1kek/mirs', 'accounts/stake_test1kek/mirs'],
+    response: error_400_accounts,
   },
 ];

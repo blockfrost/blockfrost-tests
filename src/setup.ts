@@ -1,29 +1,5 @@
-import { expect } from 'vitest';
-import * as jestExtendedMatchers from 'jest-extended';
 import { getBlockfrostAPIClient } from './blockfrost-client.js';
-import {
-  toBeBlake2b256Hash,
-  toBePoolBech32,
-  toBeDrepId,
-  toBeCurrentTimestamp,
-  toBeUnixTimestamp,
-  toBeAdaQuantity,
-  toBeAssetQuantity,
-  toBeEpochNumber,
-  toBeEpochSlotNumber,
-  toBeSlotNumber,
-  toBeAssetUnit,
-  confirmations,
-  toBeGreaterThan,
-  toBeGreaterThanOrEqual,
-  toBeLessThan,
-  toBeLessThanOrEqual,
-  toBeInRange,
-  toBeStakeAddress,
-  toBeCurrentBlockHeight,
-  toBeCurrentEpochNumber,
-  toBeNullableEpochNumber,
-} from './matchers.js';
+import { registerMatchers } from './register-matchers.js';
 import { isBlockchainStateSetupEnabled } from './utils.js';
 
 export const setGlobalBlockchainState = async (options?: { force?: boolean }) => {
@@ -58,27 +34,4 @@ if (isBlockchainStateSetupEnabled()) {
   );
 }
 
-expect.extend({
-  ...jestExtendedMatchers,
-  toBeGreaterThan: (received, expected) => toBeGreaterThan.toBe(received, expected),
-  toBeLessThan: (received, expected) => toBeLessThan.toBe(received, expected),
-  toBeGreaterThanOrEqual: (received, expected) => toBeGreaterThanOrEqual.toBe(received, expected),
-  toBeLessThanOrEqual: (received, expected) => toBeLessThanOrEqual.toBe(received, expected),
-  toBeInRange: (received, min, max) => toBeInRange.toBe(received, min, max),
-  toBeBlake2b256Hash,
-  toBePoolBech32,
-  toBeDrepId,
-  toBeCurrentTimestamp,
-  toBeUnixTimestamp,
-  toBeAdaQuantity,
-  toBeAssetQuantity,
-  toBeEpochNumber,
-  toBeEpochSlotNumber,
-  toBeSlotNumber,
-  toBeAssetUnit,
-  confirmations,
-  toBeStakeAddress,
-  toBeCurrentBlockHeight,
-  toBeCurrentEpochNumber,
-  toBeNullableEpochNumber,
-});
+registerMatchers();

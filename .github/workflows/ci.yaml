@@ -29,6 +29,9 @@ jobs:
       - name: Check fixture wiring
         run: yarn check-fixture-wiring
 
+      - name: Check endpoint coverage
+        run: yarn check-endpoint-coverage
+
       - name: Test
         run: yarn test
         env:

@@ -73,6 +73,17 @@ export default [
 
 ---
 
+## Endpoint coverage check
+
+`yarn check-endpoint-coverage` loads every fixture of every network, resolves each fixture
+endpoint to its `@blockfrost/openapi` route with the same matcher the test runner uses, and
+fails when a route has no fixture on some network. It runs in CI next to `check-fixture-wiring`.
+
+- Routes without fixtures in this repository are listed in `SKIPPED_ROUTES` in
+  `scripts/check-endpoint-coverage.ts`: the private API surface (IPFS, metrics, mempool) is
+  covered by the internal test suite, and nut.link is no longer supported.
+- `yarn check-endpoint-coverage --table` prints the number of fixtures per route and network.
+
 ## Endpoint Allowlist Configuration
 
 There is `endpoints-allowlist.json` file in the project root.

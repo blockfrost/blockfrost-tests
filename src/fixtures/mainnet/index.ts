@@ -48,9 +48,6 @@ import metadataTxsLabelsLabel from './metadata/txs-labels-label.js';
 import metadataTxsLabelsLabelCbor from './metadata/txs-labels-label-cbor.js';
 import networkRoot from './network/root.js';
 import networkEras from './network/eras.js';
-import nutlinkAddress from './nutlink/address.js';
-import nutlinkAddressTickers from './nutlink/address-tickers.js';
-import nutlinkAddressTickersTicker from './nutlink/address-tickers-ticker.js';
 import poolsExtended from './pools/extended.js';
 import poolsPoolId from './pools/pool-id.js';
 import poolsPoolIdBlocks from './pools/pool-id-blocks.js';
@@ -58,6 +55,7 @@ import poolsPoolIdHistory from './pools/pool-id-history.js';
 import poolsPoolIdMetadata from './pools/pool-id-metadata.js';
 import poolsPoolIdRelays from './pools/pool-id-relays.js';
 import poolsPoolIdUpdates from './pools/pool-id-updates.js';
+import poolsPoolIdVotes from './pools/pool-id-votes.js';
 import poolsRetired from './pools/retired.js';
 import poolsRetiring from './pools/retiring.js';
 import poolsRoot from './pools/root.js';
@@ -98,6 +96,7 @@ import governanceDrepUpdates from './governance/dreps/drep-updates.js';
 import governanceDrepVotes from './governance/dreps/drep-votes.js';
 import governanceProposalsHashIndexMetadata from './governance/proposals/hash-cert-index-metadata.js';
 import governanceProposalsHashIndexParameters from './governance/proposals/hash-cert-index-parameters.js';
+import governanceProposalsHashIndexWithdrawals from './governance/proposals/hash-cert-index-withdrawals.js';
 
 import governanceProposals from './governance/proposals/index.js';
 import governanceProposalsHashIndex from './governance/proposals/hash-cert-index.js';
@@ -164,7 +163,6 @@ export const mainnetFixtures = {
   ledger: [...ledgerRoot],
   metadata: [...metadataTxsLabelsLabelCbor, ...metadataTxsLabelsLabel, ...metadataTxsLabels],
   network: [...networkRoot, ...networkEras],
-  nutlink: [...nutlinkAddressTickers, ...nutlinkAddressTickersTicker, ...nutlinkAddress],
   pools: [
     ...poolsExtended,
     ...poolsPoolId,
@@ -173,6 +171,7 @@ export const mainnetFixtures = {
     ...poolsPoolIdMetadata,
     ...poolsPoolIdRelays,
     ...poolsPoolIdUpdates,
+    ...poolsPoolIdVotes,
     ...poolsRetired,
     ...poolsRoot,
     ...poolsRetiring,
@@ -200,6 +199,7 @@ export const mainnetFixtures = {
     ...governanceProposalsHashIndexVotes,
     ...governanceProposalsHashIndexMetadata,
     ...governanceProposalsHashIndexParameters,
+    ...governanceProposalsHashIndexWithdrawals,
     ...governanceCommittee,
     ...governanceCommitteeVotes,
     ...governanceCommitteeCcIdVotes,
