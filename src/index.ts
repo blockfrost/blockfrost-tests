@@ -17,7 +17,8 @@ const apiEndpointsKeys = Object.keys(openApiJsonSchema);
 type NormalizedRoute = { pattern: string; segments: string[] };
 
 const isParamSegment = (segment: string): boolean => segment.startsWith(':');
-const toSegments = (normalized: string): string[] => normalized.split('/').filter(Boolean);
+const toSegments = (normalized: string): string[] =>
+  normalized === '/' ? [] : normalized.slice(1).split('/');
 
 const normalizedRoutes: NormalizedRoute[] = apiEndpointsKeys.map(key => {
   const pattern = normalizePath(key);
@@ -65,8 +66,8 @@ const resolveRoute = (normalizedUrl: string): string | null => {
   for (const route of normalizedRoutes) {
     if (route.segments.length !== urlSegments.length) continue;
 
-    const matches = route.segments.every(
-      (segment, i) => isParamSegment(segment) || segment === urlSegments[i],
+    const matches = route.segments.every((segment, i) =>
+      isParamSegment(segment) ? urlSegments[i].length > 0 : segment === urlSegments[i],
     );
 
     if (!matches) continue;
@@ -87,11 +88,14 @@ export const isUrlMatch = (urlParameter: string, allowlistPattern: string): bool
   try {
     const normalizedUrl = normalizePath(urlParameter);
     const normalizedPattern = normalizePath(allowlistPattern);
+    const resolvedRoute = resolveRoute(normalizedUrl);
 
-    // The exact comparison covers routes without parameters. It also preserves the match between two empty strings.
+    if (resolvedRoute === null) return false;
+
+    // The exact comparison applies only to concrete URLs that resolve to an OpenAPI route.
     if (normalizedUrl === normalizedPattern) return true;
 
-    return resolveRoute(normalizedUrl) === normalizedPattern;
+    return resolvedRoute === normalizedPattern;
   } catch {
     return false;
   }
