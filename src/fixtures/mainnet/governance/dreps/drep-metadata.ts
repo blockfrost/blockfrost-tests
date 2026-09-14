@@ -231,10 +231,11 @@ export default [
       bytes: null,
       error: {
         code: 'HTTP_RESPONSE_ERROR',
-        message: expect.stringContaining(
-          // Only the content-type prefix — adatree.io's charset suffix has changed over time
-          'Error Offchain Voting Anchor: HTTP Response error from https://adatree.io: expected JSON, but got : "text/html',
-        ),
+        // The exact text depends on how adatree.io fails (text/html body vs.
+        // connection failure) and, since the backend falls back to IPFS gateways,
+        // on each gateway's status at request time. Only the prefix and the
+        // anchor URL are stable.
+        message: expect.stringMatching(/^Error Offchain Voting Anchor: .*https:\/\/adatree\.io/),
       },
     },
   },
