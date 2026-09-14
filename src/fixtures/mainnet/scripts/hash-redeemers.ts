@@ -62,6 +62,9 @@ export default [
     // history with order=asc&count — those never change.
     id: 'scripts-hash-redeemers-reward-purpose_2f6ab7e34e91',
     testName: 'scripts/:hash/redeemers reward purpose',
+    // the redeemer history query for this script takes ~19 s on mainnet
+    // backends, which is over the 15 s default test timeout.
+    customTimeout: 30_000,
     endpoints: [
       'scripts/56661cf4ade72946ede31a3f406950dcd4b6864310e3f2a2dec9e1dd/redeemers?order=asc&count=3',
     ],
