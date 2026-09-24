@@ -81,3 +81,52 @@ export const error_400_cert_index = {
   message: 'params/cert_index must be integer',
   status_code: 400,
 };
+
+export const error_400_slot = {
+  error: 'Bad Request',
+  message: 'Missing, out of range or malformed slot_number.',
+  status_code: 400,
+};
+
+export const error_400_label = {
+  error: 'Bad Request',
+  message: 'Missing, out of range or malformed label.',
+  status_code: 400,
+};
+
+export const error_400_drep_id = {
+  error: 'Bad Request',
+  message: 'Invalid or malformed drep id.',
+  status_code: 400,
+};
+
+export const error_400_cc_id = {
+  error: 'Bad Request',
+  message: 'Invalid or malformed cc credential id.',
+  status_code: 400,
+};
+
+export const error_400_xpub = {
+  error: 'Bad Request',
+  message: 'Invalid or malformed xpub format. Has to be hex of length 128.',
+  status_code: 400,
+};
+
+export const error_400_xpub_role = {
+  error: 'Bad Request',
+  message: 'Missing, out of range or malformed role.',
+  status_code: 400,
+};
+
+export const error_400_xpub_index = {
+  error: 'Bad Request',
+  message: 'Missing, out of range or malformed index.',
+  status_code: 400,
+};
+
+// Fastify schema validation of an `integer` path parameter (e.g. `epochs/abc`).
+export const error_400_integer_param = (param: string) => ({
+  error: 'Bad Request',
+  message: `params/${param} must be integer`,
+  status_code: 400,
+});

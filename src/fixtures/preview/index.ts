@@ -1,3 +1,4 @@
+import accountsErrors from './accounts/_errors.js';
 import accountsStakeAddress from './accounts/stake-address.js';
 import accountStakeAddressAddresses from './accounts/stake-address-addresses.js';
 import accountsStakeAddressAddressesAssets from './accounts/stake-address-addresses-assets.js';
@@ -11,6 +12,7 @@ import accountsStakeAddressMirs from './accounts/stake-address-mirs.js';
 import accountsStakeAddressWithdrawals from './accounts/stake-address-withdrawals.js';
 import accountStakeAddressTransactions from './accounts/stake-address-transactions.js';
 
+import addressesErrors from './addresses/_errors.js';
 import address from './addresses/address.js';
 import addressExtended from './addresses/address-extended.js';
 import addressTotal from './addresses/address-total.js';
@@ -127,6 +129,7 @@ export const previewFixtures = {
     ...accountsStakeAddressMirs,
     ...accountsStakeAddressWithdrawals,
     ...accountStakeAddressTransactions,
+    ...accountsErrors,
   ],
   addresses: [
     ...address,
@@ -136,6 +139,7 @@ export const previewFixtures = {
     ...addressTxs,
     ...addressUtxosAsset,
     ...addressUtxos,
+    ...addressesErrors,
   ],
   assets: [
     ...asset,

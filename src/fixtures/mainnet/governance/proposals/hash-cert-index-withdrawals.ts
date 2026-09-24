@@ -32,8 +32,14 @@ const paginationFixtures = getPaginationFixtures(
   'governance/proposals/60ed6ab43c840ff888a8af30a1ed27b41e9f4a91a89822b2b63d1bfc52aeec45/0/withdrawals',
 );
 
+// Same checks through the CIP-129 gov_action id route.
+const govActionPaginationFixtures = getPaginationFixtures(
+  'governance/proposals/gov_action1vrkk4dpuss8l3z9g4uc2rmf8ks0f7j534zvz9v4k85dlc54wa3zsqq68rx0/withdrawals',
+);
+
 export default [
   ...paginationFixtures,
+  ...govActionPaginationFixtures,
   {
     id: 'governance-proposal-withdrawals_d8ef6cd3efd4',
     testName: 'governance proposal withdrawals',
