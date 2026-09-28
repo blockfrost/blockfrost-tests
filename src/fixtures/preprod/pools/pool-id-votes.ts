@@ -23,6 +23,21 @@ const POOL_VOTES = [
   },
 ];
 
+// pool1tlsgd…slt4 retired in epoch 233, and a retired pool cannot vote, so its
+// two votes are pinned in full and in both orders.
+const RETIRED_POOL_VOTES = [
+  {
+    tx_hash: 'a9514758cc47dab79c1ed2a7647d0fee898be32f14928266b9e5f84d38de91cf',
+    cert_index: 0,
+    vote: 'yes',
+  },
+  {
+    tx_hash: 'fc10dae94e68e770494b894b1740064c5de3287b77bc878ce5d091702ad3ab93',
+    cert_index: 0,
+    vote: 'yes',
+  },
+];
+
 const paginationFixtures = getPaginationFixtures(
   'pools/pool1yzwxetclm2l48xzvmnwwf6x48a5qze0nx4t6glz5k8wk50xl006/votes',
 );
@@ -68,6 +83,38 @@ export default [
         vote: 'yes',
       },
     ],
+  },
+  {
+    id: 'pools-pool-id-votes-retired-pool-with-a-closed-vote-history_ba50d6029683',
+    testName: 'pools/:pool_id/votes - retired pool with a closed vote history',
+    endpoints: [
+      'pools/pool1tlsgd05ayp6f48je6m9wdlcal8dw9c8wj4uchkp6zsl0uuvslt4/votes',
+      'pools/5fe086be9d20749a9e59d6cae6ff1df9dae2e0ee95798bd83a143efe/votes',
+    ],
+    response: RETIRED_POOL_VOTES,
+  },
+  {
+    id: 'pools-pool-id-votes-desc_0248ce007c47',
+    testName: 'pools/:pool_id/votes - desc',
+    endpoints: [
+      'pools/pool1tlsgd05ayp6f48je6m9wdlcal8dw9c8wj4uchkp6zsl0uuvslt4/votes?order=desc',
+      'pools/5fe086be9d20749a9e59d6cae6ff1df9dae2e0ee95798bd83a143efe/votes?order=desc',
+    ],
+    response: [...RETIRED_POOL_VOTES].reverse(),
+  },
+  {
+    id: 'pools-pool-id-votes-desc-second-page_b35a364c58af',
+    testName: 'pools/:pool_id/votes - desc second page',
+    endpoints: [
+      'pools/pool1tlsgd05ayp6f48je6m9wdlcal8dw9c8wj4uchkp6zsl0uuvslt4/votes?order=desc&count=1&page=2',
+    ],
+    response: RETIRED_POOL_VOTES.slice(0, 1),
+  },
+  {
+    id: 'pools-pool-id-votes-page-past-the-end_94bd5fb64307',
+    testName: 'pools/:pool_id/votes - page past the end',
+    endpoints: ['pools/pool1tlsgd05ayp6f48je6m9wdlcal8dw9c8wj4uchkp6zsl0uuvslt4/votes?page=2'],
+    response: [],
   },
   {
     // Retired in epoch 79, long before Conway, so it never voted and never will.

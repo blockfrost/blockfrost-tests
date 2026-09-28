@@ -22,6 +22,27 @@ const RETIRED_POOL_VOTES = [
   },
 ];
 
+// pool18pnja…zq7g retired in epoch 656. Its second tx votes on two proposals,
+// and cert_index counts the votes of the pool inside that tx in the order of
+// their governance action ids.
+const TWO_VOTES_IN_ONE_TX = [
+  {
+    tx_hash: 'd49328f672108a0ccf6c965b54c179f8b114eca43b7ce53b31ce5250ba58476e',
+    cert_index: 0,
+    vote: 'yes',
+  },
+  {
+    tx_hash: '98930fa509a2f1105549731f588b7111c692555a155eb460a180c80c637dd90b',
+    cert_index: 0,
+    vote: 'abstain',
+  },
+  {
+    tx_hash: '98930fa509a2f1105549731f588b7111c692555a155eb460a180c80c637dd90b',
+    cert_index: 1,
+    vote: 'yes',
+  },
+];
+
 const paginationFixtures = getPaginationFixtures(
   'pools/pool1f4rs6v0cpsqa09ueddp6hhl8xwdwtdqglvcuce26srxdwmzxl6v/votes',
 );
@@ -66,6 +87,25 @@ export default [
     endpoints: ['pools/pool1f4rs6v0cpsqa09ueddp6hhl8xwdwtdqglvcuce26srxdwmzxl6v/votes?page=2'],
     response: [],
   },
+  {
+    id: 'pools-pool-id-votes-two-votes-in-one-tx_092dc161100a',
+    testName: 'pools/:pool_id/votes - two votes in one tx',
+    endpoints: [
+      'pools/pool18pnja3z8vfkw3sj578xetj3ujhyp2vmljezjg5es290awqmzq7g/votes?count=3',
+      'pools/38672ec447626ce8c254f1cd95ca3c95c815337f9645245330515fd7/votes?count=3',
+    ],
+    response: TWO_VOTES_IN_ONE_TX,
+  },
+  {
+    // desc reverses the votes inside the tx as well.
+    id: 'pools-pool-id-votes-two-votes-in-one-tx-desc_53ab023c106c',
+    testName: 'pools/:pool_id/votes - two votes in one tx, desc',
+    endpoints: [
+      'pools/pool18pnja3z8vfkw3sj578xetj3ujhyp2vmljezjg5es290awqmzq7g/votes?order=desc',
+      'pools/38672ec447626ce8c254f1cd95ca3c95c815337f9645245330515fd7/votes?order=desc',
+    ],
+    response: [...TWO_VOTES_IN_ONE_TX].reverse(),
+  },
   // Active pools can still vote, so only the oldest rows (ascending, with a
   // count) are pinned: a new vote lands at the end and leaves them untouched.
   {
@@ -85,6 +125,44 @@ export default [
         tx_hash: 'fd1b59ce346fc335a4847b385bb314123c9eef98ed5d101eb5f7323d0f882115',
         cert_index: 0,
         vote: 'yes',
+      },
+    ],
+  },
+  // The last three rows of this page come from the txs at positions 4, 5 and 6
+  // of block 13778740. They follow the order of the txs in the block, not the
+  // order of their hashes.
+  {
+    id: 'pools-pool-id-votes-votes-from-three-txs-of-one-block_58ec87fee7e5',
+    testName: 'pools/:pool_id/votes - votes from three txs of one block',
+    endpoints: [
+      'pools/pool13hxlxd6qa68fmfhrvvmasa0mjg30tj9p5v2lmgmgsmrp2rgzkfp/votes?count=5&page=2',
+      'pools/8dcdf33740ee8e9da6e36337d875fb9222f5c8a1a315fda36886c615/votes?count=5&page=2',
+    ],
+    response: [
+      {
+        tx_hash: 'd9e0b11a31f9caf794a687901bc1075bd8a82c0537f4ee859d43a22d20647e81',
+        cert_index: 0,
+        vote: 'abstain',
+      },
+      {
+        tx_hash: 'eeddd600a52c6ad1e4cef87e263b78c4d7a1c126047f9a72d08f6ef742d21448',
+        cert_index: 0,
+        vote: 'yes',
+      },
+      {
+        tx_hash: 'cac3881e0c145b47bf7949800c86b5c11dbf2aab39f844116287bc634a252f73',
+        cert_index: 0,
+        vote: 'no',
+      },
+      {
+        tx_hash: 'a36fec4c7ebb3a64aa8f93f6ba1771366df4b1df07d2b503e7de7cf41aa132ed',
+        cert_index: 0,
+        vote: 'no',
+      },
+      {
+        tx_hash: '3b44e1084178d214e2b661d0f00d4cce3dc859ac9c8dd578f42ea2a8fd7b264a',
+        cert_index: 0,
+        vote: 'no',
       },
     ],
   },

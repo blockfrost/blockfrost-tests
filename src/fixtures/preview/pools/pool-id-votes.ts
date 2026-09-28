@@ -28,6 +28,21 @@ const POOL_VOTES = [
   },
 ];
 
+// pool12w39x…j2pm retired in epoch 1215, and a retired pool cannot vote, so its
+// two votes are pinned in full and in both orders.
+const RETIRED_POOL_VOTES = [
+  {
+    tx_hash: '299d35657ad6c89d2d58a9173bf5d8c83080546bb5529807fb14d064376a901d',
+    cert_index: 0,
+    vote: 'yes',
+  },
+  {
+    tx_hash: '2fb3e888e730a139b357787ea47145f15ead6d2c7813682de8d49647dfc65b3d',
+    cert_index: 0,
+    vote: 'yes',
+  },
+];
+
 const paginationFixtures = getPaginationFixtures(
   'pools/pool1mfc42za8tj74zc66ez3slwtq4mumdl7yrylaxajd5xugujmhd0c/votes',
 );
@@ -56,6 +71,38 @@ export default [
       'pools/pool1mfc42za8tj74zc66ez3slwtq4mumdl7yrylaxajd5xugujmhd0c/votes?count=2&page=2',
     ],
     response: POOL_VOTES.slice(2, 4),
+  },
+  {
+    id: 'pools-pool-id-votes-retired-pool-with-a-closed-vote-history_410bca1ab925',
+    testName: 'pools/:pool_id/votes - retired pool with a closed vote history',
+    endpoints: [
+      'pools/pool12w39xy6d6kzy7lrzl3y3n06h2fv4mjvpl7ruy6ckc35vgx8j2pm/votes',
+      'pools/53a253134dd5844f7c62fc4919bf5752595dc981ff87c26b16c468c4/votes',
+    ],
+    response: RETIRED_POOL_VOTES,
+  },
+  {
+    id: 'pools-pool-id-votes-desc_e54aede5f91b',
+    testName: 'pools/:pool_id/votes - desc',
+    endpoints: [
+      'pools/pool12w39xy6d6kzy7lrzl3y3n06h2fv4mjvpl7ruy6ckc35vgx8j2pm/votes?order=desc',
+      'pools/53a253134dd5844f7c62fc4919bf5752595dc981ff87c26b16c468c4/votes?order=desc',
+    ],
+    response: [...RETIRED_POOL_VOTES].reverse(),
+  },
+  {
+    id: 'pools-pool-id-votes-desc-second-page_eca0a7974423',
+    testName: 'pools/:pool_id/votes - desc second page',
+    endpoints: [
+      'pools/pool12w39xy6d6kzy7lrzl3y3n06h2fv4mjvpl7ruy6ckc35vgx8j2pm/votes?order=desc&count=1&page=2',
+    ],
+    response: RETIRED_POOL_VOTES.slice(0, 1),
+  },
+  {
+    id: 'pools-pool-id-votes-page-past-the-end_2ce3b0a8fbf5',
+    testName: 'pools/:pool_id/votes - page past the end',
+    endpoints: ['pools/pool12w39xy6d6kzy7lrzl3y3n06h2fv4mjvpl7ruy6ckc35vgx8j2pm/votes?page=2'],
+    response: [],
   },
   {
     // Retired in epoch 451, so it never voted and never will.
