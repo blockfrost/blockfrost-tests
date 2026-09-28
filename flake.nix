@@ -1,9 +1,9 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
   outputs = { self, nixpkgs }:
     let
-      forAllSystems = nixpkgs.lib.genAttrs [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
+      forAllSystems = nixpkgs.lib.genAttrs [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
       networks = [ "mainnet" "preprod" "preview" ];
     in
     {
@@ -32,8 +32,10 @@
             };
 
             installPhase = ''
-              mkdir -p $out/lib
-              cp -r . $out/lib/blockfrost-tests
+              # only what vitest needs at runtime; skips .yarn/cache (duplicate of the offline cache), .github, flake.*, ...
+              mkdir -p $out/lib/blockfrost-tests
+              cp -r node_modules src endpoints-allowlist.json package.json tsconfig.json vitest.config.integration.ts \
+                $out/lib/blockfrost-tests/
             '';
           });
 
@@ -47,7 +49,8 @@
               --configLoader runner --no-cache "$@"
           '';
         in
-        builtins.listToAttrs (map (n: { name = "blockfrost-tests-${n}"; value = runner n; }) networks)
+        { blockfrost-tests = tests; default = tests; }
+        // builtins.listToAttrs (map (n: { name = "blockfrost-tests-${n}"; value = runner n; }) networks)
       );
 
       devShells = forAllSystems (system:
