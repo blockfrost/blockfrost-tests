@@ -38,10 +38,13 @@
           });
 
           runner = network: pkgs.writeShellScriptBin "blockfrost-tests-${network}" ''
-            cd ${tests}/lib/blockfrost-tests
             export NETWORK=${network}
+            # keep the caller's cwd and preload dotenv so ./.env is honoured; --root points vitest at the store copy
             # store is read-only: --configLoader runner skips vite's temp config bundle, --no-cache skips node_modules/.vite
-            exec ${nodejs}/bin/node node_modules/vitest/vitest.mjs run -c ./vitest.config.integration.ts --configLoader runner --no-cache "$@"
+            exec ${nodejs}/bin/node -r ${tests}/lib/blockfrost-tests/node_modules/dotenv/config \
+              ${tests}/lib/blockfrost-tests/node_modules/vitest/vitest.mjs run \
+              --root ${tests}/lib/blockfrost-tests -c ${tests}/lib/blockfrost-tests/vitest.config.integration.ts \
+              --configLoader runner --no-cache "$@"
           '';
         in
         builtins.listToAttrs (map (n: { name = "blockfrost-tests-${n}"; value = runner n; }) networks)
