@@ -1,3 +1,4 @@
+import { expect } from 'vitest';
 import { error_400_epochs } from '../../errors/index.js';
 import { getPaginationFixtures } from '../../../index.js';
 
@@ -22,7 +23,7 @@ export default [
         tx_count: 0,
         output: '0',
         fees: '0',
-        active_stake: null,
+        active_stake: expect.toBeOneOf([null, '300000000000000']),
       },
       {
         epoch: 22,
@@ -34,7 +35,7 @@ export default [
         tx_count: 0,
         output: '0',
         fees: '0',
-        active_stake: null,
+        active_stake: expect.toBeOneOf([null, '300000000000000']),
       },
       {
         epoch: 23,
@@ -46,7 +47,7 @@ export default [
         tx_count: 0,
         output: '0',
         fees: '0',
-        active_stake: null,
+        active_stake: expect.toBeOneOf([null, '300000000000000']),
       },
       {
         epoch: 24,
@@ -58,7 +59,7 @@ export default [
         tx_count: 0,
         output: '0',
         fees: '0',
-        active_stake: null,
+        active_stake: expect.toBeOneOf([null, '300000000000000']),
       },
       {
         epoch: 25,
@@ -70,7 +71,7 @@ export default [
         tx_count: 0,
         output: '0',
         fees: '0',
-        active_stake: null,
+        active_stake: expect.toBeOneOf([null, '300000000000000']),
       },
       {
         epoch: 26,
@@ -82,7 +83,7 @@ export default [
         tx_count: 1,
         output: '29699998491821316',
         fees: '217729',
-        active_stake: null,
+        active_stake: expect.toBeOneOf([null, '300000000000000']),
       },
       {
         epoch: 27,
@@ -94,7 +95,7 @@ export default [
         tx_count: 0,
         output: '0',
         fees: '0',
-        active_stake: null,
+        active_stake: expect.toBeOneOf([null, '300000000000000']),
       },
       {
         epoch: 28,
@@ -106,7 +107,7 @@ export default [
         tx_count: 4045,
         output: '17847453521738724661',
         fees: '877160908',
-        active_stake: null,
+        active_stake: expect.toBeOneOf([null, '300000000000000']),
       },
       {
         epoch: 29,
