@@ -157,7 +157,9 @@ try {
   } catch (parseError: unknown) {
     const message = parseError instanceof Error ? parseError.message : String(parseError);
 
-    throw new Error(`endpoints-allowlist.json is not a valid json: ${message}`);
+    throw new Error(`endpoints-allowlist.json is not a valid json: ${message}`, {
+      cause: parseError,
+    });
   }
 
   endpointsAllowlist = parsed.map(endpoint => {
@@ -179,7 +181,7 @@ try {
 } catch (error) {
   const message = error instanceof Error ? error.message : String(error);
 
-  throw new Error(`Error loading endpoints-allowlist.json: ${message}`);
+  throw new Error(`Error loading endpoints-allowlist.json: ${message}`, { cause: error });
 }
 
 export type IgnoreRule = {
@@ -219,7 +221,9 @@ const loadIgnorelist = (filePath: string): IgnoreRule[] => {
   } catch (parseError: unknown) {
     const message = parseError instanceof Error ? parseError.message : String(parseError);
 
-    throw new Error(`${path.basename(filePath)} is not a valid json: ${message}`);
+    throw new Error(`${path.basename(filePath)} is not a valid json: ${message}`, {
+      cause: parseError,
+    });
   }
 };
 

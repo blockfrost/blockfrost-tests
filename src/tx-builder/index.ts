@@ -105,7 +105,9 @@ export const waitForTx = async (txHash: string, blockfrostClient: BlockFrostAPI)
             `Timeout: Tx ${txHash} not found on blockchain within ${timeoutS} seconds.`,
             error,
           );
-          throw new Error(`Tx not found on blockchain within ${timeoutS} seconds.`);
+          throw new Error(`Tx not found on blockchain within ${timeoutS} seconds.`, {
+            cause: error,
+          });
         }
       } else {
         // Unexpected error
