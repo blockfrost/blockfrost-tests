@@ -1,6 +1,12 @@
 import { expect } from 'vitest';
+import { getPaginationFixtures } from '../../../../index.js';
+
+const paginationFixtures = getPaginationFixtures(
+  'governance/dreps/drep14pjm8ytt682wkp4jcegdj2yerkcy9a20xevvp7udlcd0ggjxdud/delegators',
+);
 
 export default [
+  ...paginationFixtures,
   {
     id: 'governance-drep-delegators_0bc3609f7df7',
     testName: 'governance drep delegators',
