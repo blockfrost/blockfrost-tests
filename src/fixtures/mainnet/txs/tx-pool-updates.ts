@@ -1,3 +1,12 @@
+import { expect } from 'vitest';
+
+// dbsync 13.7.0.3 no longer returns off-chain data for some historical pool updates
+const optionalOffchainMetadata = (metadata: Record<string, string | null>) =>
+  expect.toBeOneOf([
+    metadata,
+    { ...metadata, ticker: null, name: null, description: null, homepage: null },
+  ]);
+
 export default [
   {
     id: 'txs-tx-pool-updates-generic-shelley-with-pool-certs_498bd3a6909a',
@@ -81,14 +90,14 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1uynmjul7hqpp0mar79e5v0dduhdkxjewqdvr7w9z8p6hmqctf87q7',
         owners: ['stake1u83tppelvkswasl9e2fl0mw7ref9z2z2g0e0dcccs9z8zsc0w4zaf'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://planetstake.s3.eu-west-2.amazonaws.com/STAKE1-004.json',
           hash: 'fa95abfe646b85e194e86a202d099a1c6bb93f8ac6c30e70c59c03c055d4433e',
           homepage: 'https://planetstake.com',
           name: '🌍 PLANETSTAKE 1',
           description: '⭐⭐⭐⭐⭐ Please Delegate to PlanetStake 3',
           ticker: 'STAKE',
-        },
+        }),
         relays: [
           { ipv4: null, ipv6: null, dns: 'relays.planetstake.com', dns_srv: null, port: 3001 },
         ],
@@ -141,7 +150,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1u80ltwt358r7kv002m4g5jxn6x3skf970nmt897qz8qszecs6qv9f',
         owners: ['stake1u99j39m84g2trc7hpveuufsle3n8dfurua026jww7g600xqcl03l0'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG2.json',
           hash: '04faac1dce6c68b6bdf406eb261fbc6f57ce0baa9ab039d8e3bb1de8f903f092',
           ticker: 'IOG2',
@@ -149,7 +158,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -170,7 +179,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1uxs3crcc96zslc2xus3v9j2rgzwrxvt6pdgzu3we4whvjxgg4vfca',
         owners: ['stake1u9vqalwm30jksz0n84uz340e3pacrkgct5adt47rs4ejmqgstwpj8'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG3.json',
           hash: '47d5ad9a718bfd40892ab89eb46b34ef2b1ebce9ebba6f5410a1ab96284771ed',
           ticker: 'IOG3',
@@ -178,7 +187,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -199,7 +208,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1u88nna5tmx6shmum40y9s3d2w6vgd8j5r3gs8n027nd4l3ctqwetj',
         owners: ['stake1uxnknpmvmqz9f9885kme32mjtujha47tdjr3uyqcn4u4e5gk9we3z'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG4.json',
           hash: '540bdf0957350f1bb2da583790729e4d4845ce9b4ef47f9e37023744ca3f7278',
           ticker: 'IOG4',
@@ -207,7 +216,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -228,7 +237,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1u98qeq562rulfrn7ndvqughnse26k0vr2le3rg6gz4d93sgh9vhrk',
         owners: ['stake1u9kjekuk620nculrk9zx76vqlq7lpkutggtvtnawhs7lpvcq7k2ep'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG5.json',
           hash: '35b199f18bd26b2c42cadbafc3bc886a6828e46b05d46def2d7a7eda643800b2',
           ticker: 'IOG5',
@@ -236,7 +245,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -257,7 +266,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1uyy36x2h7rchrrpc06gsspntvvml2jnfjxne0e6yljdykdc8kdfen',
         owners: ['stake1u970ge3nws9eyd5uf8hknjtxxqect3ec54xcgjl8fymy53s07lklz'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG6.json',
           hash: '57baf2d1e1ef927ce7445db9a440d610e4b09e54d68d2fff80260ad6799d0046',
           ticker: 'IOG6',
@@ -265,7 +274,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -286,7 +295,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1u97vdsdmrm4slrxjlltghy547xkv3hkeu8rtkrv4ke3sw9sxwmxal',
         owners: ['stake1uxguhhgns04395zyjwqrffpdej5kh0w2820a7g9td49d8dc6wqmmh'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG7.json',
           hash: '820adf4b5f3328b3fbee956be90cbc38546c12d47905d4abc1174ce0ba402927',
           ticker: 'IOG7',
@@ -294,7 +303,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -315,7 +324,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1uxyrtpsfq2952x4zcyxgtj89eptf2jay4zjlk98zw0ynrjcyt3ymv',
         owners: ['stake1uyyvnuxcm7pgren2upnx8gkam7d2sa44esrkg8k4peel6qgjxslhm'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG8.json',
           hash: '812ecda7ee2f3c3e1feaab5144e6ef9089d4749c1be57cd1dea118e452df12c4',
           ticker: 'IOG8',
@@ -323,7 +332,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -344,7 +353,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1u98tt35j56umllsn3nu0rdj9l00v7tv9zd0hramuh2sfnpq2a54vy',
         owners: ['stake1uyjjaafuqwe9ntwczghqx9lrtr65pxrz5a5gd4ta65vpx8glvmpwa'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG9.json',
           hash: '984ef6e5b7fe9538a0d82eebc83cc605e9da5964a731403a94ffd2da9653ebb2',
           ticker: 'IOG9',
@@ -352,7 +361,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -373,7 +382,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1uym6297nf5sq8rl26uak2u5rzevmeq8jvpxwzmzh25cl9wsel4e4t',
         owners: ['stake1uywmuhh5sqnv6kgfypeumhzrzcmc7ngfu0aule5nz4wh27g6zp9ce'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG10.json',
           hash: '31b15adb7317a833fac173f372ef8f038a98e4bfca2320e241e79f1ab412ed0a',
           ticker: 'IOG10',
@@ -381,7 +390,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -402,7 +411,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1uxlr0yu4qjtuhx8f7wtfp2pqg2hc2x36tfxellzcyuy7yfg2c4mfj',
         owners: ['stake1u8au2k5sjwsch32mdv3whga6atg6xevz7l8uejyx09lmgaq089fvp'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG11.json',
           hash: '5984d71c7949ab4a89da50d457f720842c957dfafe0f7bdfe2d6c868e9739b31',
           ticker: 'IOG11',
@@ -410,7 +419,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -431,7 +440,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1uxyllmwzckxd58ww3cmq76ckj3kn8n6g6l5fyj2lmd5egfgjj93ml',
         owners: ['stake1ux9gvymwc8525yesr70wce3n9a2tvg725c296a977qdfw0cml5cle'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG12.json',
           hash: '93c1ad4e40b477890c5bcd48253788b879e7ca682bf0027fae917fffb385ed22',
           ticker: 'IOG12',
@@ -439,7 +448,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -460,7 +469,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1uxkukp2hazjjcwspzcty4hh8a7tnkry30ufrs62rpe0s54qj7js8d',
         owners: ['stake1uxfgmnvftm5gkdnv5tedt9dylcxludgrgpewl5lehepq73gu6jxxa'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG13.json',
           hash: 'ef9ef183f64ed435501829756dd495beb25e4a8404a65e7823dded5e9f6a3446',
           ticker: 'IOG13',
@@ -468,7 +477,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -489,7 +498,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1u8s3rhujx895q38mye57axv8frr8v00hh7qg4q85hc6w8gs74yzrf',
         owners: ['stake1uyesn8nj5e6nv0tq8tgrjcg8x3ehvha8s35pqhtd2dtaerg6djuj5'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG14.json',
           hash: '404bc8481e58ed7a826b33fc3b891de884f4700e4d95e6b3c82165d4ccc87fa6',
           ticker: 'IOG14',
@@ -497,7 +506,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -518,7 +527,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1u8knsucj4ql6gexxzprzgydycp39aq7wqec2fcpj7788n8qgdr4je',
         owners: ['stake1u8ym9lxklycl2dc9p7p6av53j78x8y4dhktjqqsf7v67dlca8vmdl'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG15.json',
           hash: 'e3a3431a580f615f98c183bc4481ccdf3aa9671ce1be56ce90a67e9402e9722d',
           ticker: 'IOG15',
@@ -526,7 +535,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -547,7 +556,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1uxkffxtd3ws9pz5t36humw5aarqv0phzt8w0nnur9fl5mqcr9slez',
         owners: ['stake1uyy2afzr0kdxgyvtk2aqkma8y9kcuze4gefx025435y84pc9lwpd7'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG16.json',
           hash: '3cf7de0a890b69560e867cfd8714da5151870ff3f78b119b6c6769a7edf38771',
           ticker: 'IOG16',
@@ -555,7 +564,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -576,7 +585,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1u85sxxz4f6u69zg3hulpsqukk6l75ctsg8zgq2pggrhqacqzt2ns7',
         owners: ['stake1u9dekkf27mlyfysvlc2lkgpx7kzyqah6curxhwrefjnugssm4c49j'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG17.json',
           hash: '14f37b1c109bb57d5c9bb51594d58b8c0e3d1932bc2cad5db68f03fe4ed8bcc7',
           ticker: 'IOG17',
@@ -584,7 +593,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -605,7 +614,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1u9mxda8vjc5htq3pw6yl8r2pcuyrg0uax4jup5jv29g2dlckuj0q9',
         owners: ['stake1uxl9hs3lre43zyxl3zsfgwm5tlxg2e2mdz5tsjy4hdagc8gvykxnv'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG18.json',
           hash: '5af7d13447c535815f497f6259ffe8989674cfcf4b1b10e2202957b705b0489b',
           ticker: 'IOG18',
@@ -613,7 +622,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -634,7 +643,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1uyzku3s2wxu2ljhe6ykd9v9a8qkvn548nru7qnhjlj6s2ds8hz4mc',
         owners: ['stake1uyx2elg2gf20kxtprmkfxwdfmjpq0tylpwahgpxdzgy63lsjh9ada'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG19.json',
           hash: 'f10c6122814d047f51884bd4963e7ffbc0f8f02c8fda70f3c36c6826887bf32c',
           ticker: 'IOG19',
@@ -642,7 +651,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
@@ -663,7 +672,7 @@ export default [
         fixed_cost: '340000000',
         reward_account: 'stake1u8fpv84fvlscglyyaamj58ngcu4v9effttm49zw05d2aslq6jnzpj',
         owners: ['stake1uymf0aly0mz6898kupjrz96zl0t9jggwerdrqys24wv8w7qcdtdc8'],
-        metadata: {
+        metadata: optionalOffchainMetadata({
           url: 'https://pools.iohk.io/IOG20.json',
           hash: '71a65cb6d240a4938e9b4e3ee7e78ddbc652e8ae8ec532c8180aeb22be990d4b',
           ticker: 'IOG20',
@@ -671,7 +680,7 @@ export default [
           description:
             'Our mission is to provide economic identity to the billions of people who lack it. IOHK will not use the IOHK ticker.',
           homepage: 'https://iohk.io',
-        },
+        }),
         relays: [
           {
             ipv4: null,
