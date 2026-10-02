@@ -61,7 +61,9 @@ export default [
     response: [],
   },
   {
-    // The only vote of a DRep that deregistered and registered again.
+    // DRep A votes once, then deregisters and registers again. The
+    // deregistration removes the vote from the live proposal. This endpoint
+    // lists every vote that the DRep cast, so the vote stays in the list.
     id: 'governance-drep-votes-re-registered_43d88c54d35a',
     testName: 'governance drep votes re-registered',
     endpoints: [
@@ -80,8 +82,9 @@ export default [
     ],
   },
   {
-    // Two votes on the same proposal: one before and one after a
-    // re-registration.
+    // DRep B votes Yes, deregisters, registers again and votes Yes again on
+    // the same proposal. The list has both votes: the second vote does not
+    // replace the first, and the deregistrations remove neither.
     id: 'governance-drep-votes-re-registered-revote_4345dc287b52',
     testName: 'governance drep votes re-registered revote',
     endpoints: [

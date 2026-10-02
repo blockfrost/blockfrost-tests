@@ -105,9 +105,11 @@ export default [
     ],
   },
   {
-    // Two DReps vote Yes in one tx, and one of them votes Yes again later.
-    // Each vote stops counting when its DRep deregisters. Registering again
-    // does not restore it. New votes on this InfoAction go to the end of the
+    // DReps A and B vote Yes in one tx. Both then deregister and register
+    // again, and B votes Yes again before its second cycle. A deregistration
+    // removes the votes of the DRep from the proposal, and a new
+    // registration does not restore them. Thus, all three rows have
+    // `counted: false`. New votes on this InfoAction go to the end of the
     // list, so this first page does not change.
     id: 'governance-proposal-votes-removed-by-drep-deregistration_954439a6e5b8',
     testName: 'governance proposal votes removed by drep deregistration',

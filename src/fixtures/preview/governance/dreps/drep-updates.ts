@@ -69,8 +69,9 @@ export default [
     response: [],
   },
   {
-    // Registered in a tx with several certificates, then deregistered and
-    // registered again.
+    // DRep A registers in a tx with six certificates (A is certificate 2),
+    // then deregisters and registers again. The list has all three
+    // certificates in chain order, and only the registrations have a deposit.
     id: 'governance-drep-updates-re-registered_e8cebadef9b0',
     testName: 'governance drep updates re-registered',
     endpoints: [
@@ -99,7 +100,9 @@ export default [
     ],
   },
   {
-    // Two deregistration and registration cycles.
+    // DRep B registers in the same tx as DRep A (B is certificate 3), then
+    // deregisters and registers again two times. The list has all five
+    // certificates in chain order.
     id: 'governance-drep-updates-re-registered-twice_e3dde94ab6fa',
     testName: 'governance drep updates re-registered twice',
     endpoints: [
