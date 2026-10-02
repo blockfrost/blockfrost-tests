@@ -60,4 +60,54 @@ export default [
     endpoints: ['governance/dreps/drep_always_abstain/votes'],
     response: [],
   },
+  {
+    // DRep A votes once, then deregisters and registers again. The
+    // deregistration removes the vote from the live proposal. This endpoint
+    // lists every vote that the DRep cast, so the vote stays in the list.
+    id: 'governance-drep-votes-re-registered_43d88c54d35a',
+    testName: 'governance drep votes re-registered',
+    endpoints: [
+      'governance/dreps/drep1ar8me9dv5p0tykglpwm2jysn2n33sx2wvgg29jyjwerqszsww5z/votes',
+      'governance/dreps/drep1yt5vl0y44js9avjeru9md2gjzd2wxxqefe3ppgkgjfmyvzqgfnp8u/votes', // CIP129 id
+    ],
+    response: [
+      {
+        tx_hash: '578066572d2caf7108e35e46e0f8fa97655cf1753aaf1b19ef05abfc921f732a',
+        cert_index: 0,
+        proposal_id: 'gov_action12c6gg46nxdau90tux9rvvk3sjs9f7tuqm2ztuwypgtaeg80vg8jsq2q53zg',
+        proposal_tx_hash: '5634845753337bc2bd7c3146c65a30940a9f2f80da84be388142fb941dec41e5',
+        proposal_cert_index: 0,
+        vote: 'yes',
+      },
+    ],
+  },
+  {
+    // DRep B votes Yes, deregisters, registers again and votes Yes again on
+    // the same proposal. The list has both votes: the second vote does not
+    // replace the first, and the deregistrations remove neither.
+    id: 'governance-drep-votes-re-registered-revote_4345dc287b52',
+    testName: 'governance drep votes re-registered revote',
+    endpoints: [
+      'governance/dreps/drep1uydtqqqp8pzk6tm3uynejfgrmuqkcva4w2ys89tt4cxkkttjv89/votes',
+      'governance/dreps/drep1yts34vqqqyuy2mf0w8sj0xf9q00szmpnk4egjqu4dwhq66cewm6vn/votes', // CIP129 id
+    ],
+    response: [
+      {
+        tx_hash: '578066572d2caf7108e35e46e0f8fa97655cf1753aaf1b19ef05abfc921f732a',
+        cert_index: 0,
+        proposal_id: 'gov_action12c6gg46nxdau90tux9rvvk3sjs9f7tuqm2ztuwypgtaeg80vg8jsq2q53zg',
+        proposal_tx_hash: '5634845753337bc2bd7c3146c65a30940a9f2f80da84be388142fb941dec41e5',
+        proposal_cert_index: 0,
+        vote: 'yes',
+      },
+      {
+        tx_hash: '28bdee792caa6a3b6abfc721d47db511dd8fc288609de1408c48f93b98bba853',
+        cert_index: 0,
+        proposal_id: 'gov_action12c6gg46nxdau90tux9rvvk3sjs9f7tuqm2ztuwypgtaeg80vg8jsq2q53zg',
+        proposal_tx_hash: '5634845753337bc2bd7c3146c65a30940a9f2f80da84be388142fb941dec41e5',
+        proposal_cert_index: 0,
+        vote: 'yes',
+      },
+    ],
+  },
 ];

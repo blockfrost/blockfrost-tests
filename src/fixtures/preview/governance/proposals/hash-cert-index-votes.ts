@@ -104,4 +104,44 @@ export default [
       },
     ],
   },
+  {
+    // DReps A and B vote Yes in one tx. Both then deregister and register
+    // again, and B votes Yes again before its second cycle. A deregistration
+    // removes the votes of the DRep from the proposal, and a new
+    // registration does not restore them. Thus, all three rows have
+    // `counted: false`. New votes on this InfoAction go to the end of the
+    // list, so this first page does not change.
+    id: 'governance-proposal-votes-removed-by-drep-deregistration_954439a6e5b8',
+    testName: 'governance proposal votes removed by drep deregistration',
+    endpoints: [
+      'governance/proposals/5634845753337bc2bd7c3146c65a30940a9f2f80da84be388142fb941dec41e5/0/votes?count=3',
+      'governance/proposals/gov_action12c6gg46nxdau90tux9rvvk3sjs9f7tuqm2ztuwypgtaeg80vg8jsq2q53zg/votes?count=3',
+    ],
+    response: [
+      {
+        tx_hash: '578066572d2caf7108e35e46e0f8fa97655cf1753aaf1b19ef05abfc921f732a',
+        cert_index: 0,
+        voter_role: 'drep',
+        voter: 'drep1yts34vqqqyuy2mf0w8sj0xf9q00szmpnk4egjqu4dwhq66cewm6vn',
+        vote: 'yes',
+        counted: false,
+      },
+      {
+        tx_hash: '578066572d2caf7108e35e46e0f8fa97655cf1753aaf1b19ef05abfc921f732a',
+        cert_index: 0,
+        voter_role: 'drep',
+        voter: 'drep1yt5vl0y44js9avjeru9md2gjzd2wxxqefe3ppgkgjfmyvzqgfnp8u',
+        vote: 'yes',
+        counted: false,
+      },
+      {
+        tx_hash: '28bdee792caa6a3b6abfc721d47db511dd8fc288609de1408c48f93b98bba853',
+        cert_index: 0,
+        voter_role: 'drep',
+        voter: 'drep1yts34vqqqyuy2mf0w8sj0xf9q00szmpnk4egjqu4dwhq66cewm6vn',
+        vote: 'yes',
+        counted: false,
+      },
+    ],
+  },
 ];
