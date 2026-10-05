@@ -1,4 +1,11 @@
+import { getPaginationFixtures } from '../../../index.js';
+
+const paginationFixtures = getPaginationFixtures(
+  'accounts/stake_test17z3asy8j38jwwev9n856wl5z88fwsnmy5vt4endnalm6tsc33dwc2/registrations',
+);
+
 export default [
+  ...paginationFixtures,
   {
     id: 'accounts-stake-address-queryparams-generic-stake-address-registrations_c9b5fb1d4a3e',
     testName: 'accounts/:stake_address?queryparams generic stake address registrations',

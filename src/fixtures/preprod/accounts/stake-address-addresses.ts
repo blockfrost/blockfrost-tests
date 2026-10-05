@@ -1,4 +1,11 @@
+import { getPaginationFixtures } from '../../../index.js';
+
+const paginationFixtures = getPaginationFixtures(
+  'accounts/stake_test1uprndrzzjwcacy4kzt9u9y2uh8zusqkak6glcphxay472fszzgeyu/addresses',
+);
+
 export default [
+  ...paginationFixtures,
   {
     id: 'accounts-stake-address-generic-dormant-stake-address-with-one-address_5bcbaaea9e59',
     testName: 'accounts/:stake_address/addresses generic dormant stake address with one address',
