@@ -125,4 +125,62 @@ export default [
       },
     ],
   },
+  {
+    id: 'pools-pool-id-history-delegators-with-zero-stake-are-not-counted_02d681fcc372',
+    testName: 'pools/:pool_id/history - delegators with zero stake are not counted',
+    endpoints: [
+      'pools/pool1a7h89sr6ymj9g2a9tm6e6dddghl64tp39pj78f6cah5ewgd4px0/history?count=1&page=140',
+      'pools/efae72c07a26e4542ba55ef59d35ad45ffaaac312865e3a758ede997/history?count=1&page=140&order=asc',
+    ],
+    response: [
+      {
+        epoch: 148,
+        blocks: 76,
+        active_stake: '2313697480579',
+        active_size: 0.01584348420587366,
+        delegators_count: 23,
+        rewards: '2105343191',
+        fees: '516534319',
+      },
+    ],
+  },
+  {
+    id: 'pools-pool-id-history-rewards-forfeited-by-a-deregistered-delegator-are-not-counted_35d1abf0ce2b',
+    testName:
+      'pools/:pool_id/history - rewards forfeited by a deregistered delegator are not counted',
+    endpoints: [
+      'pools/pool1a7h89sr6ymj9g2a9tm6e6dddghl64tp39pj78f6cah5ewgd4px0/history?count=1&page=95',
+      'pools/efae72c07a26e4542ba55ef59d35ad45ffaaac312865e3a758ede997/history?count=1&page=95&order=asc',
+    ],
+    response: [
+      {
+        epoch: 103,
+        blocks: 68,
+        active_stake: '1969450119944',
+        active_size: 0.017310464175751515,
+        delegators_count: 23,
+        rewards: '1511904603',
+        fees: '457190460',
+      },
+    ],
+  },
+  {
+    id: 'pools-pool-id-history-active-size-rounds-like-a-numeric-division_ffd63c793ff5',
+    testName: 'pools/:pool_id/history - active_size rounds like a numeric division',
+    endpoints: [
+      'pools/pool1a7h89sr6ymj9g2a9tm6e6dddghl64tp39pj78f6cah5ewgd4px0/history?count=1&page=34',
+      'pools/efae72c07a26e4542ba55ef59d35ad45ffaaac312865e3a758ede997/history?count=1&page=34&order=asc',
+    ],
+    response: [
+      {
+        epoch: 42,
+        blocks: 39,
+        active_stake: '2663056412603',
+        active_size: 0.0070831498452245244,
+        delegators_count: 17,
+        rewards: '3028076803',
+        fees: '608807680',
+      },
+    ],
+  },
 ];
