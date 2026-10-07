@@ -27,9 +27,9 @@ BLOCKCHAIN_STATE_SETUP="1"
 
 ## Running the tests
 
-- **mainnet** – `yarn test:mainnet`
-- **preview** – `yarn test:preview`
-- **preprod** – `yarn test:preprod`
+- **mainnet** – `pnpm test:mainnet`
+- **preview** – `pnpm test:preview`
+- **preprod** – `pnpm test:preprod`
 
 ### Full command example
 
@@ -37,7 +37,7 @@ BLOCKCHAIN_STATE_SETUP="1"
 SERVER_URL=https://cardano-mainnet.blockfrost.io/api/v0 \
 PROJECT_ID=mainnetLZgT76GL3subckxt9Y1G8nsouSCVwWtn \
 SUBMIT_MNEMONIC="canyon february excess nominee tube alcohol client coach cruise antenna cabbage unusual" \
-yarn test:preview
+pnpm test:preview
 ```
 
 ## Fixture example
@@ -75,14 +75,14 @@ export default [
 
 ## Endpoint coverage check
 
-`yarn check-endpoint-coverage` loads every fixture of every network, resolves each fixture
+`pnpm check-endpoint-coverage` loads every fixture of every network, resolves each fixture
 endpoint to its `@blockfrost/openapi` route with the same matcher the test runner uses, and
 fails when a route has no fixture on some network. It runs in CI next to `check-fixture-wiring`.
 
 - Routes without fixtures in this repository are listed in `SKIPPED_ROUTES` in
   `scripts/check-endpoint-coverage.ts`: the private API surface (IPFS, metrics, mempool) is
   covered by the internal test suite, and nut.link is no longer supported.
-- `yarn check-endpoint-coverage --table` prints the number of fixtures per route and network.
+- `pnpm check-endpoint-coverage --table` prints the number of fixtures per route and network.
 
 ## Endpoint Allowlist Configuration
 
