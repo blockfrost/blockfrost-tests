@@ -1034,4 +1034,62 @@ export default [
       },
     ],
   },
+  {
+    id: 'pools-pool-id-history-delegators-with-zero-stake-are-not-counted_19ed556758f5',
+    testName: 'pools/:pool_id/history - delegators with zero stake are not counted',
+    endpoints: [
+      'pools/pool1crprz3rdcwvfxmc0s4gxquh3qeqmscww2qfvpl93q52yyn7agsc/history?count=1&page=391',
+      'pools/c0c231446dc398936f0f85506072f10641b861ce5012c0fcb1051442/history?count=1&page=391&order=asc',
+    ],
+    response: [
+      {
+        epoch: 600,
+        blocks: 0,
+        active_stake: '1343954586327',
+        active_size: 6.280617529107507e-5,
+        delegators_count: 50,
+        rewards: '0',
+        fees: '0',
+      },
+    ],
+  },
+  {
+    id: 'pools-pool-id-history-rewards-forfeited-by-a-deregistered-delegator-are-not-counted_6dd015ffa890',
+    testName:
+      'pools/:pool_id/history - rewards forfeited by a deregistered delegator are not counted',
+    endpoints: [
+      'pools/pool1eqa7kxx4xg35cu4rqj4exkvzhenscgh8wxez0gl7hsagygp79kr/history?count=1&page=66',
+      'pools/c83beb18d532234c72a304ab935982be670c22e771b227a3febc3a82/history?count=1&page=66&order=asc',
+    ],
+    response: [
+      {
+        epoch: 299,
+        blocks: 38,
+        active_stake: '49560194472112',
+        active_size: 0.002103168860862736,
+        delegators_count: 6313,
+        rewards: '25816995192',
+        fees: '340000000',
+      },
+    ],
+  },
+  {
+    id: 'pools-pool-id-history-active-size-rounds-like-a-numeric-division_27f7fe957e68',
+    testName: 'pools/:pool_id/history - active_size rounds like a numeric division',
+    endpoints: [
+      'pools/pool1pu5jlj4q9w9jlxeu370a3c9myx47md5j5m2str0naunn2q3lkdy/history?count=1&page=3',
+      'pools/0f292fcaa02b8b2f9b3c8f9fd8e0bb21abedb692a6d5058df3ef2735/history?count=1&page=3&order=asc',
+    ],
+    response: [
+      {
+        epoch: 212,
+        blocks: 28,
+        active_stake: '76778927458702',
+        active_size: 0.006341905183119658,
+        delegators_count: 60,
+        rewards: '59186197799',
+        fees: '3223463692',
+      },
+    ],
+  },
 ];
