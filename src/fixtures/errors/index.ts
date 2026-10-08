@@ -1,3 +1,5 @@
+import { expect } from 'vitest';
+
 export const error_404 = {
   status_code: 404,
   error: 'Not Found',
@@ -7,7 +9,8 @@ export const error_404 = {
 export const error_invalid_path = {
   status_code: 400,
   error: 'Bad Request',
-  message: 'Invalid path. Please check https://docs.blockfrost.io/',
+  // any docs URL, so implementations other than Blockfrost can point at their own
+  message: expect.stringMatching(/^Invalid path\. Please check https:\/\/\S+$/),
 };
 
 export const error_400_addresses = {
@@ -54,7 +57,8 @@ export const error_400_pools = {
 
 export const error_400 = {
   error: 'Bad Request',
-  message: 'Invalid path. Please check https://docs.blockfrost.io/',
+  // any docs URL, so implementations other than Blockfrost can point at their own
+  message: expect.stringMatching(/^Invalid path\. Please check https:\/\/\S+$/),
   status_code: 400,
 };
 
