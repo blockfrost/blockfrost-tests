@@ -1,6 +1,6 @@
 import { getPaginationFixtures } from '../../../../index.js';
 
-const paginationFixtures = getPaginationFixtures('governance/dreps');
+const paginationFixtures = getPaginationFixtures('governance/proposals');
 
 export default [
   ...paginationFixtures,

@@ -1,3 +1,4 @@
+import accountsErrors from './accounts/_errors.js';
 import accountsStakeAddress from './accounts/stake-address.js';
 import accountStakeAddressAddresses from './accounts/stake-address-addresses.js';
 import accountsStakeAddressAddressesAssets from './accounts/stake-address-addresses-assets.js';
@@ -11,6 +12,7 @@ import accountsStakeAddressUtxos from './accounts/stake-address-utxos.js';
 import accountsStakeAddressWithdrawals from './accounts/stake-address-withdrawals.js';
 import accountsStakeAddressTransactions from './accounts/stake-address-transactions.js';
 
+import addressesErrors from './addresses/_errors.js';
 import address from './addresses/address.js';
 import addressExtended from './addresses/address-extended.js';
 import addressTotal from './addresses/address-total.js';
@@ -120,6 +122,7 @@ export const mainnetFixtures = {
     ...accountsStakeAddressUtxos,
     ...accountsStakeAddressWithdrawals,
     ...accountsStakeAddressTransactions,
+    ...accountsErrors,
   ],
   blocks: [
     ...blocksOthers,
@@ -139,6 +142,7 @@ export const mainnetFixtures = {
     ...addressTxs,
     ...addressUtxosAsset,
     ...addressUtxos,
+    ...addressesErrors,
   ],
   assets: [
     ...assetAddresses,
