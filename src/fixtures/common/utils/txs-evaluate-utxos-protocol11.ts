@@ -1,9 +1,17 @@
 import { expect } from 'vitest';
 
 // Protocol 11 scripts also run through the JSON evaluation route.
-// Supplied UTxOs test reference scripts, inline datums, and datum witnesses.
+// The first seven cases reuse the mint transactions from txs-evaluate-protocol11.ts.
+// They omit additionalUtxoSet because these transactions have no ledger inputs.
+// The policies discard builtin results; assertions check execution budgets, not computed values.
+// The final three cases use synthetic UTxOs identified by the all-ff transaction hash.
+// Their scripts ignore their arguments; the cases check script and datum resolution, not datum contents.
+// These transactions test script evaluation only; they are not valid for submission.
 // Budgets match Preview, Preprod, and Mainnet on 2026-10-14.
 export default [
+  // The minting policy executes expModInteger(2, 3, 5), then returns unit.
+  // This checks protocol-11 builtin support and execution costs in this Plutus version.
+  // The JSON cbor route must return the same v5 mint:0 budget without supplied UTxOs.
   {
     id: 'utils-txs-evaluate-utxos-protocol-11-plutus-v1-exp-mod-integer-utxos_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos - protocol 11 PlutusV1 expModInteger utxos',
@@ -30,6 +38,9 @@ export default [
       },
     },
   },
+  // The minting policy executes expModInteger(2, 3, 5), then returns unit.
+  // This checks protocol-11 builtin support and execution costs in this Plutus version.
+  // The JSON cbor route must return the same v5 mint:0 budget without supplied UTxOs.
   {
     id: 'utils-txs-evaluate-utxos-protocol-11-plutus-v2-exp-mod-integer-utxos_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos - protocol 11 PlutusV2 expModInteger utxos',
@@ -56,6 +67,9 @@ export default [
       },
     },
   },
+  // The minting policy hashes the UTF-8 bytes of "blockfrost" with ripemd_160, then returns unit.
+  // This checks protocol-11 builtin support and execution costs in this Plutus version.
+  // The JSON cbor route must return the same v5 mint:0 budget without supplied UTxOs.
   {
     id: 'utils-txs-evaluate-utxos-protocol-11-plutus-v1-ripemd160-utxos_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos - protocol 11 PlutusV1 ripemd160 utxos',
@@ -82,6 +96,9 @@ export default [
       },
     },
   },
+  // The minting policy hashes the UTF-8 bytes of "blockfrost" with ripemd_160, then returns unit.
+  // This checks protocol-11 builtin support and execution costs in this Plutus version.
+  // The JSON cbor route must return the same v5 mint:0 budget without supplied UTxOs.
   {
     id: 'utils-txs-evaluate-utxos-protocol-11-plutus-v2-ripemd160-utxos_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos - protocol 11 PlutusV2 ripemd160 utxos',
@@ -108,6 +125,9 @@ export default [
       },
     },
   },
+  // The PlutusV3 minting policy executes lengthOfArray([1, 2, 3]), then returns unit.
+  // This checks array builtin support and the active protocol-11 cost model.
+  // The JSON cbor route must return the same v5 mint:0 budget without supplied UTxOs.
   {
     id: 'utils-txs-evaluate-utxos-protocol-11-plutus-v3-length-of-array-utxos_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos - protocol 11 PlutusV3 lengthOfArray utxos',
@@ -134,6 +154,10 @@ export default [
       },
     },
   },
+  // The PlutusV3 minting policy converts [1, 2, 3] with listToArray.
+  // It executes indexArray at index 1, then returns unit.
+  // This checks both array builtins and their protocol-11 execution costs.
+  // The JSON cbor route must return the same v5 mint:0 budget without supplied UTxOs.
   {
     id: 'utils-txs-evaluate-utxos-protocol-11-plutus-v3-list-to-array-index-array-utxos_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos - protocol 11 PlutusV3 listToArrayIndexArray utxos',
@@ -160,6 +184,9 @@ export default [
       },
     },
   },
+  // The PlutusV2 minting policy executes dropList(1, [1, 2, 3]), then returns unit.
+  // This checks protocol-11 builtin support and execution costs for dropping one list element.
+  // The JSON cbor route must return the same v5 mint:0 budget without supplied UTxOs.
   {
     id: 'utils-txs-evaluate-utxos-protocol-11-plutus-v2-drop-list-utxos_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos - protocol 11 PlutusV2 dropList utxos',
@@ -186,6 +213,10 @@ export default [
       },
     },
   },
+  // The transaction references the synthetic UTxO at all-ff#0 and mints one unnamed asset.
+  // Its witness set contains no script; additionalUtxoSet supplies the PlutusV3 reference script.
+  // The policy returns unit and ignores its context.
+  // This checks reference-input lookup, reference-script decoding, and the mint:0 execution budget.
   {
     id: 'utils-txs-evaluate-utxos-reference-script-supplied-u-tx-o_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos - reference script supplied UTxO',
@@ -229,6 +260,10 @@ export default [
       },
     },
   },
+  // The transaction spends the synthetic script UTxO at all-ff#0.
+  // The supplied UTxO contains inline datum 01, which encodes the integer 1.
+  // The witness set contains a PlutusV2 script that returns unit and ignores its arguments.
+  // This checks supplied-input resolution, inline-datum handling, and the spend:0 execution budget.
   {
     id: 'utils-txs-evaluate-utxos-inline-datum-supplied-u-tx-o_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos - inline datum supplied UTxO',
@@ -270,6 +305,10 @@ export default [
       },
     },
   },
+  // The transaction spends the synthetic script UTxO at all-ff#0.
+  // The supplied UTxO contains the datum hash; the witness set contains datum 01, encoding integer 1.
+  // The PlutusV2 spending script returns unit and ignores its arguments.
+  // This checks datum-witness lookup by hash and the spend:0 execution budget.
   {
     id: 'utils-txs-evaluate-utxos-hash-datum-supplied-u-tx-o_f9b2e7c14cae',
     testName: 'utils/txs/evaluate/utxos - hash datum supplied UTxO',

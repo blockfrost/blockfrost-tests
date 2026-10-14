@@ -1,9 +1,16 @@
 import { expect } from 'vitest';
 
 // Protocol 11 scripts evaluate the named builtin, then return unit.
-// These unsigned mint transactions need no ledger inputs.
+// Each transaction mints one unnamed asset with one policy and one mint redeemer.
+// These unsigned transactions have no inputs, outputs, or validity bounds, and pay zero fees.
+// The policies ignore their arguments and discard builtin results after execution.
+// Assertions check execution budgets and response formats, not the computed builtin values.
+// These transactions test script evaluation only; they are not valid for submission.
 // Budgets match Preview, Preprod, and Mainnet on 2026-10-14.
 export default [
+  // The minting policy executes expModInteger(2, 3, 5), then returns unit.
+  // This checks protocol-11 builtin support and execution costs in this Plutus version.
+  // The default route must return the v5 mint:0 budget with memory and steps.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v1-exp-mod-integer-v5_a6cb628e30af',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV1 expModInteger v5',
@@ -29,6 +36,9 @@ export default [
       },
     },
   },
+  // The minting policy executes expModInteger(2, 3, 5), then returns unit.
+  // This checks protocol-11 builtin support and execution costs in this Plutus version.
+  // Version 6 must return the same budget with purpose mint, index 0, memory, and cpu.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v1-exp-mod-integer-v6_ea88a1f9c249',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV1 expModInteger v6',
@@ -54,6 +64,9 @@ export default [
       id: expect.any(String),
     },
   },
+  // The minting policy executes expModInteger(2, 3, 5), then returns unit.
+  // This checks protocol-11 builtin support and execution costs in this Plutus version.
+  // The default route must return the v5 mint:0 budget with memory and steps.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v2-exp-mod-integer-v5_a6cb628e30af',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV2 expModInteger v5',
@@ -79,6 +92,9 @@ export default [
       },
     },
   },
+  // The minting policy executes expModInteger(2, 3, 5), then returns unit.
+  // This checks protocol-11 builtin support and execution costs in this Plutus version.
+  // Version 6 must return the same budget with purpose mint, index 0, memory, and cpu.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v2-exp-mod-integer-v6_ea88a1f9c249',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV2 expModInteger v6',
@@ -104,6 +120,9 @@ export default [
       id: expect.any(String),
     },
   },
+  // The minting policy hashes the UTF-8 bytes of "blockfrost" with ripemd_160, then returns unit.
+  // This checks protocol-11 builtin support and execution costs in this Plutus version.
+  // The default route must return the v5 mint:0 budget with memory and steps.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v1-ripemd160-v5_a6cb628e30af',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV1 ripemd160 v5',
@@ -129,6 +148,9 @@ export default [
       },
     },
   },
+  // The minting policy hashes the UTF-8 bytes of "blockfrost" with ripemd_160, then returns unit.
+  // This checks protocol-11 builtin support and execution costs in this Plutus version.
+  // Version 6 must return the same budget with purpose mint, index 0, memory, and cpu.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v1-ripemd160-v6_ea88a1f9c249',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV1 ripemd160 v6',
@@ -154,6 +176,9 @@ export default [
       id: expect.any(String),
     },
   },
+  // The minting policy hashes the UTF-8 bytes of "blockfrost" with ripemd_160, then returns unit.
+  // This checks protocol-11 builtin support and execution costs in this Plutus version.
+  // The default route must return the v5 mint:0 budget with memory and steps.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v2-ripemd160-v5_a6cb628e30af',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV2 ripemd160 v5',
@@ -179,6 +204,9 @@ export default [
       },
     },
   },
+  // The minting policy hashes the UTF-8 bytes of "blockfrost" with ripemd_160, then returns unit.
+  // This checks protocol-11 builtin support and execution costs in this Plutus version.
+  // Version 6 must return the same budget with purpose mint, index 0, memory, and cpu.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v2-ripemd160-v6_ea88a1f9c249',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV2 ripemd160 v6',
@@ -204,6 +232,9 @@ export default [
       id: expect.any(String),
     },
   },
+  // The PlutusV3 minting policy executes lengthOfArray([1, 2, 3]), then returns unit.
+  // This checks array builtin support and the active protocol-11 cost model.
+  // The default route must return the v5 mint:0 budget with memory and steps.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v3-length-of-array-v5_a6cb628e30af',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV3 lengthOfArray v5',
@@ -229,6 +260,9 @@ export default [
       },
     },
   },
+  // The PlutusV3 minting policy executes lengthOfArray([1, 2, 3]), then returns unit.
+  // This checks array builtin support and the active protocol-11 cost model.
+  // Version 6 must return the same budget with purpose mint, index 0, memory, and cpu.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v3-length-of-array-v6_ea88a1f9c249',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV3 lengthOfArray v6',
@@ -254,6 +288,10 @@ export default [
       id: expect.any(String),
     },
   },
+  // The PlutusV3 minting policy converts [1, 2, 3] with listToArray.
+  // It executes indexArray at index 1, then returns unit.
+  // This checks both array builtins and their protocol-11 execution costs.
+  // The default route must return the v5 mint:0 budget with memory and steps.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v3-list-to-array-index-array-v5_a6cb628e30af',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV3 listToArrayIndexArray v5',
@@ -279,6 +317,10 @@ export default [
       },
     },
   },
+  // The PlutusV3 minting policy converts [1, 2, 3] with listToArray.
+  // It executes indexArray at index 1, then returns unit.
+  // This checks both array builtins and their protocol-11 execution costs.
+  // Version 6 must return the same budget with purpose mint, index 0, memory, and cpu.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v3-list-to-array-index-array-v6_ea88a1f9c249',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV3 listToArrayIndexArray v6',
@@ -304,6 +346,9 @@ export default [
       id: expect.any(String),
     },
   },
+  // The PlutusV2 minting policy executes dropList(1, [1, 2, 3]), then returns unit.
+  // This checks protocol-11 builtin support and execution costs for dropping one list element.
+  // The default route must return the v5 mint:0 budget with memory and steps.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v2-drop-list-v5_a6cb628e30af',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV2 dropList v5',
@@ -329,6 +374,9 @@ export default [
       },
     },
   },
+  // The PlutusV2 minting policy executes dropList(1, [1, 2, 3]), then returns unit.
+  // This checks protocol-11 builtin support and execution costs for dropping one list element.
+  // Version 6 must return the same budget with purpose mint, index 0, memory, and cpu.
   {
     id: 'utils-txs-evaluate-protocol-11-plutus-v2-drop-list-v6_ea88a1f9c249',
     testName: 'utils/txs/evaluate - protocol 11 PlutusV2 dropList v6',
