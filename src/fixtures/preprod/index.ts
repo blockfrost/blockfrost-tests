@@ -93,6 +93,7 @@ import swapsAsset from './swaps/asset.js';
 import txRequiredSigners from './txs/tx-required-signers.js';
 import utilsAddressesXpub from './utils/addresses-xpub.js';
 import utilsTxsEvaluate from './utils/txs-evaluate.js';
+import utilsTxsEvaluateProtocol11 from './utils/txs-evaluate-protocol11.js';
 import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
 
 import governanceDrep from './governance/dreps/drep.js';
@@ -228,5 +229,10 @@ export const preprodFixtures = {
     ...txUtxos,
     ...txRedeemers,
   ],
-  utils: [...utilsAddressesXpub, ...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos],
+  utils: [
+    ...utilsAddressesXpub,
+    ...utilsTxsEvaluate,
+    ...utilsTxsEvaluateUtxos,
+    ...utilsTxsEvaluateProtocol11,
+  ],
 };
