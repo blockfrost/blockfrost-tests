@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import openApiJsonSchema from '@blockfrost/openapi/json-schema.json' with { type: 'json' };
-import { test, describe, expect, onTestFailed } from 'vitest';
+import { test, describe, expect } from 'vitest';
 import { noCase } from 'change-case';
 import fs from 'fs';
 import path from 'path';
@@ -487,8 +487,9 @@ export const getPaginationFixtures = (
 export const generateTest = (fixture: Fixture, endpoint: string) => {
   const timeout = fixture.customTimeout || DEFAULT_TEST_TIMEOUT;
 
-  test(`[${fixture.testName}] - ${endpoint}`, { timeout, retry: fixture.retry }, async () => {
-    onTestFailed(() => {
+  test(`[${fixture.testName}] - ${endpoint}`, { timeout, retry: fixture.retry }, async context => {
+    // use the test context, the global onTestFailed() can't find the current test in concurrent tests
+    context.onTestFailed(() => {
       console.log(`Failed fixture ID: ${fixture.id}`);
     });
 
