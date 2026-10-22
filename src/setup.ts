@@ -6,12 +6,17 @@ import { isBlockchainStateSetupEnabled } from './utils.js';
 // Tests in a file run concurrently and can start minutes after the setup, while matchers like
 // expect.confirmations() only tolerate a 2 block drift, so the state is refreshed when older than this
 const BLOCKCHAIN_STATE_MAX_AGE_MS = 15_000;
+// How long a test waits for the refresh before it continues with the previous state
+const BLOCKCHAIN_STATE_REFRESH_WAIT_MS = 5_000;
 
+// time of the last fetch attempt, so a failing backend is not retried by every test
 let blockchainStateFetchedAt = 0;
 // shared by concurrent tests so a stale state is fetched only once
-let blockchainStateRequest: Promise<void> | null = null;
+let blockchainStateRefresh: Promise<void> | null = null;
 
 const fetchBlockchainState = async () => {
+  blockchainStateFetchedAt = Date.now();
+
   const client = getBlockfrostAPIClient();
   const [epoch, block] = await Promise.all([client.epochsLatest(), client.blocksLatest()]);
 
@@ -19,7 +24,6 @@ const fetchBlockchainState = async () => {
     block,
     epoch,
   };
-  blockchainStateFetchedAt = Date.now();
 };
 
 export const setGlobalBlockchainState = async (options?: { force?: boolean }) => {
@@ -27,13 +31,22 @@ export const setGlobalBlockchainState = async (options?: { force?: boolean }) =>
     return;
   }
 
-  if (!blockchainStateRequest) {
-    blockchainStateRequest = fetchBlockchainState().finally(() => {
-      blockchainStateRequest = null;
-    });
+  await fetchBlockchainState();
+};
+
+// Never rejects, a failed refresh keeps the previously fetched state
+const refreshBlockchainState = () => {
+  if (!blockchainStateRefresh) {
+    blockchainStateRefresh = fetchBlockchainState()
+      .catch(error => {
+        console.warn('[SETUP] Failed to refresh blockchain state, using the previous one:', error);
+      })
+      .finally(() => {
+        blockchainStateRefresh = null;
+      });
   }
 
-  await blockchainStateRequest;
+  return blockchainStateRefresh;
 };
 
 if (isBlockchainStateSetupEnabled()) {
@@ -53,12 +66,24 @@ if (isBlockchainStateSetupEnabled()) {
       return;
     }
 
-    try {
-      await setGlobalBlockchainState({ force: true });
-    } catch (error) {
-      // keep the previous state, a failed refresh shouldn't fail the test
-      console.warn('[SETUP] Failed to refresh blockchain state, using the previous one:', error);
+    const refresh = refreshBlockchainState();
+    // a slow refresh keeps running in the background and updates the state once it finishes,
+    // tests wait for it only until BLOCKCHAIN_STATE_REFRESH_WAIT_MS after it started
+    const waitMs = blockchainStateFetchedAt + BLOCKCHAIN_STATE_REFRESH_WAIT_MS - Date.now();
+
+    if (waitMs <= 0) {
+      return;
     }
+
+    let timeout: NodeJS.Timeout | undefined;
+
+    await Promise.race([
+      refresh,
+      new Promise<void>(resolve => {
+        timeout = setTimeout(resolve, waitMs);
+      }),
+    ]);
+    clearTimeout(timeout);
   });
 } else {
   console.warn(
