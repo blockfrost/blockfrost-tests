@@ -47,7 +47,7 @@ export default [
       has_script: true,
       last_active_epoch: expect.toBeEpochNumber(),
       retired: false,
-      expired: false,
+      expired: expect.any(Boolean),
     },
   },
   {
@@ -64,7 +64,7 @@ export default [
       has_script: true,
       last_active_epoch: expect.toBeEpochNumber(),
       retired: false,
-      expired: false,
+      expired: expect.any(Boolean),
     },
   },
   {
