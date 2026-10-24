@@ -1,5 +1,12 @@
 import { expect } from 'vitest';
+import { getPaginationFixtures } from '../../../index.js';
+
+const paginationFixtures = getPaginationFixtures(
+  'pools/d5cfc42cf67f6b637688d19fa50a4342658f63370b9e2c9e3eaf4dfe/delegators',
+);
+
 export default [
+  ...paginationFixtures,
   {
     id: 'pools-delegators_f2d665309ca1',
     testName: 'pools delegators',

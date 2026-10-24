@@ -402,6 +402,21 @@ export const getPaginationFixtures = (
             message: 'Invalid (malformed or out of range) from/to parameter(s).',
           },
         },
+        // from/to - same height, from index after to index
+        ...(options.fromToPagination.format === 'height:index'
+          ? [
+              {
+                testName: `${url} pagination from/to index range error`,
+                type: 'from_to',
+                endpoints: [`${url}?from=100:5&to=100:3`],
+                response: {
+                  status_code: 400,
+                  error: 'Bad Request',
+                  message: 'Invalid (malformed or out of range) from/to parameter(s).',
+                },
+              },
+            ]
+          : []),
       ]
     : [];
 

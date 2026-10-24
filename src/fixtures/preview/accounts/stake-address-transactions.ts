@@ -2,6 +2,9 @@ import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures(
   'accounts/stake_test1uq70zpxr7jdqxdlj895x9lvnwn9lrcknwpx8cswlld7x76gtzvrjp/transactions',
+  {
+    fromToPagination: { format: 'height:index' },
+  },
 );
 
 export default [

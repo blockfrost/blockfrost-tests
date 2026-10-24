@@ -4,8 +4,14 @@ const paginationFixtures = getPaginationFixtures(
   'governance/proposals/15f82a365bdee483a4b03873a40d3829cc88c048ff3703e11bd01dd9e035c916/0/votes',
 );
 
+// Same checks through the CIP-129 gov_action id route.
+const govActionPaginationFixtures = getPaginationFixtures(
+  'governance/proposals/gov_action1zhuz5djmmmjg8f9s8pe6grfc98xg3szglums8cgm6qwancp4eytqqmpu0pr/votes',
+);
+
 export default [
   ...paginationFixtures,
+  ...govActionPaginationFixtures,
   {
     id: 'governance-proposal-votes_f942a5280eb7',
     testName: 'governance proposal votes',

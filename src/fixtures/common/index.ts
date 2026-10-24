@@ -10,14 +10,31 @@ import utilsTxsEvaluateUtxos from './utils/txs-evaluate-utxos.js';
 import assetUtxos from './assets/asset-utxos.js';
 import swapsAsset from './swaps/asset.js';
 import governanceDreps from './governance/dreps.js';
+import accountsErrors from './accounts/_errors.js';
+import addressesErrors from './addresses/_errors.js';
+import assetsErrors from './assets/_errors.js';
+import blocksErrors from './blocks/_errors.js';
+import epochsErrors from './epochs/_errors.js';
+import governanceErrors from './governance/_errors.js';
+import metadataErrors from './metadata/_errors.js';
+import poolsErrors from './pools/_errors.js';
+import scriptsErrors from './scripts/_errors.js';
+import txsErrors from './txs/_errors.js';
+import utilsErrors from './utils/_errors.js';
 
 export const commonFixtures = {
   health: [...healthRoot, ...healthClock],
   root: [...root],
-  assets: [...assetUtxos],
+  assets: [...assetUtxos, ...assetsErrors],
   swaps: [...swapsAsset],
-  blocks: [...blocksLatest, ...blocksLatestTxs, ...blocksLatestTxsCbor],
-  epochs: [...epochsLatest],
-  utils: [...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos],
-  governance: [...governanceDreps],
+  blocks: [...blocksLatest, ...blocksLatestTxs, ...blocksLatestTxsCbor, ...blocksErrors],
+  epochs: [...epochsLatest, ...epochsErrors],
+  utils: [...utilsTxsEvaluate, ...utilsTxsEvaluateUtxos, ...utilsErrors],
+  governance: [...governanceDreps, ...governanceErrors],
+  accounts: [...accountsErrors],
+  addresses: [...addressesErrors],
+  metadata: [...metadataErrors],
+  pools: [...poolsErrors],
+  scripts: [...scriptsErrors],
+  txs: [...txsErrors],
 };

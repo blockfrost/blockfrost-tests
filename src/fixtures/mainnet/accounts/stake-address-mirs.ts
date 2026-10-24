@@ -1,6 +1,12 @@
 import { error_400_accounts, error_404 } from '../../errors/index.js';
+import { getPaginationFixtures } from '../../../index.js';
+
+const paginationFixtures = getPaginationFixtures(
+  'accounts/stake1uyq7039vutuw8v7femqtktdu9zlhnqh3mkvvhdazft9ga2q8zdfkp/mirs',
+);
 
 export default [
+  ...paginationFixtures,
   {
     id: 'accounts-stake-address-queryparams-generic-stake-address-mirs_d58c64399ad6',
     testName: 'accounts/:stake_address?queryparams generic stake address mirs',
