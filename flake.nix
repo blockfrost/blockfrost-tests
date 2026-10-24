@@ -11,7 +11,7 @@
         let
           pkgs = nixpkgs.legacyPackages.${system};
           nodejs = pkgs.nodejs_24;
-          yarn = pkgs.yarn-berry_4;
+          pnpm = pkgs.pnpm_12;
           src = pkgs.lib.cleanSource ./.;
 
           tests = pkgs.stdenv.mkDerivation (finalAttrs: {
@@ -19,20 +19,21 @@
             version = "0.0.0";
             inherit src;
 
-            nativeBuildInputs = [ nodejs yarn yarn.yarnBerryConfigHook ];
+            nativeBuildInputs = [ nodejs pnpm pkgs.pnpmConfigHook ];
 
-            # after changing yarn.lock, regenerate this file and refresh `hash` below:
-            # nix run nixpkgs#yarn-berry_4.yarn-berry-fetcher -- missing-hashes yarn.lock > missing-hashes.json
-            missingHashes = ./missing-hashes.json;
-
-            offlineCache = yarn.fetchYarnBerryDeps {
-              inherit src;
-              inherit (finalAttrs) missingHashes;
-              hash = "sha256-gCFgA1clZStwKcsZ9PNSQmNI1a6pvL1QzXxALu06mB0=";
+            # after changing pnpm-lock.yaml, set `hash = ""`, build and paste the `got:` hash back
+            pnpmDeps = pkgs.fetchPnpmDeps {
+              inherit (finalAttrs) pname version src;
+              inherit pnpm;
+              fetcherVersion = 4;
+              # pnpm 12 materializes packages into <store>/v11/links (incl. JSONC tsconfigs the fixup's jq chokes on);
+              # it's a derivable cache, offline install only needs files/ + index.db
+              postInstall = "rm -rf $storePath/v11/links";
+              hash = "sha256-zixDJY28hqImcRxPA92I/l6JPcGLVihpj5aKTroLDCA=";
             };
 
             installPhase = ''
-              # only what vitest needs at runtime; skips .yarn/cache (duplicate of the offline cache), .github, flake.*, ...
+              # only what vitest needs at runtime; skips .github, flake.*, ...
               mkdir -p $out/lib/blockfrost-tests
               cp -r node_modules src endpoints-allowlist.json package.json tsconfig.json vitest.config.integration.ts \
                 $out/lib/blockfrost-tests/
@@ -57,10 +58,10 @@
         let pkgs = nixpkgs.legacyPackages.${system};
         in {
           default = pkgs.mkShell {
-            packages = [ pkgs.nodejs_24 pkgs.yarn-berry_4 ];
+            packages = [ pkgs.nodejs_24 pkgs.pnpm_12 ];
             shellHook = ''
               export PATH="$PATH:$(pwd)/node_modules/.bin"
-              yarn
+              pnpm install
             '';
           };
         });

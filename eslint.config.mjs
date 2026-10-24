@@ -4,14 +4,7 @@ import eslintConfigPrettierFlat from 'eslint-config-prettier/flat';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 const globalIgnores = {
-  ignores: [
-    '**/.yarn/**',
-    'node_modules/**',
-    'lib/**',
-    'submodules/**',
-    '.eslintrc.js',
-    'openapi.ts',
-  ],
+  ignores: ['node_modules/**', 'lib/**', 'submodules/**', '.eslintrc.js', 'openapi.ts'],
 };
 
 const srcRules = tseslint.config(
