@@ -1,5 +1,6 @@
 import { expect } from 'vitest';
 import { getPaginationFixtures } from '../../../index.js';
+import { withOptionalFetchError } from '../../../matchers.js';
 
 const paginationFixtures = getPaginationFixtures('pools/extended');
 
@@ -20,14 +21,15 @@ export default [
         margin_cost: 0.0,
         fixed_cost: '340000000',
         declared_pledge: '1015000000000',
-        metadata: {
+        // TLS handshake error while fetching the metadata JSON
+        metadata: withOptionalFetchError({
           hash: expect.any(String),
           ticker: expect.toBeOneOf([expect.any(String), null]),
           url: expect.any(String),
           name: expect.toBeOneOf([expect.any(String), null]),
           description: expect.toBeOneOf([expect.any(String), null]),
           homepage: expect.toBeOneOf([expect.any(String), null]),
-        },
+        }),
       },
       {
         pool_id: 'pool1qqq6qqa0hpzvumv5p87ynczfmdj557xuwlc3289ke42g72z7f74',
@@ -103,6 +105,37 @@ export default [
           name: expect.toBeOneOf([expect.any(String), null]),
           description: expect.toBeOneOf([expect.any(String), null]),
           homepage: expect.toBeOneOf([expect.any(String), null]),
+        },
+      },
+    ],
+  },
+  {
+    id: 'pools-extended-pool-with-unresolvable-metadata-url-host-returns-error_edd07226ebd3',
+    testName: 'pools/extended - pool with unresolvable metadata URL host returns error',
+    endpoints: ['pools/extended?count=1&page=4', 'pools/extended?count=1&page=4&order=asc'],
+    response: [
+      {
+        pool_id: 'pool1ddskftmsscw92d7vnj89pldwx5feegkgcmamgt5t0e4lkd7mdp8',
+        hex: '6b6164af70861c5537cc9c8e50fdae35139ca2c8c6fbb42e8b7e6bfb',
+        active_stake: expect.toBeGreaterThanOrEqual('0'),
+        live_stake: expect.toBeGreaterThanOrEqual('0'),
+        live_saturation: expect.toBeGreaterThanOrEqual(0),
+        blocks_minted: expect.toBeGreaterThanOrEqual(23),
+        margin_cost: 0.05,
+        fixed_cost: '340000000',
+        declared_pledge: '7149000000',
+        metadata: {
+          hash: '79e7cf8d936bf0ced040516b288e2edc76f2f87af5400f92010a682de3a052e9',
+          url: 'https://pool.adascan.net/meta/v1/poolmeta.json',
+          ticker: null,
+          name: null,
+          description: null,
+          homepage: null,
+          error: {
+            code: 'CONNECTION_ERROR',
+            message:
+              'Error Offchain Pool: Connection failure error when fetching metadata from https://pool.adascan.net/meta/v1/poolmeta.json.',
+          },
         },
       },
     ],

@@ -1,5 +1,6 @@
 import { expect } from 'vitest';
 import { getPaginationFixtures } from '../../../index.js';
+import { withOptionalFetchError } from '../../../matchers.js';
 
 const paginationFixtures = getPaginationFixtures('pools/extended');
 
@@ -58,14 +59,15 @@ export default [
         margin_cost: 0.05,
         fixed_cost: '340000000',
         declared_pledge: '0',
-        metadata: {
+        // The metadata URL host does not resolve
+        metadata: withOptionalFetchError({
           description: null,
           hash: '6bf124f217d0e5a0a8adb1dbd8540e1334280d49ab861127868339f43b3948bf',
           homepage: null,
           name: null,
           ticker: null,
           url: 'https://your_pool_website.com',
-        },
+        }),
       },
       {
         pool_id: 'pool14rn9dq87dgj2z8g3lp4n0a78fewxff3gkgjkmz72ew44ym79xpp',
@@ -77,14 +79,15 @@ export default [
         margin_cost: 0.05,
         fixed_cost: '340000000',
         declared_pledge: '0',
-        metadata: {
+        // TLS handshake error while fetching the metadata JSON
+        metadata: withOptionalFetchError({
           hash: 'c0719d1437e1bf09915b0dbfaae2e384d737e326f17d8f1ae82d6a40111a1035',
           url: 'https://f7ca89d1.cardano-metadata.stagebison.net/metadata.json',
           description: null,
           homepage: null,
           name: null,
           ticker: null,
-        },
+        }),
       },
       {
         pool_id: 'pool17wdfwsyksx7femcxzx7ycf84maqvdf3fmr7z92h2xguy7eanvdf',
@@ -96,14 +99,45 @@ export default [
         margin_cost: 0.0,
         fixed_cost: '340000000',
         declared_pledge: '19000000000',
-        metadata: {
+        // SSL error while fetching the metadata JSON on some instances
+        metadata: withOptionalFetchError({
           hash: '3a0d397aa9bf08753197678d93ee2f615daa4727671497bfd69fabd84c63d907',
           url: 'https://junostakepool.com/juno-testnet.metadata.json',
-          // SSL error while fetching the metadata JSON
           ticker: expect.toBeOneOf([expect.any(String), null]),
           name: expect.toBeOneOf([expect.any(String), null]),
           description: expect.toBeOneOf([expect.any(String), null]),
           homepage: expect.toBeOneOf([expect.any(String), null]),
+        }),
+      },
+    ],
+  },
+  {
+    id: 'pools-extended-pool-with-unresolvable-metadata-url-host-returns-error_8974b52d3ea9',
+    testName: 'pools/extended - pool with unresolvable metadata URL host returns error',
+    endpoints: ['pools/extended?count=1&page=13', 'pools/extended?count=1&page=13&order=asc'],
+    response: [
+      {
+        pool_id: 'pool1w75ukvh77hhz8c2u6rhfjvqlxyptwg37yrkddzatu99qxwwlqhd',
+        hex: '77a9cb32fef5ee23e15cd0ee99301f3102b7223e20ecd68babe14a03',
+        active_stake: expect.toBeGreaterThanOrEqual('0'),
+        live_stake: expect.toBeGreaterThanOrEqual('0'),
+        live_saturation: expect.toBeGreaterThanOrEqual(0),
+        blocks_minted: expect.toBeGreaterThanOrEqual(0),
+        margin_cost: 0.05,
+        fixed_cost: '340000000',
+        declared_pledge: '0',
+        metadata: {
+          hash: '6bf124f217d0e5a0a8adb1dbd8540e1334280d49ab861127868339f43b3948bf',
+          url: 'https://your_pool_website.com',
+          ticker: null,
+          name: null,
+          description: null,
+          homepage: null,
+          error: {
+            code: 'CONNECTION_ERROR',
+            message:
+              'Error Offchain Pool: Connection failure error when fetching metadata from https://your_pool_website.com.',
+          },
         },
       },
     ],

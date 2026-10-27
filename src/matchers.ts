@@ -246,6 +246,16 @@ export const drepListMetadata = expect.toBeOneOf([
   },
 ]);
 
+/**
+ * Matches the `metadata` of a `/pools/extended` row with or without an `error` object.
+ * The `error` object is present when the off-chain metadata fetch failed.
+ */
+export const withOptionalFetchError = <T extends object>(metadata: T) =>
+  expect.toBeOneOf([
+    metadata,
+    { ...metadata, error: { code: expect.any(String), message: expect.any(String) } },
+  ]);
+
 export const toBeEpochSlotNumber = (received: number) => {
   // Note: missing inversion (could be handled with this.isNot),
   // but since we are not using this feature it is not implemented
