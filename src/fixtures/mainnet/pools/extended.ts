@@ -41,14 +41,14 @@ export default [
         margin_cost: 0.01,
         fixed_cost: '380000000',
         declared_pledge: '400000000000',
-        metadata: {
+        metadata: withOptionalFetchError({
           hash: expect.any(String),
           ticker: expect.toBeOneOf([expect.any(String), null]),
           url: expect.any(String),
           name: expect.toBeOneOf([expect.any(String), null]),
           description: expect.toBeOneOf([expect.any(String), null]),
           homepage: expect.toBeOneOf([expect.any(String), null]),
-        },
+        }),
       },
       {
         pool_id: 'pool1e556526sqwugxwnmeumt9lhj5jukklg8vv3ynk75xt9vs7adr5y',
@@ -60,14 +60,14 @@ export default [
         margin_cost: 0.009,
         fixed_cost: '500000000',
         declared_pledge: '500000000000',
-        metadata: {
+        metadata: withOptionalFetchError({
           hash: expect.any(String),
           ticker: expect.toBeOneOf([expect.any(String), null]),
           url: expect.any(String),
           name: expect.toBeOneOf([expect.any(String), null]),
           description: expect.toBeOneOf([expect.any(String), null]),
           homepage: expect.toBeOneOf([expect.any(String), null]),
-        },
+        }),
       },
       {
         pool_id: 'pool124lm97s6f4satl7xz0ulzgg6tv30tskry3zcntwrz68n60v5yne',
@@ -79,14 +79,14 @@ export default [
         margin_cost: 0.035,
         fixed_cost: '340000000',
         declared_pledge: '100000000000',
-        metadata: {
+        metadata: withOptionalFetchError({
           hash: expect.any(String),
           ticker: expect.toBeOneOf([expect.any(String), null]),
           url: expect.any(String),
           name: expect.toBeOneOf([expect.any(String), null]),
           description: expect.toBeOneOf([expect.any(String), null]),
           homepage: expect.toBeOneOf([expect.any(String), null]),
-        },
+        }),
       },
       {
         pool_id: 'pool1vx9tzlkgafernd9vpjpxkenutx2gncj4yn88fpq69823qlwcqrt',
@@ -98,14 +98,14 @@ export default [
         margin_cost: 0.02,
         fixed_cost: '340000000',
         declared_pledge: '200000000000',
-        metadata: {
+        metadata: withOptionalFetchError({
           hash: expect.any(String),
           ticker: expect.toBeOneOf([expect.any(String), null]),
           url: expect.any(String),
           name: expect.toBeOneOf([expect.any(String), null]),
           description: expect.toBeOneOf([expect.any(String), null]),
           homepage: expect.toBeOneOf([expect.any(String), null]),
-        },
+        }),
       },
     ],
   },

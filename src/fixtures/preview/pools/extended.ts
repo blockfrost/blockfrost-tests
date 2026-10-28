@@ -21,14 +21,14 @@ export default [
         margin_cost: 0.15,
         fixed_cost: '340000000',
         declared_pledge: '8000000',
-        metadata: {
+        metadata: withOptionalFetchError({
           hash: expect.any(String),
           ticker: expect.any(String),
           url: expect.any(String),
           name: expect.any(String),
           description: expect.any(String),
           homepage: expect.any(String),
-        },
+        }),
       },
       {
         pool_id: 'pool1wwh3k3ldzujdvgxllfwlnnkxyheafkacqlufnvpr77n5q72f9hw',
@@ -40,14 +40,14 @@ export default [
         margin_cost: 0.1,
         fixed_cost: '340000000',
         declared_pledge: '100000000',
-        metadata: {
+        metadata: withOptionalFetchError({
           hash: expect.any(String),
           ticker: expect.any(String),
           url: expect.any(String),
           name: expect.any(String),
           description: expect.any(String),
           homepage: expect.any(String),
-        },
+        }),
       },
       {
         pool_id: 'pool1w75ukvh77hhz8c2u6rhfjvqlxyptwg37yrkddzatu99qxwwlqhd',
