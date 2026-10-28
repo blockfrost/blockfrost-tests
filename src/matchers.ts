@@ -247,13 +247,20 @@ export const drepListMetadata = expect.toBeOneOf([
 ]);
 
 /**
- * Matches the `metadata` of a `/pools/extended` row with or without an `error` object.
- * The `error` object is present when the off-chain metadata fetch failed.
+ * Matches the `metadata` of a `/pools/extended` row, fetched or failed.
+ * A failed fetch keeps `url` and `hash`, nulls the other fields and adds `error`.
  */
 export const withOptionalFetchError = <T extends object>(metadata: T) =>
   expect.toBeOneOf([
     metadata,
-    { ...metadata, error: { code: expect.any(String), message: expect.any(String) } },
+    {
+      ...metadata,
+      ticker: null,
+      name: null,
+      description: null,
+      homepage: null,
+      error: { code: expect.any(String), message: expect.any(String) },
+    },
   ]);
 
 export const toBeEpochSlotNumber = (received: number) => {
