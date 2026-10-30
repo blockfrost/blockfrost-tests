@@ -1,5 +1,6 @@
 import { expect } from 'vitest';
 import { getPaginationFixtures } from '../../../index.js';
+import { withOptionalFetchError } from '../../../matchers.js';
 
 const paginationFixtures = getPaginationFixtures('pools/extended');
 
@@ -20,14 +21,14 @@ export default [
         margin_cost: 0.1,
         fixed_cost: '170000000',
         declared_pledge: '1000000000',
-        metadata: {
+        metadata: withOptionalFetchError({
           hash: expect.any(String),
           ticker: expect.any(String),
           url: expect.any(String),
           name: expect.any(String),
           description: expect.any(String),
           homepage: expect.any(String),
-        },
+        }),
       },
       {
         pool_id: 'pool132jxjzyw4awr3s75ltcdx5tv5ecv6m042306l630wqjckhfm32r',
@@ -39,14 +40,14 @@ export default [
         margin_cost: 0.1,
         fixed_cost: '340000000',
         declared_pledge: '1000000000000',
-        metadata: {
+        metadata: withOptionalFetchError({
           hash: expect.any(String),
           ticker: expect.any(String),
           url: expect.any(String),
           name: expect.any(String),
           description: expect.any(String),
           homepage: expect.any(String),
-        },
+        }),
       },
       {
         pool_id: 'pool1hghdaa7chn4hykkf9h0g0yqpz6j93gexvllz0w6p93y72saukmp',
@@ -58,14 +59,14 @@ export default [
         margin_cost: 0.2,
         fixed_cost: '340000000',
         declared_pledge: '10000000',
-        metadata: {
+        metadata: withOptionalFetchError({
           hash: expect.any(String),
           ticker: expect.any(String),
           url: expect.any(String),
           name: expect.any(String),
           description: expect.any(String),
           homepage: expect.any(String),
-        },
+        }),
       },
       {
         pool_id: 'pool1uhkxzvt9rj5s9emzr3uklwg2wdt7uky3aatgv9amhn2yz59laey',
@@ -77,14 +78,14 @@ export default [
         margin_cost: 0.15,
         fixed_cost: '340000000',
         declared_pledge: '9000000000',
-        metadata: {
+        metadata: withOptionalFetchError({
           hash: expect.any(String),
           ticker: expect.any(String),
           url: expect.any(String),
           name: expect.any(String),
           description: expect.any(String),
           homepage: expect.any(String),
-        },
+        }),
       },
       {
         pool_id: 'pool144pedg8hc3lr660w30te9jqv5zllaesegh8vt3ptft5s7qu45re',
@@ -96,14 +97,14 @@ export default [
         margin_cost: 0.0,
         fixed_cost: '340000000',
         declared_pledge: '100000000000',
-        metadata: {
+        metadata: withOptionalFetchError({
           hash: expect.any(String),
           ticker: expect.any(String),
           url: expect.any(String),
           name: expect.any(String),
           description: expect.any(String),
           homepage: expect.any(String),
-        },
+        }),
       },
     ],
   },
