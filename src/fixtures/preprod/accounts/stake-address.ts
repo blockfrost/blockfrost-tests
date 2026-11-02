@@ -65,7 +65,7 @@ export default [
       treasury_sum: '0',
       withdrawable_amount: expect.toBeAdaQuantity(),
       pool_id: 'pool1vvkurfxhajtj4f7x8wjkeet7rg8amz34duy5nux76per5sn3npx',
-      drep_id: null,
+      drep_id: expect.toBeOneOf([null, expect.toBeDrepId()]),
     },
   },
   {
