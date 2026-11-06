@@ -11,28 +11,31 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: 'yarn'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Type check
-        run: yarn type-check
+        run: pnpm type-check
 
       - name: Lint
-        run: yarn lint
+        run: pnpm lint
 
       - name: Check fixture wiring
-        run: yarn check-fixture-wiring
+        run: pnpm check-fixture-wiring
 
       - name: Check endpoint coverage
-        run: yarn check-endpoint-coverage
+        run: pnpm check-endpoint-coverage
 
       - name: Test
-        run: yarn test
+        run: pnpm test
         env:
           NETWORK: mainnet
