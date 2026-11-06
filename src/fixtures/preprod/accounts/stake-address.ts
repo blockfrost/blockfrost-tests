@@ -65,7 +65,14 @@ export default [
       treasury_sum: '0',
       withdrawable_amount: expect.toBeAdaQuantity(),
       pool_id: 'pool1vvkurfxhajtj4f7x8wjkeet7rg8amz34duy5nux76per5sn3npx',
-      drep_id: expect.toBeOneOf([null, expect.toBeDrepId()]),
+      // the vote delegation of this live account moves: none, a DRep, or one
+      // of the two predefined DReps (always abstain since November 2026)
+      drep_id: expect.toBeOneOf([
+        null,
+        'drep_always_abstain',
+        'drep_always_no_confidence',
+        expect.toBeDrepId(),
+      ]),
     },
   },
   {
