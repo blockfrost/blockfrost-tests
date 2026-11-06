@@ -1,4 +1,11 @@
+import { getPaginationFixtures } from '../../../index.js';
+
+const paginationFixtures = getPaginationFixtures(
+  'pools/pool13m26ky08vz205232k20u8ft5nrg8u68klhn0xfsk9m4gsqsc44v/updates',
+);
+
 export default [
+  ...paginationFixtures,
   {
     id: 'pools-pool-id-updates-generic-pool-updates_179c9e8760a1',
     testName: 'pools/:pool_id/updates - generic pool updates',

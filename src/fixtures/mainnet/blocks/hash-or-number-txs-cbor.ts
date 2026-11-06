@@ -1,4 +1,11 @@
+import { getPaginationFixtures } from '../../../index.js';
+
+const paginationFixtures = getPaginationFixtures(
+  'blocks/86d2f15766e4a4fc62781b88e354201e70e870979b99c28a517450110e7a90d5/txs/cbor',
+);
+
 export default [
+  ...paginationFixtures,
   {
     id: 'blocks-hash-or-number-txs-cbor-generic-block_57ed64541e82',
     testName: 'blocks/:hash_or_number/txs/cbor - generic block',

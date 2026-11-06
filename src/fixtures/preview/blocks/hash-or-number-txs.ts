@@ -1,4 +1,11 @@
+import { getPaginationFixtures } from '../../../index.js';
+
+const paginationFixtures = getPaginationFixtures(
+  'blocks/d452532fd3bfb678548f00c210b639d31cecc7d5d3b3b7d8151ce7cc25dfbb15/txs',
+);
+
 export default [
+  ...paginationFixtures,
   {
     id: 'blocks-hash-or-number-txs-queryparams-generic-shelley-desc_4f5c9f304918',
     testName: 'blocks/:hash_or_number/txs?queryparams - generic shelley desc',

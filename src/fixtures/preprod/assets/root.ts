@@ -1,4 +1,9 @@
+import { getPaginationFixtures } from '../../../index.js';
+
+const paginationFixtures = getPaginationFixtures('assets');
+
 export default [
+  ...paginationFixtures,
   {
     id: 'assets-list-of-all-assets_ce309855f9d6',
     testName: 'assets list of all assets',

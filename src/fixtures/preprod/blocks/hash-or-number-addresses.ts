@@ -1,4 +1,11 @@
+import { getPaginationFixtures } from '../../../index.js';
+
+const paginationFixtures = getPaginationFixtures(
+  'blocks/e4f47653c608c33b6b588552b8714ae3c920d8855e847ca5c2e5c6b9f1c3dd0f/addresses',
+).filter(({ type }) => type !== 'order');
+
 export default [
+  ...paginationFixtures,
   {
     id: 'blocks-hash-or-number-addresses-generic-shelley_05ffaa70dc98',
     testName: 'blocks/:hash_or_number/addresses - generic shelley',

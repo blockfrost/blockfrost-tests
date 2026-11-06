@@ -1,4 +1,11 @@
+import { getPaginationFixtures } from '../../../index.js';
+
+const paginationFixtures = getPaginationFixtures(
+  'accounts/stake_test1uzl969fay6sf66gjvluwe5vgq3ge20j8x0le0t7p0c6cp5qz4hevm/utxos',
+);
+
 export default [
+  ...paginationFixtures,
   {
     id: 'accounts-stake-address-utxos-empty-account_04cd33cda3fa',
     testName: 'accounts/:stake_address/utxos empty account',
