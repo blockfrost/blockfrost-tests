@@ -2,6 +2,20 @@ import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures('metadata/txs/labels/1967');
 
+// Label 4204510684296672392 was last used in June 2022, so its newest rows
+// are unlikely to change. They are the txs at positions 22 and 23 of block
+// 7383256, here in block order.
+const TWO_TXS_OF_ONE_BLOCK = [
+  {
+    tx_hash: 'bef26e69c398fdf6fde334dd6cbe48d375d5a628d0761841aa0d39e7097e30bc',
+    json_metadata: 'Cardashift Voting rewards batch 1',
+  },
+  {
+    tx_hash: '348741ecd587b2780eea33001b7edfe1343fcf8a5f49f8d4b43e9e827b040872',
+    json_metadata: 'Cardashift Voting rewards batch 1',
+  },
+];
+
 export default [
   ...paginationFixtures,
   {
@@ -1571,5 +1585,19 @@ export default [
         },
       },
     ],
+  },
+  {
+    // desc lists the later tx of the block first.
+    id: 'metadata-txs-labels-label-two-txs-of-one-block-desc_0509cfa2dd99',
+    testName: 'metadata/txs/labels/:label - two txs of one block, desc',
+    endpoints: ['metadata/txs/labels/4204510684296672392?order=desc&count=2'],
+    response: [...TWO_TXS_OF_ONE_BLOCK].reverse(),
+  },
+  {
+    // with one tx per page, page 2 holds the earlier tx.
+    id: 'metadata-txs-labels-label-two-txs-of-one-block-desc-second-page_fecbf2f4d62e',
+    testName: 'metadata/txs/labels/:label - two txs of one block, desc, second page',
+    endpoints: ['metadata/txs/labels/4204510684296672392?order=desc&count=1&page=2'],
+    response: TWO_TXS_OF_ONE_BLOCK.slice(0, 1),
   },
 ];

@@ -2,6 +2,26 @@ import { getPaginationFixtures } from '../../../index.js';
 
 const paginationFixtures = getPaginationFixtures('metadata/txs/labels/1967/cbor');
 
+// Label 73311618728 was last used in January 2023, so its newest rows
+// are unlikely to change. They are the txs at positions 0 and 4 of block
+// 342276, here in block order.
+const TWO_TXS_OF_ONE_BLOCK = [
+  {
+    tx_hash: '85449ae0de945ec4c9d1c9badd5ac1ddb3eaf01df1596b20a6795dd2cadcf12c',
+    cbor_metadata:
+      '\\xa11b0000001111b686a8a1636d7367781f4f6c662c2068796c2066766220616f6c796c2e204873706a6c2e204976692e',
+    metadata:
+      'a11b0000001111b686a8a1636d7367781f4f6c662c2068796c2066766220616f6c796c2e204873706a6c2e204976692e',
+  },
+  {
+    tx_hash: 'a257a9335e98c6136be611a15c4a322a68eef1f1c07d54c98aafa0c86f350508',
+    cbor_metadata:
+      '\\xa11b0000001111b686a8a1636d7367781f4f6c662c2068796c2066766220616f6c796c2e204873706a6c2e204976692e',
+    metadata:
+      'a11b0000001111b686a8a1636d7367781f4f6c662c2068796c2066766220616f6c796c2e204873706a6c2e204976692e',
+  },
+];
+
 export default [
   ...paginationFixtures,
   {
@@ -527,5 +547,19 @@ export default [
         metadata: 'a102542512a00e9653fe49a44a5886202e24d77eeb998f',
       },
     ],
+  },
+  {
+    // desc lists the later tx of the block first.
+    id: 'metadata-txs-labels-label-cbor-two-txs-of-one-block-desc_ff895efaeb29',
+    testName: 'metadata/txs/labels/:label/cbor - two txs of one block, desc',
+    endpoints: ['metadata/txs/labels/73311618728/cbor?order=desc&count=2'],
+    response: [...TWO_TXS_OF_ONE_BLOCK].reverse(),
+  },
+  {
+    // with one tx per page, page 2 holds the earlier tx.
+    id: 'metadata-txs-labels-label-cbor-two-txs-of-one-block-desc-second-page_35fb6e2bd580',
+    testName: 'metadata/txs/labels/:label/cbor - two txs of one block, desc, second page',
+    endpoints: ['metadata/txs/labels/73311618728/cbor?order=desc&count=1&page=2'],
+    response: TWO_TXS_OF_ONE_BLOCK.slice(0, 1),
   },
 ];
