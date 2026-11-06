@@ -84,4 +84,46 @@ export default [
       },
     },
   },
+  {
+    id: 'scripts-datum-hash-integer-past-int64_c30c0707e2cc',
+    testName: 'scripts/datum/:hash - integer past int64',
+    endpoints: ['scripts/datum/7e85cadb22634a84abc99655295b8612c39e8401e25252c953072cb10d430a73'],
+    response: {
+      json_value: {
+        list: [
+          { int: 557013768063 },
+          { int: 5 },
+          { int: 28072932694730 },
+          { int: 4453577598 },
+          { int: 66592394 },
+          { int: 17265484429986448 },
+          // the first is 12327218604269673247 on chain, between 2^63 and 2^64
+          { list: [{ int: 12327218604269672000 }, { int: 7.0191742256875e26 }] },
+          { int: 1785061615000 },
+          { int: 1785063303000 },
+          { list: [{ int: 40108615684 }, { int: 2005209478195 }] },
+          { int: 3000000 },
+        ],
+      },
+    },
+  },
+  {
+    id: 'scripts-datum-hash-negative-bignum_d24e773eb4f6',
+    testName: 'scripts/datum/:hash - negative bignum',
+    endpoints: ['scripts/datum/aeef1c285332e73fc606e2fc8f2c40d8ad84b2d4401b7ab2360cde2950b71170'],
+    response: {
+      json_value: {
+        fields: [
+          { fields: [], constructor: 0 },
+          { bytes: '74657374' },
+          { fields: [], constructor: 1 },
+          { int: 24224 },
+          // -123123123123123123123123123123123 on chain, a CBOR negative bignum
+          { int: -1.2312312312312312e32 },
+          { map: [{ k: { bytes: '78797a' }, v: { int: 445 } }] },
+        ],
+        constructor: 1,
+      },
+    },
+  },
 ];
