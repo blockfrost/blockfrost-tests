@@ -7,6 +7,33 @@ const paginationFixtures = getPaginationFixtures(
 
 export default [
   ...paginationFixtures,
+  // This pool retired and re-registered in epoch 531. Re-registration must not
+  // revive the epoch-517 delegation, but the new delegation in epoch 531 survives.
+  // We do not control this pool or these accounts: later retirement, redelegation,
+  // or deregistration may invalidate these expectations. Recheck their history if they fail.
+  {
+    id: 'accounts-stake-address-delegation-cleared-before-pool-re-registration_9a980360fec6',
+    testName: 'accounts/:stake_address - delegation cleared before pool re-registration',
+    endpoints: ['accounts/stake1uxgazfhcpanx285wahrgf87cy8r3qd2vsn6veana2wqnm7cdtmwqn'],
+    response: expect.objectContaining({
+      stake_address: 'stake1uxgazfhcpanx285wahrgf87cy8r3qd2vsn6veana2wqnm7cdtmwqn',
+      active: false,
+      registered: true,
+      pool_id: null,
+    }),
+  },
+  {
+    id: 'accounts-stake-address-delegation-retained-in-pool-retirement-epoch_425a015efea9',
+    testName: 'accounts/:stake_address - delegation retained in pool retirement epoch',
+    endpoints: ['accounts/stake1u926a59rvd99zv3xgkcywk72f6wytcaaue3k4hptxt9t58c3ch2ym'],
+    // Delegation cert index 1 follows the pool re-registration at index 0 in the same tx.
+    response: expect.objectContaining({
+      stake_address: 'stake1u926a59rvd99zv3xgkcywk72f6wytcaaue3k4hptxt9t58c3ch2ym',
+      active: true,
+      registered: true,
+      pool_id: 'pool12n6lycv28kjtkzecfz2a3uujyxy6ewuwjcmjq84my67psqmgagv',
+    }),
+  },
   {
     id: 'accounts-stake-address-bf-account_03f2a20a12c5',
     testName: 'accounts/:stake_address - BF account',
