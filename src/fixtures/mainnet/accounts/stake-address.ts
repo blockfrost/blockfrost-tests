@@ -203,7 +203,7 @@ export default [
     endpoints: ['accounts/stake1uygt23qnfwel5y6vl65mlzwzjf6wvjflnp3k23fj6l4qwngdjy4yn'],
     response: {
       stake_address: 'stake1uygt23qnfwel5y6vl65mlzwzjf6wvjflnp3k23fj6l4qwngdjy4yn',
-      active: true,
+      active: false,
       registered: true,
       active_epoch: 313,
       controlled_amount: expect.toBeAdaQuantity(),
@@ -213,7 +213,8 @@ export default [
       treasury_sum: '0',
       drep_id: expect.toBeDrepId(),
       withdrawable_amount: expect.toBeAdaQuantity(),
-      pool_id: expect.toBePoolBech32(),
+      // pool10kjjh9zfs77vzxpp4qpdxwvnh3x8zdf8qcv7pckvdhw02fu6unz retired at epoch 641, which removed this delegation
+      pool_id: null,
     },
   },
   {
