@@ -1,4 +1,17 @@
+import { expect } from 'vitest';
+
 export default [
+  {
+    id: 'pools-delegators-active-pool_1d4d5c5954e9',
+    testName: 'pools delegators - active pool',
+    endpoints: ['pools/pool1p9xu88dzmpp5l8wmjd6f5xfs9z89mky6up86ty2wz4aavmm8f3m/delegators'],
+    response: expect.arrayContaining([
+      {
+        address: expect.toBeStakeAddress(),
+        live_stake: expect.toBeInRange('1', '45000000000000000'),
+      },
+    ]),
+  },
   {
     id: 'pools-delegators_f2d665309ca1',
     testName: 'pools delegators',
