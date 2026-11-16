@@ -7,6 +7,33 @@ const paginationFixtures = getPaginationFixtures(
 
 export default [
   ...paginationFixtures,
+  // This pool retired and re-registered in epoch 531. Re-registration must not
+  // revive the epoch-517 delegation, but the new delegation in epoch 531 survives.
+  // We do not control this pool or these accounts: later retirement, redelegation,
+  // or deregistration may invalidate these expectations. Recheck their history if they fail.
+  {
+    id: 'accounts-stake-address-delegation-cleared-before-pool-re-registration_9a980360fec6',
+    testName: 'accounts/:stake_address - delegation cleared before pool re-registration',
+    endpoints: ['accounts/stake1uxgazfhcpanx285wahrgf87cy8r3qd2vsn6veana2wqnm7cdtmwqn'],
+    response: expect.objectContaining({
+      stake_address: 'stake1uxgazfhcpanx285wahrgf87cy8r3qd2vsn6veana2wqnm7cdtmwqn',
+      active: false,
+      registered: true,
+      pool_id: null,
+    }),
+  },
+  {
+    id: 'accounts-stake-address-delegation-retained-in-pool-retirement-epoch_425a015efea9',
+    testName: 'accounts/:stake_address - delegation retained in pool retirement epoch',
+    endpoints: ['accounts/stake1u926a59rvd99zv3xgkcywk72f6wytcaaue3k4hptxt9t58c3ch2ym'],
+    // Delegation cert index 1 follows the pool re-registration at index 0 in the same tx.
+    response: expect.objectContaining({
+      stake_address: 'stake1u926a59rvd99zv3xgkcywk72f6wytcaaue3k4hptxt9t58c3ch2ym',
+      active: true,
+      registered: true,
+      pool_id: 'pool12n6lycv28kjtkzecfz2a3uujyxy6ewuwjcmjq84my67psqmgagv',
+    }),
+  },
   {
     id: 'accounts-stake-address-bf-account_03f2a20a12c5',
     testName: 'accounts/:stake_address - BF account',
@@ -98,7 +125,7 @@ export default [
     endpoints: ['accounts/stake1uyluup0rh6r2cc7kcw8nudqz990ezf5ltagxmw3u8deukvqwq7etq'],
     response: {
       stake_address: 'stake1uyluup0rh6r2cc7kcw8nudqz990ezf5ltagxmw3u8deukvqwq7etq',
-      active: true,
+      active: false,
       registered: true,
       active_epoch: 219,
       controlled_amount: '1848501',
@@ -108,7 +135,7 @@ export default [
       reserves_sum: '0',
       treasury_sum: '0',
       withdrawable_amount: '0',
-      pool_id: 'pool1tz9k09jylmnk74z74v2t384smfypr7cwpzvs5sd2w537wu5jlrk',
+      pool_id: null,
     },
   },
   {
@@ -117,7 +144,7 @@ export default [
     endpoints: ['accounts/stake1u8fne2lfh3a8v33y8splqc5gr5r8gjea2wvrsgch39emnvqny8wlm'],
     response: {
       stake_address: 'stake1u8fne2lfh3a8v33y8splqc5gr5r8gjea2wvrsgch39emnvqny8wlm',
-      active: true,
+      active: false,
       registered: true,
       active_epoch: 208,
       controlled_amount: '0',
@@ -127,7 +154,7 @@ export default [
       reserves_sum: '0',
       treasury_sum: '0',
       withdrawable_amount: '0',
-      pool_id: 'pool1y9tz9enfcrcvpxpga3qspfxx3xclns2g74ptqxftdmgq6ghyrn0',
+      pool_id: null,
     },
   },
   {
@@ -136,7 +163,7 @@ export default [
     endpoints: ['accounts/stake1uxzjdz34g596yt9dyprjse0yr775xszuyal3ltyqsx2k9wcjhvvke'],
     response: {
       stake_address: 'stake1uxzjdz34g596yt9dyprjse0yr775xszuyal3ltyqsx2k9wcjhvvke',
-      active: true,
+      active: false,
       registered: true,
       active_epoch: 224,
       drep_id: null,
@@ -146,7 +173,7 @@ export default [
       reserves_sum: '0',
       treasury_sum: '0',
       withdrawable_amount: '0',
-      pool_id: 'pool1av0amckqhv85qxctwg2hj4jcgdgfhpmvvw3c5evrkg9a76tr7jh',
+      pool_id: null,
     },
   },
   {
@@ -157,7 +184,7 @@ export default [
     endpoints: ['accounts/stake1u80x0vdf8kwvptk7nar24d805p7wnlj4vm22cl0q8jngs9q5k2suq'],
     response: {
       stake_address: 'stake1u80x0vdf8kwvptk7nar24d805p7wnlj4vm22cl0q8jngs9q5k2suq',
-      active: true,
+      active: false,
       registered: true,
       active_epoch: 229,
       drep_id: null,
@@ -167,7 +194,7 @@ export default [
       reserves_sum: '0',
       treasury_sum: '0',
       withdrawable_amount: '0',
-      pool_id: 'pool10ehxcuxmryvg5ae6g8krdvhaj3m07a6rzdtv8a0grtxpv7fnrpu',
+      pool_id: null,
     },
   },
   {
@@ -176,7 +203,7 @@ export default [
     endpoints: ['accounts/stake1uygt23qnfwel5y6vl65mlzwzjf6wvjflnp3k23fj6l4qwngdjy4yn'],
     response: {
       stake_address: 'stake1uygt23qnfwel5y6vl65mlzwzjf6wvjflnp3k23fj6l4qwngdjy4yn',
-      active: true,
+      active: false,
       registered: true,
       active_epoch: 313,
       controlled_amount: expect.toBeAdaQuantity(),
@@ -186,7 +213,8 @@ export default [
       treasury_sum: '0',
       drep_id: expect.toBeDrepId(),
       withdrawable_amount: expect.toBeAdaQuantity(),
-      pool_id: expect.toBePoolBech32(),
+      // pool10kjjh9zfs77vzxpp4qpdxwvnh3x8zdf8qcv7pckvdhw02fu6unz retired at epoch 641, which removed this delegation
+      pool_id: null,
     },
   },
   {

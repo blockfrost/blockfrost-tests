@@ -63,7 +63,7 @@ export default [
     endpoints: ['accounts/stake_test1upnm8qjag0mesuxv9d3y5thjh6k2kytpsucmvdamafvdg3gfx0uly'],
     response: {
       stake_address: 'stake_test1upnm8qjag0mesuxv9d3y5thjh6k2kytpsucmvdamafvdg3gfx0uly',
-      active: true,
+      active: false,
       registered: true,
       active_epoch: 480,
       controlled_amount: '1848379796',
@@ -73,7 +73,7 @@ export default [
       drep_id: null,
       treasury_sum: '0',
       withdrawable_amount: '1310159259',
-      pool_id: 'pool1k3jnk3rnscnvt6u8p7a24ye0dy8f39xuccmchnsw3pzzwq453hp',
+      pool_id: null,
     },
   },
   // registered drep

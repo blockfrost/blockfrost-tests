@@ -101,7 +101,7 @@ export default [
     endpoints: ['accounts/stake_test1ur45959eevjt0f02hajmvs69ag9q2t9hmyl4vgwdrxacues76c7wx'],
     response: {
       stake_address: 'stake_test1ur45959eevjt0f02hajmvs69ag9q2t9hmyl4vgwdrxacues76c7wx',
-      active: true,
+      active: false,
       registered: true,
       active_epoch: 38,
       controlled_amount: '511130715',
@@ -111,7 +111,7 @@ export default [
       reserves_sum: '0',
       treasury_sum: '0',
       withdrawable_amount: '500000000',
-      pool_id: 'pool1l0cyfx72p6w0tufav24ydeurujfs5wxgysg32mt3u86yj9w442w',
+      pool_id: null,
     },
   },
   {
@@ -120,7 +120,7 @@ export default [
     endpoints: ['accounts/stake_test1urt4kdcculn6lwpw5alfhehlhx8thax0cruy73gd0gr6kjs29vef7'],
     response: {
       stake_address: 'stake_test1urt4kdcculn6lwpw5alfhehlhx8thax0cruy73gd0gr6kjs29vef7',
-      active: true,
+      active: false,
       registered: true,
       drep_id: null,
       active_epoch: 98,
@@ -130,7 +130,7 @@ export default [
       reserves_sum: '0',
       treasury_sum: '0',
       withdrawable_amount: '500000000',
-      pool_id: 'pool13jehpkxh5mwsyled40zyn66hdhml2n4zqqlhj5jddyvty7xc49a',
+      pool_id: null,
     },
   },
   // registered drep
