@@ -98,7 +98,7 @@ export default [
     endpoints: ['accounts/stake1uyluup0rh6r2cc7kcw8nudqz990ezf5ltagxmw3u8deukvqwq7etq'],
     response: {
       stake_address: 'stake1uyluup0rh6r2cc7kcw8nudqz990ezf5ltagxmw3u8deukvqwq7etq',
-      active: true,
+      active: false,
       registered: true,
       active_epoch: 219,
       controlled_amount: '1848501',
@@ -108,7 +108,7 @@ export default [
       reserves_sum: '0',
       treasury_sum: '0',
       withdrawable_amount: '0',
-      pool_id: 'pool1tz9k09jylmnk74z74v2t384smfypr7cwpzvs5sd2w537wu5jlrk',
+      pool_id: null,
     },
   },
   {
@@ -117,7 +117,7 @@ export default [
     endpoints: ['accounts/stake1u8fne2lfh3a8v33y8splqc5gr5r8gjea2wvrsgch39emnvqny8wlm'],
     response: {
       stake_address: 'stake1u8fne2lfh3a8v33y8splqc5gr5r8gjea2wvrsgch39emnvqny8wlm',
-      active: true,
+      active: false,
       registered: true,
       active_epoch: 208,
       controlled_amount: '0',
@@ -127,7 +127,7 @@ export default [
       reserves_sum: '0',
       treasury_sum: '0',
       withdrawable_amount: '0',
-      pool_id: 'pool1y9tz9enfcrcvpxpga3qspfxx3xclns2g74ptqxftdmgq6ghyrn0',
+      pool_id: null,
     },
   },
   {
@@ -136,7 +136,7 @@ export default [
     endpoints: ['accounts/stake1uxzjdz34g596yt9dyprjse0yr775xszuyal3ltyqsx2k9wcjhvvke'],
     response: {
       stake_address: 'stake1uxzjdz34g596yt9dyprjse0yr775xszuyal3ltyqsx2k9wcjhvvke',
-      active: true,
+      active: false,
       registered: true,
       active_epoch: 224,
       drep_id: null,
@@ -146,7 +146,7 @@ export default [
       reserves_sum: '0',
       treasury_sum: '0',
       withdrawable_amount: '0',
-      pool_id: 'pool1av0amckqhv85qxctwg2hj4jcgdgfhpmvvw3c5evrkg9a76tr7jh',
+      pool_id: null,
     },
   },
   {
@@ -157,7 +157,7 @@ export default [
     endpoints: ['accounts/stake1u80x0vdf8kwvptk7nar24d805p7wnlj4vm22cl0q8jngs9q5k2suq'],
     response: {
       stake_address: 'stake1u80x0vdf8kwvptk7nar24d805p7wnlj4vm22cl0q8jngs9q5k2suq',
-      active: true,
+      active: false,
       registered: true,
       active_epoch: 229,
       drep_id: null,
@@ -167,7 +167,7 @@ export default [
       reserves_sum: '0',
       treasury_sum: '0',
       withdrawable_amount: '0',
-      pool_id: 'pool10ehxcuxmryvg5ae6g8krdvhaj3m07a6rzdtv8a0grtxpv7fnrpu',
+      pool_id: null,
     },
   },
   {
