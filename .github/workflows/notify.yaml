@@ -14,4 +14,4 @@ jobs:
           token: ${{ secrets.SUBMODULE_UPDATE_TOKEN }}
           repository: blockfrost/blockfrost-tests-internal
           event-type: public-pr-event
-          client-payload: '{"sha": "${{ github.event.pull_request.head.sha }}", "pr_number": "${{ github.event.number }}", "pr_title": "${{ github.event.pull_request.title }}"}'
+          client-payload: '{"sha": "${{ github.event.pull_request.head.sha }}", "pr_number": "${{ github.event.number }}", "pr_title": ${{ toJSON(github.event.pull_request.title) }}}'
